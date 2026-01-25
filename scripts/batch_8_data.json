@@ -1,0 +1,122 @@
+[
+  {
+    "id": "c0d35261-46b9-474f-8848-152af50f8032",
+    "name": "U-47",
+    "description": "Directivité: Cardioïde et omnidirectionnel, Réponse en fréquence: 20 Hz - 20 kHz (+/-3 dB)",
+    "pros": []
+  },
+  {
+    "id": "05589c29-b721-41c6-b55f-7c4372878d7e",
+    "name": "U47 FET",
+    "description": "Principe de fonctionnement acoustique: Transducteur à gradient de pression, Directivité: Cardioïde, Réponse en fréquences: 40 - 16000 Hz",
+    "pros": []
+  },
+  {
+    "id": "0dec4ad3-6e68-4086-962e-bbdf8339f2e3",
+    "name": "U87 Ai",
+    "description": "Récepteur à gradient de pression, Directivité: Omnidirectionnelle, cardioïde et figure en 8, Atténuation commutable 10 dB",
+    "pros": []
+  },
+  {
+    "id": "54723dd4-b4a5-4e35-b465-56fc0aaa11bf",
+    "name": "U87 Ai B-Stock",
+    "description": null,
+    "pros": []
+  },
+  {
+    "id": "79ff2402-7c7e-4e0d-80a3-c99b1c3eb7db",
+    "name": "U87 AI MT",
+    "description": "Directivité: omnidirectionnelle, cardioïde et figure en 8, Atténuation commutable 10 dB, Récepteur à gradient de pression",
+    "pros": []
+  },
+  {
+    "id": "1e262212-8a3e-4e38-96e4-625e9a6ce53d",
+    "name": "U89 I",
+    "description": "Utilisation universelle, Les capteurs à gradient de pression peuvent être utilisés pour les voix, baffles/HP, overhead et instruments à vent, Caractéristiques commutables: Omnidirectionnel, cardioïde large, cardioïde, hypercardioïde, figure en 8",
+    "pros": []
+  },
+  {
+    "id": "d63630bb-fcbd-4397-9fdd-ca76fade3ce5",
+    "name": "U89 I mt",
+    "description": "Directivité commutable: Omnidirectionnelle, cardioïde et figure en 8, Pad atténuateur: 10 dB, Couleur: Noir mat",
+    "pros": []
+  },
+  {
+    "id": "3133272e-1a97-4070-88d8-e0a8eb6aeb30",
+    "name": "UM 92.1 S",
+    "description": "Equipé de la légendaire capsule M7 en PVC au son unique, Directivités omnidirectionnelle, cardioïde et figure en 8 commutables sur l'alimentation",
+    "pros": []
+  },
+  {
+    "id": "cb4469d0-bd39-4554-bbdc-0367b884e5d7",
+    "name": "UMT 70 S Satin Nickel",
+    "description": "Basé sur une capsule à large diaphragme éprouvée, offrant d'excellentes caractéristiques de ..., Directivité commutable: Omnidirectionnelle, cardioïde, figure en 8",
+    "pros": []
+  },
+  {
+    "id": "5b620486-672a-4b90-8cb5-511bbacbbc60",
+    "name": "USM 69I",
+    "description": "Convient pour la stéréophonie XY et MS, Deux systèmes indépendants large membrane avec 5 diagrammes polaires sélectionnables : omnidirectionnel, ..., Système supérieur rotatif jusqu'à 270°",
+    "pros": []
+  },
+  {
+    "id": "2efa0b2c-0069-4e0e-91e9-f9f9118a53cf",
+    "name": "USM 69I mt",
+    "description": "Convient pour la captation stéréophonique XY et Mid/Side, 2 systèmes indépendants large membrane avec 5 caractéristiques directionnelles : omnidirectionnelle, large, ..., Système supérieur rotatif jusqu'à 270 degrés",
+    "pros": []
+  },
+  {
+    "id": "96ec26d1-a159-4584-844c-256e98aa19da",
+    "name": "V67G",
+    "description": "Directivité: cardioïde, Réponse en fréquences: 30 Hz - 20 kHz",
+    "pros": []
+  },
+  {
+    "id": "ef7e0631-ddd5-40d1-8a74-7ef3b3745d12",
+    "name": "V67i",
+    "description": "Avec 2 capsules, Directivité: Cardioïde",
+    "pros": []
+  },
+  {
+    "id": "871e9720-8927-4030-a86e-797646f421dd",
+    "name": "V69M",
+    "description": "Directivité: Cardioïde, Réponse en fréquence: 20 Hz - 18 kHz",
+    "pros": []
+  },
+  {
+    "id": "3a095d25-a823-432e-8a6c-42ab59b90b4f",
+    "name": "V87",
+    "description": "Idéal pour les guitares acoustiques, les pianos et les enregistrements vocaux, Capsule de 32 mm",
+    "pros": []
+  },
+  {
+    "id": "daf41d58-e0a3-4342-8adb-cc7fa0b53d34",
+    "name": "WA-14",
+    "description": "Att�nuation variable et trois caract�ristiques directionnelles, Condensateur \"Lens Kondensator\" LK-12-B-60V de Warm Audio",
+    "pros": []
+  },
+  {
+    "id": "6458f1d1-2119-4034-ad55-82c4782df645",
+    "name": "WA-14SP",
+    "description": "Directivit�s: Cardio�de, omnidirectionnelle, figure en 8, Transformateur Custom CineMag USA",
+    "pros": []
+  },
+  {
+    "id": "945a3bdf-7577-4a46-885d-e5967d0b976f",
+    "name": "WA-251",
+    "description": "Directivit� commutable : cardio�de, omnidirectionnelle et figure en 8, Plage dynamique : 125 dB(A)",
+    "pros": []
+  },
+  {
+    "id": "e2a8b09a-cd95-4993-8b76-b79494a8a09b",
+    "name": "WA-47",
+    "description": "Bas� sur le microphone classique U-47, Diagramme polaire commutable 9 directivit�s: cardio�de, omnidirectionnel, figure en huit + 6 �tapes interm�diaires",
+    "pros": []
+  },
+  {
+    "id": "cf6aebad-dfd7-4614-813f-7c1714744bfe",
+    "name": "WA-47F",
+    "description": "Capsule large membrane pulv�ris�e d'or design K47, Transformateur de sortie TAB-Funkenwerk (AMI) USA",
+    "pros": []
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "000fc142-7502-4d82-a05b-d42f9fe3f658",
+    "name": "MA-200 SN",
+    "description": "Caractéristique directionnelle : cardioïde, Capsule de 3 microns sélectionnée à la main",
+    "pros": []
+  },
+  {
+    "id": "35923d2a-2282-4655-b716-ae49dfc7c68f",
+    "name": "MA-201fet VG",
+    "description": "Avec capsule 1\" sélectionnée à la main, Idéal pour le chant, batterie et instruments acoustiques",
+    "pros": []
+  },
+  {
+    "id": "89f2d459-24b9-48e0-a830-32ccbd852942",
+    "name": "MA-300 SN",
+    "description": "Capsule de 3 microns à double diaphragme sélectionnée à la main, Directivités : omnidirectionnelle, cardioïde et figure en huit",
+    "pros": []
+  },
+  {
+    "id": "9d4d55e7-37bf-48ea-a07c-d5e3ad3936b4",
+    "name": "MA-301fet VG",
+    "description": "Avec capsule 1\" sélectionnée à la main, Caractéristiques directionnelles : omnidirectionnelle, cardioïde et figure en huit",
+    "pros": []
+  },
+  {
+    "id": "2b95dd78-e126-4894-a76d-7213f214b35c",
+    "name": "MA-37",
+    "description": "Directivité : cardioïde ou omnidirectionnelle, Pression sonore max. : 135 dB SPL",
+    "pros": []
+  },
+  {
+    "id": "e3f35593-2b76-4812-8ed5-fa0255b2ebca",
+    "name": "MB 7 Beta",
+    "description": "Convient pour les broadcasts, podcasts, studios, etc., Directivité cardioïde réduisant le larsen",
+    "pros": []
+  },
+  {
+    "id": "51f5bfad-262f-4a91-8eb4-6b5036d947b1",
+    "name": "Mercury",
+    "description": "Développé en coopération avec producteurs / ingénieurs de premier plan (entre autres Paul Epworth, Abbey Road Studios), Diagramme polaire variable en continu entre omni, cardioïde et figure en huit",
+    "pros": []
+  },
+  {
+    "id": "76dc74b0-028d-4567-b8db-a24efa4c6b9a",
+    "name": "MiC Plus",
+    "description": "Pour iOS, Mac et Windows, Connexion PureDIGITAL pour une qualité sonore jusqu'à 24 bits / 96 kHz",
+    "pros": []
+  },
+  {
+    "id": "6118ef71-08fa-4881-8ded-a27ac8b02323",
+    "name": "MK4",
+    "description": "Directivité: cardioïde, Réponse en fréquence: 20 - 20 000 Hz",
+    "pros": []
+  },
+  {
+    "id": "3d96d6d7-bb24-41eb-aeae-70969f1a512f",
+    "name": "MK8",
+    "description": "5 directivités commutables: omnidirectionnelle, cardioïde large, cardioïde, supercardioïde, figure en 8, Filtre coupe-bas et filtre roll-off à 3 niveaux: plat, 60 Hz - 18 dB/octave, 100 Hz - 6 dB/octave",
+    "pros": []
+  },
+  {
+    "id": "f9ce353e-90c8-4784-be65-fa3324fd3be3",
+    "name": "Premier ELA M 251E",
+    "description": "Récepteur à gradient de pression, Directivité commutable: Omnidirectionnelle, figure en 8, cardioïde",
+    "pros": []
+  },
+  {
+    "id": "bf6081cb-f18e-40a6-98ed-4ae6f358bf74",
+    "name": "Premier GA-251 MKII",
+    "description": "Capsule fabriquée à la main sur le modèle des microphones M250 / M251, Lampe Philips 5480W \"New Old Stock\"",
+    "pros": []
+  },
+  {
+    "id": "b7e6c63d-7d57-4363-adb1-9ee46d7486bf",
+    "name": "Premier GA-47 MKII",
+    "description": "Fabriqué à la main dans le style U-47, Circuit imprimé Rogers avec câblage point à point",
+    "pros": []
+  },
+  {
+    "id": "f4de7a83-8adc-490f-9b11-7096963e49ba",
+    "name": "Premier GA-8000",
+    "description": "Avec système de refroidissement actif des semi-conducteurs, Directivité: Cardioïde, omnidirectionnelle",
+    "pros": []
+  },
+  {
+    "id": "ffa87e74-8d02-40c9-a764-f4bc9ce16500",
+    "name": "Procaster",
+    "description": "Microphone pour les studios de radio et de doublage et pour le podcasting professionnel, Protection interne contre les pops et insensibilité aux hautes-fréquences et autres champs ...",
+    "pros": []
+  },
+  {
+    "id": "8cf200ff-8460-4461-a13a-9429e983a06d",
+    "name": "Procaster B-Stock",
+    "description": ",",
+    "pros": []
+  },
+  {
+    "id": "401d72e0-021c-4c1a-9350-221823c8438f",
+    "name": "PURE TUBE Essential Set",
+    "description": "Microphone à tube avec véritable capsule à condensateur 1\" recouverte d'or, Optimisé pour les enregistrements vocaux et de chant professionnels",
+    "pros": []
+  },
+  {
+    "id": "1ff3a635-44f6-4785-b50b-c9827a5a0cb9",
+    "name": "PURE TUBE Studio Set",
+    "description": "Microphone à tube avec véritable capsule à condensateur 1\" recouverte d'or, Optimisé pour les enregistrements de parole/chant professionnels",
+    "pros": []
+  },
+  {
+    "id": "b754bade-ffad-4392-863b-129356e833c3",
+    "name": "PURE TUBE Studio Set B-Stock",
+    "description": ",",
+    "pros": []
+  },
+  {
+    "id": "b33004ad-6ddf-421a-b0d9-82f77079f9f6",
+    "name": "RAY Autofocus Microphone",
+    "description": "Directivité: Cardioïde, Véritable capsule à condensateur de 1\" recouverte d'or",
+    "pros": []
+  }
+]

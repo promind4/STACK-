@@ -9,7 +9,10 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   const handleNav = (e: React.MouseEvent, page: string) => {
     e.preventDefault();
-    if (onNavigate) onNavigate(page);
+    console.log("Navigating to:", page); // Debug log
+    if (onNavigate) {
+      onNavigate(page);
+    }
   };
 
   return (
@@ -17,15 +20,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
       <div className="container mx-auto px-6 max-w-[1600px]">
         {/* GRILLE PRINCIPALE : 2 COL SUR MOBILE, 4 SUR DESKTOP */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12 mb-16">
-          
+
           {/* Brand - Prend 2 colonnes sur mobile pour rester lisible */}
           <div className="col-span-2 md:col-span-1 space-y-6">
-            <div 
+            <div
               className="flex items-center gap-2 cursor-pointer group"
               onClick={(e) => handleNav(e, 'home')}
             >
               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:border-primary/40 transition-colors">
-                 <Monitor className="w-6 h-6 text-primary" />
+                <Monitor className="w-6 h-6 text-primary" />
               </div>
               <span className="font-bold text-xl tracking-tighter text-foreground">{APP_NAME}</span>
             </div>
@@ -83,6 +86,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <a href="#" onClick={(e) => handleNav(e, 'legal-mentions')} className="hover:text-foreground transition-colors">Mentions Légales</a>
             <a href="#" onClick={(e) => handleNav(e, 'privacy')} className="hover:text-foreground transition-colors">Confidentialité</a>
             <a href="#" onClick={(e) => handleNav(e, 'cgu')} className="hover:text-foreground transition-colors">CGU</a>
+            <a href="#" onClick={(e) => handleNav(e, 'admin')} className="hover:text-foreground transition-colors font-bold text-primary/80">Admin</a>
           </div>
         </div>
       </div>

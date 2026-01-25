@@ -24,7 +24,7 @@ export interface ProductOffer {
   merchant_logo_url: string;
   price: number;
   currency: string;
-  link: string;
+  affiliate_link: string;
   in_stock: boolean;
 }
 
@@ -38,26 +38,37 @@ export interface Product {
   slug: string;
   brand: string;
   description: string;
+  short_description?: string;
   image_url: string;
   specs?: Record<string, any>;
   price: number; // Facade pour l'affichage rapide (généralement le prix min)
-  
+
+  // Images
+  gallery_images?: string[]; // URLs additionnelles
+
+  is_active?: boolean;
+
   // Offres multi-vendeurs
   offers?: ProductOffer[];
-  
+
+  // Contenu Riche (Enrichment)
+  pros?: string[];
+  cons?: string[];
+
   // Synthèse des avis (Social Proof)
   reviews_summary?: ReviewsSummary;
-  
+
   // UI Helpers
   rating?: number;
-  reviews?: number;
+  reviews?: number; // @deprecated use review_count
+  review_count?: number;
   inStock?: boolean;
   isPromo?: boolean;
-  badge?: { 
-    text: string; 
+  badge?: {
+    text: string;
     color: string;
     icon?: React.ReactNode;
-  }; 
+  };
 }
 
 // 2. OFFRES (Table SQL jointe ou JSONB)

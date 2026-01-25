@@ -1,0 +1,122 @@
+[
+  {
+    "id": "ea845c9a-b94b-42ab-8d2c-2c18e97ce3b6",
+    "name": "ML-1A",
+    "description": "Directivité: Cardioïde, Réponse en fréquence: 20 - 20 000 Hz",
+    "pros": []
+  },
+  {
+    "id": "4da7786d-8ecb-4acd-8fcd-e7df2f3ff618",
+    "name": "MT 71 S Satin Nickel",
+    "description": "Basé sur une capsule à large diaphragme éprouvée, offrant d'excellentes caractéristiques de ..., Offre un son clair et sans distorsion pour une large gamme d'applications, ...",
+    "pros": []
+  },
+  {
+    "id": "1a00189f-36a3-427e-9326-5f20daac3441",
+    "name": "NANO",
+    "description": "Pour une utilisation universelle en studio et home studio, Design de membrane triangulaire breveté permettant une large réponse en fréquence et ...",
+    "pros": []
+  },
+  {
+    "id": "766e65ff-f4fd-45c4-9db2-526e774c297d",
+    "name": "NT1 5th Generation Black",
+    "description": "Capsule 1\" avec membrane pulvérisée d'or, Préampli Revolution à gain élevé",
+    "pros": []
+  },
+  {
+    "id": "935ee3d5-a0b3-49a8-bca5-c462e895af39",
+    "name": "NT1 5th Generation Sil B-Stock",
+    "description": ",",
+    "pros": []
+  },
+  {
+    "id": "58beec41-f3e9-4a8c-9192-162a2be9a452",
+    "name": "NT1 5th Generation Silver",
+    "description": "Capsule 1\" avec membrane pulvérisée d'or, Préampli Revolution à gain élevé",
+    "pros": []
+  },
+  {
+    "id": "cb76dd20-b0ec-4f37-a5b6-1810b6f67472",
+    "name": "NT1 Signature Black",
+    "description": "Capsule 1\" recouverte d'or, Directivité: Cardioïde",
+    "pros": []
+  },
+  {
+    "id": "4d5e62d9-433e-4fca-8d4f-519fd3ff8cd5",
+    "name": "NT1 Signature Blue",
+    "description": "Capsule 1\" recouverte d'or, Directivité: Cardioïde",
+    "pros": []
+  },
+  {
+    "id": "001b2308-e067-49af-9b8f-05cb2e865e73",
+    "name": "NT1 Signature Green",
+    "description": "Capsule 1\" recouverte d'or, Directivité: Cardioïde",
+    "pros": []
+  },
+  {
+    "id": "417c5d65-ca29-4333-b326-95e96a409afb",
+    "name": "NT1 Signature Pink",
+    "description": "Capsule 1\" recouverte d'or, Directivité: Cardioïde",
+    "pros": []
+  },
+  {
+    "id": "a3aca668-9bcc-4e82-a4d5-5e2414e8cf22",
+    "name": "NT1 Signature Purple",
+    "description": "Capsule 1\" recouverte d'or, Directivité: Cardioïde",
+    "pros": []
+  },
+  {
+    "id": "34fcf6b8-a461-4d8f-9959-f23a70699652",
+    "name": "NT1-A Complete Vocal Recording",
+    "description": "Microphone large membrane Rode NT-1 A, Suspension élastique avec filtre anti-pop intégré SM6",
+    "pros": []
+  },
+  {
+    "id": "ddb6953b-48d0-4281-a68f-112e9e81d52f",
+    "name": "NT1000",
+    "description": "Capsule à large diaphragme HF2 avec membrane en or évaporé, Circuit SMD sans transformateur extrêmement silencieux",
+    "pros": []
+  },
+  {
+    "id": "a6bbdcff-d16d-4dc9-9926-ced7c03c46f5",
+    "name": "NT2-A Studio Solution Set",
+    "description": "1x micro NT2-A, 1x suspension SM6 deluxe avec anti-pop intégré",
+    "pros": []
+  },
+  {
+    "id": "8a25a63f-9cbe-498c-a7d3-517843ece4d1",
+    "name": "NT2000 incl. SM2",
+    "description": "Directivité variable sur le micro: cardioïde, omni et figure en 8, Réponse en fréquence: 20 Hz - 20 kHz",
+    "pros": []
+  },
+  {
+    "id": "66d7ebe9-6d2e-4e85-8e19-d8a3ffcef314",
+    "name": "NTK",
+    "description": "1x micro à lampe large membrane, Directivité: cardioïde",
+    "pros": []
+  },
+  {
+    "id": "76ea9811-6c9b-4c68-b3e0-fa9d394c8a22",
+    "name": "Origin",
+    "description": "Directivité: Cardioïde, Réponse en fréquence: 20 - 20 000 Hz (+/-3 dB)",
+    "pros": []
+  },
+  {
+    "id": "50676e6e-815a-48f8-84a2-1ce96f851fb7",
+    "name": "Orpheus",
+    "description": "Capsule double membrane très sensible de 1,07\", Réponse en fréquence: 20 - 20 000 Hz",
+    "pros": []
+  },
+  {
+    "id": "e6320af5-3307-46b1-9a8a-1dbd42b25d03",
+    "name": "P220",
+    "description": "Capsule 1 pouce, Boîtier métallique",
+    "pros": []
+  },
+  {
+    "id": "89742cd7-0337-403b-91b1-0f4544d0cde9",
+    "name": "Podcaster",
+    "description": "Capsule dynamique large membrane, Conversion AN/NA intégrée",
+    "pros": []
+  }
+]

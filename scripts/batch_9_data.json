@@ -1,0 +1,122 @@
+[
+  {
+    "id": "6925ca7a-3056-4c51-9d16-12262e7b15d5",
+    "name": "CR77",
+    "description": "Microphone de chant dynamique pour la scène et le studio, Directivité: Supercardioïde",
+    "pros": []
+  },
+  {
+    "id": "a1ab79f3-42d0-4dff-bf2b-469ad217643b",
+    "name": "CV-12",
+    "description": "Lampe russe 6072A sélectionnée à la main, 9 directivités commutables: cardioïde, omnidirectionnel, figure en 8, etc (sélectionnables depuis l'alimentation)",
+    "pros": []
+  },
+  {
+    "id": "f6506977-8a55-47b8-9fb5-ebeaa0a7bcac",
+    "name": "CV-12 BLA",
+    "description": "Capsule de 34 mm, 9 directivités sélectionnables (sur le boitier d'alimentation)",
+    "pros": []
+  },
+  {
+    "id": "578f042b-d18e-4e4f-b99d-941847d430e4",
+    "name": "DM-1B",
+    "description": "Micro conçu pour capturer et reproduire toutes les nuances d'une grosse caisse, Convient également aux amplificateurs de basses, aux cuivres, aux bois etc.",
+    "pros": []
+  },
+  {
+    "id": "c76acc8b-6187-42cf-af65-4cc2c4994279",
+    "name": "DynaCaster DCM 3",
+    "description": "Dynamique, Idéal pour la parole et le chant",
+    "pros": []
+  },
+  {
+    "id": "8490181b-a4c3-406c-8ba6-77a1619fc6ed",
+    "name": "DynaCaster DCM 8",
+    "description": "Dynamique, Idéal pour la parole et le chant",
+    "pros": []
+  },
+  {
+    "id": "f627fde1-3f59-4ca0-aad8-0288208ccc66",
+    "name": "DynaCaster DCM6",
+    "description": "Dynamique, Idéal pour la parole et le chant",
+    "pros": []
+  },
+  {
+    "id": "4e77a8da-195d-4fca-9c67-87e70e44a49d",
+    "name": "Eden LT-386",
+    "description": "Directivité commutable: omnidirectionnelle, figure en 8, cardioïde, Réponse en fréquence: 20 - 20000 Hz",
+    "pros": []
+  },
+  {
+    "id": "69ca4f5c-6ea4-4097-b8b0-4c84688ca3f4",
+    "name": "Edge Solo",
+    "description": "Logiciel Edge Real-Time Modeling pour émuler les microphones de studio classiques incl., Utilisable avec n'importe quel préamplificateur micro et interface audio - une interface ...",
+    "pros": []
+  },
+  {
+    "id": "8eb987de-aabe-4993-a510-fd9bdd9d4215",
+    "name": "EHR-M",
+    "description": "Avec capsule Ehrlund triangulaire brevetée, Conçu pour l'enregistrement",
+    "pros": []
+  },
+  {
+    "id": "da57a25a-d533-42d9-8cdf-a6fc4f480630",
+    "name": "ELA M 251E",
+    "description": "Réplique fidèle à l'original du classique, Capsule double membrane 1\" CK 12 pulvérisée d'or des 2 côtés",
+    "pros": []
+  },
+  {
+    "id": "2d4c74a9-e628-4f8a-b4c5-7b2629307fa9",
+    "name": "HypeMiC",
+    "description": "Diagramme polaire : cardioïde, Préamplificateur avec gain de 46 dB et commande numérique précise",
+    "pros": []
+  },
+  {
+    "id": "1db443fb-113a-4765-8dda-7d4533ba2446",
+    "name": "K2",
+    "description": "Directivité réglable en continu, Réponse en fréquence: 20 - 20 000 Hz",
+    "pros": []
+  },
+  {
+    "id": "3dfda4c9-4863-4c6d-8674-47027d0af03f",
+    "name": "LCT 1040",
+    "description": "Capsule à condensateur véritable de 1 pouce, 4 caractéristiques de lampe analogiques (Clear, Warm, Dark, Saturated)",
+    "pros": []
+  },
+  {
+    "id": "fb05bc6a-5f29-4e60-9c56-be16f574b842",
+    "name": "LCT 240 PRO",
+    "description": "Directivité: Cardioïde, Construction robuste en métal",
+    "pros": []
+  },
+  {
+    "id": "190a9fa6-299d-406f-927c-c5a9bf48127d",
+    "name": "LCT 240 PRO Vocal Set",
+    "description": "Avec Record-Ready Sound, Directivité: Cardioïde",
+    "pros": []
+  },
+  {
+    "id": "81422e7f-7da7-412e-9610-ff857104c7b8",
+    "name": "LCT 440 PURE",
+    "description": "Directivité: cardioïde, Capsule recouverte d'or d'un diamètre de 25,4 mm",
+    "pros": []
+  },
+  {
+    "id": "54f37e1f-7bfe-4076-8f01-bc9c7417f8d6",
+    "name": "LCT 441 FLEX",
+    "description": "8 caractéristiques directionnelles, 5 caractéristiques avant: omnidirectionnelle, cardioïde large, cardioïde, supercardioïde et figure en huit",
+    "pros": []
+  },
+  {
+    "id": "77ac3e3a-3091-4415-8840-b4cbab140c66",
+    "name": "LCT 441 FLEX B-Stock",
+    "description": ",",
+    "pros": []
+  },
+  {
+    "id": "46f331ae-1739-4a38-93dc-df095fdb7c4e",
+    "name": "LCT 540 S",
+    "description": "Directivité : cardioïde, Rapport signal/bruit : 90 dB (A)",
+    "pros": []
+  }
+]

@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from './ui/Button';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { ChevronLeft, Clock, Calendar, User, ShoppingBag, ArrowRight } from 'lucide-react';
 import { getArticleBySlug } from '../lib/data';
+import { supabase } from '../lib/supabaseClient';
+import { Product } from '../types/database';
+import { transformProduct } from '../lib/transformers';
 
 interface GuideArticlePageProps {
   onNavigate: (page: string, slug?: string) => void;
@@ -13,6 +16,27 @@ interface GuideArticlePageProps {
 
 export const GuideArticlePage: React.FC<GuideArticlePageProps> = ({ onNavigate, slug }) => {
   const article = getArticleBySlug(slug || '');
+  const [relatedItems, setRelatedItems] = useState<Product[]>([]);
+
+  useEffect(() => {
+    const fetchRelated = async () => {
+      if (article?.relatedProducts && article.relatedProducts.length > 0) {
+        const { data } = await supabase
+          .from('products')
+          .select('*')
+          .in('slug', article.relatedProducts);
+
+        if (data) {
+          const items = (data as any[]).map(p => transformProduct(p));
+          setRelatedItems(items);
+        }
+      } else {
+        setRelatedItems([]);
+      }
+    };
+
+    fetchRelated();
+  }, [article]);
 
   if (!article) {
     return (
@@ -27,24 +51,24 @@ export const GuideArticlePage: React.FC<GuideArticlePageProps> = ({ onNavigate, 
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Navbar onNavigate={(page) => onNavigate(page)} />
+      <Navbar onNavigate={onNavigate} />
 
       {/* HEADER ARTICLE */}
       <header className="pt-32 pb-16 relative">
         <div className="container mx-auto px-6 max-w-[1000px]">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             className="mb-8"
           >
-            <button 
+            <button
               onClick={() => onNavigate('guides')}
               className="group flex items-center text-sm font-medium text-muted-foreground hover:text-primary transition-colors mb-6"
             >
               <ChevronLeft className="w-4 h-4 mr-1 group-hover:-translate-x-1 transition-transform" />
               Retour aux guides
             </button>
-            
+
             <div className="flex items-center gap-3 text-sm font-medium text-primary mb-4">
               <span className="uppercase tracking-widest">{article.category}</span>
               <span className="w-1 h-1 bg-primary rounded-full" />
@@ -72,13 +96,13 @@ export const GuideArticlePage: React.FC<GuideArticlePageProps> = ({ onNavigate, 
         </div>
 
         {/* COVER IMAGE */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           className="container mx-auto px-6 max-w-[1200px]"
         >
           <div className="aspect-[21/9] rounded-3xl overflow-hidden bg-secondary">
-             <img src={article.image} alt={article.title} className="w-full h-full object-cover" />
+            <img src={article.image} alt={article.title} className="w-full h-full object-cover" />
           </div>
         </motion.div>
       </header>
@@ -86,7 +110,7 @@ export const GuideArticlePage: React.FC<GuideArticlePageProps> = ({ onNavigate, 
       {/* CONTENT LAYOUT */}
       <div className="container mx-auto px-6 max-w-[1200px] pb-24">
         <div className="flex flex-col lg:flex-row gap-16">
-          
+
           {/* MAIN TEXT */}
           <main className="lg:w-2/3">
             <div className="prose prose-stone prose-lg max-w-none 
@@ -98,10 +122,9 @@ export const GuideArticlePage: React.FC<GuideArticlePageProps> = ({ onNavigate, 
               <p className="lead text-xl text-foreground font-medium mb-8 border-l-4 border-primary pl-4 italic">
                 {article.intro}
               </p>
-              
-              {/* Le contenu serait injecté via dangerouslySetInnerHTML dans une vraie app, ici on simule avec un composant children ou direct */}
+
               {typeof article.content === 'string' ? (
-                 <div dangerouslySetInnerHTML={{ __html: article.content }} />
+                <div dangerouslySetInnerHTML={{ __html: article.content }} />
               ) : (
                 article.content
               )}
@@ -117,25 +140,34 @@ export const GuideArticlePage: React.FC<GuideArticlePageProps> = ({ onNavigate, 
                   <h3 className="font-bold text-lg font-serif">Dans cet article</h3>
                 </div>
 
-                {article.relatedProducts.length > 0 ? (
+                {relatedItems.length > 0 ? (
                   <ul className="space-y-4">
-                    {article.relatedProducts.map((productName, idx) => (
-                      <li key={idx} className="bg-white p-3 rounded-xl border border-border flex items-center justify-between group cursor-pointer hover:border-primary/50 transition-colors" onClick={() => onNavigate('product')}>
-                        <div className="flex items-center gap-3">
-                           {/* Placeholder image produit */}
-                           <div className="w-10 h-10 bg-secondary rounded-lg flex-shrink-0" />
-                           <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">{productName}</span>
+                    {relatedItems.map((product) => (
+                      <li
+                        key={product.id}
+                        className="bg-white p-3 rounded-xl border border-border flex items-center justify-between group cursor-pointer hover:border-primary/50 transition-colors shadow-sm"
+                        onClick={() => onNavigate('product', product.slug)}
+                      >
+                        <div className="flex items-center gap-3 overflow-hidden">
+                          <div className="w-12 h-12 bg-white border border-border/50 rounded-lg flex-shrink-0 p-1 flex items-center justify-center">
+                            <img src={product.image_url} className="max-w-full max-h-full object-contain mix-blend-multiply" alt={product.name} />
+                          </div>
+                          <div className="flex flex-col min-w-0">
+                            <span className="text-xs font-bold uppercase text-muted-foreground tracking-wider">{product.brand}</span>
+                            <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors line-clamp-1">{product.name}</span>
+                            <span className="text-xs font-bold text-foreground">{product.price}€</span>
+                          </div>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:translate-x-1 transition-transform flex-shrink-0" />
                       </li>
                     ))}
                   </ul>
                 ) : (
                   <p className="text-sm text-muted-foreground italic">Aucun produit spécifique mentionné.</p>
                 )}
-                
+
                 <div className="mt-6 pt-6 border-t border-border/50 text-center">
-                  <Button variant="primary" className="w-full">
+                  <Button variant="primary" className="w-full" onClick={() => onNavigate('category')}>
                     Voir la sélection complète
                   </Button>
                 </div>

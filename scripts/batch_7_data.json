@@ -1,0 +1,122 @@
+[
+  {
+    "id": "7b42cc1f-88dc-4565-9126-c5c80649b77f",
+    "name": "SC 450",
+    "description": "Directivité: Cardioïde, Réponse en fréquence: 20 - 18 000 Hz",
+    "pros": []
+  },
+  {
+    "id": "31507474-f8b3-42b1-9afa-9a583a66fc80",
+    "name": "SC 450 Stereoset",
+    "description": "Nécessite une alimentation Phantom 48V, Filtre coupe bas",
+    "pros": []
+  },
+  {
+    "id": "11842360-512c-411c-9962-68093b1ec1c8",
+    "name": "SC 450 USB",
+    "description": "Avec port USB pour une utilisation directe sur un ordinateur, Aucun pilote supplémentaire nécessaire",
+    "pros": []
+  },
+  {
+    "id": "21e844fd-d311-4d90-97e2-fe5014f6cad0",
+    "name": "SC 600",
+    "description": "Directivité commutable: Cardioïde, omnidirectionnelle, Membrane 1\" dorée",
+    "pros": []
+  },
+  {
+    "id": "212a0074-898d-4aef-8d1e-5fdaf04ff867",
+    "name": "SC-1",
+    "description": "Reproduit le comportement sonore de différents microphones, Tonalité contrôlée par le plug-in Hemisphere avec contrôles de filtre, de proximité ...",
+    "pros": []
+  },
+  {
+    "id": "ce30a445-2d41-442c-9c0f-b9bdaf5527b4",
+    "name": "SCT 2000",
+    "description": "Membrane 1,07\" pulvérisée d'or, Son très chaud",
+    "pros": []
+  },
+  {
+    "id": "e288c1a8-a9f8-40cb-943e-f79179c0ef1d",
+    "name": "SCT 800",
+    "description": "Lampe 12AX7, Directivité: Cardioïde",
+    "pros": []
+  },
+  {
+    "id": "4b7efa5b-3174-430b-bc58-185ac328d2f4",
+    "name": "SE 2200",
+    "description": "Microphone à condensateur à large diaphragme, Directivité: cardioïde",
+    "pros": []
+  },
+  {
+    "id": "c10c6a76-9aa0-48a8-a490-9169b4bcfdb7",
+    "name": "sE4100",
+    "description": "Directivité: Cardioïde, Réponse en fréquence: 20 Hz - 20 kHz",
+    "pros": []
+  },
+  {
+    "id": "66b9cdcc-b993-422e-a679-54cac060e67d",
+    "name": "sE4400",
+    "description": "Directivité: Cardioïde, omnidirectionnel, hypercardioïde, figure en 8, Réponse en fréquence: 20 - 20000 Hz",
+    "pros": []
+  },
+  {
+    "id": "ab290423-00f0-439f-a0f1-4063263b6d49",
+    "name": "Series Black LA-220 V2",
+    "description": "Directivité: Cardioïde, Réponse en fréquence: 20 - 20000 Hz",
+    "pros": []
+  },
+  {
+    "id": "4e21d0bd-7dd4-470b-b5cf-f051eb91a4a6",
+    "name": "Series Black LA-320 V2",
+    "description": "Directivité: Cardioïde, Réponse en fréquence: 20 - 20000 Hz",
+    "pros": []
+  },
+  {
+    "id": "49249f2b-d6a5-4f83-8869-01304f179fcf",
+    "name": "Shure MV7X",
+    "description": "Le Shure MV7X XLR est un microphone dynamique conçu pour les créateurs de contenu, podcasteurs et streamers qui recherchent une qualité audio professionnelle, sans fonctionnalités superflues. Inspiré du mythique Shure SM7B, il reprend la même signature sonore chaude et précise, idéale pour la voix.\n\nGrâce à sa connexion XLR, le MV7X s’intègre parfaitement dans un setup audio avec interface ou table de mixage, offrant un contrôle total sur le gain et le traitement du son. Sa directivité cardioïde capte efficacement la voix tout en réduisant les bruits ambiants, ce qui en fait un excellent choix pour l’enregistrement en home studio ou en environnement non traité.\n\nRobuste, fiable et pensé pour durer, le Shure MV7X est une solution idéale pour celles et ceux qui veulent passer à un niveau supérieur en audio, sans payer le prix d’un SM7B.",
+    "pros": []
+  },
+  {
+    "id": "fb9d05e3-91dd-445b-bb17-536644098768",
+    "name": "Sphere DLX Modeling Microphone",
+    "description": "Microphone à condensateur large membrane pour émuler le comportement sonore de 38 ..., Design double membrane de 1\" (plaquée or)",
+    "pros": []
+  },
+  {
+    "id": "ab8bbff0-056f-4c08-89d3-49c3401a69a6",
+    "name": "Sphere LX Modeling Microphone",
+    "description": "Microphone à condensateur large membrane pour émuler le comportement sonore de 20 ..., Design double membrane de 1\" (plaquée or)",
+    "pros": []
+  },
+  {
+    "id": "03e41e2b-c0ce-459a-8958-58c596e29b31",
+    "name": "Spirit",
+    "description": "Directivité commutable: cardioïde, omnidirectionnelle, figure en 8, Réponse en fréquence: 20 Hz - 20 kHz (+/-3 dB)",
+    "pros": []
+  },
+  {
+    "id": "06d87105-970e-410f-82d6-79a0343070fc",
+    "name": "Stealth",
+    "description": "Offre 4 réglages de son sélectionnables : Vocal 1, Vocal 2, Guitare et Dark, Préampli micro intégré de classe A qui s'active automatiquement avec une alimentation fantôme +48V",
+    "pros": []
+  },
+  {
+    "id": "147927c3-bd88-45d7-bccd-33a9e1299a45",
+    "name": "Stealth Broadcast",
+    "description": "Pour broadcast, studio et scène, Offre 4 réglages sonores sélectionnables: Vocal 1, Vocal 2, Guitar, Dark",
+    "pros": []
+  },
+  {
+    "id": "2770f627-953a-45bb-94c2-d6c0f44081f7",
+    "name": "T1",
+    "description": "Directivité: Cardioïde, Réponse en fréquence: 20 Hz - 20 kHz",
+    "pros": []
+  },
+  {
+    "id": "ced84067-41ce-4dc7-9f5b-7dd6e2b4ef52",
+    "name": "T2",
+    "description": "Avec membrane spéciale en titane, Directivité: Cardioïde, omnidirectionnel, hypercardioïde, figure en 8",
+    "pros": []
+  }
+]

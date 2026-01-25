@@ -1,0 +1,14 @@
+
+Explication pour l'utilisateur :
+
+Une "migration SQL" est simplement un petit script qui dit à la base de données : "Hé, ajoute une nouvelle colonne ici".
+
+Pourquoi j'ai créé ce fichier (`002_add_gallery_images.sql`) ?
+Parce que votre table `products` actuelle ne sait pas stocker plusieurs images. Elle a juste une colonne `image_url` (une seule image).
+Pour stocker une galerie (plusieurs images), il faut créer un nouvel emplacement (une colonne) dans la base de données.
+
+Ce fichier contient la commande exacte pour le faire :
+`ALTER TABLE products ADD COLUMN gallery_images text[];`
+
+C'est comme ajouter une nouvelle case "Album Photo" sur la fiche de chaque produit.
+Sans ça, même si je modifie le site (frontend), il ne trouvera pas les images dans la base de données.

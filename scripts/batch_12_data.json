@@ -1,0 +1,56 @@
+[
+  {
+    "id": "ddefe140-1373-4746-a0d5-278b396f612d",
+    "name": "WA-87jr Black",
+    "description": "Version FET sans transformateur, Double large membrane recouverte d'or",
+    "pros": []
+  },
+  {
+    "id": "a7f884bb-92c3-4e1c-a8e3-bf16c6982cf7",
+    "name": "WA-87jr SE",
+    "description": "Directivit�: Cardio�de, Chemin de signal compl�tement discret",
+    "pros": []
+  },
+  {
+    "id": "f4e33861-8f6c-4a6c-825b-22f7f0b73684",
+    "name": "WA-87jr SE Black",
+    "description": "Directivit�: Cardio�de, Chemin de signal compl�tement discret",
+    "pros": []
+  },
+  {
+    "id": "d428f5be-5a93-4e3c-b394-c9a62be6f10b",
+    "name": "WA-CX12",
+    "description": "Capsule double membrane au design CK12, Transformateur de sortie TAB-Funkenwerk (AMI) USA",
+    "pros": []
+  },
+  {
+    "id": "a4264b2e-18ac-4fd6-ad80-bd86b633830d",
+    "name": "X1A",
+    "description": "Type de capsule: 2/3\" à condensateur avec Bias permanent, Directivité: cardioïde",
+    "pros": []
+  },
+  {
+    "id": "64c46186-0011-4e51-83a2-7aa43f085583",
+    "name": "X1S",
+    "description": "Directivité: cardioïde, Capsule manufacturée",
+    "pros": []
+  },
+  {
+    "id": "f28ac682-c062-40f4-8c64-92f0db7a1cf2",
+    "name": "YCM705 B",
+    "description": "Membrane de 1\", Directivité: cardioïde",
+    "pros": []
+  },
+  {
+    "id": "c80689b6-b9a1-4276-91b0-b579453945dd",
+    "name": "YCM705 W",
+    "description": "Membrane de 1\", Directivité: cardioïde",
+    "pros": []
+  },
+  {
+    "id": "17219c0f-b877-4f06-a6c4-57a5e55ab9ff",
+    "name": "Z 5600A Mk II",
+    "description": "Diaphragme 1,07\" plaqué or, Filtre coupe bas",
+    "pros": []
+  }
+]

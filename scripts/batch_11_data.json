@@ -1,0 +1,122 @@
+[
+  {
+    "id": "345aa2ec-8ae6-4bf6-ac60-92d088f04919",
+    "name": "TLM 103",
+    "description": "Design de la capsule basé sur le légendaire U 87, Directivité: Cardioïde, Plage de transmission: 20 - 20 000 Hz",
+    "pros": []
+  },
+  {
+    "id": "8a5d2f08-f83a-4d8c-8fd1-6f60c3eb3b73",
+    "name": "TLM 103 mt",
+    "description": "Design de la capsule basé sur le légendaire U 87, Directivité: Cardioïde, Réponse en fréquence: 20 - 20 000 Hz",
+    "pros": []
+  },
+  {
+    "id": "c5b36d26-193d-4f1a-8128-e504497146da",
+    "name": "TLM 107",
+    "description": "Directivités: cardioïde, omnidirectionnelle, figure en huit, hypercardioïde et cardioïde-large, Réponse en fréquence: 20 - 20,000 Hz, Filtres coupe-bas: 40 ou 100 Hz",
+    "pros": []
+  },
+  {
+    "id": "ce15e97e-b3bf-4d13-8bcb-87a90bb04427",
+    "name": "TLM 107 bk",
+    "description": "Directivités: cardioïde, omnidirectionnelle, figure en huit, hypercardioïde et cardioïde-large, Réponse en fréquence: 20 - 20,000 Hz, Filtres coupe-bas: 40 ou 100 Hz",
+    "pros": []
+  },
+  {
+    "id": "846989ee-d85e-4f1b-beb1-6e7fd3bd37f4",
+    "name": "TLM 193",
+    "description": "Directivité: Cardioïde, Récepteur à gradient de pression avec capsule à double membrane, Bruit extrêmement faible: 10 dB A",
+    "pros": []
+  },
+  {
+    "id": "2f605a39-5cfb-4f20-b992-1c1530baf09a",
+    "name": "TLM 49",
+    "description": "Directivité: Cardioïde, Image sonore optimisée pour le chant, Avec capsule large membrane du légendaire U47",
+    "pros": []
+  },
+  {
+    "id": "a3f3ad62-10ed-42ea-9fca-30afeef26a79",
+    "name": "TLM170 R",
+    "description": "Micro de studio à directivité multiple, Technologie FET 100, 5 directivités: omnidirectionnelle, cardioïde, bidirectionnelle, hypercardioïde et cardioïde-large",
+    "pros": []
+  },
+  {
+    "id": "2ea35518-a7c3-4694-83f0-992b915f6d32",
+    "name": "TLM170 R mt",
+    "description": "5 directivités : omnidirectionnelle, cardioïde, forme en huit, hypercardioïde et cardioïde large, Commutable à distance avec N 48 R-2., Couleur : Noir",
+    "pros": []
+  },
+  {
+    "id": "390f962c-080d-40d2-9f0a-18c5dc820099",
+    "name": "TLM67",
+    "description": "Directivité sélectionnable (omnidirectionnelle, cardioïde, figure en 8), Atténuation de 10 dB, Filtre coupe-bas",
+    "pros": []
+  },
+  {
+    "id": "a677e737-025e-41d9-bcb9-28089cbb0d07",
+    "name": "TM1 CompleteVocalRecording",
+    "description": "Capsule de 1 pouce plaquée or, Diagramme polaire : cardioïde",
+    "pros": []
+  },
+  {
+    "id": "052fdc2d-1140-45c4-8bd8-d555c0e86d70",
+    "name": "WA-47jr",
+    "description": "Composants �lectroniques, Version FET sans transformateur du c�l�bre '47 classic",
+    "pros": []
+  },
+  {
+    "id": "d6d8d372-997d-415a-b61a-4b9ac1a57616",
+    "name": "WA-47jr Black",
+    "description": "Version FET sans transformateur du c�l�bre classique '47, Double membrane plaqu�e or",
+    "pros": []
+  },
+  {
+    "id": "b763b226-7109-412d-a343-c219e1c92a5c",
+    "name": "WA-47jr SE",
+    "description": "Directivit�: Cardio�de, Chemin de signal compl�tement discret",
+    "pros": []
+  },
+  {
+    "id": "c1eb34eb-3395-4205-947e-f0a54a793b8f",
+    "name": "WA-47jr SE Black",
+    "description": "Directivit�: Cardio�de, Chemin de signal compl�tement discret",
+    "pros": []
+  },
+  {
+    "id": "9e70c44d-1c08-446d-8aa5-123403422a8c",
+    "name": "WA-67",
+    "description": "Bas� sur une lampe pentod�ne EF86, Diagramme polaire commutable : cardio�de, omnidirectionnel, figure en huit",
+    "pros": []
+  },
+  {
+    "id": "7e787c25-3f86-48a8-a920-4e279390d8fa",
+    "name": "WA-8000",
+    "description": "Directivit�s : cardio�de, omnidirectionnelle, Transformateur de sortie Lundahl",
+    "pros": []
+  },
+  {
+    "id": "ef65b761-903c-4985-8780-2dfc38250562",
+    "name": "WA-8000G",
+    "description": "Edition sp�ciale limit�e, Directivit�: Cardio�de et omnidirectionnel",
+    "pros": []
+  },
+  {
+    "id": "d9707f0a-8f10-4beb-843c-f25c19ccb213",
+    "name": "WA-87 R2",
+    "description": "Diagrammes polaires : cardio�de, omnidirectionnel et figure en huit, Capsule \"True-To-Original\" WA-87-B-50V",
+    "pros": []
+  },
+  {
+    "id": "8086a18d-1a3b-450c-9f7f-1a36e64e1207",
+    "name": "WA-87 R2B",
+    "description": "Diagrammes polaires : cardio�de, omnidirectionnel et figure en huit, Capsule \"True-To-Original\" WA-87-B-50V",
+    "pros": []
+  },
+  {
+    "id": "daa3f373-dd55-4b6e-9845-23b2a45f261b",
+    "name": "WA-87jr",
+    "description": "Version FET sans transformateur, Double large membrane recouverte d'or",
+    "pros": []
+  }
+]

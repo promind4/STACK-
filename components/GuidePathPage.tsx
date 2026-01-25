@@ -27,22 +27,22 @@ export const GuidePathPage: React.FC<GuidePathPageProps> = ({ onNavigate, slug }
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Navbar onNavigate={(page) => onNavigate(page)} />
+      <Navbar onNavigate={onNavigate} />
 
       {/* HERO PATH */}
       <section className="pt-32 pb-24 relative overflow-hidden bg-foreground">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src={pathway.image} 
-            alt={pathway.title} 
+          <img
+            src={pathway.image}
+            alt={pathway.title}
             className="w-full h-full object-cover opacity-30 blur-sm scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/60" />
         </div>
 
         <div className="container mx-auto px-6 max-w-[1000px] relative z-10">
-          <button 
+          <button
             onClick={() => onNavigate('guides')}
             className="group flex items-center text-sm font-medium text-white/70 hover:text-white transition-colors mb-8"
           >
@@ -51,13 +51,13 @@ export const GuidePathPage: React.FC<GuidePathPageProps> = ({ onNavigate, slug }
           </button>
 
           <motion.div
-             initial={{ opacity: 0, y: 20 }}
-             animate={{ opacity: 1, y: 0 }}
-             className="text-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center"
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur border border-white/20 text-xs font-bold uppercase tracking-widest mb-6 shadow-sm text-white">
-               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-               Parcours Guidé
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              Parcours Guidé
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 font-serif text-white">
               {pathway.title}
@@ -73,9 +73,9 @@ export const GuidePathPage: React.FC<GuidePathPageProps> = ({ onNavigate, slug }
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6 max-w-[800px]">
           <div className="relative border-l-2 border-border/50 ml-4 md:ml-0 space-y-16">
-            
+
             {pathway.steps.map((step, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -95,8 +95,8 @@ export const GuidePathPage: React.FC<GuidePathPageProps> = ({ onNavigate, slug }
                   </p>
 
                   {step.articleSlug ? (
-                    <Button 
-                      variant="outline" 
+                    <Button
+                      variant="outline"
                       onClick={() => onNavigate('guide-article', step.articleSlug)}
                       className="group/btn"
                     >
@@ -106,7 +106,7 @@ export const GuidePathPage: React.FC<GuidePathPageProps> = ({ onNavigate, slug }
                     </Button>
                   ) : (
                     <div className="inline-flex items-center text-xs font-medium text-muted-foreground bg-secondary/50 px-3 py-1 rounded-full border border-border/50">
-                       Bientôt disponible
+                      Bientôt disponible
                     </div>
                   )}
                 </div>
@@ -114,23 +114,23 @@ export const GuidePathPage: React.FC<GuidePathPageProps> = ({ onNavigate, slug }
             ))}
 
             {/* FINAL CTA */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               className="relative pl-12 pt-8"
             >
-               <div className="absolute -left-[9px] top-8 w-4 h-4 rounded-full bg-primary animate-pulse" />
-               <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center">
-                  <CheckCircle2 className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold mb-2">Prêt à vous lancer ?</h3>
-                  <p className="text-muted-foreground mb-6">
-                    Vous avez toutes les connaissances. Il est temps de construire votre setup.
-                  </p>
-                  <Button variant="primary" size="lg" onClick={() => onNavigate('category')}>
-                    Voir les produits recommandés
-                  </Button>
-               </div>
+              <div className="absolute -left-[9px] top-8 w-4 h-4 rounded-full bg-primary animate-pulse" />
+              <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center">
+                <CheckCircle2 className="w-12 h-12 text-primary mx-auto mb-4" />
+                <h3 className="text-2xl font-bold mb-2">Prêt à vous lancer ?</h3>
+                <p className="text-muted-foreground mb-6">
+                  Vous avez toutes les connaissances. Il est temps de construire votre setup.
+                </p>
+                <Button variant="primary" size="lg" onClick={() => onNavigate('category')}>
+                  Voir les produits recommandés
+                </Button>
+              </div>
             </motion.div>
 
           </div>
