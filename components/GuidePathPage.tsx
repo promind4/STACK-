@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from './ui/Button';
-import { Navbar } from './Navbar';
-import { Footer } from './Footer';
+
 import { ChevronLeft, CheckCircle2, ArrowRight, BookOpen } from 'lucide-react';
 import { getPathwayBySlug } from '../lib/data';
+import { useSEO } from './SEOHelper';
 
 interface GuidePathPageProps {
   onNavigate: (page: string, slug?: string) => void;
@@ -13,6 +13,11 @@ interface GuidePathPageProps {
 
 export const GuidePathPage: React.FC<GuidePathPageProps> = ({ onNavigate, slug }) => {
   const pathway = getPathwayBySlug(slug || '');
+
+  useSEO({
+    title: pathway ? `${pathway.title} - Parcours Guidé` : 'Parcours introuvable',
+    description: pathway ? pathway.subtitle : 'Ce parcours n\'existe pas ou a été déplacé.',
+  });
 
   if (!pathway) {
     return (
@@ -27,7 +32,7 @@ export const GuidePathPage: React.FC<GuidePathPageProps> = ({ onNavigate, slug }
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Navbar onNavigate={onNavigate} />
+
 
       {/* HERO PATH */}
       <section className="pt-32 pb-24 relative overflow-hidden bg-foreground">
@@ -137,7 +142,7 @@ export const GuidePathPage: React.FC<GuidePathPageProps> = ({ onNavigate, slug }
         </div>
       </section>
 
-      <Footer onNavigate={(page) => onNavigate(page)} />
+
     </div>
   );
 };

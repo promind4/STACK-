@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Heart, ArrowRight, Swords } from 'lucide-react';
+import { Heart, ArrowRight, Swords, Star } from 'lucide-react';
 import { Button } from './Button';
 import { StarRating } from './StarRating';
 import { Product } from '../../types/database';
@@ -75,12 +75,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick, clas
       <div className="p-5 flex flex-col flex-1">
         <div className="flex justify-between items-start mb-2">
           <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider">{product.brand}</span>
-          {product.rating && (
-            <div className="flex items-center gap-1.5 mt-0.5">
-              <StarRating rating={product.rating} size={12} />
-              <span className="text-[10px] text-muted-foreground font-medium">({product.review_count || product.reviews || 0})</span>
-            </div>
-          )}
+          <div className="flex items-center gap-1 mt-0.5 bg-secondary/50 px-1.5 py-0.5 rounded text-xs font-bold text-foreground">
+            <Star className="w-3 h-3 text-yellow-500 fill-yellow-500" />
+            <span>{product.rating}</span>
+          </div>
         </div>
 
         <h3 className="font-bold text-lg mb-4 text-foreground leading-tight group-hover:text-primary transition-colors line-clamp-2">
@@ -88,7 +86,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick, clas
         </h3>
 
         <div className="mt-auto flex items-center justify-between pt-4 border-t border-border/50">
-          <span className="text-xl font-bold">{product.price}€</span>
+          <span className="text-xl font-bold">≈ {product.price}€</span>
           <Button variant="ghost" size="sm" className="group/btn hover:bg-primary hover:text-white px-2">
             Voir
             <ArrowRight className="w-4 h-4 ml-1 group-hover/btn:translate-x-1 transition-transform" />

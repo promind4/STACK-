@@ -1,8 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from './ui/Button';
-import { Navbar } from './Navbar';
-import { Footer } from './Footer';
+
 import {
   Clock, ArrowRight, Sparkles, Search, X
 } from 'lucide-react';
@@ -15,7 +14,7 @@ interface GuidesPageProps {
 
 export const GuidesPage: React.FC<GuidesPageProps> = ({ onNavigate }) => {
   useSEO({
-    title: "Stackera Academy - Guides & Tutos pour Créateurs",
+    title: "Fluxlab Academy - Guides & Tutos pour Créateurs",
     description: "Apprenez à maîtriser votre setup audio, vidéo et streaming. Guides pratiques, comparatifs et tutoriels pour tous les niveaux.",
     image: ARTICLES[0]?.image // Use latest article image
   });
@@ -60,16 +59,16 @@ export const GuidesPage: React.FC<GuidesPageProps> = ({ onNavigate }) => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Navbar onNavigate={(page) => onNavigate(page)} />
+
 
       {/* HERO GUIDES */}
       <section className="pt-32 pb-20 bg-secondary/30 border-b border-border">
         <div className="container mx-auto px-6 max-w-[1200px]">
           <div className="text-center mb-16">
             <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-4">
-              Stackera Academy
+              Fluxlab Academy
             </span>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 font-serif">Devenez un meilleur créateur.</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 font-serif">Guides & Tutoriels pour Créateurs.</h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light">
               Des guides pratiques, des comparatifs honnêtes et des tutoriels techniques pour maîtriser votre matériel.
             </p>
@@ -101,8 +100,8 @@ export const GuidesPage: React.FC<GuidesPageProps> = ({ onNavigate }) => {
               <p className="text-lg text-white/80 mb-8 line-clamp-2 md:line-clamp-none font-light">
                 {heroArticle.intro}
               </p>
-              <Button size="lg" className="bg-white text-black hover:bg-white/90 border-none">
-                Lire l'article
+              <Button variant="outline" size="lg" className="bg-white text-black hover:bg-white/90 border-white/50 shadow-lg font-bold">
+                Lire l'article <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>
           </motion.div>
@@ -189,8 +188,8 @@ export const GuidesPage: React.FC<GuidesPageProps> = ({ onNavigate }) => {
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-1.5 rounded-full text-sm font-bold transition-all border ${selectedCategory === cat
-                    ? 'bg-primary text-white border-primary shadow-sm'
-                    : 'bg-white text-muted-foreground border-border hover:border-primary/30 hover:text-foreground'
+                  ? 'bg-primary text-white border-primary shadow-sm'
+                  : 'bg-white text-muted-foreground border-border hover:border-primary/30 hover:text-foreground'
                   }`}
               >
                 {cat}
@@ -257,7 +256,7 @@ export const GuidesPage: React.FC<GuidesPageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      <Footer onNavigate={(page) => onNavigate(page)} />
+
     </div>
   );
 };

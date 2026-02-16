@@ -12,6 +12,7 @@ export interface Article {
   intro: string;
   content: string;
   relatedProducts: string[];
+  relatedCategorySlug: string;
 }
 
 export interface Pathway {
@@ -33,16 +34,51 @@ export interface Pathway {
 
 export const ARTICLES: Article[] = [
   {
+    id: "7",
+    slug: "choisir-casque-studio",
+    title: "Comment choisir son Casque Studio ? (Ouvert vs Fermé)",
+    category: "Audio",
+    readTime: "12 min",
+    date: "18 Jan 2025",
+    author: "L'IA Fluxlab",
+    image: "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&q=80&w=1200",
+    intro: "Mixer avec un casque grand public est la garantie d'un mixage raté. Découvrez pourquoi la courbe de réponse plate est votre amie, et quand utiliser un casque ouvert ou fermé.",
+    relatedProducts: ["beyerdynamic-dt-770-pro-80-ohm", "beyerdynamic-dt-990-pro", "sennheiser-hd-600"],
+    relatedCategorySlug: "casques-studio",
+    content: `
+      <h2>Fermé (Closed-Back) vs Ouvert (Open-Back)</h2>
+      <p>C'est la première question à se poser. La construction change tout.</p>
+
+      <h3>Le Casque Fermé (Tracking)</h3>
+      <p>Les coques sont solides. Le son est piégé à l'intérieur.
+      <br><strong>Avantages :</strong> Isolation maximale. Le son ne "fuit" pas vers le micro (Bleed). Idéal pour enregistrer des voix.
+      <br><strong>Inconvénients :</strong> Les basses s'accumulent (effet de boîte), la scène sonore est étriquée. Vos oreilles chauffent.
+      <br><strong>Le Standard :</strong> Beyerdynamic DT 770 Pro.</p>
+
+      <h3>Le Casque Ouvert (Mixing)</h3>
+      <p>Les coques sont grillagées. L'air circule librement.
+      <br><strong>Avantages :</strong> Son ultra-naturel, scène sonore large (on entend "hors de la tête"). Pas de fatigue auditive.
+      <br><strong>Inconvénients :</strong> Tout le monde entend ce que vous écoutez. Impossible d'enregistrer avec devant un micro.
+      <br><strong>Le Standard :</strong> Beyerdynamic DT 990 Pro / Sennheiser HD 600.</p>
+
+      <h2>L'Impédance (Ohm)</h2>
+      <p>80 Ohm ? 250 Ohm ?
+      <br>- <strong>32-80 Ohm :</strong> Facile à alimenter. Fonctionne sur un téléphone ou une carte son USB standard.
+      <br>- <strong>250-600 Ohm :</strong> Demande un ampli casque dédié (puissant). Offre souvent une meilleure réponse transitoire (plus de détails).</p>
+    `
+  },
+  {
     id: "1",
     slug: "xlr-vs-usb",
     title: "XLR vs USB : L'Analyse Technique Complète (2025)",
     category: "Audio",
     readTime: "25 min",
     date: "12 Oct 2024",
-    author: "L'IA Stackera",
+    author: "L'IA Fluxlab",
     image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=1200",
     intro: "Au-delà du débat simpliste 'Débutant vs Pro', il s'agit de comprendre la chaîne du signal. Tension, Préamplification, Conversion A/N : plongeons dans la physique pour faire le bon choix.",
-    relatedProducts: ["shure-sm7b", "rode-podmic-usb", "focusrite-scarlett-2i2-4th-gen"],
+    relatedProducts: ["shure-mv7", "rode-podmic-usb", "shure-sm7b", "electro-voice-re20"],
+    relatedCategorySlug: "microphones",
     content: `
       <h2>Chapitre 1 : La Physique du Transducteur</h2>
       <p>Pour bien arbitrer ce duel, il faut revenir à la source : la capsule. C'est l'élément qui transforme la pression acoustique (le son) en courant électrique.</p>
@@ -94,10 +130,11 @@ export const ARTICLES: Article[] = [
     category: "Vidéo",
     readTime: "22 min",
     date: "28 Sep 2024",
-    author: "L'IA Stackera",
+    author: "L'IA Fluxlab",
     image: "https://images.unsplash.com/photo-1527011046414-4781f1f94f8c?auto=format&fit=crop&q=80&w=1200",
     intro: "La caméra n'est qu'un capteur. C'est la lumière qui crée l'image. Maîtrisez le CRI, la Température Kelvin et la Diffusion pour un rendu Netflix.",
     relatedProducts: ["elgato-key-light", "elgato-key-light-air", "aputure-120d-ii"],
+    relatedCategorySlug: "lighting",
     content: `
       <h2>Partie 1 : La Qualité de la Lumière (Soft vs Hard)</h2>
       <p>En éclairage, la taille de la source est inversement proportionnelle à la dureté des ombres. C'est la loi fondamentale.</p>
@@ -139,7 +176,8 @@ export const ARTICLES: Article[] = [
     author: "David Chen",
     image: "https://images.unsplash.com/photo-1560252829-804f1aedf1be?auto=format&fit=crop&q=80&w=1200",
     intro: "OBS n'est pas juste un logiciel de capture, c'est une régie de diffusion TV complète. Comprendre les I-Frames, le VBR vs CBR et la chaîne de traitement audio est vital pour un stream de qualité.",
-    relatedProducts: ["elgato-stream-deck-mk2", "elgato-stream-deck-plus"],
+    relatedProducts: ["elgato-stream-deck-mk2", "elgato-stream-deck-plus", "logitech-brio-4k"],
+    relatedCategorySlug: "streaming-gear",
     content: `
       <h2>Chapitre 1 : La Compression Vidéo (Le nerf de la guerre)</h2>
       <p>Le streaming consiste à envoyer 60 images HD par seconde à travers un tuyau (Internet) limité. Sans compression massive, c'est impossible. C'est là qu'interviennent les Codecs (H.264, AV1).</p>
@@ -193,7 +231,8 @@ export const ARTICLES: Article[] = [
     author: "Alexandre Dupont",
     image: "https://images.unsplash.com/photo-1519508234439-4f23643125c1?auto=format&fit=crop&q=80&w=1200",
     intro: "Au-delà des fiches techniques marketing, analysons les préamplis, les convertisseurs et les drivers. Focusrite, Audient, SSL, Universal Audio : qui domine vraiment ?",
-    relatedProducts: ["focusrite-scarlett-2i2-4th-gen", "focusrite-scarlett-solo-4th-gen"],
+    relatedProducts: ["focusrite-scarlett-2i2-4th-gen", "focusrite-scarlett-solo-4th-gen", "audient-id4-mkii", "universal-audio-volt-176"],
+    relatedCategorySlug: "audio-interfaces",
     content: `
       <h2>Critère N°1 : Le Gain du Préampli (Gain Staging)</h2>
       <p>C'est la donnée la plus critique. Un micro dynamique broadcast (Shure SM7B, Electro-Voice RE20) a un niveau de sortie très faible (-59dB). Pour amener ce signal à un niveau de ligne utilisable (0dB), il faut énormément d'amplification.</p>
@@ -234,10 +273,11 @@ export const ARTICLES: Article[] = [
     category: "Acoustique",
     readTime: "20 min",
     date: "10 Dec 2024",
-    author: "L'IA Stackera",
+    author: "L'IA Fluxlab",
     image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=1200",
     intro: "Acheter un micro à 1000€ dans une pièce vide, c'est comme conduire une Ferrari sur un chemin de terre. L'acoustique dicte 80% de la qualité finale de votre audio.",
-    relatedProducts: ["elgato-wave-panels"],
+    relatedProducts: ["elgato-wave-panels", "elgato-wave-panels-starter-set"],
+    relatedCategorySlug: "audio",
     content: `
       <h2>Le Mythe de l'Isolation vs le Traitement</h2>
       <p>Il est crucial de distinguer ces deux concepts de physique :</p>
@@ -292,7 +332,8 @@ export const ARTICLES: Article[] = [
     author: "Sarah Connors",
     image: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&q=80&w=1200",
     intro: "Limiter le Stream Deck au changement de scènes OBS, c'est comme utiliser un smartphone juste pour téléphoner. C'est un contrôleur macro universel qui peut automatiser toute votre vie numérique.",
-    relatedProducts: ["elgato-stream-deck-mk2", "elgato-stream-deck-plus"],
+    relatedProducts: ["elgato-stream-deck-mk2", "elgato-stream-deck-plus", "elgato-stream-deck-pedal"],
+    relatedCategorySlug: "streaming-gear",
     content: `
       <h2>La Philosophie de l'Automatisation (Low Friction)</h2>
       <p>La friction est l'ennemi de la créativité. Devoir faire ALT-TAB, ouvrir un dossier, chercher un fichier, ouvrir les paramètres son... tout ça brise le "Flow".</p>
@@ -340,7 +381,8 @@ export const ARTICLES: Article[] = [
       <h2>Conclusion</h2>
       <p>Le Stream Deck est le "Couteau Suisse" de l'informatique moderne. Que vous soyez trader, développeur, graphiste ou streamer, il permet de créer une interface de contrôle physique sur-mesure pour vos besoins logiciels.</p>
     `
-  }
+  },
+
 ];
 
 export const PATHWAYS: Pathway[] = [

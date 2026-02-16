@@ -2,7 +2,7 @@ import React from 'react';
 import { VerticalType } from './types';
 import { Mic, Video, Radio, BookOpen } from 'lucide-react';
 
-export const APP_NAME = "Stackera";
+export const APP_NAME = "Fluxlab";
 
 export const NAVIGATION_LINKS = [
   { label: 'Audio', href: '#audio', icon: <Mic className="w-4 h-4" /> },

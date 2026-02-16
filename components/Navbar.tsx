@@ -15,8 +15,43 @@ interface NavbarProps {
   isDark?: boolean; // Use white text when transparent
 }
 
+interface MenuColumnItem {
+  label: string;
+  desc: string;
+  slug: string;
+}
+
+interface MenuColumn {
+  title: string;
+  items: MenuColumnItem[];
+}
+
+interface PromoUniqueProps {
+  price?: string;
+  imageColor?: string;
+}
+
+interface MenuPromo extends PromoUniqueProps {
+  type: 'product' | 'tool';
+  title: string;
+  desc: string;
+  icon?: React.ReactNode;
+  actionLabel: string;
+  target: string;
+  targetSlug?: string;
+}
+
+interface MenuItem {
+  id: string;
+  label: string;
+  icon: React.ReactNode;
+  targetPage: string;
+  columns: MenuColumn[];
+  promo: MenuPromo;
+}
+
 // --- CONFIGURATION DU MEGA MENU DYNAMIQUE ---
-const MENU_DATA = [
+const MENU_DATA: MenuItem[] = [
   {
     id: 'audio',
     label: 'Studio & Son',
@@ -52,14 +87,12 @@ const MENU_DATA = [
     ],
     // PROMO Audio
     promo: {
-      type: 'product',
-      title: "Pack Démarrage",
-      desc: "Tout pour lancer votre premier podcast ce week-end.",
-      price: "Dès 299€",
-      imageColor: "bg-amber-100",
-      actionLabel: "Voir le pack",
-      target: "category",
-      targetSlug: "pack-demarrage"
+      type: 'tool',
+      title: "Le Labo Fluxlab",
+      desc: "Micro, Interface, Casque ? L'IA compose votre studio sur-mesure.",
+      icon: <Sparkles className="w-8 h-8 text-primary" />,
+      actionLabel: "Lancer le Configurateur",
+      target: "configurator"
     }
   },
   {
@@ -80,7 +113,7 @@ const MENU_DATA = [
         title: "Objectifs",
         items: [
           { label: "Grand Angle", desc: "Pour le Vlogging", slug: "grand-angle" },
-          { label: "Focale Fixe", desc: "Le flou d'arrière-plan", slug: "focale-fixe" },
+          // { label: "Focale Fixe", desc: "Le flou d'arrière-plan", slug: "focale-fixe" },
           { label: "Zooms Polyvalents", desc: "Tout terrain", slug: "zoom-polyvalent" }
         ]
       },
@@ -96,7 +129,7 @@ const MENU_DATA = [
     // PROMO Video (Configurator)
     promo: {
       type: 'tool',
-      title: "Le Labo Stackera",
+      title: "Le Labo Fluxlab",
       desc: "Nos algorithmes configurent votre setup idéal gratuitement.",
       icon: <Sparkles className="w-8 h-8 text-primary" />,
       actionLabel: "Lancer le Configurateur",
@@ -112,9 +145,9 @@ const MENU_DATA = [
       {
         title: "Captation",
         items: [
-          { label: "Cartes d'acquisition", desc: "Cam Link, HD60 X", slug: "cartes-acquisition" },
+          // { label: "Cartes d'acquisition", desc: "Cam Link, HD60 X", slug: "cartes-acquisition" },
           { label: "Stream Deck", desc: "Contrôle total", slug: "stream-deck" },
-          { label: "Switchers Vidéo", desc: "ATEM Mini", slug: "switchers-video" }
+          // { label: "Switchers Vidéo", desc: "ATEM Mini", slug: "switchers-video" }
         ]
       },
       {
@@ -136,9 +169,9 @@ const MENU_DATA = [
     // PROMO Streaming (Configurator)
     promo: {
       type: 'tool',
-      title: "Le Labo Stackera",
+      title: "Le Labo Fluxlab",
       desc: "Besoin d'aide pour streamer ? L'IA construit votre régie.",
-      icon: <Monitor className="w-8 h-8 text-primary" />,
+      icon: <Sparkles className="w-8 h-8 text-primary" />,
       actionLabel: "Lancer le Configurateur",
       target: "configurator"
     }
@@ -245,8 +278,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, isDark = false }) =>
       <motion.nav
         onMouseLeave={handleMouseLeave}
         className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ${isScrolled || activeMenu
-            ? 'bg-background/95 backdrop-blur-md border-border shadow-sm'
-            : 'bg-transparent border-transparent py-2'
+          ? 'bg-background/95 backdrop-blur-md border-border shadow-sm'
+          : 'bg-transparent border-transparent py-2'
           }`}
       >
         <div className="container mx-auto px-6 max-w-[1600px]">
@@ -255,21 +288,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, isDark = false }) =>
             {/* LOGO */}
             <div
               onClick={() => handleNavigation('home')}
-              className="flex items-center gap-2 group z-50 relative cursor-pointer"
+              className="flex items-center group z-50 relative cursor-pointer"
             >
-              <div className={`w-8 h-8 rounded-lg flex items-center justify-center border transition-colors ${isTransparent && isDark
-                  ? 'bg-white/20 border-white/50'
-                  : 'bg-primary/20 border-primary/30 group-hover:border-primary/60'
-                }`}>
-                <Monitor className={`w-5 h-5 ${iconColor}`} />
-              </div>
-              <span className={`font-bold text-xl tracking-tight ${textColor}`}>
-                {APP_NAME} <span className={`text-sm font-mono align-top ${isTransparent && isDark ? 'text-white/80' : 'text-primary'}`}>PRO</span>
-              </span>
+              <img
+                src={(isTransparent && isDark) ? '/branding/logo-light.svg' : '/branding/logo.svg'}
+                alt={APP_NAME}
+                className="h-10 w-auto transition-all duration-300"
+              />
             </div>
 
             {/* DESKTOP NAV */}
-            <div className="hidden md:flex items-center gap-1">
+            <div className="hidden lg:flex items-center gap-1">
               {MENU_DATA.map((menu) => (
                 <div
                   key={menu.id}
@@ -303,7 +332,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, isDark = false }) =>
             </div>
 
             {/* ACTIONS */}
-            <div className="hidden md:flex items-center gap-4 z-50 relative">
+            <div className="hidden lg:flex items-center gap-4 z-50 relative">
 
               {/* SEARCH BAR (Desktop) */}
               <div className="relative flex items-center">
@@ -391,7 +420,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, isDark = false }) =>
                         {/* DROPDOWN CONTENT ALWAYS LIGHT THEME inside */}
                         <div className="px-3 py-2 border-b border-border/50 mb-2">
                           <p className="text-xs font-bold">{user.name}</p>
-                          <p className="text-[10px] text-muted-foreground mb-1">{user.email}</p>
+                          <p className="text-xs text-muted-foreground mb-1">{user.email}</p>
                           <span className="inline-block text-[10px] font-bold uppercase tracking-wide bg-secondary px-2 py-0.5 rounded text-primary">{getProfileLabel()}</span>
                         </div>
                         <button className="w-full text-left px-3 py-2 text-sm hover:bg-secondary rounded-lg flex items-center gap-2 transition-colors"><UserIcon className="w-4 h-4" /> Mon Espace</button>
@@ -401,9 +430,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, isDark = false }) =>
                   </AnimatePresence>
                 </div>
               ) : (
-                <Button variant={isTransparent && isDark ? 'ghost' : 'ghost'} className={isTransparent && isDark ? 'text-white hover:bg-white/10' : ''} size="sm" onClick={() => setIsLoginModalOpen(true)}>
-                  Connexion
-                </Button>
+                /* Connexion disabled for now */
+                <></>
               )}
 
               <Button variant="primary" size="sm" className="group" onClick={() => handleNavigation('configurator')}>
@@ -414,7 +442,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, isDark = false }) =>
 
             {/* MOBILE TOGGLE */}
             <button
-              className={`md:hidden p-2 z-50 ${isTransparent && isDark ? 'text-white' : 'text-foreground'}`}
+              className={`lg:hidden p-2 z-50 ${isTransparent && isDark ? 'text-white' : 'text-foreground'}`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X /> : <Menu />}
@@ -430,7 +458,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, isDark = false }) =>
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -5 }}
               transition={{ duration: 0.2 }}
-              className="hidden md:block absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-b border-border shadow-lg overflow-hidden"
+              className="hidden md:block absolute top-full left-0 w-full bg-white backdrop-blur-xl border-b border-border shadow-[0_8px_30px_rgba(0,0,0,0.08)] overflow-hidden"
             >
               {/* Content is purely black text on white bg usually */}
               <div className="container mx-auto px-6 max-w-[1600px] py-12 text-foreground">
@@ -514,7 +542,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, isDark = false }) =>
                 ))}
                 <div className="flex items-center gap-3 text-xl font-bold text-foreground" onClick={() => handleNavigation('guides')}>Guides & Tutos</div>
                 <div className="bg-secondary/30 p-4 rounded-xl border border-border">
-                  <h4 className="font-bold mb-2 flex items-center gap-2"><Sparkles className="w-4 h-4 text-primary" /> Le Labo Stackera</h4>
+                  <h4 className="font-bold mb-2 flex items-center gap-2"><Sparkles className="w-4 h-4 text-primary" /> Le Labo Fluxlab</h4>
                   <p className="text-xs text-muted-foreground mb-3">Laissez l'IA configurer votre setup.</p>
                   <Button variant="primary" size="sm" className="w-full" onClick={() => handleNavigation('configurator')}>Lancer l'outil</Button>
                 </div>
@@ -529,7 +557,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate, isDark = false }) =>
                       <Button variant="ghost" className="w-full justify-start text-red-600 hover:bg-red-50" onClick={handleLogout}><LogOut className="w-4 h-4 mr-2" /> Déconnexion</Button>
                     </div>
                   ) : (
-                    <Button variant="ghost" className="w-full justify-start text-lg" onClick={() => setIsLoginModalOpen(true)}>Connexion</Button>
+                    /* Connexion disabled for now */
+                    <></>
                   )}
                 </div>
               </div>

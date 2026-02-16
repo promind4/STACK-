@@ -1,19 +1,24 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Navbar } from '../Navbar';
-import { Footer } from '../Footer';
+
 import { ShieldCheck } from 'lucide-react';
 import { APP_NAME } from '../../constants';
+import { useSEO } from '../SEOHelper';
 
 interface LegalPageProps {
   onNavigate: (page: string) => void;
 }
 
 export const LegalMentionsPage: React.FC<LegalPageProps> = ({ onNavigate }) => {
+  useSEO({
+    title: 'Mentions Légales',
+    description: `Mentions légales et informations juridiques de ${APP_NAME}. Éditeur, hébergement et conditions d'utilisation.`,
+  });
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
-      <Navbar onNavigate={onNavigate} />
-      
+
+
       <main className="pt-32 pb-24 container mx-auto px-6 max-w-[900px]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -38,17 +43,17 @@ export const LegalMentionsPage: React.FC<LegalPageProps> = ({ onNavigate }) => {
 
           <h3>1. Éditeur du Site</h3>
           <p>
-            Le site {APP_NAME} est édité par la société <strong>STACKERA SAS</strong> (Société par Actions Simplifiée) au capital de 10 000 euros.<br/>
-            <strong>Siège social :</strong> 123 Avenue de la Création, 75011 Paris, France.<br/>
-            <strong>RCS :</strong> Paris B 123 456 789.<br/>
-            <strong>Numéro de TVA intracommunautaire :</strong> FR 12 123456789.<br/>
+            Le site {APP_NAME} est édité par la société <strong>FLUXLAB SAS</strong> (Société par Actions Simplifiée) au capital de 10 000 euros.<br />
+            <strong>Siège social :</strong> 123 Avenue de la Création, 75011 Paris, France.<br />
+            <strong>RCS :</strong> Paris B 123 456 789.<br />
+            <strong>Numéro de TVA intracommunautaire :</strong> FR 12 123456789.<br />
             <strong>Directeur de la publication :</strong> John Doe.
           </p>
 
           <h3>2. Hébergement</h3>
           <p>
-            Le site est hébergé par <strong>Vercel Inc.</strong><br/>
-            Adresse : 340 S Lemon Ave #4133 Walnut, CA 91789, USA.<br/>
+            Le site est hébergé par <strong>Vercel Inc.</strong><br />
+            Adresse : 340 S Lemon Ave #4133 Walnut, CA 91789, USA.<br />
             Site web : <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">https://vercel.com</a>
           </p>
 
@@ -62,12 +67,12 @@ export const LegalMentionsPage: React.FC<LegalPageProps> = ({ onNavigate }) => {
 
           <h3>4. Contact</h3>
           <p>
-            Pour tout signalement de contenus ou d'activités illicites, l'utilisateur peut contacter l'éditeur à l'adresse suivante : <strong>legal@stackera.com</strong> ou par courrier recommandé avec accusé de réception adressé à l'Éditeur aux coordonnées précisées dans les présentes mentions légales.
+            Pour tout signalement de contenus ou d'activités illicites, l'utilisateur peut contacter l'éditeur à l'adresse suivante : <strong>legal@fluxlab.com</strong> ou par courrier recommandé avec accusé de réception adressé à l'Éditeur aux coordonnées précisées dans les présentes mentions légales.
           </p>
         </div>
       </main>
 
-      <Footer onNavigate={onNavigate} />
+
     </div>
   );
 };

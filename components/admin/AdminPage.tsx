@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../../lib/supabaseClient';
 import { Button } from '../ui/Button';
-import { Navbar } from '../Navbar';
-import { Footer } from '../Footer';
-import { Loader2, ShieldCheck, Plus, CheckCircle, AlertTriangle, LogOut, Edit, Trash2, Save, X, Image as ImageIcon, ThumbsUp, ThumbsDown } from 'lucide-react';
+
+import { Loader2, ShieldCheck, Plus, CheckCircle, AlertTriangle, LogOut, Edit, Trash2, Save, X, Image as ImageIcon, ThumbsUp, ThumbsDown, ArrowLeft, Search } from 'lucide-react';
 import { Category, Product, ProductOffer } from '../../types/database';
+import { ImageUploader, GalleryUploader } from './ImageUploader';
 
 interface AdminPageProps {
     onNavigate: (page: string) => void;
@@ -25,6 +25,72 @@ export const AdminPage: React.FC<AdminPageProps> = ({ onNavigate }) => {
     const [products, setProducts] = useState<ProductWithOffers[]>([]);
     const [categories, setCategories] = useState<Category[]>([]);
     const [refreshTrigger, setRefreshTrigger] = useState(0);
+    const [sortByCompleteness, setSortByCompleteness] = useState(true); // Default: incomplete first
+    const [searchQuery, setSearchQuery] = useState(''); // Search filter
+    const [selectedCategory, setSelectedCategory] = useState<string>(''); // Category filter
+
+    // Filter products by search query AND category
+    const filteredProducts = products.filter(p => {
+        // Category filter
+        if (selectedCategory && p.category_id !== selectedCategory) return false;
+        // Search filter
+        if (!searchQuery.trim()) return true;
+        const query = searchQuery.toLowerCase();
+        return (
+            p.name.toLowerCase().includes(query) ||
+            p.slug.toLowerCase().includes(query) ||
+            (p.brand || '').toLowerCase().includes(query)
+        );
+    });
+
+    // Calculate product QUALITY score (0-100) - focuses on quality, not just quantity
+    const calculateCompleteness = (product: ProductWithOffers): number => {
+        let score = 0;
+
+        // === IMAGES (35 pts max) ===
+        const hasMainImage = product.image_url &&
+            !product.image_url.includes('unsplash') &&
+            !product.image_url.includes('placeholder');
+        if (hasMainImage) score += 10;
+
+        const galleryCount = (product.gallery_images || []).filter(img => img).length;
+        if (galleryCount >= 3 && galleryCount <= 6) {
+            score += 15; // Sweet spot: curated gallery
+        } else if (galleryCount >= 1 && galleryCount <= 2) {
+            score += 8;  // Minimal gallery
+        } else if (galleryCount > 6) {
+            score += 10; // Too many = probably not curated
+        }
+
+        // === DESCRIPTION (30 pts max) ===
+        const desc = (product.description || '').toLowerCase();
+        if (desc.length > 50) score += 5;
+        if (desc.length >= 150 && desc.length <= 600) score += 10;
+        else if (desc.length > 600) score += 5; // Too long = might be copy-paste
+        if (desc.includes('\n')) score += 5; // Has structure/paragraphs
+
+        // Quality keywords bonus
+        const qualityKeywords = ['qualité', 'audio', 'son', 'micro', 'xlr', 'usb', 'streaming', 'podcast', 'studio', 'enregistrement', 'dynamique', 'condensateur'];
+        const hasQualityKeywords = qualityKeywords.some(kw => desc.includes(kw));
+        if (hasQualityKeywords) score += 5;
+
+        // Penalize generic/placeholder text
+        const badPatterns = ['lorem', 'à compléter', 'description du produit', 'texte ici', 'placeholder'];
+        const hasBadPatterns = badPatterns.some(bp => desc.includes(bp));
+        if (hasBadPatterns) score -= 10;
+
+        // === OFFERS (20 pts max) ===
+        const offers = product.product_offers || [];
+        if (offers.length >= 1) score += 10;
+        if (offers.length >= 2) score += 5;
+        if (offers.some(o => o.price > 0)) score += 5;
+
+        // === PROS & CONS (15 pts max) ===
+        if (product.pros && product.pros.length >= 2) score += 8;
+        if (product.cons && product.cons.length >= 1) score += 7;
+
+        return Math.max(0, Math.min(100, score)); // Clamp 0-100
+    };
 
     // --- FORM STATE ---
     const [isEditing, setIsEditing] = useState(false);
@@ -93,7 +159,12 @@ export const AdminPage: React.FC<AdminPageProps> = ({ onNavigate }) => {
         if (error) {
             console.error("Error fetching products:", error);
         } else {
-            setProducts(data as any);
+            let sortedData = data as ProductWithOffers[];
+            if (sortByCompleteness) {
+                // Sort by completeness score (ascending = incomplete first)
+                sortedData = sortedData.sort((a, b) => calculateCompleteness(a) - calculateCompleteness(b));
+            }
+            setProducts(sortedData);
         }
     };
 
@@ -366,28 +437,77 @@ export const AdminPage: React.FC<AdminPageProps> = ({ onNavigate }) => {
 
     return (
         <div className="min-h-screen bg-background text-foreground flex flex-col">
-            <Navbar onNavigate={onNavigate} />
+
 
             <main className="flex-1 container mx-auto px-6 py-24 max-w-[1400px]">
 
                 {/* HEADER */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
                     <div>
-                        <h1 className="text-3xl font-bold font-serif">Tableau de Bord</h1>
-                        <p className="text-muted-foreground">Gérez votre catalogue produits et vos offres.</p>
+                        <h1 className="text-3xl font-bold font-serif">
+                            {view === 'form' ? (
+                                <button onClick={() => setView('list')} className="inline-flex items-center gap-2 hover:text-primary transition-colors">
+                                    <ArrowLeft className="w-6 h-6" />
+                                    <span>Retour</span>
+                                </button>
+                            ) : (
+                                'Tableau de Bord'
+                            )}
+                        </h1>
+                        <p className="text-muted-foreground">
+                            {view === 'form'
+                                ? (isEditing ? `Modification de "${formData.name}"` : 'Création d\'un nouveau produit')
+                                : `${products.length} produits • ${products.filter(p => calculateCompleteness(p) < 70).length} à compléter`
+                            }
+                        </p>
                     </div>
-                    <div className="flex gap-4">
-                        {view === 'list' ? (
-                            <Button onClick={handleCreateNew} variant="primary">
-                                <Plus className="w-4 h-4 mr-2" /> Nouveau Produit
-                            </Button>
-                        ) : (
-                            <Button onClick={() => setView('list')} variant="ghost">
-                                <X className="w-4 h-4 mr-2" /> Annuler
+                    <div className="flex gap-3 items-center">
+                        {view === 'list' && (
+                            <>
+                                {/* Category Selector */}
+                                <select
+                                    value={selectedCategory}
+                                    onChange={e => setSelectedCategory(e.target.value)}
+                                    className="px-4 py-2 rounded-lg border border-border bg-white focus:ring-2 focus:ring-primary/20 outline-none text-sm min-w-[200px]"
+                                >
+                                    <option value="">Toutes les catégories</option>
+                                    {categories.map(cat => (
+                                        <option key={cat.id} value={cat.id}>
+                                            {cat.name} ({products.filter(p => p.category_id === cat.id).length})
+                                        </option>
+                                    ))}
+                                </select>
+                                {/* Search Bar */}
+                                <div className="relative">
+                                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                                    <input
+                                        type="text"
+                                        placeholder="Rechercher un produit..."
+                                        value={searchQuery}
+                                        onChange={e => setSearchQuery(e.target.value)}
+                                        className="pl-10 pr-4 py-2 w-64 rounded-lg border border-border bg-white focus:ring-2 focus:ring-primary/20 outline-none text-sm"
+                                    />
+                                    {searchQuery && (
+                                        <button
+                                            onClick={() => setSearchQuery('')}
+                                            className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                                        >
+                                            <X className="w-4 h-4" />
+                                        </button>
+                                    )}
+                                </div>
+                                <Button onClick={handleCreateNew} variant="primary">
+                                    <Plus className="w-4 h-4 mr-2" /> Nouveau
+                                </Button>
+                            </>
+                        )}
+                        {view === 'form' && (
+                            <Button onClick={() => setView('list')} variant="outline">
+                                <ArrowLeft className="w-4 h-4 mr-2" /> Retour à la liste
                             </Button>
                         )}
-                        <Button onClick={handleLogout} variant="outline" className="text-red-600 hover:bg-red-50 border-red-200">
-                            <LogOut className="w-4 h-4 mr-2" /> Déconnexion
+                        <Button onClick={handleLogout} variant="ghost" className="text-red-600 hover:bg-red-50">
+                            <LogOut className="w-4 h-4" />
                         </Button>
                     </div>
                 </div>
@@ -403,12 +523,18 @@ export const AdminPage: React.FC<AdminPageProps> = ({ onNavigate }) => {
                                         <th className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider">Image</th>
                                         <th className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider">Produit</th>
                                         <th className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider">Marque</th>
+                                        <th
+                                            className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider cursor-pointer hover:text-primary"
+                                            onClick={() => { setSortByCompleteness(!sortByCompleteness); setRefreshTrigger(r => r + 1); }}
+                                        >
+                                            Score {sortByCompleteness ? '↑' : '↓'}
+                                        </th>
                                         <th className="px-6 py-4 text-left text-xs font-bold text-muted-foreground uppercase tracking-wider">Offres</th>
                                         <th className="px-6 py-4 text-right text-xs font-bold text-muted-foreground uppercase tracking-wider">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-border">
-                                    {products.map((product) => (
+                                    {filteredProducts.map((product) => (
                                         <tr key={product.id} className="hover:bg-neutral-50 transition-colors">
                                             <td className="px-6 py-4 whitespace-nowrap">
                                                 <div className="w-12 h-12 rounded-lg bg-white border border-border flex items-center justify-center overflow-hidden p-1">
@@ -424,6 +550,14 @@ export const AdminPage: React.FC<AdminPageProps> = ({ onNavigate }) => {
                                                 <div className="text-xs text-muted-foreground font-mono">{product.slug}</div>
                                             </td>
                                             <td className="px-6 py-4 text-sm text-foreground">{product.brand}</td>
+                                            <td className="px-6 py-4">
+                                                <div className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-bold ${calculateCompleteness(product) >= 70 ? 'bg-green-100 text-green-700' :
+                                                    calculateCompleteness(product) >= 40 ? 'bg-yellow-100 text-yellow-700' :
+                                                        'bg-red-100 text-red-700'
+                                                    }`}>
+                                                    {calculateCompleteness(product)}%
+                                                </div>
+                                            </td>
                                             <td className="px-6 py-4">
                                                 <div className="flex flex-wrap gap-1">
                                                     {product.product_offers.map((offer, idx) => (
@@ -446,10 +580,13 @@ export const AdminPage: React.FC<AdminPageProps> = ({ onNavigate }) => {
                                             </td>
                                         </tr>
                                     ))}
-                                    {products.length === 0 && (
+                                    {filteredProducts.length === 0 && (
                                         <tr>
-                                            <td colSpan={5} className="px-6 py-12 text-center text-muted-foreground italic">
-                                                Aucun produit trouvé. Commencez par en ajouter un !
+                                            <td colSpan={6} className="px-6 py-12 text-center text-muted-foreground italic">
+                                                {searchQuery
+                                                    ? `Aucun produit trouvé pour "${searchQuery}"`
+                                                    : 'Aucun produit. Commencez par en ajouter un !'
+                                                }
                                             </td>
                                         </tr>
                                     )}
@@ -527,66 +664,30 @@ export const AdminPage: React.FC<AdminPageProps> = ({ onNavigate }) => {
                                         </select>
                                     </div>
 
-                                    <div>
-                                        <label className="block text-sm font-bold mb-2">Image URL</label>
-                                        <input
-                                            type="url"
-                                            value={formData.image_url}
-                                            onChange={e => setFormData({ ...formData, image_url: e.target.value })}
-                                            className="w-full px-4 py-2 rounded-lg border border-border bg-neutral-50/50"
-                                            placeholder="https://..."
-                                        />
-                                    </div>
-
-                                    {/* GALLERY SECTION */}
+                                    {/* UNIFIED IMAGE GALLERY - First image = Main */}
                                     <div className="col-span-2 space-y-3">
-                                        <div className="flex justify-between items-center">
-                                            <label className="block text-sm font-bold">Galerie d'Images</label>
-                                            <Button type="button" onClick={addGalleryImage} size="sm" variant="outline">
-                                                <Plus className="w-4 h-4 mr-2" /> Ajouter une image
-                                            </Button>
-                                        </div>
-
-                                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                                            {/* MAIN IMAGE PREVIEW */}
-                                            {formData.image_url && (
-                                                <div className="relative group aspect-square bg-white border border-border rounded-xl p-2 flex items-center justify-center">
-                                                    <img src={formData.image_url} className="w-full h-full object-contain" alt="Main" />
-                                                    <span className="absolute top-2 left-2 px-2 py-1 bg-primary text-white text-[10px] font-bold rounded">PRINCIPALE</span>
-                                                </div>
-                                            )}
-
-                                            {/* GALLERY IMAGES */}
-                                            {formData.gallery_images.map((img, idx) => (
-                                                <div key={idx} className="relative group aspect-square bg-white border border-border rounded-xl p-2 flex items-center justify-center">
-                                                    {img ? (
-                                                        <img src={img} className="w-full h-full object-contain" alt={`Galerie ${idx}`} />
-                                                    ) : (
-                                                        <ImageIcon className="w-8 h-8 text-muted-foreground/30" />
-                                                    )}
-
-                                                    <button
-                                                        type="button"
-                                                        onClick={() => removeGalleryImage(idx)}
-                                                        className="absolute top-2 right-2 p-1.5 bg-white shadow-md rounded-full text-red-500 hover:bg-red-50 border border-red-100 transition-colors"
-                                                        title="Supprimer l'image"
-                                                    >
-                                                        <X className="w-3 h-3" />
-                                                    </button>
-
-                                                    <input
-                                                        type="text"
-                                                        value={img}
-                                                        onChange={(e) => handleGalleryChange(idx, e.target.value)}
-                                                        className="absolute bottom-2 left-2 right-2 text-[10px] px-2 py-1 border border-border rounded bg-white/90 backdrop-blur shadow-sm outline-none focus:border-primary"
-                                                        placeholder="URL de l'image..."
-                                                    />
-                                                </div>
-                                            ))}
-                                        </div>
-                                        {formData.gallery_images.length === 0 && !formData.image_url && (
-                                            <p className="text-sm text-muted-foreground italic">Aucune image. Ajoutez une URL principale ou des images de galerie.</p>
-                                        )}
+                                        <label className="block text-sm font-bold">Images du Produit <span className="text-muted-foreground font-normal">(la 1ère = principale)</span></label>
+                                        <GalleryUploader
+                                            images={
+                                                // Combine main image with gallery images
+                                                formData.image_url
+                                                    ? [formData.image_url, ...formData.gallery_images.filter(img => img !== formData.image_url)]
+                                                    : formData.gallery_images
+                                            }
+                                            onChange={(images) => {
+                                                // First image becomes main, rest are gallery
+                                                const mainImage = images[0] || '';
+                                                const galleryImages = images.slice(1);
+                                                setFormData({
+                                                    ...formData,
+                                                    image_url: mainImage,
+                                                    gallery_images: galleryImages
+                                                });
+                                            }}
+                                            productSlug={formData.slug || 'new-product'}
+                                            maxImages={10}
+                                            onSetAsMain={(url) => setFormData({ ...formData, image_url: url })}
+                                        />
                                     </div>
 
                                     {/* NEW: RATING & REVIEW COUNT */}
@@ -723,13 +824,16 @@ export const AdminPage: React.FC<AdminPageProps> = ({ onNavigate }) => {
                                                     </select>
                                                 </div>
 
-                                                <div className="w-24">
+                                                <div className="w-28">
                                                     <label className="text-xs font-bold text-muted-foreground uppercase mb-1 block">Prix (€)</label>
                                                     <input
                                                         type="number"
-                                                        value={offer.price}
-                                                        onChange={(e) => handleOfferChange(index, 'price', parseFloat(e.target.value))}
+                                                        step="0.01"
+                                                        min="0"
+                                                        value={offer.price || ''}
+                                                        onChange={(e) => handleOfferChange(index, 'price', parseFloat(e.target.value) || 0)}
                                                         className="w-full px-3 py-1.5 rounded-md border border-border text-sm"
+                                                        placeholder="0.00"
                                                     />
                                                 </div>
 
@@ -787,7 +891,7 @@ export const AdminPage: React.FC<AdminPageProps> = ({ onNavigate }) => {
                 )}
 
             </main>
-            <Footer />
+
         </div>
     );
 };

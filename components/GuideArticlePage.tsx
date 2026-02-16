@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from './ui/Button';
-import { Navbar } from './Navbar';
-import { Footer } from './Footer';
+
 import { ChevronLeft, Clock, Calendar, User, ShoppingBag, ArrowRight } from 'lucide-react';
 import { getArticleBySlug } from '../lib/data';
 import { supabase } from '../lib/supabaseClient';
 import { Product } from '../types/database';
 import { transformProduct } from '../lib/transformers';
+import { useSEO } from './SEOHelper';
 
 interface GuideArticlePageProps {
   onNavigate: (page: string, slug?: string) => void;
@@ -18,12 +18,18 @@ export const GuideArticlePage: React.FC<GuideArticlePageProps> = ({ onNavigate, 
   const article = getArticleBySlug(slug || '');
   const [relatedItems, setRelatedItems] = useState<Product[]>([]);
 
+  useSEO({
+    title: article ? article.title : 'Guide introuvable',
+    description: article ? article.intro : 'Ce guide n\'existe pas ou a été déplacé.',
+    image: article?.image,
+  });
+
   useEffect(() => {
     const fetchRelated = async () => {
       if (article?.relatedProducts && article.relatedProducts.length > 0) {
         const { data } = await supabase
           .from('products')
-          .select('*')
+          .select('*, product_offers(*)')
           .in('slug', article.relatedProducts);
 
         if (data) {
@@ -51,7 +57,7 @@ export const GuideArticlePage: React.FC<GuideArticlePageProps> = ({ onNavigate, 
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Navbar onNavigate={onNavigate} />
+
 
       {/* HEADER ARTICLE */}
       <header className="pt-32 pb-16 relative">
@@ -80,14 +86,7 @@ export const GuideArticlePage: React.FC<GuideArticlePageProps> = ({ onNavigate, 
             </h1>
 
             <div className="flex items-center gap-6 border-y border-border py-4">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center">
-                  <User className="w-4 h-4 text-foreground" />
-                </div>
-                <div className="text-sm">
-                  <p className="font-bold text-foreground">{article.author}</p>
-                </div>
-              </div>
+              {/* Author removed as requested */}
               <div className="text-sm text-muted-foreground flex items-center gap-1">
                 <Calendar className="w-4 h-4" /> {article.date}
               </div>
@@ -155,7 +154,9 @@ export const GuideArticlePage: React.FC<GuideArticlePageProps> = ({ onNavigate, 
                           <div className="flex flex-col min-w-0">
                             <span className="text-xs font-bold uppercase text-muted-foreground tracking-wider">{product.brand}</span>
                             <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors line-clamp-1">{product.name}</span>
-                            <span className="text-xs font-bold text-foreground">{product.price}€</span>
+                            <span className="text-xs font-bold text-foreground">
+                              {product.price > 0 ? `≈ ${product.price}€` : 'Voir prix'}
+                            </span>
                           </div>
                         </div>
                         <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:translate-x-1 transition-transform flex-shrink-0" />
@@ -167,7 +168,7 @@ export const GuideArticlePage: React.FC<GuideArticlePageProps> = ({ onNavigate, 
                 )}
 
                 <div className="mt-6 pt-6 border-t border-border/50 text-center">
-                  <Button variant="primary" className="w-full" onClick={() => onNavigate('category')}>
+                  <Button variant="primary" className="w-full" onClick={() => onNavigate('category', article.relatedCategorySlug)}>
                     Voir la sélection complète
                   </Button>
                 </div>
@@ -178,7 +179,7 @@ export const GuideArticlePage: React.FC<GuideArticlePageProps> = ({ onNavigate, 
         </div>
       </div>
 
-      <Footer onNavigate={(page) => onNavigate(page)} />
+
     </div>
   );
 };

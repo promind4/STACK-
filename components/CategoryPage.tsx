@@ -1,13 +1,13 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Button } from './ui/Button';
-import { Navbar } from './Navbar';
-import { Footer } from './Footer';
+
 import { ProductCard } from './ui/ProductCard';
 // import { MOCK_PRODUCTS } from '../lib/mockData';
 import { Filter, ChevronDown, Check, SearchX, X, SlidersHorizontal, Loader2, AlertTriangle, ChevronRight } from 'lucide-react';
 
 import { useProducts } from '../hooks/useProducts';
+import { useSEO } from './SEOHelper';
 
 interface CategoryPageProps {
   onNavigate: (page: string, slug?: string, query?: string) => void;
@@ -34,6 +34,12 @@ const CATEGORY_METADATA: Record<string, { title: string; subtitle: string }> = {
 
 export const CategoryPage: React.FC<CategoryPageProps> = ({ onNavigate, categorySlug, initialSearchQuery }) => {
   const { products, loading, error } = useProducts(categorySlug);
+
+  const meta = categorySlug ? CATEGORY_METADATA[categorySlug] : undefined;
+  useSEO({
+    title: meta ? `${meta.title} - Comparateur de Prix` : 'Catalogue - Tous les Produits',
+    description: meta ? `${meta.subtitle} Comparez les prix et trouvez les meilleures offres sur Fluxlab.` : 'Explorez notre catalogue complet de matériel audio, vidéo et streaming. Comparez les prix de centaines de produits.',
+  });
 
   // -- STATE DECLARATIONS --
   const [priceRange, setPriceRange] = useState(15000);
@@ -96,11 +102,13 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onNavigate, category
       const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         product.brand.toLowerCase().includes(searchQuery.toLowerCase());
 
-      let matchesAvailability = true;
-      if (selectedAvailability.includes('stock') && !product.inStock) matchesAvailability = false;
-      if (selectedAvailability.includes('promo') && !product.isPromo) matchesAvailability = false;
 
-      return matchesPrice && matchesBrand && matchesAvailability && matchesSearch;
+      // Removed Availability filter logic as requested
+      // let matchesAvailability = true;
+      // if (selectedAvailability.includes('stock') && !product.inStock) matchesAvailability = false;
+      // if (selectedAvailability.includes('promo') && !product.isPromo) matchesAvailability = false;
+
+      return matchesPrice && matchesBrand && matchesSearch;
     });
 
     return result.sort((a, b) => {
@@ -158,32 +166,13 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onNavigate, category
           min="0" max={maxPrice} step="50"
           value={priceRange}
           onChange={(e) => setPriceRange(parseInt(e.target.value))}
-          className="w-full h-1.5 bg-secondary rounded-lg appearance-none accent-primary cursor-pointer"
+          className="w-full h-2 bg-secondary rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary [&::-webkit-slider-thumb]:shadow-md hover:[&::-webkit-slider-thumb]:scale-110 transition-all"
         />
         <div className="mt-2 text-[10px] text-muted-foreground text-right italic">
           Max calculé : {maxPrice}€
         </div>
       </div>
 
-      <div className="mb-8">
-        <h4 className="text-xs font-bold uppercase mb-4 text-muted-foreground tracking-widest">Disponibilité</h4>
-        <div className="space-y-2">
-          <label className="flex items-center gap-2 cursor-pointer group">
-            <div className={`w-4 h-4 rounded border flex items-center justify-center transition-colors ${selectedAvailability.includes('stock') ? 'bg-primary border-primary' : 'border-border bg-white'}`}>
-              {selectedAvailability.includes('stock') && <Check className="w-3 h-3 text-white" />}
-            </div>
-            <input type="checkbox" className="hidden" onChange={() => toggleAvailability('stock')} checked={selectedAvailability.includes('stock')} />
-            <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">En Stock uniquement</span>
-          </label>
-          <label className="flex items-center gap-2 cursor-pointer group">
-            <div className={`w-4 h-4 rounded border flex items-center justify-center transition-colors ${selectedAvailability.includes('promo') ? 'bg-primary border-primary' : 'border-border bg-white'}`}>
-              {selectedAvailability.includes('promo') && <Check className="w-3 h-3 text-white" />}
-            </div>
-            <input type="checkbox" className="hidden" onChange={() => toggleAvailability('promo')} checked={selectedAvailability.includes('promo')} />
-            <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Promotions</span>
-          </label>
-        </div>
-      </div>
 
       <div className="mb-8">
         <h4 className="text-xs font-bold uppercase mb-4 text-muted-foreground tracking-widest">Marques</h4>
@@ -210,7 +199,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onNavigate, category
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Navbar onNavigate={onNavigate} />
+
 
       {/* HEADER PAGE */}
       <div className="pt-32 pb-8 md:pb-12 border-b border-border bg-background">
@@ -244,7 +233,6 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onNavigate, category
               >
                 <div className="flex items-baseline gap-4 mb-3">
                   <h1 className="text-3xl md:text-5xl font-bold tracking-tight font-serif capitalize">{title}</h1>
-                  {!loading && <span className="text-muted-foreground font-medium text-lg">({filteredProducts.length} produits)</span>}
                 </div>
                 <p className="text-sm md:text-lg text-muted-foreground font-light">{subtitle}</p>
               </motion.div>
@@ -298,7 +286,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onNavigate, category
         <div className="container mx-auto px-6 max-w-[1600px] py-8 md:py-12">
 
           {/* MOBILE FILTER TRIGGER */}
-          <div className="md:hidden flex items-center justify-between mb-8 bg-white/80 backdrop-blur-md p-4 rounded-2xl border border-border sticky top-24 z-30 shadow-sm">
+          <div className="lg:hidden flex items-center justify-between mb-8 bg-white/80 backdrop-blur-md p-4 rounded-2xl border border-border sticky top-24 z-30 shadow-sm">
             <button
               onClick={() => setIsFilterDrawerOpen(true)}
               className="flex items-center gap-2 font-bold text-sm text-foreground"
@@ -306,13 +294,13 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onNavigate, category
               <SlidersHorizontal className="w-4 h-4 text-primary" /> Filtres
               {selectedBrands.length > 0 && <span className="w-5 h-5 bg-primary text-white text-[10px] rounded-full flex items-center justify-center">{selectedBrands.length}</span>}
             </button>
-            <span className="text-xs font-bold text-muted-foreground">{filteredProducts.length} produits</span>
+            <span className="text-xs font-bold text-muted-foreground">Filtres actifs</span>
           </div>
 
           <div className="flex flex-col lg:flex-row gap-12">
 
             {/* SIDEBAR FILTERS (DESKTOP) */}
-            <aside className="hidden md:block lg:w-72 flex-shrink-0">
+            <aside className="hidden lg:block lg:w-72 flex-shrink-0">
               <div className="bg-white rounded-3xl p-8 border border-border sticky top-28 shadow-sm">
                 <div className="flex items-center gap-2 mb-8 border-b border-border pb-4">
                   <Filter className="w-4 h-4 text-primary" />
@@ -346,7 +334,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onNavigate, category
       {/* MOBILE FILTER DRAWER */}
       <AnimatePresence>
         {isFilterDrawerOpen && (
-          <div className="fixed inset-0 z-[100] md:hidden">
+          <div className="fixed inset-0 z-[100] lg:hidden">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -382,7 +370,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onNavigate, category
         )}
       </AnimatePresence>
 
-      <Footer onNavigate={onNavigate} />
+
     </div>
   );
 };

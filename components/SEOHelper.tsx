@@ -14,20 +14,20 @@ interface SEOProps {
 export const useSEO = ({ title, description, image }: SEOProps) => {
   useEffect(() => {
     // 1. Mise à jour du Titre
-    // Ex: "Shure SM7B - Avis & Prix | Stackera"
+    // Ex: "Shure SM7B - Avis & Prix | Fluxlab"
     document.title = `${title} | ${APP_NAME}`;
 
     // 2. Helper pour mettre à jour ou créer une meta tag
     const updateMeta = (name: string, content: string, isProperty: boolean = false) => {
       const attribute = isProperty ? 'property' : 'name';
       let element = document.querySelector(`meta[${attribute}="${name}"]`);
-      
+
       if (!element) {
         element = document.createElement('meta');
         element.setAttribute(attribute, name);
         document.head.appendChild(element);
       }
-      
+
       element.setAttribute('content', content);
     };
 

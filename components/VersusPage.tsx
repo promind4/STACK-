@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Navbar } from './Navbar';
-import { Footer } from './Footer';
+
 import { Button } from './ui/Button';
 import { useSEO } from './SEOHelper';
 import {
@@ -44,13 +43,11 @@ export const VersusPage: React.FC<VersusPageProps> = ({ onNavigate, slug }) => {
   if (loading) {
     return (
       <div className="min-h-screen flex flex-col bg-background">
-        <Navbar onNavigate={onNavigate} />
         <div className="flex-1 flex flex-col items-center justify-center text-center p-6">
           {/* Simple loader placeholder */}
           <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin mb-4"></div>
           <p className="text-muted-foreground">Préparation du duel...</p>
         </div>
-        <Footer onNavigate={onNavigate} />
       </div>
     );
   }
@@ -59,21 +56,19 @@ export const VersusPage: React.FC<VersusPageProps> = ({ onNavigate, slug }) => {
   if (!productA || !productB) {
     return (
       <div className="min-h-screen flex flex-col bg-background">
-        <Navbar onNavigate={onNavigate} />
         <div className="flex-1 flex flex-col items-center justify-center text-center p-6">
           <SearchX className="w-16 h-16 text-muted-foreground mb-4" />
           <h1 className="text-3xl font-bold mb-2">Duel introuvable</h1>
           <p className="text-muted-foreground mb-8">Nous n'avons pas pu charger les données de ce comparatif.</p>
           <Button onClick={() => onNavigate('category')}>Retour au catalogue</Button>
         </div>
-        <Footer onNavigate={onNavigate} />
       </div>
     );
   }
 
   // --- MOCK SPECS (Dans une vraie app, cela viendrait du JSONB 'specs' en base) ---
   const specs = [
-    { label: 'Prix', valA: `${productA.price}€`, valB: `${productB.price}€`, winner: productA.price < productB.price ? 'A' : 'B' },
+    { label: 'Prix', valA: `≈ ${productA.price}€`, valB: `≈ ${productB.price}€`, winner: productA.price < productB.price ? 'A' : 'B' },
     { label: 'Marque', valA: productA.brand, valB: productB.brand, winner: null },
     { label: 'Type', valA: 'Dynamique XLR', valB: 'Condensateur XLR/USB', winner: null },
     { label: 'Usage', valA: 'Broadcast / Voix', valB: 'Détails / Studio', winner: null },
@@ -130,7 +125,7 @@ export const VersusPage: React.FC<VersusPageProps> = ({ onNavigate, slug }) => {
                 <img src={productA.image_url} alt={productA.name} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
               </div>
               <h3 className="text-xl font-bold mb-1">{productA.name}</h3>
-              <span className="text-sm text-primary font-bold">{productA.price}€</span>
+              <span className="text-sm text-primary font-bold">≈ {productA.price}€</span>
             </motion.div>
 
             {/* Produit B */}
@@ -143,7 +138,7 @@ export const VersusPage: React.FC<VersusPageProps> = ({ onNavigate, slug }) => {
                 <img src={productB.image_url} alt={productB.name} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
               </div>
               <h3 className="text-xl font-bold mb-1">{productB.name}</h3>
-              <span className="text-sm text-primary font-bold">{productB.price}€</span>
+              <span className="text-sm text-primary font-bold">≈ {productB.price}€</span>
             </motion.div>
 
           </div>
@@ -203,7 +198,7 @@ export const VersusPage: React.FC<VersusPageProps> = ({ onNavigate, slug }) => {
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold mb-6 font-serif tracking-tight">Le Verdict de l'Atelier Stackera</h2>
+                <h2 className="text-3xl font-bold mb-6 font-serif tracking-tight">Le Verdict de l'Atelier Fluxlab</h2>
                 <div className="prose prose-stone prose-lg max-w-none text-muted-foreground font-light leading-relaxed space-y-6">
                   <p>
                     Le duel entre le <strong>{productA.brand} {productA.name}</strong> et le <strong>{productB.brand} {productB.name}</strong> n'est pas qu'une question de prix, mais de philosophie de setup.

@@ -1,19 +1,24 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Navbar } from '../Navbar';
-import { Footer } from '../Footer';
+
 import { FileText } from 'lucide-react';
 import { APP_NAME } from '../../constants';
+import { useSEO } from '../SEOHelper';
 
 interface LegalPageProps {
   onNavigate: (page: string) => void;
 }
 
 export const TermsPage: React.FC<LegalPageProps> = ({ onNavigate }) => {
+  useSEO({
+    title: 'Conditions Générales d\'Utilisation',
+    description: `Conditions générales d'utilisation de ${APP_NAME}. Règles d'accès, responsabilités et droits des utilisateurs.`,
+  });
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
-      <Navbar onNavigate={onNavigate} />
-      
+
+
       <main className="pt-32 pb-24 container mx-auto px-6 max-w-[900px]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -75,7 +80,7 @@ export const TermsPage: React.FC<LegalPageProps> = ({ onNavigate }) => {
         </div>
       </main>
 
-      <Footer onNavigate={onNavigate} />
+
     </div>
   );
 };

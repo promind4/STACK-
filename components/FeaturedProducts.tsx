@@ -26,7 +26,7 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ onNavigate }
 
       const { data, error } = await supabase
         .from('products')
-        .select('*')
+        .select('*, product_offers(*)')
         .in('slug', slugs);
 
       if (data) {

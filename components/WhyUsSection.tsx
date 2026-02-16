@@ -12,14 +12,14 @@ export const WhyUsSection: React.FC = () => {
     <section className="py-24 bg-secondary/20 border-y border-border overflow-hidden">
       <div className="container mx-auto px-6 max-w-[1600px]">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
-          
+
           <div className="flex-1 space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold font-serif">L'Avantage Stackera</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-serif">L'Avantage Fluxlab</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               La plupart des sites vous vendent un produit. Nous vous vendons un <strong>résultat</strong>.
               Notre moteur analyse la compatibilité électrique, audio et logicielle entre des milliers de références.
             </p>
-            
+
             <div className="space-y-6">
               {points.map((point, idx) => (
                 <div key={idx} className="flex gap-4">
@@ -38,24 +38,24 @@ export const WhyUsSection: React.FC = () => {
           {/* VISUAL REPRESENTATION OF THE STACK ENGINE */}
           <div className="flex-1 w-full flex justify-center lg:justify-end">
             <div className="relative w-full max-w-md perspective-1000">
-              
+
               {/* Background Glow */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/20 rounded-full blur-[80px] pointer-events-none" />
 
               <div className="relative bg-background border border-border rounded-3xl shadow-2xl overflow-hidden transform rotate-1 hover:rotate-0 transition-transform duration-500">
                 {/* Header Card */}
                 <div className="bg-secondary/50 px-6 py-4 border-b border-border flex justify-between items-center">
-                   <div className="flex items-center gap-2">
-                      <Zap className="w-4 h-4 text-primary fill-current" />
-                      <span className="font-bold text-sm tracking-wide uppercase text-foreground">Analyse Stackera</span>
-                   </div>
-                   <div className="px-2 py-1 rounded bg-emerald-100 border border-emerald-200 text-emerald-800 text-[10px] font-bold uppercase tracking-wide flex items-center gap-1">
-                      <CheckCircle2 className="w-3 h-3" /> Validé
-                   </div>
+                  <div className="flex items-center gap-2">
+                    <Zap className="w-4 h-4 text-primary fill-current" />
+                    <span className="font-bold text-sm tracking-wide uppercase text-foreground">Analyse Fluxlab</span>
+                  </div>
+                  <div className="px-2 py-1 rounded bg-emerald-100 border border-emerald-200 text-emerald-800 text-[10px] font-bold uppercase tracking-wide flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" /> Validé
+                  </div>
                 </div>
 
                 <div className="p-6 space-y-3">
-                  
+
                   {/* Item 1: Mic */}
                   <div className="flex items-center gap-4 p-4 rounded-2xl border border-border bg-white shadow-sm relative z-10">
                     <div className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center text-stone-600 border border-stone-200">
@@ -72,10 +72,10 @@ export const WhyUsSection: React.FC = () => {
 
                   {/* Connector Visual */}
                   <div className="flex items-center justify-center -my-2 relative z-0">
-                     <div className="h-6 w-0.5 bg-border absolute"></div>
-                     <div className="bg-white text-[10px] px-2 py-0.5 rounded-full border border-border text-muted-foreground relative z-10 font-mono flex items-center gap-1">
-                        <Cable className="w-3 h-3" /> Câble XLR
-                     </div>
+                    <div className="h-6 w-0.5 bg-border absolute"></div>
+                    <div className="bg-white text-[10px] px-2 py-0.5 rounded-full border border-border text-muted-foreground relative z-10 font-mono flex items-center gap-1">
+                      <Cable className="w-3 h-3" /> Câble XLR
+                    </div>
                   </div>
 
                   {/* Item 2: Interface */}
@@ -94,12 +94,12 @@ export const WhyUsSection: React.FC = () => {
                     </div>
                   </div>
 
-                   {/* Connector Visual */}
-                   <div className="flex items-center justify-center -my-2 relative z-0">
-                     <div className="h-6 w-0.5 bg-border absolute"></div>
-                     <div className="bg-white text-[10px] px-2 py-0.5 rounded-full border border-border text-muted-foreground relative z-10 font-mono flex items-center gap-1">
-                        <Cable className="w-3 h-3" /> USB-C
-                     </div>
+                  {/* Connector Visual */}
+                  <div className="flex items-center justify-center -my-2 relative z-0">
+                    <div className="h-6 w-0.5 bg-border absolute"></div>
+                    <div className="bg-white text-[10px] px-2 py-0.5 rounded-full border border-border text-muted-foreground relative z-10 font-mono flex items-center gap-1">
+                      <Cable className="w-3 h-3" /> USB-C
+                    </div>
                   </div>
 
                   {/* Item 3: Software */}
@@ -121,13 +121,13 @@ export const WhyUsSection: React.FC = () => {
 
                 {/* Footer Score */}
                 <div className="bg-foreground text-white p-6 flex justify-between items-center border-t border-white/10">
-                   <div>
-                      <span className="block text-[10px] font-bold text-white/60 uppercase tracking-widest mb-1">Score de synergie</span>
-                      <span className="font-bold text-lg text-white">Excellente compatibilité</span>
-                   </div>
-                   <div className="text-4xl font-bold font-mono text-primary flex items-baseline">
-                      98<span className="text-base text-white/40 ml-1">/100</span>
-                   </div>
+                  <div>
+                    <span className="block text-[10px] font-bold text-white/60 uppercase tracking-widest mb-1">Score de synergie</span>
+                    <span className="font-bold text-lg text-white">Excellente compatibilité</span>
+                  </div>
+                  <div className="text-4xl font-bold font-mono text-primary flex items-baseline">
+                    98<span className="text-base text-white/40 ml-1">/100</span>
+                  </div>
                 </div>
 
               </div>

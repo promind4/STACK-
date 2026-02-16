@@ -1,11 +1,12 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Navbar } from './Navbar';
-import { Footer } from './Footer';
-import { 
-  ShieldCheck, Target, Zap, 
-  Cpu, HeartHandshake, PenTool 
+
+import {
+  ShieldCheck, Target, Zap,
+  Cpu, HeartHandshake, PenTool, CheckCircle
 } from 'lucide-react';
+import { useSEO } from './SEOHelper';
 
 interface AboutPageProps {
   onNavigate: (page: string) => void;
@@ -30,9 +31,14 @@ const VALUES = [
 ];
 
 export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
+  useSEO({
+    title: 'À Propos de Fluxlab',
+    description: 'Fluxlab est le comparateur intelligent de matériel audio, vidéo et streaming. Découvrez notre mission : vous aider à trouver le setup parfait au meilleur prix.',
+  });
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
-      <Navbar onNavigate={onNavigate} />
+
 
       {/* HERO SECTION - MANIFESTE */}
       <section className="pt-32 pb-24 relative overflow-hidden bg-secondary/20">
@@ -50,8 +56,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             </h1>
             <div className="h-1 w-24 bg-primary mx-auto mb-10 rounded-full" />
             <p className="text-xl text-muted-foreground leading-relaxed font-light">
-              Stackera est né d'un constat simple : le marché du matériel créatif est une jungle. 
-              Trop de références, trop de marketing, pas assez de cohérence. 
+              Fluxlab est né d'un constat simple : le marché du matériel créatif est une jungle.
+              Trop de références, trop de marketing, pas assez de cohérence.
               Nous avons construit l'outil que nous aurions rêvé d'avoir à nos débuts.
             </p>
           </motion.div>
@@ -62,18 +68,18 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6 max-w-[1200px]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-            
+
             {/* Image Artistique */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="relative aspect-square md:aspect-[4/5]"
             >
               <div className="absolute inset-0 bg-secondary rounded-2xl overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1593697972496-85e784534888?auto=format&fit=crop&q=80&w=800" 
-                  alt="Détail technique micro" 
+                <img
+                  src="/images/atelier-fluxlab.png"
+                  alt="Atelier Fluxlab - Studio de Création"
                   className="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -87,7 +93,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
                 </p>
               </div>
             </motion.div>
-            
+
             {/* Texte Editorial */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -95,10 +101,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
               viewport={{ once: true }}
               className="space-y-8"
             >
-              <h2 className="text-3xl font-bold mb-6 font-serif">L'Approche Stackera</h2>
+              <h2 className="text-3xl font-bold mb-6 font-serif">L'Approche Fluxlab</h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed font-light">
                 <p>
-                  Nous ne sommes pas un simple catalogue. Stackera est une <strong>intelligence de configuration</strong>. 
+                  Nous ne sommes pas un simple catalogue. Fluxlab est une <strong>intelligence de configuration</strong>.
                 </p>
                 <p>
                   Chaque produit référencé sur notre plateforme a été analysé selon des critères stricts : rapport qualité/prix, durabilité, et surtout, <strong>compatibilité</strong>.
@@ -138,7 +144,43 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      <Footer onNavigate={onNavigate} />
+      {/* WHY TRUST US SECTION */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-6 max-w-[1000px]">
+          <div className="bg-[#050505] rounded-3xl p-8 md:p-16 text-white relative overflow-hidden">
+            {/* Abstract Shapes */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-900/20 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
+
+            <div className="relative z-10 text-center mb-12">
+              <h2 className="text-3xl font-bold font-serif mb-4">Pourquoi nous faire confiance ?</h2>
+              <p className="text-zinc-400 max-w-lg mx-auto">
+                Nous ne sommes pas un magazine. Nous sommes un outil.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+              {[
+                "Pas de placement produit caché",
+                "Tests acoustiques réels",
+                "Mise à jour des prix en temps réel",
+                "Algorithme de compatibilité",
+                "Pas de 'Hype', que des faits",
+                "Support par des ingénieurs son"
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                    <CheckCircle className="w-4 h-4 text-primary" />
+                  </div>
+                  <span className="font-medium text-lg">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+
     </div>
   );
 };

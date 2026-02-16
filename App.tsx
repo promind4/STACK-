@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { Suspense } from 'react';
+import { Routes, Route, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { LogoTicker } from './components/LogoTicker';
@@ -6,37 +7,47 @@ import { FeaturedProducts } from './components/FeaturedProducts';
 import { VerticalSelector } from './components/VerticalSelector';
 import { WhyUsSection } from './components/WhyUsSection';
 import { Footer } from './components/Footer';
-import { ProductPage } from './components/ProductPage';
-import { CategoryPage } from './components/CategoryPage';
-import { GuidesPage } from './components/GuidesPage';
-import { AboutPage } from './components/AboutPage';
-import { GuideArticlePage } from './components/GuideArticlePage';
-import { GuidePathPage } from './components/GuidePathPage';
-import { ConfiguratorPage } from './components/ConfiguratorPage';
-import { VersusPage } from './components/VersusPage';
-import { LegalMentionsPage } from './components/legal/LegalMentionsPage';
-import { TermsPage } from './components/legal/TermsPage';
-import { PrivacyPage } from './components/legal/PrivacyPage';
-import { AdminPage } from './components/admin/AdminPage';
 import { ComparisonProvider } from './context/ComparisonContext';
 import { ComparisonBar } from './components/ComparisonBar';
+import { useSEO } from './components/SEOHelper';
 
-type RouteType =
-  | 'home'
-  | 'product'
-  | 'category'
-  | 'guides'
-  | 'about'
-  | 'guide-article'
-  | 'guide-path'
-  | 'configurator'
-  | 'versus'
-  | 'legal-mentions'
-  | 'cgu'
-  | 'cgu'
-  | 'privacy'
-  | 'admin';
+// Lazy Load Pages to optimize initial bundle size & LCP
+const ProductPage = React.lazy(() => import('./components/ProductPage').then(module => ({ default: module.ProductPage })));
+const CategoryPage = React.lazy(() => import('./components/CategoryPage').then(module => ({ default: module.CategoryPage })));
+const GuidesPage = React.lazy(() => import('./components/GuidesPage').then(module => ({ default: module.GuidesPage })));
+const AboutPage = React.lazy(() => import('./components/AboutPage').then(module => ({ default: module.AboutPage })));
+const GuideArticlePage = React.lazy(() => import('./components/GuideArticlePage').then(module => ({ default: module.GuideArticlePage })));
+const GuidePathPage = React.lazy(() => import('./components/GuidePathPage').then(module => ({ default: module.GuidePathPage })));
+const ConfiguratorPage = React.lazy(() => import('./components/ConfiguratorPage').then(module => ({ default: module.ConfiguratorPage })));
+const VersusPage = React.lazy(() => import('./components/VersusPage').then(module => ({ default: module.VersusPage })));
+const LegalMentionsPage = React.lazy(() => import('./components/legal/LegalMentionsPage').then(module => ({ default: module.LegalMentionsPage })));
+const TermsPage = React.lazy(() => import('./components/legal/TermsPage').then(module => ({ default: module.TermsPage })));
+const PrivacyPage = React.lazy(() => import('./components/legal/PrivacyPage').then(module => ({ default: module.PrivacyPage })));
+const AdminPage = React.lazy(() => import('./components/admin/AdminPage').then(module => ({ default: module.AdminPage })));
 
+
+// ============================================================
+// URL MAPPING: old page names → URL paths
+// ============================================================
+const PAGE_TO_URL: Record<string, string> = {
+  home: '/',
+  product: '/produit',
+  category: '/categorie',
+  guides: '/guides',
+  about: '/a-propos',
+  'guide-article': '/guide',
+  'guide-path': '/parcours',
+  configurator: '/configurateur',
+  versus: '/versus',
+  'legal-mentions': '/mentions-legales',
+  cgu: '/cgu',
+  privacy: '/confidentialite',
+  admin: '/admin',
+};
+
+// ============================================================
+// Background Layer
+// ============================================================
 const BackgroundLayer = () => (
   <div className="fixed inset-0 z-0 h-full w-full bg-[#FAFAFA] overflow-hidden pointer-events-none">
     <div className="absolute top-[-20%] left-[-10%] w-[70vw] h-[70vw] rounded-full bg-[#D3B27B] opacity-25 blur-[120px]" />
@@ -51,75 +62,88 @@ const BackgroundLayer = () => (
   </div>
 );
 
+// ============================================================
+// Layout wrapper: Navbar + Footer on ALL pages
+// ============================================================
+const Layout: React.FC<{ children: React.ReactNode; navigate: (page: string, slug?: string, query?: string) => void }> = ({ children, navigate }) => (
+  <>
+    <Navbar onNavigate={navigate} />
+    {children}
+    <Footer onNavigate={navigate} />
+    <ComparisonBar onNavigate={navigate} />
+  </>
+);
+
+// ============================================================
+// Route Wrappers (extract useParams → pass as props)
+// ============================================================
+const ProductRoute: React.FC<{ navigate: (page: string, slug?: string) => void }> = ({ navigate }) => {
+  const { slug } = useParams();
+  return <ProductPage onBack={() => navigate('category')} onNavigate={navigate} slug={slug} />;
+};
+
+const CategoryRoute: React.FC<{ navigate: (page: string, slug?: string, query?: string) => void }> = ({ navigate }) => {
+  const { slug } = useParams();
+  const [searchParams] = useSearchParams();
+  const query = searchParams.get('q') || undefined;
+  return <CategoryPage onNavigate={navigate} categorySlug={slug} initialSearchQuery={query} />;
+};
+
+const GuideArticleRoute: React.FC<{ navigate: (page: string, slug?: string) => void }> = ({ navigate }) => {
+  const { slug } = useParams();
+  return <GuideArticlePage onNavigate={navigate} slug={slug} />;
+};
+
+const GuidePathRoute: React.FC<{ navigate: (page: string, slug?: string) => void }> = ({ navigate }) => {
+  const { slug } = useParams();
+  return <GuidePathPage onNavigate={navigate} slug={slug} />;
+};
+
+const VersusRoute: React.FC<{ navigate: (page: string, slug?: string) => void }> = ({ navigate }) => {
+  const { slug } = useParams();
+  return <VersusPage onNavigate={navigate} slug={slug} />;
+};
+
+// ============================================================
+// Home Page Component
+// ============================================================
+const HomePage: React.FC<{ navigate: (page: string, slug?: string) => void }> = ({ navigate }) => {
+  useSEO({
+    title: 'Fluxlab - Comparateur Intelligent de Matériel Audio, Vidéo & Streaming',
+    description: 'Trouvez le setup parfait au meilleur prix. Fluxlab compare les prix de centaines de produits audio, vidéo et streaming sur toutes les boutiques françaises.',
+  });
+
+  return (
+    <div className="flex flex-col">
+      <HeroSection onNavigate={navigate} />
+      <LogoTicker />
+      <FeaturedProducts onNavigate={navigate} />
+      <VerticalSelector onNavigate={navigate} />
+      <WhyUsSection />
+    </div>
+  );
+};
+
+// ============================================================
+// MAIN APP
+// ============================================================
 function App() {
-  const [currentRoute, setCurrentRoute] = useState<RouteType>('home');
-  const [selectedSlug, setSelectedSlug] = useState<string | undefined>(undefined);
-  const [globalSearchQuery, setGlobalSearchQuery] = useState<string | undefined>(undefined);
+  const routerNavigate = useNavigate();
 
+  // Wrapper: maps old page names + slugs to real URL paths
   const navigate = (page: string, slug?: string, query?: string) => {
-    console.log("App: navigating to", page, slug, query);
+    const base = PAGE_TO_URL[page] || '/';
+
+    let url = base;
+    if (slug) {
+      url = `${base}/${slug}`;
+    }
+    if (query) {
+      url += `?q=${encodeURIComponent(query)}`;
+    }
+
     window.scrollTo(0, 0);
-    const validRoutes = [
-      'home', 'product', 'category', 'guides', 'about',
-      'guide-article', 'guide-path', 'configurator', 'versus',
-      'legal-mentions', 'cgu', 'privacy', 'admin'
-    ];
-
-    if (validRoutes.includes(page)) {
-      setCurrentRoute(page as RouteType);
-      setSelectedSlug(slug);
-      // Update global search query if provided, otherwise reset it ONLY if leaving category page?
-      // Actually, if we navigate to category with a query, set it.
-      if (query) {
-        setGlobalSearchQuery(query);
-      } else if (page !== 'category') {
-        // Reset if navigating away from search context, or maybe keep it?
-        // Safer to reset to avoid "ghost" searches coming back
-        setGlobalSearchQuery(undefined);
-      }
-    } else {
-      setCurrentRoute('home');
-    }
-  };
-
-  const renderContent = () => {
-    console.log("App: rendering content for", currentRoute);
-    switch (currentRoute) {
-      case 'product':
-        return <ProductPage onBack={() => navigate('category')} onNavigate={navigate} slug={selectedSlug} />;
-      case 'category':
-        return <CategoryPage onNavigate={navigate} categorySlug={selectedSlug} initialSearchQuery={globalSearchQuery} />;
-      case 'guides':
-        return <GuidesPage onNavigate={navigate} />;
-      case 'about':
-        return <AboutPage onNavigate={navigate} />;
-      case 'guide-article':
-        return <GuideArticlePage onNavigate={navigate} slug={selectedSlug} />;
-      case 'admin':
-        return <AdminPage onNavigate={navigate} />;
-      case 'guide-path':
-        return <GuidePathPage onNavigate={navigate} slug={selectedSlug} />;
-      case 'configurator':
-        return <ConfiguratorPage onNavigate={navigate} />;
-      case 'versus':
-        return <VersusPage onNavigate={navigate} slug={selectedSlug} />;
-      case 'legal-mentions':
-        return <LegalMentionsPage onNavigate={navigate} />;
-      case 'cgu':
-        return <TermsPage onNavigate={navigate} />;
-      case 'privacy':
-        return <PrivacyPage onNavigate={navigate} />;
-      default:
-        return (
-          <div className="flex flex-col">
-            <HeroSection onNavigate={navigate} />
-            <LogoTicker />
-            <FeaturedProducts onNavigate={navigate} />
-            <VerticalSelector onNavigate={navigate} />
-            <WhyUsSection />
-          </div>
-        );
-    }
+    routerNavigate(url);
   };
 
   return (
@@ -127,13 +151,52 @@ function App() {
       <div className="min-h-screen relative text-foreground selection:bg-primary/30 font-sans">
         <BackgroundLayer />
         <div className="relative z-10">
-          {currentRoute === 'home' && <Navbar onNavigate={navigate} />}
+          <Layout navigate={navigate}>
+            <Suspense fallback={
+              <div className="h-screen w-full flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full border-t-2 border-primary animate-spin"></div>
+              </div>
+            }>
+              <Routes>
+                {/* HOME */}
+                <Route path="/" element={<HomePage navigate={navigate} />} />
 
-          {renderContent()}
+                {/* PRODUCTS */}
+                <Route path="/produit/:slug" element={<ProductRoute navigate={navigate} />} />
 
-          {currentRoute === 'home' && <Footer onNavigate={navigate} />}
+                {/* CATEGORIES */}
+                <Route path="/categorie" element={<CategoryRoute navigate={navigate} />} />
+                <Route path="/categorie/:slug" element={<CategoryRoute navigate={navigate} />} />
 
-          <ComparisonBar onNavigate={navigate} />
+                {/* GUIDES */}
+                <Route path="/guides" element={<GuidesPage onNavigate={navigate} />} />
+                <Route path="/guide/:slug" element={<GuideArticleRoute navigate={navigate} />} />
+                <Route path="/parcours/:slug" element={<GuidePathRoute navigate={navigate} />} />
+
+                {/* CONFIGURATOR */}
+                <Route path="/configurateur" element={<ConfiguratorPage onNavigate={navigate} />} />
+
+                {/* VERSUS */}
+                <Route path="/versus" element={<VersusRoute navigate={navigate} />} />
+                <Route path="/versus/:slug" element={<VersusRoute navigate={navigate} />} />
+
+                {/* ABOUT */}
+                <Route path="/a-propos" element={<AboutPage onNavigate={navigate} />} />
+
+                {/* LEGAL */}
+                <Route path="/mentions-legales" element={<LegalMentionsPage onNavigate={navigate} />} />
+                <Route path="/cgu" element={<TermsPage onNavigate={navigate} />} />
+                <Route path="/confidentialite" element={<PrivacyPage onNavigate={navigate} />} />
+
+                {/* ADMIN */}
+                <Route path="/admin" element={<AdminPage onNavigate={navigate} />} />
+
+
+                {/* FALLBACK → Home */}
+                <Route path="*" element={<HomePage navigate={navigate} />} />
+              </Routes>
+            </Suspense>
+          </Layout>
         </div>
       </div>
     </ComparisonProvider>

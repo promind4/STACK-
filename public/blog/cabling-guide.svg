@@ -1,0 +1,77 @@
+<svg width="800" height="400" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="background:white; width:100%; height:auto;">
+  <!-- Styles -->
+  <style>
+    .label { font-family: sans-serif; font-size: 14px; text-anchor: middle; font-weight: bold; fill: #333; }
+    .metal { fill: #d1d5db; stroke: #9ca3af; stroke-width: 2; }
+    .black-band { fill: #111; }
+    .xlr-body { fill: #e5e7eb; stroke: #9ca3af; stroke-width: 2; }
+    .xlr-pin { fill: #333; }
+  </style>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#1f2937">Audio Connectors Guide</text>
+
+  <!-- TS Connector -->
+  <g transform="translate(100, 100)">
+    <!-- Sleeve -->
+    <rect x="0" y="50" width="40" height="100" class="metal" rx="5" />
+    <!-- Black Band (Insulator) -->
+    <rect x="40" y="50" width="5" height="100" class="black-band" />
+    <!-- Tip -->
+    <path d="M45 50 L45 150 L60 150 C75 150 85 140 90 100 C85 60 75 50 60 50 Z" class="metal" />
+    <!-- Label -->
+    <text x="45" y="180" class="label">TS (Mono)</text>
+    <text x="45" y="200" class="label" font-weight="normal" font-size="12">1 Ring</text>
+  </g>
+
+  <!-- TRS Connector -->
+  <g transform="translate(250, 100)">
+    <!-- Sleeve -->
+    <rect x="0" y="50" width="30" height="100" class="metal" rx="2" />
+    <!-- Band 1 -->
+    <rect x="30" y="50" width="5" height="100" class="black-band" />
+    <!-- Ring -->
+    <rect x="35" y="50" width="15" height="100" class="metal" />
+    <!-- Band 2 -->
+    <rect x="50" y="50" width="5" height="100" class="black-band" />
+    <!-- Tip -->
+    <path d="M55 50 L55 150 L70 150 C85 150 95 140 100 100 C95 60 85 50 70 50 Z" class="metal" />
+    <!-- Label -->
+    <text x="50" y="180" class="label">TRS (Stereo/Balanced)</text>
+    <text x="50" y="200" class="label" font-weight="normal" font-size="12">2 Rings</text>
+  </g>
+
+  <!-- TRRS Connector -->
+  <g transform="translate(450, 100)">
+    <!-- Sleeve -->
+    <rect x="0" y="50" width="20" height="100" class="metal" rx="2" />
+    <!-- Band 1 -->
+    <rect x="20" y="50" width="5" height="100" class="black-band" />
+    <!-- Ring 2 -->
+    <rect x="25" y="50" width="10" height="100" class="metal" />
+    <!-- Band 2 -->
+    <rect x="35" y="50" width="5" height="100" class="black-band" />
+    <!-- Ring 1 -->
+    <rect x="40" y="50" width="10" height="100" class="metal" />
+    <!-- Band 3 -->
+    <rect x="50" y="50" width="5" height="100" class="black-band" />
+    <!-- Tip -->
+    <path d="M55 50 L55 150 L70 150 C85 150 95 140 100 100 C95 60 85 50 70 50 Z" class="metal" />
+    <!-- Label -->
+    <text x="50" y="180" class="label">TRRS (Headset)</text>
+    <text x="50" y="200" class="label" font-weight="normal" font-size="12">3 Rings</text>
+  </g>
+
+  <!-- XLR Connector -->
+  <g transform="translate(650, 100)">
+    <!-- Body -->
+    <circle cx="50" cy="100" r="50" class="xlr-body" fill="white" stroke="#333" stroke-width="4" />
+    <!-- Pins (Female Layout usually but simplified) -->
+    <circle cx="50" cy="130" r="8" class="xlr-pin" /> <!-- Pin 3 -->
+    <circle cx="25" cy="80" r="8" class="xlr-pin" />  <!-- Pin 1 -->
+    <circle cx="75" cy="80" r="8" class="xlr-pin" />  <!-- Pin 2 -->
+    <!-- Label -->
+    <text x="50" y="180" class="label">XLR (Pro)</text>
+    <text x="50" y="200" class="label" font-weight="normal" font-size="12">3 Pins</text>
+  </g>
+</svg>

@@ -1,19 +1,24 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Navbar } from '../Navbar';
-import { Footer } from '../Footer';
+
 import { Lock } from 'lucide-react';
 import { APP_NAME } from '../../constants';
+import { useSEO } from '../SEOHelper';
 
 interface LegalPageProps {
   onNavigate: (page: string) => void;
 }
 
 export const PrivacyPage: React.FC<LegalPageProps> = ({ onNavigate }) => {
+  useSEO({
+    title: 'Politique de Confidentialité',
+    description: `Politique de confidentialité de ${APP_NAME}. Protection de vos données personnelles, cookies et droits RGPD.`,
+  });
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
-      <Navbar onNavigate={onNavigate} />
-      
+
+
       <main className="pt-32 pb-24 container mx-auto px-6 max-w-[900px]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -73,12 +78,12 @@ export const PrivacyPage: React.FC<LegalPageProps> = ({ onNavigate }) => {
             Conformément à la réglementation européenne (RGPD), vous disposez des droits suivants : accès, rectification, effacement, limitation, opposition et portabilité de vos données.
           </p>
           <p>
-            Pour exercer ces droits, vous pouvez nous contacter à : <strong>privacy@stackera.com</strong>. Nous nous engageons à répondre dans un délai d'un mois.
+            Pour exercer ces droits, vous pouvez nous contacter à : <strong>privacy@fluxlab.com</strong>. Nous nous engageons à répondre dans un délai d'un mois.
           </p>
         </div>
       </main>
 
-      <Footer onNavigate={onNavigate} />
+
     </div>
   );
 };

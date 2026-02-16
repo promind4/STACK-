@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /panier
+Disallow: /compte
+Disallow: /configurateur/*
+Disallow: /recherche
+Disallow: /admin
+Disallow: /api/
+
+Sitemap: https://fluxlab.fr/sitemap.xml
