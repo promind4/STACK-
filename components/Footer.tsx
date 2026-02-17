@@ -50,23 +50,23 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </ul>
           </div>
 
-          {/* COLONNE 3 : RESSOURCES (Mobile: Col 1 Row 3 (Stacked below Univers) / Desktop: Col 3) */}
-          <div className="col-start-1 lg:col-start-auto space-y-4">
-            <h4 className="text-xs font-bold text-foreground uppercase tracking-widest">Ressources</h4>
-            <ul className="space-y-3 text-[13px] text-muted-foreground font-light">
-              <li><a href="#" onClick={(e) => handleNav(e, 'guides')} className="hover:text-primary transition-colors">Guides et tutos</a></li>
-              <li><a href="#" onClick={(e) => handleNav(e, 'about')} className="hover:text-primary transition-colors">L'Atelier Fluxlab</a></li>
-            </ul>
-          </div>
-
-          {/* COLONNE 4 : INFORMATIONS LÉGALES (Mobile: Col 2 Row 2+3 (Right Side) / Desktop: Col 4) */}
-          <div className="col-start-2 row-start-2 row-span-2 lg:row-start-auto lg:row-span-1 lg:col-start-auto space-y-4">
+          {/* COLONNE 3 : INFORMATIONS LÉGALES (Mobile: Col 2 Row 2+3 (Right Side) / Desktop: Col 3) */}
+          <div className="space-y-4">
             <h4 className="text-xs font-bold text-foreground uppercase tracking-widest">Informations Légales</h4>
             <ul className="space-y-3 text-[13px] text-muted-foreground font-light">
               <li><a href="#" onClick={(e) => handleNav(e, 'legal-mentions')} className="hover:text-primary transition-colors">Mentions Légales</a></li>
               <li><a href="#" onClick={(e) => handleNav(e, 'privacy')} className="hover:text-primary transition-colors">Politique de confidentialité</a></li>
               <li><a href="#" onClick={(e) => handleNav(e, 'cgu')} className="hover:text-primary transition-colors">CGU</a></li>
               <li><a href="#" onClick={(e) => handleNav(e, 'admin')} className="hover:text-primary transition-colors">Administrateur</a></li>
+            </ul>
+          </div>
+
+          {/* COLONNE 4 : RESSOURCES (Mobile: Col 1 Row 3 (Stacked below Univers) / Desktop: Col 4) */}
+          <div className="col-start-1 lg:col-start-auto space-y-4">
+            <h4 className="text-xs font-bold text-foreground uppercase tracking-widest">Ressources</h4>
+            <ul className="space-y-3 text-[13px] text-muted-foreground font-light">
+              <li><a href="#" onClick={(e) => handleNav(e, 'guides')} className="hover:text-primary transition-colors">Guides et tutos</a></li>
+              <li><a href="#" onClick={(e) => handleNav(e, 'about')} className="hover:text-primary transition-colors">L'Atelier Fluxlab</a></li>
             </ul>
           </div>
 

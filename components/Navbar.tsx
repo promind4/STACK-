@@ -110,19 +110,19 @@ const MENU_DATA: MenuItem[] = [
         ]
       },
       {
-        title: "Objectifs",
-        items: [
-          { label: "Grand Angle", desc: "Pour le Vlogging", slug: "grand-angle" },
-          // { label: "Focale Fixe", desc: "Le flou d'arrière-plan", slug: "focale-fixe" },
-          { label: "Zooms Polyvalents", desc: "Tout terrain", slug: "zoom-polyvalent" }
-        ]
-      },
-      {
         title: "Éclairage",
         items: [
           { label: "Key Lights", desc: "Lumière principale", slug: "keylight" },
           { label: "Softbox", desc: "Diffusion douce", slug: "softbox" },
           { label: "RGB & Ambiance", desc: "Tubes LED, Rubans", slug: "rgb-ambiance" }
+        ]
+      },
+      {
+        title: "Objectifs",
+        items: [
+          { label: "Grand Angle", desc: "Pour le Vlogging", slug: "grand-angle" },
+          // { label: "Focale Fixe", desc: "Le flou d'arrière-plan", slug: "focale-fixe" },
+          { label: "Zooms Polyvalents", desc: "Tout terrain", slug: "zoom-polyvalent" }
         ]
       }
     ],
@@ -143,14 +143,6 @@ const MENU_DATA: MenuItem[] = [
     targetPage: 'category',
     columns: [
       {
-        title: "Captation",
-        items: [
-          // { label: "Cartes d'acquisition", desc: "Cam Link, HD60 X", slug: "cartes-acquisition" },
-          { label: "Stream Deck", desc: "Contrôle total", slug: "stream-deck" },
-          // { label: "Switchers Vidéo", desc: "ATEM Mini", slug: "switchers-video" }
-        ]
-      },
-      {
         title: "Setup Live",
         items: [
           { label: "Fonds verts", desc: "Incrustation propre", slug: "fonds-verts" },
@@ -163,6 +155,14 @@ const MENU_DATA: MenuItem[] = [
         items: [
           { label: "Logiciels & Apps", desc: "OBS, vMix, VoiceMod...", slug: "logiciels-apps" },
           { label: "Design & Overlays", desc: "Alertes, Transition, Logos", slug: "design-overlays" }
+        ]
+      },
+      {
+        title: "Captation",
+        items: [
+          // { label: "Cartes d'acquisition", desc: "Cam Link, HD60 X", slug: "cartes-acquisition" },
+          { label: "Stream Deck", desc: "Contrôle total", slug: "stream-deck" },
+          // { label: "Switchers Vidéo", desc: "ATEM Mini", slug: "switchers-video" }
         ]
       }
     ],
