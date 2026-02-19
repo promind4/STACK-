@@ -5,16 +5,17 @@ interface SEOProps {
   title: string;
   description?: string;
   image?: string;
+  jsonLd?: Record<string, any>;
+  canonical?: string;
 }
 
 /**
  * Hook pour gérer le SEO dynamique sur une SPA.
- * Met à jour le titre du document et les balises meta.
+ * Met à jour le titre du document, les balises meta, les liens canoniques et le JSON-LD.
  */
-export const useSEO = ({ title, description, image }: SEOProps) => {
+export const useSEO = ({ title, description, image, jsonLd, canonical }: SEOProps) => {
   useEffect(() => {
     // 1. Mise à jour du Titre
-    // Ex: "Shure SM7B - Avis & Prix | Fluxlab"
     document.title = `${title} | ${APP_NAME}`;
 
     // 2. Helper pour mettre à jour ou créer une meta tag
@@ -45,5 +46,28 @@ export const useSEO = ({ title, description, image }: SEOProps) => {
       updateMeta('twitter:card', 'summary_large_image', false);
     }
 
-  }, [title, description, image]);
+    // 4. Canonical URL
+    if (canonical) {
+      let link = document.querySelector("link[rel='canonical']");
+      if (!link) {
+        link = document.createElement('link');
+        link.setAttribute('rel', 'canonical');
+        document.head.appendChild(link);
+      }
+      link.setAttribute('href', canonical);
+      updateMeta('og:url', canonical, true);
+    }
+
+    // 5. JSON-LD Structured Data
+    if (jsonLd) {
+      let script = document.querySelector("script[type='application/ld+json']");
+      if (!script) {
+        script = document.createElement('script');
+        script.setAttribute('type', 'application/ld+json');
+        document.head.appendChild(script);
+      }
+      script.textContent = JSON.stringify(jsonLd);
+    }
+
+  }, [title, description, image, jsonLd, canonical]);
 };

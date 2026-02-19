@@ -102,10 +102,44 @@ export const ProductPage: React.FC<ProductPageProps> = ({ onBack, slug, onNaviga
     }
   }, [product?.description]);
 
+  // --- SEO & SCHEMA.ORG ---
+  const canonicalUrl = product ? `https://fluxlab.fr/produit/${product.slug}` : 'https://fluxlab.fr';
+
+  const productSchema = product ? {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": product.name,
+    "image": product.image_url,
+    "description": product.description ? stripHtml(product.description).substring(0, 160) : "",
+    "brand": {
+      "@type": "Brand",
+      "name": product.brand || "Generique"
+    },
+    "sku": product.id,
+    "offers": {
+      "@type": "AggregateOffer",
+      "url": canonicalUrl,
+      "priceCurrency": "EUR",
+      "lowPrice": product.price,
+      "highPrice": product.price, // Si range, adapter
+      "offerCount": product.offers?.length || 1,
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": (product.rating || 0) > 0 ? {
+      "@type": "AggregateRating",
+      "ratingValue": product.rating,
+      "reviewCount": product.review_count || 1,
+      "bestRating": "5",
+      "worstRating": "1"
+    } : undefined
+  } : undefined;
+
   useSEO({
     title: product ? `${product.name} - Avis & Prix` : 'Produit Introuvable',
     description: product ? stripHtml(product.description || "Découvrez ce produit sur Fluxlab.") : "Découvrez ce produit sur Fluxlab.",
-    image: product?.image_url
+    image: product?.image_url,
+    canonical: canonicalUrl,
+    jsonLd: productSchema
   });
 
   const relatedProducts = useMemo(() => {

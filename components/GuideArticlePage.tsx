@@ -18,10 +18,38 @@ export const GuideArticlePage: React.FC<GuideArticlePageProps> = ({ onNavigate, 
   const article = getArticleBySlug(slug || '');
   const [relatedItems, setRelatedItems] = useState<Product[]>([]);
 
+  // --- SEO & SCHEMA.ORG ---
+  const canonicalUrl = article ? `https://fluxlab.fr/guide/${article.slug}` : 'https://fluxlab.fr/guides';
+
+  const articleSchema = article ? {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": article.title,
+    "image": [article.image],
+    "datePublished": new Date(article.date).toISOString(), // Attention au format date "18 Jan 2025" -> il faudrait parser, mais pour l'instant ISO suffira si valide ou string
+    "dateModified": new Date(article.date).toISOString(),
+    "author": [{
+      "@type": "Person",
+      "name": article.author,
+      "url": "https://fluxlab.fr/a-propos"
+    }],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Fluxlab",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://fluxlab.fr/branding/logo.png" // Assurez-vous d'avoir ce logo
+      }
+    },
+    "description": article.intro
+  } : undefined;
+
   useSEO({
     title: article ? article.title : 'Guide introuvable',
     description: article ? article.intro : 'Ce guide n\'existe pas ou a été déplacé.',
     image: article?.image,
+    canonical: canonicalUrl,
+    jsonLd: articleSchema
   });
 
   useEffect(() => {
