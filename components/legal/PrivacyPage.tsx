@@ -78,7 +78,7 @@ export const PrivacyPage: React.FC<LegalPageProps> = ({ onNavigate }) => {
             Conformément à la réglementation européenne (RGPD), vous disposez des droits suivants : accès, rectification, effacement, limitation, opposition et portabilité de vos données.
           </p>
           <p>
-            Pour exercer ces droits, vous pouvez nous contacter à : <strong>privacy@fluxlab.com</strong>. Nous nous engageons à répondre dans un délai d'un mois.
+            Pour exercer ces droits, vous pouvez nous contacter à : <strong>contact@fluxlab.fr</strong>. Nous nous engageons à répondre dans un délai d'un mois.
           </p>
         </div>
       </main>

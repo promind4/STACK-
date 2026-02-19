@@ -67,7 +67,7 @@ export const LegalMentionsPage: React.FC<LegalPageProps> = ({ onNavigate }) => {
 
           <h3>4. Contact</h3>
           <p>
-            Pour tout signalement de contenus ou d'activités illicites, l'utilisateur peut contacter l'éditeur à l'adresse suivante : <strong>legal@fluxlab.com</strong> ou par courrier recommandé avec accusé de réception adressé à l'Éditeur aux coordonnées précisées dans les présentes mentions légales.
+            Pour tout signalement de contenus ou d'activités illicites, l'utilisateur peut contacter l'éditeur à l'adresse suivante : <strong>contact@fluxlab.fr</strong> ou par courrier recommandé avec accusé de réception adressé à l'Éditeur aux coordonnées précisées dans les présentes mentions légales.
           </p>
         </div>
       </main>

@@ -57,7 +57,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <li><a href="#" onClick={(e) => handleNav(e, 'legal-mentions')} className="hover:text-primary transition-colors">Mentions Légales</a></li>
               <li><a href="#" onClick={(e) => handleNav(e, 'privacy')} className="hover:text-primary transition-colors">Politique de confidentialité</a></li>
               <li><a href="#" onClick={(e) => handleNav(e, 'cgu')} className="hover:text-primary transition-colors">CGU</a></li>
-              <li><a href="#" onClick={(e) => handleNav(e, 'admin')} className="hover:text-primary transition-colors">Administrateur</a></li>
+
             </ul>
           </div>
 
