@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# temp/debug files (root-level scripts & dumps)
+*.html
+*.txt
+/*.js
+/*.cjs
+/*.mjs
+!next.config.mjs
+/*.json
+!package.json
+!tsconfig.json
