@@ -83,10 +83,86 @@ export interface Category {
   parent_id?: string | null;
 }
 
-// 4. UTILISATEURS (PROFILES)
 export interface UserProfile {
   id: string;
   full_name: string | null;
   avatar_url: string | null;
   creative_profile: CreativeProfileType | null;
+}
+
+// 5. ARTICLES (Architecture Modulaire)
+export interface AffiliateLink {
+  merchant: MerchantName;
+  url: string;
+  label: string;
+}
+
+export interface ArticleProductBlock {
+  product_slug: string;
+  badge: string;
+  title: string;
+  subtitle: string;
+  image_url: string;
+  description: string;
+  pros_title: string;
+  pros: string[];
+  cons_title: string;
+  cons: string[];
+  usage_tip: string;
+  affiliate_links: AffiliateLink[];
+  hide_product_link?: boolean;
+}
+
+export interface ArticleComparisonRow {
+  cells: string[];
+  highlight: boolean;
+}
+
+export interface ArticleComparisonTable {
+  headers: string[];
+  rows: ArticleComparisonRow[];
+}
+
+export interface ArticleContentSection {
+  order: number;
+  title: string;
+  html: string;
+}
+
+export interface ArticleConclusionBlock {
+  emoji: string;
+  title: string;
+  content: string;
+}
+
+export interface ArticleFaqItem {
+  question: string;
+  answer: string;
+}
+
+export interface Article {
+  id: string;
+  slug: string;
+  title: string;
+  category: string;
+  read_time: string | null;
+  published_at: string | null;
+  author: string | null;
+  hero_image_url: string | null;
+  intro_text: string | null;
+
+  // JSONB Blocks
+  comparison_table: ArticleComparisonTable | null;
+  product_blocks: ArticleProductBlock[];
+  sidebar_product_ids: string[];
+  content_sections: ArticleContentSection[];
+  conclusion_block: ArticleConclusionBlock | null;
+  faq_items: ArticleFaqItem[];
+
+  // Meta
+  related_products: string[];
+  related_category_slug: string | null;
+  is_published: boolean;
+  created_at: string;
+  updated_at: string;
 }

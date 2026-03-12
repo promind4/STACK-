@@ -4,7 +4,7 @@ import { CheckCircle, Shield, BarChart3, Eye, Scale, Users } from 'lucide-react'
 
 export const metadata: Metadata = {
     title: 'Notre Méthodologie | Fluxlab',
-    description: 'Découvrez comment l\'équipe Fluxlab évalue et recommande le matériel audio, vidéo et streaming. Nos critères, notre système de notation et notre engagement de transparence.',
+    description: "Découvrez comment l'équipe Fluxlab évalue et recommande le matériel audio, vidéo et streaming. Nos critères de notation et notre transparence.",
     alternates: { canonical: 'https://fluxlab.fr/methodologie' },
 };
 

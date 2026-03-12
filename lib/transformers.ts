@@ -15,14 +15,25 @@ export const transformProduct = (raw: any): Product => {
     const dbReviewCount = raw.review_count || 0;
 
     // Transform Offers
-    const frontendOffers: ProductOffer[] = offers.map((o: any) => ({
-        merchant_name: o.merchant_name,
-        merchant_logo_url: o.merchant_logo_url || "",
-        price: o.price,
-        currency: o.currency || "EUR",
-        affiliate_link: o.affiliate_link,
-        in_stock: o.in_stock ?? true,
-    }));
+    const AMAZON_LOGO = "https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png";
+    const frontendOffers: ProductOffer[] = offers.map((o: any) => {
+        let logoUrl = o.merchant_logo_url || "";
+        // Fix Amazon logos that still point to Wikimedia (DB trigger prevents direct update)
+        if (
+            o.merchant_name?.toLowerCase().includes("amazon") &&
+            (logoUrl.includes("wikimedia") || logoUrl.includes("wikipedia") || logoUrl === "/branding/amazon-logo.svg")
+        ) {
+            logoUrl = AMAZON_LOGO;
+        }
+        return {
+            merchant_name: o.merchant_name,
+            merchant_logo_url: logoUrl,
+            price: o.price,
+            currency: o.currency || "EUR",
+            affiliate_link: o.affiliate_link,
+            in_stock: o.in_stock ?? true,
+        };
+    });
 
     // Pros / Cons extraction
     let pros: string[] = [];

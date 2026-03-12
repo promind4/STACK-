@@ -59,6 +59,7 @@ export function Footer() {
                             <li><Link href="/mentions-legales" className="hover:text-primary transition-colors">Mentions Légales</Link></li>
                             <li><Link href="/confidentialite" className="hover:text-primary transition-colors">Politique de confidentialité</Link></li>
                             <li><Link href="/cgu" className="hover:text-primary transition-colors">CGU</Link></li>
+                            <li><Link href="/admin" className="hover:text-primary transition-colors opacity-70">Administration</Link></li>
                         </ul>
                     </div>
 
@@ -66,11 +67,8 @@ export function Footer() {
 
                 {/* DISCLAIMER AFFILIATION */}
                 <div className="border-t border-border pt-6 mb-6">
-                    <p className="text-[11px] text-muted-foreground/70 leading-relaxed text-center max-w-3xl mx-auto">
-                        <strong>Transparence :</strong> Fluxlab participe à des programmes d&apos;affiliation (Amazon, Thomann, Woodbrass, etc.).
-                        Lorsque vous cliquez sur un lien marchand et effectuez un achat, nous pouvons percevoir une commission,
-                        sans surcoût pour vous. Cela nous permet de financer le site et de maintenir notre indépendance éditoriale.
-                        Nos recommandations restent basées sur nos analyses techniques et ne sont jamais influencées par ces partenariats.
+                    <p className="text-[10px] text-muted-foreground/60 leading-relaxed text-center max-w-3xl mx-auto">
+                        <strong>Transparence :</strong> Fluxlab participe à des programmes d&apos;affiliation (Amazon, Thomann, Woodbrass, etc.). Un achat via ces liens peut nous faire percevoir une commission, sans surcoût pour vous.
                     </p>
                 </div>
 

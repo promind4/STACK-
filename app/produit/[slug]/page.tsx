@@ -7,6 +7,8 @@ import { stripHtml } from "@/lib/utils";
 import { JsonLd } from "@/components/server/JsonLd";
 import Image from "next/image";
 import Link from "next/link";
+import { ProductGallery } from "@/components/client/ProductGallery";
+import { ProductDescription } from "@/components/client/ProductDescription";
 import {
     ChevronRight,
     CheckCircle2,
@@ -19,7 +21,7 @@ import {
     ChevronLeft,
 } from "lucide-react";
 
-export const revalidate = 86400; // 24h ISR
+export const revalidate = 0; // Bypass cache for testing new DB contents
 
 // ---- Data Fetching ----
 async function getProduct(slug: string): Promise<Product | null> {
@@ -77,7 +79,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     if (!product) return { title: "Produit Introuvable" };
 
     const desc = product.description
-        ? stripHtml(product.description).substring(0, 160)
+        ? stripHtml(product.description).substring(0, 145)
         : "Découvrez ce produit sur Fluxlab.";
 
     return {
@@ -209,59 +211,18 @@ export default async function ProductPage({ params }: Props) {
                             </Link>
                         </div>
 
-                        {/* Disclaimer affiliation */}
-                        <div className="mb-6 px-4 py-2.5 bg-secondary/40 border border-border/50 rounded-lg">
-                            <p className="text-[11px] text-muted-foreground leading-relaxed">
-                                <Info className="w-3 h-3 inline-block mr-1 -mt-0.5" />
-                                <strong>Transparence :</strong> Cette page contient des liens affiliés. Si vous achetez via ces liens, nous percevons une commission sans surcoût pour vous.
-                            </p>
-                        </div>
+
 
                         {/* === BUY BOX === */}
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20 items-start">
                             {/* Colonne Gauche : Visuel & Galerie */}
                             <div className="lg:col-span-7 flex flex-col gap-4 lg:sticky lg:top-28 lg:self-start">
-                                <div
-                                    className="rounded-2xl border border-border/40 shadow-sm p-8 md:p-12 flex items-center justify-center aspect-[4/3] relative overflow-hidden group transition-colors"
-                                    style={{ backgroundColor: "#FFFFFF" }}
-                                >
-                                    <div className="absolute top-4 left-4 z-10">
-                                        <span className="px-3 py-1 bg-secondary text-foreground text-xs font-mono rounded-full border border-border uppercase">
-                                            {product.brand}
-                                        </span>
-                                    </div>
-                                    <Image
-                                        src={product.image_url}
-                                        alt={`${product.name} – ${product.brand || 'Test'} avis et meilleur prix | Fluxlab`}
-                                        fill
-                                        sizes="(max-width: 768px) 100vw, 58vw"
-                                        className="object-contain transition-all duration-300 ease-out group-hover:scale-105"
-                                        priority
-                                    />
-                                </div>
-
-                                {/* Galerie Thumbnails */}
-                                {product.gallery_images && product.gallery_images.length > 0 && (
-                                    <div className="flex gap-4 overflow-x-auto pb-2">
-                                        {[product.image_url, ...product.gallery_images.filter((img: string) => img !== product.image_url)].map(
-                                            (img: string, idx: number) => (
-                                                <div
-                                                    key={idx}
-                                                    className="relative w-24 h-24 shrink-0 rounded-xl bg-white border border-border/50 p-2 overflow-hidden hover:border-primary/50 transition-all"
-                                                >
-                                                    <Image
-                                                        src={img}
-                                                        alt={`${product.name} – Vue ${idx + 1} | Fluxlab`}
-                                                        fill
-                                                        sizes="96px"
-                                                        className="object-contain"
-                                                        loading="lazy"
-                                                    />
-                                                </div>
-                                            )
-                                        )}
-                                    </div>
-                                )}
+                                <ProductGallery
+                                    name={product.name}
+                                    brand={product.brand || null}
+                                    mainImageUrl={product.image_url}
+                                    galleryImages={product.gallery_images || []}
+                                />
                             </div>
 
                             {/* Colonne Droite : Infos & Offres */}
@@ -296,12 +257,7 @@ export default async function ProductPage({ params }: Props) {
                                         {product.name}
                                     </h1>
                                     {product.description && (
-                                        <div
-                                            className="text-base text-muted-foreground leading-relaxed font-light max-h-[320px] overflow-hidden [&_h2]:text-base [&_h2]:font-bold [&_h2]:uppercase [&_h2]:mt-5 [&_h2]:mb-1.5 [&_h2]:text-foreground [&_h3]:text-base [&_h3]:font-semibold [&_h3]:mt-4 [&_h3]:mb-1.5 [&_h3]:text-foreground [&_ul]:list-none [&_ul]:pl-0 [&_ul]:my-2 [&_li]:mb-1 [&_p]:mb-3 [&_strong]:text-foreground [&_strong]:font-medium"
-                                            dangerouslySetInnerHTML={{
-                                                __html: product.description,
-                                            }}
-                                        />
+                                        <ProductDescription htmlContent={product.description} />
                                     )}
                                 </div>
 
@@ -321,7 +277,7 @@ export default async function ProductPage({ params }: Props) {
                                                     }`}
                                             >
                                                 <div className="flex items-center gap-4">
-                                                    <div className="w-12 h-12 rounded-lg bg-neutral-50 border border-neutral-100 flex items-center justify-center p-2 overflow-hidden relative">
+                                                    <div className="w-12 h-12 rounded-lg bg-white border border-neutral-100 flex items-center justify-center p-2 overflow-hidden relative">
                                                         {offer.merchant_logo_url ? (
                                                             <Image
                                                                 src={offer.merchant_logo_url}

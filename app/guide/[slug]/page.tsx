@@ -18,6 +18,8 @@ export async function generateStaticParams() {
     }));
 }
 
+export const revalidate = 0; // Disable cache so newly added DB offers render immediately
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
     const article = getArticleBySlug(slug);
@@ -142,10 +144,15 @@ export default async function GuideArticlePage({ params }: Props) {
     );
 
     // Swap hardcoded merchant links for dynamic db offers
+    // Using a more robust regex to handle spacing variations in the source HTML
     dynamicContent = dynamicContent.replace(
-        /<div class="flex flex-wrap items-center gap-3 mt-8">([\s\S]*?)<\/div>/gi,
+        /<div\s+class\s*=\s*"[^"]*flex[^"]*wrap[^"]*gap[^"]*mt[^"]*"\s*>([\s\S]*?)<\/div\s*>/gi,
         (match, innerHtml) => {
-            const slugMatch = innerHtml.match(/href="\/produit\/([^"]+)"/i);
+            const hrefMatch = innerHtml.match(/href\s*=\s*"([^"]*produit[^"]*)"/i);
+            if (!hrefMatch || !hrefMatch[1]) return match;
+
+            const cleanHref = hrefMatch[1].replace(/\s/g, '');
+            const slugMatch = cleanHref.match(/\/produit\/(.+)$/);
             if (!slugMatch || !slugMatch[1]) return match;
 
             const productSlug = slugMatch[1];
@@ -160,19 +167,50 @@ export default async function GuideArticlePage({ params }: Props) {
             let newHtml = `<a href="/produit/${product.slug}" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>`;
 
             if (product.offers && product.offers.length > 0) {
+                let offersHtml = '<div class="flex flex-wrap items-center justify-start gap-8 sm:gap-12 w-full">';
                 product.offers.forEach((offer: any) => {
-                    const merchant = offer.merchant_name.toLowerCase();
-                    if (merchant === 'amazon') {
-                        newHtml += ` <a href="${offer.affiliate_link}" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20">Amazon</a>`;
-                    } else if (merchant === 'thomann') {
-                        newHtml += ` <a href="${offer.affiliate_link}" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20">Thomann</a>`;
-                    } else if (merchant === 'woodbrass') {
-                        newHtml += ` <a href="${offer.affiliate_link}" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border">Woodbrass</a>`;
+                    const merchantName = offer.merchant_name || 'Marchand';
+                    let logoUrl = offer.merchant_logo_url;
+
+                    // Fallback to static mapping if the DB doesn't have the logo URL yet
+                    if (!logoUrl) {
+                        const m = merchantName.toLowerCase();
+                        if (m === 'amazon') logoUrl = 'https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png';
+                        else if (m === 'thomann') logoUrl = 'https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png';
+                        else if (m === 'woodbrass') logoUrl = 'https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg';
                     }
+
+                    offersHtml += `
+                        <a href="${offer.affiliate_link}" target="_blank" rel="nofollow sponsored" class="group flex flex-col items-center gap-2 hover:-translate-y-1 transition-transform">
+                            <div class="h-8 sm:h-9 flex items-center justify-center bg-transparent mix-blend-multiply">
+                                ${logoUrl
+                            ? `<img src="${logoUrl}" alt="Logo ${merchantName}" class="h-full w-auto object-contain" loading="lazy" />`
+                            : `<span class="font-bold text-sm text-foreground">${merchantName}</span>`
+                        }
+                            </div>
+                            <span class="text-[10px] sm:text-[11px] font-bold text-muted-foreground uppercase tracking-widest group-hover:text-primary transition-colors">
+                                ${merchantName}
+                            </span>
+                        </a>
+                    `;
                 });
+                offersHtml += '</div>';
+
+                newHtml = `
+                    <div class="flex flex-col gap-6 mt-10 w-full mb-4">
+                        <div class="flex">${newHtml}</div>
+                        <div class="w-full h-px bg-border/40 my-2"></div>
+                        <div class="flex flex-col gap-5">
+                            <span class="text-xs uppercase tracking-widest text-muted-foreground/80 font-bold block">Vérifier le prix sur :</span>
+                            ${offersHtml}
+                        </div>
+                    </div>
+                `;
+            } else {
+                newHtml = `<div class="flex mt-8 w-full">${newHtml}</div>`;
             }
 
-            return `<div class="flex flex-wrap items-center gap-3 mt-8">${newHtml}</div>`;
+            return `<div class="w-full clear-both">${newHtml}</div>`;
         }
     );
 
@@ -314,8 +352,8 @@ export default async function GuideArticlePage({ params }: Props) {
                 {/* AUTHOR BIO — E-E-A-T */}
                 <div className="container mx-auto px-6 max-w-[1000px] py-16">
                     <div className="flex flex-col sm:flex-row gap-6 items-start p-8 bg-secondary/30 border border-border/50 rounded-2xl">
-                        <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary text-2xl font-bold">
-                            FL
+                        <div className="flex-shrink-0 w-16 h-16 rounded-full bg-white flex items-center justify-center overflow-hidden border border-border/50 p-3 shadow-sm">
+                            <Image src="/branding/favicon.svg" alt="Fluxlab Icon" width={64} height={64} className="object-contain w-full h-full" />
                         </div>
                         <div className="flex-1">
                             <p className="font-bold text-lg mb-1">Équipe Fluxlab</p>

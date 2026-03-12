@@ -11,6 +11,7 @@ const nextConfig = {
       { protocol: "https", hostname: "**.ldlc.com" },
       { protocol: "https", hostname: "**.bhphoto.com" },
       { protocol: "https", hostname: "**.woodbrass.com" },
+      { protocol: "https", hostname: "upload.wikimedia.org" },
     ],
   },
   async redirects() {

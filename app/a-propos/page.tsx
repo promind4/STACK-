@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export const metadata: Metadata = {
     title: 'À Propos de Fluxlab',
-    description: 'Fluxlab est le comparateur intelligent de matériel audio, vidéo et streaming. Découvrez notre mission : vous aider à trouver le setup parfait au meilleur prix.',
+    description: "Comparateur de matériel audio, vidéo et streaming. Notre mission : aider les créateurs de contenu à trouver le setup parfait au meilleur prix.",
     alternates: { canonical: 'https://fluxlab.fr/a-propos' },
 };
 

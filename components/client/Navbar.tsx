@@ -192,7 +192,7 @@ export function Navbar() {
                     {/* LOGO */}
                     <Link href="/" className="flex items-center group z-50 relative">
                         <Image
-                            src={isTransparent && pathname !== "/" ? "/branding/logo-light.svg" : "/branding/logo.svg"}
+                            src={isTransparent && pathname === "/configurateur" ? "/branding/logo-light.svg" : "/branding/logo.svg"}
                             alt="Fluxlab"
                             width={150}
                             height={40}
@@ -211,14 +211,11 @@ export function Navbar() {
                             >
                                 <Link
                                     href={menu.targetPage}
-                                    className={`text-sm font-medium flex items-center gap-2 transition-colors ${activeMenu === menu.id
+                                    className={`text-sm font-semibold transition-colors ${activeMenu === menu.id
                                         ? "text-primary"
-                                        : "text-muted-foreground hover:text-foreground"
+                                        : "text-foreground hover:text-primary"
                                         }`}
                                 >
-                                    {React.cloneElement(menu.icon as React.ReactElement, {
-                                        className: `w-4 h-4 ${activeMenu === menu.id ? "text-primary" : ""}`,
-                                    })}
                                     {menu.label}
                                 </Link>
 
@@ -232,7 +229,7 @@ export function Navbar() {
                         ))}
                         <Link
                             href="/guides"
-                            className="text-sm font-medium hover:text-foreground px-4 py-2 text-muted-foreground"
+                            className="text-sm font-semibold text-foreground hover:text-primary px-4 py-2 transition-colors"
                         >
                             Guides &amp; Tutos
                         </Link>
@@ -344,12 +341,9 @@ export function Navbar() {
                                 <div key={menu.id} className="space-y-4">
                                     <Link
                                         href={menu.targetPage}
-                                        className="flex items-center gap-3 text-xl font-bold text-foreground"
+                                        className="text-xl font-bold text-foreground"
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
-                                        <div className="p-2 bg-secondary rounded-lg">
-                                            {menu.icon}
-                                        </div>
                                         {menu.label}
                                     </Link>
                                     <div className="pl-12 grid gap-3">

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5C58C" />
+      <stop offset="100%" stop-color="#D3B27B" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Circular Background -->
+  <circle cx="256" cy="256" r="256" fill="url(#gold-gradient)"/>
+  
+  <!-- Icon: Stylized F (EQ/Sliders concept) -->
+  <g transform="translate(141, 115) scale(0.55)">
+    <!-- Vertical Bar (Main Stem) -->
+    <rect x="0" y="0" width="100" height="512" rx="50" fill="#0F0F0F"/>
+    
+    <!-- Top Horizontal Bar -->
+    <rect x="140" y="0" width="280" height="100" rx="50" fill="#0F0F0F"/>
+    
+    <!-- Middle Horizontal Bar -->
+    <rect x="140" y="190" width="180" height="100" rx="50" fill="#0F0F0F"/>
+    
+    <!-- Bottom Dot/Accent (Optional, for balance) -->
+    <circle cx="190" cy="462" r="50" fill="#0F0F0F" opacity="0.3"/>
+  </g>
+</svg>

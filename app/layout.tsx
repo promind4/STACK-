@@ -30,6 +30,10 @@ export const metadata: Metadata = {
     siteName: "Fluxlab",
     locale: "fr_FR",
   },
+  icons: {
+    icon: "/branding/favicon.svg",
+    apple: "/branding/favicon.svg",
+  },
 };
 
 export default function RootLayout({

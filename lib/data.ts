@@ -43,7 +43,7 @@ export const ARTICLES: Article[] = [
     author: "Équipe Fluxlab",
     image: "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&q=80&w=1200",
     intro: "Mixer avec un casque grand public est la garantie d'un mixage raté. Découvrez pourquoi la courbe de réponse plate est votre amie, et quand utiliser un casque ouvert ou fermé.",
-    relatedProducts: ["beyerdynamic-dt-770-pro-80-ohm", "beyerdynamic-dt-990-pro", "sennheiser-hd-600"],
+    relatedProducts: ["audio-technica-ath-m20x", "beyerdynamic-dt-770-pro-80-ohm", "beyerdynamic-dt-990-pro", "sennheiser-hd-600"],
     relatedCategorySlug: "casques-studio",
     content: `
       <!-- ENCART TL;DR (Résumé Haute Conversion) -->
@@ -111,7 +111,7 @@ export const ARTICLES: Article[] = [
       <div id="ath-m20x" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
           <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
-            <img src="https://m.media-amazon.com/images/I/71wEwaN9N9L._AC_SL1500_.jpg" alt="Audio-Technica ATH-M20x" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
+            <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/audio-technica-ath-m20x-gallery-1773318906456.png" alt="Audio-Technica ATH-M20x" class="w-full h-full object-contain" loading="lazy" />
           </div>
           <div>
             <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/audio-technica-ath-m20x" class="product-link text-foreground hover:text-primary transition-colors">1. Audio-Technica ATH-M20x</a></h3>
@@ -144,9 +144,7 @@ export const ARTICLES: Article[] = [
 
         <div class="flex flex-wrap items-center gap-3 mt-8">
           <a href="/produit/audio-technica-ath-m20x" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
-          <a href="https://www.thomann.fr/audio_technica_ath_m20_x.htm?partner_id=58130" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20">Thomann</a>
-          <a href="https://www.amazon.fr/s?k=Audio-Technica+ATH-M20x&tag=TON_TAG_AMAZON" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20">Amazon</a>
-          <a href="https://www.woodbrass.com/casques-studio-fermes-audio-technica-ath-m20-x-p167950.html" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border">Woodbrass</a>
+          <div data-product-slug="audio-technica-ath-m20x" data-merchant-links-container></div>
         </div>
       </div>
 
@@ -187,9 +185,9 @@ export const ARTICLES: Article[] = [
 
         <div class="flex flex-wrap items-center gap-3 mt-8">
           <a href="/produit/beyerdynamic-dt-770-pro-80-ohm" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
-          <a href="https://www.thomann.fr/beyerdynamic_dt770_pro80_ohm.htm?partner_id=58130" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20">Thomann</a>
-          <a href="https://www.amazon.fr/s?k=Beyerdynamic+DT-770+Pro+80&tag=TON_TAG_AMAZON" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20">Amazon</a>
-          <a href="https://www.woodbrass.com/casques-studio-fermes-beyerdynamic-dt-770-pro-80-ohms-p165831.html?queryID=402185d8484d6aa3dc9ed3739b22ac45" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border">Woodbrass</a>
+          <a href="https://www.thomann.fr/beyerdynamic_dt770_pro80_ohm.htm?partner_id=58130" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="https://www.amazon.fr/s?k=Beyerdynamic+DT-770+Pro+80&tag=TON_TAG_AMAZON" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="https://www.woodbrass.com/casques-studio-fermes-beyerdynamic-dt-770-pro-80-ohms-p165831.html?queryID=402185d8484d6aa3dc9ed3739b22ac45" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
         </div>
       </div>
 
@@ -230,9 +228,9 @@ export const ARTICLES: Article[] = [
 
         <div class="flex flex-wrap items-center gap-3 mt-8">
           <a href="/produit/beyerdynamic-dt-990-pro" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
-          <a href="https://www.thomann.fr/beyerdynamic_dt990pro.htm?partner_id=58130" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20">Thomann</a>
-          <a href="https://www.amazon.fr/s?k=Beyerdynamic+DT-990+Pro&tag=TON_TAG_AMAZON" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20">Amazon</a>
-          <a href="https://www.woodbrass.com/casques-studio-ouverts-beyerdynamic-dt-990-pro-p165832.html" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border">Woodbrass</a>
+          <a href="https://www.thomann.fr/beyerdynamic_dt990pro.htm?partner_id=58130" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="https://www.amazon.fr/s?k=Beyerdynamic+DT-990+Pro&tag=TON_TAG_AMAZON" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="https://www.woodbrass.com/casques-studio-ouverts-beyerdynamic-dt-990-pro-p165832.html" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
         </div>
       </div>
 
@@ -273,9 +271,9 @@ export const ARTICLES: Article[] = [
 
         <div class="flex flex-wrap items-center gap-3 mt-8">
           <a href="/produit/sennheiser-hd-600" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
-          <a href="https://www.thomann.fr/sennheiser_hd_600_new_version_2019.htm?partner_id=58130" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20">Thomann</a>
-          <a href="https://www.amazon.fr/s?k=Sennheiser+HD+600&tag=TON_TAG_AMAZON" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20">Amazon</a>
-          <a href="https://www.woodbrass.com/casques-studio-ouverts-sennheiser-hd-600-p82421.html" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border">Woodbrass</a>
+          <a href="https://www.thomann.fr/sennheiser_hd_600_new_version_2019.htm?partner_id=58130" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="https://www.amazon.fr/s?k=Sennheiser+HD+600&tag=TON_TAG_AMAZON" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="https://www.woodbrass.com/casques-studio-ouverts-sennheiser-hd-600-p82421.html" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
         </div>
       </div>
 
@@ -432,7 +430,7 @@ export const ARTICLES: Article[] = [
   </table>
   </div>
 
-  <h2 > Chapitre 1 : La Physique du Transducteur </h2>
+  <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4"> Chapitre 1 : La Physique du Transducteur </h2>
   <p > Pour bien arbitrer ce duel, il faut revenir à la source : la capsule.C'est l'élément qui transforme la pression acoustique(le son) en courant électrique.</p>
 
   <h3 > La capsule est souvent identique </h3>
@@ -440,7 +438,7 @@ export const ARTICLES: Article[] = [
 
   <p>La différence ne se joue pas sur la capture, mais sur le traitement du signal électrique.</p>
 
-  <h2 > Chapitre 2 : Le Chemin du Signal(Signal Flow) </h2>
+  <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4"> Chapitre 2 : Le Chemin du Signal (Signal Flow) </h2>
   <p > Le courant qui sort de la capsule est minuscule(quelques millivolts) et extrêmement fragile.C'est ici que les routes se séparent.</p>
 
   <h3 > La Route USB : L'intégration forcée</h3>
@@ -462,7 +460,7 @@ export const ARTICLES: Article[] = [
   <p > Le câble XLR transporte le signal en double exemplaire, dont un est inversé en phase(Phase Reverse).À l'arrivée dans la carte son, les interférences électromagnétiques s'annulent mathématiquement lorsque les deux signaux sont recombinés.</p>
   <p > Résultat : vous pouvez utiliser un câble XLR de 50 mètres passant à côté de câbles d'alimentation sans aucun grésillement. C'est impossible en USB.</p>
 
-  <h2 > Chapitre 3 : Bit Depth et Sample Rate </h2>
+  <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4"> Chapitre 3 : Bit Depth et Sample Rate </h2>
   <p > C'est la "résolution" numérique de votre son.</p>
 
   <h3 > Fréquence d'échantillonnage (Sample Rate)</h3>
@@ -477,7 +475,7 @@ export const ARTICLES: Article[] = [
   </ul>
   <p > Le XLR vous donne accès à ces technologies de pointe en ne changeant que l'interface externe.</p>
 
-  <h2 > Chapitre 4 : Latence et Monitoring </h2>
+  <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4"> Chapitre 4 : Latence et Monitoring </h2>
   <p > Essayer de parler et de s'entendre avec un délai de 20ms est impossible (effet "Speech Jammer").</p>
 
   <h3 > Monitoring Direct USB </h3>
@@ -517,56 +515,70 @@ export const ARTICLES: Article[] = [
   </div>
   <p class= "text-xl font-medium text-foreground mb-8 border-l-4 border-primary pl-4"> Pour un premier setup, le streaming, les appels Discord et le gaming.Privilégiez l'immédiateté avec la connectique USB.</p>
 
-  <!--Product Card : Rode PodMic USB-->
-  <div id="rode-podmic-usb" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
-  <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-  <img src="https://www.thomann.de/thumb/opengraph/pics/prod/567098.jpg" alt = "Rode PodMic USB" class= "rounded-2xl w-full aspect-square object-cover shadow-sm bg-white" loading = "lazy" />
-  <div>
-  <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="/produit/rode-podmic-usb" class= "product-link text-foreground hover:text-primary transition-colors" > Rode PodMic USB </a></h3 >
-  <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm" > Le Caméléon Idéal </p>
-  <p > Rode a réussi un tour de force en déclinant son best - seller broadcast en version double connectique.Branchez - le en USB sur votre ordinateur portable aujourd'hui pour profiter des traitements internes, et branchez-le en XLR dans 2 ans quand vous achèterez une vraie table de mixage.</p>
+    <!--Product Card : Rode PodMic USB-->
+  <div id="rode-podmic-usb" class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+    <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+      <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+        <img src="https://www.thomann.de/thumb/opengraph/pics/prod/567098.jpg" alt="Rode PodMic USB" class="w-full h-full object-contain" loading="lazy" />
+      </div>
+      <div>
+        <h3 class="mt-0 mb-2 text-2xl font-bold"> <a href="/produit/rode-podmic-usb" class="product-link text-foreground hover:text-primary transition-colors"> Rode PodMic USB </a></h3>
+        <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> Le Caméléon Idéal </p>
+        <p>Rode a réussi un tour de force en déclinant son best-seller broadcast en version double connectique. Branchez-le en USB sur votre ordinateur portable aujourd'hui pour profiter des traitements internes, et branchez-le en XLR dans 2 ans quand vous achèterez une vraie table de mixage.</p>
+      </div>
+    </div> <!-- closes md:grid-cols-[1fr_2fr] -->
 
-  <div class= "flex flex-wrap items-center gap-3 mt-8">
-  <a href="/produit/rode-podmic-usb" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
-  Voir la fiche produit
-  </a>
-  <a href = "https://www.thomann.fr/rode_podmic_usb.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20">
-  Thomann
-  </a>
-  <a href = "https://www.amazon.fr/s?k=r%C3%B8de+podmic+usb&crid=BC69N8VY8X32&sprefix=R%C3%B8de+PodMic+USB%2Caps%2C241&ref=nb_sb_ss_mvt-t11-ranker_1_15" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20">
-  Amazon
-  </a>
-  <a href = "https://www.woodbrass.com/microphones-usb-rode-podmic-usb-p377792.html?queryID=b4b704ccc7d6c56c685519e0f7fd1bac" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border">
-  Woodbrass
-  </a>
-  </div>
-  </div>
+    <div class="grid sm:grid-cols-2 gap-4 mt-8">
+      <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+        <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"> <svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /> </svg> Points Forts</h4>
+        <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+          <li><strong>Versatilité :</strong> Double connectique (USB-C & XLR), totalement évolutif.</li>
+          <li><strong>Traitement Interne :</strong> Puce DSP APHEX intégrée (traitements de la voix radio matériels).</li>
+          <li><strong>Solidité :</strong> Construction robuste et filtre anti-pop interne performant.</li>
+        </ul>
+      </div>
+      <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+        <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"> <svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /> </svg> Limites réelles</h4>
+        <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+          <li><strong>Poids :</strong> Micro très lourd, nécessite un bras articulé robuste.</li>
+          <li><strong>Logiciel :</strong> Logiciel Rode perfectible pour un mixage fin des retours casques.</li>
+        </ul>
+      </div>
+    </div>
 
-  <div class= "grid sm:grid-cols-2 gap-4 mt-8">
-  <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5" >
-  <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-emerald-500" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg> Points Forts</h4 >
-  <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-  <li>Double connectique(USB - C & XLR), totalement évolutif </li>
-  <li > Puce DSP APHEX intégrée(traitements de la voix radio matériels) </li>
-  <li > Construction robuste et filtre anti - pop interne </li>
-  </ul>
-  </div>
-  <div class= "bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
-  <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-destructive" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M6 18L18 6M6 6l12 12" /> </svg> Limites réelles</h4 >
-  <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-  <li>Micro très lourd : nécessite un bras articulé robuste </li>
-  <li > Logiciel Rode perfectible pour un mixage fin des retours casques </li>
-  </ul>
-  </div>
-  </div>
+    <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm">
+      <strong class="text-foreground"> Notre conseil d'usage :</strong> Utilisez la Suite Logicielle gratuite "Rode Central" en USB pour activer le "Big Bottom" et "Aural Exciter" afin d'obtenir cette grosse voix radio instantanément.
+    </div>
 
-  <div class= "bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm">
-  <strong class="text-foreground" > Notre conseil d'usage :</strong> Utilisez la Suite Logicielle gratuite "Rode Central" en USB pour activer le "Big Bottom" et "Aural Exciter" afin d'obtenir cette grosse voix radio instantanément.
-          </div>
-
-  <div class= "flex flex-wrap items-center gap-3 mt-8">
-  <a href="/produit/rode-podmic-usb" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" > Voir la fiche produit </a>
-  </div>
+    <div class="flex flex-col gap-6 mt-10 w-full mb-4">
+      <div class="flex">
+        <a href="/produit/rode-podmic-usb" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+      </div>
+      <div class="w-full h-px bg-border/40 my-2"></div>
+      <div class="flex flex-col gap-5">
+        <span class="text-xs uppercase tracking-widest text-muted-foreground/80 font-bold block">Vérifier le prix sur :</span>
+        <div class="flex flex-wrap items-center justify-start gap-8 sm:gap-12 w-full">
+          <a href="https://www.thomann.fr/rode_podmic_usb.htm?partner_id=58130" target="_blank" rel="nofollow sponsored" class="group flex flex-col items-center gap-2 hover:-translate-y-1 transition-transform">
+            <div class="h-8 sm:h-9 flex items-center justify-center bg-transparent mix-blend-multiply">
+              <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Logo Thomann" class="h-full w-auto object-contain" loading="lazy" />
+            </div>
+            <span class="text-[10px] sm:text-[11px] font-bold text-muted-foreground uppercase tracking-widest group-hover:text-primary transition-colors">Thomann</span>
+          </a>
+          <a href="https://www.amazon.fr/s?k=r%C3%B8de+podmic+usb&tag=stackera-21" target="_blank" rel="nofollow sponsored" class="group flex flex-col items-center gap-2 hover:-translate-y-1 transition-transform">
+            <div class="h-8 sm:h-9 flex items-center justify-center bg-transparent mix-blend-multiply">
+              <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Logo Amazon" class="h-full w-auto object-contain" loading="lazy" />
+            </div>
+            <span class="text-[10px] sm:text-[11px] font-bold text-muted-foreground uppercase tracking-widest group-hover:text-primary transition-colors">Amazon</span>
+          </a>
+          <a href="https://www.woodbrass.com/microphones-usb-rode-podmic-usb-p377792.html" target="_blank" rel="nofollow sponsored" class="group flex flex-col items-center gap-2 hover:-translate-y-1 transition-transform">
+            <div class="h-8 sm:h-9 flex items-center justify-center bg-transparent mix-blend-multiply">
+              <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Logo Woodbrass" class="h-full w-auto object-contain" loading="lazy" />
+            </div>
+            <span class="text-[10px] sm:text-[11px] font-bold text-muted-foreground uppercase tracking-widest group-hover:text-primary transition-colors">Woodbrass</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
   </div>
 
@@ -578,52 +590,61 @@ export const ARTICLES: Article[] = [
   <p class= "text-xl font-medium text-foreground mb-8 border-l-4 border-primary pl-4"> Pour les créateurs réguliers.Le passage au XLR dédié avec une bonne carte son(comme la Focusrite Scarlett) ou un excellent microphone hybride.</p>
 
   <!--Product Card : Shure MV7X-->
-  <div id="shure-mv7x" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
-  <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-  <img src="https://m.media-amazon.com/images/I/712Xa1xLMIL._AC_SL1500_.jpg" alt = "Shure MV7X" class= "rounded-2xl w-full aspect-square object-cover shadow-sm bg-white" loading = "lazy" />
-  <div>
-  <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="/produit/shure-mv7x" class= "product-link text-foreground hover:text-primary transition-colors" > Shure MV7X </a></h3 >
-  <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm" > La fiabilité infaillible </p>
-  <p > Même design industriel et capsule similaire au légendaire SM7B, mais dépouillé de la sortie USB du MV7.Associé à une bonne carte son basique, c'est l'un des meilleurs rapports qualité - prix actuels pour isoler une voix parlée dans une petite chambre mal insonorisée.</p>
-
-  <div class= "flex flex-wrap items-center gap-3 mt-8">
-  <a href="/produit/shure-mv7x" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
-  Voir la fiche produit
-  </a>
-  <a href = "https://www.woodbrass.com/microphones-a-large-membrane-shure-mv7x-p354182.html" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border">
-  Woodbrass
-  </a>
-  <a href = "https://www.amazon.fr/s?k=Shure%20MV7X&tag=stackera-21" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20">
-  Amazon
-  </a>
-  </div>
-  </div>
+  <div id="shure-mv7x" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+    <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+      <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+        <img src="https://m.media-amazon.com/images/I/712Xa1xLMIL._AC_SL1500_.jpg" alt="Shure MV7X" class="w-full h-full object-contain" loading="lazy" />
+      </div>
+      <div>
+        <h3 class="mt-0 mb-2 text-2xl font-bold"> <a href="/produit/shure-mv7x" class="product-link text-foreground hover:text-primary transition-colors"> Shure MV7X </a></h3>
+        <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> La fiabilité infaillible </p>
+        <p>Même design industriel et capsule similaire au légendaire SM7B, mais dépouillé de la sortie USB du MV7. Associé à une bonne carte son basique, c'est l'un des meilleurs rapports qualité-prix actuels pour isoler une voix parlée dans une petite chambre mal insonorisée.</p>
+      </div>
+    </div> <!-- closes md:grid-cols-[1fr_2fr] -->
 
   <div class= "grid sm:grid-cols-2 gap-4 mt-8">
-  <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5" >
-  <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-emerald-500" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg> Points Forts</h4 >
-  <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-  <li>Isolation phénoménale de la voix face aux bruits parasites </li>
-  <li > Design iconique s'intégrant parfaitement devant la caméra</li>
-  <li > Nécessite moins de gain(Volume) de la carte son que le gros SM7B </li>
-  </ul>
-  </div>
-  <div class= "bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
-  <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-destructive" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M6 18L18 6M6 6l12 12" /> </svg> Limites réelles</h4 >
-  <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-  <li>Sensible aux plosives(les "P" et "B"), la petite mousse ne suffit pas toujours </li>
-  <li > Il s'agit uniquement d'un micro XLR : Interface audio obligatoire </li>
-  </ul>
-  </div>
-  </div>
-
-  <div class= "bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm">
-  <strong class="text-foreground" > Notre conseil d'usage :</strong> Inclinez légèrement le micro à 45° par rapport à votre bouche (ne parlez pas en plein axe) pour que l'air des plosives passe à côté de la capsule dynamique.
-          </div>
-
-  <div class= "flex flex-wrap items-center gap-3 mt-8">
-  <a href="/produit/shure-mv7x" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" > Voir la fiche produit </a>
-  </div>
+      <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+        <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"> <svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /> </svg> Points Forts</h4>
+        <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+          <li><strong>Isolation Vocale :</strong> Isolation phénoménale de la voix face aux bruits parasites.</li>
+          <li><strong>Design Iconique :</strong> S'intègre parfaitement devant la caméra.</li>
+          <li><strong>Facilité d'Usage :</strong> Nécessite moins de gain (Volume) de la carte son que le gros SM7B.</li>
+        </ul>
+      </div>
+      <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+        <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"> <svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /> </svg> Limites réelles</h4>
+        <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+          <li>Sensible aux plosives (les "P" et "B"), la petite mousse ne suffit pas toujours.</li>
+          <li>Il s'agit uniquement d'un micro XLR : Interface audio obligatoire.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm">
+      <strong class="text-foreground"> Notre conseil d'usage :</strong> Inclinez légèrement le micro à 45° par rapport à votre bouche (ne parlez pas en plein axe) pour que l'air des plosives passe à côté de la capsule dynamique.
+    </div>
+    <div class="flex flex-col gap-6 mt-10 w-full mb-4">
+      <div class="flex">
+        <a href="/produit/shure-mv7x" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+      </div>
+      <div class="w-full h-px bg-border/40 my-2"></div>
+      <div class="flex flex-col gap-5">
+        <span class="text-xs uppercase tracking-widest text-muted-foreground/80 font-bold block">Vérifier le prix sur :</span>
+        <div class="flex flex-wrap items-center justify-start gap-8 sm:gap-12 w-full">
+          <a href="https://www.woodbrass.com/microphones-a-large-membrane-shure-mv7x-p354182.html" target="_blank" rel="nofollow sponsored" class="group flex flex-col items-center gap-2 hover:-translate-y-1 transition-transform">
+            <div class="h-8 sm:h-9 flex items-center justify-center bg-transparent mix-blend-multiply">
+              <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Logo Woodbrass" class="h-full w-auto object-contain" loading="lazy" />
+            </div>
+            <span class="text-[10px] sm:text-[11px] font-bold text-muted-foreground uppercase tracking-widest group-hover:text-primary transition-colors">Woodbrass</span>
+          </a>
+          <a href="https://www.amazon.fr/s?k=Shure%20MV7X&tag=stackera-21" target="_blank" rel="nofollow sponsored" class="group flex flex-col items-center gap-2 hover:-translate-y-1 transition-transform">
+            <div class="h-8 sm:h-9 flex items-center justify-center bg-transparent mix-blend-multiply">
+              <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Logo Amazon" class="h-full w-auto object-contain" loading="lazy" />
+            </div>
+            <span class="text-[10px] sm:text-[11px] font-bold text-muted-foreground uppercase tracking-widest group-hover:text-primary transition-colors">Amazon</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
   </div>
 
@@ -634,108 +655,136 @@ export const ARTICLES: Article[] = [
   </div>
   <p class= "text-xl font-medium text-foreground mb-8 border-l-4 border-primary pl-4"> Pour les Voix - off professionnelles, les studios de podcasts commerciaux.On joue dans la cour des grands, là où aucune erreur de son n'est permise.</p>
 
-  <!--Product Card : Shure SM7B-->
-  <div id="shure-sm7b" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
-  <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-  <img src="https://www.thomann.de/thumb/opengraph/pics/prod/129929.jpg" alt = "Shure SM7B" class= "rounded-2xl w-full aspect-square object-cover shadow-sm bg-white" loading = "lazy" />
-  <div>
-  <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="/produit/shure-sm7b" class= "product-link text-foreground hover:text-primary transition-colors" > Shure SM7B </a></h3 >
-  <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm" > L'icône absolue</p>
-  <p > Il est sur tous les plateaux vidéos et podcasts des 10 dernières années.Sa large capsule douce gomme magiquement les défauts de la voix et son blindage électromagnétique impressionnant stoppe tous les bruits d'écrans ou de néons alentours.</p>
+    <!--Product Card : Shure SM7B-->
+  <div id="shure-sm7b" class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+    <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+      <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+        <img src="https://www.thomann.de/thumb/opengraph/pics/prod/129929.jpg" alt="Shure SM7B" class="w-full h-full object-contain" loading="lazy" />
+      </div>
+      <div>
+        <h3 class="mt-0 mb-2 text-2xl font-bold"> <a href="/produit/shure-sm7b" class="product-link text-foreground hover:text-primary transition-colors"> Shure SM7B </a></h3>
+        <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> L'icône absolue </p>
+        <p>Il est sur tous les plateaux vidéos et podcasts des 10 dernières années. Sa large capsule douce gomme magiquement les défauts de la voix et son blindage électromagnétique impressionnant stoppe tous les bruits d'écrans ou de néons alentours.</p>
+      </div>
+    </div> <!-- closes md:grid-cols-[1fr_2fr] -->
 
-  <div class= "flex flex-wrap items-center gap-3 mt-8">
-  <a href="/produit/shure-sm7b" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
-  Voir la fiche produit
-  </a>
-  <a href = "https://www.thomann.fr/shure_sm_7b_studiomikro.htm" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20">
-  Thomann
-  </a>
-  <a href = "https://www.amazon.fr/s?k=Shure%20SM7B&tag=stackera-21" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20">
-  Amazon
-  </a>
-  <a href = "https://www.woodbrass.com/microphones-dynamiques-shure-sm7b-p9415.html" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border">
-  Woodbrass
-  </a>
-  </div>
-  </div>
-
-  <div class= "grid sm:grid-cols-2 gap-4 mt-8">
-  <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5" >
-  <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-emerald-500" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg> Points Forts</h4 >
-  <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-  <li>Texture de voix inimitable : douce, très chaude(l'effet "Smooth")</li>
-    <li > Réjection hallucinante des bruits hors - axe(clavier, échos) </li>
-    <li > Extrêmement robuste et increvable dans le temps </li>
-    </ul>
+    <div class="grid sm:grid-cols-2 gap-4 mt-8">
+      <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+        <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"> <svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /> </svg> Points Forts</h4>
+        <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+          <li><strong>Texture Sonore :</strong> Texture de voix inimitable : douce, très chaude (l'effet "Smooth").</li>
+          <li><strong>Isolation :</strong> Réjection hallucinante des bruits hors-axe (clavier, échos).</li>
+          <li><strong>Fiabilité :</strong> Extrêmement robuste et increvable dans le temps.</li>
+        </ul>
+      </div>
+      <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+        <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"> <svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /> </svg> Limites réelles</h4>
+        <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+          <li><strong>Gain :</strong> Très faible sensibilité : nécessite un préampli Cloudlifter ou une interface haut de gamme.</li>
+          <li><strong>Gabarit :</strong> Assez lourd et volumineux face caméra.</li>
+        </ul>
+      </div>
     </div>
-  <div class= "bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
-  <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-destructive" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M6 18L18 6M6 6l12 12" /> </svg> Limites réelles</h4 >
-  <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-  <li>Très faible sensibilité : nécessite un préampli Cloudlifter(ou une interface très haut de gamme) </li>
-  <li > Assez lourd et volumineux face caméra </li>
-  </ul>
-  </div>
+
+    <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm">
+      <strong class="text-foreground"> Notre conseil d'usage :</strong> Avant d'acheter ce micro culte, vérifiez que votre carte son peut fournir au moins 60dB de gain propre sans souffler. Si ce n'est pas le cas, ajoutez 150€ pour un Cloudlifter.
+    </div>
+
+    <div class="flex flex-col gap-6 mt-10 w-full mb-4">
+      <div class="flex">
+        <a href="/produit/shure-sm7b" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+      </div>
+      <div class="w-full h-px bg-border/40 my-2"></div>
+      <div class="flex flex-col gap-5">
+        <span class="text-xs uppercase tracking-widest text-muted-foreground/80 font-bold block">Vérifier le prix sur :</span>
+        <div class="flex flex-wrap items-center justify-start gap-8 sm:gap-12 w-full">
+          <a href="https://www.thomann.fr/shure_sm_7b_studiomikro.htm?partner_id=58130" target="_blank" rel="nofollow sponsored" class="group flex flex-col items-center gap-2 hover:-translate-y-1 transition-transform">
+            <div class="h-8 sm:h-9 flex items-center justify-center bg-transparent mix-blend-multiply">
+              <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Logo Thomann" class="h-full w-auto object-contain" loading="lazy" />
+            </div>
+            <span class="text-[10px] sm:text-[11px] font-bold text-muted-foreground uppercase tracking-widest group-hover:text-primary transition-colors">Thomann</span>
+          </a>
+          <a href="https://www.amazon.fr/s?k=Shure%20SM7B&tag=stackera-21" target="_blank" rel="nofollow sponsored" class="group flex flex-col items-center gap-2 hover:-translate-y-1 transition-transform">
+            <div class="h-8 sm:h-9 flex items-center justify-center bg-transparent mix-blend-multiply">
+              <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Logo Amazon" class="h-full w-auto object-contain" loading="lazy" />
+            </div>
+            <span class="text-[10px] sm:text-[11px] font-bold text-muted-foreground uppercase tracking-widest group-hover:text-primary transition-colors">Amazon</span>
+          </a>
+          <a href="https://www.woodbrass.com/microphones-dynamiques-shure-sm7b-p9415.html" target="_blank" rel="nofollow sponsored" class="group flex flex-col items-center gap-2 hover:-translate-y-1 transition-transform">
+            <div class="h-8 sm:h-9 flex items-center justify-center bg-transparent mix-blend-multiply">
+              <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Logo Woodbrass" class="h-full w-auto object-contain" loading="lazy" />
+            </div>
+            <span class="text-[10px] sm:text-[11px] font-bold text-muted-foreground uppercase tracking-widest group-hover:text-primary transition-colors">Woodbrass</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class= "bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm">
-  <strong class="text-foreground" > Notre conseil d'usage :</strong> Avant d'acheter ce micro culte, vérifiez que votre carte son peut fournir au moins 60dB de gain propre sans souffler.Si ce n'est pas le cas, ajoutez 150€ pour un Cloudlifter.
-  </div>
+    <!--Product Card : Electro - Voice RE20-->
+  <div id="electro-voice-re20" class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+    <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+      <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+        <img src="https://www.thomann.de/thumb/opengraph/pics/prod/128926.jpg" alt="Electro-Voice RE20" class="w-full h-full object-contain" loading="lazy" />
+      </div>
+      <div>
+        <h3 class="mt-0 mb-2 text-2xl font-bold"> <a href="/produit/electro-voice-re20" class="product-link text-foreground hover:text-primary transition-colors"> Electro-Voice RE20 </a></h3>
+        <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> L'alternative Broadcast FM </p>
+        <p>Le grand rival historique du SM7B, massivement utilisé dans les stations de radio du monde entier. Son design interne acoustique très singulier baptisé "Variable-D" annule totalement l'effet de proximité : vous pouvez tourner la tête et parler de biais sans changer de son.</p>
+      </div>
+    </div> <!-- closes md:grid-cols-[1fr_2fr] -->
 
-  <div class= "flex flex-wrap items-center gap-3 mt-8">
-  <a href="/produit/shure-sm7b" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" > Voir la fiche produit </a>
-  </div>
-  </div>
+    <div class="grid sm:grid-cols-2 gap-4 mt-8">
+      <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+        <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"> <svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /> </svg> Points Forts</h4>
+        <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+          <li><strong>Zéro Effet de Proximité :</strong> Technologie Variable-D (pas d'étouffement si l'on s'approche).</li>
+          <li><strong>Clarté :</strong> Son cristallin dans les haut-médiums, idéal pour les voix naturellement graves.</li>
+          <li><strong>Héritage :</strong> Design unique et robuste, une légende vivante.</li>
+        </ul>
+      </div>
+      <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+        <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"> <svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /> </svg> Limites réelles</h4>
+        <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+          <li><strong>Esthétique :</strong> Design "Massue" massif qui peut intimider ou obstruer le champ de vision.</li>
+          <li><strong>Exigence :</strong> Nécessite lui aussi un excellent préampli pour s'exprimer pleinement.</li>
+        </ul>
+      </div>
+    </div>
 
-  <!--Product Card : Electro - Voice RE20-->
-  <div id="electro-voice-re20" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
-  <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-  <img src="https://www.thomann.de/thumb/opengraph/pics/prod/128926.jpg" alt = "Electro-Voice RE20" class= "rounded-2xl w-full aspect-square object-cover shadow-sm bg-white" loading = "lazy" />
-  <div>
-  <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="/produit/electro-voice-re20" class= "product-link text-foreground hover:text-primary transition-colors" > Electro - Voice RE20 </a></h3 >
-  <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm" > L'alternative Broadcast FM</p>
-  <p > Le grand rival historique du SM7B, massivement utilisé dans les stations de radio du monde entier.Son design interne acoustique très singulier baptisé "Variable-D" annule totalement l'effet de proximité : vous pouvez tourner la tête et parler de biais sans changer de son.</p>
+    <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm">
+      <strong class="text-foreground"> Notre conseil d'usage :</strong> Excellent parti-pris si vous avez une voix très grave naturellement ou que vous bougez beaucoup la tête autour du micro lors de vos live Twitch.
+    </div>
 
-  <div class= "flex flex-wrap items-center gap-3 mt-8">
-  <a href="/produit/electro-voice-re20" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
-  Voir la fiche produit
-  </a>
-  <a href = "https://www.thomann.fr/ev_re20_microphone.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20">
-  Thomann
-  </a>
-  <a href = "https://www.woodbrass.com/microphones-dynamiques-electrovoice-re-20-p170796.html?queryID=7e17ec007bc663a067d96e21c82ae6aa" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border">
-  Woodbrass
-  </a>
-  <a href = "https://www.amazon.fr/s?k=Electro-Voice%20RE20&tag=stackera-21" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20">
-  Amazon
-  </a>
-  </div>
-  </div>
-
-  <div class= "grid sm:grid-cols-2 gap-4 mt-8">
-  <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5" >
-  <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-emerald-500" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg> Points Forts</h4 >
-  <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-  <li>Technologie Variable - D(zéro étouffement si l'on s'approche) </li>
-  <li > Son cristallin dans les haut - médiums, adapte pour des voix graves </li>
-  <li > Design unique et robuste </li>
-  </ul>
-  </div>
-  <div class= "bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
-  <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-destructive" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M6 18L18 6M6 6l12 12" /> </svg> Limites réelles</h4 >
-  <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-  <li>Design "Massue" massif qui intimide certains débutants </li>
-  <li > Nécessite lui aussi un bon préampli </li>
-  </ul>
-  </div>
-  </div>
-
-  <div class= "bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm">
-  <strong class="text-foreground" > Notre conseil d'usage :</strong> Excellent parti-pris si vous avez une voix très grave naturellement ou que vous bougez beaucoup la tête autour du micro lors de vos live Twitch.
-  </div>
-
-  <div class= "flex flex-wrap items-center gap-3 mt-8">
-  <a href="/produit/electro-voice-re20" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" > Voir la fiche produit </a>
-  </div>
+    <div class="flex flex-col gap-6 mt-10 w-full mb-4">
+      <div class="flex">
+        <a href="/produit/electro-voice-re20" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+      </div>
+      <div class="w-full h-px bg-border/40 my-2"></div>
+      <div class="flex flex-col gap-5">
+        <span class="text-xs uppercase tracking-widest text-muted-foreground/80 font-bold block">Vérifier le prix sur :</span>
+        <div class="flex flex-wrap items-center justify-start gap-8 sm:gap-12 w-full">
+          <a href="https://www.thomann.fr/ev_re20_microphone.htm?partner_id=58130" target="_blank" rel="nofollow sponsored" class="group flex flex-col items-center gap-2 hover:-translate-y-1 transition-transform">
+            <div class="h-8 sm:h-9 flex items-center justify-center bg-transparent mix-blend-multiply">
+              <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Logo Thomann" class="h-full w-auto object-contain" loading="lazy" />
+            </div>
+            <span class="text-[10px] sm:text-[11px] font-bold text-muted-foreground uppercase tracking-widest group-hover:text-primary transition-colors">Thomann</span>
+          </a>
+          <a href="https://www.amazon.fr/s?k=Electro-Voice%20RE20&tag=stackera-21" target="_blank" rel="nofollow sponsored" class="group flex flex-col items-center gap-2 hover:-translate-y-1 transition-transform">
+            <div class="h-8 sm:h-9 flex items-center justify-center bg-transparent mix-blend-multiply">
+              <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Logo Amazon" class="h-full w-auto object-contain" loading="lazy" />
+            </div>
+            <span class="text-[10px] sm:text-[11px] font-bold text-muted-foreground uppercase tracking-widest group-hover:text-primary transition-colors">Amazon</span>
+          </a>
+          <a href="https://www.woodbrass.com/microphones-dynamiques-electrovoice-re-20-p170796.html" target="_blank" rel="nofollow sponsored" class="group flex flex-col items-center gap-2 hover:-translate-y-1 transition-transform">
+            <div class="h-8 sm:h-9 flex items-center justify-center bg-transparent mix-blend-multiply">
+              <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Logo Woodbrass" class="h-full w-auto object-contain" loading="lazy" />
+            </div>
+            <span class="text-[10px] sm:text-[11px] font-bold text-muted-foreground uppercase tracking-widest group-hover:text-primary transition-colors">Woodbrass</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
   </div>
 
@@ -1128,15 +1177,9 @@ export const ARTICLES: Article[] = [
                                                                                                                                               <a href="/produit/focusrite-scarlett-2i2-4th-gen" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
                                                                                                                                                 Voir la fiche produit
                                                                                                                                                   </a>
-                                                                                                                                                  <a href = "https://www.thomann.fr/focusrite_scarlett_2i2_4th_gen.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20">
-                                                                                                                                                    Thomann
-                                                                                                                                                    </a>
-                                                                                                                                                    <a href = "https://www.amazon.fr/s?k=Focusrite+Scarlett+2i2+4th+Gen&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20">
-                                                                                                                                                      Amazon
-                                                                                                                                                      </a>
-                                                                                                                                                      <a href = "https://www.woodbrass.com/interfaces-audio-usb-focusrite-scarlett-2i2-g4-p380550.html?queryID=4d4f6e428b6a76023a63f234a7e8c373" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border">
-                                                                                                                                                        Woodbrass
-                                                                                                                                                        </a>
+                                                                                                                                                  <a href = "https://www.thomann.fr/focusrite_scarlett_2i2_4th_gen.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                    <a href = "https://www.amazon.fr/s?k=Focusrite+Scarlett+2i2+4th+Gen&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                      <a href = "https://www.woodbrass.com/interfaces-audio-usb-focusrite-scarlett-2i2-g4-p380550.html?queryID=4d4f6e428b6a76023a63f234a7e8c373" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                         </div>
                                                                                                                                                         </div>
 
@@ -1178,15 +1221,9 @@ export const ARTICLES: Article[] = [
     <a href="/produit/audient-id14-mkii" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
       Voir la fiche produit
         </a>
-        <a href = "https://www.thomann.fr/audient_id14_mkii.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20">
-          Thomann
-          </a>
-          <a href = "https://www.amazon.fr/s?k=Audient+iD14+MKII&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20">
-            Amazon
-            </a>
-            <a href = "https://www.woodbrass.com/interfaces-audio-usb-audient-id14-mkii-p342576.html?queryID=d3c45609093067ed2946618b46999816" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border">
-              Woodbrass
-              </a>
+        <a href = "https://www.thomann.fr/audient_id14_mkii.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href = "https://www.amazon.fr/s?k=Audient+iD14+MKII&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+            <a href = "https://www.woodbrass.com/interfaces-audio-usb-audient-id14-mkii-p342576.html?queryID=d3c45609093067ed2946618b46999816" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
               </div>
               </div>
 
@@ -1228,15 +1265,9 @@ export const ARTICLES: Article[] = [
                             <a href="/produit/universal-audio-volt-276" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
                             Voir la fiche produit
                             </a>
-                            <a href = "https://www.thomann.fr/universal_audio_volt_276.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20">
-                            Thomann
-                            </a>
-                            <a href = "https://www.amazon.fr/s?k=Universal+Audio+Volt+276&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20">
-                            Amazon
-                            </a>
-                            <a href = "https://www.woodbrass.com/interfaces-audio-usb-universal-audio-volt-276-p353329.html?queryID=2e382170c40d0d2839f9ef45d6e85a06" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border">
-                            Woodbrass
-                            </a>
+                            <a href = "https://www.thomann.fr/universal_audio_volt_276.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                            <a href = "https://www.amazon.fr/s?k=Universal+Audio+Volt+276&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                            <a href = "https://www.woodbrass.com/interfaces-audio-usb-universal-audio-volt-276-p353329.html?queryID=2e382170c40d0d2839f9ef45d6e85a06" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                             </div>
                             </div>
 
@@ -1277,15 +1308,9 @@ export const ARTICLES: Article[] = [
                             <a href="/produit/ssl-2-plus" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
                             Voir la fiche produit
                             </a>
-                            <a href = "https://www.thomann.fr/ssl_2_mkii_601306.htm" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20">
-                            Thomann
-                            </a>
-                            <a href = "https://www.amazon.fr/s?k=SSL+2%2B+Interface&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20">
-                            Amazon
-                            </a>
-                            <a href = "https://www.woodbrass.com/interfaces-audio-usb-solid-state-logic-ssl-2+-mkii-p400110.html?queryID=01a620fb0dbef983b092bf1cf937e031" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border">
-                            Woodbrass
-                            </a>
+                            <a href = "https://www.thomann.fr/ssl_2_mkii_601306.htm" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                            <a href = "https://www.amazon.fr/s?k=SSL+2%2B+Interface&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                            <a href = "https://www.woodbrass.com/interfaces-audio-usb-solid-state-logic-ssl-2+-mkii-p400110.html?queryID=01a620fb0dbef983b092bf1cf937e031" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                             </div>
                             </div>
 
@@ -1395,10 +1420,10 @@ export const ARTICLES: Article[] = [
     readTime: "20 min",
     date: "10 Dec 2024",
     author: "Équipe Fluxlab",
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/articles/acoustic_treatment_hero.png",
     intro: "Acheter un micro à 1000€ dans une pièce vide, c'est comme conduire une Ferrari sur un chemin de terre. L'acoustique dicte 80% de la qualité finale de votre audio.",
-    relatedProducts: ["elgato-wave-panels", "elgato-wave-panels-starter-set"],
-    relatedCategorySlug: "audio",
+    relatedProducts: ["hofa-absorber-eco", "sonoma-acoustics-panel", "elgato-wave-panels-starter-set"],
+    relatedCategorySlug: "traitement-acoustique",
     content: `
 
                                         <!--ENCART TL; DR(Résumé Haute Conversion)-->
@@ -1414,7 +1439,7 @@ export const ARTICLES: Article[] = [
           </li>
           <li class="flex items-start gap-3">
             <span class="font-bold text-primary min-w-[150px]" > Le Premium: </span>
-              <a href = "#elgato-wave-panels" class="product-link hover:underline font-medium text-foreground"> Elgato Wave Panels(Laine haute densité) </a>
+              <a href = "#hofa-absorber-eco" class="product-link hover:underline font-medium text-foreground"> Hofa Absorber Eco (Version bois/carton) </a>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="font-bold text-primary min-w-[150px]" > À ÉVITER: </span>
@@ -1423,7 +1448,7 @@ export const ARTICLES: Article[] = [
                       </ul>
                       </div>
 
-                      <h2 > Le Mythe de l'Isolation vs le Traitement</h2>
+                      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Le Mythe de l'Isolation vs le Traitement</h2>
                         <p > Il est crucial de distinguer ces deux concepts de physique: </p>
                           <ul >
                           <li><strong>L'Isolation (Sound Proofing) :</strong> C'est empêcher le son de traverser la matière(murs).Pour bloquer le son, il faut de la <strong > MASSE </strong>. La seule solution est la construction : double placo, laine minérale, désolidarisation. Coller de la mousse au mur n'isolera RIEN. Vos voisins entendront toujours vos cris.</li >
@@ -1460,7 +1485,7 @@ export const ARTICLES: Article[] = [
                                         <td class="px-5 py-4 text-center"> Dépannage uniquement </td>
                                           </tr>
                                           <tr class="hover:bg-secondary/20 transition-colors bg-primary/5">
-                                            <td class="px-5 py-4 font-bold border-r border-border text-primary" > Panneaux Hautes Densités(Wave Panels) </td>
+                                            <td class="px-5 py-4 font-bold border-r border-border text-primary" > Absorbeurs Haute Densité (Hofa Absorber Eco) </td>
                                               <td class="px-5 py-4 text-center border-r border-border text-green-500 font-bold"> Excellent </td>
                                                 <td class="px-5 py-4 text-center border-r border-border text-green-500 font-bold"> Très Bon </td>
                                                   <td class="px-5 py-4 text-center font-bold"> Choix Pro Recommandé </td>
@@ -1469,25 +1494,54 @@ export const ARTICLES: Article[] = [
                                                     </table>
                                                     </div>
 
-                                                    <h2 > Comment Traiter sa Pièce Efficacement </h2>
+                                                    <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Comment Traiter sa Pièce Efficacement</h2>
 
                                                       <!--PRODUCT CARD 1 -->
-                                                        <div id="elgato-wave-panels" class="my-10 border border-border rounded-3xl overflow-hidden bg-card shadow-lg flex flex-col md:flex-row" >
+                                                        <div id="hofa-absorber-eco" class="my-10 border border-border rounded-3xl overflow-hidden bg-card shadow-lg flex flex-col md:flex-row" >
                                                           <div class="md:w-2/5 md:border-r border-border bg-white flex items-center justify-center p-6 relative" >
                                                             <div class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider z-10" > Premium </div>
-                                                              <img src = "https://m.media-amazon.com/images/I/71u-s4+XGLL._AC_SL1500_.jpg" alt = "Elgato Wave Panels" class="w-full max-w-[250px] object-contain mix-blend-multiply hover:scale-105 transition-transform duration-500" loading = "lazy" />
+                                                              <img src = "https://thumbs.static-thomann.de/thumb//bdbmagic/pics/prod/618025.jpg" alt = "Hofa Absorber Eco" class="w-full max-w-[250px] object-contain hover:scale-105 transition-transform duration-500" loading = "lazy" />
                                                                 </div>
                                                                 <div class="p-6 md:p-8 md:w-3/5 flex flex-col justify-center">
-                                                                  <h3 class="text-2xl font-bold font-serif mb-2 mt-0 border-none" > Elgato Wave Panels </h3>
-                                                                    <p class="text-primary font-bold mb-4"> L'excellence acoustique pour créateurs.</p>
+                                                                  <h3 class="text-2xl font-bold font-serif mb-2 mt-0 border-none" > Hofa Absorber Eco </h3>
+                                                                    <p class="text-primary font-bold mb-4"> L'absorption pro à prix serré (≈ 39€).</p>
                                                                       <p class="text-muted-foreground text-sm mb-6 leading-relaxed">
-                                                                        Pour absorber la voix(300Hz - 3000Hz), il faut de la matière dense.Les Wave Panels utilisent une structure sandwich avec de la fibre haute densité et une couche d'air emprisonnée (Air Gap) qui améliore drastiquement l'absorption des basses / médiums.
+                                                                        Contrairement à la mousse alvéolée classique, le Hofa Absorber Eco utilise des matériaux denses (PET recyclé ou laine) pour capturer l'énergie sonore jusqu'aux bas-médiums. Son cadre simple permet de maintenir un prix imbattable sans sacrifier la performance acoustique.
         </p>
                                                                           <ul class="space-y-2 mb-6 text-sm">
-                                                                            <li class="flex items-center gap-2" > <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "5 13l4 4L19 7" /> </svg> Fibre acoustique haute densité</li >
-                                                                              <li class="flex items-center gap-2" > <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "5 13l4 4L19 7" /> </svg> Technologie "Air Gap" propriétaire</li >
-                                                                                <li class="flex items-center gap-2" > <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "5 13l4 4L19 7" /> </svg> Pose extrêmement simple (EasyClick)</li >
+                                                                            <li class="flex items-center gap-2" > <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "5 13l4 4L19 7" /> </svg> Absorption efficace dès 200 Hz</li >
+                                                                              <li class="flex items-center gap-2" > <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "5 13l4 4L19 7" /> </svg> Matériaux écologiques et durables</li >
+                                                                                <li class="flex items-center gap-2" > <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "5 13l4 4L19 7" /> </svg> Rapport qualité/prix imbattable pour studio</li >
                                                                                   </ul>
+                                                                                  <div class="flex flex-col gap-6 mt-10 w-full mb-4">
+                                                                                    <div class="flex">
+                                                                                      <a href="/produit/hofa-absorber-eco" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+                                                                                    </div>
+                                                                                    <div class="w-full h-px bg-border/40 my-2"></div>
+                                                                                    <div class="flex flex-col gap-5">
+                                                                                      <span class="text-xs uppercase tracking-widest text-muted-foreground/80 font-bold block">Vérifier le prix sur :</span>
+                                                                                      <div class="flex flex-wrap items-center justify-start gap-8 sm:gap-12 w-full">
+                                                                                        <a href="https://www.thomann.de/fr/hofa_absorber_eco_grau.htm?partner_id=58130" target="_blank" rel="nofollow sponsored" class="group flex flex-col items-center gap-2 hover:-translate-y-1 transition-transform">
+                                                                                          <div class="h-8 sm:h-9 flex items-center justify-center bg-transparent mix-blend-multiply">
+                                                                                            <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Logo Thomann" class="h-full w-auto object-contain" loading="lazy" />
+                                                                                          </div>
+                                                                                          <span class="text-[10px] sm:text-[11px] font-bold text-muted-foreground uppercase tracking-widest group-hover:text-primary transition-colors">Thomann</span>
+                                                                                        </a>
+                                                                                        <a href="https://www.amazon.fr/s?k=Hofa+Absorber+Eco&tag=stackera-21" target="_blank" rel="nofollow sponsored" class="group flex flex-col items-center gap-2 hover:-translate-y-1 transition-transform">
+                                                                                          <div class="h-8 sm:h-9 flex items-center justify-center bg-transparent mix-blend-multiply">
+                                                                                            <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Logo Amazon" class="h-full w-auto object-contain" loading="lazy" />
+                                                                                          </div>
+                                                                                          <span class="text-[10px] sm:text-[11px] font-bold text-muted-foreground uppercase tracking-widest group-hover:text-primary transition-colors">Amazon</span>
+                                                                                        </a>
+                                                                                        <a href="https://www.woodbrass.com/traitements-acoustiques-absorbeurs-hofa-absorber-eco-grey-p316278.html" target="_blank" rel="nofollow sponsored" class="group flex flex-col items-center gap-2 hover:-translate-y-1 transition-transform">
+                                                                                          <div class="h-8 sm:h-9 flex items-center justify-center bg-transparent mix-blend-multiply">
+                                                                                            <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Logo Woodbrass" class="h-full w-auto object-contain" loading="lazy" />
+                                                                                          </div>
+                                                                                          <span class="text-[10px] sm:text-[11px] font-bold text-muted-foreground uppercase tracking-widest group-hover:text-primary transition-colors">Woodbrass</span>
+                                                                                        </a>
+                                                                                      </div>
+                                                                                    </div>
+                                                                                  </div>
                                                                                   </div>
                                                                                   </div>
 
@@ -1495,7 +1549,7 @@ export const ARTICLES: Article[] = [
                                                                                     <div id="diffusion-naturelle" class="my-10 border border-border rounded-3xl overflow-hidden bg-card shadow-lg flex flex-col md:flex-row" >
                                                                                       <div class="md:w-2/5 md:border-r border-border bg-secondary/20 flex items-center justify-center p-6 relative" >
                                                                                         <div class="absolute top-4 left-4 bg-foreground text-background text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider z-10" > Astuce Budget </div>
-                                                                                          <img src = "https://images.unsplash.com/photo-1540324155970-1c8bfba22e37?auto=format&fit=crop&q=80&w=600" alt = "Bibliothèque et canapé" class="w-full max-w-[250px] object-cover rounded-xl shadow-md" loading = "lazy" />
+                                                                                          <img src = "/images/articles/studio_diffusion_natural.png" alt = "Bibliothèque et setup studio" class="w-full max-w-[250px] object-cover rounded-xl shadow-md" loading = "lazy" />
                                                                                             </div>
                                                                                             <div class="p-6 md:p-8 md:w-3/5 flex flex-col justify-center">
                                                                                               <h3 class="text-2xl font-bold font-serif mb-2 mt-0 border-none" > La Diffusion Naturelle </h3>
@@ -1506,7 +1560,7 @@ export const ARTICLES: Article[] = [
                                                                                                       </div>
                                                                                                       </div>
 
-                                                                                                      <h2 > Stratégie de placement: La technique du Miroir </h2>
+                                                                                                      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Stratégie de placement : La technique du Miroir</h2>
                                                                                                         <p > Inutile de couvrir 100 % des murs(chambre anéchoïque).Il faut traiter les "Points de Première Réflexion".</p>
                                                                                                           <ol >
                                                                                                           <li>Asseyez - vous à votre poste, en position habituelle.</li>
@@ -1718,15 +1772,9 @@ export const ARTICLES: Article[] = [
                                                                                                                                       <a href="/produit/rode-podmic-usb" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
                                                                                                                                         Voir la fiche produit
                                                                                                                                           </a>
-                                                                                                                                          <a href = "https://www.thomann.fr/rode_podmic_usb.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20">
-                                                                                                                                            thomann
-                                                                                                                                            </a>
-                                                                                                                                            <a href = "https://www.amazon.fr/s?k=r%C3%B8de+podmic+usb&crid=BC69N8VY8X32&sprefix=R%C3%B8de+PodMic+USB%2Caps%2C241&ref=nb_sb_ss_mvt-t11-ranker_1_15" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20">
-                                                                                                                                              amazon
-                                                                                                                                              </a>
-                                                                                                                                              <a href = "https://www.woodbrass.com/microphones-usb-rode-podmic-usb-p377792.html?queryID=b4b704ccc7d6c56c685519e0f7fd1bac" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border">
-                                                                                                                                                woodbrass
-                                                                                                                                                </a>
+                                                                                                                                          <a href = "https://www.thomann.fr/rode_podmic_usb.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                            <a href = "https://www.amazon.fr/s?k=r%C3%B8de+podmic+usb&crid=BC69N8VY8X32&sprefix=R%C3%B8de+PodMic+USB%2Caps%2C241&ref=nb_sb_ss_mvt-t11-ranker_1_15" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                              <a href = "https://www.woodbrass.com/microphones-usb-rode-podmic-usb-p377792.html?queryID=b4b704ccc7d6c56c685519e0f7fd1bac" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                 </div>
                                                                                                                                                 </div> <!-- closes #id bg-card -->
 
@@ -1769,12 +1817,8 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                             <a href="/produit/shure-mv7x" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
                                                                                                                                                                                               Voir la fiche produit
                                                                                                                                                                                                 </a>
-                                                                                                                                                                                                <a href = "https://www.woodbrass.com/microphones-a-large-membrane-shure-mv7x-p354182.html" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border">
-                                                                                                                                                                                                  woodbrass
-                                                                                                                                                                                                  </a>
-                                                                                                                                                                                                  <a href = "https://www.amazon.fr/s?k=Shure%20MV7X&tag=stackera-21" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20">
-                                                                                                                                                                                                    amazon
-                                                                                                                                                                                                    </a>
+                                                                                                                                                                                                <a href = "https://www.woodbrass.com/microphones-a-large-membrane-shure-mv7x-p354182.html" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                  <a href = "https://www.amazon.fr/s?k=Shure%20MV7X&tag=stackera-21" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                                                                     </div>
                                                                                                                                                                                                     </div> <!-- closes #id bg-card -->
 
@@ -1816,9 +1860,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                                             <a href="/produit/shure-sm58-lc" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
                                                                                                                                                                                                                             Voir la fiche produit
                                                                                                                                                                                                                             </a>
-                                                                                                                                                                                                                            <a href = "https://www.thomann.fr/shure_sm58.htm" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20">
-                                                                                                                                                                                                                            Thomann
-                                                                                                                                                                                                                            </a>
+                                                                                                                                                                                                                            <a href = "https://www.thomann.fr/shure_sm58.htm" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                                                                                             </div>
                                                                                                                                                                                                                             </div> <!-- closes #id bg-card -->
 
@@ -1862,15 +1904,9 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                                             <a href="/produit/shure-sm7b" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
                                                                                                                                                                                                                             Voir la fiche produit
                                                                                                                                                                                                                             </a>
-                                                                                                                                                                                                                            <a href = "https://www.thomann.fr/shure_sm_7b_studiomikro.htm" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20">
-                                                                                                                                                                                                                            thomann
-                                                                                                                                                                                                                            </a>
-                                                                                                                                                                                                                            <a href = "https://www.amazon.fr/s?k=Shure%20SM7B&tag=stackera-21" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20">
-                                                                                                                                                                                                                            amazon
-                                                                                                                                                                                                                            </a>
-                                                                                                                                                                                                                            <a href = "https://www.woodbrass.com/microphones-dynamiques-shure-sm7b-p9415.html" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border">
-                                                                                                                                                                                                                            woodbrass
-                                                                                                                                                                                                                            </a>
+                                                                                                                                                                                                                            <a href = "https://www.thomann.fr/shure_sm_7b_studiomikro.htm" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                                            <a href = "https://www.amazon.fr/s?k=Shure%20SM7B&tag=stackera-21" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                                            <a href = "https://www.woodbrass.com/microphones-dynamiques-shure-sm7b-p9415.html" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                                                                                             </div>
                                                                                                                                                                                                                             </div> <!-- closes #id bg-card -->
 
@@ -2072,15 +2108,9 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                                             <a href="/produit/shure-sm7b" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
                                                                                                                                                                                                                             Voir la fiche produit
                                                                                                                                                                                                                             </a>
-                                                                                                                                                                                                                            <a href = "https://www.thomann.fr/shure_sm_7b_studiomikro.htm" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20">
-                                                                                                                                                                                                                            Thomann
-                                                                                                                                                                                                                            </a>
-                                                                                                                                                                                                                            <a href = "https://www.amazon.fr/s?k=Shure%20SM7B&tag=stackera-21" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20">
-                                                                                                                                                                                                                            Amazon
-                                                                                                                                                                                                                            </a>
-                                                                                                                                                                                                                            <a href = "https://www.woodbrass.com/microphones-dynamiques-shure-sm7b-p9415.html" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border">
-                                                                                                                                                                                                                            Woodbrass
-                                                                                                                                                                                                                            </a>
+                                                                                                                                                                                                                            <a href = "https://www.thomann.fr/shure_sm_7b_studiomikro.htm" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                                            <a href = "https://www.amazon.fr/s?k=Shure%20SM7B&tag=stackera-21" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                                            <a href = "https://www.woodbrass.com/microphones-dynamiques-shure-sm7b-p9415.html" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                                                                                             </div>
                                                                                                                                                                                                                             </div>
 
@@ -2124,15 +2154,9 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                                                     <a href="/produit/rode-podmic-usb" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
                                                                                                                                                                                                                                       Voir la fiche produit
                                                                                                                                                                                                                                         </a>
-                                                                                                                                                                                                                                        <a href = "https://www.thomann.fr/rode_podmic.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20">
-                                                                                                                                                                                                                                          Thomann
-                                                                                                                                                                                                                                          </a>
-                                                                                                                                                                                                                                          <a href = "https://www.woodbrass.com/product_search.php?keyword=rode+podmic&af=3524" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border">
-                                                                                                                                                                                                                                            Woodbrass
-                                                                                                                                                                                                                                            </a>
-                                                                                                                                                                                                                                            <a href = "https://www.amazon.fr/s?k=Rode%20PodMic&tag=stackera-21" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20">
-                                                                                                                                                                                                                                              Amazon
-                                                                                                                                                                                                                                              </a>
+                                                                                                                                                                                                                                        <a href = "https://www.thomann.fr/rode_podmic.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                                                          <a href = "https://www.woodbrass.com/product_search.php?keyword=rode+podmic&af=3524" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                                                            <a href = "https://www.amazon.fr/s?k=Rode%20PodMic&tag=stackera-21" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                                                                                                               </div>
                                                                                                                                                                                                                                               </div>
 
@@ -2305,15 +2329,9 @@ export const ARTICLES: Article[] = [
 </div>
                                                                                                                         <div class="flex flex-wrap items-center gap-3 mt-8">
                                                                                                                           <a href="/produit/rode-podmic-usb" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" > Voir le Rode PodMic </a>
-                                                                                                                            <a href = "https://www.thomann.fr/rode_podmic_usb.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20">
-                                                                                                                              thomann
-                                                                                                                              </a>
-                                                                                                                              <a href = "https://www.amazon.fr/s?k=r%C3%B8de+podmic+usb&crid=BC69N8VY8X32&sprefix=R%C3%B8de+PodMic+USB%2Caps%2C241&ref=nb_sb_ss_mvt-t11-ranker_1_15" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20">
-                                                                                                                                amazon
-                                                                                                                                </a>
-                                                                                                                                <a href = "https://www.woodbrass.com/microphones-usb-rode-podmic-usb-p377792.html?queryID=b4b704ccc7d6c56c685519e0f7fd1bac" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border">
-                                                                                                                                  woodbrass
-                                                                                                                                  </a>
+                                                                                                                            <a href = "https://www.thomann.fr/rode_podmic_usb.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                              <a href = "https://www.amazon.fr/s?k=r%C3%B8de+podmic+usb&crid=BC69N8VY8X32&sprefix=R%C3%B8de+PodMic+USB%2Caps%2C241&ref=nb_sb_ss_mvt-t11-ranker_1_15" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                <a href = "https://www.woodbrass.com/microphones-usb-rode-podmic-usb-p377792.html?queryID=b4b704ccc7d6c56c685519e0f7fd1bac" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                   </div>
                                                                                                                                   </div>
                                                                                                                                   </div>
@@ -2351,12 +2369,8 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                               </div>
                                                                                                                                                                               <div class="flex flex-wrap items-center gap-3 mt-8">
                                                                                                                                                                                 <a href="/produit/shure-mv7x" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" > Voir le Shure MV7X </a>
-                                                                                                                                                                                  <a href = "https://www.woodbrass.com/microphones-a-large-membrane-shure-mv7x-p354182.html" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border">
-                                                                                                                                                                                    woodbrass
-                                                                                                                                                                                    </a>
-                                                                                                                                                                                    <a href = "https://www.amazon.fr/s?k=Shure%20MV7X&tag=stackera-21" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20">
-                                                                                                                                                                                      amazon
-                                                                                                                                                                                      </a>
+                                                                                                                                                                                  <a href = "https://www.woodbrass.com/microphones-a-large-membrane-shure-mv7x-p354182.html" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                    <a href = "https://www.amazon.fr/s?k=Shure%20MV7X&tag=stackera-21" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                                                       </div>
                                                                                                                                                                                       </div>
                                                                                                                                                                                       </div>
@@ -2394,15 +2408,9 @@ export const ARTICLES: Article[] = [
 </div>
                                                                                                                                                                                                                                   <div class="flex flex-wrap items-center gap-3 mt-8">
                                                                                                                                                                                                                                     <a href="/produit/shure-sm7b" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" > Voir le Shure SM7B </a>
-                                                                                                                                                                                                                                      <a href = "https://www.thomann.fr/shure_sm_7b_studiomikro.htm" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20">
-                                                                                                                                                                                                                                        thomann
-                                                                                                                                                                                                                                        </a>
-                                                                                                                                                                                                                                        <a href = "https://www.amazon.fr/s?k=Shure%20SM7B&tag=stackera-21" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20">
-                                                                                                                                                                                                                                          amazon
-                                                                                                                                                                                                                                          </a>
-                                                                                                                                                                                                                                          <a href = "https://www.woodbrass.com/microphones-dynamiques-shure-sm7b-p9415.html" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border">
-                                                                                                                                                                                                                                            woodbrass
-                                                                                                                                                                                                                                            </a>
+                                                                                                                                                                                                                                      <a href = "https://www.thomann.fr/shure_sm_7b_studiomikro.htm" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                                                        <a href = "https://www.amazon.fr/s?k=Shure%20SM7B&tag=stackera-21" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                                                          <a href = "https://www.woodbrass.com/microphones-dynamiques-shure-sm7b-p9415.html" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                                                                                                             </div>
                                                                                                                                                                                                                                             </div>
                                                                                                                                                                                                                                             </div>
@@ -2561,19 +2569,19 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                                                                       </div>
                                                                                                                                                                                                                                                       <img src = "https://www.thomann.de/thumb/opengraph/pics/prod/566673.jpg" alt = "Focusrite Scarlett Solo" class="w-full h-48 sm:h-64 object-contain bg-white p-4 rounded-2xl mb-8 shadow-sm border border-border" loading = "lazy">
 
-                                                                                                                                                                                                                                                      <div class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" > <div class="flex flex-col md:flex-row gap-8 items-start" > <div class="flex-1 w-full" > <h3 class="mt-0 mb-2 text-2xl font-bold" > Focusrite Scarlett Solo(4th Gen) </h3><p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Interface audio simple et fiable pour débuter</p > <p class="text-foreground leading-relaxed" > La 4ème génération redéfinit les standards de l'entrée de gamme. Avec un impressionnant gain de 69 dB, elle est désormais capable d'alimenter des monstres d'exigence comme le Shure SM7B sans aucun Cloudlifter externe supplémentaire. Son mode "Air" apporte une brillance et une présence hyper flatteuses à la voix, parfaites pour la radio.</p></div></div><div class="grid sm:grid-cols-2 gap-4 mt-8"><div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Points Forts</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Gain massif de 69 dB : adieu le souffle électronique</li><li>Mode "Air" légendaire (émulation ISA) pour flatter les voix</li><li>Bundle logiciel gigantesque (Ableton Live Lite, etc.)</li><li>Outil de Loopback intégré très puissant pour le streaming</li></ul></div><div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Limites réelles</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Peut parfois frôler voire dépasser très légèrement les 100€ hors soldes</li><li>Pilotes Focusrite Control pouvant sembler complexes au grand débutant</li></ul></div></div><div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm"><strong class="text-foreground">Notre conseil d'usage : </strong> La valeur sûre et robuste par excellence, parfaite pour démarrer avec un micro exigeant.</div > <div class="flex flex-wrap items-center gap-3 mt-8" > <a href="/produit/focusrite-scarlett-solo-4th-gen" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" > Voir la fiche produit </a><a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text - cyan - 600 dark: text - cyan - 400 hover: bg - cyan - 500 / 20 border border - cyan - 500 / 20">Thomann</a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - [#FF9900] / 10 text - [#FF9900] hover: bg - [#FF9900] / 20 border border - [#FF9900] / 20">Amazon</a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - muted text - foreground hover: bg - muted / 80 border border - border">Woodbrass</a></div></div></div><!--CARTE 2 -->
+                                                                                                                                                                                                                                                      <div class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" > <div class="flex flex-col md:flex-row gap-8 items-start" > <div class="flex-1 w-full" > <h3 class="mt-0 mb-2 text-2xl font-bold" > Focusrite Scarlett Solo(4th Gen) </h3><p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Interface audio simple et fiable pour débuter</p > <p class="text-foreground leading-relaxed" > La 4ème génération redéfinit les standards de l'entrée de gamme. Avec un impressionnant gain de 69 dB, elle est désormais capable d'alimenter des monstres d'exigence comme le Shure SM7B sans aucun Cloudlifter externe supplémentaire. Son mode "Air" apporte une brillance et une présence hyper flatteuses à la voix, parfaites pour la radio.</p></div></div><div class="grid sm:grid-cols-2 gap-4 mt-8"><div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Points Forts</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Gain massif de 69 dB : adieu le souffle électronique</li><li>Mode "Air" légendaire (émulation ISA) pour flatter les voix</li><li>Bundle logiciel gigantesque (Ableton Live Lite, etc.)</li><li>Outil de Loopback intégré très puissant pour le streaming</li></ul></div><div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Limites réelles</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Peut parfois frôler voire dépasser très légèrement les 100€ hors soldes</li><li>Pilotes Focusrite Control pouvant sembler complexes au grand débutant</li></ul></div></div><div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm"><strong class="text-foreground">Notre conseil d'usage : </strong> La valeur sûre et robuste par excellence, parfaite pour démarrer avec un micro exigeant.</div > <div class="flex flex-wrap items-center gap-3 mt-8" > <a href="/produit/focusrite-scarlett-solo-4th-gen" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" > Voir la fiche produit </a><a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text - cyan - 600 dark: text - cyan - 400 hover: bg - cyan - 500 / 20 border border - cyan - 500 / 20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - [#FF9900] / 10 text - [#FF9900] hover: bg - [#FF9900] / 20 border border - [#FF9900] / 20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - muted text - foreground hover: bg - muted / 80 border border - border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a></div></div></div><!--CARTE 2 -->
                                                                                                                                                                                                                                                       <div class= "mb-16 mt-8">
                                                                                                                                                                                                                                                       <div class="inline-block bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold tracking-widest uppercase mb-6 shadow-sm" >
           #2 : La Texture Américaine
                                                                                                                                                                                                                                                       </div>
                                                                                                                                                                                                                                                       <img src = "https://www.thomann.de/thumb/opengraph/pics/prod/529054.jpg" alt = "Universal Audio Volt 1" class="w-full h-48 sm:h-64 object-contain bg-white p-4 rounded-2xl mb-8 shadow-sm border border-border" loading = "lazy">
 
-                                                                                                                                                                                                                                                      <div class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" > <div class="flex flex-col md:flex-row gap-8 items-start" > <div class="flex-1 w-full" > <h3 class="mt-0 mb-2 text-2xl font-bold" > Universal Audio Volt 1 </h3><p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">La coloration chaleureuse du légendaire préampli 610</p > <p class="text-foreground leading-relaxed" > Universal Audio, géant du studio haut de gamme, descend dans l'arène des cartes "budget" avec audace. La particularité de la Volt 1 est son bouton magique "Vintage" : il enclenche un circuit analogique recréant la chaleur épaisse du préampli lampe de console 610. Un pur bonheur sur les voix pour le podcast, accompagné d'un châssis métallique d'une classe absolue.</p></div></div><div class="grid sm:grid-cols-2 gap-4 mt-8"><div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Points Forts</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Le mode Vintage qui épaissit les cordes vocales et instruments</li><li>Design de "Tank" en métal brossé indestructible</li><li>Sortie ampli casque extraordinairement puissante pour driver de gros Ohm</li></ul></div><div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Limites réelles</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Gain correct (55dB) mais insuffisant seul pour un SM7B (nécessite l'achat d'un Cloudlifter)</li><li>Absence d'affichage visuel précis du volume d'entrée (juste une diode verte/rouge)</li></ul></div></div><div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm"><strong class="text-foreground">Notre conseil d'usage : </strong> Idéale pour apporter rapidement une coloration chaude et vintage à vos enregistrements vocaux.</div > <div class="flex flex-wrap items-center gap-3 mt-8" > <a href="/produit/universal-audio-volt-1" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" > Voir la fiche produit </a><a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text - cyan - 600 dark: text - cyan - 400 hover: bg - cyan - 500 / 20 border border - cyan - 500 / 20">Thomann</a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - [#FF9900] / 10 text - [#FF9900] hover: bg - [#FF9900] / 20 border border - [#FF9900] / 20">Amazon</a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - muted text - foreground hover: bg - muted / 80 border border - border">Woodbrass</a></div></div></div><!--CARTE 3 -->
+                                                                                                                                                                                                                                                      <div class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" > <div class="flex flex-col md:flex-row gap-8 items-start" > <div class="flex-1 w-full" > <h3 class="mt-0 mb-2 text-2xl font-bold" > Universal Audio Volt 1 </h3><p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">La coloration chaleureuse du légendaire préampli 610</p > <p class="text-foreground leading-relaxed" > Universal Audio, géant du studio haut de gamme, descend dans l'arène des cartes "budget" avec audace. La particularité de la Volt 1 est son bouton magique "Vintage" : il enclenche un circuit analogique recréant la chaleur épaisse du préampli lampe de console 610. Un pur bonheur sur les voix pour le podcast, accompagné d'un châssis métallique d'une classe absolue.</p></div></div><div class="grid sm:grid-cols-2 gap-4 mt-8"><div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Points Forts</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Le mode Vintage qui épaissit les cordes vocales et instruments</li><li>Design de "Tank" en métal brossé indestructible</li><li>Sortie ampli casque extraordinairement puissante pour driver de gros Ohm</li></ul></div><div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Limites réelles</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Gain correct (55dB) mais insuffisant seul pour un SM7B (nécessite l'achat d'un Cloudlifter)</li><li>Absence d'affichage visuel précis du volume d'entrée (juste une diode verte/rouge)</li></ul></div></div><div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm"><strong class="text-foreground">Notre conseil d'usage : </strong> Idéale pour apporter rapidement une coloration chaude et vintage à vos enregistrements vocaux.</div > <div class="flex flex-wrap items-center gap-3 mt-8" > <a href="/produit/universal-audio-volt-1" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" > Voir la fiche produit </a><a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text - cyan - 600 dark: text - cyan - 400 hover: bg - cyan - 500 / 20 border border - cyan - 500 / 20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - [#FF9900] / 10 text - [#FF9900] hover: bg - [#FF9900] / 20 border border - [#FF9900] / 20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - muted text - foreground hover: bg - muted / 80 border border - border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a></div></div></div><!--CARTE 3 -->
                                                                                                                                                                                                                                                       <div class= "mb-16 mt-8">
                                                                                                                                                                                                                                                       <div class="inline-block bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold tracking-widest uppercase mb-6 shadow-sm" >#3 : L'Intelligence Française</div>
                                                                                                                                                                                                                                                       <img src = "https://thumbs.static-thomann.de/thumb/bdbmagic//pics//bdb//_52//529011//17247208_800.jpg" alt = "Arturia MiniFuse 2" class="w-full h-48 sm:h-64 object-contain bg-white p-4 rounded-2xl mb-8 shadow-sm border border-border" loading = "lazy">
 
-                                                                                                                                                                                                                                                      <div class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" > <div class="flex flex-col md:flex-row gap-8 items-start" > <div class="flex-1 w-full" > <h3 class="mt-0 mb-2 text-2xl font-bold" > 3. Arturia MiniFuse 2 </h3><p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Deux entrées et un Hub USB intégré salvateur</p > <p class="text-foreground leading-relaxed" > La pépite des constructeurs français dans sa forme la plus aboutie.La MiniFuse 2 brille par sa proposition rassurante avec une exceptionnelle garantie de 5 ans en standard.Mais son atout secret est d'intégrer un Hub USB complet à l'arrière : branchez l'interface à votre PC, et connectez votre petit clavier maître MIDI directement dessus ! Elle dispose de deux entrées confortables pour enregistrer une guitare et une voix simultanément.</p></div></div><div class="grid sm:grid-cols-2 gap-4 mt-8"><div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Points Forts</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Garantie 5 ans totale rassurante</li><li>Deux entrées pour micros ou instruments séparés</li><li>Le port de hub "USB pass-through" au dos pour brancher un contrôleur MIDI</li><li>Vu-mètres LED lumineux très précis</li></ul></div><div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Limites réelles</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Préampli très droit et transparent, qui manquera peut-être de caractère pour certains</li><li>Format rectangulaire un peu plastique bien que robuste</li></ul></div></div><div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm"><strong class="text-foreground">Notre conseil d'usage : </strong> Parfaite pour les possesseurs d'ordinateurs portables avec peu de ports USB, et besoin de 2 entrées.</div > <div class="flex flex-wrap items-center gap-3 mt-8" > <a href="/produit/arturia-minifuse-2-white" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" > Voir la fiche produit </a><a href="https:/ / www.thomann.fr / arturia_minifuse_2_white.htm ? partner_id = 58130" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - cyan - 500 / 10 text - cyan - 600 dark: text - cyan - 400 hover: bg - cyan - 500 / 20 border border - cyan - 500 / 20">Thomann</a><a href="https://www.amazon.fr/s?k=Arturia+MiniFuse+2+White&tag=TON_TAG_AMAZON" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20">Amazon</a><a href="https://www.woodbrass.com/interfaces-audio-usb-arturia-minifuse-2-wh-p354167.html?queryID=f243a44d29a8dc0a7133a2fb3a445f5b" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border">Woodbrass</a></div></div></div>
+                                                                                                                                                                                                                                                      <div class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" > <div class="flex flex-col md:flex-row gap-8 items-start" > <div class="flex-1 w-full" > <h3 class="mt-0 mb-2 text-2xl font-bold" > 3. Arturia MiniFuse 2 </h3><p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Deux entrées et un Hub USB intégré salvateur</p > <p class="text-foreground leading-relaxed" > La pépite des constructeurs français dans sa forme la plus aboutie.La MiniFuse 2 brille par sa proposition rassurante avec une exceptionnelle garantie de 5 ans en standard.Mais son atout secret est d'intégrer un Hub USB complet à l'arrière : branchez l'interface à votre PC, et connectez votre petit clavier maître MIDI directement dessus ! Elle dispose de deux entrées confortables pour enregistrer une guitare et une voix simultanément.</p></div></div><div class="grid sm:grid-cols-2 gap-4 mt-8"><div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Points Forts</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Garantie 5 ans totale rassurante</li><li>Deux entrées pour micros ou instruments séparés</li><li>Le port de hub "USB pass-through" au dos pour brancher un contrôleur MIDI</li><li>Vu-mètres LED lumineux très précis</li></ul></div><div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Limites réelles</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Préampli très droit et transparent, qui manquera peut-être de caractère pour certains</li><li>Format rectangulaire un peu plastique bien que robuste</li></ul></div></div><div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm"><strong class="text-foreground">Notre conseil d'usage : </strong> Parfaite pour les possesseurs d'ordinateurs portables avec peu de ports USB, et besoin de 2 entrées.</div > <div class="flex flex-wrap items-center gap-3 mt-8" > <a href="/produit/arturia-minifuse-2-white" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" > Voir la fiche produit </a><a href="https:/// www.thomann.fr/arturia_minifuse_2_white.htm?partner_id=58130" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - cyan - 500 / 10 text - cyan - 600 dark: text - cyan - 400 hover: bg - cyan - 500 / 20 border border - cyan - 500 / 20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a><a href="https://www.amazon.fr/s?k=Arturia+MiniFuse+2+White&tag=TON_TAG_AMAZON" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a><a href="https://www.woodbrass.com/interfaces-audio-usb-arturia-minifuse-2-wh-p354167.html?queryID=f243a44d29a8dc0a7133a2fb3a445f5b" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a></div></div></div>
 
                                                                                                                                                                                                                                                         <!--CARTE 4 -->
                                                                                                                                                                                                                                                       <div class="mb-16 mt-8" >
@@ -2582,14 +2590,15 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                                                                       </div>
                                                                                                                                                                                                                                                       <img src = "https://www.thomann.de/thumb/opengraph/pics/prod/359080.jpg" alt = "Behringer UMC202HD" class="w-full h-48 sm:h-64 object-contain bg-white p-4 rounded-2xl mb-8 shadow-sm border border-border" loading = "lazy">
 
-                                                                                                                                                                                                                                                      <div class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" > <div class="flex flex-col md:flex-row gap-8 items-start" > <div class="flex-1 w-full" > <h3 class="mt-0 mb-2 text-2xl font-bold" > Behringer U - Phoria UMC202HD </h3><p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le meilleur rapport qualité/prix à 2 entrées du marché </p><p class="text-foreground leading-relaxed">Behringer casse férocement les prix depuis des décennies. La UMC202HD est un ovni tarifaire : pour le prix d'interfaces à entrée unique chez la concurrence, elle offre *deux* authentiques entrées combo XLR/Jack Midas avec un échantillonnage ultra - haute - résolution de 192kHz.L'outil obligatoire pour enregistrer deux personnes séparément ou chanter en tapant une guitare acoustique.</p></div></div><div class="grid sm:grid-cols-2 gap-4 mt-8"><div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Points Forts</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Deux entrées réelles avec préamplis Midas (excellente renommée technique)</li><li>Résolution 192kHz professionnelle rare à ce prix cassé</li><li>Coque métallique lourde et esthétique</li></ul></div><div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Limites réelles</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Stabilité réputée parfois inégale des drivers sous Windows face aux mastodontes Focusrite</li></ul></div></div><div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm"><strong class="text-foreground">Notre conseil d'usage : </strong> Le meilleur rapport fonctionnalité/prix si vous avez impérativement besoin de deux entrées combo au budget minimum.</div><div class="flex flex-wrap items-center gap-3 mt-8"><a href="/produit / behringer - u - phoria - umc202hd" class="inline - flex items - center justify - center bg - primary text - primary - foreground font - bold px - 6 py - 3 rounded - xl hover: bg - primary / 90 transition - transform hover: scale - 105 active: scale - 95 shadow - sm">Voir la fiche produit</a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - cyan - 500 / 10 text - cyan - 600 dark: text - cyan - 400 hover: bg - cyan - 500 / 20 border border - cyan - 500 / 20">Thomann</a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - [#FF9900] / 10 text - [#FF9900] hover: bg - [#FF9900] / 20 border border - [#FF9900] / 20">Amazon</a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - muted text - foreground hover: bg - muted / 80 border border - border">Woodbrass</a></div></div></div><!--CARTE 5 -->
-                                                                                                                                                                                                                                                      <div class= "mb-16 mt-8">
-                                                                                                                                                                                                                                                      <div class="inline-block bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold tracking-widest uppercase mb-6 shadow-sm" >
+                                                                                                                                                                                                                                                      <div class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" > <div class="flex flex-col md:flex-row gap-8 items-start" > <div class="flex-1 w-full" > <h3 class="mt-0 mb-2 text-2xl font-bold" > Behringer U - Phoria UMC202HD </h3><p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le meilleur rapport qualité/prix à 2 entrées du marché </p><p class="text-foreground leading-relaxed">Behringer casse férocement les prix depuis des décennies. La UMC202HD est un ovni tarifaire : pour le prix d'interfaces à entrée unique chez la concurrence, elle offre *deux* authentiques entrées combo XLR/Jack Midas avec un échantillonnage ultra - haute - résolution de 192kHz.L'outil obligatoire pour enregistrer deux personnes séparément ou chanter en tapant une guitare acoustique.</p></div></div><div class="grid sm:grid-cols-2 gap-4 mt-8"><div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Points Forts</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Deux entrées réelles avec préamplis Midas (excellente renommée technique)</li><li>Résolution 192kHz professionnelle rare à ce prix cassé</li><li>Coque métallique lourde et esthétique</li></ul></div><div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Limites réelles</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Stabilité réputée parfois inégale des drivers sous Windows face aux mastodontes Focusrite</li></ul></div></div><div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm"><strong class="text-foreground">Notre conseil d'usage : </strong> Le meilleur rapport fonctionnalité/prix si vous avez impérativement besoin de deux entrées combo au budget minimum.</div><div class="flex flex-wrap items-center gap-3 mt-8"><a href="/produit / behringer - u - phoria - umc202hd" class="inline - flex items - center justify - center bg - primary text - primary - foreground font - bold px - 6 py - 3 rounded - xl hover: bg - primary / 90 transition - transform hover: scale - 105 active: scale - 95 shadow - sm">Voir la fiche produit</a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - cyan - 500 / 10 text - cyan - 600 dark: text - cyan - 400 hover: bg - cyan - 500 / 20 border border - cyan - 500 / 20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - [#FF9900] / 10 text - [#FF9900] hover: bg - [#FF9900] / 20 border border - [#FF9900] / 20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - muted text - foreground hover: bg - muted / 80 border border - border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a></div></div></div><!--CARTE 5 -->
+<!--CARTE 5 -->
+                                                                                                                                                                                                                                                      <div class="mb-16 mt-8">
+                                                                                                                                                                                                                                                      <div class="inline-block bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold tracking-widest uppercase mb-6 shadow-sm">
           #5 : Le Plancher de Survie
                                                                                                                                                                                                                                                       </div>
-                                                                                                                                                                                                                                                      <img src = "https://www.thomann.de/thumb/opengraph/pics/prod/509796.jpg" alt = "M-Audio M-Track Solo" class="w-full h-48 sm:h-64 object-contain bg-white p-4 rounded-2xl mb-8 shadow-sm border border-border" loading = "lazy">
+                                                                                                                                                                                                                                                      <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/m-audio-m-track-solo-gallery-1773282954479.png" alt="M-Audio M-Track Solo" class="w-full h-48 sm:h-64 object-contain bg-white p-4 rounded-2xl mb-8 shadow-sm border border-border" loading="lazy">
 
-                                                                                                                                                                                                                                                      <div class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" > <div class="flex flex-col md:flex-row gap-8 items-start" > <div class="flex-1 w-full" > <h3 class="mt-0 mb-2 text-2xl font-bold" > M - Audio M - Track Solo </h3><p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le strict minimum vital pour un signal propre</p > <p class="text-foreground leading-relaxed" > Il est rare de trouver une interface sous les 50€ qui ne soit pas un jouet désastreux rempli de bruit parasite mortel.La M - Track Solo est l'exception de survie absolue. Elle fait de sévères concessions sur la qualité plastique et la flexibilité physique du 48V, mais fournit un signal de voix honorable et clair pour débuter un podcast sans le moindre centime d'épargne supplémentaire.</p></div > </div><div class="grid sm:grid-cols-2 gap-4 mt-8"><div class="bg-muted/40 border - l - 4 border - l - emerald - 500 / 60 rounded - r - xl p - 5"><h4 class="text - foreground font - bold mt - 0 mb - 3 flex items - center gap - 2"><svg class="w - 5 h - 5 text - emerald - 500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Points Forts</h4><ul class="mb - 0 space - y - 2 text - sm text - foreground / 80"><li>Rapport prix/décence sonore imbattable sous les 50€</li><li>Format de transport compact idéal en voyage avec un portable</li></ul></div><div class="bg - muted / 40 border - l - 4 border - l - destructive / 60 rounded - r - xl p - 5"><h4 class="text - foreground font - bold mt - 0 mb - 3 flex items - center gap - 2"><svg class="w - 5 h - 5 text - destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Limites réelles</h4><ul class="mb - 0 space - y - 2 text - sm text - foreground / 80"><li>Alimentation fantôme globale non débrayable sur une partie du circuit</li><li>Gain de 50dB famélique, inutilisable pour les gros micros peu sensibles</li><li>Châssis en plastique très entrée de gamme</li></ul></div></div><div class="bg - primary / 5 border border - primary / 10 rounded - xl p - 4 mt - 6 text - sm"><strong class="text - foreground">Notre conseil d'usage :</strong> Un achat de dépannage ou de stricte nécessité absolue, préférez économiser 40€ de plus si possible.</div><div class="flex flex - wrap items - center gap - 3 mt - 8"><a href=" / produit / m - audio - m - track - solo" class="inline - flex items - center justify - center bg - primary text - primary - foreground font - bold px - 6 py - 3 rounded - xl hover: bg - primary / 90 transition - transform hover: scale - 105 active: scale - 95 shadow - sm">Voir la fiche produit</a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - cyan - 500 / 10 text - cyan - 600 dark: text - cyan - 400 hover: bg - cyan - 500 / 20 border border - cyan - 500 / 20">Thomann</a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - [#FF9900] / 10 text - [#FF9900] hover: bg - [#FF9900] / 20 border border - [#FF9900] / 20">Amazon</a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - muted text - foreground hover: bg - muted / 80 border border - border">Woodbrass</a></div></div></div>
+                                                                                                                                                                                                                                                      <div class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24"> <div class="flex flex-col md:flex-row gap-8 items-start"> <div class="flex-1 w-full"> <h3 class="mt-0 mb-2 text-2xl font-bold"> M - Audio M - Track Solo </h3><p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le strict minimum vital pour un signal propre</p> <p class="text-foreground leading-relaxed"> Il est rare de trouver une interface sous les 50€ qui ne soit pas un jouet désastreux rempli de bruit parasite mortel. La M-Track Solo est l'exception de survie absolue. Elle fait de sévères concessions sur la qualité plastique et la flexibilité physique du 48V, mais fournit un signal de voix honorable et clair pour débuter un podcast sans le moindre centime d'épargne supplémentaire.</p></div> </div><div class="grid sm:grid-cols-2 gap-4 mt-8"><div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Points Forts</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Préampli micro Crystal pour un son clair et détaillé</li><li>Format compact idéal pour home studio et mobilité</li><li>Entrée combo XLR/jack + entrée instrument dédiée</li><li>Rapport prix/décence sonore imbattable sous les 50€</li></ul></div><div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Limites réelles</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Une seule entrée micro</li><li>Alimentation fantôme globale non débrayable sur une partie du circuit</li><li>Gain de 50dB famélique, inutilisable pour les gros micros peu sensibles</li><li>Châssis en plastique très entrée de gamme</li></ul></div></div><div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm"><strong class="text-foreground">Notre conseil d'usage :</strong> Un achat de dépannage ou de stricte nécessité absolue, préférez économiser 40€ de plus si possible.</div><div class="flex flex-wrap items-center gap-3 mt-8"><a href="/produit/m-audio-m-track-solo" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a><a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a><a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a><a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a></div></div></div>
 
                                                                                                                                                                                                                                                       <!--Mot de la Fin-->
                                                                                                                                                                                                                                                       <div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center sm:text-left flex flex-col sm:flex-row items-center gap-8" >
@@ -2647,7 +2656,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                                                                       </details>
                                                                                                                                                                                                                                                       </div>
 
-                                                                                                                                                                                                                                                      <p class= "mt-8 text-center"> <small class="text-muted-foreground" > Pour trouver le micro idéal à coupler avec votre interface fraîchement commandée, consultez notre </small><small class="text-muted-foreground"><a href="/guide / meilleur - micro - podcast - 2026" class="hover: underline text - primary"> guide des micros podcast  ou lancez le </a><a href=" / configurateur" class="hover: underline text - primary">configurateur automatique de setups</a>.</small></p>
+                                                                                                                                                                                                                                                      <p class="mt-8 text-center"><small class="text-muted-foreground">Pour trouver le micro idéal à coupler avec votre interface fraîchement commandée, consultez notre guide des micros podcast ou lancez le configurateur automatique de setups.</small></p>
                                                                                                                                                                                                                                                         `
   },
 
@@ -2662,7 +2671,7 @@ export const ARTICLES: Article[] = [
     author: "Équipe Fluxlab",
     image: "/images/articles/micro_usb.png",
     intro: "Aujourd'hui, l'audio de qualité broadcast n'est plus réservé aux studios professionnels. Les microphones USB à moins de 80 euros ont considérablement évolué. Ce guide vous aide à choisir le micro USB parfait pour améliorer vos streams, podcasts ou appels sans faire exploser votre budget.",
-    relatedProducts: ["rode-nt-usb-mini", "fifine-k688", "maono-pd400x", "razer-seiren-mini"],
+    relatedProducts: ["rode-nt-usb-mini", "the-t-bone-ps-100", "sc-450-usb", "sennheiser-profile-usb-c-mikrofon"],
     relatedCategorySlug: "micros-usb",
     content: `
                                                                                                                                                                                                                                                       <!--ENCART TL; DR(Résumé Haute Conversion)-->
@@ -2673,16 +2682,16 @@ export const ARTICLES: Article[] = [
   </h2>
   <ul class="space-y-3 mb-0">
     <li class="flex items-start gap-3" >
-      <span class="font-bold text-primary min-w-[120px]" > Le Meilleur: </span>
-        <a href = "#fifine-k688" class="product-link hover:underline font-medium text-foreground"> Fifine K688(L'isolation brute)</a>
+      <span class="font-bold text-primary min-w-[120px]" > Le Budget : </span>
+        <a href = "#the-t-bone-ps-100" class="product-link hover:underline font-medium text-foreground"> the t.bone PS 100 (Le tout-en-un à 44€)</a>
           </li>
           <li class= "flex items-start gap-3">
           <span class="font-bold text-primary min-w-[120px]" > La Fiabilité : </span>
-        <a href = "#rode-nt-usb-mini" class="product-link hover:underline font-medium text-foreground"> Rode NT - USB Mini(Le socle anti - chocs) </a>
+        <a href = "#rode-nt-usb-mini" class="product-link hover:underline font-medium text-foreground"> Rode NT-USB Mini (Le socle anti-chocs) </a>
         </li>
         <li class= "flex items-start gap-3">
-        <span class="font-bold text-primary min-w-[120px]" > Le Gain de Place : </span>
-        <a href = "#razer-seiren-mini" class="product-link hover:underline font-medium text-foreground"> Razer Seiren Mini(Idéal télétravail) </a>
+        <span class="font-bold text-primary min-w-[120px]" > La Qualité : </span>
+        <a href = "#sennheiser-profile-usb-c-mikrofon" class="product-link hover:underline font-medium text-foreground"> Sennheiser Profile (La précision studio) </a>
         </li>
         </ul>
         </div>
@@ -2702,28 +2711,28 @@ export const ARTICLES: Article[] = [
         </thead>
         <tbody >
         <tr class="hover:bg-muted/50 border-b border-border transition-colors" >
-        <td class="px-5 py-4 font-bold border-r border-border" > <a href="#rode-nt-usb-mini" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://m.media-amazon.com/images/I/41D99G9N8-L._AC_SL1500_.jpg" alt = "Rode" class= "w-8 h-8 rounded-full object-cover" > Rode NT - USB Mini </a></td >
-        <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > Socle lourd anti - chocs </td>
-        <td class= "px-5 py-4 border-r border-border"> Télétravail & Podcast </td>
+        <td class="px-5 py-4 font-bold border-r border-border" > <a href="#rode-nt-usb-mini" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/rode-nt-usb-mini-gallery-1773289762365.png" alt = "Rode" class= "w-8 h-8 rounded-full object-cover" > Rode NT-USB Mini </a></td >
+        <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > Socle lourd anti-chocs </td>
+        <td class= "px-5 py-4 border-r border-border"> Testé et approuvé </td>
         <td class= "px-5 py-4 text-center font-bold text-primary"> 4.8 / 5 </td>
         </tr>
         <tr class= "hover:bg-muted/50 border-b border-border transition-colors">
-        <td class="px-5 py-4 font-bold border-r border-border" > <a href="#fifine-k688" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://m.media-amazon.com/images/I/71K177XoFBL._AC_SL1500_.jpg" alt = "Fifine" class= "w-8 h-8 rounded-full object-cover" > Fifine K688 </a></td >
-        <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > Annulation des bruits(Dynamique) </td>
-        <td class= "px-5 py-4 border-r border-border"> Setup Gaming bruyant </td>
-        <td class= "px-5 py-4 text-center font-bold text-primary"> 4.6 / 5 </td>
+        <td class="px-5 py-4 font-bold border-r border-border" > <a href="#the-t-bone-ps-100" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/the-t-bone-ps-100-gallery-1773290991852.png" alt = "PS 100" class= "w-8 h-8 rounded-full object-cover" > the t.bone PS 100 </a></td >
+        <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > Mixeur et gain physique </td>
+        <td class= "px-5 py-4 border-r border-border"> Le plus polyvalent (44€) </td>
+        <td class= "px-5 py-4 text-center font-bold text-primary"> 4.4 / 5 </td>
         </tr>
         <tr class= "hover:bg-muted/50 border-b border-border transition-colors">
-        <td class="px-5 py-4 font-bold border-r border-border" > <a href="#maono-pd200x" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://m.media-amazon.com/images/I/71N-EhwW0vL._AC_SL1500_.jpg" alt = "Maono" class= "w-8 h-8 rounded-full object-cover" > Maono PD200X </a></td >
-        <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > Logiciel vocal sur - mesure </td>
-        <td class= "px-5 py-4 border-r border-border"> Streaming Twitch </td>
-        <td class= "px-5 py-4 text-center font-bold text-primary"> 4.5 / 5 </td>
+        <td class="px-5 py-4 font-bold border-r border-border" > <a href="#sc-450-usb" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://www.thomann.de/thumb/opengraph/pics/prod/195302.jpg" alt = "SC 450" class= "w-8 h-8 rounded-full object-cover" > SC 450 USB </a></td >
+        <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > Large membrane studio </td>
+        <td class= "px-5 py-4 border-r border-border"> Son studio chaleureux </td>
+        <td class= "px-5 py-4 text-center font-bold text-primary"> 4.6 / 5 </td>
         </tr>
         <tr class= "hover:bg-muted/50 transition-colors">
-        <td class="px-5 py-4 font-bold border-r border-border" > <a href="#razer-seiren-mini" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://m.media-amazon.com/images/I/81+m10R0iLL._AC_SL1500_.jpg" alt = "Razer" class= "w-8 h-8 rounded-full object-cover" > Razer Seiren Mini </a></td >
-        <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > Format ultra compact </td>
-        <td class= "px-5 py-4 border-r border-border"> Bureaux minimalistes </td>
-        <td class= "px-5 py-4 text-center font-bold text-primary"> 4.2 / 5 </td>
+        <td class="px-5 py-4 font-bold border-r border-border" > <a href="#sennheiser-profile-usb-c-mikrofon" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/sennheiser-profile-usb-c-mikrofon-gallery-1773290481226.png" alt = "Sennheiser" class= "w-8 h-8 rounded-full object-cover" > Sennheiser Profile </a></td >
+        <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > Qualité sonore broadcast </td>
+        <td class= "px-5 py-4 border-r border-border"> Gaming & Podcast exigeant </td>
+        <td class= "px-5 py-4 text-center font-bold text-primary"> 4.7 / 5 </td>
         </tr>
         </tbody>
         </table>
@@ -2734,13 +2743,13 @@ export const ARTICLES: Article[] = [
         <!--PRODUCT CARD : Rode NT - USB Mini-->
         <div id="rode-nt-usb-mini" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-        <div class="bg-white rounded-2xl aspect-square flex items-center justify-center p-6 shadow-inner border border-border/50" >
-        <img src="https://m.media-amazon.com/images/I/41D99G9N8-L._AC_SL1500_.jpg" alt = "Rode NT-USB Mini" class= "w-full h-full object-contain drop-shadow-md hover:scale-105 transition-transform duration-300" loading = "lazy" />
+        <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
+        <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/rode-nt-usb-mini-gallery-1773289762365.png" alt = "Rode NT-USB Mini" class="w-full h-full object-contain" loading = "lazy" />
         </div>
         <div >
-        <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="#rode-nt-usb-mini" class= "product-link text-foreground hover:text-primary transition-colors" > Rode NT - USB Mini </a></h3 >
+        <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="#rode-nt-usb-mini" class= "product-link text-foreground hover:text-primary transition-colors" > Rode NT-USB Mini </a></h3 >
         <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm" > Le standard increvable </p>
-        <p > Rode a réussi à condenser son expertise de studio dans un format miniature incroyablement dense.Son arme secrète réside dans son socle magnétique lourd : il absorbe exceptionnellement bien les vibrations de votre bureau, empêchant les bruits sourds d'atteindre la capsule.</p>
+        <p > Rode a réussi à condenser son expertise de studio dans un format miniature incroyablement dense. Son arme secrète réside dans son socle magnétique lourd : il absorbe exceptionnellement bien les vibrations de votre bureau, empêchant les bruits sourds d'atteindre la capsule.</p>
         </div>
         </div>
 
@@ -2770,25 +2779,21 @@ export const ARTICLES: Article[] = [
         <a href="/produit/rode-nt-usb-mini" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
         Lire le test complet
         </a>
-        <a href = "#amazon" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20">
-        Amazon
-        </a>
-        <a href = "#woodbrass" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border">
-        Woodbrass
-        </a>
+        <a href = "#amazon" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+        <a href = "#woodbrass" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
         </div>
         </div>
 
-        <!--PRODUCT CARD : Fifine K688-->
-        <div id="fifine-k688" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
+        <!--PRODUCT CARD : the t.bone PS 100-->
+        <div id="the-t-bone-ps-100" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-        <div class="bg-white rounded-2xl aspect-square flex items-center justify-center p-6 shadow-inner border border-border/50" >
-        <img src="https://m.media-amazon.com/images/I/71K177XoFBL._AC_SL1500_.jpg" alt = "Fifine K688" class= "w-full h-full object-contain drop-shadow-md hover:scale-105 transition-transform duration-300" loading = "lazy" />
+        <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
+        <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/the-t-bone-ps-100-gallery-1773290991852.png" alt = "the t.bone PS 100" class="w-full h-full object-contain" loading = "lazy" />
         </div>
         <div >
-        <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="#fifine-k688" class= "product-link text-foreground hover:text-primary transition-colors" > Fifine K688 </a></h3 >
-        <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm" > L'isolation vocale absolue</p>
-        <p > Ce modèle dynamique s'inspire clairement des légendes du broadcast (la forme rappelle le coûteux Shure SM7B). Contrairement aux micros statiques classiques, sa capsule ignore les bruits lointains de votre pièce pour se concentrer uniquement sur votre voix. C'est l'atout majeur si votre chambre résonne ou donne sur une rue bruyante.</p>
+        <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="#the-t-bone-ps-100" class= "product-link text-foreground hover:text-primary transition-colors" > the t.bone PS 100 </a></h3 >
+        <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm" > Le couteau suisse du budget</p>
+        <p > Incroyable mais vrai : pour moins de 50€, the t.bone propose un micro USB doté d'un mini mixeur intégré et de 4 directivités (Cardioïde, Omnidirectionnel, Figure en 8, Stéréo). C'est le choix imbattable pour ceux qui veulent tout contrôler physiquement sans se ruiner.</p>
         </div>
         </div>
 
@@ -2796,44 +2801,42 @@ export const ARTICLES: Article[] = [
         <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5" >
         <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-emerald-500" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg>Points Forts</h4 >
         <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-        <li>Rejet exceptionnel des bruits(cliques de claviers, ventilateurs) </li>
-        <li > Double connectique USB - C et XLR(idéal pour évoluer plus tard) </li>
-        <li > Suspension antichoc de qualité incluse </li>
+        <li>Solution tout-en-un : micro + interface audio + mini mixeur </li>
+        <li > 4 directivités sélectionnables pour tous les usages </li>
+        <li > Contrôles physiques complets (gain, volume, muet) </li>
         </ul>
         </div>
         <div class= "bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
         <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-destructive" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M6 18L18 6M6 6l12 12" /> </svg>Limites réelles</h4 >
         <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-        <li>Exige de parler très près de la grille(moins de 10 cm) </li>
-        <li > Son format nécessite quasiment l'achat d'un bras articulé </li>
+        <li>Assez volumineux et lourd sur un bureau </li>
+        <li > Interface audio basique (suffisante pour le prix) </li>
         </ul>
         </div>
         </div>
 
         <div class= "bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6">
-        <strong class="text-foreground" > Notre conseil d'usage :</strong> L'arme secrète des joueurs sur Discord et des YouTubers qui filment depuis une chambre à l'acoustique médiocre.
+        <strong class="text-foreground" > Notre conseil d'usage :</strong> Le meilleur rapport fonctionnalités/prix du marché pour débuter dans n'importe quelle configuration.
         </div>
 
         <div class= "flex flex-wrap items-center gap-3 mt-8">
-        <a href="/produit/fifine-k688" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
+        <a href="/produit/the-t-bone-ps-100" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
         Lire le test complet
         </a>
-        <a href = "#amazon" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20">
-        Amazon
-        </a>
+        <a href = "#thomann" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
         </div>
         </div>
 
-        <!--PRODUCT CARD : Maono PD200X-->
-        <div id="maono-pd200x" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
+        <!--PRODUCT CARD : the t.bone SC 450 USB-->
+        <div id="sc-450-usb" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-        <div class="bg-white rounded-2xl aspect-square flex items-center justify-center p-6 shadow-inner border border-border/50" >
-        <img src="https://m.media-amazon.com/images/I/71N-EhwW0vL._AC_SL1500_.jpg" alt = "Maono PD200X" class= "w-full h-full object-contain drop-shadow-md hover:scale-105 transition-transform duration-300" loading = "lazy" />
+        <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
+        <img src="https://www.thomann.de/thumb/opengraph/pics/prod/195302.jpg" alt = "the t.bone SC 450 USB" class="w-full h-full object-contain" loading = "lazy" />
         </div>
         <div >
-        <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="#maono-pd200x" class= "product-link text-foreground hover:text-primary transition-colors" > Maono PD200X </a></h3 >
-        <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm" > Le roi de la polyvalence logicielle </p>
-        <p > Ce micro dynamique se distingue par l'intégration d'un puissant processeur interne(DSP).En utilisant le logiciel gratuit "Maono Link", vous pouvez appliquer des égaliseurs ou un limiteur pour que votre voix sonne toujours professionnelle, quoi qu'il arrive.</p>
+        <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="#sc-450-usb" class= "product-link text-foreground hover:text-primary transition-colors" > the t.bone SC 450 USB </a></h3 >
+        <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm" > Le son large membrane studio </p>
+        <p > Si vous cherchez ce "grain" chaleureux typique des radios FM, le SC 450 USB est le candidat idéal. Sa capsule à large membrane capture les nuances avec une fidélité impressionnante pour son prix, en faisant un excellent choix pour le chant ou le doublage.</p>
         </div>
         </div>
 
@@ -2841,46 +2844,42 @@ export const ARTICLES: Article[] = [
         <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5" >
         <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-emerald-500" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg>Points Forts</h4 >
         <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-        <li>Logiciel gratuit intuitif pour modifier la couleur de sa voix </li>
-        <li > Bouton de contrôle physique 2 - en - 1(gain et volume du casque) </li>
-        <li > Cercle lumineux RGB(personnalisable ou désactivable) </li>
+        <li>Son large membrane riche et détaillé </li>
+        <li > Boîtier robuste en métal </li>
+        <li > Compatible PC et Mac sans installation de pilotes </li>
         </ul>
         </div>
         <div class= "bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
         <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-destructive" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M6 18L18 6M6 6l12 12" /> </svg>Limites réelles</h4 >
         <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-        <li>Construction incluant davantage de plastique que le Fifine K688 </li>
+        <li>Qualité de conversion limitée à 16 bits </li>
+        <li > Sensible aux bruits ambiants (nécessite un calme relatif) </li>
         </ul>
         </div>
         </div>
 
         <div class= "bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6">
-        <strong class="text-foreground" > Notre conseil d'usage :</strong> La solution rêvée pour un Streamer voulant affiner son son facilement (sans empiler de logiciels tiers complexes) avec une touche de personnalisation RGB.
+        <strong class="text-foreground" > Notre conseil d'usage :</strong> Une valeur sûre pour ceux qui privilégient la musicalité du timbre vocal avant tout.
         </div>
 
         <div class= "flex flex-wrap items-center gap-3 mt-8">
-        <a href="/produit/maono-pd200x" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
+        <a href="/produit/sc-450-usb" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
         Lire le test complet
         </a>
-        <a href = "#amazon" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20">
-        Amazon
-        </a>
-        <a href = "#thomann" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20">
-        Thomann
-        </a>
+        <a href = "#thomann" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
         </div>
         </div>
 
-        <!--PRODUCT CARD : Razer Seiren Mini-->
-        <div id="razer-seiren-mini" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
+        <!--PRODUCT CARD : Sennheiser Profile-->
+        <div id="sennheiser-profile-usb-c-mikrofon" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-        <div class="bg-white rounded-2xl aspect-square flex items-center justify-center p-6 shadow-inner border border-border/50" >
-        <img src="https://m.media-amazon.com/images/I/81+m10R0iLL._AC_SL1500_.jpg" alt = "Razer Seiren Mini" class= "w-full h-full object-contain drop-shadow-md hover:scale-105 transition-transform duration-300" loading = "lazy" />
+        <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
+        <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/sennheiser-profile-usb-c-mikrofon-gallery-1773290481226.png" alt = "Sennheiser Profile" class="w-full h-full object-contain" loading = "lazy" />
         </div>
         <div >
-        <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="#razer-seiren-mini" class= "product-link text-foreground hover:text-primary transition-colors" > Razer Seiren Mini </a></h3 >
-        <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm" > L'empreinte zéro</p>
-        <p > Dans un parti pris audacieux, Razer a supprimé absolument tout le superflu pour concevoir la capsule la plus petite possible.Ici, pas le moindre bouton : on branche l'USB, et on l'oublie.Sa directivité supercardioïde est particulièrement efficace pour ignorer les bruits latéraux.</p>
+        <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="#sennheiser-profile-usb-c-mikrofon" class= "product-link text-foreground hover:text-primary transition-colors" > Sennheiser Profile </a></h3 >
+        <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm" > L'excellence broadcast plug-and-play</p>
+        <p > Sennheiser frappe un grand coup avec le Profile. Ce micro USB-C offre une qualité sonore digne des meilleurs micros XLR de la marque. Simple, robuste et doté d'une capsule remarquablement équilibrée, il s'impose comme la nouvelle référence pour le streaming et le podcast sérieux.</p>
         </div>
         </div>
 
@@ -2888,35 +2887,30 @@ export const ARTICLES: Article[] = [
         <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5" >
         <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-emerald-500" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg>Points Forts</h4 >
         <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-        <li>Design compact qui ne cache pas l'écran ni le visage</li>
-        <li > Socle fourni avec une très bonne inclinaison </li>
-        <li > Rejet des bruits de côté bluffant </li>
+        <li>Qualité sonore professionnelle et équilibrée</li>
+        <li > Monitoring casque sans latence avec contrôle de mix direct </li>
+        <li > Design élégant et construction tout métal </li>
         </ul>
         </div>
         <div class= "bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
         <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-destructive" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M6 18L18 6M6 6l12 12" /> </svg>Limites réelles</h4 >
         <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-        <li>L'absence de bouton "Mute" physique sur le boîtier</li>
-        <li > Pas de prise pour brancher un casque </li>
+        <li>Directivité cardioïde uniquement (pas d'omni ou bidirectionnel)</li>
+        <li > Prix un peu plus élevé que l'entrée de gamme pure </li>
         </ul>
         </div>
         </div>
 
         <div class= "bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6">
-        <strong class="text-foreground" > Notre conseil d'usage :</strong> Ce micro brille dans les bureaux minimalistes et pour les télétravailleurs exigeant de la simplicité "Plug & Play".
+        <strong class="text-foreground" > Notre conseil d'usage :</strong> Le choix premium pour ceux qui veulent une sonorité studio immédiate sans passer par une interface complexe.
         </div>
 
         <div class= "flex flex-wrap items-center gap-3 mt-8">
-        <a href="/produit/razer-seiren-mini" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
+        <a href="/produit/sennheiser-profile-usb-c-mikrofon" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
         Lire le test complet
         </a>
-        <a href = "#amazon" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20">
-        Amazon
-        </a>
-        <a href = "#ldlc" class="inline-flex items-center justify-center bg-blue-500/10 text-blue-600 dark:text-blue-400 font-bold px-5 py-3 rounded-xl hover:bg-blue-500/20 transition-colors border border-blue-500/20">
-        LDLC
-        </a>
-        </div>
+        <a href = "#thomann" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+        <a href = "#woodbrass" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
         </div>
 
         <div class= "bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center sm:text-left flex flex-col sm:flex-row items-center gap-8">
@@ -2925,7 +2919,7 @@ export const ARTICLES: Article[] = [
         </div>
         <div >
         <h2 class="text-2xl font-bold text-foreground mt-0 mb-3 !border-0" > Le Mot de la Fin </h2>
-        <p class= "mb-0"> Si la gestion des bruits est votre combat quotidien(clavier mécanique lourd, logement bruyant), investissez sans hésiter dans le <a href = "/produit/fifine-k688" class="product-link font-bold text-primary hover:underline"> Fifine K688 </a>. En revanche, pour un bureau plutôt calme exigeant simplement le mètre étalon de la fiabilité "Plug & Play", le <a href="/produit / rode - nt - usb - mini" class="product - link font - bold text - primary hover: underline">Rode NT-USB Mini</a> garantit un achat sans aucun regret.</p>
+        <p class= "mb-0"> Si la polyvalence sonore et le budget sont vos priorités, le <a href = "/produit/the-t-bone-ps-100" class="product-link font-bold text-primary hover:underline"> the t.bone PS 100 </a> est imbattable. Pour ceux qui recherchent l'excellence absolue sans compromis technique, le <a href="/produit/sennheiser-profile-usb-c-mikrofon" class="product-link font-bold text-primary hover:underline">Sennheiser Profile</a> garantit un résultat professionnel immédiat.</p>
         </div>
         </div>
 
@@ -3045,7 +3039,7 @@ export const ARTICLES: Article[] = [
     author: "Équipe Fluxlab",
     image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=1200",
     intro: "Souffle, ventilateurs de PC, clavier mécanique ou voisins bruyants... Le bruit de fond est l'ennemi numéro 1 d'un son propre. Découvrez nos solutions gratuites et payantes pour nettoyer votre audio en temps réel.",
-    relatedProducts: ["shure-sm7b", "shure-mv7", "shure-mv7x", "sonoma-acoustics-panel", "elgato-wave-3"],
+    relatedProducts: ["shure-sm7b", "shure-mv7x", "sonoma-acoustics-panel", "elgato-wave-3"],
     relatedCategorySlug: "traitement-acoustique",
     content: `
         <h2 class= "text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4"> Le Diagnostic : D'où vient le bruit ?</h2>
@@ -3089,7 +3083,7 @@ export const ARTICLES: Article[] = [
         <div class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-8 shadow-sm" >
         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
         <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-6" >
-        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600" alt = "Nvidia Broadcast" class= "w-full h-full object-contain" />
+        <img src="/images/articles/nvidia-broadcast.png" alt="Nvidia Broadcast" class="w-full h-full object-contain" />
         </div>
         <div >
         <h3 class="mt-0 mb-2 text-2xl font-bold" > 1. Nvidia Broadcast(RTX Voice) </h3>
@@ -3162,44 +3156,27 @@ export const ARTICLES: Article[] = [
         </div>
 
         <!--MICRO DYNAMIQUE CARD-->
-        <div id="choix-micro" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 my-8 shadow-sm" >
-        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-        <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-4" >
-        <img src="https://thumbs.static-thomann.de/thumb/bdbmagic/pics/bdb/_12/129929/18086262_800.jpg" alt = "Shure SM7B" class= "w-full h-full object-contain mix-blend-multiply" />
+        <div id="choix-micro" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-8 shadow-sm">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+        <div class="relative w-full aspect-square rounded-2xl overflow-hidden flex items-center justify-center p-4">
+        <img src="https://www.thomann.de/thumb/opengraph/pics/prod/129929.jpg" alt="Shure SM7B" class="w-full h-full object-contain mix-blend-multiply" />
         </div>
-        <div >
-        <h3 class="mt-0 mb-2 text-2xl font-bold" > Passer à un Micro Dynamique </h3>
-        <p > Dans une pièce bruyante, le micro statique(condensateur) est votre pire ennemi : il est <em > trop </em> sensible. Un micro <strong>Dynamique</strong > est conçu pour ignorer tout ce qui se passe à plus de 20 - 30 cm de sa capsule.</p>
-        <p > Il existe de nombreuses options fiables sur le marché pour ce type d'environnement. Parmi les références les plus connues, on retrouve évidemment le <strong>Shure SM7B</strong>, mais aussi d'excellentes alternatives comme le <strong > Shure MV7 </strong>, le <strong>Rode PodMic</strong > ou encore l'<strong>Audio-Technica ATR2100x-USB</strong>.</p>
-        </div>
-        </div>
-        <div class= "flex flex-wrap items-center gap-3 mt-8">
-        <a href="/produit/shure-sm7b" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-shadow" > Voir le Shure SM7B </a>
-        <a href = "/guide/shure-sm7b-vs-rode-podmic" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"> Voir le comparatif complet </a>
+        <div>
+        <h3 class="mt-0 mb-2 text-2xl font-bold"> Passer à un Micro Dynamique </h3>
+        <p>Dans une pièce bruyante, le micro statique (condensateur) est votre pire ennemi : il est <em>trop</em> sensible. Un micro <strong>Dynamique</strong> est conçu pour ignorer tout ce qui se passe à plus de 20-30 cm de sa capsule.</p>
+        <p>Il existe de nombreuses options fiables sur le marché pour ce type d'environnement. Parmi les références les plus connues, on retrouve évidemment le <strong>Shure SM7B</strong>, mais aussi d'excellentes alternatives comme le <strong>Rode PodMic</strong> ou encore l'<strong>Audio-Technica ATR2100x-USB</strong>.</p>
         </div>
         </div>
-
-        <!--MICRO DYNAMIQUE CARD : MV7-->
-        <div id="choix-micro-mv7" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 my-8 shadow-sm" >
-        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-        <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-4" >
-        <img src="https://m.media-amazon.com/images/I/71XG83Z6F0L._AC_SL1500_.jpg" alt = "Shure MV7" class= "w-full h-full object-contain mix-blend-multiply" />
-        </div>
-        <div >
-        <h3 class="mt-0 mb-2 text-2xl font-bold" > L'Option Hybride : Shure MV7</h3>
-        <p > Le <strong > Shure MV7 </strong> s'inspire directement du design de son grand frère, avec l'avantage décisif d'incorporer une sortie USB. Plus besoin de carte son externe si vous n'en avez pas : branchez-le directement à votre ordinateur.</p >
-        <p>Il possède également une certification de réjection de bruit extrêmement efficace et permet de travailler dans des environnements très peu insonorisés grâce à la fonction Auto Level Mode de l'application ShurePlus.</p>
-        </div>
-        </div>
-        <div class= "flex flex-wrap items-center gap-3 mt-8">
-        <a href="/produit/shure-mv7" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-shadow" > Voir le Shure MV7 </a>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+        <a href="/produit/shure-sm7b" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-shadow"> Voir le Shure SM7B </a>
+        <a href="/guide/shure-sm7b-vs-rode-podmic" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"> Voir le comparatif complet </a>
         </div>
         </div>
 
         <!--MICRO DYNAMIQUE CARD : MV7X-->
         <div id="choix-micro-mv7x" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 my-8 shadow-sm" >
         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-        <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-4" >
+        <div class="relative w-full aspect-square rounded-2xl overflow-hidden flex items-center justify-center p-4" >
         <img src="https://m.media-amazon.com/images/I/712Xa1xLMIL._AC_SL1500_.jpg" alt = "Shure MV7X" class= "w-full h-full object-contain mix-blend-multiply" />
         </div>
         <div >
@@ -4324,15 +4301,9 @@ trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et 
                                                                                                                                             <a href="/produit/beyerdynamic-dt-770-pro-80-ohm" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
                                                                                                                                               Voir la fiche produit
                                                                                                                                                 </a>
-                                                                                                                                                <a href = "https://www.thomann.fr/beyerdynamic_dt770_pro80_ohm.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20">
-                                                                                                                                                  Thomann
-                                                                                                                                                  </a>
-                                                                                                                                                  <a href = "https://www.amazon.fr/s?k=Beyerdynamic+DT-770+Pro+80&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20">
-                                                                                                                                                    Amazon
-                                                                                                                                                    </a>
-                                                                                                                                                    <a href = "https://www.woodbrass.com/casques-studio-fermes-beyerdynamic-dt-770-pro-80-ohms-p165831.html?queryID=402185d8484d6aa3dc9ed3739b22ac45" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border">
-                                                                                                                                                      Woodbrass
-                                                                                                                                                      </a>
+                                                                                                                                                <a href = "https://www.thomann.fr/beyerdynamic_dt770_pro80_ohm.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                  <a href = "https://www.amazon.fr/s?k=Beyerdynamic+DT-770+Pro+80&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                    <a href = "https://www.woodbrass.com/casques-studio-fermes-beyerdynamic-dt-770-pro-80-ohms-p165831.html?queryID=402185d8484d6aa3dc9ed3739b22ac45" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                       </div>
                                                                                                                                                       </div>
 
@@ -4373,15 +4344,9 @@ trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et 
                                                                                                                                                                                                   <a href="/produit/audio-technica-ath-m50-x" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
                                                                                                                                                                                                     Voir la fiche produit
                                                                                                                                                                                                       </a>
-                                                                                                                                                                                                      <a href = "https://www.thomann.fr/audio_technica_ath_m50_x.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20">
-                                                                                                                                                                                                        Thomann
-                                                                                                                                                                                                        </a>
-                                                                                                                                                                                                        <a href = "https://www.amazon.fr/s?k=Audio-Technica+ATH-M50x&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20">
-                                                                                                                                                                                                          Amazon
-                                                                                                                                                                                                          </a>
-                                                                                                                                                                                                          <a href = "https://www.woodbrass.com/casques-studio-fermes-audio-technica-ath-m50-x-p167952.html?queryID=2407b9279978baef378224e4583e9024" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border">
-                                                                                                                                                                                                            Woodbrass
-                                                                                                                                                                                                            </a>
+                                                                                                                                                                                                      <a href = "https://www.thomann.fr/audio_technica_ath_m50_x.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                        <a href = "https://www.amazon.fr/s?k=Audio-Technica+ATH-M50x&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                          <a href = "https://www.woodbrass.com/casques-studio-fermes-audio-technica-ath-m50-x-p167952.html?queryID=2407b9279978baef378224e4583e9024" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                                                                             </div>
                                                                                                                                                                                                             </div>
 
@@ -4422,15 +4387,9 @@ trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et 
                                                                                                                                                                                                                                                         <a href="/produit/sony-mdr-7506" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
                                                                                                                                                                                                                                                           Voir la fiche produit
                                                                                                                                                                                                                                                             </a>
-                                                                                                                                                                                                                                                            <a href = "https://www.thomann.fr/sony_mdr7506_kopfhoerer.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20">
-                                                                                                                                                                                                                                                              Thomann
-                                                                                                                                                                                                                                                              </a>
-                                                                                                                                                                                                                                                              <a href = "https://www.amazon.fr/s?k=Sony+MDR-7506&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20">
-                                                                                                                                                                                                                                                                Amazon
-                                                                                                                                                                                                                                                                </a>
-                                                                                                                                                                                                                                                                <a href = "https://www.woodbrass.com/casques-studio-fermes-sony-audio-pro-mdr-7506-p10233.html?queryID=a86e78884d6e3113dffaaec47eefa47f" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border">
-                                                                                                                                                                                                                                                                  Woodbrass
-                                                                                                                                                                                                                                                                  </a>
+                                                                                                                                                                                                                                                            <a href = "https://www.thomann.fr/sony_mdr7506_kopfhoerer.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                                                                              <a href = "https://www.amazon.fr/s?k=Sony+MDR-7506&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                                                                                <a href = "https://www.woodbrass.com/casques-studio-fermes-sony-audio-pro-mdr-7506-p10233.html?queryID=a86e78884d6e3113dffaaec47eefa47f" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                                                                                                                                   </div>
                                                                                                                                                                                                                                                                   </div>
 
@@ -4471,15 +4430,9 @@ trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et 
                                                                                                                                                                                                                                                                                                               <a href="/produit/sennheiser-hd-600" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
                                                                                                                                                                                                                                                                                                                 Voir la fiche produit
                                                                                                                                                                                                                                                                                                                   </a>
-                                                                                                                                                                                                                                                                                                                  <a href = "https://www.thomann.fr/sennheiser_hd_600_new_version_2019.htm" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20">
-                                                                                                                                                                                                                                                                                                                    Thomann
-                                                                                                                                                                                                                                                                                                                    </a>
-                                                                                                                                                                                                                                                                                                                    <a href = "https://www.amazon.fr/s?k=Sennheiser+HD+600&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20">
-                                                                                                                                                                                                                                                                                                                      Amazon
-                                                                                                                                                                                                                                                                                                                      </a>
-                                                                                                                                                                                                                                                                                                                      <a href = "https://www.woodbrass.com/casques-studio-ouverts-sennheiser-hd-600-p82421.html?queryID=076e0d101061f29b6ed2b7ddb3bf4f01" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border">
-                                                                                                                                                                                                                                                                                                                        Woodbrass
-                                                                                                                                                                                                                                                                                                                        </a>
+                                                                                                                                                                                                                                                                                                                  <a href = "https://www.thomann.fr/sennheiser_hd_600_new_version_2019.htm" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                                                                                                                                    <a href = "https://www.amazon.fr/s?k=Sennheiser+HD+600&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                                                                                                                                      <a href = "https://www.woodbrass.com/casques-studio-ouverts-sennheiser-hd-600-p82421.html?queryID=076e0d101061f29b6ed2b7ddb3bf4f01" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                                                                                                                                                                                         </div>
                                                                                                                                                                                                                                                                                                                         </div>
 
@@ -4519,15 +4472,9 @@ trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et 
                                                                                                                                                                                                                                                                                                                                                         <a href="/produit/beyerdynamic-dt-990-pro" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
                                                                                                                                                                                                                                                                                                                                                           Voir la fiche produit
                                                                                                                                                                                                                                                                                                                                                             </a>
-                                                                                                                                                                                                                                                                                                                                                            <a href = "https://www.thomann.fr/beyerdynamic_dt990pro.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20">
-                                                                                                                                                                                                                                                                                                                                                              Thomann
-                                                                                                                                                                                                                                                                                                                                                              </a>
-                                                                                                                                                                                                                                                                                                                                                              <a href = "https://www.amazon.fr/s?k=Beyerdynamic+DT-990+Pro&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20">
-                                                                                                                                                                                                                                                                                                                                                                Amazon
-                                                                                                                                                                                                                                                                                                                                                                </a>
-                                                                                                                                                                                                                                                                                                                                                                <a href = "https://www.woodbrass.com/casques-studio-ouverts-beyerdynamic-dt-990-pro-p165832.html?queryID=d8cbdb073788e1e424ae1330afbb9643" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border">
-                                                                                                                                                                                                                                                                                                                                                                  Woodbrass
-                                                                                                                                                                                                                                                                                                                                                                  </a>
+                                                                                                                                                                                                                                                                                                                                                            <a href = "https://www.thomann.fr/beyerdynamic_dt990pro.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                                                                                                                                                                              <a href = "https://www.amazon.fr/s?k=Beyerdynamic+DT-990+Pro&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                                                                                                                                                                                <a href = "https://www.woodbrass.com/casques-studio-ouverts-beyerdynamic-dt-990-pro-p165832.html?queryID=d8cbdb073788e1e424ae1330afbb9643" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                                                                                                                                                                                                                                   </div>
                                                                                                                                                                                                                                                                                                                                                                   </div>
 
@@ -4768,15 +4715,9 @@ trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et 
                         <a href="/produit/elgato-stream-deck-mk2" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
                         Voir la fiche produit
                         </a>
-                        <a href = "https://www.thomann.fr/elgato_stream_deck_mk.2.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20">
-                        Thomann
-                        </a>
-                        <a href = "https://www.amazon.fr/s?k=Elgato+Stream+Deck+MK.2&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20">
-                        Amazon
-                        </a>
-                        <a href = "https://www.woodbrass.com/interfaces-multimedia-elgato-stream-deck-mk.2-p352373.html?queryID=c8e1a1e4d3c6753147ba0d452097d6fe" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border">
-                        Woodbrass
-                        </a>
+                        <a href = "https://www.thomann.fr/elgato_stream_deck_mk.2.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                        <a href = "https://www.amazon.fr/s?k=Elgato+Stream+Deck+MK.2&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                        <a href = "https://www.woodbrass.com/interfaces-multimedia-elgato-stream-deck-mk.2-p352373.html?queryID=c8e1a1e4d3c6753147ba0d452097d6fe" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                         </div>
                         </div>
 
@@ -4817,12 +4758,8 @@ trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et 
                         <a href="/produit/elgato-stream-deck-plus" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
                         Voir la fiche produit
                         </a>
-                        <a href = "https://www.thomann.fr/elgato_stream_deck.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20">
-                        Thomann
-                        </a>
-                        <a href = "https://www.amazon.fr/s?k=Elgato+Stream+Deck+Plus&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20">
-                        Amazon
-                        </a>
+                        <a href = "https://www.thomann.fr/elgato_stream_deck.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                        <a href = "https://www.amazon.fr/s?k=Elgato+Stream+Deck+Plus&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                         </div>
                         </div>
 
@@ -4863,15 +4800,9 @@ trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et 
                         <a href="/produit/elgato-stream-deck-xl" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
                         Voir la fiche produit
                         </a>
-                        <a href = "https://www.thomann.fr/elgato_stream_deck_xl.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20">
-                        Thomann
-                        </a>
-                        <a href = "https://www.amazon.fr/s?k=Elgato+Stream+Deck+XL&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20">
-                        Amazon
-                        </a>
-                        <a href = "https://www.woodbrass.com/interfaces-multimedia-elgato-stream-deck-xl-p308967.html?queryID=bbdd9c37227c7cf9f33bfbbd1552a4cf" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border">
-                        Woodbrass
-                        </a>
+                        <a href = "https://www.thomann.fr/elgato_stream_deck_xl.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                        <a href = "https://www.amazon.fr/s?k=Elgato+Stream+Deck+XL&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                        <a href = "https://www.woodbrass.com/interfaces-multimedia-elgato-stream-deck-xl-p308967.html?queryID=bbdd9c37227c7cf9f33bfbbd1552a4cf" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                         </div>
                         </div>
 
