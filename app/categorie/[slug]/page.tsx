@@ -37,8 +37,8 @@ const CATEGORY_METADATA: Record<string, { title: string; subtitle: string }> = {
     "fonds-verts": { title: "Fonds Verts", subtitle: "Incrustation propre pour vos streams." },
     "teleprompteurs": { title: "Téléprompteurs", subtitle: "Lisez vos scripts professionnellement." },
     "cable-management": { title: "Cable Management", subtitle: "Organisation de votre setup." },
-    "logiciels-apps": { title: "Logiciels & Apps", subtitle: "OBS, vMix, VoiceMod et plus." },
-    "design-overlays": { title: "Design & Overlays", subtitle: "Alertes, transitions, logos pour vos streams." },
+    // "logiciels-apps": { title: "Logiciels & Apps", subtitle: "OBS, vMix, VoiceMod et plus." },
+    // "design-overlays": { title: "Design & Overlays", subtitle: "Alertes, transitions, logos pour vos streams." },
     "stream-deck": { title: "Stream Deck", subtitle: "Contrôle total de votre régie." },
     // Problématiques (problem-based routes)
     "espace-bruyant": { title: "Espace Bruyant / Écho", subtitle: "Micros dynamiques, traitement acoustique et casques isolants pour dompter le bruit." },
@@ -61,7 +61,8 @@ const VERTICALS: Record<string, string[]> = {
     ],
     streaming: [
         "fonds-verts", "teleprompteurs", "cable-management",
-        "logiciels-apps", "design-overlays", "stream-deck",
+        // "logiciels-apps", "design-overlays", 
+        "stream-deck",
     ],
     // Problématiques (problem-based verticals)
     "espace-bruyant": [
@@ -83,7 +84,12 @@ const PRICE_CAPS: Record<string, number> = {
     "petit-budget": 250,
 };
 
+// Blacklisted categories for MVP (Hardware focus)
+const CATEGORY_BLACKLIST = ["logiciels-apps", "design-overlays"];
+
 async function getProducts(slug: string): Promise<Product[]> {
+    if (CATEGORY_BLACKLIST.includes(slug)) return [];
+
     const supabase = createClient();
 
     // Check if it's a vertical or a direct category

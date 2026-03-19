@@ -261,88 +261,101 @@ export default async function ProductPage({ params }: Props) {
                                     )}
                                 </div>
 
-                                {/* LISTE DES OFFRES MARCHANDS */}
-                                <div id="offers" className="space-y-4 mb-8 scroll-mt-32">
-                                    <h3 className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-4">
-                                        Meilleures Offres Disponibles
-                                    </h3>
+                                                {/* LISTE DES OFFRES MARCHANDS */}
+                                                <div id="offers" className="space-y-4 mb-8 scroll-mt-32">
+                                                    <h3 className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-4">
+                                                        Meilleures Offres Disponibles
+                                                    </h3>
 
-                                    {sortedOffers.length > 0 ? (
-                                        sortedOffers.map((offer, idx) => (
-                                            <div
-                                                key={idx}
-                                                className={`flex items-center justify-between p-4 bg-white rounded-xl border shadow-sm transition-all hover:border-primary/50 ${idx === 0
-                                                    ? "border-primary/30 ring-1 ring-primary/5"
-                                                    : "border-border"
-                                                    }`}
-                                            >
-                                                <div className="flex items-center gap-4">
-                                                    <div className="w-12 h-12 rounded-lg bg-white border border-neutral-100 flex items-center justify-center p-2 overflow-hidden relative">
-                                                        {offer.merchant_logo_url ? (
-                                                            <Image
-                                                                src={offer.merchant_logo_url}
-                                                                alt={`Logo ${offer.merchant_name}`}
-                                                                fill
-                                                                sizes="48px"
-                                                                className="object-contain p-2"
-                                                                loading="lazy"
-                                                            />
-                                                        ) : (
-                                                            <span className="font-bold text-xs text-muted-foreground">
-                                                                {offer.merchant_name
-                                                                    .substring(0, 2)
-                                                                    .toUpperCase()}
-                                                            </span>
-                                                        )}
-                                                    </div>
-                                                    <div>
-                                                        <span className="font-bold text-foreground block text-sm">
-                                                            {offer.merchant_name}
-                                                        </span>
-                                                        <span
-                                                            className={`text-[10px] flex items-center gap-1 font-bold uppercase ${offer.in_stock
-                                                                ? "text-green-600"
-                                                                : "text-red-500"
-                                                                }`}
-                                                        >
-                                                            {offer.in_stock ? (
-                                                                <>
-                                                                    <CheckCircle2 className="w-3 h-3" /> En Stock
-                                                                </>
-                                                            ) : (
-                                                                <>
-                                                                    <XCircle className="w-3 h-3" /> Épuisé
-                                                                </>
-                                                            )}
-                                                        </span>
-                                                    </div>
+                                                    {sortedOffers.length > 0 ? (
+                                                        sortedOffers.map((offer, idx) => {
+                                                            // Strict mapping for merchant logos to ensure reliability
+                                                            const MERCHANT_LOGOS: Record<string, string> = {
+                                                                amazon: "https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png",
+                                                                thomann: "https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png",
+                                                                woodbrass: "https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg",
+                                                            };
+
+                                                            const merchantKey = offer.merchant_name.toLowerCase().trim();
+                                                            const forcedLogo = MERCHANT_LOGOS[merchantKey] || (merchantKey.includes("amazon") ? MERCHANT_LOGOS.amazon : null);
+                                                            const finalLogoUrl = forcedLogo || offer.merchant_logo_url;
+
+                                                            return (
+                                                                <div
+                                                                    key={idx}
+                                                                    className={`flex items-center justify-between p-4 bg-white rounded-xl border shadow-sm transition-all hover:border-primary/50 ${idx === 0
+                                                                        ? "border-primary/30 ring-1 ring-primary/5"
+                                                                        : "border-border"
+                                                                        }`}
+                                                                >
+                                                                    <div className="flex items-center gap-4">
+                                                                        <div className="w-12 h-12 rounded-lg bg-white border border-neutral-100 flex items-center justify-center p-2 overflow-hidden relative">
+                                                                            {finalLogoUrl ? (
+                                                                                <Image
+                                                                                    src={finalLogoUrl}
+                                                                                    alt={`Logo ${offer.merchant_name}`}
+                                                                                    fill
+                                                                                    sizes="48px"
+                                                                                    className="object-contain p-2"
+                                                                                    loading="lazy"
+                                                                                />
+                                                                            ) : (
+                                                                                <span className="font-bold text-xs text-muted-foreground">
+                                                                                    {offer.merchant_name
+                                                                                        .substring(0, 2)
+                                                                                        .toUpperCase()}
+                                                                                </span>
+                                                                            )}
+                                                                        </div>
+                                                                        <div>
+                                                                            <span className="font-bold text-foreground block text-sm">
+                                                                                {offer.merchant_name}
+                                                                            </span>
+                                                                            <span
+                                                                                className={`text-[10px] flex items-center gap-1 font-bold uppercase ${offer.in_stock
+                                                                                    ? "text-green-600"
+                                                                                    : "text-red-500"
+                                                                                    }`}
+                                                                            >
+                                                                                {offer.in_stock ? (
+                                                                                    <>
+                                                                                        <CheckCircle2 className="w-3 h-3" /> En Stock
+                                                                                    </>
+                                                                                ) : (
+                                                                                    <>
+                                                                                        <XCircle className="w-3 h-3" /> Épuisé
+                                                                                    </>
+                                                                                )}
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="text-right">
+                                                                        <span className="block font-bold text-lg text-foreground">
+                                                                            ≈ {offer.price}{" "}
+                                                                            {offer.currency === "EUR" ? "€" : offer.currency}
+                                                                        </span>
+                                                                        <a
+                                                                            href={offer.affiliate_link}
+                                                                            target="_blank"
+                                                                            rel="nofollow sponsored noopener"
+                                                                            className={`inline-flex items-center justify-center h-8 px-4 text-xs font-bold mt-1 rounded-md transition-all ${idx === 0
+                                                                                ? "bg-primary text-white hover:bg-primary/90"
+                                                                                : "bg-secondary text-foreground hover:bg-border"
+                                                                                }`}
+                                                                        >
+                                                                            Voir l&apos;offre{" "}
+                                                                            <ExternalLink className="w-3 h-3 ml-2" />
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            );
+                                                        })
+                                                    ) : (
+                                                        <div className="p-4 bg-secondary/50 rounded-xl border border-dashed border-border text-center text-sm text-muted-foreground italic">
+                                                            Aucune offre disponible pour le moment.
+                                                        </div>
+                                                    )}
                                                 </div>
-                                                <div className="text-right">
-                                                    <span className="block font-bold text-lg text-foreground">
-                                                        ≈ {offer.price}{" "}
-                                                        {offer.currency === "EUR" ? "€" : offer.currency}
-                                                    </span>
-                                                    <a
-                                                        href={offer.affiliate_link}
-                                                        target="_blank"
-                                                        rel="nofollow sponsored noopener"
-                                                        className={`inline-flex items-center justify-center h-8 px-4 text-xs font-bold mt-1 rounded-md transition-all ${idx === 0
-                                                            ? "bg-primary text-white hover:bg-primary/90"
-                                                            : "bg-secondary text-foreground hover:bg-border"
-                                                            }`}
-                                                    >
-                                                        Voir l&apos;offre{" "}
-                                                        <ExternalLink className="w-3 h-3 ml-2" />
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        ))
-                                    ) : (
-                                        <div className="p-4 bg-secondary/50 rounded-xl border border-dashed border-border text-center text-sm text-muted-foreground italic">
-                                            Aucune offre disponible pour le moment.
-                                        </div>
-                                    )}
-                                </div>
                             </div>
                         </div>
 

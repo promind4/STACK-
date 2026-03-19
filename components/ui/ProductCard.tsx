@@ -6,6 +6,7 @@ import { ArrowRight, Star } from 'lucide-react';
 import { Product } from '@/types/database';
 import Image from 'next/image';
 import Link from 'next/link';
+import { cleanImageUrl } from '@/lib/utils';
 
 interface ProductCardProps {
     product: Product;
@@ -26,7 +27,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, className = '
                 {/* IMAGE AREA */}
                 <div className="aspect-square relative bg-white overflow-hidden p-2">
                     <Image
-                        src={product.image_url}
+                        src={cleanImageUrl(product.image_url)}
                         alt={`${product.name}${product.brand ? ` ${product.brand}` : ''} – Avis, test et meilleur prix | Fluxlab`}
                         fill
                         sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"

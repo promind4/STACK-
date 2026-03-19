@@ -16,7 +16,8 @@ const CATEGORY_SLUGS = [
     "grand-angle", "zoom-polyvalent",
     // Streaming sub-categories
     "fonds-verts", "teleprompteurs", "cable-management",
-    "logiciels-apps", "design-overlays", "stream-deck",
+    // "logiciels-apps", "design-overlays", 
+    "stream-deck",
     // Problématiques (problem-based routes)
     "espace-bruyant", "plug-and-play", "petit-budget", "createur-nomade",
 ];

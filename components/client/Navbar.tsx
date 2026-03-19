@@ -140,8 +140,8 @@ const MENU_DATA: MenuItem[] = [
             {
                 title: "Logiciels",
                 items: [
-                    { label: "Logiciels & Apps", desc: "OBS, vMix, VoiceMod...", slug: "logiciels-apps" },
-                    { label: "Design & Overlays", desc: "Alertes, Transition, Logos", slug: "design-overlays" },
+                    // { label: "Logiciels & Apps", desc: "OBS, vMix, VoiceMod...", slug: "logiciels-apps" },
+                    // { label: "Design & Overlays", desc: "Alertes, Transition, Logos", slug: "design-overlays" },
                 ],
             },
             {

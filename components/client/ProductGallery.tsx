@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { cleanImageUrl } from "@/lib/utils";
 
 interface ProductGalleryProps {
     name: string;
@@ -16,12 +17,15 @@ export function ProductGallery({
     mainImageUrl,
     galleryImages,
 }: ProductGalleryProps) {
-    const [activeImage, setActiveImage] = useState(mainImageUrl);
+    const [activeImage, setActiveImage] = useState(cleanImageUrl(mainImageUrl));
+
+    const cleanedMainImage = cleanImageUrl(mainImageUrl);
+    const cleanedGalleryImages = galleryImages.map(img => cleanImageUrl(img));
 
     // Combine main and gallery images, removing duplicates
     const allImages = [
-        mainImageUrl,
-        ...galleryImages.filter((img) => img !== mainImageUrl),
+        cleanedMainImage,
+        ...cleanedGalleryImages.filter((img) => img !== cleanedMainImage),
     ];
 
     return (

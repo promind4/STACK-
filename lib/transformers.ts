@@ -1,4 +1,5 @@
 import { Product, ProductOffer, ReviewsSummary } from "@/types/database";
+import { cleanImageUrl } from "./utils";
 
 /**
  * Transform raw Supabase row into frontend Product type.
@@ -15,16 +16,25 @@ export const transformProduct = (raw: any): Product => {
     const dbReviewCount = raw.review_count || 0;
 
     // Transform Offers
-    const AMAZON_LOGO = "https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png";
+    const MERCHANT_LOGOS: Record<string, string> = {
+        amazon: "https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png",
+        thomann: "https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png",
+        woodbrass: "https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg",
+    };
+
     const frontendOffers: ProductOffer[] = offers.map((o: any) => {
         let logoUrl = o.merchant_logo_url || "";
-        // Fix Amazon logos that still point to Wikimedia (DB trigger prevents direct update)
-        if (
-            o.merchant_name?.toLowerCase().includes("amazon") &&
-            (logoUrl.includes("wikimedia") || logoUrl.includes("wikipedia") || logoUrl === "/branding/amazon-logo.svg")
-        ) {
-            logoUrl = AMAZON_LOGO;
+        const mName = o.merchant_name?.toLowerCase().trim() || "";
+
+        // Force official logos for main merchants
+        if (mName.includes("amazon")) {
+            logoUrl = MERCHANT_LOGOS.amazon;
+        } else if (mName === "thomann") {
+            logoUrl = MERCHANT_LOGOS.thomann;
+        } else if (mName === "woodbrass") {
+            logoUrl = MERCHANT_LOGOS.woodbrass;
         }
+
         return {
             merchant_name: o.merchant_name,
             merchant_logo_url: logoUrl,
@@ -88,7 +98,7 @@ export const transformProduct = (raw: any): Product => {
         description: raw.description || "Pas de description disponible.",
         short_description: raw.short_description,
         image_url:
-            raw.image_url ||
+            cleanImageUrl(raw.image_url) ||
             "https://placehold.co/400x400/e2e8f0/94a3b8?text=No+Image",
         specs: typeof raw.specs === "object" ? raw.specs : {},
         price: lowestPrice || raw.price || 0,
@@ -100,7 +110,7 @@ export const transformProduct = (raw: any): Product => {
         inStock: (raw.product_offers || []).some((o: any) => o.in_stock),
         isPromo: false,
         badge: undefined,
-        gallery_images: raw.gallery_images || [],
+        gallery_images: (raw.gallery_images || []).map((img: string) => cleanImageUrl(img)),
         pros: reviewsSummary.pros,
         cons: reviewsSummary.cons,
         is_active: raw.is_active,

@@ -5,8 +5,8 @@ import { Product } from "@/types/database";
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, Scale, Microscope, Sparkles } from "lucide-react";
 import { HeroSection } from "@/components/client/HeroSection";
-import { WhyUsSection } from "@/components/server/WhyUsSection";
-import { ProductCard } from "@/components/ui/ProductCard";
+import dynamic from "next/dynamic";
+const ProductCard = dynamic(() => import("@/components/ui/ProductCard").then(mod => mod.ProductCard));
 import { ARTICLES } from "@/lib/data";
 import Image from "next/image";
 
@@ -16,6 +16,8 @@ export const metadata: Metadata = {
     "Comparateur indépendant multi-boutiques et guides d'achat spécialisés pour créateurs. Trouvez le meilleur prix parmi Amazon, Thomann, Woodbrass et plus.",
   alternates: { canonical: "https://fluxlab.fr" },
 };
+
+export const revalidate = 0;
 
 async function getFeaturedProducts(): Promise<Product[]> {
   const supabase = createClient();

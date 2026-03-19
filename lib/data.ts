@@ -865,7 +865,7 @@ export const ARTICLES: Article[] = [
     author: "Équipe Fluxlab",
     image: "https://images.unsplash.com/photo-1527011046414-4781f1f94f8c?auto=format&fit=crop&q=80&w=1200",
     intro: "La caméra n'est qu'un capteur. C'est la lumière qui crée l'image. Maîtrisez le CRI, la Température Kelvin et la Diffusion pour un rendu Netflix.",
-    relatedProducts: ["elgato-key-light", "elgato-key-light-air", "aputure-120d-ii"],
+    relatedProducts: ["elgato-ring-light", "elgato-key-light-air", "aputure-300d-ii"],
     relatedCategorySlug: "lighting",
     content: `
 
@@ -882,16 +882,16 @@ export const ARTICLES: Article[] = [
           </li>
           <li class="flex items-start gap-3">
             <span class="font-bold text-primary min-w-[200px]" > Le Standard Streaming: </span>
-              <a href = "#elgato-key-light" class="product-link hover:underline font-medium text-foreground"> Elgato Key Light(Panneau à diffusion intégrée) </a>
+              <a href = "#elgato-ring-light" class="product-link hover:underline font-medium text-foreground"> Elgato Ring Light (Catchlight & Soft) </a>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="font-bold text-primary min-w-[200px]" > Le Standard Studio(Pro) : </span>
-                    <a href = "#aputure-120d" class="product-link hover:underline font-medium text-foreground"> Aputure 120D II + Light Dome </a>
+                    <a href = "#aputure-300d" class="product-link hover:underline font-medium text-foreground"> Aputure LS C300d (Puissance Pro) </a>
                       </li>
                       </ul>
                       </div>
 
-                      <h2 > Partie 1 : La Qualité de la Lumière(Soft vs Hard) </h2>
+                      <h2 class="text-3xl font-bold mt-12 mb-6"> Chapitre 1 : La Qualité de la Lumière (Soft vs Hard) </h2>
                         <p > En éclairage, la taille de la source est inversement proportionnelle à la dureté des ombres.C'est la loi fondamentale.</p>
                           <p > Une petite source(flash de téléphone, ampoule nue) est une source ponctuelle.Elle crée des ombres dures, "coupées au couteau".Sur un visage, cela accentue la texture de la peau, les rides, et les imperfections.C'est l'ennemi du YouTuber.</p>
                             <p > Pour obtenir le "look cinéma", il faut une source large.C'est le rôle de la <strong>Softbox</strong> (ou boîte à lumière). Elle diffuse les photons sur une grande surface (60cm, 90cm, 120cm). La lumière "enveloppe" le visage, les ombres deviennent progressives (dégradés doux). Les panneaux <strong>Elgato Key Light</strong> utilisent un verre dépoli spécial ("Opal Glass") pour créer cet effet de diffusion sans l'encombrement d'une softbox de 50cm de profondeur.</p>
@@ -930,7 +930,7 @@ export const ARTICLES: Article[] = [
                                                                               </table>
                                                                               </div>
 
-                                                                              <h2 > Partie 2 : La Colorimétrie(CRI et TLCI) </h2>
+                                                                              <h2 class="text-3xl font-bold mt-12 mb-6"> Chapitre 2 : La Colorimétrie (CRI et TLCI) </h2>
                                                                                 <p > Toutes les lumières blanches ne se valent pas.L'œil humain s'adapte, mais pas le capteur de la caméra.</p>
                                                                                   <p > <strong>Le CRI(Color Rendering Index) : </strong> C'est la capacité d'une lampe à reproduire fidèlement le spectre solaire. Une lumière bas de gamme (CRI 70) a des "trous" dans le spectre. Résultat : votre peau apparaît verdâtre ou grisâtre, impossible à corriger au montage. Pour la vidéo, exigez toujours un CRI supérieur à 95 (Aputure, Godox, Elgato).</p >
                                                                                     <p><strong>La Température(Kelvin) : </strong>
@@ -938,56 +938,56 @@ export const ARTICLES: Article[] = [
     <br > - 5600K(Daylight) : Blanc, neutre, énergique.
     <br > L'erreur fatale est le "Mixed Lighting". Si vous avez une fenêtre (5600K) et une lampe de plafond (3000K), votre visage sera bleu d'un côté et orange de l'autre. La caméra ne saura pas faire sa balance des blancs. Utilisez des lumières Bi-Color pour matcher votre environnement.</p>
 
-  <h2 > Partie 3 : Le Schéma à 3 Points(Three - Point Lighting) </h2>
+                                                                              <h2 class="text-3xl font-extrabold text-foreground mt-12 mb-8 border-b border-border pb-4"> Chapitre 3 : Le Schéma à Trois Points (Three-Point Lighting) </h2>
     <p > C'est la grammaire visuelle standard d'Hollywood.</p>
 
-      <h3 > 1. KEY LIGHT(Lumière Clé) </h3>
+      <h3 class="text-2xl font-bold text-foreground mt-8 mb-4"> 1. KEY LIGHT(Lumière Clé) </h3>
         <p > C'est la source principale. Elle définit l'exposition de la caméra.Ne la placez jamais dans l'axe de la caméra (rendu plat, "permis de conduire"). Placez-la à 45° sur le côté et à 45° en hauteur. Cela crée le fameux "Triangle de Rembrandt" sur la joue opposée, donnant du volume et de la 3D au visage.</p>
 
           <!--PRODUCT CARD 1 -->
-            <div id="elgato-key-light" class="my-10 border border-border rounded-3xl overflow-hidden bg-card shadow-lg flex flex-col md:flex-row" >
+            <div id="elgato-ring-light" class="my-10 border border-border rounded-3xl overflow-hidden bg-card shadow-lg flex flex-col md:flex-row" >
               <div class="md:w-2/5 md:border-r border-border bg-white flex items-center justify-center p-6 relative" >
                 <div class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider z-10" > Streamer Choice </div>
-                  <img src = "https://m.media-amazon.com/images/I/61K-a2PZ3CL._AC_SL1500_.jpg" alt = "Elgato Key Light" class="w-full max-w-[250px] object-contain mix-blend-multiply hover:scale-105 transition-transform duration-500" loading = "lazy" />
+                  <img src = "https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/elgato-ring-light-gallery-1770058816872.png" alt = "Elgato Ring Light" class="w-full max-w-[250px] object-contain mix-blend-multiply hover:scale-105 transition-transform duration-500" loading = "lazy" />
                     </div>
                     <div class="p-6 md:p-8 md:w-3/5 flex flex-col justify-center">
-                      <h3 class="text-2xl font-bold font-serif mb-2 mt-0 border-none" > Elgato Key Light </h3>
-                        <p class="text-primary font-bold mb-4"> La Key Light ultime pour les bureaux serrés.</p>
+                      <h3 class="text-2xl font-bold font-serif mb-2 mt-0 border-none" > Elgato Ring Light </h3>
+                        <p class="text-primary font-bold mb-4"> L'éclairage circulaire premium pour un regard éclatant.</p>
                           <p class="text-muted-foreground text-sm mb-6 leading-relaxed">
-                            Pensée pour les streamers, elle utilise un verre opalin en façade éclairé par la tranche(Edge - lit) pour offrir une diffusion douce d'une surface de panneau conséquente, tout en ne prenant que quelques centimètres d'épaisseur contre votre mur.
+                            Le Elgato Ring Light offre une diffusion ultra-douce qui lisse la peau et crée ce reflet circulaire iconique dans les yeux ("Catchlight"). Votre caméra se fixe au centre de l'anneau pour un éclairage parfaitement uniforme sans aucune ombre portée.
         </p>
                               <ul class="space-y-2 mb-6 text-sm">
-                                <li class="flex items-center gap-2" > <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "5 13l4 4L19 7" /> </svg> Technologie Edge-lit sans éblouissement</li >
-                                  <li class="flex items-center gap-2" > <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "5 13l4 4L19 7" /> </svg> Température de couleur ajustable (2900-7000K)</li >
-                                    <li class="flex items-center gap-2" > <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "5 13l4 4L19 7" /> </svg> Contrôle 100% via PC ou Stream Deck en Wi-Fi</li >
+                                <li class="flex items-center gap-2" > <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg> Monture de caméra rotative intégrée</li >
+                                  <li class="flex items-center gap-2" > <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg> Température de couleur ajustable (2900-7000K)</li >
+                                    <li class="flex items-center gap-2" > <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg> Contrôle Wi-Fi via PC, Mac, iOS, Android</li >
                                       </ul>
                                       </div>
                                       </div>
 
-                                      <h3 > 2. FILL LIGHT(Lumière de Débouchage) </h3>
+                                      <h3 class="text-2xl font-bold text-foreground mt-8 mb-4"> 2. FILL LIGHT(Lumière de Débouchage) </h3>
                                         <p > Située à l'opposé de la Key Light, elle contrôle le contraste (Ratio). Si vous voulez un rendu dramatique (Film Noir), n'en mettez pas.Si vous voulez un rendu YouTube / TV moderne, utilisez - la à 50 % de la puissance de la Key Light pour adoucir les ombres sans les effacer totalement.</p>
 
                                           <!--PRODUCT CARD 2 -->
-                                            <div id="aputure-120d" class="my-10 border border-border rounded-3xl overflow-hidden bg-card shadow-lg flex flex-col md:flex-row" >
-                                              <div class="md:w-2/5 md:border-r border-border bg-white flex items-center justify-center p-6 relative" >
-                                                <div class="absolute top-4 left-4 bg-foreground text-background text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider z-10" > Studio Pro </div>
-                                                  <img src = "https://m.media-amazon.com/images/I/71YNDV9-A5L._AC_SL1500_.jpg" alt = "Aputure 120D Mark II" class="w-full max-w-[250px] object-contain mix-blend-multiply hover:scale-105 transition-transform duration-500" loading = "lazy" />
-                                                    </div>
-                                                    <div class="p-6 md:p-8 md:w-3/5 flex flex-col justify-center">
-                                                      <h3 class="text-2xl font-bold font-serif mb-2 mt-0 border-none" > Aputure 120D II + Light Dome </h3>
-                                                        <p class="text-foreground font-bold mb-4"> Le standard YouTube 4K et documentaire.</p>
-                                                          <p class="text-muted-foreground text-sm mb-6 leading-relaxed">
-                                                            C'est un projecteur COB (Chip On Board) d'une puissance brute exceptionnelle(équivalent 1000W tungstène).Seul, c'est un projecteur très dur. Mais couplé avec l'énorme modificateur Aputure Light Dome II(90cm), il produit l'ombre la plus naturelle et soyeuse possible.
+                                            <div id="aputure-300d" class="my-10 border border-border rounded-3xl overflow-hidden bg-card shadow-lg flex flex-col md:flex-row" >
+              <div class="md:w-2/5 md:border-r border-border bg-white flex items-center justify-center p-6 relative" >
+                <div class="absolute top-4 left-4 bg-foreground text-background text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider z-10" > Studio Pro </div>
+                  <img src = "https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/aputure-300d-ii-main-1769381429162.png" alt = "Aputure LS C300d" class="w-full max-w-[250px] object-contain mix-blend-multiply hover:scale-105 transition-transform duration-500" loading = "lazy" />
+                    </div>
+                    <div class="p-6 md:p-8 md:w-3/5 flex flex-col justify-center">
+                      <h3 class="text-2xl font-bold font-serif mb-2 mt-0 border-none" > Aputure LS C300d </h3>
+                        <p class="text-foreground font-bold mb-4"> La puissance brute ultime pour les grands studios.</p>
+                          <p class="text-muted-foreground text-sm mb-6 leading-relaxed">
+                            Le LS C300d est un projecteur d'une puissance impressionnante, capable de rivaliser avec la lumière du jour. Avec sa monture Bowens, il s'adapte à tous les modeleurs pour créer une lumière ultra-puissante et parfaitement calibrée (CRI 96+).
                                                               </p>
                                                               <ul class="space-y-2 text-sm">
-                                                                <li class="flex items-center gap-2" > <svg class="w-4 h-4 text-primary flex-shrink-0" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "5 13l4 4L19 7" /> </svg> Qualité de couleur absolue (CRI 96+, TLCI 97+)</li >
-                                                                  <li class="flex items-center gap-2" > <svg class="w-4 h-4 text-primary flex-shrink-0" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "5 13l4 4L19 7" /> </svg> Monture Bowens S universelle pour modeleurs</li >
-                                                                    <li class="flex items-center gap-2" > <svg class="w-4 h-4 text-primary flex-shrink-0" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "5 13l4 4L19 7" /> </svg> Contrôleur séparé silencieux et robuste</li >
+                                                                <li class="flex items-center gap-2" > <svg class="w-4 h-4 text-primary flex-shrink-0" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg> Puissance lumineuse massive (300W LED)</li >
+                                                                  <li class="flex items-center gap-2" > <svg class="w-4 h-4 text-primary flex-shrink-0" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg> Fidélité spectrale exceptionnelle (CRI/TLCI 96+)</li >
+                                                                    <li class="flex items-center gap-2" > <svg class="w-4 h-4 text-primary flex-shrink-0" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg> Contrôle DMX et application mobile Bluetooth</li >
                                                                       </ul>
                                                                       </div>
                                                                       </div>
 
-                                                                      <h3 > 3. RIM LIGHT / HAIR LIGHT(Le secret des pros) </h3>
+                                                                      <h3 class="text-2xl font-bold text-foreground mt-8 mb-4"> 3. RIM LIGHT / HAIR LIGHT(Le secret des pros) </h3>
                                                                         <p > C'est la lumière la plus importante pour le "Look Pro". Elle se place derrière le sujet, en hauteur, et pointe vers la nuque/épaules. Elle ne doit pas toucher le nez.</p>
                                                                           <p > Son rôle est de créer un liseré brillant sur les contours(cheveux, épaules).Cela "découpe" le sujet du fond.Sans elle, si vous portez un t - shirt noir sur un fond sombre, vous êtes un homme - tronc flottant.Avec elle, vous existez dans l'espace 3D. Les petits panneaux RGB ou tubes LED sont parfaits pour ça.</p>
 
@@ -1023,7 +1023,6 @@ export const ARTICLES: Article[] = [
                                                                                                                   </div>
 
                                                                                                                   <script type = "application/ld+json">
-                                                                                                                  {
                                                                                                                     "@context": "https://schema.org",
                                                                                                                     "@type": "FAQPage",
                                                                                                                     "mainEntity": [
@@ -1658,7 +1657,7 @@ export const ARTICLES: Article[] = [
     author: "Équipe Fluxlab",
     image: "/images/articles/meilleur_micro_podcast.png",
     intro: "Quel micro choisir pour lancer ou améliorer votre podcast en 2026 ? Nous avons analysé et comparé 7 micros — du budget serré au setup broadcast — pour vous donner un verdict clair basé sur la qualité sonore, le rapport qualité/prix et votre profil d'utilisation.",
-    relatedProducts: ["rode-podmic-usb", "shure-mv7x", "shure-sm7b", "electro-voice-re20"],
+    relatedProducts: ["rode-podmic-usb", "shure-mv7", "shure-sm7b", "electro-voice-re20", "focusrite-scarlett-2i2-4th-gen"],
     relatedCategorySlug: "micros-dynamiques",
     content: `
                                                                                                                                                                           <!--ENCART TL; DR-->
@@ -1778,149 +1777,149 @@ export const ARTICLES: Article[] = [
                                                                                                                                                 </div>
                                                                                                                                                 </div> <!-- closes #id bg-card -->
 
-                                                                                                                                                <!--PRODUCT CARD: SHURE MV7 + -->
-                                                                                                                                                  <div id="shure-mv7" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
-                                                                                                                                                    <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-                                                                                                                                                      <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
-                                                                                                                                                        <img src="https://m.media-amazon.com/images/I/61b7Lsp0tFL._AC_SL1500_.jpg" alt = "Shure MV7+" class="w-full h-full object-contain" loading = "lazy" />
-                                                                                                                                                          </div>
-                                                                                                                                                          <div >
-                                                                                                                                                          <h3 class="mt-0 mb-2 text-2xl font-bold" > 2. Shure MV7 + </h3>
-                                                                                                                                                            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> Le Couteau Suisse Hybride(≈ 230€) </p>
-                                                                                                                                                              <p > Le petit frère spirituel du SM7B, modernisé pour l'ère du Solopreneur. Le MV7+ ajoute une connectique USB-C moderne, une bande LED tactile pour muter le son intelligemment et surtout, le support de la prodigieuse application MOTIV.</p>
-                                                                                                                                                                </div>
-                                                                                                                                                                </div> <!-- closes md:grid-cols-[1fr_2fr] -->
+                                                                                                                                                                                                                                                                        <!--PRODUCT CARD: SHURE MV7 + -->
+                                                                                                                        <div id="shure-mv7" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
+                                                                                                                          <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
+                                                                                                                            <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
+                                                                                                                              <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/shure-mv7-gallery-1773907731507.png" alt = "Shure MV7+" class="w-full h-full object-contain" loading = "lazy" />
+                                                                                                                                </div>
+                                                                                                                                <div >
+                                                                                                                                <h3 class="mt-0 mb-2 text-2xl font-bold" > 2. Shure MV7 + </h3>
+                                                                                                                                  <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> Le Couteau Suisse Hybride(≈ 230€) </p>
+                                                                                                                                    <p > Le petit frère spirituel du SM7B, modernisé pour l'ère du Solopreneur. Le MV7+ ajoute une connectique USB-C moderne, une bande LED tactile pour muter le son intelligemment et surtout, le support de la prodigieuse application MOTIV.</p>
+                                                                                                                                      </div>
+                                                                                                                                      </div> <!-- closes md:grid-cols-[1fr_2fr] -->
 
-                                                                                                                                                                <div class="grid sm:grid-cols-2 gap-4 mt-8">
-                                                                                                                                                                  <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5" >
-                                                                                                                                                                    <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-emerald-500" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg> Points Forts</h4 >
-                                                                                                                                                                      <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-                                                                                                                                                                        <li><strong>Le Mode Auto - Level : </strong> Vous vous éloignez ? Le micro monte le son. Vous criez ? Le micro baisse le son magiquement. C'est un filet de sécurité ultime pour qui ne sait pas mixer.</li >
-                                                                                                                                                                          <li><strong>Isolation Vocale: </strong> L'algorithme interne efface l'écho des murs avec une violence redoutable.</li >
-                                                                                                                                                                            <li><strong>Design : </strong> Il est magnifique à la caméra, un classique instantané du streaming.</li >
-                                                                                                                                                                              </ul>
-                                                                                                                                                                              </div>
-                                                                                                                                                                              <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
-                                                                                                                                                                                <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-secondary" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /> </svg> Limites réelles</h4 >
-                                                                                                                                                                                  <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-                                                                                                                                                                                    <li>Le son est plus moderne, plus "brillant" et percutant qu'un vrai SM7B (qui est beaucoup plus sombre et lourd dans les graves).</li>
-                                                                                                                                                                                      </ul>
-                                                                                                                                                                                      </div>
-                                                                                                                                                                                      </div>
+                                                                                                                                      <div class="grid sm:grid-cols-2 gap-4 mt-8">
+                                                                                                                                        <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5" >
+                                                                                                                                          <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-emerald-500" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg> Points Forts</h4 >
+                                                                                                                                            <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
+                                                                                                                                              <li><strong>Le Mode Auto - Level : </strong> Vous vous éloignez ? Le micro monte le son. Vous criez ? Le micro baisse le son magiquement. C'est un filet de sécurité ultime pour qui ne sait pas mixer.</li >
+                                                                                                                                                <li><strong>Isolation Vocale: </strong> L'algorithme interne efface l'écho des murs avec une violence redoutable.</li >
+                                                                                                                                                  <li><strong>Design : </strong> Il est magnifique à la caméra, un classique instantané du streaming.</li >
+                                                                                                                                                    </ul>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+                                                                                                                                                      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-secondary" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /> </svg> Limites réelles</h4 >
+                                                                                                                                                        <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
+                                                                                                                                                          <li>Le son est plus moderne, plus "brillant" et percutant qu'un vrai SM7B (qui est beaucoup plus sombre et lourd dans les graves).</li>
+                                                                                                                                                            </ul>
+                                                                                                                                                            </div>
+                                                                                                                                                            </div>
 
 
-                                                                                                                                                                                      <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm">
-                                                                                                                                                                                        <strong class="text-foreground" > Notre conseil d'usage :</strong> Le choix parfait pour le créateur solo qui veut le son "Shure" mythique avec la simplicité de l'USB et des réglages automatisés redoutables.
+                                                                                                                                                            <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm">
+                                                                                                                                                              <strong class="text-foreground" > Notre conseil d'usage :</strong> Le choix parfait pour le créateur solo qui veut le son "Shure" mythique avec la simplicité de l'USB et des réglages automatisés redoutables.
 </div>
 
-                                                                                                                                                                                          <div class="flex flex-wrap items-center gap-3 mt-8">
-                                                                                                                                                                                            <a href="/produit/shure-mv7x" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
-                                                                                                                                                                                              Voir la fiche produit
-                                                                                                                                                                                                </a>
-                                                                                                                                                                                                <a href = "https://www.woodbrass.com/microphones-a-large-membrane-shure-mv7x-p354182.html" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
-                                                                                                                                                                                                  <a href = "https://www.amazon.fr/s?k=Shure%20MV7X&tag=stackera-21" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                <div class="flex flex-wrap items-center gap-3 mt-8">
+                                                                                                                                                                  <a href="/produit/shure-mv7" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
+                                                                                                                                                                    Voir la fiche produit
+                                                                                                                                                                      </a>
+                                                                                                                                                                      <a href = "https://www.woodbrass.com/recherche-shure+mv7%2B?queryID=b4b704ccc7d6c56c685519e0f7fd1bac" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                        <a href = "https://www.amazon.fr/s?k=Shure%20MV7+&tag=stackera-21" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                          </div>
+                                                                                                                                                                          </div> <!-- closes #id bg-card -->
+
+                                                                                                                                                                          <!--PRODUCT CARD: SM58-->
+                                                                                                                                                                            <div id="sm58-setup" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
+                                                                                                                                                                              <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
+                                                                                                                                                                                <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
+                                                                                                                                                                                  <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/focusrite-scarlett-2i2-4th-gen-main-1769876888992.png" alt = "Focusrite Scarlett 2i2 4th Gen" class="w-full h-full object-contain" loading = "lazy" />
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                    <div >
+                                                                                                                                                                                    <h3 class="mt-0 mb-2 text-2xl font-bold" > 3. Le Combo: Bande de Shure SM58 + Interface Scarlett </h3>
+                                                                                                                                                                                      <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> Le Setup Indestructible(Duo & Table Ronde) </p>
+                                                                                                                                                                                        <p > L'erreur majeure des podcasters qui veulent lancer un format "Table ronde" à Plusieurs (2, 3, 4 personnes) est d'acheter des micros USB. <strong > Windows et Mac galèrent terriblement à gérer plusieurs micros USB simultanés </strong> sans bugs. La loi physique s'impose : dès le deuxième intervenant dans la pièce, il faut de l'XLR.</p >
+                                                                                                                                                                                          </div>
+                                                                                                                                                                                          </div> <!-- closes md:grid-cols-[1fr_2fr] -->
+
+                                                                                                                                                                                          <div class="grid sm:grid-cols-2 gap-4 mt-8">
+                                                                                                                                                                                            <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5" >
+                                                                                                                                                                                              <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-emerald-500" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg> Points Forts</h4 >
+                                                                                                                                                                                                <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
+                                                                                                                                                                                                  <li>Achetez 2, 3 ou 4 SM58(100€/pièce) + une interface Focusrite Scarlett Solo (ou 2i2, 4i4 selon le nombre). Branchez, et chaque personne a sa propre piste séparée propre.</li >
+                                                                                                                                                                                                    <li>Le Shure SM58 est le micro le plus vendu de l'histoire (1966). Vous pouvez rouler dessus avec un camion, le plonger dans la bière, il fonctionnera encore le lendemain.</li>
+                                                                                                                                                                                                    </ul>
                                                                                                                                                                                                     </div>
-                                                                                                                                                                                                    </div> <!-- closes #id bg-card -->
-
-                                                                                                                                                                                                    <!--PRODUCT CARD: SM58-->
-                                                                                                                                                                                                      <div id="sm58-setup" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
-                                                                                                                                                                                                        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-                                                                                                                                                                                                          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
-                                                                                                                                                                                                            <img src="https://m.media-amazon.com/images/I/71uE8btdj8L._AC_SL1500_.jpg" alt = "Shure SM58" class="w-full h-full object-contain" loading = "lazy" />
-                                                                                                                                                                                                              </div>
-                                                                                                                                                                                                              <div >
-                                                                                                                                                                                                              <h3 class="mt-0 mb-2 text-2xl font-bold" > 3. Le Combo: Bande de Shure SM58 + Interface Scarlett </h3>
-                                                                                                                                                                                                                <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> Le Setup Indestructible(Duo & Table Ronde) </p>
-                                                                                                                                                                                                                  <p > L'erreur majeure des podcasters qui veulent lancer un format "Table ronde" à Plusieurs (2, 3, 4 personnes) est d'acheter des micros USB. <strong > Windows et Mac galèrent terriblement à gérer plusieurs micros USB simultanés </strong> sans bugs. La loi physique s'impose : dès le deuxième intervenant dans la pièce, il faut de l'XLR.</p >
-                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                    </div> <!-- closes md:grid-cols-[1fr_2fr] -->
-
-                                                                                                                                                                                                                    <div class="grid sm:grid-cols-2 gap-4 mt-8">
-                                                                                                                                                                                                                      <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5" >
-                                                                                                                                                                                                                        <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-emerald-500" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg> Points Forts</h4 >
-                                                                                                                                                                                                                          <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-                                                                                                                                                                                                                            <li>Achetez 2, 3 ou 4 SM58(100€/pièce) + une interface Focusrite Scarlett Solo (ou 2i2, 4i4 selon le nombre). Branchez, et chaque personne a sa propre piste séparée propre.</li >
-                                                                                                                                                                                                                              <li>Le Shure SM58 est le micro le plus vendu de l'histoire (1966). Vous pouvez rouler dessus avec un camion, le plonger dans la bière, il fonctionnera encore le lendemain.</li>
-                                                                                                                                                                                                                              </ul>
-                                                                                                                                                                                                                              </div>
-                                                                                                                                                                                                                            <div class= "bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
-                                                                                                                                                                                                                            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-destructive" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M6 18L18 6M6 6l12 12" /> </svg> Limites réelles</h4 >
-                                                                                                                                                                                                                            <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-                                                                                                                                                                                                                            <li>C'est un micro pensé pour le live sur scène, qui se tient à la main. Ce n'est visuellement pas le plus "joli" sur un beau bras articulé.Prévoyez une petite mousse "bonnette"(A58WS).</li>
-                                                                                                                                                                                                                            </ul>
-                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                  <div class= "bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+                                                                                                                                                                                                  <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-destructive" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M6 18L18 6M6 6l12 12" /> </svg> Limites réelles</h4 >
+                                                                                                                                                                                                  <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
+                                                                                                                                                                                                  <li>C'est un micro pensé pour le live sur scène, qui se tient à la main. Ce n'est visuellement pas le plus "joli" sur un beau bras articulé.Prévoyez une petite mousse "bonnette"(A58WS).</li>
+                                                                                                                                                                                                  </ul>
+                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                  </div>
 
 
-                                                                                                                                                                                                                            <div class= "bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm">
-                                                                                                                                                                                                                            <strong class="text-foreground" > Notre conseil d'usage :</strong> La seule solution viable si vous êtes plusieurs invités autour de la table. C'est increvable, fiable, et au son 100 % professionnel.
+                                                                                                                                                                                                  <div class= "bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm">
+                                                                                                                                                                                                  <strong class="text-foreground" > Notre conseil d'usage :</strong> La seule solution viable si vous êtes plusieurs invités autour de la table. C'est increvable, fiable, et au son 100 % professionnel.
 </div>
 
-                                                                                                                                                                                                                            <div class= "flex flex-wrap items-center gap-3 mt-8">
-                                                                                                                                                                                                                            <a href="/produit/shure-sm58-lc" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
-                                                                                                                                                                                                                            Voir la fiche produit
-                                                                                                                                                                                                                            </a>
-                                                                                                                                                                                                                            <a href = "https://www.thomann.fr/shure_sm58.htm" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
-                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                            </div> <!-- closes #id bg-card -->
+                                                                                                                                                                                                  <div class= "flex flex-wrap items-center gap-3 mt-8">
+                                                                                                                                                                                                  <a href="/produit/shure-sm58-lc" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
+                                                                                                                                                                                                  Voir la fiche produit
+                                                                                                                                                                                                  </a>
+                                                                                                                                                                                                  <a href = "https://www.thomann.fr/shure_sm58.htm" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                  </div> <!-- closes #id bg-card -->
 
-                                                                                                                                                                                                                            <!--PRODUCT CARD: SM7B-->
-                                                                                                                                                                                                                            <div id="shure-sm7b" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
-                                                                                                                                                                                                                            <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-                                                                                                                                                                                                                            <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
-                                                                                                                                                                                                                            <img src="https://www.thomann.de/thumb/opengraph/pics/prod/129929.jpg" alt = "Shure SM7B" class= "w-full h-full object-contain" loading = "lazy" />
-                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                            <div >
-                                                                                                                                                                                                                            <h3 class="mt-0 mb-2 text-2xl font-bold" > 4. Shure SM7B </h3>
-                                                                                                                                                                                                                            <p class= "text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> Le Saint Graal Absolu(≈ 370€) </p>
-                                                                                                                                                                                                                            <p > Michael Jackson(Thriller), Joe Rogan, Lex Fridman...Le monde entier a entendu ce micro.C'est l'étalon - or absolu des plateaux broadcast radio et des très grands podcasts vidéo.</p>
+                                                                                                                                                                                                  <!--PRODUCT CARD: SM7B-->
+                                                                                                                                                                                                  <div id="shure-sm7b" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
+                                                                                                                                                                                                  <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
+                                                                                                                                                                                                  <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
+                                                                                                                                                                                                  <img src="https://www.thomann.de/thumb/opengraph/pics/prod/129929.jpg" alt = "Shure SM7B" class= "w-full h-full object-contain" loading = "lazy" />
+                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                  <div >
+                                                                                                                                                                                                  <h3 class="mt-0 mb-2 text-2xl font-bold" > 4. Shure SM7B </h3>
+                                                                                                                                                                                                  <p class= "text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> Le Saint Graal Absolu(≈ 370€) </p>
+                                                                                                                                                                                                  <p > Michael Jackson(Thriller), Joe Rogan, Lex Fridman...Le monde entier a entendu ce micro.C'est l'étalon - or absolu des plateaux broadcast radio et des très grands podcasts vidéo.</p>
 
-                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                            </div> <!-- closes md:grid-cols-[1fr_2fr] -->
+                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                  </div> <!-- closes md:grid-cols-[1fr_2fr] -->
 
-                                                                                                                                                                                                                            <div class= "grid sm:grid-cols-2 gap-4 mt-8">
-                                                                                                                                                                                                                            <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5" >
-                                                                                                                                                                                                                            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-emerald-500" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg> Points Forts</h4 >
-                                                                                                                                                                                                                            <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-                                                                                                                                                                                                                            <li><strong>L'Effet de proximité divin :</strong> Il rend instantanément n'importe quelle voix plus suave, plus grave, chaleureuse et terriblement intime.C'est le fameux son de la radio de nuit.</li>
-                                                                                                                                                                                                                            <li > <strong>L'Armure électromagnétique :</strong> Un blindage interne massif empêche toute interférence avec vos écrans géants de PC ou la 5G des téléphones sur la table.</li>
-                                                                                                                                                                                                                            <li > Le look mythique.Poser un SM7B sur une table envoie instantanément le message "Je suis un professionnel" à vos invités prestigieux.</li>
-                                                                                                                                                                                                                            </ul>
-                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                            <div class= "bg-muted/40 border-l-4 border-l-orange-500/60 rounded-r-xl p-5">
-                                                                                                                                                                                                                            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-orange-500" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /> </svg> Limites réelles</h4 >
-                                                                                                                                                                                                                            <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-                                                                                                                                                                                                                            <li>Le SM7B est incroyablement célèbre pour son "signal de sortie" extrêmement faible(-59 dB).Pour faire simple : <strong>Il exige un volume monstrueux pour marcher.</strong> Si vous avez une banale petite carte son d'entrée de gamme, il n'y aura aucun son ou alors un affreux "souffle" (Bruit de fond) en poussant tout à fond. Il faut OBLIGATOIREMENT une interface très haut de gamme (Scarlett 4th Gen) ou un accélérateur en ligne type "FetHead" ou "CloudLifter" (+150€) pour l'alimenter, faisant bondir son prix final.</li >
-                                                                                                                                                                                                                            </ul>
-                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                  <div class= "grid sm:grid-cols-2 gap-4 mt-8">
+                                                                                                                                                                                                  <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5" >
+                                                                                                                                                                                                  <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-emerald-500" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg> Points Forts</h4 >
+                                                                                                                                                                                                  <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
+                                                                                                                                                                                                  <li><strong>L'Effet de proximité divin :</strong> Il rend instantanément n'importe quelle voix plus suave, plus grave, chaleureuse et terriblement intime.C'est le fameux son de la radio de nuit.</li>
+                                                                                                                                                                                                  <li > <strong>L'Armure électromagnétique :</strong> Un blindage interne massif empêche toute interférence avec vos écrans géants de PC ou la 5G des téléphones sur la table.</li>
+                                                                                                                                                                                                  <li > Le look mythique.Poser un SM7B sur une table envoie instantanément le message "Je suis un professionnel" à vos invités prestigieux.</li>
+                                                                                                                                                                                                  </ul>
+                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                  <div class= "bg-muted/40 border-l-4 border-l-orange-500/60 rounded-r-xl p-5">
+                                                                                                                                                                                                  <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-orange-500" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /> </svg> Limites réelles</h4 >
+                                                                                                                                                                                                  <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
+                                                                                                                                                                                                  <li>Le SM7B est incroyablement célèbre pour son "signal de sortie" extrêmement faible(-59 dB).Pour faire simple : <strong>Il exige un volume monstrueux pour marcher.</strong> Si vous avez une banale petite carte son d'entrée de gamme, il n'y aura aucun son ou alors un affreux "souffle" (Bruit de fond) en poussant tout à fond. Il faut OBLIGATOIREMENT une interface très haut de gamme (Scarlett 4th Gen) ou un accélérateur en ligne type "FetHead" ou "CloudLifter" (+150€) pour l'alimenter, faisant bondir son prix final.</li >
+                                                                                                                                                                                                  </ul>
+                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                  </div>
 
 
-                                                                                                                                                                                                                            <div class= "bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm">
-                                                                                                                                                                                                                            <strong class="text-foreground" > Notre conseil d'usage :</strong> L'investissement ultime pour ceux qui cherchent la perfection vocale absolue et le grain radio, à condition d'avoir le budget pour le préampli Cloudlifter.
-                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                  <div class= "bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm">
+                                                                                                                                                                                                  <strong class="text-foreground" > Notre conseil d'usage :</strong> L'investissement ultime pour ceux qui cherchent la perfection vocale absolue et le grain radio, à condition d'avoir le budget pour le préampli Cloudlifter.
+                                                                                                                                                                                                  </div>
 
-                                                                                                                                                                                                                            <div class= "flex flex-wrap items-center gap-3 mt-8">
-                                                                                                                                                                                                                            <a href="/produit/shure-sm7b" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
-                                                                                                                                                                                                                            Voir la fiche produit
-                                                                                                                                                                                                                            </a>
-                                                                                                                                                                                                                            <a href = "https://www.thomann.fr/shure_sm_7b_studiomikro.htm" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
-                                                                                                                                                                                                                            <a href = "https://www.amazon.fr/s?k=Shure%20SM7B&tag=stackera-21" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
-                                                                                                                                                                                                                            <a href = "https://www.woodbrass.com/microphones-dynamiques-shure-sm7b-p9415.html" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
-                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                            </div> <!-- closes #id bg-card -->
+                                                                                                                                                                                                  <div class= "flex flex-wrap items-center gap-3 mt-8">
+                                                                                                                                                                                                  <a href="/produit/shure-sm7b" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" >
+                                                                                                                                                                                                  Voir la fiche produit
+                                                                                                                                                                                                  </a>
+                                                                                                                                                                                                  <a href = "https://www.thomann.fr/shure_sm_7b_studiomikro.htm" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                  <a href = "https://www.amazon.fr/s?k=Shure%20SM7B&tag=stackera-21" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                  <a href = "https://www.woodbrass.com/microphones-dynamiques-shure-sm7b-p9415.html" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                  </div> <!-- closes #id bg-card -->
 
-                                                                                                                                                                                                                            <div class= "bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center sm:text-left flex flex-col sm:flex-row items-center gap-8">
-                                                                                                                                                                                                                            <div class="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center shrink-0" >
-                                                                                                                                                                                                                            <span class="text-4xl" >🏆</span>
-                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                            <div >
-                                                                                                                                                                                                                            <h2 class="text-2xl font-bold text-foreground mt-0 mb-3 !border-0" > Le Mot de la Fin : Quel Setup Choisir ? </h2>
-                                                                                                                                                                                                                              <p class= "mb-0"> Tout dépend de votre ambition sociale. <strong > Si vous êtes un Solopreneur seul dans votre bureau </strong>, désireux de lancer un podcast business ultra-qualitatif depuis votre domicile, le <a href="/produit / shure - mv7x" class="product - link font - bold text - primary hover: underline">Shure MV7+</a> est l'investissement moderne d'une vie, incroyablement indulgent et facile. En revanche, si <strong>vous prévoyez un format physique (Canapé / Entretien)</strong> et comptez avoir 2 ou 3 interlocuteurs en face à face avec votre propre studio, fuyez l'USB et investissez d'urgence dans un lot de <a href=" / produits" class="product - link font - bold text - primary hover: underline">Shure SM58 couplés à une grosse carte son</a>, l'évolutivité XLR est inestimable pour les studios physiques de long terme.</p>
-                                                                                                                                                                                                                              </div>
-                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                  <div class= "bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center sm:text-left flex flex-col sm:flex-row items-center gap-8">
+                                                                                                                                                                                                    <div class="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center shrink-0" >
+                                                                                                                                                                                                      <span class="text-4xl" >🏆</span>
+                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                    <div >
+                                                                                                                                                                                                      <h2 class="text-2xl font-bold text-foreground mt-0 mb-3 !border-0" > Le Mot de la Fin : Quel Setup Choisir ? </h2>
+                                                                                                                                                                                                      <p class= "mb-0"> Tout dépend de votre ambition sociale. <strong > Si vous êtes un Solopreneur seul dans votre bureau </strong>, désireux de lancer un podcast business ultra-qualitatif depuis votre domicile, le <strong>Shure MV7+</strong> est l'investissement moderne d'une vie, incroyablement indulgent et facile. En revanche, si <strong>vous prévoyez un format physique (Canapé / Entretien)</strong> et comptez avoir 2 ou 3 interlocuteurs en face à face avec votre propre studio, fuyez l'USB et investissez d'urgence dans un <strong>lot de Shure SM58 couplés à une grosse carte son</strong>, l'évolutivité XLR est inestimable pour les studios physiques de long terme.</p>
+                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                  </div>
 
-                                                                                                                                                                                                                            <h2 class= "text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4"> FAQ : Micros Podcast </h2>
+                                                                                                                                                                                                                             <h2 class= "text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4"> FAQ : Micros Podcast </h2> </h2>
 
                                                                                                                                                                                                                             <div class= "faq-accordion space-y-4">
                                                                                                                                                                                                                             <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden" >
@@ -3282,14 +3281,14 @@ export const ARTICLES: Article[] = [
   {
     id: "14",
     slug: "setup-youtube-debutant-2026",
-    title: "Setup YouTube Débutant en 2026 — De 300€ à 1500€",
+    title: "Vlogueur, Studio ou Pro : Quel Setup YouTube choisir en 2026 ?",
     category: "Vidéo",
     readTime: "20 min",
     date: "28 Feb 2026",
     author: "Équipe Fluxlab",
     image: "/images/articles/setup_youtube.png",
     intro: "Vous voulez lancer votre chaîne YouTube avec un rendu pro dès la première vidéo ? On vous guide pour assembler votre premier setup complet : caméra, son, lumière et montage, adapté à votre budget.",
-    relatedProducts: ["sony-zv-e10", "rode-videomic-go-ii", "elgato-key-light-air", "focusrite-scarlett-2i2-4th-gen"],
+    relatedProducts: ["sony-zv-e10", "rode-videomic-go-ii", "elgato-key-light-air", "focusrite-scarlett-2i2-4th-gen", "shure-mv7x"],
     relatedCategorySlug: "video",
     content: `
         <!--ENCART TL; DR(Résumé Haute Conversion)-->
@@ -3301,23 +3300,23 @@ export const ARTICLES: Article[] = [
   <ul class="space-y-3 mb-0">
     <li class="flex items-start gap-3" >
       <span class="font-bold text-primary min-w-[120px]" > 300 € (Mobile) : </span>
-        <a href = "#setup-300" class="product-link hover:underline font-medium text-foreground"> Smartphone + Rode VideoMic GO II </a>
+        <a href = "#setup-300" class="product-link hover:underline font-medium text-foreground"> Smartphone + Rode VideoMic GO II Helix </a>
           </li>
           <li class="flex items-start gap-3">
             <span class="font-bold text-primary min-w-[120px]" > 700 € (Studio) : </span>
-              <a href = "#setup-700" class="product-link hover:underline font-medium text-foreground"> Sony ZV - E10 + Rode PodMic USB </a>
+              <a href = "#setup-700" class="product-link hover:underline font-medium text-foreground"> Sony ZV-E10 + Rode PodMic USB </a>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="font-bold text-primary min-w-[120px]" > 1500 € (Pro) : </span>
-                    <a href = "#setup-1500" class="product-link hover:underline font-medium text-foreground"> Sony ZV - E10 II + Shure MV7 + + Elgato </a>
+                    <a href = "#setup-1500" class="product-link hover:underline font-medium text-foreground"> Sony ZV - E10 + Shure MV7X + Elgato </a>
                       </li>
                       </ul>
                       </div>
 
-                      <h2 > L'Ère de la Qualité "Cinéma" Accessible</h2>
+                      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4"> L’ère de la qualité cinéma accessible </h2>
                         <p > En 2026, la barrière entre une vidéo d'amateur et de professionnel s'est considérablement réduite.La technologie 4K est le standard, et l'IA aide énormément au montage. Mais le matériel reste le socle de votre contenu.</p>
 
-                          <h3 > Les 4 Piliers d'une bonne vidéo</h3>
+                          <h2 class="text-2xl font-bold mt-8 mb-4"> Les quatre piliers d’une bonne vidéo </h2>
                             <ul >
                             <li><strong>L'Image</strong> : La caméra et l'objectif.</li>
                               <li > <strong>Le Son </strong> : Souvent négligé, c'est pourtant 50% de l'expérience.</li >
@@ -3339,14 +3338,14 @@ export const ARTICLES: Article[] = [
                                                   <tr class="hover:bg-muted/50 border-b border-border transition-colors" >
                                                     <td class="px-5 py-4 font-bold bg-muted/30 border-r border-border" > Caméra </td>
                                                       <td class="px-5 py-4 border-r border-border"> Votre Smartphone </td>
-                                                        <td class="px-5 py-4 border-r border-border"> Sony ZV - E10(Occasion) </td>
-                                                          <td class="px-5 py-4"> Sony ZV - E10 II + Sigma 16mm </td>
+                                                        <td class="px-5 py-4 border-r border-border"> Sony ZV-E10 (Classic) </td>
+                                                          <td class="px-5 py-4"> Sony ZV - E10 (Classic) + Sigma 16mm </td>
                                                             </tr>
                                                             <tr class="hover:bg-muted/50 border-b border-border transition-colors">
                                                               <td class="px-5 py-4 font-bold bg-muted/30 border-r border-border" > Audio </td>
-                                                                <td class="px-5 py-4 border-r border-border"> Rode VideoMic GO II </td>
+                                                                <td class="px-5 py-4 border-r border-border"> Rode VideoMic GO II Helix </td>
                                                                   <td class="px-5 py-4 border-r border-border"> Rode PodMic USB </td>
-                                                                    <td class="px-5 py-4"> Shure MV7 + </td>
+                                                                    <td class="px-5 py-4"> Shure MV7X </td>
                                                                       </tr>
                                                                       <tr class="hover:bg-muted/50 border-b border-border transition-colors">
                                                                         <td class="px-5 py-4 font-bold bg-muted/30 border-r border-border" > Lumière </td>
@@ -3355,10 +3354,10 @@ export const ARTICLES: Article[] = [
                                                                               <td class="px-5 py-4"> Elgato Key Light </td>
                                                                                 </tr>
                                                                                 <tr class="hover:bg-muted/50 transition-colors">
-                                                                                  <td class="px-5 py-4 font-bold bg-muted/30 border-r border-border" > Montage </td>
-                                                                                    <td class="px-5 py-4 border-r border-border"> CapCut Desktop </td>
-                                                                                      <td class="px-5 py-4 border-r border-border"> DaVinci Resolve </td>
-                                                                                        <td class="px-5 py-4"> Adobe Premiere Pro </td>
+                                                                                  <td class="px-5 py-4 font-bold bg-muted/30 border-r border-border" > Budget </td>
+                                                                                    <td class="px-5 py-4 border-r border-border"> ≈ 300 € </td>
+                                                                                      <td class="px-5 py-4 border-r border-border"> ≈ 700 € </td>
+                                                                                        <td class="px-5 py-4"> ≈ 1500 € </td>
                                                                                           </tr>
                                                                                           </tbody>
                                                                                           </table>
@@ -3370,12 +3369,15 @@ export const ARTICLES: Article[] = [
                                                                                               <div id="setup-300" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                                                                                                 <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
                                                                                                   <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
-                                                                                                    <img src="https://m.media-amazon.com/images/I/61r-CqA6jPL._AC_SL1500_.jpg" alt = "Rode VideoMic GO II" class="w-full h-full object-contain" loading = "lazy" />
+                                                                                                    <img src="https://thumbs.static-thomann.de/thumb//bdbmagic/pics/prod/610096.jpg" alt = "Rode VideoMic GO II Helix" class="w-full h-full object-contain" loading = "lazy" />
                                                                                                       </div>
                                                                                                       <div >
                                                                                                       <h3 class="mt-0 mb-2 text-2xl font-bold" > Le Setup "Vlogger Mobile" </h3>
                                                                                                         <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> Budget ≈ 300€</p>
                                                                                                           <p > <strong>Profil : </strong> Facecam, tutoriels simples, extérieur. On exploite à 100% la puissance du bloc photo de votre smartphone actuel, en investissant tout dans un son propre et un bon trépied pour vous stabiliser.</p >
+                                                                                                            <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6">
+                                                                                                              <strong class="text-foreground">Notre conseil d'usage :</strong> Le Rode VideoMic GO II Helix est le micro idéal si vous bougez beaucoup. Branchez-le directement sur votre smartphone (avec un adaptateur USB-C ou Lightning) et il s'auto-alimente. Pas de batterie à gérer, vous êtes prêt à filmer en 2 secondes.
+                                                                                                            </div>
                                                                                                             </div>
                                                                                                             </div>
 
@@ -3384,7 +3386,7 @@ export const ARTICLES: Article[] = [
                                                                                                                 <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-emerald-500" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg> Les Composants</h4 >
                                                                                                                   <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
                                                                                                                     <li><strong>Image : </strong> Votre Smartphone (iPhone 13+ ou équivalent Android)</li >
-                                                                                                                      <li><strong>Audio : </strong> Rode VideoMic GO II (Micro canon polyvalent)</li >
+                                                                                                                      <li><strong>Audio : </strong> Rode VideoMic GO II Helix (109 €)</li >
                                                                                                                         <li><strong>Stabilité : </strong> Trépied de table Manfrotto Pixi</li >
                                                                                                                           <li><strong>Montage : </strong> CapCut Desktop (Intuitif et gratuit)</li >
                                                                                                                             </ul>
@@ -3403,12 +3405,15 @@ export const ARTICLES: Article[] = [
                                                                                                                                         <div id="setup-700" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                                                                                                                                           <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
                                                                                                                                             <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
-                                                                                                                                              <img src="https://m.media-amazon.com/images/I/71Yv3Crd-HL._AC_SL1500_.jpg" alt = "Sony ZV-E10" class="w-full h-full object-contain" loading = "lazy" />
+                                                                                                                                              <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/sony-zv-e10-gallery-1770069536390.png" alt="Sony ZV-E10" class="w-full h-full object-contain" loading="lazy" />
                                                                                                                                                 </div>
                                                                                                                                                 <div >
                                                                                                                                                 <h3 class="mt-0 mb-2 text-2xl font-bold" > Le Setup "Creator Studio" </h3>
                                                                                                                                                   <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> Budget ≈ 700€</p>
-                                                                                                                                                    <p > <strong>Profil : </strong> Vidéos posées (Talking head), interviews, qualité 4K constante. On passe le cap de la vraie caméra à objectifs interchangeables et on s'assure d'avoir notre propre lumière (Softbox) pour filmer à n'importe quelle heure de la nuit.</p >
+                                                                                                                                                    <p > <strong>Profil : </strong> Vidéos posées (Talking head), interviews, qualité 4K constante. Le <strong>Sony ZV-E10</strong> est l'appareil roi des créateurs ambitieux grâce à son capteur APS-C, son autofocus ultra-rapide et son écran orientable. On s'assure d'avoir notre propre lumière (Softbox) pour filmer à n'importe quelle heure de la nuit avec un rendu propre.</p >
+                                                                                                                       <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6">
+                                                                                                                         <strong class="text-foreground">Notre conseil d'usage :</strong> Utilisez l'objectif kit 16-50mm au début, mais activez le mode "Présentation de produit" de Sony. C'est l'autofocus le plus rapide du marché pour passer de votre visage à un objet sans jamais perdre le point.
+                                                                                                                       </div>
                                                                                                                                                       </div>
                                                                                                                                                       </div>
 
@@ -3416,7 +3421,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                                         <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5" >
                                                                                                                                                           <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-emerald-500" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg> Les Composants</h4 >
                                                                                                                                                             <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-                                                                                                                                                              <li><strong>Image : </strong> Sony ZV-E10 (avec objectif kit 16-50mm, super autofocus)</li >
+                                                                                                                                                              <li><strong>Image : </strong> Sony ZV-E10 (Classic, 24.2 MP, APS-C)</li >
                                                                                                                                                                 <li><strong>Audio : </strong> Rode PodMic USB (Son type "Radio")</li >
                                                                                                                                                                   <li><strong>Lumière : </strong> Kit de 2 Softbox LED Neewer (Éclairage doux professionnel)</li >
                                                                                                                                                                     <li><strong>Montage : </strong> DaVinci Resolve (Version gratuite ultra-puissante)</li >
@@ -3435,13 +3440,16 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                 <!--PRODUCT CARD: Setup 1500€ -->
                                                                                                                                                                                   <div id="setup-1500" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                                                                                                                                                                                     <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-                                                                                                                                                                                      <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
-                                                                                                                                                                                        <img src="https://m.media-amazon.com/images/I/71z7d3-uVYL._AC_SL1500_.jpg" alt = "Sony ZV-E10 II + Shure MV7+" class="w-full h-full object-contain" loading = "lazy" />
+                                                                                                                                                                                      <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-2" >
+                                                                                                                                                                                        <img src="/images/articles/combo_shure_mv7x_sony_zve10.png" alt="Combo Shure MV7X + Sony ZV-E10" class="w-full h-full object-cover scale-110" loading="lazy" />
                                                                                                                                                                                           </div>
                                                                                                                                                                                           <div >
                                                                                                                                                                                           <h3 class="mt-0 mb-2 text-2xl font-bold" > Le Setup "Pro Director" </h3>
                                                                                                                                                                                             <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> Budget ≈ 1500€</p>
-                                                                                                                                                                                              <p > <strong>Profil : </strong> Esthétique chiadée, Masterclass, arrière-plan flouté digne d'un film de cinéma et son cristallin. Ce setup sans compromis exploite les toutes dernières avancées technologiques pour un rendu "Premium".</p >
+                                                                                                                                                                                              <p > <strong>Profil : </strong> Esthétique chiadée, Masterclass, arrière-plan flouté digne d'un film de cinéma et son cristallin. Ce setup sans compromis combine la robustesse du <strong>Sony ZV-E10</strong> avec la précision du <strong>Shure MV7X</strong> pour un rendu "Premium" immédiat.</p >
+                                                                                                                                   <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6">
+                                                                                                                                     <strong class="text-foreground">Notre conseil d'usage :</strong> Couplez le Shure MV7X à une petite interface audio comme la Scarlett 2i2. Pour l'image, le Sigma 16mm f/1.4 est votre arme secrète : il crée ce flou d'arrière-plan magnifique même dans une petite chambre sans recul.
+                                                                                                                                   </div>
                                                                                                                                                                                                 </div>
                                                                                                                                                                                                 </div>
 
@@ -3449,8 +3457,8 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                   <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5" >
                                                                                                                                                                                                     <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2" > <svg class="w-5 h-5 text-emerald-500" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" > <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d = "M5 13l4 4L19 7" /> </svg> Les Composants</h4 >
                                                                                                                                                                                                       <ul class="mb-0 space-y-2 text-sm text-foreground/80" >
-                                                                                                                                                                                                        <li><strong>Image : </strong> Sony ZV-E10 II associé au redoutable objectif Sigma 16mm f/1.4 </li>
-                                                                                                                                                                                                          <li > <strong>Audio : </strong> Shure MV7+ (Le petit frère du SM7B, avec DSP intégré)</li >
+                                                                                                                                                                                                        <li><strong>Image : </strong> Sony ZV-E10 (Classic) + Sigma 16mm f/1.4 </li>
+                                                                                                                                                                                                          <li > <strong>Audio : </strong> Shure MV7X (Le standard XLR Podcast)</li >
                                                                                                                                                                                                             <li><strong>Lumière : </strong> Elgato Key Light (Faible encombrement, forte puissance)</li >
                                                                                                                                                                                                               <li><strong>Support : </strong> Bras articulé Rode PSA1+ (Silencieux et design)</li >
                                                                                                                                                                                                                 </ul>
@@ -3573,14 +3581,10 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                                                                                                                             "acceptedAnswer": {
                                                                                                                                                                                                                                                                                                               "@type": "Answer",
                                                                                                                                                                                                                                                                                                               "text": "Pour commencer à budget zéro absolu : la Bibliothèque Audio interne de YouTube. Mais pour franchir un vrai palier perçu, les abonnements professionnels comme Epidemic Sound, Artlist, ou MusicBed sont un standard universellement utilisé par tous les youtubers du globe. Quoi qu'il arrive : fuyez l'utilisation sauvage de toute musique commerciale radiophonique, votre vidéo se verrait dé-monétisée voire bloquée et suspendue en quelques heures."
-                                                                                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                                                                                          }
-                                                                                                                                                                                                                                                                                                        ]
-                                                                                                                                                                                                                                                                                                      }
-                                                                                                                                                                                                                                                                                                        </script>
-                                                                                                                                                                                                                                                                                                          `
+                                                                                                                                                                                                                                                                                                       }
+                                                                                                                                                                                                                                                                                                       </script>
+  `
   },
-
 
   // ═══ ARTICLE 15 — Micro voix grave ═══
   {
@@ -3593,585 +3597,398 @@ export const ARTICLES: Article[] = [
     author: "Équipe Fluxlab",
     image: "/images/articles/micro_voix_grave.png",
     intro: "Vous avez une voix de basse ou de baryton et vous voulez la mettre en valeur sans qu'elle devienne 'boueuse' ? Découvrez les micros qui capturent le mieux la richesse des graves tout en gardant une clarté exceptionnelle.",
-    relatedProducts: ["shure-sm7b", "electro-voice-re20", "rode-podmic-usb", "akg-c214"],
+    relatedProducts: ["shure-sm7b", "electro-voice-re20", "rode-podmic-usb", "akg-c214", "shure-mv7x"],
     relatedCategorySlug: "micros-dynamiques",
     content: `
-                                                                                                                                                                                                                                                                                                        <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4"> La Science de la Voix Grave:
-    L'Effet de Proximité</h2>
-  <p > Plus vous vous approchez d'un micro directionnel, plus les fréquences graves sont accentuées. C'est ce qu'on appelle
-    l'<strong>effet de proximité</strong>. Pour une voix naturellement grave, cela peut être un avantage (son radio
-    chaleureux) ou un inconvénient(perte de clarté, son étouffé).</p>
+  <!--ENCART TL;DR-->
+  <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8">
+    <h2 class="text-xl font-bold text-foreground mb-4 mt-0 !border-0 flex items-center gap-2">
+      <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+      Le Top 3 pour une voix profonde
+    </h2>
+    <ul class="space-y-3 mb-0">
+      <li class="flex items-start gap-3">
+        <span class="font-bold text-primary min-w-[120px]">Le Maître :</span>
+        <a href="/produit/electro-voice-re20" class="product-link hover:underline font-medium text-foreground">Electro-Voice RE20</a>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="font-bold text-primary min-w-[120px]">La Légende :</span>
+        <a href="/produit/shure-sm7b" class="product-link hover:underline font-medium text-foreground">Shure SM7B</a>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="font-bold text-primary min-w-[120px]">Le Budget :</span>
+        <a href="/produit/rode-podmic-usb" class="product-link hover:underline font-medium text-foreground">Rode PodMic USB</a>
+      </li>
+    </ul>
+  </div>
+
+  <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">La Science de la Voix Grave : L'Effet de Proximité</h2>
+  <p>Plus vous vous approchez d'un micro directionnel, plus les fréquences graves sont accentuées. C'est ce qu'on appelle l'<strong>effet de proximité</strong>. Pour une voix naturellement grave, cela peut être un avantage (son "radio" chaleureux) ou un inconvénient (perte de clarté, son étouffé).</p>
 
   <div class="bg-card border border-border rounded-2xl p-6 sm:p-8 my-10 shadow-sm">
-    <h3 class="mt-0 text-xl font-bold flex items-center gap-2 mb-4" >
-      <span class="text-2xl" >⚡</span> Dynamique ou Statique pour les basses ?
-        </h3>
-        <p class="mb-0"> Les micros <strong > dynamiques </strong> sont souvent préférés pour les voix graves car ils gèrent
-        mieux les fortes pressions acoustiques et offrent ce côté "compression naturelle" qui stabilise les fréquences
-        basses sans les rendre brouillonnes.</p>
+    <h3 class="mt-0 text-xl font-bold flex items-center gap-2 mb-4">
+      <span class="text-2xl">⚡</span> Dynamique ou Statique pour les basses ?
+    </h3>
+    <p class="mb-0">Les micros <strong>dynamiques</strong> sont souvent préférés pour les voix graves car ils gèrent mieux les fortes pressions acoustiques et offrent une "compression naturelle" qui stabilise les fréquences basses sans les rendre brouillonnes.</p>
   </div>
 
-  <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">🏆 Notre Sélection pour Voix
-    de Basse </h2>
+  <div class="overflow-hidden my-12 border border-border rounded-xl">
+    <table class="w-full text-sm text-left border-collapse">
+      <thead class="bg-secondary text-foreground uppercase border-b border-border font-serif">
+        <tr>
+          <th class="px-5 py-4 font-bold border-r border-border w-1/3">Micro</th>
+          <th class="px-5 py-4 font-bold border-r border-border hidden sm:table-cell w-1/4">Type</th>
+          <th class="px-5 py-4 font-bold border-r border-border">Effet de Proximité</th>
+          <th class="px-5 py-4 font-bold text-center w-24">Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hover:bg-muted/50 border-b border-border transition-colors">
+          <td class="px-5 py-4 font-bold border-r border-border">
+            <a href="#electro-voice-re20" class="product-link text-primary hover:underline flex items-center gap-2">
+              <img src="https://www.thomann.de/thumb/opengraph/pics/prod/128926.jpg" alt="RE20" class="w-8 h-8 rounded-full object-cover"> RE20
+            </a>
+          </td>
+          <td class="px-5 py-4 border-r border-border hidden sm:table-cell">Dynamique</td>
+          <td class="px-5 py-4 border-r border-border text-emerald-600 font-medium">Inexistant (Variable-D)</td>
+          <td class="px-5 py-4 text-center font-bold text-primary">4.9/5</td>
+        </tr>
+        <tr class="hover:bg-muted/50 border-b border-border transition-colors">
+          <td class="px-5 py-4 font-bold border-r border-border">
+            <a href="#shure-sm7b" class="product-link text-primary hover:underline flex items-center gap-2">
+              <img src="https://www.thomann.de/thumb/opengraph/pics/prod/129929.jpg" alt="SM7B" class="w-8 h-8 rounded-full object-cover"> SM7B
+            </a>
+          </td>
+          <td class="px-5 py-4 border-r border-border hidden sm:table-cell">Dynamique</td>
+          <td class="px-5 py-4 border-r border-border text-amber-600 font-medium">Prononcé (Chaleureux)</td>
+          <td class="px-5 py-4 text-center font-bold text-primary">4.8/5</td>
+        </tr>
+        <tr class="hover:bg-muted/50 border-b border-border transition-colors">
+          <td class="px-5 py-4 font-bold border-r border-border">
+            <a href="#rode-podmic" class="product-link text-primary hover:underline flex items-center gap-2">
+              <img src="https://www.thomann.de/thumb/opengraph/pics/prod/567098.jpg" alt="PodMic" class="w-8 h-8 rounded-full object-cover"> PodMic
+            </a>
+          </td>
+          <td class="px-5 py-4 border-r border-border hidden sm:table-cell">Dynamique</td>
+          <td class="px-5 py-4 border-r border-border">Modéré</td>
+          <td class="px-5 py-4 text-center font-bold text-primary">4.6/5</td>
+        </tr>
+        <tr class="hover:bg-muted/50 border-b border-border transition-colors">
+          <td class="px-5 py-4 font-bold border-r border-border">
+            <a href="#akg-c214" class="product-link text-primary hover:underline flex items-center gap-2">
+              <img src="https://thumbs.static-thomann.de/thumb//bdbmagic/pics/prod/211318.jpg" alt="C214" class="w-8 h-8 rounded-full object-cover"> AKG C214
+            </a>
+          </td>
+          <td class="px-5 py-4 border-r border-border hidden sm:table-cell">Statique</td>
+          <td class="px-5 py-4 border-r border-border">Faible (Coupe-bas nécessaire)</td>
+          <td class="px-5 py-4 text-center font-bold text-primary">4.7/5</td>
+        </tr>
+        <tr class="hover:bg-muted/50 transition-colors">
+          <td class="px-5 py-4 font-bold border-r border-border">
+            <a href="#shure-mv7x" class="product-link text-primary hover:underline flex items-center gap-2">
+              <img src="https://thumbs.static-thomann.de/thumb//bdbmagic/pics/prod/528028.jpg" alt="MV7X" class="w-8 h-8 rounded-full object-cover"> MV7X
+            </a>
+          </td>
+          <td class="px-5 py-4 border-r border-border hidden sm:table-cell">Dynamique</td>
+          <td class="px-5 py-4 border-r border-border">Équilibré</td>
+          <td class="px-5 py-4 text-center font-bold text-primary">4.7/5</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-  <!--MICRO 1 : EV RE20-->
-    <div id="electro-voice-re20" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-12 shadow-sm scroll-mt-24" >
-      <div class="grid md:grid-cols-[1.5fr_2fr] gap-8 items-start" >
-        <div
-            class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-6" >
-  <img src="https://www.thomann.de/thumb/opengraph/pics/prod/105767.jpg" alt = "Electro-Voice RE20"
-class="w-full h-full object-contain mix-blend-multiply hover:scale-105 transition-transform duration-500" />
-  <div
-                class="absolute top-4 left-4 bg-primary text-primary-foreground text-xs font-bold px-3 py-1.5 rounded-full shadow-sm" >
-  N°1 Broadcast
+  <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">🏆 Notre Sélection pour Voix de Basse</h2>
+
+  <!--PRODUCT CARD: EV RE20-->
+  <div id="electro-voice-re20" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+    <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+      <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+        <img src="https://www.thomann.de/thumb/opengraph/pics/prod/128926.jpg" alt="Electro-Voice RE20" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
+        <div class="absolute top-4 left-4 bg-primary text-primary-foreground text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">Le Choix des Pros</div>
+      </div>
+      <div>
+        <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/electro-voice-re20" class="product-link text-foreground hover:text-primary transition-colors">Electro-Voice RE20</a></h3>
+        <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le Maître de la Fidélité</p>
+        <p>Le RE20 est légendaire grâce à sa technologie <strong>Variable-D</strong>. Contrairement aux autres micros, il ne subit quasiment aucun effet de proximité. Vous pouvez parler collé à la capsule sans que votre voix ne devienne sourde ou "boueuse". C'est l'étalon-or des radios américaines depuis des décennies.</p>
+      </div>
     </div>
+    <div class="grid sm:grid-cols-2 gap-4 mt-8">
+      <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+        <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+        <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+          <li>Pas d'effet de proximité (son constant selon la distance)</li>
+          <li>Filtre anti-pop et suspension interne ultra-efficaces</li>
+          <li>Réponse en fréquence extrêmement plane et naturelle</li>
+        </ul>
+      </div>
+      <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+        <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+        <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+          <li>Nécessite un préampli puissant (peu de gain de sortie)</li>
+          <li>Design imposant et lourd (nécessite un pied solide)</li>
+        </ul>
+      </div>
     </div>
-    <div >
-    <h3 class="mt-0 mb-2 text-2xl font-bold" > 1. Electro - Voice RE20 </h3>
-      <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> La Référence Absolue </p>
-        <p > C'est LE micro de radio aux USA. Sa particularité ? La technologie <strong>Variable-D</strong> qui
-                élimine quasiment l'effet de proximité. Même si vous collez le micro, votre voix reste claire et
-naturelle, sans excès de basses baveuses.</p>
-  <ul class="space-y-2 mt-6 mb-0 text-sm list-none pl-0">
-    <li class="flex items-start gap-2" > <span class="text-emerald-500 font-bold shrink-0" >✓</span>
-      <span > Réponse en fréquence ultra - plate.</span></li >
-        <li class="flex items-start gap-2" > <span class="text-emerald-500 font-bold shrink-0" >✓</span> <span>Pas
-                        d'effet de proximité gênant.</span></li>
-  <li class="flex items-start gap-2"> <span class="text-emerald-500 font-bold shrink-0" >✓</span>
-    <span > Filtre coupe - bas intégré.</span></li >
-      <li class="flex items-start gap-2" > <span class="text-primary font-bold shrink-0" >💡</span> <span>Look
-                        vintage unique, construction increvable.</span></li >
-  </ul>
-  </div>
-  </div>
-  <div class="flex flex-wrap items-center gap-3 mt-8 pt-6 border-t border-border">
-    <a href="/produit/electro-voice-re20"
-class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-shadow" > Voir
-            sur Fluxlab </a>
-  </div>
-  </div>
-
-  <!--MICRO 2 : Shure SM7B-->
-    <div id="shure-sm7b" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-12 shadow-sm scroll-mt-24" >
-      <div class="grid md:grid-cols-[1.5fr_2fr] gap-8 items-start" >
-        <div
-            class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-6" >
-  <img src="https://www.thomann.de/thumb/opengraph/pics/prod/129929.jpg" alt = "Shure SM7B"
-class="w-full h-full object-contain mix-blend-multiply hover:scale-105 transition-transform duration-500" />
-  <div
-                class="absolute top-4 left-4 bg-muted text-foreground border border-border text-xs font-bold px-3 py-1.5 rounded-full shadow-sm" >
-  Le plus chaleureux
+    <div class="flex flex-wrap items-center gap-3 mt-8 pt-6 border-t border-border">
+      <a href="/produit/electro-voice-re20" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-shadow">Voir sur Fluxlab</a>
     </div>
+  </div>
+
+  <!--PRODUCT CARD: Shure SM7B-->
+  <div id="shure-sm7b" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+    <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+      <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+        <img src="https://www.thomann.de/thumb/opengraph/pics/prod/129929.jpg" alt="Shure SM7B" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
+        <div class="absolute top-4 left-4 bg-muted text-foreground border border-border text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">La Chaleur Mythique</div>
+      </div>
+      <div>
+        <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/shure-sm7b" class="product-link text-foreground hover:text-primary transition-colors">Shure SM7B</a></h3>
+        <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le Standard du Podcast</p>
+        <p>C'est le micro qui a enregistré "Thriller" de Michael Jackson. Pour une voix d'homme, il ajoute une épaisseur et un velouté uniques dans les bas-médiums. Son effet de proximité est prononcé, ce qui permet de "sculpter" sa voix en se rapprochant.</p>
+      </div>
     </div>
-    <div >
-    <h3 class="mt-0 mb-2 text-2xl font-bold" > 2. Shure SM7B </h3>
-      <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> La Chaleur Mythique </p>
-        <p > Le SM7B est célèbre pour flatter les voix d'hommes. Il ajoute une sorte de velouté dans les bas-médiums
-                qui rend n'importe quelle voix plus imposante et autoritaire.</p>
-  <ul class="space-y-2 mt-6 mb-0 text-sm list-none pl-0">
-    <li class="flex items-start gap-2" > <span class="text-emerald-500 font-bold shrink-0" >✓</span> <span>Son
-"broadcast" immédiat.</span></li >
-  <li class="flex items-start gap-2" > <span class="text-emerald-500 font-bold shrink-0" >✓</span>
-    <span > Filtre Presence Boost pour compenser la perte de clarté.</span></li >
-      <li class="flex items-start gap-2" > <span class="text-emerald-500 font-bold shrink-0" >✓</span>
-        <span > Protection contre les plosives excellente.</span></li >
-          </ul>
-          </div>
-          </div>
-          <div class="flex flex-wrap items-center gap-3 mt-8 pt-6 border-t border-border">
-            <a href="/produit/shure-sm7b"
-class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-shadow" > Voir
-            sur Fluxlab </a>
-  </div>
-  </div>
-
-  <!--MICRO 3 : Rode PodMic-->
-    <div id="rode-podmic" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-12 shadow-sm scroll-mt-24" >
-      <div class="grid md:grid-cols-[1.5fr_2fr] gap-8 items-start" >
-        <div
-            class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-6" >
-  <img src="https://www.thomann.de/thumb/opengraph/pics/prod/567098.jpg" alt = "Rode PodMic"
-class="w-full h-full object-contain mix-blend-multiply hover:scale-105 transition-transform duration-500" />
-  <div
-                class="absolute top-4 left-4 bg-muted text-foreground border border-border text-xs font-bold px-3 py-1.5 rounded-full shadow-sm" >
-  Meilleur Budget
+    <div class="grid sm:grid-cols-2 gap-4 mt-8">
+      <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+        <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+        <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+          <li>Son "radio" immédiat et très flatteur</li>
+          <li>Excellent isolant contre les bruits ambiants</li>
+          <li>Incontournable pour le broadcast et le streaming</li>
+        </ul>
+      </div>
+      <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+        <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+        <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+          <li>Signal de sortie très faible (Cloudlifter souvent requis)</li>
+          <li>Privilégier un bras articulé de qualité</li>
+        </ul>
+      </div>
     </div>
+    <div class="flex flex-wrap items-center gap-3 mt-8 pt-6 border-t border-border">
+      <a href="/produit/shure-sm7b" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-shadow">Voir sur Fluxlab</a>
     </div>
-    <div >
-    <h3 class="mt-0 mb-2 text-2xl font-bold" > 3. Rode PodMic(XLR ou USB) </h3>
-      <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> La version moderne </p>
-        <p > Pour un budget serré, le PodMic a une courbe de réponse qui accentue les 100 - 200Hz.Cela donne du corps à
-                la voix sans la rendre sourde.</p>
-  <ul class="space-y-2 mt-6 mb-0 text-sm list-none pl-0">
-    <li class="flex items-start gap-2" > <span class="text-emerald-500 font-bold shrink-0" >✓</span>
-      <span > Abordable et extrêmement robuste.</span></li >
-        <li class="flex items-start gap-2" > <span class="text-emerald-500 font-bold shrink-0" >✓</span> <span>Très
-directif(ignore les bruits de la pièce).</span></li >
-  <li class="flex items-start gap-2" > <span class="text-primary font-bold shrink-0" >💡</span> <span>Version
-                        USB avec DSP intégré pour tailler le son directement dans l'application.</span></li>
-  </ul>
-  </div>
-  </div>
-  <div class="flex flex-wrap items-center gap-3 mt-8 pt-6 border-t border-border">
-    <a href="/produit/rode-podmic-usb"
-class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-shadow" > Voir
-            sur Fluxlab </a>
-  </div>
   </div>
 
-  <!--MICRO 4 : AKG C214-->
-    <div id="akg-c214" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-12 shadow-sm scroll-mt-24" >
-      <div class="grid md:grid-cols-[1.5fr_2fr] gap-8 items-start" >
-        <div
-            class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-6" >
-  <img src="https://www.thomann.de/thumb/opengraph/pics/prod/207036.jpg" alt = "AKG C214"
-class="w-full h-full object-contain mix-blend-multiply hover:scale-105 transition-transform duration-500" />
-  </div>
-  <div >
-  <h3 class="mt-0 mb-2 text-2xl font-bold" > 4. AKG C214 </h3>
-    <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> Le Statique pour la
-précision </p>
-  <p > Si vous voulez capturer le grain et les moindres détails des cordes vocales, ce micro statique est
-excellent.Il possède un filtre coupe - bas à 160Hz très efficace pour nettoyer les graves excessifs.</p>
-  <ul class="space-y-2 mt-6 mb-0 text-sm list-none pl-0">
-    <li class="flex items-start gap-2" > <span class="text-emerald-500 font-bold shrink-0" >✓</span>
-      <span > Grande sensibilité pour capter les détails texturaux.</span></li >
-        <li class="flex items-start gap-2" > <span class="text-emerald-500 font-bold shrink-0" >✓</span>
-          <span > Filtre coupe - bas intégré très musical.</span></li >
-            <li class="flex items-start gap-2" > <span class="text-orange-500 font-bold shrink-0" >⚠️</span>
-              <span > Nécessite une pièce traitée acoustiquement.</span></li >
-                </ul>
-                </div>
-                </div>
-                </div>
-
-                <!--MICRO 5 : Shure SM58-->
-                  <div id="shure-sm58" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-12 shadow-sm scroll-mt-24" >
-                    <div class="grid md:grid-cols-[1.5fr_2fr] gap-8 items-start" >
-                      <div
-            class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-6" >
-  <img src="https://www.thomann.de/thumb/opengraph/pics/prod/105768.jpg" alt = "Shure SM58"
-class="w-full h-full object-contain mix-blend-multiply hover:scale-105 transition-transform duration-500" />
-  </div>
-  <div >
-  <h3 class="mt-0 mb-2 text-2xl font-bold" > 5. Shure SM58 </h3>
-    <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> Le classique polyvalent
-      </p>
-      <p > On l'oublie souvent pour le studio, mais le SM58 gère superbement les voix graves si on ne le colle pas
-trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et robuste pour un usage mixte
-                chant / podcast sur un petit budget.</p>
-<ul class= "space-y-2 mt-6 mb-0 text-sm list-none pl-0">
-<li class="flex items-start gap-2" > <span class="text-emerald-500 font-bold shrink-0" >✓</span>
-<span > Polyvalence totale et robustesse légendaire.</span></li >
-<li class="flex items-start gap-2" > <span class="text-emerald-500 font-bold shrink-0" >✓</span>
-<span > Excellent rejet des bruits de fond.</span></li >
-</ul>
-</div>
-</div>
-</div>
-
-<h2 class= "text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">📊 Tableau de Comparaison
-</h2>
-<div class= "overflow-x-auto my-12 border border-border rounded-xl">
-<table class="w-full text-sm text-left border-collapse min-w-[600px]" >
-<thead class="bg-secondary text-foreground uppercase border-b border-border font-serif" >
-<tr>
-<th class="px-5 py-4 font-bold border-r border-border w-1/4" > Micro </th>
-<th class= "px-5 py-4 font-bold border-r border-border"> Type </th>
-<th class= "px-5 py-4 font-bold border-r border-border"> Effet de Proximité </th>
-<th class= "px-5 py-4 font-bold"> Verdict </th>
-</tr>
-</thead>
-<tbody >
-<tr class="hover:bg-muted/50 border-b border-border transition-colors" >
-<td class="px-5 py-4 font-bold bg-muted/30 border-r border-border text-primary" > EV RE20 </td>
-<td class= "px-5 py-4 border-r border-border font-medium"> Dynamique </td>
-<td class= "px-5 py-4 border-r border-border text-emerald-600 font-bold"> Quasiment nul </td>
-<td class= "px-5 py-4">🥇 Le plus fidèle </td>
-</tr>
-<tr class= "hover:bg-muted/50 border-b border-border transition-colors">
-<td class="px-5 py-4 font-bold bg-muted/30 border-r border-border text-primary" > Shure SM7B </td>
-<td class= "px-5 py-4 border-r border-border font-medium"> Dynamique </td>
-<td class= "px-5 py-4 border-r border-border text-orange-600 font-bold"> Moyen(Flatteur) </td>
-<td class= "px-5 py-4">🥈 Le plus chaleureux </td>
-</tr>
-<tr class= "hover:bg-muted/50 border-b border-border transition-colors">
-<td class="px-5 py-4 font-bold bg-muted/30 border-r border-border text-primary" > AKG C214 </td>
-<td class= "px-5 py-4 border-r border-border font-medium"> Statique </td>
-<td class= "px-5 py-4 border-r border-border text-destructive font-bold"> Fort </td>
-<td class= "px-5 py-4"> Précision chirurgicale </td>
-</tr>
-<tr class= "hover:bg-muted/50 border-b border-border transition-colors">
-<td class="px-5 py-4 font-bold bg-muted/30 border-r border-border text-primary" > Rode PodMic </td>
-<td class= "px-5 py-4 border-r border-border font-medium"> Dynamique </td>
-<td class= "px-5 py-4 border-r border-border text-destructive font-bold"> Fort </td>
-<td class= "px-5 py-4"> Budget & Radio </td>
-</tr>
-<tr class= "hover:bg-muted/50 transition-colors">
-<td class="px-5 py-4 font-bold bg-muted/30 border-r border-border text-primary" > Shure SM58 </td>
-<td class= "px-5 py-4 border-r border-border font-medium"> Dynamique </td>
-<td class= "px-5 py-4 border-r border-border text-orange-600 font-bold"> Moyen </td>
-<td class= "px-5 py-4"> Polyvalence totale </td>
-</tr>
-</tbody>
-</table>
-</div>
-
-< div
-    class= "bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center sm:text-left flex flex-col sm:flex-row items-center gap-8" >
-  <div class="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center shrink-0" >
-<span class="text-4xl" >🎛️</span>
-</div>
-<div >
-<h2 class="text-2xl font-bold text-foreground mt-0 mb-3 !border-0" >📌 Conseils de Réglage </h2>
-<p class= "mb-3"> <strong>Filtre Coupe - Bas(Low Cut) : </strong> Si votre micro ou votre interface possède un
-            interrupteur "Low Cut" ou "High Pass"(généralement à 80Hz - 100Hz), activez - le.Cela supprimera les
-            grondements inutiles(vibrations de la table, clim) sans toucher à la richesse de votre voix.</p>
-<p class= "mb-0"> <strong>La Distance de Sécurité : </strong> Gardez une distance de 10 à 15 cm entre votre bouche
-            et le micro pour équilibrer la clarté et la chaleur.Si vous vous collez au micro, la voix gonflera
-            artificiellement.</p>
-  </div>
+  <!--PRODUCT CARD: Rode PodMic-->
+  <div id="rode-podmic" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+    <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+      <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+        <img src="https://www.thomann.de/thumb/opengraph/pics/prod/567098.jpg" alt="Rode PodMic" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
+        <div class="absolute top-4 left-4 bg-muted text-foreground border border-border text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">Meilleur Budget</div>
+      </div>
+      <div>
+        <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/rode-podmic-usb" class="product-link text-foreground hover:text-primary transition-colors">Rode PodMic USB</a></h3>
+        <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le Rapport Qualité/Prix Imbattable</p>
+        <p>Le PodMic est devenu en peu de temps le favori des podcasters. Sa construction tout en métal et sa capsule optimisée pour la parole en font un outil robuste qui donne beaucoup de corps aux voix graves sans les étouffer. La version USB-C/XLR offre une polyvalence totale.</p>
+      </div>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4 mt-8">
+      <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+        <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+        <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+          <li>Construction "tank" indestructible</li>
+          <li>Double connectique XLR et USB-C</li>
+          <li>Traitement DSP interne (via logiciel Rode)</li>
+        </ul>
+      </div>
+      <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+        <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+        <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+          <li>Assez lourd (nécessite un bras articulé)</li>
+          <li>Son un peu "sec" sans traitement</li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-wrap items-center gap-3 mt-8 pt-6 border-t border-border">
+      <a href="/produit/rode-podmic-usb" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-shadow">Voir sur Fluxlab</a>
+    </div>
   </div>
 
-  <h2 class= "text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4"> FAQ : Voix Graves et Audio
-  </h2>
-<div class= "faq-accordion space-y-4">
-<details
-        class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden" >
-<summary
-            class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors" >
-<span>C'est quoi un filtre coupe-bas (High Pass Filter) ?</span>
-<span class= "transition group-open:rotate-180">
-<svg fill="none" height = "24" shape - rendering="geometricPrecision" stroke = "currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox = "0 0 24 24" width = "24" >
-<path d="M6 9l6 6 6-6" > </path>
-</svg>
-</span>
-</summary>
-<p class= "text-muted-foreground px-5 pb-4 mt-2 text-sm"> C'est un filtre qui laisse passer les fréquences hautes
-            et coupe les basses.Pour une voix grave, il est crucial pour enlever le "Mud"(la boue) dans les fréquences
-            en dessous de 80Hz qui rend les paroles inintelligibles.</p>
-</details>
-
-< details
-        class= "group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden" >
-  <summary
-            class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors" >
-<span>Vaut - il mieux baisser les graves à la prise ou au mixage ? </span>
-  <span class= "transition group-open:rotate-180">
-  <svg fill="none" height = "24" shape - rendering="geometricPrecision" stroke = "currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox = "0 0 24 24" width = "24" >
-<path d="M6 9l6 6 6-6" > </path>
-</svg>
-</span>
-</summary>
-<p class= "text-muted-foreground px-5 pb-4 mt-2 text-sm"> Si vous avez un filtre physique sur le micro,
-  utilisez - le à la prise.Cela évite que les basses excessives ne fassent saturer l'entrée de votre carte son,
-            ce qui est irrécupérable au mixage.</p>
-</details>
-
-< details
-        class= "group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden" >
-  <summary
-            class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors" >
-<span>Le micro de mon smartphone est - il bien pour une voix grave ? </span>
-  <span class= "transition group-open:rotate-180">
-  <svg fill="none" height = "24" shape - rendering="geometricPrecision" stroke = "currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox = "0 0 24 24" width = "24" >
-<path d="M6 9l6 6 6-6" > </path>
-</svg>
-</span>
-</summary>
-<p class= "text-muted-foreground px-5 pb-4 mt-2 text-sm"> Généralement non.Les petits capteurs des smartphones
-            ont tendance à saturer rapidement dans les basses ou à les supprimer totalement par traitement logiciel
-            ultra compressif, rendant la voix nasillarde et métallique.</p>
-</details>
-
-< details
-        class= "group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden" >
-  <summary
-            class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors" >
-<span>Pourquoi les radios utilisent - elles le RE20 ? </span>
-  <span class= "transition group-open:rotate-180">
-  <svg fill="none" height = "24" shape - rendering="geometricPrecision" stroke = "currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox = "0 0 24 24" width = "24" >
-<path d="M6 9l6 6 6-6" > </path>
-</svg>
-</span>
-</summary>
-<p class= "text-muted-foreground px-5 pb-4 mt-2 text-sm"> Parce que les animateurs bougent beaucoup la tête de
-            droite à gauche.Avec un micro classique, le son changerait tout le temps de timbre selon la distance(effet
-            de proximité fluctuant).Avec la techno Variable - D du RE20, le son reste constant.</p>
-</details>
-
-< details
-        class= "group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden" >
-  <summary
-            class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors" >
-<span>Un pop - filter aide - t - il pour les graves ? </span>
-  <span class= "transition group-open:rotate-180">
-  <svg fill="none" height = "24" shape - rendering="geometricPrecision" stroke = "currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox = "0 0 24 24" width = "24" >
-<path d="M6 9l6 6 6-6" > </path>
-</svg>
-</span>
-</summary>
-<p class= "text-muted-foreground px-5 pb-4 mt-2 text-sm"> Indirectement oui.Il vous oblige à garder une distance
-            minimale avec le micro, ce qui limite mécaniquement l'exagération des basses par effet de proximité et
-            class= "relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-6" >
-  <img src="https://www.thomann.de/thumb/opengraph/pics/prod/207036.jpg" alt = "AKG C214"
-                class= "w-full h-full object-contain mix-blend-multiply hover:scale-105 transition-transform duration-500" />
-  </div>
-  <div >
-  <h3 class="mt-0 mb-2 text-2xl font-bold" > 4. AKG C214 </h3>
-<p class= "text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> Le Statique pour la
-                précision </p>
-  <p > Si vous voulez capturer le grain et les moindres détails des cordes vocales, ce micro statique est
-                excellent.Il possède un filtre coupe - bas à 160Hz très efficace pour nettoyer les graves excessifs.</p>
-<ul class= "space-y-2 mt-6 mb-0 text-sm list-none pl-0">
-<li class="flex items-start gap-2" > <span class="text-emerald-500 font-bold shrink-0" >✓</span>
-<span > Grande sensibilité pour capter les détails texturaux.</span></li >
-<li class="flex items-start gap-2" > <span class="text-emerald-500 font-bold shrink-0" >✓</span>
-<span > Filtre coupe - bas intégré très musical.</span></li >
-<li class="flex items-start gap-2" > <span class="text-orange-500 font-bold shrink-0" >⚠️</span>
-<span > Nécessite une pièce traitée acoustiquement.</span></li >
-</ul>
-</div>
-</div>
-</div>
-
-<!--MICRO 5 : Shure SM58-->
-<div id="shure-sm58" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 my-12 shadow-sm scroll-mt-24" >
-<div class="grid md:grid-cols-[1.5fr_2fr] gap-8 items-start" >
-<div
-            class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-6" >
-<img src="https://www.thomann.de/thumb/opengraph/pics/prod/105768.jpg" alt = "Shure SM58"
-                class= "w-full h-full object-contain mix-blend-multiply hover:scale-105 transition-transform duration-500" />
-  </div>
-  <div >
-  <h3 class="mt-0 mb-2 text-2xl font-bold" > 5. Shure SM58 </h3>
-<p class= "text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> Le classique polyvalent
-</p>
-<p > On l'oublie souvent pour le studio, mais le SM58 gère superbement les voix graves si on ne le colle pas
-                trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et robuste pour un usage mixte
-                chant / podcast sur un petit budget.</p>
-<ul class= "space-y-2 mt-6 mb-0 text-sm list-none pl-0">
-<li class="flex items-start gap-2" > <span class="text-emerald-500 font-bold shrink-0" >✓</span>
-<span > Polyvalence totale et robustesse légendaire.</span></li >
-<li class="flex items-start gap-2" > <span class="text-emerald-500 font-bold shrink-0" >✓</span>
-<span > Excellent rejet des bruits de fond.</span></li >
-</ul>
-</div>
-</div>
-</div>
-
-<h2 class= "text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">📊 Tableau de Comparaison
-</h2>
-<div class= "overflow-x-auto my-12 border border-border rounded-xl">
-<table class="w-full text-sm text-left border-collapse min-w-[600px]" >
-<thead class="bg-secondary text-foreground uppercase border-b border-border font-serif" >
-<tr>
-<th class="px-5 py-4 font-bold border-r border-border w-1/4" > Micro </th>
-<th class= "px-5 py-4 font-bold border-r border-border"> Type </th>
-<th class= "px-5 py-4 font-bold border-r border-border"> Effet de Proximité </th>
-<th class= "px-5 py-4 font-bold"> Verdict </th>
-</tr>
-</thead>
-<tbody >
-<tr class="hover:bg-muted/50 border-b border-border transition-colors" >
-<td class="px-5 py-4 font-bold bg-muted/30 border-r border-border text-primary" > EV RE20 </td>
-<td class= "px-5 py-4 border-r border-border font-medium"> Dynamique </td>
-<td class= "px-5 py-4 border-r border-border text-emerald-600 font-bold"> Quasiment nul </td>
-<td class= "px-5 py-4">🥇 Le plus fidèle </td>
-</tr>
-<tr class= "hover:bg-muted/50 border-b border-border transition-colors">
-<td class="px-5 py-4 font-bold bg-muted/30 border-r border-border text-primary" > Shure SM7B </td>
-<td class= "px-5 py-4 border-r border-border font-medium"> Dynamique </td>
-<td class= "px-5 py-4 border-r border-border text-orange-600 font-bold"> Moyen(Flatteur) </td>
-<td class= "px-5 py-4">🥈 Le plus chaleureux </td>
-</tr>
-<tr class= "hover:bg-muted/50 border-b border-border transition-colors">
-<td class="px-5 py-4 font-bold bg-muted/30 border-r border-border text-primary" > AKG C214 </td>
-<td class= "px-5 py-4 border-r border-border font-medium"> Statique </td>
-<td class= "px-5 py-4 border-r border-border text-destructive font-bold"> Fort </td>
-<td class= "px-5 py-4"> Précision chirurgicale </td>
-</tr>
-<tr class= "hover:bg-muted/50 border-b border-border transition-colors">
-<td class="px-5 py-4 font-bold bg-muted/30 border-r border-border text-primary" > Rode PodMic </td>
-<td class= "px-5 py-4 border-r border-border font-medium"> Dynamique </td>
-<td class= "px-5 py-4 border-r border-border text-destructive font-bold"> Fort </td>
-<td class= "px-5 py-4"> Budget & Radio </td>
-</tr>
-<tr class= "hover:bg-muted/50 transition-colors">
-<td class="px-5 py-4 font-bold bg-muted/30 border-r border-border text-primary" > Shure SM58 </td>
-<td class= "px-5 py-4 border-r border-border font-medium"> Dynamique </td>
-<td class= "px-5 py-4 border-r border-border text-orange-600 font-bold"> Moyen </td>
-<td class= "px-5 py-4"> Polyvalence totale </td>
-</tr>
-</tbody>
-</table>
-</div>
-
-< div
-    class= "bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center sm:text-left flex flex-col sm:flex-row items-center gap-8" >
-  <div class="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center shrink-0" >
-<span class="text-4xl" >🎛️</span>
-</div>
-<div >
-<h2 class="text-2xl font-bold text-foreground mt-0 mb-3 !border-0" >📌 Conseils de Réglage </h2>
-<p class= "mb-3"> <strong>Filtre Coupe - Bas(Low Cut) : </strong> Si votre micro ou votre interface possède un
-            interrupteur "Low Cut" ou "High Pass"(généralement à 80Hz - 100Hz), activez - le.Cela supprimera les
-            grondements inutiles(vibrations de la table, clim) sans toucher à la richesse de votre voix.</p>
-<p class= "mb-0"> <strong>La Distance de Sécurité : </strong> Gardez une distance de 10 à 15 cm entre votre bouche
-            et le micro pour équilibrer la clarté et la chaleur.Si vous vous collez au micro, la voix gonflera
-            artificiellement.</p>
-  </div>
+  <!--PRODUCT CARD: AKG C214-->
+  <div id="akg-c214" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+    <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+      <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+        <img src="https://thumbs.static-thomann.de/thumb//bdbmagic/pics/prod/211318.jpg" alt="AKG C214" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
+        <div class="absolute top-4 left-4 bg-muted text-foreground border border-border text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">La Clarté du Condensateur</div>
+      </div>
+      <div>
+        <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/akg-c214" class="product-link text-foreground hover:text-primary transition-colors">AKG C214</a></h3>
+        <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Précision et Harmonie</p>
+        <p>Si vous voulez que votre voix grave traverse le mixage with une précision chirurgicale, le C214 est votre allié. C'est un micro statique à large membrane qui capture les détails là où les dynamiques s'arrêtent. Son filtre coupe-bas est indispensable pour gérer l'assise des basses.</p>
+      </div>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4 mt-8">
+      <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+        <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+        <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+          <li>Grande clarté et détails exceptionnels</li>
+          <li>Filtre coupe-bas intégré performant</li>
+          <li>Supporte de hautes pressions acoustiques</li>
+        </ul>
+      </div>
+      <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+        <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+        <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+          <li>Sensible aux bruits ambiants (statique)</li>
+          <li>Nécessite une alimentation fantôme 48V</li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-wrap items-center gap-3 mt-8 pt-6 border-t border-border">
+      <a href="/produit/akg-c214" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-shadow">Voir sur Fluxlab</a>
+    </div>
   </div>
 
-  <h2 class= "text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4"> FAQ : Voix Graves et Audio
-  </h2>
-<div class= "faq-accordion space-y-4">
-<details
-        class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden" >
-<summary
-            class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors" >
-<span>C'est quoi un filtre coupe-bas (High Pass Filter) ?</span>
-<span class= "transition group-open:rotate-180">
-<svg fill="none" height = "24" shape - rendering="geometricPrecision" stroke = "currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox = "0 0 24 24" width = "24" >
-<path d="M6 9l6 6 6-6" > </path>
-</svg>
-</span>
-</summary>
-<p class= "text-muted-foreground px-5 pb-4 mt-2 text-sm"> C'est un filtre qui laisse passer les fréquences hautes
-            et coupe les basses.Pour une voix grave, il est crucial pour enlever le "Mud"(la boue) dans les fréquences
-            en dessous de 80Hz qui rend les paroles inintelligibles.</p>
-</details>
+  <!--PRODUCT CARD: Shure MV7X-->
+  <div id="shure-mv7x" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+    <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+      <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+        <img src="https://thumbs.static-thomann.de/thumb//bdbmagic/pics/prod/528028.jpg" alt="Shure MV7X" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
+        <div class="absolute top-4 left-4 bg-muted text-foreground border border-border text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">L'Isolation Parfaite</div>
+      </div>
+      <div>
+        <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/shure-mv7x" class="product-link text-foreground hover:text-primary transition-colors">Shure MV7X</a></h3>
+        <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">L'Héritier Direct du SM7B</p>
+        <p>Petit frère du célèbre MV7, le MV7X est une version purement XLR. Il utilise la "Voice Isolation Technology" de Shure, ce qui est crucial pour les voix graves qui peuvent parfois résonner de manière indésirable dans une pièce non traitée.</p>
+      </div>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4 mt-8">
+      <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+        <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+        <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+          <li>Isolation phonique exceptionnelle</li>
+          <li>Construction professionnelle Shure</li>
+          <li>Idéal pour les pièces acoustiquement difficiles</li>
+        </ul>
+      </div>
+      <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+        <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+        <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+          <li>Moins "moelleux" dans les graves que le SM7B</li>
+          <li>Nécessite quand même un bon préampli</li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-wrap items-center gap-3 mt-8 pt-6 border-t border-border">
+      <a href="/produit/shure-mv7x" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-shadow">Voir sur Fluxlab</a>
+    </div>
+  </div>
 
-< details
-        class= "group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden" >
-  <summary
-            class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors" >
-<span>Vaut - il mieux baisser les graves à la prise ou au mixage ? </span>
-  <span class= "transition group-open:rotate-180">
-  <svg fill="none" height = "24" shape - rendering="geometricPrecision" stroke = "currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox = "0 0 24 24" width = "24" >
-<path d="M6 9l6 6 6-6" > </path>
-</svg>
-</span>
-</summary>
-<p class= "text-muted-foreground px-5 pb-4 mt-2 text-sm"> Si vous avez un filtre physique sur le micro,
-  utilisez - le à la prise.Cela évite que les basses excessives ne fassent saturer l'entrée de votre carte son,
-            ce qui est irrécupérable au mixage.</p>
-</details>
+  <!-- LE MOT DE LA FIN -->
+  <div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center sm:text-left flex flex-col sm:flex-row items-center gap-8">
+    <div class="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+      <span class="text-4xl">🏆</span>
+    </div>
+    <div>
+      <h2 class="text-2xl font-bold text-foreground mt-0 mb-3 !border-0">Le Mot de la Fin</h2>
+      <p class="mb-0">Si vous cherchez la fidélité absolue sans vous soucier de l'effet de proximité, l'<strong>Electro-Voice RE20</strong> reste le roi incontesté. Pour une voix chaleureuse et iconique style radio, le <strong>Shure SM7B</strong> est le meilleur choix. Pour les budgets plus serrés, le <strong>Rode PodMic</strong> et le <strong>Shure MV7X</strong> offrent des performances professionnelles. Enfin, pour percer dans un mix de chant, l'<strong>AKG C214</strong> sera votre meilleur allié.</p>
+    </div>
+  </div>
 
-< details
-        class= "group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden" >
-  <summary
-            class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors" >
-<span>Le micro de mon smartphone est - il bien pour une voix grave ? </span>
-  <span class= "transition group-open:rotate-180">
-  <svg fill="none" height = "24" shape - rendering="geometricPrecision" stroke = "currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox = "0 0 24 24" width = "24" >
-<path d="M6 9l6 6 6-6" > </path>
-</svg>
-</span>
-</summary>
-<p class= "text-muted-foreground px-5 pb-4 mt-2 text-sm"> Généralement non.Les petits capteurs des smartphones
-            ont tendance à saturer rapidement dans les basses ou à les supprimer totalement par traitement logiciel
-            ultra compressif, rendant la voix nasillarde et métallique.</p>
-</details>
+  <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">FAQ : Dompter sa voix grave</h2>
 
-< details
-        class= "group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden" >
-  <summary
-            class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors" >
-<span>Pourquoi les radios utilisent - elles le RE20 ? </span>
-  <span class= "transition group-open:rotate-180">
-  <svg fill="none" height = "24" shape - rendering="geometricPrecision" stroke = "currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox = "0 0 24 24" width = "24" >
-<path d="M6 9l6 6 6-6" > </path>
-</svg>
-</span>
-</summary>
-<p class= "text-muted-foreground px-5 pb-4 mt-2 text-sm"> Parce que les animateurs bougent beaucoup la tête de
-            droite à gauche.Avec un micro classique, le son changerait tout le temps de timbre selon la distance(effet
-            de proximité fluctuant).Avec la techno Variable - D du RE20, le son reste constant.</p>
-</details>
+  <div class="space-y-4">
+    <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+        <span>C'est quoi un filtre coupe-bas (High Pass Filter) ?</span>
+        <span class="transition group-open:rotate-180">
+          <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+        </span>
+      </summary>
+      <p class="text-muted-foreground px-5 pb-4 mt-2">C'est un filtre qui laisse passer les fréquences hautes et coupe les basses. Pour une voix grave, il est crucial pour enlever le \"Mud\" (la boue) dans les fréquences en dessous de 80Hz qui rend les paroles inintelligibles.</p>
+    </details>
 
-< details
-        class= "group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden" >
-  <summary
-            class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors" >
-<span>Un pop - filter aide - t - il pour les graves ? </span>
-  <span class= "transition group-open:rotate-180">
-  <svg fill="none" height = "24" shape - rendering="geometricPrecision" stroke = "currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox = "0 0 24 24" width = "24" >
-<path d="M6 9l6 6 6-6" > </path>
-</svg>
-</span>
-</summary>
-<p class= "text-muted-foreground px-5 pb-4 mt-2 text-sm"> Indirectement oui.Il vous oblige à garder une distance
-            minimale avec le micro, ce qui limite mécaniquement l'exagération des basses par effet de proximité et
-            empêche les plosives graves(les "P") de saturer la capsule.</p>
-</details>
-</div>
+    <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+        <span>Vaut-il mieux baisser les graves à la prise ou au mixage ?</span>
+        <span class="transition group-open:rotate-180">
+          <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+        </span>
+      </summary>
+      <p class="text-muted-foreground px-5 pb-4 mt-2">Si vous avez un filtre physique sur le micro, utilisez-le à la prise. Cela évite que les basses excessives ne fassent saturer l'entrée de votre carte son, ce qui est irrécupérable au mixage.</p>
+    </details>
 
-<div class= "mt-12 p-6 bg-muted/30 rounded-2xl border border-border">
-<p class="mb-0 text-muted-foreground text-sm" > Pour en savoir plus sur la gestion du bruit autour de votre voix
-        puissante, lisez notre <a href = "/guide/supprimer-bruit-de-fond-micro"
- class="text-primary hover:underline font-medium"> guide anti - bruit </a> ou passez par notre <a
-            href = "/configurateur" class= "text-primary hover:underline font-medium" > configurateur interactif </a>.</p >
-</div>
+    <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+        <span>Le micro de mon smartphone est-il bien pour une voix grave ?</span>
+        <span class="transition group-open:rotate-180">
+          <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+        </span>
+      </summary>
+      <p class="text-muted-foreground px-5 pb-4 mt-2">Généralement non. Les petits capteurs des smartphones ont tendance à saturer rapidement dans les basses ou à les supprimer totalement par traitement logiciel ultra compressif, rendant la voix nasillarde et métallique.</p>
+    </details>
 
-<script type = "application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "C'est quoi un filtre coupe-bas (High Pass Filter) ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "C'est un filtre qui laisse passer les fréquences hautes et coupe les basses. Pour une voix grave, il est crucial pour enlever le \"Mud\" (la boue) dans les fréquences en dessous de 80Hz qui rend les paroles inintelligibles."
+    <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+        <span>Pourquoi les radios utilisent-elles le RE20 ?</span>
+        <span class="transition group-open:rotate-180">
+          <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+        </span>
+      </summary>
+      <p class="text-muted-foreground px-5 pb-4 mt-2">Parce que les animateurs bougent beaucoup la tête de droite à gauche. Avec un micro classique, le son changerait tout le temps de timbre selon la distance (effet de proximité fluctuant). Avec la techno Variable-D du RE20, le son reste constant.</p>
+    </details>
+
+    <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+        <span>Un pop-filter aide-t-il pour les graves ?</span>
+        <span class="transition group-open:rotate-180">
+          <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+        </span>
+      </summary>
+      <p class="text-muted-foreground px-5 pb-4 mt-2">Indirectement oui. Il vous oblige à garder une distance minimale avec le micro, ce qui limite mécaniquement l'exagération des basses par effet de proximité et empêche les plosives graves (les \"P\") de saturer la capsule.</p>
+    </details>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "C'est quoi un filtre coupe-bas (High Pass Filter) ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "C'est un filtre qui laisse passer les fréquences hautes et coupe les basses. Pour une voix grave, il est crucial pour enlever le \"Mud\" (la boue) dans les fréquences en dessous de 80Hz qui rend les paroles inintelligibles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vaut-il mieux baisser les graves à la prise ou au mixage ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Si vous avez un filtre physique sur le micro, utilisez-le à la prise. Cela évite que les basses excessives ne fassent saturer l'entrée de votre carte son, ce qui est irrécupérable au mixage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Le micro de mon smartphone est-il bien pour une voix grave ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Généralement non. Les petits capteurs des smartphones ont tendance à saturer rapidement dans les basses ou à les supprimer totalement par traitement logiciel ultra compressif, rendant la voix nasillarde et métallique."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pourquoi les radios utilisent-elles le RE20 ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Parce que les animateurs bougent beaucoup la tête de droite à gauche. Avec un micro classique, le son changerait tout le temps de timbre selon la distance (effet de proximité fluctuant). Avec la techno Variable-D du RE20, le son reste constant."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Un pop-filter aide-t-il pour les graves ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Indirectement oui. Il vous oblige à garder une distance minimale avec le micro, ce qui limite mécaniquement l'exagération des basses par effet de proximité et empêche les plosives graves (les \"P\") de saturer la capsule."
+        }
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Vaut-il mieux baisser les graves à la prise ou au mixage ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Si vous avez un filtre physique sur le micro, utilisez-le à la prise. Cela évite que les basses excessives ne fassent saturer l'entrée de votre carte son, ce qui est irrécupérable au mixage."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Le micro de mon smartphone est-il bien pour une voix grave ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Généralement non. Les petits capteurs des smartphones ont tendance à saturer rapidement dans les basses ou à les supprimer totalement par traitement logiciel ultra compressif, rendant la voix nasillarde et métallique."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Pourquoi les radios utilisent-elles le RE20 ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Parce que les animateurs bougent beaucoup la tête de droite à gauche. Avec un micro classique, le son changerait tout le temps de timbre selon la distance (effet de proximité fluctuant). Avec la techno Variable-D du RE20, le son reste constant."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Un pop-filter aide-t-il pour les graves ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Indirectement oui. Il vous oblige à garder une distance minimale avec le micro, ce qui limite mécaniquement l'exagération des basses par effet de proximité et empêche les plosives graves (les \"P\") de saturer la capsule."
-      }
-    }
-  ]
-}
-</script>
+    ]
+  }
+  </script>
   `
   },
   // ═══ ARTICLE 16 — Meilleur casque studio ═══
@@ -4210,7 +4027,7 @@ trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et 
                       </ul>
                       </div>
 
-                      <h2 > Le Grand Duel: Casque Ouvert vs Casque Fermé </h2>
+                                             <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4"> Le Grand Duel: Casque Ouvert vs Casque Fermé </h2>
                         <p > C'est la première question à se poser avant de sortir la carte bleue. L'usage n'est pas du tout le même :</p>
                           <ul >
                           <li><strong>Casque Fermé </strong> : Les oreillettes sont isolées. Le son ne sort pas et le bruit extérieur ne rentre pas. <strong>Indispensable pour l'enregistrement</strong > (pour ne pas que le micro capte votre retour) et pour le travail en environnement bruyant.</li>
@@ -4267,7 +4084,9 @@ trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et 
                                                                                                 <!--PRODUCT CARD: DT 770 Pro-->
                                                                                                   <div id="beyerdynamic-dt-770" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                                                                                                     <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-                                                                                                      <img src="https://www.thomann.de/thumb/opengraph/pics/prod/174334.jpg" alt = "Beyerdynamic DT 770" class="rounded-2xl w-full aspect-square object-cover shadow-sm bg-white" loading = "lazy" />
+                                                                                                      <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
+                                                                                                        <img src="https://www.thomann.de/thumb/opengraph/pics/prod/174334.jpg" alt = "Beyerdynamic DT 770" class="w-full h-full object-contain" loading = "lazy" />
+                                                                                                      </div>
                                                                                                         <div>
                                                                                                         <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="/produit/beyerdynamic-dt-770-pro-80-ohm" class="product-link text-foreground hover:text-primary transition-colors" > Beyerdynamic DT 770 Pro </a></h3 >
                                                                                                           <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm" > Le standard increvable(Fermé) </p>
@@ -4310,7 +4129,9 @@ trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et 
                                                                                                                                                       <!--PRODUCT CARD: ATH - M50x-->
                                                                                                                                                         <div id="audio-technica-m50x" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                                                                                                                                                           <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-                                                                                                                                                            <img src="https://www.thomann.de/thumb/opengraph/pics/prod/331905.jpg" alt = "Audio-Technica ATH-M50x" class="rounded-2xl w-full aspect-square object-cover shadow-sm bg-white" loading = "lazy" />
+                                                                                                                                                            <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
+                                                                                                                                                              <img src="https://www.thomann.de/thumb/opengraph/pics/prod/331905.jpg" alt = "Audio-Technica ATH-M50x" class="w-full h-full object-contain" loading = "lazy" />
+                                                                                                                                                            </div>
                                                                                                                                                               <div>
                                                                                                                                                               <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="/produit/audio-technica-ath-m50-x" class="product-link text-foreground hover:text-primary transition-colors" > Audio - Technica ATH - M50x </a></h3 >
                                                                                                                                                                 <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm" > Le couteau suisse(Fermé) </p>
@@ -4353,7 +4174,9 @@ trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et 
                                                                                                                                                                                                             <!--PRODUCT CARD: Sony MDR - 7506 -->
                                                                                                                                                                                                               <div id="sony-mdr" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                                                                                                                                                                                                                 <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-                                                                                                                                                                                                                  <img src="https://www.thomann.de/thumb/opengraph/pics/prod/135709.jpg" alt = "Sony MDR-7506" class="rounded-2xl w-full aspect-square object-cover shadow-sm bg-white" loading = "lazy" />
+                                                                                                                                                                                                                  <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
+                                                                                                                                                                                   <img src="https://www.thomann.de/thumb/opengraph/pics/prod/135709.jpg" alt = "Sony MDR-7506" class="w-full h-full object-contain" loading = "lazy" />
+                                                                                                                                                                                   </div>
                                                                                                                                                                                                                     <div>
                                                                                                                                                                                                                     <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="/produit/sony-mdr-7506" class="product-link text-foreground hover:text-primary transition-colors" > Sony MDR - 7506 </a></h3 >
                                                                                                                                                                                                                       <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm" > Le microscope audio(Fermé) </p>
@@ -4396,7 +4219,9 @@ trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et 
                                                                                                                                                                                                                                                                   <!--PRODUCT CARD: HD 600 -->
                                                                                                                                                                                                                                                                     <div id="sennheiser-hd600" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                                                                                                                                                                                                                                                                       <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-                                                                                                                                                                                                                                                                        <img src="https://www.thomann.de/thumb/opengraph/pics/prod/471751.jpg" alt = "Sennheiser HD 600" class="rounded-2xl w-full aspect-square object-cover shadow-sm bg-white" loading = "lazy" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
+                                                                                                                                                                                                                                                                         <img src="https://www.thomann.de/thumb/opengraph/pics/prod/471751.jpg" alt = "Sennheiser HD 600" class="w-full h-full object-contain" loading = "lazy" />
+                                                                                                                                                                                                                                                                         </div>
                                                                                                                                                                                                                                                                           <div>
                                                                                                                                                                                                                                                                           <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="/produit/sennheiser-hd-600" class="product-link text-foreground hover:text-primary transition-colors" > Sennheiser HD 600 </a></h3 >
                                                                                                                                                                                                                                                                             <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm" > Le maître de l'équilibre (Ouvert)</p>
@@ -4439,7 +4264,9 @@ trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et 
                                                                                                                                                                                                                                                                                                                         <!--PRODUCT CARD: DT 990 Pro-->
                                                                                                                                                                                                                                                                                                                           <div id="beyerdynamic-dt-990" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                                                                                                                                                                                                                                                                                                                             <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-                                                                                                                                                                                                                                                                                                                              <img src="https://www.thomann.de/thumb/opengraph/pics/prod/106865.jpg" alt = "Beyerdynamic DT 990 Pro" class="rounded-2xl w-full aspect-square object-cover shadow-sm bg-white" loading = "lazy" />
+                                                                                                                                                                                                                                                                                                                              <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
+                                                                                                                                                                                                                                                                                                                               <img src="https://www.thomann.de/thumb/opengraph/pics/prod/106865.jpg" alt = "Beyerdynamic DT 990 Pro" class="w-full h-full object-contain" loading = "lazy" />
+                                                                                                                                                                                                                                                                                                                               </div>
                                                                                                                                                                                                                                                                                                                                 <div>
                                                                                                                                                                                                                                                                                                                                 <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="/produit/beyerdynamic-dt-990-pro" class="product-link text-foreground hover:text-primary transition-colors" > Beyerdynamic DT 990 Pro </a></h3 >
                                                                                                                                                                                                                                                                                                                                   <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm" > Le chouchou des Streamers(Ouvert) </p>
@@ -4629,13 +4456,13 @@ trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et 
                       </ul>
                       </div>
 
-                      <h2 > Qu'est-ce qu'un Stream Deck ? </h2>
+                        <h2 class="text-2xl font-bold mt-8 mb-4"> Qu'est-ce qu'un Stream Deck ? </h2>
                         <p > Le Stream Deck est un boîtier doté de touches LCD personnalisables.Chaque touche est un petit écran qui peut afficher une icône, un GIF ou du texte, et déclencher une action(ou une suite d'actions) sur votre ordinateur. C'est le centre de contrôle physique de votre setup numérique.</p>
 
-                          <h3 > Pourquoi est - ce révolutionnaire ? </h3>
-                            <p > Parce qu'il remplace la mémoire musculaire complexe des raccourcis clavier (Ctrl+Maj+Alt+F12...) par un retour visuel immédiat. Une seule pression suffit pour lancer un stream, couper son micro, ou même tamiser ses lumières connectées.</p>
+                        <h3 class="text-xl font-bold mt-6 mb-3"> Pourquoi est-ce révolutionnaire ? </h3>
+                        <p > Parce qu'il remplace la mémoire musculaire complexe des raccourcis clavier (Ctrl+Maj+Alt+F12...) par un retour visuel immédiat. Une seule pression suffit pour lancer un stream, couper son micro, ou même tamiser ses lumières connectées.</p>
 
-                        <h2>🎯 Des Idées d'Utilisation (Hors Streaming)</h2>
+                        <h2 class="text-2xl font-bold mt-8 mb-4">🎯 Des Idées d'Utilisation (Hors Streaming)</h2>
                         <p > Bien que conçu pour les créateurs de contenu en direct, son potentiel s'étend à de nombreuses autres professions :</p>
                         <ul >
                         <li><strong>Montage Vidéo(Premiere / Resolve) </strong> : Assignez des icônes pour les outils récurrents ("Cut", "Ripple Delete", "Color Grading"). Vous gagnerez 20 à 30 % de temps sur chaque projet.</li >
@@ -4655,22 +4482,22 @@ trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et 
                         </thead>
                         <tbody >
                         <tr class="hover:bg-muted/50 border-b border-border transition-colors" >
-                        <td class="px-5 py-4 font-bold border-r border-border" > <a href="#elgato-mk2" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://www.thomann.de/thumb/opengraph/pics/prod/524859.jpg" alt = "MK.2" class= "w-8 h-8 rounded-full object-cover" > MK.2 </a></td >
+                        <td class="px-5 py-4 font-bold border-r border-border" > <a href="#elgato-mk2" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/elgato-stream-deck-mk2-gallery-1769886530345.png" alt = "MK.2" class= "w-8 h-8 rounded-full object-cover" > MK.2 </a></td >
                         <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > 15 Touches LCD </td>
                         <td class= "px-5 py-4 border-r border-border"> Usage général / Bureau </td>
                         <td class= "px-5 py-4 text-center font-bold text-primary"> 4.8 / 5 </td>
                         </tr>
                         <tr class= "hover:bg-muted/50 border-b border-border transition-colors">
-                        <td class="px-5 py-4 font-bold border-r border-border" > <a href="#elgato-plus" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://www.thomann.de/thumb/opengraph/pics/prod/555546.jpg" alt = "Plus" class= "w-8 h-8 rounded-full object-cover" > Plus(+) </a></td >
+                        <td class="px-5 py-4 font-bold border-r border-border" > <a href="#elgato-plus" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/elgato-stream-deck-plus-gallery-1769886222537.png" alt = "Plus" class= "w-8 h-8 rounded-full object-cover" > Plus(+) </a></td >
                         <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > 8 LCD + 4 Molettes </td>
                         <td class= "px-5 py-4 border-r border-border"> Audio & Graphisme </td>
                         <td class= "px-5 py-4 text-center font-bold text-primary"> 4.9 / 5 </td>
                         </tr>
                         <tr class= "hover:bg-muted/50 transition-colors">
-                        <td class="px-5 py-4 font-bold border-r border-border" > <a href="#elgato-xl" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://www.thomann.de/thumb/opengraph/pics/prod/465225.jpg" alt = "XL" class= "w-8 h-8 rounded-full object-cover" > XL </a></td >
+                        <td class="px-5 py-4 font-bold border-r border-border" > <a href="#elgato-xl" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://thumbs.static-thomann.de/thumb//bdbmagic/pics/prod/467200.jpg" alt = "XL" class= "w-8 h-8 rounded-full object-cover" > XL </a></td >
                         <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > 32 Touches LCD </td>
                         <td class= "px-5 py-4 border-r border-border"> Simulateurs / Power - Users </td>
-                        <td class= "px-5 py-4 text-center font-bold text-primary"> 4.7 / 5 </td>
+                        <td class= "px-5 py-4 text-center font-bold text-primary"> 4.8 / 5 </td>
                         </tr>
                         </tbody>
                         </table>
@@ -4681,7 +4508,9 @@ trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et 
                         <!--PRODUCT CARD: MK.2 -->
                         <div id="elgato-mk2" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-                        <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/elgato-stream-deck-mk2-gallery-1769886530345.png" alt = "Elgato Stream Deck MK.2" class= "rounded-2xl w-full aspect-square object-cover shadow-sm bg-white" loading = "lazy" />
+                        <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
+                        <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/elgato-stream-deck-mk2-gallery-1769886530345.png" alt = "Elgato Stream Deck MK.2" class="w-full h-full object-contain" loading = "lazy" />
+                        </div>
                         <div>
                         <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="/produit/elgato-stream-deck-mk2" class= "product-link text-foreground hover:text-primary transition-colors" > Elgato Stream Deck MK.2 </a></h3 >
                         <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm" > Le Standard Équilibré(15 touches) </p>
@@ -4724,7 +4553,9 @@ trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et 
                         <!--PRODUCT CARD: Stream Deck + -->
                         <div id="elgato-plus" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-                        <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/elgato-stream-deck-plus-gallery-1769886222537.png" alt = "Elgato Stream Deck Plus" class= "rounded-2xl w-full aspect-square object-cover shadow-sm bg-white" loading = "lazy" />
+                        <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
+                        <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/elgato-stream-deck-plus-gallery-1769886222537.png" alt = "Elgato Stream Deck Plus" class="w-full h-full object-contain" loading = "lazy" />
+                        </div>
                         <div>
                         <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="/produit/elgato-stream-deck-plus" class= "product-link text-foreground hover:text-primary transition-colors" > Elgato Stream Deck + </a></h3 >
                         <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm" > Le Roi du Mixage et de l'Édition</p>
@@ -4766,7 +4597,9 @@ trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et 
                         <!--PRODUCT CARD: Stream Deck XL-->
                         <div id="elgato-xl" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
-                        <img src="https://www.thomann.de/thumb/opengraph/pics/prod/465225.jpg" alt = "Elgato Stream Deck XL" class= "rounded-2xl w-full aspect-square object-cover shadow-sm bg-white" loading = "lazy" />
+                        <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
+                        <img src="https://thumbs.static-thomann.de/thumb//bdbmagic/pics/prod/467200.jpg" alt = "Elgato Stream Deck XL" class="w-full h-full object-contain" loading = "lazy" />
+                        </div>
                         <div>
                         <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="/produit/elgato-stream-deck-xl" class= "product-link text-foreground hover:text-primary transition-colors" > Elgato Stream Deck XL </a></h3 >
                         <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm" > Le Vaisseau Amiral(32 touches) </p>
@@ -4806,7 +4639,7 @@ trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et 
                         </div>
                         </div>
 
-                        <h2>📌 Les Plugins Indispensables </h2>
+                        <h2 class="text-2xl font-bold mt-8 mb-4">📌 Les Plugins Indispensables </h2>
                         <ul >
                         <li><strong>Spotify / Apple Music </strong> : Contrôler sa musique et voir la pochette de l'album apparaître sur une seule touche sans quitter son jeu pleine page.</li >
                         <li><strong>Nvidia Broadcast </strong> : Activer/Désactiver la réduction de bruit IA ambiante à la volée.</li>
@@ -4821,7 +4654,7 @@ trop(pour éviter l'effet de proximité). C'est le micro le plus équilibré et 
                         </div>
                         <div >
                         <h2 class="text-2xl font-bold text-foreground mt-0 mb-3 !border-0" > Le Mot de la Fin </h2>
-                        <p class= "mb-0"> Le Stream Deck n'est pas un luxe si vous passez vos journées sur un PC : c'est <strong > un extenseur de productivité physique </strong> formidable pour préserver votre concentration. Si nous devions vous guider vers un modèle pour tout faire, l'<a href="/produit / elgato - stream - deck - mk2" class="product - link font - bold text - primary hover: underline">Elgato Stream Deck MK.2 classique</a> reste le plus pertinent rapport prix/fonctions. Toutefois, si comme nous vous ajustez fréquemment des niveaux audios ou travaillez sur Premiere Pro, l'ajout des molettes du <a href=" / produit / elgato - stream - deck - plus" class="product - link font - bold text - primary hover: underline">Stream Deck +</a> modifie radicalement le ressenti tactile de votre système d'exploitation.</p>
+                        <p class= "mb-0"> Le Stream Deck n'est pas un luxe si vous passez vos journées sur un PC : c'est <strong > un extenseur de productivité physique </strong> formidable pour préserver votre concentration. Si nous devions vous guider vers un modèle pour tout faire, <strong>l'Elgato Stream Deck MK.2 classique</strong> reste le plus pertinent rapport prix/fonctions. Toutefois, si comme nous vous ajustez fréquemment des niveaux audios ou travaillez sur Premiere Pro, l'ajout des molettes du <strong>Stream Deck +</strong> modifie radicalement le ressenti tactile de votre système d'exploitation.</p>
                         </div>
                         </div>
 
