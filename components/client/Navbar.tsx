@@ -137,13 +137,7 @@ const MENU_DATA: MenuItem[] = [
                     { label: "Câble Management", desc: "Organisation", slug: "cable-management" },
                 ],
             },
-            {
-                title: "Logiciels",
-                items: [
-                    // { label: "Logiciels & Apps", desc: "OBS, vMix, VoiceMod...", slug: "logiciels-apps" },
-                    // { label: "Design & Overlays", desc: "Alertes, Transition, Logos", slug: "design-overlays" },
-                ],
-            },
+
             {
                 title: "Captation",
                 items: [

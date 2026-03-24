@@ -14,7 +14,7 @@ export const revalidate = 3600; // 1h ISR
 const CATEGORY_METADATA: Record<string, { title: string; subtitle: string }> = {
     audio: { title: "Studio & Son", subtitle: "Tout l'équipement audio pour une qualité professionnelle." },
     video: { title: "Image & Lumière", subtitle: "Caméras, objectifs et éclairage pour sublimer vos contenus." },
-    streaming: { title: "Streaming", subtitle: "Captation, régie et logiciels pour le direct." },
+    streaming: { title: "Streaming", subtitle: "Captation et régie pour le direct." },
     "micros-dynamiques": { title: "Micros Dynamiques", subtitle: "Robustesse et fiabilité pour la scène et le studio." },
     "micros-condensateurs": { title: "Micros Condensateurs", subtitle: "Précision et détails pour le studio (XLR)." },
     "micros-usb": { title: "Micros USB", subtitle: "La simplicité plug-and-play sans compromis." },

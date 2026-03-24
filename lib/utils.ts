@@ -13,8 +13,25 @@ export function cn(...classes: (string | undefined | null | false)[]): string {
 
 /**
  * Clean image URLs from potential JSON escaping residue (backslashes)
+ * and ensure they are absolute and properly encoded for Vercel.
  */
 export function cleanImageUrl(url: string | undefined | null): string {
     if (!url) return "";
-    return url.replace(/\\\//g, '/');
+    
+    let cleanUrl = url.replace(/\\\//g, '/');
+
+    // Ensure absolute URL
+    if (cleanUrl.startsWith('/')) {
+        const baseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+        // If baseUrl ends with '/' and cleanUrl starts with '/', avoid double slash
+        if (baseUrl.endsWith('/') && cleanUrl.startsWith('/')) {
+            cleanUrl = `${baseUrl}${cleanUrl.slice(1)}`;
+        } else {
+            cleanUrl = `${baseUrl}${cleanUrl}`;
+        }
+    }
+
+    // Double encode protection: first decode then encode to avoid double encoding.
+    // Or just simple encodeURI as requested by the user.
+    return encodeURI(decodeURI(cleanUrl));
 }

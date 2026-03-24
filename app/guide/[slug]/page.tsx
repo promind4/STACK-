@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import { Metadata } from 'next'; // force reload
 import Link from 'next/link';
 import { ChevronLeft, Clock, Calendar, ShoppingBag, ArrowRight } from 'lucide-react';
 import { getArticleBySlug, ARTICLES } from '@/lib/data';

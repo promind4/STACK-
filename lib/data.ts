@@ -3991,9 +3991,9 @@ export const ARTICLES: Article[] = [
   </script>
   `
   },
-  // ═══ ARTICLE 16 — Meilleur casque studio ═══
+  // ═══ ARTICLE 12 — Meilleur casque studio ═══
   {
-    id: "16",
+    id: "12",
     slug: "meilleur-casque-studio-home-studio-2026",
     title: "Meilleur Casque Studio 2026 — Le Guide pour le Mixage et l'Enregistrement",
     category: "Audio",
@@ -4311,7 +4311,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                                                                                                                                                                                         </div>
                                                                                                                                                                                                                                                                                                                                                                         <div >
                                                                                                                                                                                                                                                                                                                                                                         <h2 class="text-2xl font-bold text-foreground mt-0 mb-3 !border-0" > Le Mot de la Fin </h2>
-                                                                                                                                                                                                                                                                                                                                                                          <p class="mb-0"> Si vous débutez la production et ne devez choisir qu'<strong>UN SEUL</strong> casque pour 100% de vos tâches (enregistrer le micro sans fuites, mixer proprement, ou écouter de la musique), la polyvalence d'un modèle fermé gagne.Nous recommandons fermement le <a href = "/produit/beyerdynamic-dt-770-pro-80-ohm" class="product-link font-bold text-primary hover:underline"> Beyerdynamic DT 770 Pro(80 Ohms) </a>, inusable. Si en revanche vous ne faites pas de prise voix et passez vos journées à peaufiner des égaliseurs, la musicalité neutre du <a href="/produit / sennheiser - hd - 600" class="product - link font - bold text - primary hover:underline">Sennheiser HD 600 (Ouvert)</a> vous fera redécouvrir vos propres musiques.</p>
+                                                                                                                                                                                                                                                                                                                                                                          <p class="mb-0"> Si vous débutez la production et ne devez choisir qu'<strong>UN SEUL</strong> casque pour 100% de vos tâches (enregistrer le micro sans fuites, mixer proprement, ou écouter de la musique), la polyvalence d'un modèle fermé gagne.Nous recommandons fermement le <a href = "/produit/beyerdynamic-dt-770-pro-80-ohm" class="product-link font-bold text-primary hover:underline"> Beyerdynamic DT 770 Pro(80 Ohms) </a>, inusable. Si en revanche vous ne faites pas de prise voix et passez vos journées à peaufiner des égaliseurs, la musicalité neutre du <a href="/produit/sennheiser-hd-600" class="product-link font-bold text-primary hover:underline">Sennheiser HD 600 (Ouvert)</a> vous fera redécouvrir vos propres musiques.</p>
                                                                                                                                                                                                                                                                                                                                                                             </div>
                                                                                                                                                                                                                                                                                                                                                                             </div>
 
@@ -4420,9 +4420,9 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                                                                                                                                                                                                                                                                 `
   },
 
-  // ═══ ARTICLE 17 — Elgato Stream Deck Guide ═══
+  // ═══ ARTICLE 13 — Elgato Stream Deck Guide ═══
   {
-    id: "17",
+    id: "13",
     slug: "elgato-stream-deck-guide-complet",
     title: "Elgato Stream Deck — Le Guide Complet pour Booster votre Productivité",
     category: "Streaming",
@@ -4496,7 +4496,7 @@ export const ARTICLES: Article[] = [
                         <tr class= "hover:bg-muted/50 transition-colors">
                         <td class="px-5 py-4 font-bold border-r border-border" > <a href="#elgato-xl" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://thumbs.static-thomann.de/thumb//bdbmagic/pics/prod/467200.jpg" alt = "XL" class= "w-8 h-8 rounded-full object-cover" > XL </a></td >
                         <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > 32 Touches LCD </td>
-                        <td class= "px-5 py-4 border-r border-border"> Simulateurs / Power - Users </td>
+                        <td class= "px-5 py-4 border-r border-border"> Simulateurs / Power-Users </td>
                         <td class= "px-5 py-4 text-center font-bold text-primary"> 4.8 / 5 </td>
                         </tr>
                         </tbody>
@@ -4708,61 +4708,981 @@ export const ARTICLES: Article[] = [
                           <svg fill="none" height = "24" shape - rendering="geometricPrecision" stroke = "currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox = "0 0 24 24" width = "24" > <path d="M6 9l6 6 6-6" > </path></svg >
                           </span>
                           </summary>
-                        <p class= "text-muted-foreground px-5 pb-4 mt-2"> Évidemment.Si Elgato propose un Key Creator en ligne performant, vous pouvez lier à chaque touche une image JPG, PNG, et même les illustrer avec des Memes en GIF colorés animés avec des pixels carrés parfaitement retranscrits sur le petit écran fluide des touches LCD.</p>
+                        <p class= "text-muted-foreground px-5 pb-4 mt-2"> Évidemment. Si Elgato propose un Key Creator en ligne performant, vous pouvez lier à chaque touche une image JPG, PNG, et même les illustrer avec des Memes en GIF colorés animés avec des pixels carrés parfaitement retranscrits sur le petit écran fluide des touches LCD.</p>
                         </details>
                         </div>
-
-                        <script type = "application/ld+json">
-                        {
-                          "@context": "https://schema.org",
-                          "@type": "FAQPage",
-                          "mainEntity": [
-                            {
-                              "@type": "Question",
-                              "name": "Le Stream Deck fonctionne-t-il sur Mac et PC ?",
-                              "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Oui, parfaitement sur les deux écosystèmes (Windows 10/11 et macOS à partir de 10.13)."
-                              }
-                            },
-                            {
-                              "@type": "Question",
-                              "name": "Puis-je utiliser l'application au lieu du boîtier physique ?",
-                              "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Oui ! L'application Stream Deck Mobile transforme une vieille tablette ou votre smartphone en Stream Deck virtuel relié en Wi-Fi."
-                              }
-                            },
-                            {
-                              "@type": "Question",
-                              "name": "Peut-on automatiser des macros très complexes ?",
-                              "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Absolument. La fonction d'Elgato 'Multi-Action' permet de déclencher une chaîne folle d'événements temporels."
-                              }
-                            },
-                            {
-                              "@type": "Question",
-                              "name": "Est-ce difficile ou long à configurer ?",
-                              "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Non, grâce à un glisser-déposer simplissime. Le logiciel Elgato reste incontestablement le plus intuitif du marché."
-                              }
-                            },
-                            {
-                              "@type": "Question",
-                              "name": "Puis-je créer mes propres images pour illustrer les boutons ?",
-                              "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Évidemment. Vous pouvez lier à chaque touche une image JPG, PNG, et même des GIF animés."
-                              }
-                            }
-                          ]
-                        }
-                        </script>
-                          `
+                        `
   },
+  {
+    id: "14",
+    slug: "alternatives-focusrite-scarlett-2026",
+    title: "Les 3 meilleures alternatives à la Focusrite Scarlett en 2026",
+    category: "Audio",
+    readTime: "14 min",
+    date: "23 Mar 2026",
+    author: "Équipe Fluxlab",
+    image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=1200",
+    intro: "La Focusrite Scarlett est l'interface la plus vendue au monde. Pourtant, pour le même budget, certains modèles offrent des préamplis plus musicaux, une latence plus faible ou des convertisseurs plus précis. Voici notre sélection des 3 meilleures alternatives en 2026.",
+    relatedProducts: ["audient-id14-mkii", "motu-m2", "universal-audio-volt-2"],
+    relatedCategorySlug: "interfaces-audio",
+    content: `
+<!-- ENCART TL;DR -->
+<div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8">
+  <h2 class="text-xl font-bold text-foreground mb-4 mt-0 !border-0 flex items-center gap-2">
+    <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+    Le duel des interfaces : Le résumé
+  </h2>
+  <ul class="space-y-3 mb-0">
+    <li class="flex items-start gap-3">
+      <span class="font-bold text-primary min-w-[140px]">La plus Musicale :</span>
+      <a href="#audient-id14" class="product-link hover:underline font-medium text-foreground">Audient iD14 MKII</a>
+    </li>
+    <li class="flex items-start gap-3">
+      <span class="font-bold text-primary min-w-[140px]">La plus Précise :</span>
+      <a href="#motu-m2" class="product-link hover:underline font-medium text-foreground">Motu M2</a>
+    </li>
+    <li class="flex items-start gap-3">
+      <span class="font-bold text-primary min-w-[140px]">Le grain Vintage :</span>
+      <a href="#ua-volt2" class="product-link hover:underline font-medium text-foreground">Universal Audio Volt 2</a>
+    </li>
+  </ul>
+</div>
 
+<h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Pourquoi chercher une alternative à la Scarlett ?</h2>
+<p>La Focusrite Scarlett (et sa récente 4ème génération) est une excellente interface. Solide, fiable, avec des drivers stables. C'est le choix par défaut. Mais "par défaut" ne veut pas dire "le meilleur pour votre usage spécifique".</p>
+<p>En 2026, le marché des interfaces audio à moins de 200€ a explosé. Les constructeurs comme Audient, Motu ou Universal Audio ont intégré des technologies issues de leurs consoles haut de gamme (valant plusieurs milliers d'euros) dans ces petits boîtiers. Si vous cherchez un son plus "pro", une meilleure dynamique ou des outils de mixage intégrés, le changement est radical.</p>
+
+<div class="overflow-hidden my-12 border border-border rounded-xl">
+  <table class="w-full text-sm text-left border-collapse">
+    <thead class="bg-secondary text-foreground uppercase border-b border-border font-serif">
+      <tr>
+        <th class="px-5 py-4 font-bold border-r border-border w-1/3">Modèle</th>
+        <th class="px-5 py-4 font-bold border-r border-border hidden sm:table-cell">Point Fort</th>
+        <th class="px-5 py-4 font-bold border-r border-border">Usage Idéal</th>
+        <th class="px-5 py-4 text-center w-24">Note</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="hover:bg-muted/50 border-b border-border transition-colors">
+        <td class="px-5 py-4 font-bold border-r border-border"><a href="#audient-id14" class="product-link text-primary hover:underline flex items-center gap-2">Audient iD14 MKII</a></td>
+        <td class="px-5 py-4 border-r border-border hidden sm:table-cell">Préampli Console ASP8024</td>
+        <td class="px-5 py-4 border-r border-border">Prise voix & guitare pro</td>
+        <td class="px-5 py-4 text-center font-bold text-primary">4.9/5</td>
+      </tr>
+      <tr class="hover:bg-muted/50 border-b border-border transition-colors">
+        <td class="px-5 py-4 font-bold border-r border-border"><a href="#motu-m2" class="product-link text-primary hover:underline flex items-center gap-2">Motu M2</a></td>
+        <td class="px-5 py-4 border-r border-border hidden sm:table-cell">Écran LCD & Conversions ESS</td>
+        <td class="px-5 py-4 border-r border-border">Streaming & Mixage précis</td>
+        <td class="px-5 py-4 text-center font-bold text-primary">4.8/5</td>
+      </tr>
+      <tr class="hover:bg-muted/50 transition-colors">
+        <td class="px-5 py-4 font-bold border-r border-border"><a href="#ua-volt2" class="product-link text-primary hover:underline flex items-center gap-2">UA Volt 2</a></td>
+        <td class="px-5 py-4 border-r border-border hidden sm:table-cell">Mode Vintage (610 Pre)</td>
+        <td class="px-5 py-4 border-r border-border">Couleur sonore chaleureuse</td>
+        <td class="px-5 py-4 text-center font-bold text-primary">4.7/5</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Analyse détaillée des alternatives</h2>
+
+<!-- PRODUCT CARD: Audient iD14 MKII -->
+<div id="audient-id14" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+  <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+    <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+      <img src="https://www.thomann.de/thumb/opengraph/pics/prod/510533.jpg" alt="Audient iD14 MKII" class="w-full h-full object-contain" loading="lazy" />
+    </div>
+    <div>
+      <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/audient-id14-mkii" class="product-link text-foreground hover:text-primary transition-colors">Audient iD14 MKII</a></h3>
+      <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le son console sur votre bureau</p>
+      <p>C'est l'interface qui offre, à notre avis, la meilleure qualité de préampli micro dans cette gamme de prix. Audient utilise le même circuit que dans ses consoles de studio professionnelles. Le son est "large", détaillé et très propre. Elle dispose également d'une entrée JFET pour guitare qui imite le comportement d'un ampli à lampes.</p>
+    </div>
+  </div>
+
+  <div class="grid sm:grid-cols-2 gap-4 mt-8">
+    <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Qualité audio digne d'un studio pro</li>
+        <li>Bouton ScrollControl pour piloter vos logiciels</li>
+        <li>Construction en métal ultra-robuste</li>
+      </ul>
+    </div>
+    <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Demande une alimentation externe pour les fonctions avancées</li>
+        <li>Design sobre qui ne plaira pas à tout le monde</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6">
+    <strong class="text-foreground">Notre conseil d'usage :</strong> Idéal pour les musiciens exigeants qui souhaitent une base évolutive avec ses 2 entrées micros et son entrée ADAT.
+  </div>
+
+  <div class="flex flex-wrap items-center gap-3 mt-8">
+    <a href="/produit/audient-id14-mkii" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+  </div>
+</div>
+
+<!-- PRODUCT CARD: Motu M2 -->
+<div id="motu-m2" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+  <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+    <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+      <img src="https://www.thomann.de/thumb/opengraph/pics/prod/478035.jpg" alt="Motu M2" class="w-full h-full object-contain" loading="lazy" />
+    </div>
+    <div>
+      <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/motu-m2" class="product-link text-foreground hover:text-primary transition-colors">Motu M2</a></h3>
+      <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le meilleur écran du marché</p>
+      <p>La Motu M2 se démarque par son écran LCD couleur en façade qui affiche les niveaux de volume (Peak meters) en temps réel. C'est un confort immense pour éviter de saturer (clipper) vos enregistrements. Sous le capot, on trouve des convertisseurs ESS Sabre32 Ultra, les mêmes que dans des interfaces à 1000€.</p>
+    </div>
+  </div>
+
+  <div class="grid sm:grid-cols-2 gap-4 mt-8">
+    <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Écran LCD ultra-précis pour le monitoring</li>
+        <li>Latence de monitoring ultra-faible</li>
+        <li>Convertisseurs haut de gamme</li>
+        <li>Bouton Loopback intégré</li>
+      </ul>
+    </div>
+    <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Boutons plastiques un peu légers</li>
+        <li>Demande une gestion précise des drivers sur Windows</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6">
+    <strong class="text-foreground">Notre conseil d'usage :</strong> Parfaite pour le Streaming et le Podcasting grâce à son bouton Loopback intégré qui permet d'enregistrer le son de votre PC en même temps que votre micro.
+  </div>
+
+  <div class="flex flex-wrap items-center gap-3 mt-8">
+    <a href="/produit/motu-m2" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+  </div>
+</div>
+
+<!-- PRODUCT CARD: UA Volt 2 -->
+<div id="ua-volt2" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+  <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+    <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+      <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/universal-audio-volt-2-gallery-1774280192055.png" alt="UA Volt 2" class="w-full h-full object-contain" loading="lazy" />
+    </div>
+    <div>
+      <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/universal-audio-volt-2" class="product-link text-foreground hover:text-primary transition-colors">Universal Audio Volt 2</a></h3>
+      <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le son Vintage "Tube" intégré</p>
+      <p>Si vous trouvez que les enregistrements numériques sont trop "froids", la Volt 2 est faite pour vous. Elle intègre un mode "Vintage" qui émule les célèbres préamplis à lampes 610 d'Universal Audio. Cela donne immédiatement du grain, de la chaleur et du caractère à vos voix ou instruments.</p>
+    </div>
+  </div>
+
+  <div class="grid sm:grid-cols-2 gap-4 mt-8">
+    <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Le bouton Vintage qui sonne incroyablement bien</li>
+        <li>Bundle logiciel massif inclus</li>
+        <li>Design magnifique "Aluminium"</li>
+      </ul>
+    </div>
+    <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Pas de mixeur logiciel interne complexe</li>
+        <li>Demande le branchement d'un 5V externe pour les iPads gourmands</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6">
+    <strong class="text-foreground">Notre conseil d'usage :</strong> Pour ceux qui veulent un son "déjà fini" et ne veulent pas passer des heures à égaliser leurs voix en post-production.
+  </div>
+
+  <div class="flex flex-wrap items-center gap-3 mt-8">
+    <a href="/produit/universal-audio-volt-2" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+  </div>
+</div>
+
+<div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center sm:text-left flex flex-col sm:flex-row items-center gap-8">
+  <div class="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+    <span class="text-4xl">🏆</span>
+  </div>
+  <div>
+    <h2 class="text-2xl font-bold text-foreground mt-0 mb-3 !border-0">Le Mot de la Fin</h2>
+    <p class="mb-0">Si vous cherchez la <strong>puissance technique</strong> et le monitoring visuel, la <strong>Motu M2</strong> est indétrônable. Si vous êtes un **audiophile** exigeant sur la qualité du préampli micro, foncez sur l'<strong>Audient iD14 MKII</strong>. Enfin, si vous voulez du **caractère** et une esthétique vintage, l'<strong>UA Volt 2</strong> est votre meilleure alliée.</p>
+  </div>
+</div>
+
+<h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">FAQ : Mieux choisir son interface</h2>
+
+<div class="faq-accordion space-y-4">
+  <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+      <span>La Scarlett 2i2 4th Gen n'est-elle pas suffisante ?</span>
+      <span class="transition group-open:rotate-180">
+        <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+      </span>
+    </summary>
+    <p class="text-muted-foreground px-5 pb-4 mt-2">Si, elle est excellente. Mais des marques spécialisées comme Audient ou Universal Audio offrent des "signatures" sonores différentes qui peuvent mieux s'adapter à votre voix.</p>
+  </details>
+
+  <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+      <span>Ces interfaces fonctionnent-elles toutes sur Mac et PC ?</span>
+      <span class="transition group-open:rotate-180">
+        <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+      </span>
+    </summary>
+    <p class="text-muted-foreground px-5 pb-4 mt-2">Oui, elles sont toutes compatibles "Class Compliant" (Plug & Play sur Mac) et disposent de drivers ASIO dédiés pour une latence minimale sur Windows.</p>
+  </details>
+
+  <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+      <span>Est-il nécessaire d'avoir un préampli externe avec ces interfaces ?</span>
+      <span class="transition group-open:rotate-180">
+        <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+      </span>
+    </summary>
+    <p class="text-muted-foreground px-5 pb-4 mt-2">Non, ces interfaces possèdent déjà des préamplis de haute qualité (notamment l'Audient qui utilise le même circuit que ses consoles de studio). Un préampli externe n'est utile que si vous recherchez une "couleur" très spécifique ou pour des micros très gourmands comme le SM7B.</p>
+  </details>
+
+  <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+      <span>Quelle interface choisir pour le podcast à deux ?</span>
+      <span class="transition group-open:rotate-180">
+        <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+      </span>
+    </summary>
+    <p class="text-muted-foreground px-5 pb-4 mt-2">L'Universal Audio Volt 2 ou la Motu M2 sont idéales car elles possèdent deux entrées micro et un mixage simplifié, ce qui est parfait pour enregistrer deux personnes simultanément avec un monitoring direct.</p>
+  </details>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "La Scarlett 2i2 4th Gen n'est-elle pas suffisante ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Si, elle est excellente. Mais des marques spécialisées comme Audient offrent des signatures sonores différentes."
+      }
+    }
+  ]
+}
+</script>
+`
+  },
+  {
+    id: "15",
+    slug: "fond-flou-stream-petite-chambre",
+    title: "Comment avoir un fond flou en stream dans une petite chambre ?",
+    category: "Streaming",
+    readTime: "12 min",
+    date: "23 Mar 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/streaming_setup_bokeh.png",
+    intro: "Le fond flou (bokeh) est le Graal de tout streamer. Mais quand on streame dans une chambre de 9m², il est souvent impossible d'éloigner la caméra de son sujet. Voici comment obtenir un flou d'arrière-plan professionnel, même avec un mur à 1 mètre derrière vous.",
+    relatedProducts: ["sony-zv-e10", "sigma-objectif-16-mm-f1-4-dc-dn"],
+    relatedCategorySlug: "video",
+    content: `
+<h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Le secret : L'optique plutôt que le logiciel</h2>
+<p>Beaucoup de débutants tentent de flouter leur arrière-plan via OBS ou Nvidia Broadcast. Le résultat ? Des oreilles qui disparaissent, une découpe "effet carton" et une charge processeur inutile. Pour un rendu cinéma, il n'y a pas de secret : il faut une <strong>profondeur de champ courte</strong> générée physiquement par l'objectif.</p>
+
+<div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8">
+  <h2 class="text-xl font-bold text-foreground mb-4 mt-0 !border-0 flex items-center gap-2">
+    <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.364-5.636l-.707-.707m1.414 10.607l-.707.707M12 18a6 6 0 100-12 6 6 0 000 12z" /></svg>
+    La règle d'or pour les petites chambres
+  </h2>
+  <p class="mb-0">Plus votre capteur est grand et plus votre ouverture (f/) est petite, plus le flou sera prononcé. Dans une petite chambre, vous ne pouvez pas augmenter la distance sujet-fond. Vous devez donc compenser par une <strong>ouverture très grande</strong> (f/1.4 ou f/1.8).</p>
+</div>
+
+<h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Le Setup Ultime : Sony ZV-E10 + Sigma 16mm</h2>
+
+<!-- PRODUCT CARD: Sony ZV-E10 -->
+<div id="sony-zve10" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+  <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+    <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+      <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/sony-zv-e10-gallery-1770069536390.png" alt="Sony ZV-E10" class="w-full h-full object-contain" loading="lazy" />
+    </div>
+    <div>
+      <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/sony-zv-e10" class="product-link text-foreground hover:text-primary transition-colors">Sony ZV-E10</a></h3>
+      <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le boîtier hybride des créateurs</p>
+      <p>C'est la référence absolue pour débuter le streaming "Premium". Son capteur APS-C est bien plus grand que celui d'une webcam, ce qui permet de capter plus de lumière et de créer naturellement de la profondeur. Il possède un autofocus ultra-rapide qui ne perdra jamais votre visage.</p>
+    </div>
+  </div>
+
+  <div class="grid sm:grid-cols-2 gap-4 mt-8">
+    <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Autofocus sur l'oeil ultra-fiable</li>
+        <li>Objectifs interchangeables</li>
+        <li>Utilisable en webcam via un simple câble USB</li>
+      </ul>
+    </div>
+    <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Pas de stabilisation interne (besoin d'un trépied)</li>
+        <li>L'objectif de kit (16-50mm) est trop "fermé" pour un gros flou</li>
+      </ul>
+    </div>
+  </div>
+  <div class="flex flex-wrap items-center gap-3 mt-8">
+    <a href="/produit/sony-zv-e10" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+  </div>
+</div>
+
+<p>Pour obtenir un fond flou massif, il faut coupler ce boîtier avec l'objectif <strong>Sigma 16mm f/1.4 DC DN</strong>. Grâce à son ouverture de 1.4, il laisse entrer une quantité colossale de lumière et réduit la zone de netteté à quelques centimètres seulement. Même avec votre lit ou votre setup gaming à 50 cm derrière vous, ils seront noyés dans un flou artistique superbe.</p>
+
+<!-- PRODUCT CARD: Sigma 16mm -->
+<div id="sigma-16mm" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+  <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+    <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+      <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/sigma-objectif-16-mm-f1-4-dc-dn-gallery-1773903686561.png" alt="Sigma 16mm f/1.4" class="w-full h-full object-contain" loading="lazy" />
+    </div>
+    <div>
+      <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/sigma-objectif-16-mm-f1-4-dc-dn" class="product-link text-foreground hover:text-primary transition-colors">Sigma 16mm f/1.4 DC DN</a></h3>
+      <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">L'oeil grand ouvert sur votre setup</p>
+      <p>C'est l'objectif indispensable pour tout streamer sur capteur Sony APS-C. Sa focale de 16mm est parfaite pour avoir un cadrage large (on voit vos épaules et votre setup) tout en restant naturel. Mais c'est son ouverture f/1.4 qui fait toute la différence : elle crée un flou d'arrière-plan crémeux qui transforme n'importe quelle chambre en studio pro.</p>
+    </div>
+  </div>
+  <div class="flex flex-wrap items-center gap-3 mt-8">
+    <a href="/produit/sigma-objectif-16-mm-f1-4-dc-dn" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+  </div>
+</div>
+
+<h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">3 astuces pour maximiser le Bokeh</h2>
+<ul class="space-y-4">
+  <li><strong>Avancez-vous vers l'objectif :</strong> Plus vous êtes proche de la lentille, plus l'arrière-plan sera flou.</li>
+  <li><strong>Éclairez-vous mieux que le fond :</strong> Le flou est plus joli quand le sujet est bien détaché par la lumière.</li>
+  <li><strong>Utilisez le mode "A" (Ouverture Priority) :</strong> Réglez votre Molette sur f/1.4 manuellement et laissez la caméra gérer le reste.</li>
+</ul>
+
+<div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center sm:text-left flex flex-col sm:flex-row items-center gap-8">
+  <div class="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+    <span class="text-4xl">💡</span>
+  </div>
+  <div>
+    <h2 class="text-2xl font-bold text-foreground mt-0 mb-3 !border-0">L'avis d'expert</h2>
+    <p class="mb-0">Si vous n'avez pas le budget pour un hybride, ne forcez pas sur le flou logiciel. Un flou léger à 20% sur OBS est plus pro qu'un flou à 100% qui bave sur vos cheveux. Le matériel est un investissement long terme pour votre image de marque.</p>
+  </div>
+</div>
+
+<h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">FAQ : Fond flou et Streaming</h2>
+
+<div class="faq-accordion space-y-4">
+  <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+      <span>Est-ce qu'une webcam 4K ne fait pas la même chose ?</span>
+      <span class="transition group-open:rotate-180">
+        <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+      </span>
+    </summary>
+    <p class="text-muted-foreground px-5 pb-4 mt-2">Non. La résolution (4K) n'a rien à voir avec le flou. Le flou dépend de la taille du capteur. Une webcam a un capteur minuscule, elle ne peut pas produire de flou optique réel.</p>
+  </details>
+
+  <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+      <span>Faut-il une Cam Link 4K pour brancher la Sony ?</span>
+      <span class="transition group-open:rotate-180">
+        <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+      </span>
+    </summary>
+    <p class="text-muted-foreground px-5 pb-4 mt-2">Avec la ZV-E10, ce n'est plus obligatoire. Elle est reconnue comme webcam via USB. Cependant, une Cam Link offrira une meilleure qualité d'image (4K non compressée) et moins de latence.</p>
+  </details>
+</div>
+`
+  },
+  {
+    id: "16",
+    slug: "supprimer-bruit-clavier-stream",
+    title: "Comment ne pas entendre son clavier mécanique sur Discord ou Twitch ?",
+    category: "Streaming",
+    readTime: "11 min",
+    date: "23 Mar 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/gaming_keyboard_setup.png",
+    intro: "Rien n'est plus frustrant pour une audience que d'entendre le clic-clac incessant d'un clavier mécanique pendant une partie de gaming. Heureusement, avec le bon matériel et les bons réglages, vous pouvez rendre votre clavier totalement inaudible sans altérer votre voix.",
+    relatedProducts: ["shure-mv7"],
+    relatedCategorySlug: "audio",
+    content: `
+<h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Le problème : Micro statique vs Clavier bruyant</h2>
+<p>La majorité des streamers débutent avec un micro "statique" (condensateur) comme le Blue Yeti. Ces micros sont ultra-sensibles : ils captent la mouche qui vole à 3 mètres... et donc chaque pression sur vos switchs Cherry MX Blue. Pour supprimer ce bruit, il y a deux écoles : le logiciel (gratuit mais imparfait) et le matériel (payant mais radical).</p>
+
+<div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8">
+  <h2 class="text-xl font-bold text-foreground mb-4 mt-0 !border-0 flex items-center gap-2">
+    <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>
+    La solution matérielle : Le micro dynamique
+  </h2>
+  <p class="mb-0">Contrairement aux micros statiques, les micros <strong>dynamiques</strong> sont beaucoup moins sensibles aux bruits lointains. Ils nécessitent que l'on parle très proche de la capsule, ce qui crée une isolation naturelle exceptionnelle. C'est le secret des radios professionnelles.</p>
+</div>
+
+<h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Le sauveur des oreilles : Shure MV7+</h2>
+
+<!-- PRODUCT CARD: Shure MV7+ -->
+<div id="shure-mv7plus" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+  <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+    <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+      <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/shure-mv7-gallery-1773907731507.png" alt="Shure MV7+" class="w-full h-full object-contain" loading="lazy" />
+    </div>
+    <div>
+      <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/shure-mv7" class="product-link text-foreground hover:text-primary transition-colors">Shure MV7+</a></h3>
+      <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le micro avec Denoiser IA intégré</p>
+      <p>Le Shure MV7+ est l'évolution du célèbre MV7. Sa grande force ? Il intègre un processeur DSP interne capable de supprimer le bruit de fond (clavier, ventilateurs) <strong>avant même</strong> que le son n'arrive à votre ordinateur. C'est une solution "Hardware" qui ne consomme aucune ressource CPU sur votre PC de stream.</p>
+    </div>
+  </div>
+
+  <div class="grid sm:grid-cols-2 gap-4 mt-8">
+    <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Denoiser temps réel ultra-performant</li>
+        <li>Connexion double : USB-C et XLR</li>
+        <li>Panneau tactile LED personnalisable</li>
+      </ul>
+    </div>
+    <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Demande d'être très proche du micro (5-10cm)</li>
+        <li>Prix premium par rapport à un micro statique</li>
+      </ul>
+    </div>
+  </div>
+  <div class="flex flex-wrap items-center gap-3 mt-8">
+    <a href="/produit/shure-mv7" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+  </div>
+</div>
+
+<h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">3 réglages logiciels pour sauver votre stream</h2>
+<p>Si vous ne pouvez pas changer de micro, voici les réglages à activer d'urgence dans vos logiciels :</p>
+<ul class="space-y-4">
+  <li><strong>Discord (Krisp) :</strong> Allez dans Paramètres > Voix et Vidéo. Activez "Suppression du bruit : Krisp". C'est magique pour les claviers.</li>
+  <li><strong>OBS (RNNoise) :</strong> Ajoutez un filtre "Suppression de bruit" sur votre micro et choisissez la méthode "RNNoise". Elle est beaucoup plus précise que "Speex".</li>
+  <li><strong>Le Noise Gate :</strong> Ce filtre coupe totalement le micro tant que vous ne parlez pas. Réglez le "Seuil d'ouverture" juste au-dessus du bruit de vos touches.</li>
+</ul>
+
+<div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center sm:text-left flex flex-col sm:flex-row items-center gap-8">
+  <div class="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+    <span class="text-4xl">🎙️</span>
+  </div>
+  <div>
+    <h2 class="text-2xl font-bold text-foreground mt-0 mb-3 !border-0">Le conseil ultime de placement</h2>
+    <p class="mb-0">Placez votre micro sur un <strong>bras articulé</strong> (Boom Arm) pour le rapprocher de votre bouche et l'éloigner physiquement de la table. Si le micro est posé sur le bureau, il capte les vibrations du clavier à travers le bois.</p>
+  </div>
+</div>
+
+<h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">FAQ : Silence et Clavier</h2>
+
+<div class="faq-accordion space-y-4">
+  <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+      <span>Faut-il acheter des switchs "Silent" ?</span>
+      <span class="transition group-open:rotate-180">
+        <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+      </span>
+    </summary>
+    <p class="text-muted-foreground px-5 pb-4 mt-2">C'est une aide précieuse (Cherry MX Silent Red par exemple), mais ce n'est pas suffisant si vous avez un micro statique sensible posé à côté.</p>
+  </details>
+
+  <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+    <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+      <span>Nvidia Broadcast est-il meilleur que les filtres OBS ?</span>
+      <span class="transition group-open:rotate-180">
+        <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+      </span>
+    </summary>
+    <p class="text-muted-foreground px-5 pb-4 mt-2">Oui, l'IA de Nvidia est bluffante et peut même supprimer un aspirateur dans la pièce. Mais elle nécessite une carte graphique RTX et peut provoquer des ralentissements en jeu.</p>
+  </details>
+</div>
+`
+  },
+  {
+    id: "20",
+    slug: "sony-zve10-surchauffe-stream-solutions",
+    title: "Le Sony ZV-E10 surchauffe-t-il en stream de 4 heures ? (Test et solutions)",
+    category: "Vidéo",
+    readTime: "10 min",
+    date: "23 Mar 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/zv-e10-surchauffe-hero.png",
+    intro: "Le Sony ZV-E10 est le roi du budget pour le streaming. Mais une question revient souvent : peut-il tenir un live de 4 heures sans s'éteindre par sécurité ? La réponse est OUI, à condition de connaître ces deux réglages vitaux.",
+    relatedProducts: ["sony-zv-e10"],
+    relatedCategorySlug: "video",
+    content: `
+      <!-- ENCART TL;DR (Résumé Haute Conversion) -->
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8">
+        <h2 class="text-xl font-bold text-foreground mb-4 mt-0 !border-0 flex items-center gap-2">
+          <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+          Le Verdict en 30 secondes
+        </h2>
+        <ul class="space-y-3 mb-0">
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[150px]">Surchauffe réelle ?</span>
+            <span class="text-foreground">Seulement en 4K avec les réglages d'usine. Facile à corriger.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[150px]">Le Réglage Vital :</span>
+            <span class="text-foreground">Passer "Auto Power OFF Temp" sur <strong>Élevé (High)</strong>.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[150px]">Secret Autonomie :</span>
+            <span class="text-foreground">Utiliser une <strong>Batterie Factice (Dummy Battery)</strong> sur secteur.</span>
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Pourquoi votre Sony s'éteint (et pourquoi c'est normal)</h2>
+      <p>Par défaut, Sony configure ses boîtiers avec une tolérance thermique très basse pour protéger vos mains. Dès que le capteur chauffe un peu (surtout en 4K), l'appareil affiche une icône jaune et s'éteint après 20 ou 30 minutes. Pour un streamer, c'est le cauchemar. Mais rassurez-vous : le capteur peut encaisser bien plus que ce que le réglage d'usine autorise.</p>
+      
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Nos 3 Solutions pour un Stream Interminable</h2>
+      
+      <h3 class="text-2xl font-bold mt-12 mb-6 text-foreground">1. Le réglage "Magique" dans les menus</h3>
+      <p>C'est l'étape n°1. Sans elle, rien ne sert d'investir. Allez dans le menu <strong>Configuration (la valise) > Option de config. 2 > Temp. Alim. Hors tens. aut.</strong> et passez-le sur <strong>Élevé</strong>. Cela autorise l'appareil à continuer de filmer même s'il devient chaud au toucher. Sur un trépied, cela ne pose aucun risque pour le matériel.</p>
+
+      <h3 class="text-2xl font-bold mt-12 mb-6 text-foreground">2. La Batterie Factice : Finissez-en avec l'USB</h3>
+      <p>Recharger via le port USB-C pendant que vous filmez crée une chaleur interne massive. La solution pro est d'utiliser une batterie factice (Dummy Battery) qui se branche directement dans une prise murale. Cela déporte l'alimentation hors du boîtier, supprimant la principale source de chaleur interne.</p>
+
+      <h3 class="text-2xl font-bold mt-12 mb-6 text-foreground">3. Favorisez la circulation d'air</h3>
+      <p>Deux astuces physiques simples : <strong>déployez l'écran pivotant</strong> pour dégager l'arrière du boîtier (là où la chaleur s'accumule) et laissez le capot de la batterie légèrement ouvert si vous n'utilisez pas de dummy battery.</p>
+
+      <!-- PRODUCT CARD: Sony ZV-E10 -->
+      <div id="sony-zve10-pro" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/sony-zv-e10-gallery-1770069536390.png" alt="Sony ZV-E10" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/sony-zv-e10" class="product-link text-foreground hover:text-primary transition-colors">Sony ZV-E10</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le boîtier idéal pour le stream long-format</p>
+            <p>Une fois configuré pour le stream, le ZV-E10 est une bête de course. Son autofocus est infaillible et sa qualité d'image en 4K (sur-échantillonnée depuis la 6K) écrase n'importe quelle webcam du marché.</p>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Qualité d'image pro pour moins de 650€</li>
+              <li>Autofocus ultra-réactif (ne perd jamais le point)</li>
+              <li>Écran pivotant parfait pour le cadrage seul</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Menu un peu complexe pour les débutants</li>
+              <li>Surchauffe en mode "Standard" (doit être réglé sur High)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6">
+          <strong class="text-foreground">Notre conseil d'usage :</strong> Réglez la température d'extinction sur "Élevé" dès le déballage, et investissez dans une batterie factice NP-FW50 pour vos lives.
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/sony-zv-e10" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+        </div>
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center sm:text-left flex flex-col sm:flex-row items-center gap-8">
+        <div class="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+          <span class="text-4xl">💡</span>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-foreground mt-0 mb-3 !border-0">L'avis d'expert</h2>
+          <p class="mb-0">Le passage sur "High" est sans danger. J'ai personnellement streamé 8 heures d'affilée en plein été avec ce boîtier sans aucun arrêt. La batterie factice est le vrai secret pour la stabilité thermique sur le long terme.</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">FAQ : Surchauffe Sony ZV-E10</h2>
+
+      <div class="faq-accordion space-y-4">
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span>Le réglage "High" peut-il endommager mon capteur ?</span>
+            <span class="transition group-open:rotate-180">
+              <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+            </span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">Non. Ce réglage est prévu par Sony. Il évite simplement que l'appareil ne s'éteigne quand le boîtier devient tiède (température inconfortable pour les mains mais parfaitement sûre pour l'électronique).</p>
+        </details>
+
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span>Est-ce possible de streamer en 1080p sans aucune chauffe ?</span>
+            <span class="transition group-open:rotate-180">
+              <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+            </span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">Oui, le mode 1080p demande beaucoup moins de ressources au processeur. Mais quitte à avoir ce boîtier, profitez de la 4K, elle est superbe et peut tenir des heures avec les bons réglages.</p>
+        </details>
+
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span>Comment brancher la batterie factice proprement ?</span>
+            <span class="transition group-open:rotate-180">
+              <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+            </span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">La batterie factice remplace la batterie NP-FW50 classique. Pour refermer le capot, il y a une petite encoche en caoutchouc sur le côté du boîtier Sony pour laisser passer le fil.</p>
+        </details>
+      </div>
+    `
+  },
+  {
+    id: "21",
+    slug: "scarlett-2i2-4th-gen-shure-sm7b-cloudlifter",
+    title: "Faut-il un Cloudlifter avec la Scarlett 2i2 (4th Gen) et le Shure SM7B ?",
+    category: "Audio",
+    readTime: "12 min",
+    date: "23 Mar 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/scarlett-cloudlifter-hero.png",
+    intro: "C'est la question qui hante tous les forums de podcast. Le Shure SM7B est réputé pour être 'gain-hungry'. Mais avec l'arrivée de la 4ème génération de Focusrite Scarlett, les règles ont changé. Voici pourquoi vous pouvez probablement économiser 150€.",
+    relatedProducts: ["focusrite-scarlett-2i2-4th-gen", "shure-sm7b"],
+    relatedCategorySlug: "audio",
+    content: `
+      <!-- ENCART TL;DR -->
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8">
+        <h2 class="text-xl font-bold text-foreground mb-4 mt-0 !border-0 flex items-center gap-2">
+          <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+          La réponse courte
+        </h2>
+        <p class="mb-4"><strong>NON</strong>, vous n'avez plus besoin de Cloudlifter ou de FetHead avec une Scarlett 2i2 (4ème Gen).</p>
+        <ul class="space-y-3 mb-0">
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[150px]">Gain Scarlett Gen 3 :</span>
+            <span class="text-foreground">56dB (Insuffisant pour le SM7B seul)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[150px]">Gain Scarlett Gen 4 :</span>
+            <span class="text-foreground font-bold text-emerald-600">69dB (Suffisance totale)</span>
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Le Mythe du Shure SM7B</h2>
+      <p>Le Shure SM7B est un micro dynamique légendaire, mais c'est aussi l'un des plus difficiles à piloter. Avec une sensibilité de -59dB, il nécessite une préamplification massive pour atteindre un niveau sonore correct sans générer de souffle (bruit de fond). C'est pour cette raison qu'on lui a associé pendant des années le célèbre <strong>Cloudlifter CL-1</strong>, un petit boîtier qui ajoute +25dB de gain pur avant d'arriver à la carte son.</p>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">La Révolution des Préamplis 4th Gen</h2>
+      <p>Focusrite a totalement revu son architecture avec la 4ème génération. Là où la version précédente plafonnait à 56dB, la nouvelle Scarlett propose désormais <strong>69dB de gain ultra-propre</strong>. Pour rappel, un SM7B a besoin d'environ 60dB pour 'chanter' correctement. La Scarlett 2i2 4th Gen possède donc une réserve de puissance confortable, même pour les voix les plus douces.</p>
+
+      <div class="overflow-x-auto my-12 border border-border rounded-xl">
+        <table class="w-full text-sm text-left border-collapse">
+          <thead class="bg-secondary text-foreground uppercase border-b border-border font-serif">
+            <tr>
+              <th class="px-5 py-4 font-bold border-r border-border">Interface Audio</th>
+              <th class="px-5 py-4 font-bold border-r border-border">Gain Disponible</th>
+              <th class="px-5 py-4 font-bold">Cloudlifter Requis ?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-muted/50 border-b border-border transition-colors">
+              <td class="px-5 py-4 font-bold bg-muted/30 border-r border-border">Scarlett 2i2 (3rd Gen)</td>
+              <td class="px-5 py-4 border-r border-border">56 dB</td>
+              <td class="px-5 py-4 text-destructive font-bold">OUI</td>
+            </tr>
+            <tr class="hover:bg-muted/50 transition-colors">
+              <td class="px-5 py-4 font-bold bg-muted/30 border-r border-border">Scarlett 2i2 (4th Gen)</td>
+              <td class="px-5 py-4 border-r border-border">69 dB</td>
+              <td class="px-5 py-4 text-emerald-600 font-bold">NON</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- PRODUCT CARD: Scarlett 2i2 4th Gen -->
+      <div id="scarlett-2i2-4" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/focusrite-scarlett-2i2-4th-gen-main-1769876888992.png" alt="Focusrite Scarlett 2i2 4th Gen" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/focusrite-scarlett-2i2-4th-gen" class="product-link text-foreground hover:text-primary transition-colors">Focusrite Scarlett 2i2 4th Gen</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le standard audio, version surpuissante</p>
+            <p>Plus qu'une mise à jour esthétique, cette 4ème génération intègre des convertisseurs issus de la gamme RedNet (le haut de gamme Focusrite) et des préamplis capables de piloter n'importe quel micro dynamique, même les plus exigeants.</p>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Préamplis ultra-propres de 69dB de gain</li>
+              <li>Convertisseurs RedNet très haute fidélité</li>
+              <li>Fonction 'Auto Gain' et 'Clip Safe' pour débutants</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Logo brillant très sensible aux traces de doigts</li>
+              <li>Prix plus élevé que la 3ème génération</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6">
+          <strong class="text-foreground">Notre conseil d'usage :</strong> Utilisez massivement le mode 'Auto Gain'. Il est bluffant de précision et vous évite de saturer vos enregistrements.
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/focusrite-scarlett-2i2-4th-gen" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+        </div>
+      </div>
+
+      <!-- PRODUCT CARD: Shure SM7B -->
+      <div id="shure-sm7b-card" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://www.thomann.de/thumb/opengraph/pics/prod/129929.jpg" alt="Shure SM7B" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/shure-sm7b" class="product-link text-foreground hover:text-primary transition-colors">Shure SM7B</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le son smooth des légendes</p>
+            <p>On ne le présente plus. C'est le micro de Michael Jackson, de Joe Rogan et de 90% des top streamers. Sa texture sonore unique masque les défauts de la pièce et donne une voix de radio instantanée.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Signature sonore mythique (chaude et pro)</li>
+              <li>Excellente réjection des bruits ambiants</li>
+              <li>Filtre anti-pop intégré ultra-efficace</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Poids important (nécessite un bras robuste)</li>
+              <li>Pas de port USB (XLR uniquement)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/shure-sm7b" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+        </div>
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center sm:text-left flex flex-col sm:flex-row items-center gap-8">
+        <div class="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+          <span class="text-4xl">⚠️</span>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-foreground mt-0 mb-3 !border-0">Attention à la Gen 3 !</h2>
+          <p class="mb-0">Si vous achetez une Scarlett d'occasion ou si vous possédez encore la 3ème génération (logo Scarlett blanc et non rouge brillant au centre), le Cloudlifter reste <strong>indispensable</strong>. Sans lui, vous aurez un souffle insupportable en montant le volume.</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">FAQ : Scarlett 4th Gen et SM7B</h2>
+
+      <div class="faq-accordion space-y-4">
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span>Est-ce qu'un Cloudlifter peut quand même améliorer le son ?</span>
+            <span class="transition group-open:rotate-180">
+              <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+            </span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">D'un point de vue purement technique : non. Les préamplis de la Gen 4 sont si propres que l'ajout d'un Cloudlifter n'apportera aucune clarté supplémentaire. C'est un pur achat superflu aujourd'hui.</p>
+        </details>
+
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span>Est-ce valable pour la Scarlett Solo 4th Gen ?</span>
+            <span class="transition group-open:rotate-180">
+              <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+            </span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">Oui, toute la gamme Scarlett 4th Gen (Solo, 2i2, 4i4) partage les mêmes préamplis à 69dB de gain.</p>
+        </details>
+
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span>Y a-t-il d'autres micros qui nécessitent un Cloudlifter ?</span>
+            <span class="transition group-open:rotate-180">
+              <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+            </span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">L'Electro-Voice RE20 ou le Rode PodMic (XLR) sont aussi des micros gourmands, mais comme pour le SM7B, la Scarlett 4th Gen les gère parfaitement sans accessoire.</p>
+        </details>
+      </div>
+    `
+  },
+  {
+    id: "22",
+    slug: "enregistrer-podcast-deux-personnes-setup",
+    title: "Enregistrer un podcast à deux personnes sur le même Mac/PC : le setup facile",
+    category: "Streaming",
+    readTime: "14 min",
+    date: "23 Mar 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/podcast-duo-hero.png",
+    intro: "Vouloir lancer un podcast en duo est une excellente idée. Mais attention : la technique peut vite devenir un enfer si vous faites le mauvais choix de matériel. Voici comment brancher deux micros sans aucun bug de son.",
+    relatedProducts: ["focusrite-scarlett-2i2-4th-gen", "shure-mv7x"],
+    relatedCategorySlug: "video",
+    content: `
+      <!-- ENCART TL;DR -->
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8">
+        <h2 class="text-xl font-bold text-foreground mb-4 mt-0 !border-0 flex items-center gap-2">
+          <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+          Le Setup Recommandé
+        </h2>
+        <ul class="space-y-3 mb-0">
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[150px]">L'interface :</span>
+            <span class="text-foreground">Focusrite Scarlett 2i2 (ou toute carte XLR avec 2 entrées).</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[150px]">Les micros :</span>
+            <span class="text-foreground">2x Shure MV7X (Le standard XLR abordable).</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[150px]">L'erreur à fuir :</span>
+            <span class="text-foreground text-destructive font-bold">Brancher 2 micros USB (Inutilisable en l'état).</span>
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Pourquoi 2 micros USB sont une fausse bonne idée</h2>
+      <p>C'est l'erreur n°1 des débutants. Vous avez deux ports USB, donc vous branchez deux micros USB. Problème : votre ordinateur (Mac ou PC) ne possède qu'une seule horloge audio. Brancher deux sources USB différentes crée des conflits de synchronisation immédiats : le son grésille, se décalle, ou l'un des deux micros finit par s'éteindre. Même avec des logiciels comme 'Voicemeeter', la stabilité n'est jamais garantie pour un enregistrement de 2 heures.</p>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">La Solution Pro : Le XLR Centralisé</h2>
+      <p>Pour enregistrer proprement à deux, vous devez centraliser le son. Les deux micros se branchent en <strong>XLR</strong> dans un seul boîtier : l'interface audio. C'est l'interface qui gère la synchronisation et qui n'envoie qu'un seul flux USB à votre ordinateur. C'est la seule méthode 100% fiable utilisée par tous les studios de radio.</p>
+
+      <!-- PRODUCT CARD: Scarlett 2i2 4th Gen -->
+      <div id="scarlett-2i2-duo" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/focusrite-scarlett-2i2-4th-gen-main-1769876888992.png" alt="Focusrite Scarlett 2i2 4th Gen" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/focusrite-scarlett-2i2-4th-gen" class="product-link text-foreground hover:text-primary transition-colors">Focusrite Scarlett 2i2 4th Gen</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le cerveau de votre podcast</p>
+            <p>Avec ses deux entrées XLR indépendantes, la Scarlett 2i2 vous permet d'enregistrer chaque personne sur une piste différente. C'est vital pour le montage : si l'un de vous tousse pendant que l'autre parle, vous pourrez supprimer le bruit sans abîmer la voix principale.</p>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Même préamplis pro que la gamme RedNet</li>
+              <li>Idéal pour enregistrer deux sources distinctes (voix 1 / voix 2)</li>
+              <li>Monitoring direct sans latence</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Nécessite deux câbles XLR (non fournis)</li>
+              <li>Alimentation phantom 48V globale pour les deux entrées</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/focusrite-scarlett-2i2-4th-gen" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+        </div>
+      </div>
+
+      <!-- PRODUCT CARD: Shure MV7X -->
+      <div id="shure-mv7x-card" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://thumbs.static-thomann.de/thumb//bdbmagic/pics/prod/528028.jpg" alt="Shure MV7X" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/shure-mv7x" class="product-link text-foreground hover:text-primary transition-colors">Shure MV7X</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le micro podcast spécial "Duo"</p>
+            <p>Le MV7X est la version purement XLR du célèbre MV7. Pourquoi est-il idéal à deux ? Sa capsule dynamique est hyper-directive : elle ne capte ce qui se passe juste devant elle. Si vous parlez face à face sur une table, le micro ne captera pas la voix de votre invité, garantissant un son pur et pro.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Même son que le MV7 à moitié prix</li>
+              <li>Format XLR pur (plus fiable en duo)</li>
+              <li>Rejette incroyablement bien la voix de votre voisin</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Pas de sortie USB (XLR uniquement)</li>
+              <li>Design minimaliste sans boutons sur le micro</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6">
+          <strong class="text-foreground">Notre conseil d'usage :</strong> Pour un stream pro, parlez à environ 5-10cm du micro. Sa capsule dynamique adore la proximité.
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/shure-mv7x" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+        </div>
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center sm:text-left flex flex-col sm:flex-row items-center gap-8">
+        <div class="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+          <span class="text-4xl">🎙️</span>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-foreground mt-0 mb-3 !border-0">L'avis d'expert</h2>
+          <p class="mb-0">Pour un rendu pro à deux, rien ne bat le multi-pistes. En utilisant deux micros XLR séparés, vous pouvez régler le volume de chaque voix individuellement au montage. C'est ce qui fait la différence entre un podcast d'amateur et une émission premium.</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">FAQ : Podcast à deux</h2>
+
+      <div class="faq-accordion space-y-4">
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span>Peut-on utiliser 2 casques sur une seule Scarlett 2i2 ?</span>
+            <span class="transition group-open:rotate-180">
+              <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+            </span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">La plupart des interfaces n'ont qu'une seule prise casque. Pour écouter à deux, vous devrez ajouter un petit <strong>amplificateur de casque (Splitter)</strong> comme le Behringer HA400 qui coûte environ 25€.</p>
+        </details>
+
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span>Faut-il deux logiciels d'enregistrement différents ?</span>
+            <span class="transition group-open:rotate-180">
+              <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+            </span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">Non, un seul logiciel comme Audacity (gratuit) ou Adobe Audition suffit. L'interface audio envoie un signal 'Stéréo' où le micro 1 est à gauche et le micro 2 à droite. Il suffit de séparer ces pistes après l'enregistrement.</p>
+        </details>
+
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span>Puis-je mixer un micro USB et un micro XLR ?</span>
+            <span class="transition group-open:rotate-180">
+              <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+            </span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">C'est encore plus risqué que 2 micros USB. Les latences seront différentes et vos voix ne seront jamais parfaitement synchronisées. Restez sur un setup 100% XLR pour la sérénité.</p>
+        </details>
+      </div>
+    `
+  },
 ];
 
 export const PATHWAYS: Pathway[] = [
