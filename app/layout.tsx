@@ -3,6 +3,8 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import { Footer } from "@/components/server/Footer";
 import { Navbar } from "@/components/client/Navbar";
 import { JsonLd } from "@/components/server/JsonLd";
+import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -67,6 +69,17 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Analytics />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-0BSNJVZ7DY" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-0BSNJVZ7DY');
+          `}
+        </Script>
       </body>
     </html>
   );
