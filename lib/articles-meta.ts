@@ -1,0 +1,342 @@
+// AUTO-GENERATED — DO NOT EDIT MANUALLY
+// Métadonnées seules (sans le contenu HTML des articles)
+// Utilisé par les pages de listing : /guides, homepage, navbar
+// Pour le contenu complet, importer depuis lib/data.ts
+
+export interface ArticleMeta {
+  id: string;
+  slug: string;
+  title: string;
+  category: string;
+  readTime: string;
+  date: string;
+  author: string;
+  image: string;
+  intro: string;
+  content: string;
+  relatedProducts: string[];
+  relatedCategorySlug: string;
+}
+
+export const ARTICLES: ArticleMeta[] = [
+  {
+    id: "7",
+    slug: "choisir-casque-studio",
+    title: "Comment choisir son Casque Studio ? (Ouvert vs Fermé)",
+    category: "Audio",
+    readTime: "1 min",
+    date: "18 Jan 2025",
+    author: "Équipe Fluxlab",
+    image: "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&q=80&w=1200",
+    intro: "Mixer avec un casque grand public est la garantie d'un mixage raté. Découvrez pourquoi la courbe de réponse plate est votre amie, et quand utiliser un casque ouvert ou fermé.",
+    relatedProducts: ["audio-technica-ath-m20x", "beyerdynamic-dt-770-pro-80-ohm", "beyerdynamic-dt-990-pro", "sennheiser-hd-600"],
+    relatedCategorySlug: "casques-studio",
+    content: "",
+  },
+  {
+    id: "1",
+    slug: "xlr-vs-usb",
+    title: "XLR vs USB : L'Analyse Technique Complète (2026)",
+    category: "Audio",
+    readTime: "3 min",
+    date: "12 Oct 2026",
+    author: "Équipe Fluxlab",
+    image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=1200",
+    intro: "Au-delà du débat simpliste 'Débutant vs Pro', il s'agit de comprendre la chaîne du signal. Tension, Préamplification, Conversion A/N : plongeons dans la physique pour faire le bon choix en 2026.",
+    relatedProducts: ["shure-mv7x", "rode-podmic-usb", "shure-sm7b", "electro-voice-re20"],
+    relatedCategorySlug: "microphones",
+    content: "",
+  },
+  {
+    id: "2",
+    slug: "eclairage-cinematique",
+    title: "Théorie de la Lumière : Le Guide Technique Complet",
+    category: "Vidéo",
+    readTime: "3 min",
+    date: "28 Sep 2024",
+    author: "Équipe Fluxlab",
+    image: "https://images.unsplash.com/photo-1527011046414-4781f1f94f8c?auto=format&fit=crop&q=80&w=1200",
+    intro: "La caméra n'est qu'un capteur. C'est la lumière qui crée l'image. Maîtrisez le CRI, la Température Kelvin et la Diffusion pour un rendu Netflix.",
+    relatedProducts: ["elgato-ring-light", "elgato-key-light-air", "aputure-300d-ii"],
+    relatedCategorySlug: "lighting",
+    content: "",
+  },
+
+  {
+    id: "4",
+    slug: "top-5-interfaces",
+    title: "Guide Expert : Choisir son Interface Audio en 2026",
+    category: "Matériel",
+    readTime: "2 min",
+    date: "02 Jan 2026",
+    author: "Alexandre Dupont",
+    image: "/images/articles/interface_audio_wide.webp",
+    intro: "Au-delà des fiches techniques marketing, analysons les préamplis, les convertisseurs et les drivers en 2026. Focusrite, Audient, SSL, Universal Audio : qui domine vraiment ?",
+    relatedProducts: ["focusrite-scarlett-2i2-4th-gen", "focusrite-scarlett-solo-4th-gen", "audient-id14-mkii", "universal-audio-volt-276", "ssl-2-plus"],
+    relatedCategorySlug: "interfaces-audio",
+    content: "",
+
+  },
+  {
+    id: "5",
+    slug: "insonorisation",
+    title: "Acoustique : La Science du Traitement de Pièce",
+    category: "Acoustique",
+    readTime: "2 min",
+    date: "10 Dec 2024",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/acoustic_treatment_hero.webp",
+    intro: "Acheter un micro à 1000€ dans une pièce vide, c'est comme conduire une Ferrari sur un chemin de terre. L'acoustique dicte 80% de la qualité finale de votre audio.",
+    relatedProducts: ["hofa-absorber-eco", "sonoma-acoustics-panel", "elgato-wave-panels-starter-set"],
+    relatedCategorySlug: "traitement-acoustique",
+    content: "",
+  },
+
+  // ═══ ARTICLE 8 — Meilleur Micro Podcast 2026 ═══
+  {
+    id: "8",
+    slug: "meilleur-micro-podcast-2026",
+    title: "Meilleur Micro pour Podcast en 2026 — Comparatif & Guide d'Achat",
+    category: "Audio",
+    readTime: "2 min",
+    date: "22 Feb 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/meilleur_micro_podcast.webp",
+    intro: "Quel micro choisir pour lancer ou améliorer votre podcast en 2026 ? Nous avons analysé et comparé 7 micros — du budget serré au setup broadcast — pour vous donner un verdict clair basé sur la qualité sonore, le rapport qualité/prix et votre profil d'utilisation.",
+    relatedProducts: ["rode-podmic-usb", "shure-mv7", "shure-sm7b", "electro-voice-re20", "focusrite-scarlett-2i2-4th-gen"],
+    relatedCategorySlug: "micros-dynamiques",
+    content: "",
+  },
+
+  // ═══ ARTICLE 9 — Shure SM7B vs Rode PodMic ═══
+  {
+    id: "9",
+    slug: "shure-sm7b-vs-rode-podmic",
+    title: "Shure SM7B vs Rode PodMic — Le Duel des Micros Podcast",
+    category: "Audio",
+    readTime: "3 min",
+    date: "23 Feb 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/sm7b_vs_podmic.webp",
+    intro: "C'est le match que tout le monde attend : le roi incontesté des studios face au challenger ultra-populaire. Le Shure SM7B justifie-t-il son prix face au Rode PodMic ? On décortique specs, son et setup requis.",
+    relatedProducts: ["shure-sm7b", "rode-podmic-usb", "cloud-microphones-cloudlifter-cl-1", "tritonaudio-fethead", "focusrite-scarlett-2i2-4th-gen"],
+    relatedCategorySlug: "micros-dynamiques",
+    content: "",
+  },
+
+  // ═══ ARTICLE 10 — Setup streaming débutant ═══
+  {
+    id: "10",
+    slug: "setup-streaming-debutant-2026",
+    title: "Setup Streaming Débutant — Le Guide Complet (Budget 200€, 500€, 1000€)",
+    category: "Streaming",
+    readTime: "3 min",
+    date: "24 Feb 2026",
+    author: "Équipe Fluxlab",
+    image: "https://images.unsplash.com/photo-1547394765-185e1e68f34e?auto=format&fit=crop&q=80&w=1200",
+    intro: "Lancer son stream sur Twitch ou YouTube ne nécessite plus des milliers d'euros. En 2026, avec les bons choix, vous pouvez avoir un rendu professionnel pour le prix d'une console. Voici nos 3 configurations types par budget.",
+    relatedProducts: ["rode-podmic-usb", "shure-mv7x", "logitech-c920", "elgato-key-light-air", "elgato-stream-deck-mk2", "shure-sm7b", "elgato-facecam-pro"],
+    relatedCategorySlug: "streaming",
+    content: "",
+  },
+
+  // ═══ ARTICLE 11 — Interface audio moins de 100€ ═══
+  {
+    id: "11",
+    slug: "interface-audio-moins-de-200-euros",
+    title: "Interface Audio Moins de 200€ — Top 5 des Meilleures Cartes Son Budget",
+    category: "Audio",
+    readTime: "2 min",
+    date: "25 Feb 2026",
+    author: "Équipe Fluxlab",
+    image: "https://images.unsplash.com/photo-1598653222000-6b7b7a552625?auto=format&fit=crop&q=80&w=1200",
+    intro: "Vous voulez brancher un micro XLR ou des instruments sur votre PC sans vous ruiner ? Voici notre sélection 2026 des meilleures interfaces audio à moins de 200 euros. Qualité de préampli, latence et logiciel inclus : on compare tout.",
+    relatedProducts: ["focusrite-scarlett-solo-4th-gen", "m-audio-m-track-solo", "behringer-u-phoria-umc202hd", "universal-audio-volt-1", "arturia-minifuse-2-white"],
+    relatedCategorySlug: "cartes-son",
+    content: "",
+  },
+
+  // ═══ ARTICLE 12 — Meilleur micro USB pas cher 2026 ═══
+  {
+    id: "12",
+    slug: "meilleur-micro-usb-pas-cher-2026",
+    title: "Meilleur Micro USB Pas Cher 2026 : Le Comparatif",
+    category: "Audio",
+    readTime: "1 min",
+    date: "26 Feb 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/micro_usb.webp",
+    intro: "Aujourd'hui, l'audio de qualité broadcast n'est plus réservé aux studios professionnels. Les microphones USB à moins de 80 euros ont considérablement évolué. Ce guide vous aide à choisir le micro USB parfait pour améliorer vos streams, podcasts ou appels sans faire exploser votre budget.",
+    relatedProducts: ["rode-nt-usb-mini", "the-t-bone-ps-100", "sc-450-usb", "sennheiser-profile-usb-c-mikrofon"],
+    relatedCategorySlug: "micros-usb",
+    content: "",
+  },
+
+  // ═══ ARTICLE 13 — Supprimer bruit de fond micro ═══
+  {
+    id: "13",
+    slug: "supprimer-bruit-de-fond-micro",
+    title: "Comment Supprimer le Bruit de Fond de son Micro ? (Guide 2026)",
+    category: "Audio",
+    readTime: "2 min",
+    date: "27 Feb 2026",
+    author: "Équipe Fluxlab",
+    image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=1200",
+    intro: "Souffle, ventilateurs de PC, clavier mécanique ou voisins bruyants... Le bruit de fond est l'ennemi numéro 1 d'un son propre. Découvrez nos solutions gratuites et payantes pour nettoyer votre audio en temps réel.",
+    relatedProducts: ["shure-sm7b", "shure-mv7x", "sonoma-acoustics-panel", "elgato-wave-3"],
+    relatedCategorySlug: "traitement-acoustique",
+    content: "",
+  },
+
+  // ═══ ARTICLE 14 — Setup YouTube débutant 2026 ═══
+  {
+    id: "14",
+    slug: "setup-youtube-debutant-2026",
+    title: "Vlogueur, Studio ou Pro : Quel Setup YouTube choisir en 2026 ?",
+    category: "Vidéo",
+    readTime: "2 min",
+    date: "28 Feb 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/setup_youtube.webp",
+    intro: "Vous voulez lancer votre chaîne YouTube avec un rendu pro dès la première vidéo ? On vous guide pour assembler votre premier setup complet : caméra, son, lumière et montage, adapté à votre budget.",
+    relatedProducts: ["sony-zv-e10", "rode-videomic-go-ii", "elgato-key-light-air", "focusrite-scarlett-2i2-4th-gen", "shure-mv7x"],
+    relatedCategorySlug: "video",
+    content: "",
+  },
+
+  // ═══ ARTICLE 15 — Micro voix grave ═══
+  {
+    id: "15",
+    slug: "micro-pour-voix-grave-recommandations",
+    title: "Quel Micro pour une Voix Grave ? Nos Cinq Recommandations",
+    category: "Audio",
+    readTime: "1 min",
+    date: "01 Mar 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/micro_voix_grave.webp",
+    intro: "Vous avez une voix de basse ou de baryton et vous voulez la mettre en valeur sans qu'elle devienne 'boueuse' ? Découvrez les micros qui capturent le mieux la richesse des graves tout en gardant une clarté exceptionnelle.",
+    relatedProducts: ["shure-sm7b", "electro-voice-re20", "rode-podmic-usb", "akg-c214", "shure-mv7x"],
+    relatedCategorySlug: "micros-dynamiques",
+    content: "",
+  },
+  // ═══ ARTICLE 12 — Meilleur casque studio ═══
+  {
+    id: "12",
+    slug: "meilleur-casque-studio-home-studio-2026",
+    title: "Meilleur Casque Studio 2026 — Le Guide pour le Mixage et l'Enregistrement",
+    category: "Audio",
+    readTime: "2 min",
+    date: "02 Mar 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/casque_studio.webp",
+    intro: "Indispensable pour entendre les moindres détails de votre son, le casque studio se décline en deux familles : ouvert ou fermé. On vous aide à choisir le modèle idéal pour votre home studio en 2026.",
+    relatedProducts: ["beyerdynamic-dt-770-pro-80-ohm", "audio-technica-ath-m50-x", "sony-mdr-7506", "sennheiser-hd-600", "beyerdynamic-dt-990-pro"],
+    relatedCategorySlug: "casques",
+    content: "",
+  },
+
+  // ═══ ARTICLE 13 — Elgato Stream Deck Guide ═══
+  {
+    id: "13",
+    slug: "elgato-stream-deck-guide-complet",
+    title: "Elgato Stream Deck — Le Guide Complet pour Booster votre Productivité",
+    category: "Streaming",
+    readTime: "3 min",
+    date: "03 Mar 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/elgato_stream_deck.webp",
+    intro: "Plus qu'un gadget pour streamers, le Stream Deck est devenu l'outil ultime de productivité pour les monteurs, graphistes et développeurs. Apprenez à maîtriser vos raccourcis et à automatiser vos tâches répétitives.",
+    relatedProducts: ["elgato-stream-deck-mk2", "elgato-stream-deck-plus", "elgato-stream-deck-xl", "elgato-stream-deck-mobile"],
+    relatedCategorySlug: "streaming",
+    content: "",
+  },
+  {
+    id: "14",
+    slug: "alternatives-focusrite-scarlett-2026",
+    title: "Les 3 meilleures alternatives à la Focusrite Scarlett en 2026",
+    category: "Audio",
+    readTime: "2 min",
+    date: "23 Mar 2026",
+    author: "Équipe Fluxlab",
+    image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=1200",
+    intro: "La Focusrite Scarlett est l'interface la plus vendue au monde. Pourtant, pour le même budget, certains modèles offrent des préamplis plus musicaux, une latence plus faible ou des convertisseurs plus précis. Voici notre sélection des 3 meilleures alternatives en 2026.",
+    relatedProducts: ["audient-id14-mkii", "motu-m2", "universal-audio-volt-2"],
+    relatedCategorySlug: "interfaces-audio",
+    content: "",
+  },
+  {
+    id: "15",
+    slug: "fond-flou-stream-petite-chambre",
+    title: "Comment avoir un fond flou en stream dans une petite chambre ?",
+    category: "Streaming",
+    readTime: "1 min",
+    date: "23 Mar 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/streaming_setup_bokeh.webp",
+    intro: "Le fond flou (bokeh) est le Graal de tout streamer. Mais quand on streame dans une chambre de 9m², il est souvent impossible d'éloigner la caméra de son sujet. Voici comment obtenir un flou d'arrière-plan professionnel, même avec un mur à 1 mètre derrière vous.",
+    relatedProducts: ["sony-zv-e10", "sigma-objectif-16-mm-f1-4-dc-dn"],
+    relatedCategorySlug: "video",
+    content: "",
+  },
+  {
+    id: "16",
+    slug: "supprimer-bruit-clavier-stream",
+    title: "Comment ne pas entendre son clavier mécanique sur Discord ou Twitch ?",
+    category: "Streaming",
+    readTime: "1 min",
+    date: "23 Mar 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/gaming_keyboard_setup.webp",
+    intro: "Rien n'est plus frustrant pour une audience que d'entendre le clic-clac incessant d'un clavier mécanique pendant une partie de gaming. Heureusement, avec le bon matériel et les bons réglages, vous pouvez rendre votre clavier totalement inaudible sans altérer votre voix.",
+    relatedProducts: ["shure-mv7"],
+    relatedCategorySlug: "audio",
+    content: "",
+  },
+  {
+    id: "20",
+    slug: "sony-zve10-surchauffe-stream-solutions",
+    title: "Le Sony ZV-E10 surchauffe-t-il en stream de 4 heures ? (Test et solutions)",
+    category: "Vidéo",
+    readTime: "1 min",
+    date: "23 Mar 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/zv-e10-surchauffe-hero.webp",
+    intro: "Le Sony ZV-E10 est le roi du budget pour le streaming. Mais une question revient souvent : peut-il tenir un live de 4 heures sans s'éteindre par sécurité ? La réponse est OUI, à condition de connaître ces deux réglages vitaux.",
+    relatedProducts: ["sony-zv-e10"],
+    relatedCategorySlug: "video",
+    content: "",
+  },
+  {
+    id: "21",
+    slug: "scarlett-2i2-4th-gen-shure-sm7b-cloudlifter",
+    title: "Faut-il un Cloudlifter avec la Scarlett 2i2 (4th Gen) et le Shure SM7B ?",
+    category: "Audio",
+    readTime: "1 min",
+    date: "23 Mar 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/scarlett-cloudlifter-hero.webp",
+    intro: "C'est la question qui hante tous les forums de podcast. Le Shure SM7B est réputé pour être 'gain-hungry'. Mais avec l'arrivée de la 4ème génération de Focusrite Scarlett, les règles ont changé. Voici pourquoi vous pouvez probablement économiser 150€.",
+    relatedProducts: ["focusrite-scarlett-2i2-4th-gen", "shure-sm7b"],
+    relatedCategorySlug: "audio",
+    content: "",
+  },
+  {
+    id: "22",
+    slug: "enregistrer-podcast-deux-personnes-setup",
+    title: "Enregistrer un podcast à deux personnes sur le même Mac/PC : le setup facile",
+    category: "Streaming",
+    readTime: "2 min",
+    date: "23 Mar 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/podcast-duo-hero.webp",
+    intro: "Vouloir lancer un podcast en duo est une excellente idée. Mais attention : la technique peut vite devenir un enfer si vous faites le mauvais choix de matériel. Voici comment brancher deux micros sans aucun bug de son.",
+    relatedProducts: ["focusrite-scarlett-2i2-4th-gen", "shure-mv7x"],
+    relatedCategorySlug: "video",
+    content: "",
+  },
+];
+
+export const getArticleMetaBySlug = (slug: string) =>
+  ARTICLES.find(a => a.slug === slug);
+
+export const getLatestArticlesMeta = () => ARTICLES.slice(0, 3);

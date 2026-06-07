@@ -5,7 +5,7 @@ import {
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-    title: 'À Propos de Fluxlab',
+    title: 'À Propos',
     description: "Comparateur de matériel audio, vidéo et streaming. Notre mission : aider les créateurs de contenu à trouver le setup parfait au meilleur prix.",
     alternates: { canonical: 'https://fluxlab.fr/a-propos' },
 };
@@ -61,7 +61,7 @@ export default function AboutPage() {
                         <div className="relative aspect-square md:aspect-[4/5]">
                             <div className="absolute inset-0 bg-secondary rounded-2xl overflow-hidden">
                                 <Image
-                                    src="/images/atelier-fluxlab.png"
+                                    src="/images/atelier-fluxlab.webp"
                                     alt="Atelier Fluxlab - Studio de Création"
                                     fill
                                     sizes="(max-width: 768px) 100vw, 50vw"

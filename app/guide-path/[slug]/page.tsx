@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const pathway = getPathwayBySlug(slug);
     if (!pathway) return { title: 'Parcours introuvable' };
 
-    const title = `${pathway.title} — Parcours Guidé | Fluxlab`;
+    const title = `${pathway.title} — Parcours Guidé`;
     const rawDesc = pathway.subtitle || '';
     const desc = rawDesc.length > 160
         ? rawDesc.substring(0, rawDesc.lastIndexOf(' ', 157)) + '…'

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { createClient } from '@/lib/supabase';
-import { Loader2, ShieldCheck, Plus, CheckCircle, AlertTriangle, LogOut, Edit, Trash2, Save, X, Image as ImageIcon, ThumbsUp, ThumbsDown, ArrowLeft, Search } from 'lucide-react';
+import { Loader2, ShieldCheck, Plus, CheckCircle, AlertTriangle, LogOut, Edit, Trash2, Save, X, Image as ImageIcon, ThumbsUp, ThumbsDown, ArrowLeft, Search, RefreshCw } from 'lucide-react';
 import { ImageUploader, GalleryUploader } from './ImageUploader';
 import { Category, Product, ProductOffer, Article } from '@/types/database';
 
@@ -27,6 +27,10 @@ export default function AdminPage() {
     const [sortByCompleteness, setSortByCompleteness] = useState(true);
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState<string>('');
+
+    // Synchronisation des prix
+    const [syncing, setSyncing] = useState(false);
+    const [syncResult, setSyncResult] = useState<{ ok: boolean; text: string } | null>(null);
 
     // Articles State
     const [articlesView, setArticlesView] = useState<'list' | 'form'>('list');
@@ -150,6 +154,33 @@ export default function AdminPage() {
     };
 
     const handleLogout = async () => { await supabase.auth.signOut(); setSession(null); };
+
+    // Déclenche la mise à jour des prix (tout le catalogue, ou un seul produit)
+    const handleSyncPrices = async (productId?: string) => {
+        setSyncing(true);
+        setSyncResult(null);
+        try {
+            const { data: { session } } = await supabase.auth.getSession();
+            const token = session?.access_token;
+            if (!token) throw new Error('Session expirée, reconnectez-vous.');
+
+            const url = productId
+                ? `/api/cron/update-prices?productId=${productId}`
+                : '/api/cron/update-prices';
+            const res = await fetch(url, { method: 'POST', headers: { Authorization: `Bearer ${token}` } });
+            const data = await res.json();
+
+            if (!res.ok || !data.ok) throw new Error(data.error || `Erreur HTTP ${res.status}`);
+
+            const txt = `${data.updated} mis à jour · ${data.unchanged} inchangés · ${data.failed} échecs · ${data.skippedFresh} récents (ignorés) · ${data.skippedLocked} verrouillés · ${data.scrapingCalls} appels scraping (sur ${data.total} offres)`;
+            setSyncResult({ ok: true, text: txt });
+            if (data.updated > 0) setRefreshTrigger(p => p + 1);
+        } catch (err: any) {
+            setSyncResult({ ok: false, text: err.message || 'Erreur de synchronisation.' });
+        } finally {
+            setSyncing(false);
+        }
+    };
 
     const handleCreateNew = () => { setFormData(initialFormData); setIsEditing(false); setCurrentId(null); setFormMessage(null); setView('form'); };
 
@@ -490,6 +521,9 @@ export default function AdminPage() {
                                             <input type="text" placeholder="Rechercher un produit..." value={searchQuery} onChange={e => setSearchQuery(e.target.value)} className="pl-10 pr-4 py-2 w-64 rounded-lg border border-border bg-white focus:ring-2 focus:ring-primary/20 outline-none text-sm" />
                                             {searchQuery && <button onClick={() => setSearchQuery('')} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"><X className="w-4 h-4" /></button>}
                                         </div>
+                                        <button onClick={() => handleSyncPrices()} disabled={syncing} className="border border-border bg-white hover:bg-neutral-50 text-foreground font-bold px-4 py-2 rounded-md transition-colors flex items-center disabled:opacity-50" title="Met à jour les prix de tout le catalogue">
+                                            <RefreshCw className={`w-4 h-4 mr-2 ${syncing ? 'animate-spin' : ''}`} /> {syncing ? 'Synchro…' : 'Synchroniser les prix'}
+                                        </button>
                                         <button onClick={handleCreateNew} className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold px-4 py-2 rounded-md transition-colors flex items-center">
                                             <Plus className="w-4 h-4 mr-2" /> Nouveau
                                         </button>
@@ -503,6 +537,14 @@ export default function AdminPage() {
                                 <button onClick={handleLogout} className="text-red-600 hover:bg-red-50 p-2 rounded-md transition-colors"><LogOut className="w-4 h-4" /></button>
                             </div>
                         </div>
+
+                        {syncResult && view === 'list' && (
+                            <div className={`mb-6 px-4 py-3 rounded-lg text-sm font-medium flex items-center gap-2 ${syncResult.ok ? 'bg-green-50 text-green-700 border border-green-200' : 'bg-red-50 text-red-600 border border-red-200'}`}>
+                                {syncResult.ok ? <CheckCircle className="w-4 h-4" /> : <AlertTriangle className="w-4 h-4" />}
+                                {syncResult.text}
+                                <button onClick={() => setSyncResult(null)} className="ml-auto text-current/60 hover:text-current"><X className="w-4 h-4" /></button>
+                            </div>
+                        )}
 
                         {view === 'list' ? (
                             <div className="bg-white rounded-2xl border border-border shadow-sm overflow-hidden">

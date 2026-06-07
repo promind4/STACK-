@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { createClient } from "@/lib/supabase";
-import { ARTICLES, PATHWAYS } from "@/lib/data";
+import { ARTICLES } from "@/lib/articles-meta";
+import { PATHWAYS } from "@/lib/data";
 
 // Real category slugs — must match CATEGORY_METADATA in app/categorie/[slug]/page.tsx
 const CATEGORY_SLUGS = [

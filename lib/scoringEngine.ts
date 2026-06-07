@@ -411,23 +411,27 @@ export const generateRecommendation = (products: Product[], ctx: UserContext): R
     };
 
     // === SMART REALLOCATION ===
-    // If user has equipment, reallocate that budget to other categories
-    let freedBudgetRatio = 0;
-    if (ctx.hasMic) freedBudgetRatio += alloc.mic;
-    if (ctx.hasInterface) freedBudgetRatio += alloc.interface;
-    if (ctx.hasCamera) freedBudgetRatio += alloc.camera;
-    if (ctx.hasLights) freedBudgetRatio += alloc.lighting;
+    // Zero out allocations for equipment the user already owns
+    if (ctx.hasMic)       alloc.mic       = 0;
+    if (ctx.hasInterface) alloc.interface = 0;
+    if (ctx.hasCamera)    alloc.camera    = 0;
+    if (ctx.hasLights)    alloc.lighting  = 0;
 
-    // Distribute freed budget proportionally to remaining needs
-    const remainingAllocSum = 1 - freedBudgetRatio;
-    if (remainingAllocSum > 0 && freedBudgetRatio > 0) {
-        const factor = 1 + (freedBudgetRatio / remainingAllocSum);
-        // Apply factor to all categories (simplified) - budget is effectively larger for remaining items
-        // In practice, we just increase target prices loosely
+    // Normalise so remaining allocations sum to 1 → full budget used
+    const allocTotal = Object.values(alloc).reduce((a, b) => a + b, 0);
+    if (allocTotal > 0 && allocTotal < 0.98) {
+        const factor = 1 / allocTotal;
+        alloc.mic        *= factor;
+        alloc.interface  *= factor;
+        alloc.camera     *= factor;
+        alloc.headphones *= factor;
+        alloc.lighting   *= factor;
+        alloc.treatment  *= factor;
+        alloc.accessories *= factor;
     }
 
-    // Effective budget for calculation (simple boost)
-    const effectiveBudget = ctx.budget * (1 + freedBudgetRatio * 0.5); // Boost budget if items owned
+    // Effective budget = full budget (we redistribute, not just boost)
+    const effectiveBudget = ctx.budget;
 
     // === MICROPHONE ===
     if (!ctx.hasMic) {
@@ -442,7 +446,7 @@ export const generateRecommendation = (products: Product[], ctx: UserContext): R
             room: ctx.room,
             experience: ctx.experience,
             minPrice: 50,
-            maxPrice: ctx.budget * 0.45,
+            maxPrice: ctx.budget * 0.55,
             requiredSubcategories: [],
             excludedSubcategories: micExclusions,
             priorityFeatures: micPriorities,
@@ -674,38 +678,63 @@ export const generateRecommendation = (products: Product[], ctx: UserContext): R
 
     result.budgetUtilization = Math.round((result.totalCost / ctx.budget) * 100);
 
-    // === BUDGET OPTIMIZATION (Upgrade if underutilized) ===
-    // Skip upgrade for beginners — keep recommendations accessible
-    if (result.budgetUtilization < 70 && result.mic && ctx.experience !== 'beginner') {
-        const remainingBudget = ctx.budget - result.totalCost;
-        const originalPrice = result.mic.selected.price;
-        // Cap upgrade at 2× original price to avoid disproportionate jumps
-        const maxUpgradePrice = Math.min(originalPrice * 2, originalPrice + remainingBudget * 0.5);
+    // === BUDGET OPTIMIZATION — upgrade pass ===
+    // If budget utilization < 75%, try to upgrade the most impactful piece
+    const recalcTotal = () =>
+        (result.mic?.selected.price || 0) +
+        (result.audioInterface?.selected.price || 0) +
+        (result.camera?.selected.price || 0) +
+        (result.headphones?.selected.price || 0) +
+        (result.acousticTreatment?.selected.price || 0) +
+        result.lights.reduce((s, l) => s + l.selected.price, 0) +
+        result.accessories.reduce((s, a) => s + a.selected.price, 0);
 
-        // Try to upgrade the microphone
-        const upgradeMicCtx: ScoringContext = {
-            targetPrice: originalPrice * 1.5,
+    result.totalCost = recalcTotal();
+    result.budgetUtilization = Math.round((result.totalCost / ctx.budget) * 100);
+
+    // Upgrade priority order: mic → interface → camera
+    const upgradeCandidates: Array<{ key: keyof RecommendationResult; cat: ProductCategory }> = [
+        { key: 'mic', cat: 'microphone' },
+        { key: 'audioInterface', cat: 'interface' },
+        { key: 'camera', cat: 'camera' },
+        { key: 'headphones', cat: 'headphones' },
+    ];
+
+    for (const { key, cat } of upgradeCandidates) {
+        if (result.budgetUtilization >= 82) break;
+
+        const current = result[key] as ProductResult | null;
+        if (!current) continue;
+
+        const remaining = ctx.budget - result.totalCost;
+        if (remaining < 30) break;
+
+        const originalPrice = current.selected.price;
+        const maxUpgrade = originalPrice + remaining * 0.85; // use up to 85% of remaining on upgrade
+
+        const upgradeCtx: ScoringContext = {
+            targetPrice: originalPrice * 1.6,
             usage: ctx.usage,
             room: ctx.room,
             experience: ctx.experience,
-            minPrice: originalPrice + 50,
-            maxPrice: maxUpgradePrice,
+            minPrice: originalPrice + 25,
+            maxPrice: maxUpgrade,
             requiredSubcategories: [],
-            excludedSubcategories: (needsTreatment || ctx.room === 'travel') ? ['condenser'] : [],
-            priorityFeatures: []
+            excludedSubcategories: (cat === 'microphone' && (needsTreatment || ctx.room === 'travel')) ? ['condenser'] : [],
+            priorityFeatures: [],
+            vibe: ctx.vibe,
+            computer: ctx.computer,
         };
 
-        const upgradedMic = findBest(products, 'microphone', upgradeMicCtx);
-        if (upgradedMic && upgradedMic.confidence >= result.mic.confidence * 0.9) {
-            // Replace with upgrade
-            const oldPrice = result.mic.selected.price;
-            result.mic = upgradedMic;
-            result.mic.reason = `Montée en gamme recommandée.`;
-            result.explanations[upgradedMic.selected.id] = `Montée en gamme — votre budget le permet.`;
-
-            // Recalculate total
-            result.totalCost = result.totalCost - oldPrice + upgradedMic.selected.price;
-            result.budgetUtilization = Math.round((result.totalCost / ctx.budget) * 100);
+        const upgraded = findBest(products, cat, upgradeCtx);
+        if (upgraded && upgraded.selected.id !== current.selected.id) {
+            const delta = upgraded.selected.price - originalPrice;
+            if (result.totalCost + delta <= ctx.budget * 1.02) { // allow 2% over for rounding
+                (result as any)[key] = upgraded;
+                result.explanations[upgraded.selected.id] = 'Montée en gamme — votre budget le permet.';
+                result.totalCost = recalcTotal();
+                result.budgetUtilization = Math.round((result.totalCost / ctx.budget) * 100);
+            }
         }
     }
 

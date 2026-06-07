@@ -2,132 +2,180 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    /* 
-      Palette Config Studio - Atelier Premium 
-      Style lumineux, crémeux et apaisant.
-    */
-    --background: 0 0% 98%;
-    /* #FAFAFA - Blanc cassé lumineux */
-    --foreground: 0 0% 6%;
-    /* #0F0F0F - Noir Premium */
+/* ─── FLUXLAB DESIGN TOKENS ─────────────────────────────────── */
+:root {
+  --color-background:    #FAFAFA;
+  --color-foreground:    #0F0F0F;
+  --color-deep:          #0A0A0A;
+  --color-primary:       #D3B27B;
+  --color-primary-hover: #E0C28D;
+  --color-accent:        #E8DCC4;
+  --color-secondary:     #F4EFEA;
+  --color-border:        #EBDCC4;
+  --color-card:          #FFFFFF;
+  --color-muted:         #6F6F6F;
 
-    --card: 0 0% 100%;
-    /* #FFFFFF - Cartes blanches pour le contraste */
-    --card-foreground: 0 0% 6%;
+  /* Shadows */
+  --shadow-card: 0 20px 50px -20px rgba(211,178,123,.45);
+  --shadow-btn:  0 15px 40px -10px rgba(211,178,123,.6);
+  --shadow-nav:  0 4px 20px rgba(15,15,15,.04);
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 6%;
+  /* Legacy HSL vars (compatibilité avec composants existants) */
+  --background:        0 0% 98%;
+  --foreground:        0 0% 6%;
+  --card:              0 0% 100%;
+  --card-foreground:   0 0% 6%;
+  --popover:           0 0% 100%;
+  --popover-foreground: 0 0% 6%;
+  --primary:           38 52% 65%;
+  --primary-foreground: 0 0% 100%;
+  --secondary:         30 24% 94%;
+  --secondary-foreground: 0 0% 6%;
+  --muted:             40 38% 84%;
+  --muted-foreground:  0 0% 44%;
+  --accent:            40 38% 84%;
+  --accent-foreground: 0 0% 6%;
+  --destructive:       0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border:            40 38% 84%;
+  --input:             40 38% 84%;
+  --ring:              38 52% 65%;
+  --radius:            1rem;
+}
 
-    --primary: 38 52% 65%;
-    /* #D3B27B - Or Doux */
-    --primary-foreground: 0 0% 100%;
-    /* Blanc sur Or */
+/* ─── BASE ──────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
 
-    --secondary: 30 24% 94%;
-    /* #F4EFEA - Surface Crème (Key Color) */
-    --secondary-foreground: 0 0% 6%;
+body {
+  @apply bg-background text-foreground font-sans antialiased min-h-screen flex flex-col;
+}
 
-    --muted: 40 38% 84%;
-    /* #E8DCC4 - Sable */
-    --muted-foreground: 0 0% 44%;
-    /* #6F6F6F - Gris chaud */
-
-    --accent: 40 38% 84%;
-    /* #E8DCC4 - Sable */
-    --accent-foreground: 0 0% 6%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 40 38% 84%;
-    /* #E8DCC4 - Bordures Sable douces */
-    --input: 40 38% 84%;
-    --ring: 38 52% 65%;
-    /* Or doux pour le focus */
-
-    --radius: 1rem;
-    /* rounded-2xl */
+/* ─── UTILITIES ─────────────────────────────────────────────── */
+@layer utilities {
+  /* Eyebrow / mono label */
+  .frame-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
   }
 
-  body {
-    @apply bg-background text-foreground font-sans;
+  /* Animated gold gradient text (hero) */
+  .animate-gradient-text {
+    background: linear-gradient(90deg, #D3B27B, #F4D9A8, #D3B27B);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gold-pan 4s ease-in-out infinite;
+  }
+
+  /* Legacy gradient animation class */
+  .animate-gradient {
+    animation: gradient 3s ease infinite;
+  }
+
+  /* Hover underline gold expand */
+  .hover-rule {
+    position: relative;
+  }
+  .hover-rule::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px;
+    background: var(--color-primary);
+    transition: width 0.35s ease;
+  }
+  .hover-rule:hover::after,
+  .hover-rule.active::after {
+    width: 100%;
+  }
+
+  /* Noise grain overlay */
+  .grain {
+    position: relative;
+  }
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.7  0 0 0 0 0.6  0 0 0 0 0.45  0 0 0 0.08 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    opacity: 0.3;
+    mix-blend-mode: overlay;
+    pointer-events: none;
   }
 }
 
-/* Gradient text animation for hero */
+/* ─── ANIMATIONS ────────────────────────────────────────────── */
+@keyframes gold-pan {
+  0%, 100% { background-position: 0% 50%; }
+  50%       { background-position: 100% 50%; }
+}
+
 @keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.animate-gradient {
-  animation: gradient 3s ease infinite;
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Line clamp utilities */
-.line-clamp-1 {
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+@keyframes nudge {
+  0%, 100% { transform: translateX(0); }
+  50%       { transform: translateX(4px); }
 }
 
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
+.animate-fade-up { animation: fade-up 0.4s ease forwards; }
+.animate-nudge   { animation: nudge 0.7s ease-in-out infinite; }
 
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
+/* ─── LINE CLAMP ────────────────────────────────────────────── */
+.line-clamp-1 { display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+.line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 
-/* Prose overrides for guide articles */
-.prose h2 {
-  margin-top: 2em;
-  margin-bottom: 0.75em;
-}
+/* ─── PROSE ─────────────────────────────────────────────────── */
+.prose h2 { margin-top: 2em; margin-bottom: 0.75em; }
+.prose h3 { margin-top: 1.5em; margin-bottom: 0.5em; }
 
-.prose h3 {
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-}
+/* ─── PROSE FLUXLAB (guides) ─────────────────────────────────── */
+/* Toutes les règles excluent les blocs .not-prose pour ne pas
+   écraser les couleurs des cartes CTA, méthodologie, etc.       */
+.prose-fluxlab h2:not(.not-prose *) { font-family: Georgia,serif; font-size:28px; line-height:1.15; letter-spacing:-.01em; color:#0F0F0F; margin:3rem 0 1rem; scroll-margin-top: 100px; }
+.prose-fluxlab h3:not(.not-prose *) { font-family: Georgia,serif; font-size:20px; line-height:1.3; color:#0F0F0F; margin:2rem 0 .75rem; scroll-margin-top: 100px; }
+.prose-fluxlab p:not(.not-prose *) { font-size:16px; line-height:1.8; color:rgba(15,15,15,.75); font-weight:300; margin-bottom:1.25rem; }
+.prose-fluxlab ul:not(.not-prose *) { list-style:none; padding:0; margin:1.5rem 0; }
+.prose-fluxlab ul:not(.not-prose *) li { position:relative; padding-left:1.5rem; margin-bottom:.75rem; font-size:15px; color:rgba(15,15,15,.75); font-weight:300; line-height:1.7; }
+.prose-fluxlab ul:not(.not-prose *) li::before { content:''; position:absolute; left:0; top:.65em; width:6px; height:6px; border-radius:1px; background:#D3B27B; }
+.prose-fluxlab blockquote:not(.not-prose *) { border-left:3px solid #D3B27B; padding:1rem 1.5rem; margin:2rem 0; background:#F4EFEA; border-radius:0 12px 12px 0; }
+.prose-fluxlab blockquote:not(.not-prose *) p { color:#0F0F0F; font-style:italic; margin:0; font-weight:400; font-family:Georgia,serif; }
+.prose-fluxlab strong:not(.not-prose *) { color:#0F0F0F; font-weight:500; }
+.prose-fluxlab a:not(.not-prose *) { color:#D3B27B; text-decoration:underline; text-underline-offset:3px; }
+/* Boutons CTA dans le contenu : texte noir sur fond doré (lisibilité) */
+.prose-fluxlab a.bg-primary:not(.not-prose *),
+.prose-fluxlab a[class*="bg-primary"]:not(.not-prose *) { color:#0F0F0F !important; text-decoration:none !important; }
+.prose-fluxlab .bg-primary:not(.not-prose *) .text-primary-foreground,
+.prose-fluxlab span.bg-primary:not(.not-prose *) { color:#0F0F0F !important; }
+.prose-fluxlab table:not(.not-prose *) { width:100%; min-width:480px; border-collapse:collapse; }
+.prose-fluxlab th:not(.not-prose *) { padding:1rem; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.18em; text-transform:uppercase; background:#E8DCC4; }
+.prose-fluxlab td:not(.not-prose *) { padding:1rem; border-top:1px solid #EBDCC4; font-size:14px; }
 
-/* Custom scrollbar for filter panels */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
-}
+/* TOC sidebar links */
+.toc-link { font-size:13px; color:rgba(15,15,15,.55); padding:.5rem 0 .5rem 1rem; display:block; border-left:2px solid transparent; transition:all .25s; }
+.toc-link:hover, .toc-link.active { color:#0F0F0F; border-left-color:#D3B27B; }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: hsl(var(--border));
-  border-radius: 999px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* Hide scrollbar for horizontal scroll */
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
+/* ─── SCROLLBAR ─────────────────────────────────────────────── */
+.custom-scrollbar::-webkit-scrollbar { width: 4px; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background-color: #EBDCC4; border-radius: 999px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }

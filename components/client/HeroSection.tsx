@@ -1,118 +1,201 @@
 'use client';
 
-import React from 'react';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Button } from '@/components/ui/Button';
-import { CheckCircle2, Sparkles, LayoutGrid } from 'lucide-react';
+import Image from 'next/image';
 
 const CHALLENGES = [
-    { title: 'Mon espace bruyant', href: '/categorie/espace-bruyant' },
-    { title: 'Je veux du plug & play', href: '/categorie/plug-and-play' },
-    { title: 'Budget serré (< 200€)', href: '/categorie/petit-budget' },
-    { title: 'Je crée en déplacement', href: '/categorie/createur-nomade' },
+  { num: '01', label: 'Mon espace est bruyant',  labelMobile: 'Espace bruyant',  href: '/categorie/espace-bruyant' },
+  { num: '02', label: 'Je veux du plug & play',  labelMobile: 'Plug & play',     href: '/categorie/plug-and-play' },
+  { num: '03', label: 'Budget serré (< 200€)',   labelMobile: '< 200 €',         href: '/categorie/petit-budget' },
+  { num: '04', label: 'Je crée en déplacement',  labelMobile: 'Nomade',          href: '/categorie/createur-nomade' },
 ];
 
-export const HeroSection = () => {
-    return (
-        <section className="relative min-h-[75vh] flex items-center justify-center pt-16 pb-10 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-background to-background">
+const TRUST = [
+  {
+    label: 'Sélection experte',
+    sub: 'Testé en studio',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D3B27B" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20 7 9 18l-5-5"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'Prix temps réel',
+    sub: 'Multi-boutiques',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D3B27B" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'Compatibilité',
+    sub: 'Vérifiée à chaque ajout',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D3B27B" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 12h18"/><path d="M12 3v18"/><circle cx="12" cy="12" r="9"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'Indépendance',
+    sub: 'Aucun sponsor',
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D3B27B" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4Z"/>
+      </svg>
+    ),
+  },
+];
 
-            {/* Background Decor */}
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                <div className="absolute -top-[10%] left-[20%] w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl opacity-50" />
-                <div className="absolute top-[20%] right-[10%] w-[400px] h-[400px] bg-accent/20 rounded-full blur-3xl opacity-30" />
+export function HeroSection() {
+  return (
+    <section
+      className="relative overflow-hidden"
+    >
+      {/* Image de fond HERO1 */}
+      <Image
+        src="/images/hero1.webp"
+        alt="Studio créatif Fluxlab — setup audio vidéo streaming"
+        fill
+        sizes="100vw"
+        className="object-cover object-center"
+        priority
+        quality={90}
+      />
+
+      {/* Overlay sombre pour lisibilité du texte */}
+      <div
+        className="absolute inset-0 z-[1] pointer-events-none"
+        style={{
+          background: `
+            linear-gradient(to right, rgba(10,10,10,.78) 0%, rgba(10,10,10,.45) 55%, rgba(10,10,10,.2) 100%),
+            linear-gradient(to bottom, rgba(10,10,10,.35) 0%, transparent 25%, transparent 70%, rgba(10,10,10,.55) 100%)
+          `
+        }}
+        aria-hidden
+      />
+
+      {/* Halo or subtil */}
+      <div
+        className="absolute -top-32 right-[-8%] w-[600px] h-[600px] rounded-full pointer-events-none z-[1]"
+        style={{ background: 'radial-gradient(circle, rgba(211,178,123,.2) 0%, transparent 65%)', filter: 'blur(30px)' }}
+        aria-hidden
+      />
+
+      <div className="relative z-10 max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-16 pt-32 pb-20 min-h-[90vh] flex flex-col">
+
+        {/* Eyebrow row */}
+        <div className="flex items-center justify-between mb-16 pt-10">
+          <div className="flex items-center gap-3">
+            <span className="block w-8 h-px bg-primary" aria-hidden />
+            <span className="frame-label text-primary">Le Labo Fluxlab — N° 01</span>
+          </div>
+          <div className="hidden md:flex items-center gap-6 text-[11px] font-mono text-white/45">
+            <span>Audio</span>
+            <span className="text-white/20">/</span>
+            <span>Vidéo</span>
+            <span className="text-white/20">/</span>
+            <span>Streaming</span>
+          </div>
+        </div>
+
+        {/* 12-col grid */}
+        <div className="grid grid-cols-12 gap-10 items-center flex-1">
+
+          {/* Copy — pleine largeur maintenant que l'image est en fond */}
+          <div className="col-span-12 lg:col-span-8 max-w-[820px]">
+
+            <h1 className="font-serif text-white tracking-tight leading-[1.02] sm:leading-[0.98] text-[38px] sm:text-[56px] md:text-[72px] lg:text-[88px] mb-8">
+              Trouvez enfin<br />
+              le setup parfait<br />
+              <span className="animate-gradient-text italic font-normal">pour votre création.</span>
+            </h1>
+
+            <p className="text-[18px] md:text-[20px] text-white/65 leading-[1.55] font-light max-w-[560px] mb-12">
+              Comparez les prix des meilleures boutiques, vérifiez la compatibilité de votre matériel et laissez notre configurateur IA vous guider vers le setup idéal.
+            </p>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-16">
+              <Link
+                href="/configurateur"
+                className="group inline-flex items-center justify-center gap-3 h-14 px-8 rounded-full bg-primary text-foreground font-medium text-[14px] tracking-wide uppercase transition-all hover:shadow-btn hover:bg-primary-hover"
+              >
+                <span>Trouver mon setup</span>
+                <svg className="group-hover:translate-x-1 transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                </svg>
+              </Link>
+
+              <Link
+                href="/categorie/audio"
+                className="group inline-flex items-center justify-center gap-3 h-14 px-8 rounded-full border border-white/20 text-white text-[14px] tracking-wide uppercase font-medium transition-all hover:bg-white/5 hover:border-white/40"
+              >
+                <span>Voir les produits</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="opacity-60 group-hover:opacity-100 transition-opacity" aria-hidden>
+                  <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
+                </svg>
+              </Link>
             </div>
 
-            <div className="container mx-auto px-6 max-w-[1600px] text-center relative z-10">
-
-                {/* Headline */}
-                <motion.h1
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground mb-5"
-                >
-                    Trouvez enfin le setup parfait <br className="hidden md:block" />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-amber-500 to-primary animate-gradient bg-[length:200%_auto]">
-                        pour votre création.
-                    </span>
-                </motion.h1>
-
-                {/* Subtitle */}
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                    className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed"
-                >
-                    Comparez les prix des meilleures boutiques, vérifiez la compatibilité de votre matériel et laissez notre configurateur IA vous guider vers le setup idéal.
-                </motion.p>
-
-                {/* ACTION BUTTONS */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                    className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 z-20"
-                >
-                    <Link href="/configurateur" className="w-full sm:w-auto">
-                        <Button
-                            variant="primary"
-                            size="lg"
-                            className="rounded-full px-8 h-14 text-base shadow-xl shadow-primary/20 hover:shadow-primary/30 w-full transition-all hover:scale-105"
-                        >
-                            <Sparkles className="w-5 h-5 mr-2" />
-                            Trouver mon Setup
-                        </Button>
-                    </Link>
-
-                    <Link href="/categorie/audio" className="w-full sm:w-auto">
-                        <Button
-                            variant="outline"
-                            size="lg"
-                            className="rounded-full px-8 h-14 text-base bg-white/50 backdrop-blur border-border hover:bg-white w-full group"
-                        >
-                            <LayoutGrid className="w-5 h-5 mr-2 text-muted-foreground group-hover:text-foreground transition-colors" />
-                            Voir les meilleurs produits
-                        </Button>
-                    </Link>
-                </motion.div>
-
-                {/* Trust Indicators */}
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.4 }}
-                    className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 mb-8 text-sm text-muted-foreground"
-                >
-                    <div className="flex items-center gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-primary" />
-                        <span>Comparateur Multi-Boutiques</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-primary" />
-                        <span>Compatibilité Vérifiée</span>
-                    </div>
-                </motion.div>
-
-                {/* Challenge Bubbles — directly below trust indicators */}
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
-                    className="flex flex-wrap items-center justify-center gap-3"
-                >
-                    {CHALLENGES.map((c) => (
-                        <Link
-                            key={c.href}
-                            href={c.href}
-                            className="px-5 py-2.5 rounded-full border border-border bg-white/80 backdrop-blur text-sm font-semibold text-foreground hover:border-primary hover:text-primary hover:shadow-md hover:shadow-primary/5 transition-all duration-200"
-                        >
-                            {c.title}
-                        </Link>
-                    ))}
-                </motion.div>
+            {/* Trust strip */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-6 max-w-[640px] pt-10 border-t border-white/10">
+              {TRUST.map((t) => (
+                <div key={t.label} className="flex flex-col gap-2">
+                  {t.icon}
+                  <span className="text-[12px] text-white font-medium tracking-wide">{t.label}</span>
+                  <span className="text-[11px] text-white/45 leading-snug">{t.sub}</span>
+                </div>
+              ))}
             </div>
-        </section>
-    );
-};
+          </div>
+
+        </div>
+
+        {/* Challenge bubbles */}
+        <div className="relative z-10 mt-12 pt-10 border-t border-white/10">
+          <div className="flex items-center justify-between mb-5">
+            <span className="frame-label text-white/55">Diagnostic rapide — par contrainte</span>
+            <span className="text-[11px] font-mono text-white/35">04 entrées</span>
+          </div>
+          {/* Desktop bubbles */}
+          <div className="hidden sm:flex flex-wrap items-center gap-3">
+            {CHALLENGES.map((c) => (
+              <Link
+                key={c.href}
+                href={c.href}
+                className="group inline-flex items-center gap-2 pl-2 pr-5 py-2 rounded-full border border-white/15 transition-all hover:bg-white/[0.08] hover:border-primary/50"
+                style={{ background: 'rgba(255,255,255,0.03)' }}
+              >
+                <span className="frame-label text-primary px-2 py-1 rounded-full" style={{ background: 'rgba(211,178,123,0.15)' }}>
+                  {c.num}
+                </span>
+                <span className="text-[13px] text-white/85 font-medium group-hover:text-white transition-colors">{c.label}</span>
+              </Link>
+            ))}
+          </div>
+
+          {/* Mobile bubbles — labels courts, alignement uniforme */}
+          <div className="flex sm:hidden flex-wrap gap-1.5">
+            {CHALLENGES.map((c) => (
+              <Link
+                key={c.href}
+                href={c.href}
+                className="inline-flex items-center gap-1.5 pl-1.5 pr-2.5 py-1 rounded-full border border-white/15 transition-all hover:border-primary/50"
+                style={{ background: 'rgba(255,255,255,0.04)' }}
+              >
+                <span className="frame-label text-primary px-1.5 py-0.5 rounded-full text-[8px]" style={{ background: 'rgba(211,178,123,0.15)' }}>
+                  {c.num}
+                </span>
+                <span className="text-[10px] text-white/85">{c.labelMobile}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+}

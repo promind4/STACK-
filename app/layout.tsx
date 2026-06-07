@@ -62,7 +62,10 @@ export default function RootLayout({
           url: "https://fluxlab.fr",
           potentialAction: {
             "@type": "SearchAction",
-            target: "https://fluxlab.fr/guides?q={search_term_string}",
+            target: {
+              "@type": "EntryPoint",
+              urlTemplate: "https://fluxlab.fr/recherche?q={search_term_string}",
+            },
             "query-input": "required name=search_term_string",
           },
         }} />

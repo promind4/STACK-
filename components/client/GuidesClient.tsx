@@ -81,15 +81,14 @@ export default function GuidesClient({ articles, categories }: GuidesClientProps
             {/* ARTICLES GRID */}
             {filteredArticles.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-                    <AnimatePresence>
+                    <AnimatePresence mode="popLayout">
                         {filteredArticles.map((article) => (
                             <motion.article
-                                layout
                                 key={article.id}
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0, scale: 0.95 }}
-                                transition={{ duration: 0.3 }}
+                                initial={{ opacity: 0, y: 8 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -8 }}
+                                transition={{ duration: 0.18 }}
                                 className="group cursor-pointer flex flex-col h-full"
                             >
                                 <Link href={`/guide/${article.slug}`} className="flex flex-col h-full">

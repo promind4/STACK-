@@ -1,73 +1,176 @@
-'use client';
+'use client'
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star } from 'lucide-react';
-import { Product } from '@/types/database';
-import Image from 'next/image';
-import Link from 'next/link';
-import { cleanImageUrl } from '@/lib/utils';
+import Link from 'next/link'
+import Image from 'next/image'
+import { useState } from 'react'
+import { cn } from '@/lib/utils'
+import { cleanImageUrl } from '@/lib/utils'
+import { ProductBadge } from '@/components/ui/Badge'
+import { Star, ArrowRight, Heart } from '@/components/FluxlabIcons'
+import type { Product as DBProduct } from '@/types/database'
 
-interface ProductCardProps {
-    product: Product;
-    className?: string;
+/* ─── MAPPER DB → Card ───────────────────────────────────── */
+type BadgeVariant = 'new' | 'bestseller' | 'promo' | 'out_of_stock'
+
+interface CardProduct {
+  id: string
+  slug: string
+  name: string
+  brand: string
+  type: string
+  price: number
+  originalPrice?: number
+  rating: number
+  reviewCount: number
+  badge?: BadgeVariant
+  promoLabel?: string
+  inStock: boolean
+  imageUrl: string
+  href: string
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({ product, className = '' }) => {
-    return (
-        <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            whileHover={{ y: -5 }}
-            transition={{ duration: 0.2 }}
-            className={`group bg-white rounded-2xl border border-border hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 overflow-hidden flex flex-col cursor-pointer h-full ${className}`}
+function mapProduct(p: DBProduct): CardProduct {
+  // Determine badge variant
+  let badge: BadgeVariant | undefined
+  if (p.badge?.text) {
+    const t = p.badge.text.toLowerCase()
+    if (t.includes('best') || t.includes('seller')) badge = 'bestseller'
+    else if (t.includes('promo') || t.includes('prix')) badge = 'promo'
+    else if (t.includes('nouveau') || t.includes('new')) badge = 'new'
+  }
+  if (!p.inStock) badge = 'out_of_stock'
+
+  return {
+    id: p.id,
+    slug: p.slug,
+    name: p.name,
+    brand: p.brand || '',
+    type: '',
+    price: p.price || 0,
+    rating: p.rating || 0,
+    reviewCount: p.review_count || p.reviews || 0,
+    badge,
+    inStock: p.inStock ?? true,
+    imageUrl: cleanImageUrl(p.image_url) || '',
+    href: `/produit/${p.slug}`,
+  }
+}
+
+/* ─── STAR RATING ────────────────────────────────────────── */
+function StarRating({ rating, count }: { rating: number; count: number }) {
+  return (
+    <div className="flex items-center gap-1.5 text-[11px] text-foreground/60">
+      <Star size={11} fill="currentColor" className="text-primary" />
+      <span className="font-mono text-foreground/75 font-medium">{rating.toFixed(1)}</span>
+      <span className="text-foreground/35">·</span>
+      <span className="font-mono">{count.toLocaleString('fr-FR')} avis</span>
+    </div>
+  )
+}
+
+/* ─── PRODUCT CARD ───────────────────────────────────────── */
+interface ProductCardProps {
+  product: DBProduct
+  className?: string
+}
+
+export function ProductCard({ product: dbProduct, className }: ProductCardProps) {
+  const product = mapProduct(dbProduct)
+  const [wished, setWished] = useState(false)
+  const isUnavailable = !product.inStock || product.badge === 'out_of_stock'
+
+  const handleWishlist = (e: React.MouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setWished((v) => !v)
+  }
+
+  return (
+    <Link
+      href={product.href}
+      className={cn(
+        'group flex flex-col bg-card rounded-2xl border overflow-hidden',
+        'transition-all duration-300',
+        isUnavailable
+          ? 'border-border/70 opacity-80'
+          : 'border-border/70 hover:border-primary/60 hover:shadow-card',
+        className
+      )}
+    >
+      {/* Image zone */}
+      <div className="aspect-square bg-white relative overflow-hidden">
+        {product.badge && (
+          <span className="absolute top-3 left-3 z-10">
+            <ProductBadge variant={product.badge} promoLabel={product.promoLabel} />
+          </span>
+        )}
+
+        <button
+          type="button"
+          aria-label={wished ? 'Retirer des favoris' : 'Ajouter aux favoris'}
+          onClick={handleWishlist}
+          className={cn(
+            'absolute top-3 right-3 z-10 w-8 h-8 rounded-full',
+            'bg-white/95 backdrop-blur border border-border/70',
+            'flex items-center justify-center transition-colors',
+            wished ? 'text-primary' : 'text-foreground/60 hover:text-primary'
+          )}
         >
-            <Link href={`/produit/${product.slug}`} className="contents">
-                {/* IMAGE AREA */}
-                <div className="aspect-square relative bg-white overflow-hidden p-2">
-                    <Image
-                        src={cleanImageUrl(product.image_url)}
-                        alt={`${product.name}${product.brand ? ` ${product.brand}` : ''} – Avis, test et meilleur prix | Fluxlab`}
-                        fill
-                        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                        className="object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500 p-2"
-                        loading="lazy"
-                    />
+          <Heart size={14} fill={wished ? 'currentColor' : 'none'} />
+        </button>
 
-                    {/* Smart Badge */}
-                    {product.badge && (
-                        <div className={`absolute top-3 left-3 px-2 py-1 text-[10px] font-bold uppercase rounded border shadow-sm ${product.badge.color}`}>
-                            {product.badge.text}
-                        </div>
-                    )}
-                </div>
+        {product.imageUrl ? (
+          <div className="absolute inset-0 flex items-center justify-center p-4 group-hover:scale-105 transition-transform duration-500">
+            <Image
+              src={product.imageUrl}
+              alt={`${product.name} ${product.brand} – avis et prix | Fluxlab`}
+              fill
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              className="object-contain mix-blend-multiply p-4"
+              loading="lazy"
+            />
+          </div>
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center text-foreground/15 font-mono text-xs">
+            No image
+          </div>
+        )}
+      </div>
 
-                {/* CONTENT AREA */}
-                <div className="p-5 flex flex-col flex-1">
-                    <div className="flex justify-between items-start mb-2">
-                        <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider">{product.brand}</span>
-                        {product.rating !== undefined && product.rating > 0 && (
-                            <div className="flex items-center gap-1 mt-0.5 bg-secondary/50 px-1.5 py-0.5 rounded text-xs font-bold text-foreground">
-                                <Star className="w-3 h-3 text-yellow-500 fill-yellow-500" />
-                                <span>{product.rating}</span>
-                            </div>
-                        )}
-                    </div>
+      {/* Info zone */}
+      <div className="p-5 flex flex-col flex-1 bg-secondary">
+        <div className="flex items-center justify-between text-[10px] font-mono tracking-[0.18em] uppercase text-foreground/55 mb-2">
+          <span>{product.brand}</span>
+        </div>
 
-                    <h3 className="font-bold text-lg mb-4 text-foreground leading-tight group-hover:text-primary transition-colors line-clamp-2">
-                        {product.name}
-                    </h3>
+        <h3 className="font-serif text-[18px] leading-[1.2] text-foreground mb-3">
+          <span className="bg-[linear-gradient(90deg,#D3B27B,#D3B27B)] bg-[length:0_1px] bg-no-repeat bg-bottom group-hover:bg-[length:100%_1px] transition-all duration-300">
+            {product.name}
+          </span>
+        </h3>
 
-                    <div className="mt-auto flex items-center justify-between pt-4 border-t border-border/50">
-                        <span className="text-xl font-bold">≈ {product.price}€</span>
-                        <span className="hover:bg-primary hover:text-white px-2 py-1 rounded-md text-sm font-medium transition-colors group/btn flex items-center gap-1">
-                            Voir
-                            <ArrowRight className="w-4 h-4 ml-1 group-hover/btn:translate-x-1 transition-transform" />
-                        </span>
-                    </div>
-                </div>
-            </Link>
-        </motion.div>
-    );
-};
+        {product.reviewCount > 0 && (
+          <div className="mb-5">
+            <StarRating rating={product.rating} count={product.reviewCount} />
+          </div>
+        )}
+
+        <div className="mt-auto flex items-end justify-between pt-4 border-t border-foreground/10">
+          <div>
+            <span className="block text-[10px] font-mono uppercase tracking-[0.16em] text-foreground/55 mb-0.5">
+              à partir de
+            </span>
+            <span className={cn('font-serif text-[28px] leading-none', isUnavailable && 'text-foreground/55')}>
+              {product.price.toLocaleString('fr-FR')}
+              <span className="text-[16px] align-top">€</span>
+            </span>
+          </div>
+
+          <span className="w-9 h-9 rounded-full bg-foreground text-white flex items-center justify-center group-hover:bg-primary transition-colors">
+            <ArrowRight size={14} />
+          </span>
+        </div>
+      </div>
+    </Link>
+  )
+}
