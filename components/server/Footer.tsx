@@ -129,25 +129,7 @@ export function Footer() {
 
       <div className="relative z-10 max-w-layout mx-auto px-6 lg:px-16">
 
-        {/* ── Newsletter ─────────────────────────────────────── */}
-        <div className="grid grid-cols-12 gap-10 pt-20 pb-16 border-b border-white/10">
-          <div className="col-span-12 lg:col-span-6">
-            <p className="frame-label text-primary mb-5 flex items-center gap-3">
-              <span className="block w-8 h-px bg-primary" aria-hidden />
-              La Gazette du Labo
-            </p>
-            <h2 className="font-serif text-white text-[28px] sm:text-[36px] md:text-[48px] leading-[1.1] sm:leading-[1.05] tracking-tight mb-6">
-              Recevez nos meilleurs<br/>
-              <span className="italic text-primary">guides &amp; tests</span>, chaque mois.
-            </h2>
-            <p className="text-[16px] text-white/55 leading-[1.55] font-light max-w-[500px]">
-              Une newsletter dense et soignée — pas de spam. Rejoignez 2&nbsp;400 créateurs.
-            </p>
-          </div>
-          <div className="col-span-12 lg:col-span-6 lg:pl-12 flex flex-col justify-end">
-            <NewsletterForm />
-          </div>
-        </div>
+        {/* ── Newsletter — masquée temporairement (à réactiver avec Brevo/Mailchimp) ── */}
 
         {/* ── Main grid ──────────────────────────────────────── */}
         <div className="grid grid-cols-12 gap-10 pt-16 pb-14">
