@@ -219,9 +219,9 @@ export const ARTICLES: ArticleMeta[] = [
     relatedCategorySlug: "micros-dynamiques",
     content: "",
   },
-  // ═══ ARTICLE 12 — Meilleur casque studio ═══
+  // ═══ ARTICLE 17 — Meilleur casque studio ═══
   {
-    id: "12",
+    id: "17",
     slug: "meilleur-casque-studio-home-studio-2026",
     title: "Meilleur Casque Studio 2026 — Le Guide pour le Mixage et l'Enregistrement",
     category: "Audio",
@@ -235,9 +235,9 @@ export const ARTICLES: ArticleMeta[] = [
     content: "",
   },
 
-  // ═══ ARTICLE 13 — Elgato Stream Deck Guide ═══
+  // ═══ ARTICLE 18 — Elgato Stream Deck Guide ═══
   {
-    id: "13",
+    id: "18",
     slug: "elgato-stream-deck-guide-complet",
     title: "Elgato Stream Deck — Le Guide Complet pour Booster votre Productivité",
     category: "Streaming",
@@ -251,7 +251,7 @@ export const ARTICLES: ArticleMeta[] = [
     content: "",
   },
   {
-    id: "14",
+    id: "19",
     slug: "alternatives-focusrite-scarlett-2026",
     title: "Les 3 meilleures alternatives à la Focusrite Scarlett en 2026",
     category: "Audio",
@@ -265,7 +265,7 @@ export const ARTICLES: ArticleMeta[] = [
     content: "",
   },
   {
-    id: "15",
+    id: "25",
     slug: "fond-flou-stream-petite-chambre",
     title: "Comment avoir un fond flou en stream dans une petite chambre ?",
     category: "Streaming",
@@ -332,6 +332,34 @@ export const ARTICLES: ArticleMeta[] = [
     intro: "Vouloir lancer un podcast en duo est une excellente idée. Mais attention : la technique peut vite devenir un enfer si vous faites le mauvais choix de matériel. Voici comment brancher deux micros sans aucun bug de son.",
     relatedProducts: ["focusrite-scarlett-2i2-4th-gen", "shure-mv7x"],
     relatedCategorySlug: "video",
+    content: "",
+  },
+  {
+    id: "23",
+    slug: "setup-podcast-300-euros-2026",
+    title: "Setup podcast complet à 300€ en 2026 — Micro, Interface et Accessoires",
+    category: "Audio",
+    readTime: "5 min",
+    date: "07 Jun 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/setup_podcast_300.png",
+    intro: "300€, c'est le seuil où un setup podcast passe du \"on entend que c'est un débutant\" au \"c'est propre et professionnel\". Voici le setup optimisé que l'on recommande en 2026, composant par composant.",
+    relatedProducts: ["rode-podmic-usb", "focusrite-scarlett-solo-4th-gen", "shure-mv7x"],
+    relatedCategorySlug: "microphones",
+    content: "",
+  },
+  {
+    id: "24",
+    slug: "home-studio-500-euros-guide-complet",
+    title: "Home studio à 500€ : le guide complet pour débuter en 2026",
+    category: "Audio",
+    readTime: "6 min",
+    date: "07 Jun 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/home_studio_500.png",
+    intro: "Monter un home studio efficace pour 500€ est non seulement possible en 2026 — c'est même la configuration idéale pour 90% des créateurs qui débutent. Voici comment répartir votre budget intelligemment entre interface, micro, casque et traitement acoustique.",
+    relatedProducts: ["focusrite-scarlett-2i2-4th-gen", "rode-podmic-usb", "beyerdynamic-dt-770-pro-80-ohm", "audio-technica-ath-m50-x"],
+    relatedCategorySlug: "cartes-son",
     content: "",
   },
 ];

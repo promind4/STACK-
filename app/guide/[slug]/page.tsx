@@ -282,6 +282,35 @@ export default async function GuideArticlePage({ params }: Props) {
     }
     dynamicContent = modifiedContent;
 
+    // Injecter un CTA configurateur au milieu de l'article (après le 2ème h2)
+    const CTAmidArticle = `
+      <div class="not-prose my-10 p-6 rounded-2xl border flex flex-col sm:flex-row items-start sm:items-center gap-5" style="background:rgba(211,178,123,0.06);border-color:rgba(211,178,123,0.2);">
+        <div class="flex-1">
+          <p class="text-[10px] font-mono uppercase tracking-widest mb-1" style="color:#D3B27B;">Labo IA · Fluxlab</p>
+          <p class="font-serif text-[20px] leading-snug mb-1">Besoin d&apos;aide pour choisir votre matériel&nbsp;?</p>
+          <p class="text-[13px] leading-relaxed" style="color:rgba(15,15,15,0.6);">Budget, usage, contraintes — l&apos;IA compose votre setup complet en 2 minutes.</p>
+        </div>
+        <a href="/configurateur" class="shrink-0 inline-flex items-center gap-2 h-10 px-6 rounded-full text-[12px] font-medium uppercase tracking-wider transition-colors" style="background:#D3B27B;color:#0F0F0F;text-decoration:none;">
+          Lancer le Labo IA →
+        </a>
+      </div>
+    `;
+
+    let h2Count = 0;
+    const h2CloseTag = '</h2>';
+    let insertPos = -1;
+    let searchFrom = 0;
+    while (h2Count < 2) {
+      const idx = dynamicContent.indexOf(h2CloseTag, searchFrom);
+      if (idx === -1) break;
+      h2Count++;
+      if (h2Count === 2) insertPos = idx + h2CloseTag.length;
+      else searchFrom = idx + h2CloseTag.length;
+    }
+    if (insertPos !== -1) {
+      dynamicContent = dynamicContent.slice(0, insertPos) + CTAmidArticle + dynamicContent.slice(insertPos);
+    }
+
     return (
         <>
             <JsonLd data={articleSchema} />
@@ -340,13 +369,11 @@ export default async function GuideArticlePage({ params }: Props) {
                                 {article.intro}
                             </p>
 
-                            {/* Méta — date + temps de lecture, sans auteur */}
+                            {/* Méta — byline éditorial */}
                             <div className="flex items-center gap-3 text-[12px] font-mono text-white/40">
-                                <span>Fluxlab</span>
+                                <span>Par la rédaction Fluxlab</span>
                                 <span className="text-white/20">·</span>
-                                <span>{article.date}</span>
-                                <span className="text-white/20">·</span>
-                                <span>{article.readTime} de lecture</span>
+                                <span>Mis à jour en {article.date}</span>
                             </div>
                         </div>
                     </div>

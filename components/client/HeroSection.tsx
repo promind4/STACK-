@@ -123,7 +123,7 @@ export function HeroSection() {
                 href="/configurateur"
                 className="group inline-flex items-center justify-center gap-3 h-14 px-8 rounded-full bg-primary text-foreground font-medium text-[14px] tracking-wide uppercase transition-all hover:shadow-btn hover:bg-primary-hover"
               >
-                <span>Trouver mon setup</span>
+                <span>Trouver mon setup idéal en 2 min</span>
                 <svg className="group-hover:translate-x-1 transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                   <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
                 </svg>

@@ -230,6 +230,39 @@ export default function ProductPageContent({ product, category, relatedProducts 
               </div>
             )}
 
+            {/* Prix compact */}
+            {bestOffer && (
+              <div className="flex items-center gap-3 mb-6 py-3 px-4 rounded-xl bg-secondary border border-border/70">
+                <div className="flex flex-col">
+                  <span className="text-[9px] font-mono uppercase tracking-widest text-primary mb-0.5">Prix le plus bas</span>
+                  <span className="font-serif text-[26px] leading-none text-foreground">
+                    {bestOffer.price}<span className="text-[14px] align-top ml-0.5">€</span>
+                  </span>
+                </div>
+                <span className="text-[13px] text-foreground/50">chez</span>
+                {getMerchantLogo(bestOffer) ? (
+                  <Image
+                    src={getMerchantLogo(bestOffer)!}
+                    alt={`Logo ${bestOffer.merchant_name}`}
+                    width={70}
+                    height={22}
+                    className="object-contain h-5 w-auto"
+                  />
+                ) : (
+                  <span className="text-[14px] font-medium text-foreground/80">{bestOffer.merchant_name}</span>
+                )}
+                <a
+                  href={bestOffer.affiliate_link}
+                  target="_blank"
+                  rel="nofollow sponsored noopener"
+                  className="ml-auto inline-flex items-center gap-1.5 text-[11px] font-mono text-primary uppercase tracking-wider hover:underline"
+                >
+                  Voir l&apos;offre
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                </a>
+              </div>
+            )}
+
             {/* Verdict */}
             {product.description && (
               <div className="bg-secondary rounded-xl p-5 mb-6 border border-border/70">

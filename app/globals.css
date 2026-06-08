@@ -48,10 +48,12 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden; /* bloque tout débordement horizontal */
 }
 
 body {
   @apply bg-background text-foreground font-sans antialiased min-h-screen flex flex-col;
+  overflow-x: hidden; /* double protection — couvre les cas edge */
 }
 
 /* ─── UTILITIES ─────────────────────────────────────────────── */
@@ -165,9 +167,15 @@ body {
 .prose-fluxlab a[class*="bg-primary"]:not(.not-prose *) { color:#0F0F0F !important; text-decoration:none !important; }
 .prose-fluxlab .bg-primary:not(.not-prose *) .text-primary-foreground,
 .prose-fluxlab span.bg-primary:not(.not-prose *) { color:#0F0F0F !important; }
-.prose-fluxlab table:not(.not-prose *) { width:100%; min-width:480px; border-collapse:collapse; }
-.prose-fluxlab th:not(.not-prose *) { padding:1rem; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.18em; text-transform:uppercase; background:#E8DCC4; }
-.prose-fluxlab td:not(.not-prose *) { padding:1rem; border-top:1px solid #EBDCC4; font-size:14px; }
+/* Table responsive : scroll horizontal interne, jamais de débordement de page */
+.prose-fluxlab table:not(.not-prose *) { display:block; overflow-x:auto; -webkit-overflow-scrolling:touch; width:100%; min-width:480px; border-collapse:collapse; }
+.prose-fluxlab th:not(.not-prose *) { padding:.75rem 1rem; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.18em; text-transform:uppercase; background:#E8DCC4; white-space:nowrap; }
+.prose-fluxlab td:not(.not-prose *) { padding:.75rem 1rem; border-top:1px solid #EBDCC4; font-size:14px; }
+
+/* Images et iframes dans les articles : jamais de débordement */
+.prose-fluxlab img:not(.not-prose *) { max-width:100%; height:auto; }
+.prose-fluxlab pre:not(.not-prose *) { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.prose-fluxlab iframe:not(.not-prose *) { max-width:100%; }
 
 /* TOC sidebar links */
 .toc-link { font-size:13px; color:rgba(15,15,15,.55); padding:.5rem 0 .5rem 1rem; display:block; border-left:2px solid transparent; transition:all .25s; }

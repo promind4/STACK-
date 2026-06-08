@@ -136,27 +136,104 @@ function NavSearch({ isTransparent, onClose }: { isTransparent: boolean; onClose
 /* ─── LABO CTA (pill with dark circle arrow) ─────────────── */
 /* ─── MOBILE SEARCH (dans le tiroir) ────────────────────── */
 function MobileSearch({ onNavigate }: { onNavigate: () => void }) {
-  const [query, setQuery] = useState('')
-  const router = useRouter()
+  const [query, setQuery]     = useState('')
+  const [hits, setHits]       = useState<Hit[]>([])
+  const [loading, setLoading] = useState(false)
+  const timerRef              = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const router                = useRouter()
+
+  const doSearch = async (q: string) => {
+    if (q.trim().length < 2) { setHits([]); setLoading(false); return }
+    setLoading(true)
+    try {
+      const res  = await fetch(`/api/search?q=${encodeURIComponent(q.trim())}`)
+      const data = await res.json()
+      setHits(Array.isArray(data) ? data : [])
+    } catch { setHits([]) }
+    finally   { setLoading(false) }
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const v = e.target.value
+    setQuery(v)
+    if (timerRef.current) clearTimeout(timerRef.current)
+    timerRef.current = setTimeout(() => doSearch(v), 220)
+  }
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault()
     if (query.trim().length < 1) return
+    setHits([])
     onNavigate()
     router.push(`/recherche?q=${encodeURIComponent(query.trim())}`)
   }
 
+  const handleSelect = (slug: string) => {
+    setHits([])
+    onNavigate()
+    router.push(`/produit/${slug}`)
+  }
+
   return (
-    <form onSubmit={submit} className="relative mb-6">
-      <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40" />
-      <input
-        type="search"
-        value={query}
-        onChange={e => setQuery(e.target.value)}
-        placeholder="Rechercher un produit…"
-        className="w-full h-12 bg-white/5 border border-white/15 rounded-full pl-11 pr-4 text-[15px] text-white placeholder-white/35 focus:outline-none focus:border-primary/60 transition-colors"
-      />
-    </form>
+    <div className="relative mb-6">
+      <form onSubmit={submit} className="relative">
+        <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40" />
+        <input
+          type="search"
+          value={query}
+          onChange={handleChange}
+          placeholder="Rechercher un produit…"
+          className="w-full h-12 bg-white/5 border border-white/15 rounded-full pl-11 pr-4 text-[15px] text-white placeholder-white/35 focus:outline-none focus:border-primary/60 transition-colors"
+        />
+      </form>
+
+      {/* Dropdown suggestions */}
+      <AnimatePresence>
+        {(hits.length > 0 || loading) && (
+          <motion.div
+            initial={{ opacity: 0, y: 4 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.12 }}
+            className="absolute top-full left-0 right-0 mt-2 rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_50px_-10px_rgba(0,0,0,.6)] z-50"
+            style={{ background: '#161616' }}
+          >
+            {loading && hits.length === 0 && (
+              <div className="px-4 py-3 text-[12px] font-mono text-white/35">Recherche…</div>
+            )}
+            {hits.map(h => (
+              <button
+                key={h.slug}
+                type="button"
+                onClick={() => handleSelect(h.slug)}
+                className="w-full flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition-colors border-t border-white/8 first:border-t-0 text-left"
+              >
+                <div className="w-9 h-9 rounded-lg bg-white/8 shrink-0 overflow-hidden flex items-center justify-center">
+                  {h.image_url
+                    ? <img src={h.image_url} alt="" className="w-full h-full object-contain p-1" loading="lazy" />
+                    : <span className="text-white/20 text-[9px] font-mono">IMG</span>}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-[13px] text-white font-medium truncate">{h.name}</p>
+                  {h.brand && <p className="text-[11px] font-mono text-white/35">{h.brand}</p>}
+                </div>
+                {h.price > 0 && <span className="text-[12px] font-mono text-primary shrink-0">{h.price}€</span>}
+              </button>
+            ))}
+            {hits.length > 0 && (
+              <button
+                type="button"
+                onClick={() => { setHits([]); onNavigate(); router.push(`/recherche?q=${encodeURIComponent(query)}`) }}
+                className="w-full flex items-center justify-center gap-2 px-4 py-3 text-[11px] font-mono text-white/40 uppercase tracking-wider hover:text-primary transition-colors border-t border-white/8"
+              >
+                Voir tous les résultats
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </button>
+            )}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   )
 }
 

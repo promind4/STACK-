@@ -2,7 +2,7 @@
    Partagés entre tous les composants.
    ──────────────────────────────────────────────────────────── */
 
-export type BadgeVariant = 'new' | 'bestseller' | 'promo' | 'out_of_stock'
+export type BadgeVariant = 'new' | 'bestseller' | 'promo' | 'out_of_stock' | 'choix' | 'coup-de-coeur'
 
 export interface Product {
   id: string

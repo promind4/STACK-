@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Product } from '@/types/database';
@@ -91,6 +91,28 @@ const CATEGORY_BG: Record<string, string> = {
 };
 const DEFAULT_BG = '/images/editorial/bg-general.webp';
 
+/* ─── EDITORIAL BADGES ───────────────────────────────────── */
+function computeEditorialBadges(products: Product[], total: number) {
+  if (total === 0) return { choixId: null, coupDeCoeurId: null };
+
+  const sorted = [...products].sort((a, b) => {
+    const scoreA = (a.rating || 0) * Math.log10((a.review_count || 0) + 1);
+    const scoreB = (b.rating || 0) * Math.log10((b.review_count || 0) + 1);
+    return scoreB - scoreA;
+  });
+  const choixId = sorted[0]?.id ?? null;
+
+  let coupDeCoeurId: string | null = null;
+  if (total >= 20) {
+    const prices = products.map(p => p.price || 0).sort((a, b) => a - b);
+    const median = prices[Math.floor(prices.length / 2)];
+    const candidates = sorted.filter(p => (p.price || 0) <= median && p.id !== choixId && (p.rating || 0) >= 4.0);
+    coupDeCoeurId = candidates[0]?.id ?? null;
+  }
+
+  return { choixId, coupDeCoeurId };
+}
+
 /* ─── INTERSTITIAL EDITORIAL CARD ───────────────────────── */
 function EditorialCard({ slug }: { slug: string }) {
   const guideSlug = GUIDE_MAP[slug] ?? DEFAULT_GUIDE;
@@ -163,8 +185,8 @@ interface Props {
 
 export default function CategoryContent({ products, slug, title, subtitle }: Props) {
   const [sortBy, setSortBy] = useState<'default' | 'price_asc' | 'price_desc' | 'rating' | 'name'>('default');
-  const [minRating, setMinRating] = useState<number>(0);
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
+  const [filterOpen, setFilterOpen] = useState(false);
 
   const brands = useMemo(() => {
     const s = new Set(products.map(p => p.brand).filter(Boolean));
@@ -180,7 +202,6 @@ export default function CategoryContent({ products, slug, title, subtitle }: Pro
   const filtered = useMemo(() => {
     let result = [...products];
     if (selectedBrands.length > 0) result = result.filter(p => selectedBrands.includes(p.brand || ''));
-    if (minRating > 0) result = result.filter(p => (p.rating || 0) >= minRating);
     switch (sortBy) {
       case 'price_asc': result.sort((a, b) => a.price - b.price); break;
       case 'price_desc': result.sort((a, b) => b.price - a.price); break;
@@ -188,21 +209,40 @@ export default function CategoryContent({ products, slug, title, subtitle }: Pro
       case 'name': result.sort((a, b) => a.name.localeCompare(b.name)); break;
     }
     return result;
-  }, [products, sortBy, minRating, selectedBrands]);
+  }, [products, sortBy, selectedBrands]);
 
-  const hasFilters = selectedBrands.length > 0 || minRating > 0 || sortBy !== 'default';
+  const hasFilters = selectedBrands.length > 0 || sortBy !== 'default';
+
+  const { choixId, coupDeCoeurId } = useMemo(
+    () => computeEditorialBadges(products, products.length),
+    [products]
+  );
 
   const reset = () => {
     setSortBy('default');
-    setMinRating(0);
     setSelectedBrands([]);
   };
 
   return (
     <div className="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-16 py-16 grid grid-cols-12 gap-10">
 
+      {/* ── BOUTON FILTRE MOBILE ─────────────────────────── */}
+      <div className="col-span-12 lg:hidden">
+        <button
+          onClick={() => setFilterOpen(v => !v)}
+          className="flex items-center gap-2 h-10 px-5 rounded-full border border-border bg-white text-[12px] font-mono uppercase tracking-wider hover:border-primary hover:text-primary transition-colors"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="M3 6h18M7 12h10M11 18h2"/></svg>
+          Filtres
+          {hasFilters && <span className="ml-1 w-2 h-2 rounded-full bg-primary inline-block" />}
+        </button>
+      </div>
+
       {/* ── SIDEBAR ─────────────────────────────────────── */}
-      <aside className="col-span-12 lg:col-span-3">
+      <aside className={cn(
+        "col-span-12 lg:col-span-3",
+        !filterOpen && "hidden lg:block"
+      )}>
         <div className="lg:sticky lg:top-24 space-y-10">
 
           <div className="flex items-baseline justify-between">
@@ -264,37 +304,6 @@ export default function CategoryContent({ products, slug, title, subtitle }: Pro
             </div>
           )}
 
-          {/* NOTE */}
-          <div>
-            <div className="flex items-baseline justify-between mb-4">
-              <p className="frame-label text-foreground/60 flex items-center gap-2">
-                <span className="font-mono text-primary">02</span>
-                <span>Note minimum</span>
-              </p>
-            </div>
-            <div className="flex items-center gap-2 flex-wrap">
-              {[0, 4, 4.5].map(r => (
-                <button
-                  key={r}
-                  onClick={() => setMinRating(r)}
-                  className={cn(
-                    'flex items-center gap-1.5 px-3 py-2 rounded-full border text-[11px] font-mono transition-colors',
-                    minRating === r
-                      ? 'border-primary bg-primary/10 text-primary'
-                      : 'border-border bg-white text-foreground/70 hover:border-primary hover:text-primary'
-                  )}
-                >
-                  {r === 0 ? 'Toutes' : (
-                    <>
-                      <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg>
-                      {r}&nbsp;+
-                    </>
-                  )}
-                </button>
-              ))}
-            </div>
-          </div>
-
           {/* CTA LABO */}
           <Link
             href="/configurateur"
@@ -341,13 +350,20 @@ export default function CategoryContent({ products, slug, title, subtitle }: Pro
           <>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {filtered.map((product, idx) => (
-                <>
-                  <ProductCard key={product.id} product={product} />
+                <React.Fragment key={product.id}>
+                  <ProductCard
+                    product={product}
+                    editorialBadge={
+                      product.id === choixId ? 'choix' :
+                      product.id === coupDeCoeurId ? 'coup-de-coeur' :
+                      undefined
+                    }
+                  />
                   {/* Interstitiel éditorial après la 4ème carte */}
                   {idx === 3 && (
-                    <EditorialCard key="editorial" slug={slug} />
+                    <EditorialCard slug={slug} />
                   )}
-                </>
+                </React.Fragment>
               ))}
             </div>
           </>

@@ -12,6 +12,10 @@ const badgeStyles: Record<BadgeVariant, string> = {
     'bg-primary text-white',
   out_of_stock:
     'bg-foreground/10 text-foreground/65 border border-foreground/15',
+  choix:
+    'bg-primary text-foreground',
+  'coup-de-coeur':
+    'bg-white border border-primary/40 text-primary',
 }
 
 const badgeLabels: Record<BadgeVariant, string> = {
@@ -19,6 +23,8 @@ const badgeLabels: Record<BadgeVariant, string> = {
   bestseller:  'Meilleure vente',
   promo:       '',            // set via promoLabel prop
   out_of_stock: 'Rupture',
+  choix:          'Notre choix',
+  'coup-de-coeur': 'Coup de cœur',
 }
 
 interface ProductBadgeProps extends HTMLAttributes<HTMLSpanElement> {

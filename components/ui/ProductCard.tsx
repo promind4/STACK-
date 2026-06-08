@@ -72,9 +72,10 @@ function StarRating({ rating, count }: { rating: number; count: number }) {
 interface ProductCardProps {
   product: DBProduct
   className?: string
+  editorialBadge?: 'choix' | 'coup-de-coeur'
 }
 
-export function ProductCard({ product: dbProduct, className }: ProductCardProps) {
+export function ProductCard({ product: dbProduct, className, editorialBadge }: ProductCardProps) {
   const product = mapProduct(dbProduct)
   const [wished, setWished] = useState(false)
   const isUnavailable = !product.inStock || product.badge === 'out_of_stock'
@@ -102,6 +103,11 @@ export function ProductCard({ product: dbProduct, className }: ProductCardProps)
         {product.badge && (
           <span className="absolute top-3 left-3 z-10">
             <ProductBadge variant={product.badge} promoLabel={product.promoLabel} />
+          </span>
+        )}
+        {editorialBadge && (
+          <span className="absolute bottom-3 left-3 z-10">
+            <ProductBadge variant={editorialBadge} />
           </span>
         )}
 

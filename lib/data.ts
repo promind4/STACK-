@@ -46,6 +46,7 @@ export const ARTICLES: Article[] = [
     relatedProducts: ["audio-technica-ath-m20x", "beyerdynamic-dt-770-pro-80-ohm", "beyerdynamic-dt-990-pro", "sennheiser-hd-600"],
     relatedCategorySlug: "casques-studio",
     content: `
+      <div class="not-prose mb-8 p-5 rounded-xl bg-secondary border-l-4 border-primary"><p class="text-[10px] font-mono uppercase tracking-widest text-primary mb-2">Réponse directe</p><p class="text-[15px] leading-relaxed text-foreground/85">Pour choisir un casque studio : casque fermé pour l'enregistrement (isolation phonique), casque ouvert pour le mixage (image stéréo naturelle). Les meilleurs rapports qualité/prix en 2026 : Beyerdynamic DT 770 Pro (fermé, 150€) et DT 990 Pro (ouvert, 130€). Évitez les casques gaming — leur courbe en V colorée fausse votre perception du mix.</p></div>
       <!-- ENCART TL;DR (Résumé Haute Conversion) -->
       <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8">
         <h2 class="text-xl font-bold text-foreground mb-4 mt-0 !border-0 flex items-center gap-2">
@@ -369,6 +370,7 @@ export const ARTICLES: Article[] = [
     relatedProducts: ["shure-mv7x", "rode-podmic-usb", "shure-sm7b", "electro-voice-re20"],
     relatedCategorySlug: "microphones",
     content: `
+      <div class="not-prose mb-8 p-5 rounded-xl bg-secondary border-l-4 border-primary"><p class="text-[10px] font-mono uppercase tracking-widest text-primary mb-2">Réponse directe</p><p class="text-[15px] leading-relaxed text-foreground/85">En 2026, choisissez USB si vous débutez et voulez du plug-and-play sans interface audio. Choisissez XLR si votre budget dépasse 200€, que vous voulez évoluer ou enregistrer plusieurs sources. La qualité audio de l'XLR reste supérieure en théorie, mais la différence est imperceptible sous 150€. L'USB est aujourd'hui suffisant pour 90% des podcasters et streamers.</p></div>
       <!-- ENCART Résumé -->
   <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8" >
   <h2 class="text-xl font-bold text-foreground mb-4 mt-0 !border-0 flex items-center gap-2" >
@@ -868,6 +870,7 @@ export const ARTICLES: Article[] = [
     relatedProducts: ["elgato-ring-light", "elgato-key-light-air", "aputure-300d-ii"],
     relatedCategorySlug: "lighting",
     content: `
+      <div class="not-prose mb-8 p-5 rounded-xl bg-secondary border-l-4 border-primary"><p class="text-[10px] font-mono uppercase tracking-widest text-primary mb-2">Réponse directe</p><p class="text-[15px] leading-relaxed text-foreground/85">Pour un éclairage cinématique à domicile, privilégiez une source douce et diffusée (panneau LED bicolore, softbox) avec un IRC supérieur à 95. Positionnez votre lumière principale à 45° du visage. Budget minimum pour un résultat professionnel : 150€. Évitez les néons de bureau qui mélangent lumière chaude et froide — votre balance des blancs sera incontrôlable.</p></div>
 
   <!--ENCART TL; DR(Résumé Haute Conversion)-->
     <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8" >
@@ -1061,6 +1064,7 @@ export const ARTICLES: Article[] = [
     relatedProducts: ["focusrite-scarlett-2i2-4th-gen", "focusrite-scarlett-solo-4th-gen", "audient-id14-mkii", "universal-audio-volt-276", "ssl-2-plus"],
     relatedCategorySlug: "interfaces-audio",
     content: `
+      <div class="not-prose mb-8 p-5 rounded-xl bg-secondary border-l-4 border-primary"><p class="text-[10px] font-mono uppercase tracking-widest text-primary mb-2">Réponse directe</p><p class="text-[15px] leading-relaxed text-foreground/85">En 2026, la meilleure interface audio pour la majorité des créateurs est la Focusrite Scarlett 2i2 4e génération : préamplis propres, latence ultra-basse, suite logicielle incluse. Budget plus serré (<100€) : Focusrite Scarlett Solo. Besoin de préamplis plus musicaux : Audient iD4 MKII ou SSL 2+ pour +50€. Évitez les interfaces sans marque vendues moins de 40€.</p></div>
                                                                                                                     <!--ENCART TL; DR(Résumé Haute Conversion)-->
                                                                                                                       <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8" >
                                                                                                                         <h2 class="text-xl font-bold text-foreground mb-4 mt-0 !border-0 flex items-center gap-2" >
@@ -1660,6 +1664,7 @@ export const ARTICLES: Article[] = [
     relatedProducts: ["rode-podmic-usb", "shure-mv7", "shure-sm7b", "electro-voice-re20", "focusrite-scarlett-2i2-4th-gen"],
     relatedCategorySlug: "micros-dynamiques",
     content: `
+      <div class="not-prose mb-8 p-5 rounded-xl bg-secondary border-l-4 border-primary"><p class="text-[10px] font-mono uppercase tracking-widest text-primary mb-2">Réponse directe</p><p class="text-[15px] leading-relaxed text-foreground/85">Pour un podcast en 2026, le meilleur micro dépend de votre connexion : USB pour la simplicité (Rode NT-USB Mini, Blue Yeti), XLR pour la qualité broadcast (Rode PodMic, Shure SM7B). Budget 80-150€ : Rode PodMic USB. Budget 300-400€ : Shure SM7B + Focusrite Scarlett 2i2. La différence audible entre XLR et USB est faible en dessous de 200€.</p></div>
                                                                                                                                                                           <!--ENCART TL; DR-->
                                                                                                                                                                             <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8" >
                                                                                                                                                                               <h2 class="text-xl font-bold text-foreground mb-4 mt-0 !border-0 flex items-center gap-2" >
@@ -2231,6 +2236,7 @@ export const ARTICLES: Article[] = [
     relatedProducts: ["rode-podmic-usb", "shure-mv7x", "logitech-c920", "elgato-key-light-air", "elgato-stream-deck-mk2", "shure-sm7b", "elgato-facecam-pro"],
     relatedCategorySlug: "streaming",
     content: `
+      <div class="not-prose mb-8 p-5 rounded-xl bg-secondary border-l-4 border-primary"><p class="text-[10px] font-mono uppercase tracking-widest text-primary mb-2">Réponse directe</p><p class="text-[15px] leading-relaxed text-foreground/85">Pour streamer sur Twitch ou YouTube en 2026 avec 200€ : micro USB HyperX SoloCast (50€) + webcam Logitech C920 (80€) + OBS Studio (gratuit). Si vous jouez sur console, ajoutez une carte de capture Elgato HD60 X. L'audio est votre priorité absolue — une image 720p avec un son propre bat toujours une 4K avec un son médiocre.</p></div>
 
                                                                                                                                                                                                                                                                                                                 <!--ENCART Résumé-->
                                                                                                                                                                                                                                                                                                                   <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8" >
@@ -3291,6 +3297,7 @@ export const ARTICLES: Article[] = [
     relatedProducts: ["sony-zv-e10", "rode-videomic-go-ii", "elgato-key-light-air", "focusrite-scarlett-2i2-4th-gen", "shure-mv7x"],
     relatedCategorySlug: "video",
     content: `
+      <div class="not-prose mb-8 p-5 rounded-xl bg-secondary border-l-4 border-primary"><p class="text-[10px] font-mono uppercase tracking-widest text-primary mb-2">Réponse directe</p><p class="text-[15px] leading-relaxed text-foreground/85">Pour débuter sur YouTube avec 500-700€, l'essentiel est : une Sony ZV-E10 (~400€) pour la caméra, un micro USB type Rode NT-USB Mini (~100€) et un éclairage diffusé (~100€). Priorisez l'audio avant tout — un mauvais son fait fuir les abonnés, une image imparfaite est pardonnée. Évitez les kits complets de mauvaise qualité.</p></div>
         <!--ENCART TL; DR(Résumé Haute Conversion)-->
           <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8" >
             <h2 class="text-xl font-bold text-foreground mb-4 mt-0 !border-0 flex items-center gap-2" >
@@ -5681,6 +5688,618 @@ export const ARTICLES: Article[] = [
           <p class="text-muted-foreground px-5 pb-4 mt-2">C'est encore plus risqué que 2 micros USB. Les latences seront différentes et vos voix ne seront jamais parfaitement synchronisées. Restez sur un setup 100% XLR pour la sérénité.</p>
         </details>
       </div>
+    `
+  },
+  {
+    id: "23",
+    slug: "setup-podcast-300-euros-2026",
+    title: "Setup podcast complet à 300€ en 2026 — Micro, Interface et Accessoires",
+    category: "Audio",
+    readTime: "5 min",
+    date: "07 Jun 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/setup_podcast_300.png",
+    intro: "300€, c'est le seuil où un setup podcast passe du \"on entend que c'est un débutant\" au \"c'est propre et professionnel\". Voici le setup optimisé que l'on recommande en 2026, composant par composant.",
+    relatedProducts: ["rode-podmic-usb", "focusrite-scarlett-solo-4th-gen", "shure-mv7x"],
+    relatedCategorySlug: "microphones",
+    content: `
+      <div class="not-prose mb-8 p-5 rounded-xl bg-secondary border-l-4 border-primary">
+        <p class="text-[10px] font-mono uppercase tracking-widest text-primary mb-2">Réponse directe</p>
+        <p class="text-[15px] leading-relaxed text-foreground/85">Pour 300€ en 2026 : Rode PodMic USB (~100€) + Focusrite Scarlett Solo 4th Gen (~120€) + bras articulé + câble XLR (~65€). Ce combo XLR est évolutif, robuste et sonne broadcast dès le déballage. Alternative USB pure : Shure MV7X (~150€) + bras (~50€) = 200€ tout compris si vous ne voulez pas d'interface.</p>
+      </div>
+
+      <!-- ENCART TL;DR -->
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8">
+        <h2 class="text-xl font-bold text-foreground mb-4 mt-0 !border-0 flex items-center gap-2">
+          <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+          Le Setup Recommandé à 300€
+        </h2>
+        <ul class="space-y-3 mb-0">
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[150px]">Micro :</span>
+            <span class="text-foreground"><a href="/produit/rode-podmic-usb" class="product-link text-primary hover:underline">Rode PodMic USB</a> — double connectique XLR/USB-C, son broadcast, ~100€</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[150px]">Interface :</span>
+            <span class="text-foreground"><a href="/produit/focusrite-scarlett-solo-4th-gen" class="product-link text-primary hover:underline">Focusrite Scarlett Solo 4th Gen</a> — préamplis propres, mode Air, ~120€</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[150px]">Accessoires :</span>
+            <span class="text-foreground">Bras articulé + câble XLR + filtre anti-pop — ~65€</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[150px]">Total :</span>
+            <span class="font-bold text-foreground">~285€ pour un son broadcast immédiat</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Tableau comparatif des composants -->
+      <div class="overflow-x-auto mt-8 mb-12 rounded-xl border border-border shadow-sm">
+        <table class="w-full text-sm text-left border-collapse min-w-[600px]">
+          <thead class="bg-secondary text-foreground uppercase border-b border-border font-serif">
+            <tr>
+              <th class="px-5 py-4 font-bold border-r border-border w-1/4">Composant</th>
+              <th class="px-5 py-4 font-bold border-r border-border">Modèle recommandé</th>
+              <th class="px-5 py-4 font-bold border-r border-border">Prix</th>
+              <th class="px-5 py-4 font-bold">Pourquoi ce choix</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-muted/50 border-b border-border transition-colors">
+              <td class="px-5 py-4 font-bold border-r border-border text-primary">Micro</td>
+              <td class="px-5 py-4 border-r border-border"><a href="/produit/rode-podmic-usb" class="product-link text-primary hover:underline">Rode PodMic USB</a></td>
+              <td class="px-5 py-4 border-r border-border font-medium">~100€</td>
+              <td class="px-5 py-4">Hybride XLR/USB-C, son broadcast, évolutif</td>
+            </tr>
+            <tr class="hover:bg-muted/50 border-b border-border transition-colors">
+              <td class="px-5 py-4 font-bold border-r border-border text-primary">Interface audio</td>
+              <td class="px-5 py-4 border-r border-border"><a href="/produit/focusrite-scarlett-solo-4th-gen" class="product-link text-primary hover:underline">Focusrite Scarlett Solo 4th Gen</a></td>
+              <td class="px-5 py-4 border-r border-border font-medium">~120€</td>
+              <td class="px-5 py-4">Préamplis propres, gain 69 dB, mode Air</td>
+            </tr>
+            <tr class="hover:bg-muted/50 border-b border-border transition-colors">
+              <td class="px-5 py-4 font-bold border-r border-border text-primary">Câble XLR</td>
+              <td class="px-5 py-4 border-r border-border">Cordial ECM 3 FM (3m)</td>
+              <td class="px-5 py-4 border-r border-border font-medium">~15€</td>
+              <td class="px-5 py-4">Cuivre pur, blindage double, fiable à vie</td>
+            </tr>
+            <tr class="hover:bg-muted/50 border-b border-border transition-colors">
+              <td class="px-5 py-4 font-bold border-r border-border text-primary">Bras articulé</td>
+              <td class="px-5 py-4 border-r border-border">Rode PSA1+ ou Elgato Wave Arm</td>
+              <td class="px-5 py-4 border-r border-border font-medium">~40€</td>
+              <td class="px-5 py-4">Posture, isolation vibrations, esthétique</td>
+            </tr>
+            <tr class="hover:bg-muted/50 transition-colors">
+              <td class="px-5 py-4 font-bold border-r border-border text-primary">Filtre anti-pop</td>
+              <td class="px-5 py-4 border-r border-border">Mousse windscreen + filtre tissu</td>
+              <td class="px-5 py-4 border-r border-border font-medium">~10€</td>
+              <td class="px-5 py-4">Élimine les plosives ("P", "B")</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Le micro : Rode PodMic USB (~100€)</h2>
+
+      <p>Le PodMic USB est une anomalie de marché. Pour 100€, Rode vous donne un micro en métal massif avec une double connectique USB-C <em>et</em> XLR — ce qui rend ce setup non-obsolète. Aujourd'hui, vous le branchez en USB-C directement dans votre ordinateur. Dans 6 mois, vous le basculez en XLR sur votre Scarlett Solo et vous ne perdez rien. C'est le seul micro de cette gamme de prix qui offre cette flexibilité d'évolution sans changer de matériel.</p>
+
+      <!-- PRODUCT CARD: Rode PodMic USB -->
+      <div id="rode-podmic-usb-setup" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://www.thomann.de/thumb/opengraph/pics/prod/567098.jpg" alt="Rode PodMic USB" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/rode-podmic-usb" class="product-link text-foreground hover:text-primary transition-colors">Rode PodMic USB</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le micro broadcast évolutif XLR/USB-C (~100€)</p>
+            <p>Corps en métal lourd, capsule dynamique cardioïde taillée pour les voix spoken word et le podcast. Son pop filter interne gère les plosives sans filtre externe supplémentaire. La double connectique XLR + USB-C est une sécurité rare à ce prix : vous évoluez sans racheter de micro.</p>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Double connectique XLR + USB-C : évolutif à vie</li>
+              <li>Pop filter interne très efficace sur les plosives</li>
+              <li>Corps métal massif, indestructible</li>
+              <li>Monitoring direct via prise casque intégrée (mode USB)</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Plus imposant que les petits micros USB de bureau</li>
+              <li>Nécessite d'être à 15-30 cm pour un son optimal</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm">
+          <strong class="text-foreground">Notre conseil d'usage :</strong> Démarrez en USB-C directement sur votre ordinateur. Quand vous ajoutez votre Scarlett Solo, basculez simplement le câble en XLR. Zéro coût d'évolution, son immédiatement amélioré.
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/rode-podmic-usb" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">L'interface audio : Focusrite Scarlett Solo 4th Gen (~120€)</h2>
+
+      <p>La 4e génération de la Scarlett Solo est l'interface qui a tout changé dans cette gamme de prix. Avec un gain maximal de 69 dB, elle est désormais capable d'alimenter des micros dynamiques exigeants — y compris le Shure SM7B — sans préampli externe. Son mode "Air" (émulation du préampli ISA de Focusrite) ajoute une présence et une clarté qui flatte instantanément les voix podcastées. C'est l'interface qui transforme un bon micro en <em>beau</em> micro.</p>
+
+      <!-- PRODUCT CARD: Focusrite Scarlett Solo 4th Gen -->
+      <div id="scarlett-solo-setup" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://www.thomann.de/thumb/opengraph/pics/prod/566673.jpg" alt="Focusrite Scarlett Solo 4th Gen" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/focusrite-scarlett-solo-4th-gen" class="product-link text-foreground hover:text-primary transition-colors">Focusrite Scarlett Solo 4th Gen</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">L'interface parfaite pour un podcasteur solo (~120€)</p>
+            <p>Une entrée XLR, une sortie moniteur stéréo, une prise casque avec volume dédié, et le mode Air qui fait la différence. La 4th Gen intègre également un loopback audio natif parfait pour le streaming Twitch ou YouTube — votre voix et le son du PC dans un seul flux USB vers OBS.</p>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Gain de 69 dB : compatible même avec les micros difficiles</li>
+              <li>Mode "Air" (émulation ISA) — clarté et présence immédiates</li>
+              <li>Loopback intégré pour le streaming</li>
+              <li>Bundle logiciel complet (Ableton Live Lite, plugins Pro Tools)</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Une seule entrée XLR (pas adapté au podcast en duo)</li>
+              <li>Pas de sortie MIDI ni de bus de mixage interne avancé</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm">
+          <strong class="text-foreground">Notre conseil d'usage :</strong> Parfaite pour un podcasteur solo. Si vous enregistrez à deux, passez directement à la <a href="/produit/focusrite-scarlett-2i2-4th-gen" class="product-link text-primary hover:underline">Scarlett 2i2</a> (+40€) pour avoir 2 entrées XLR indépendantes.
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/focusrite-scarlett-solo-4th-gen" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Les accessoires qui font la différence (65€)</h2>
+
+      <p>Un setup micro sans bras articulé est un setup incomplet. Le bras n'est pas un luxe : il maintient le micro à la distance idéale (15-20 cm de votre bouche), absorbe les vibrations du bureau, et libère votre espace de travail. Ajoutez un câble XLR de qualité et un simple filtre anti-pop, et vous couvrez 95% des situations d'enregistrement.</p>
+
+      <div class="bg-secondary border border-border rounded-2xl p-6 my-8">
+        <h3 class="text-lg font-bold mb-4 mt-0">Liste d'accessoires recommandés</h3>
+        <ul class="space-y-3 mb-0">
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[160px]">Bras articulé :</span>
+            <span class="text-foreground/80">Rode PSA1+ (~40€) ou Elgato Wave Mic Arm (~45€) — solidité et discrétion garanties</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[160px]">Câble XLR :</span>
+            <span class="text-foreground/80">Cordial ECM 3 FM (~15€) — cuivre pur, blindage double, fiable à vie</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[160px]">Filtre anti-pop :</span>
+            <span class="text-foreground/80">Mousse windscreen ou filtre clamp (~10€) — élimine les plosives résiduelles</span>
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Budget total et récapitulatif</h2>
+
+      <div class="overflow-x-auto my-8 rounded-xl border border-border shadow-sm">
+        <table class="w-full text-sm text-left border-collapse">
+          <thead class="bg-secondary text-foreground border-b border-border font-serif">
+            <tr>
+              <th class="px-5 py-3 font-bold border-r border-border">Poste</th>
+              <th class="px-5 py-3 font-bold border-r border-border">Budget</th>
+              <th class="px-5 py-3 font-bold">Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-muted/50 border-b border-border">
+              <td class="px-5 py-3 font-medium border-r border-border">Rode PodMic USB</td>
+              <td class="px-5 py-3 font-bold border-r border-border text-primary">~100€</td>
+              <td class="px-5 py-3">Micro principal</td>
+            </tr>
+            <tr class="hover:bg-muted/50 border-b border-border">
+              <td class="px-5 py-3 font-medium border-r border-border">Focusrite Scarlett Solo 4th Gen</td>
+              <td class="px-5 py-3 font-bold border-r border-border text-primary">~120€</td>
+              <td class="px-5 py-3">Interface audio</td>
+            </tr>
+            <tr class="hover:bg-muted/50 border-b border-border">
+              <td class="px-5 py-3 font-medium border-r border-border">Bras + câble XLR + filtre</td>
+              <td class="px-5 py-3 font-bold border-r border-border text-primary">~65€</td>
+              <td class="px-5 py-3">Accessoires essentiels</td>
+            </tr>
+            <tr class="hover:bg-muted/50 bg-primary/5">
+              <td class="px-5 py-3 font-bold border-r border-border">Total</td>
+              <td class="px-5 py-3 font-bold border-r border-border text-foreground">~285€</td>
+              <td class="px-5 py-3 text-foreground/60">Reste ~15€ pour un câble USB-C de rechange</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Si votre budget est de 150-200€ et que vous ne voulez pas d'interface audio, le <a href="/produit/shure-mv7x" class="product-link text-primary hover:underline">Shure MV7X</a> (~150€, XLR pure) avec un bras est une excellente alternative. Mais à 300€, le setup XLR complet offre clairement la meilleure valeur à long terme : le son est meilleur, vous pouvez brancher n'importe quel micro XLR futur, et la Scarlett Solo dure une décennie.</p>
+
+      <!-- MOT DE LA FIN -->
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 flex flex-col sm:flex-row items-center gap-8">
+        <div class="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+          <span class="text-4xl">🎙️</span>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-foreground mt-0 mb-3 !border-0">Le Mot de la Fin</h2>
+          <p class="mb-2">300€, c'est le seuil où un podcast passe du son "enregistré dans une chambre" au son "ça sonne pro". Le setup Rode PodMic USB + Scarlett Solo est notre recommandation la plus récurrente en 2026 : il est évolutif, robuste, et sonne bien dès le déballage.</p>
+          <p class="mb-0">L'investissement le plus important n'est pas le matériel — c'est la régularité. Avec ce setup, votre son ne sera jamais un obstacle à votre croissance.</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">FAQ</h2>
+
+      <div class="faq-accordion space-y-4">
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span class="text-foreground font-medium">Ai-je vraiment besoin d'une interface audio si mon micro a déjà un port USB ?</span>
+            <span class="transition group-open:rotate-180"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">Non, pas immédiatement. Le Rode PodMic USB peut fonctionner seul en USB-C directement dans votre ordinateur. L'interface audio devient utile pour améliorer la qualité de conversion analogique/numérique, utiliser des plugins de traitement audio en temps réel, ou connecter d'autres sources. À 300€, vous pouvez commencer sans interface et l'ajouter 6 mois plus tard.</p>
+        </details>
+
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span class="text-foreground font-medium">Quelle différence entre un micro dynamique et un micro à condensateur pour le podcast ?</span>
+            <span class="transition group-open:rotate-180"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">Pour le podcast en appartement, choisissez le micro dynamique (comme le PodMic USB). Il est moins sensible aux bruits ambiants (ventilateur, clavier, rue) et ne capte que ce qui est juste devant lui. Le micro à condensateur est plus précis et détaillé — parfait en studio insonorisé, mais impitoyable dans un environnement non traité acoustiquement.</p>
+        </details>
+
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span class="text-foreground font-medium">Ce setup 300€ est-il suffisant pour publier sur Spotify ou Apple Podcasts ?</span>
+            <span class="transition group-open:rotate-180"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">Absolument. Les plateformes de podcast n'ont aucune exigence de matériel minimum — seule la qualité du fichier audio compte. Avec ce setup et une bonne technique (voix à 20 cm du micro, pièce peu réverbérante), votre podcast sera indiscernable de productions professionnelles sur toutes les plateformes.</p>
+        </details>
+
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span class="text-foreground font-medium">Quel logiciel utiliser pour enregistrer et monter mon podcast avec ce setup ?</span>
+            <span class="transition group-open:rotate-180"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">Pour débuter : Audacity (gratuit, Windows/Mac/Linux) ou GarageBand (gratuit, Mac uniquement). Le bundle logiciel de la Scarlett Solo inclut aussi Ableton Live Lite et des plugins Pro Tools First — suffisants pour produire un podcast de qualité professionnelle sans aucun surcoût.</p>
+        </details>
+      </div>
+
+      <p class="mt-10">Vous voulez aller plus loin ? Consultez notre <a href="/guide/meilleur-micro-podcast-2026" class="text-primary hover:underline">comparatif des meilleurs micros podcast 2026</a> ou utilisez le <a href="/configurateur" class="text-primary hover:underline">configurateur Fluxlab</a> pour un setup personnalisé selon votre budget et vos usages.</p>
+    `
+  },
+  {
+    id: "24",
+    slug: "home-studio-500-euros-guide-complet",
+    title: "Home studio à 500€ : le guide complet pour débuter en 2026",
+    category: "Audio",
+    readTime: "6 min",
+    date: "07 Jun 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/home_studio_500.png",
+    intro: "Monter un home studio efficace pour 500€ est non seulement possible en 2026 — c'est même la configuration idéale pour 90% des créateurs qui débutent. Voici comment répartir votre budget intelligemment entre interface, micro, casque et traitement acoustique.",
+    relatedProducts: ["focusrite-scarlett-2i2-4th-gen", "rode-podmic-usb", "beyerdynamic-dt-770-pro-80-ohm", "audio-technica-ath-m50-x"],
+    relatedCategorySlug: "cartes-son",
+    content: `
+      <div class="not-prose mb-8 p-5 rounded-xl bg-secondary border-l-4 border-primary">
+        <p class="text-[10px] font-mono uppercase tracking-widest text-primary mb-2">Réponse directe</p>
+        <p class="text-[15px] leading-relaxed text-foreground/85">Pour un home studio à 500€ en 2026 : Focusrite Scarlett 2i2 4th Gen (~160€) + Rode PodMic USB (~100€) + Beyerdynamic DT 770 Pro 80 Ohm (~130€) + panneaux acoustiques (~60€) = ~450€. Ce setup couvre podcast, voix off, musique et streaming avec une marge de progression réelle.</p>
+      </div>
+
+      <!-- ENCART TL;DR -->
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8">
+        <h2 class="text-xl font-bold text-foreground mb-4 mt-0 !border-0 flex items-center gap-2">
+          <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+          Le Setup Home Studio 500€ Recommandé
+        </h2>
+        <ul class="space-y-3 mb-0">
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[160px]">Interface audio :</span>
+            <span class="text-foreground"><a href="/produit/focusrite-scarlett-2i2-4th-gen" class="product-link text-primary hover:underline">Focusrite Scarlett 2i2 4th Gen</a> — 2 entrées XLR, préamplis pro, mode Air, ~160€</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[160px]">Micro :</span>
+            <span class="text-foreground"><a href="/produit/rode-podmic-usb" class="product-link text-primary hover:underline">Rode PodMic USB</a> — dynamique broadcast, XLR/USB-C, ~100€</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[160px]">Casque :</span>
+            <span class="text-foreground"><a href="/produit/beyerdynamic-dt-770-pro-80-ohm" class="product-link text-primary hover:underline">Beyerdynamic DT 770 Pro (80 Ohm)</a> — fermé, isolant, tracking, ~130€</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[160px]">Traitement :</span>
+            <span class="text-foreground">Panneaux acoustiques mousse ou DIY — ~60€</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[160px]">Total :</span>
+            <span class="font-bold text-foreground">~450€ — avec 50€ de marge pour accessoires</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Tableau budget global -->
+      <div class="overflow-x-auto mt-8 mb-12 rounded-xl border border-border shadow-sm">
+        <table class="w-full text-sm text-left border-collapse min-w-[600px]">
+          <thead class="bg-secondary text-foreground uppercase border-b border-border font-serif">
+            <tr>
+              <th class="px-5 py-4 font-bold border-r border-border w-1/4">Poste</th>
+              <th class="px-5 py-4 font-bold border-r border-border">Modèle recommandé</th>
+              <th class="px-5 py-4 font-bold border-r border-border">Budget</th>
+              <th class="px-5 py-4 font-bold">Priorité</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-muted/50 border-b border-border transition-colors">
+              <td class="px-5 py-4 font-bold border-r border-border text-primary">Interface audio</td>
+              <td class="px-5 py-4 border-r border-border"><a href="/produit/focusrite-scarlett-2i2-4th-gen" class="product-link text-primary hover:underline">Focusrite Scarlett 2i2 4th Gen</a></td>
+              <td class="px-5 py-4 border-r border-border font-medium">~160€</td>
+              <td class="px-5 py-4">⭐⭐⭐ Indispensable</td>
+            </tr>
+            <tr class="hover:bg-muted/50 border-b border-border transition-colors">
+              <td class="px-5 py-4 font-bold border-r border-border text-primary">Micro</td>
+              <td class="px-5 py-4 border-r border-border"><a href="/produit/rode-podmic-usb" class="product-link text-primary hover:underline">Rode PodMic USB</a></td>
+              <td class="px-5 py-4 border-r border-border font-medium">~100€</td>
+              <td class="px-5 py-4">⭐⭐⭐ Indispensable</td>
+            </tr>
+            <tr class="hover:bg-muted/50 border-b border-border transition-colors">
+              <td class="px-5 py-4 font-bold border-r border-border text-primary">Casque</td>
+              <td class="px-5 py-4 border-r border-border"><a href="/produit/beyerdynamic-dt-770-pro-80-ohm" class="product-link text-primary hover:underline">Beyerdynamic DT 770 Pro 80 Ohm</a></td>
+              <td class="px-5 py-4 border-r border-border font-medium">~130€</td>
+              <td class="px-5 py-4">⭐⭐⭐ Indispensable</td>
+            </tr>
+            <tr class="hover:bg-muted/50 border-b border-border transition-colors">
+              <td class="px-5 py-4 font-bold border-r border-border text-primary">Traitement acoustique</td>
+              <td class="px-5 py-4 border-r border-border">Panneaux mousse + bras micro</td>
+              <td class="px-5 py-4 border-r border-border font-medium">~60€</td>
+              <td class="px-5 py-4">⭐⭐ Très recommandé</td>
+            </tr>
+            <tr class="hover:bg-muted/50 bg-primary/5">
+              <td class="px-5 py-4 font-bold border-r border-border">Total</td>
+              <td class="px-5 py-4 border-r border-border text-foreground/60">Câble XLR inclus (~15€)</td>
+              <td class="px-5 py-4 font-bold border-r border-border text-foreground">~450€</td>
+              <td class="px-5 py-4 text-foreground/60">50€ de marge accessoires</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">L'interface audio : Focusrite Scarlett 2i2 4th Gen (~160€)</h2>
+
+      <p>La Scarlett 2i2 est l'interface audio la plus vendue au monde — et ce n'est pas un hasard. La 4e génération porte le gain à 69 dB par canal, rendant inutile l'ajout d'un préampli externe même pour des micros dynamiques exigeants. Ses deux entrées XLR indépendantes permettent d'enregistrer deux sources simultanément (voix + guitare, deux podcasteurs), et le mode Air émule la chaleur des légendaires préamplis ISA de Focusrite. Pour un home studio polyvalent, c'est l'investissement le plus structurant du budget.</p>
+
+      <!-- PRODUCT CARD: Focusrite Scarlett 2i2 -->
+      <div id="scarlett-2i2-home" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/focusrite-scarlett-2i2-4th-gen-main-1769876888992.png" alt="Focusrite Scarlett 2i2 4th Gen" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/focusrite-scarlett-2i2-4th-gen" class="product-link text-foreground hover:text-primary transition-colors">Focusrite Scarlett 2i2 4th Gen</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le cœur de tout home studio sérieux (~160€)</p>
+            <p>Deux entrées XLR/Jack combo, deux sorties moniteur stéréo, une sortie casque avec volume dédié, loopback natif pour le streaming. La 2i2 est la version évolutive de la Scarlett Solo : vous commencez en solo, vous enregistrez en duo demain, sans changer d'interface.</p>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>2 entrées XLR indépendantes avec 69 dB de gain chacune</li>
+              <li>Mode Air sur les deux entrées simultanément</li>
+              <li>Loopback pour mixer voix + son PC en streaming</li>
+              <li>Monitoring direct sans latence pour l'enregistrement</li>
+              <li>Bundle logiciel massif (Ableton Live Lite, Pro Tools First)</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Pas de sortie MIDI DIN (besoin d'un adaptateur USB-MIDI pour anciens claviers)</li>
+              <li>L'alimentation phantom 48V est globale pour les deux canaux</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm">
+          <strong class="text-foreground">Notre conseil d'usage :</strong> L'interface que nous recommandons à tous ceux qui veulent un home studio sérieux. Elle durera 10 ans et s'adapte à tous les usages — podcast solo, duo, guitare acoustique, voix off, streaming.
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/focusrite-scarlett-2i2-4th-gen" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Le micro : Rode PodMic USB (~100€)</h2>
+
+      <p>Dans un home studio à 500€, le micro est votre deuxième investissement le plus important. Le Rode PodMic USB est notre recommandation systématique pour les débutants qui ne veulent pas se retrouver coincés dans 18 mois avec un micro qui sonne amateur. Sa capsule dynamique cardioïde rejette les bruits de fond, son corps en métal encaisse des années d'utilisation intensive, et sa double connectique XLR/USB-C garantit une compatibilité à vie avec tout équipement futur.</p>
+
+      <!-- PRODUCT CARD: Rode PodMic USB -->
+      <div id="rode-podmic-home" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://www.thomann.de/thumb/opengraph/pics/prod/567098.jpg" alt="Rode PodMic USB" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/rode-podmic-usb" class="product-link text-foreground hover:text-primary transition-colors">Rode PodMic USB</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le micro broadcast taillé pour les voix (~100€)</p>
+            <p>En home studio, vous branchez le PodMic USB directement en XLR sur votre Scarlett 2i2. Vous bénéficiez ainsi des préamplis Focusrite et du mode Air pour flatter votre voix. La combinaison PodMic XLR + Scarlett 2i2 est l'une des plus utilisées par les podcasteurs professionnels francophones.</p>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Capsule dynamique cardioïde : rejette naturellement les bruits de fond</li>
+              <li>Pop filter interne très efficace</li>
+              <li>Corps métal lourd — indestructible en usage quotidien</li>
+              <li>DSP interne (en mode USB) : compresseur, noise gate, Aural Exciter</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Le DSP interne n'est actif qu'en mode USB (pas en XLR)</li>
+              <li>Nécessite un positionnement précis (15-25 cm de la bouche)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/rode-podmic-usb" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Le casque : Beyerdynamic DT 770 Pro 80 Ohm (~130€)</h2>
+
+      <p>Le casque est l'élément le plus sous-estimé d'un home studio. Sans un bon casque fermé, vous ne pouvez pas surveiller votre enregistrement en temps réel sans créer de feedback. Le DT 770 Pro est présent dans 100% des radios commerciales mondiales et des studios d'enregistrement professionnels depuis 30 ans : son isolation phonique est redoutable, sa réponse en fréquence est neutre et honnête, et il dure une décennie avec un simple remplacement de coussinets (disponibles pour 15€).</p>
+
+      <!-- PRODUCT CARD: Beyerdynamic DT 770 Pro -->
+      <div id="dt-770-home" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://www.thomann.de/thumb/opengraph/pics/prod/174334.jpg" alt="Beyerdynamic DT 770 Pro 80 Ohm" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/beyerdynamic-dt-770-pro-80-ohm" class="product-link text-foreground hover:text-primary transition-colors">Beyerdynamic DT 770 Pro (80 Ohm)</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">L'étalon-or du tracking en casque fermé (~130€)</p>
+            <p>La version 80 Ohm est la plus polyvalente : elle sonne correctement directement sur la sortie casque d'une interface audio sans amplificateur externe. Idéal pour les enregistrements de voix, podcasts, et pour s'écouter pendant un live Twitch sans risque de feedback.</p>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Isolation phonique excellente : coussins velours, design circumaural fermé</li>
+              <li>Réponse en fréquence honnête et neutre pour l'enregistrement</li>
+              <li>Construction robuste : coussinets et câble remplaçables séparément</li>
+              <li>Confort prolongé sur des sessions de 4-6h grâce au serre-tête souple</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Câble non détachable (version standard) — prévoir une protection</li>
+              <li>Légèrement coloré dans les basses — pas idéal pour le mixage final comparé à un casque ouvert</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm">
+          <strong class="text-foreground">Notre conseil d'usage :</strong> Choisissez la version 80 Ohm pour un usage direct sur interface audio. La version 250 Ohm sonne légèrement mieux mais nécessite un ampli casque dédié — inutile dans ce budget.
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/beyerdynamic-dt-770-pro-80-ohm" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Le traitement acoustique (~60€) : l'investissement le plus rentable</h2>
+
+      <p>Le traitement acoustique est l'amélioration la plus sous-estimée d'un home studio. Un micro à 500€ dans une pièce non traitée sonne moins bien qu'un micro à 100€ dans une pièce correctement traitée. Les réflexions des murs créent un effet de réverbération qui rend votre voix floue et peu professionnelle à l'écoute.</p>
+
+      <div class="bg-secondary border border-border rounded-2xl p-6 my-8">
+        <h3 class="text-lg font-bold mb-4 mt-0">Solutions de traitement acoustique à petit budget</h3>
+        <ul class="space-y-4 mb-0">
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[180px]">Panneaux mousse (~30€) :</span>
+            <span class="text-foreground/80">4-6 panneaux de 50x50 cm derrière et sur les côtés du micro. Réduction immédiate de l'effet de pièce.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[180px]">Bras articulé (~30€) :</span>
+            <span class="text-foreground/80">Positionne le micro à la bonne distance et élimine les vibrations transmises par le bureau.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[180px]">Hack gratuit :</span>
+            <span class="text-foreground/80">Enregistrez dans un placard rempli de vêtements — les meilleurs absorbants acoustiques naturels, parfaitement efficaces.</span>
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Comment évoluer au-delà des 500€</h2>
+
+      <p>Une fois ce setup en place, les améliorations futures les plus impactantes sont, dans l'ordre :</p>
+
+      <ol class="space-y-3 my-6 list-decimal list-inside">
+        <li><strong>Un micro à condensateur (200-400€)</strong> — Quand votre pièce est bien traitée, passez à un AKG C214 ou un Rode NT1. Le condensateur révèle les détails de voix que le dynamique ne capture pas.</li>
+        <li><strong>Des enceintes de monitoring (200-400€)</strong> — La prochaine étape naturelle pour mixer avec précision. Les Yamaha HS5 sont la référence à 350€.</li>
+        <li><strong>Un ampli casque (100-200€)</strong> — Pour débloquer le plein potentiel des casques haute impédance (250 Ohm, 600 Ohm) comme la version 250 Ohm du DT 770 Pro.</li>
+      </ol>
+
+      <!-- MOT DE LA FIN -->
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 flex flex-col sm:flex-row items-center gap-8">
+        <div class="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+          <span class="text-4xl">🏆</span>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-foreground mt-0 mb-3 !border-0">Le Mot de la Fin</h2>
+          <p class="mb-2">Un home studio à 500€ n'est pas un compromis — c'est le sweet spot entre accessibilité et professionnalisme. Le setup Scarlett 2i2 + PodMic USB + DT 770 Pro couvre 90% des usages créatifs : podcast, voix off, musique, streaming. Il durera 10 ans avec un entretien basique.</p>
+          <p class="mb-0">La leçon la plus importante : le traitement acoustique de votre pièce a plus d'impact sur la qualité finale que n'importe quel équipement. Traitez votre pièce avant d'upgrader votre matériel.</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">FAQ</h2>
+
+      <div class="faq-accordion space-y-4">
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span class="text-foreground font-medium">Peut-on monter un home studio à 500€ pour enregistrer de la guitare électrique ?</span>
+            <span class="transition group-open:rotate-180"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">Oui. La Scarlett 2i2 dispose d'une entrée instrument (Jack 6,35 mm) sur le canal 2 pour brancher directement une guitare électrique ou une basse. Vous pouvez enregistrer voix XLR sur le canal 1 et guitare directe sur le canal 2 simultanément. Pour la simulation d'ampli, le bundle Focusrite inclut Guitar Rig Elements — suffisant pour débuter.</p>
+        </details>
+
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span class="text-foreground font-medium">Faut-il un ordinateur puissant pour faire tourner un home studio ?</span>
+            <span class="transition group-open:rotate-180"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">Non. Pour de l'enregistrement simple (voix, podcast, guitare), n'importe quel ordinateur des 5 dernières années suffit. Les DAW comme Audacity et GarageBand sont très légers. Même Ableton Live Lite (inclus avec la Scarlett) tourne parfaitement sur un MacBook M1 ou un PC i5 de 2019 avec 8 Go de RAM.</p>
+        </details>
+
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span class="text-foreground font-medium">Ce setup est-il adapté pour enregistrer des instruments acoustiques (piano, violon) ?</span>
+            <span class="transition group-open:rotate-180"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">Le Rode PodMic USB est un micro dynamique — excellent pour la voix et les instruments à fort volume, mais moins précis sur les instruments acoustiques délicats. Pour un piano ou un violon, un micro à condensateur (comme le Rode NT1 à ~180€) donnera des résultats bien supérieurs. L'interface Scarlett 2i2 est quant à elle parfaitement adaptée à tous les instruments.</p>
+        </details>
+
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span class="text-foreground font-medium">Peut-on utiliser ce setup pour streamer sur Twitch en même temps qu'on enregistre ?</span>
+            <span class="transition group-open:rotate-180"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">Absolument. La Scarlett 2i2 4th Gen dispose d'un loopback natif qui envoie à OBS Studio votre voix (micro XLR) et le son de votre PC (musique, jeu) dans un seul flux audio. Le casque DT 770 Pro vous permet d'entendre le mix en temps réel sans aucun feedback. C'est l'une des configurations les plus utilisées par les streamers qui enregistrent également des podcasts.</p>
+        </details>
+      </div>
+
+      <p class="mt-10">Pour aller plus loin, consultez notre <a href="/guide/interface-audio-moins-de-200-euros" class="text-primary hover:underline">comparatif des interfaces audio sous 200€</a> ou notre <a href="/guide/meilleur-casque-studio-home-studio-2026" class="text-primary hover:underline">guide des meilleurs casques studio 2026</a>. Le <a href="/configurateur" class="text-primary hover:underline">configurateur Fluxlab</a> peut aussi vous aider à personnaliser ce setup selon votre budget exact.</p>
     `
   },
 ];

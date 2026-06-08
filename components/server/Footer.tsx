@@ -129,7 +129,23 @@ export function Footer() {
 
       <div className="relative z-10 max-w-layout mx-auto px-6 lg:px-16">
 
-        {/* ── Newsletter — masquée temporairement (à réactiver avec Brevo/Mailchimp) ── */}
+        {/* ── Newsletter ─────────────────────────────────────── */}
+        <div className="border-b border-white/10 py-14">
+          <div className="grid grid-cols-12 gap-10 items-center">
+            <div className="col-span-12 lg:col-span-4">
+              <p className="frame-label text-primary mb-3">La Gazette du Labo</p>
+              <p className="text-[22px] font-serif italic text-white/90 leading-snug mb-2">
+                Le setup parfait, une fois par mois.
+              </p>
+              <p className="text-[13px] text-white/45 font-light">
+                Guides exclusifs, bons plans matériel, nouvelles du labo.
+              </p>
+            </div>
+            <div className="col-span-12 lg:col-span-7 lg:col-start-6">
+              <NewsletterForm />
+            </div>
+          </div>
+        </div>
 
         {/* ── Main grid ──────────────────────────────────────── */}
         <div className="grid grid-cols-12 gap-10 pt-16 pb-14">
@@ -151,10 +167,6 @@ export function Footer() {
             {/* Trust signals */}
             <ul className="space-y-3 text-[12px] font-mono text-white/50 mb-10" role="list">
               <li className="flex items-center gap-3">
-                <span className="block w-1.5 h-1.5 rounded-full bg-green-400" style={{ boxShadow: '0 0 8px rgba(74,222,128,.5)' }} />
-                Prix mis à jour en continu
-              </li>
-              <li className="flex items-center gap-3 pl-4">
                 <span className="text-primary">·</span>
                 0 produit sponsorisé
               </li>

@@ -39,14 +39,19 @@ const nextConfig = {
 
   // ─── HEADERS DE CACHE ─────────────────────────────────────
   async headers() {
+    const isProd = process.env.NODE_ENV === 'production';
     return [
-      {
-        // Assets statiques compilés par Next — cache 1 an immuable
-        source: '/_next/static/:path*',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
-      },
+      // En prod, les chunks ont un hash de contenu → cache 1 an immuable.
+      // En dev, les chunks n'ont PAS de hash (ex: page.js) : un cache immuable
+      // empêcherait le navigateur de récupérer les modifications (HMR cassé).
+      ...(isProd
+        ? [{
+            source: '/_next/static/:path*',
+            headers: [
+              { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+            ],
+          }]
+        : []),
       {
         // Images publiques — cache 30 jours
         source: '/images/:path*',

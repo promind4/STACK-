@@ -17,10 +17,11 @@ export interface UserContext {
     vibe: Vibe;
     computer: 'mac' | 'pc';
     hasMic: boolean;
-    existingMicType?: 'xlr' | 'usb'; // NEW: Smart Inventory
+    existingMicType?: 'xlr' | 'usb';
     hasInterface: boolean;
     hasCamera: boolean;
     hasLights: boolean;
+    hasMonitors?: boolean;
 }
 
 export interface ProductResult {
@@ -33,10 +34,11 @@ export interface ProductResult {
 export interface RecommendationResult {
     mic: ProductResult | null;
     audioInterface: ProductResult | null;
+    monitors: ProductResult | null;
     camera: ProductResult | null;
     headphones: ProductResult | null;
     acousticTreatment: ProductResult | null;
-    accessories: ProductResult[]; // XLR cables, stands, etc.
+    accessories: ProductResult[];
     lights: ProductResult[];
     totalCost: number;
     matchScore: number;
@@ -58,7 +60,7 @@ const matches = (p: Product, keywords: string[]): boolean => {
     });
 };
 
-type ProductCategory = 'microphone' | 'interface' | 'camera' | 'headphones' | 'treatment' | 'lighting' | 'cable' | 'stand' | 'greenscreen' | 'other';
+type ProductCategory = 'microphone' | 'interface' | 'camera' | 'headphones' | 'monitors' | 'treatment' | 'lighting' | 'cable' | 'stand' | 'greenscreen' | 'other';
 type QualityTier = 'entry' | 'mid' | 'pro' | 'flagship';
 
 interface ProductTags {
@@ -104,7 +106,8 @@ const categorizeProduct = (p: Product): ProductTags => {
             tags.subcategory.push('dynamic');
             tags.features.push('broadcast', 'noise_rejection');
         }
-        if (matches(p, ['nt1', 'nt2', 'lct', 'at2020', 'at4040', 'u87', 'tlm', 'c214', 'c414', 'condenser', 'condensateur', 'baby bottle', 'origin', 'spirit', 'spark', 'ember', 'bluebird', 'wa-87', 'wa-47', 'wa-14', 'tf11', 'tf29', 'tf39', 'tf47', 'tf51'])) {
+        // 'akgc' catches all AKG C-series condensers (C 114, C 314, C 3000, etc.) not individually listed
+        if (matches(p, ['nt1', 'nt2', 'lct', 'at2020', 'at4040', 'u87', 'tlm', 'c114', 'c214', 'c314', 'c414', 'akgc', 'condenser', 'condensateur', 'baby bottle', 'origin', 'spirit', 'spark', 'ember', 'bluebird', 'wa-87', 'wa-47', 'wa-14', 'tf11', 'tf29', 'tf39', 'tf47', 'tf51'])) {
             tags.subcategory.push('condenser');
             tags.features.push('studio', 'detail');
         }
@@ -144,10 +147,29 @@ const categorizeProduct = (p: Product): ProductTags => {
         return tags;
     }
 
+    // STUDIO MONITORS (enceintes de monitoring)
+    if (matches(p, [
+        'yamaha hs5', 'yamaha hs7', 'yamaha hs8',
+        'krk rokit', 'rokit 5', 'rokit 7', 'rokit 8',
+        'adam t5v', 'adam t7v', 'adam t8v', 'adam a3x', 'adam a5x', 'adam a7x',
+        'focal alpha 50', 'focal alpha 65', 'focal alpha 80',
+        'genelec 8020', 'genelec 8030', 'genelec 8040',
+        'presonus eris', 'eris e3', 'eris e4', 'eris e5', 'eris e8',
+        'm-audio bx5', 'm-audio bx8',
+        'iloud mtm', 'iloud micro monitor',
+        'dynaudio lyd',
+        'mackie mr5', 'mackie mr8',
+        'studio monitor', 'moniteur de studio', 'enceinte monitoring', 'enceinte de monitoring',
+    ])) {
+        tags.category = 'monitors';
+        tags.usageRelevance = ['music_vocals', 'music_instruments', 'podcast'];
+        return tags;
+    }
+
     // CAMERAS
     if (matches(p, ['cam', 'webcam', 'facecam', 'brio', 'c920', 'c922', 'streamcam', 'sony zv', 'sony a6', 'sony a7', 'canon', 'lumix', 'mirrorless', 'insta360'])) {
         tags.category = 'camera';
-        if (matches(p, ['webcam', 'brio', 'c920', 'facecam', 'streamcam'])) tags.subcategory.push('webcam');
+        if (matches(p, ['webcam', 'brio', 'c920', 'facecam', 'streamcam', 'elgato'])) tags.subcategory.push('webcam');
         if (matches(p, ['mirrorless', 'sony a', 'canon eos', 'lumix'])) tags.subcategory.push('mirrorless');
         tags.usageRelevance = ['streaming', 'video_calls', 'podcast'];
         return tags;
@@ -267,11 +289,11 @@ const scoreProduct = (p: Product, tags: ProductTags, ctx: ScoringContext): numbe
     ).length;
     score += Math.min(10, featureMatches * 3);
 
-    // 6. EXPERIENCE MATCH (10%)
+    // 6. EXPERIENCE MATCH (reduced weight — budget drives quality, not experience level)
     const complexityMap: Record<string, number> = { simple: 1, moderate: 2, advanced: 3 };
     const expMap: Record<ExperienceLevel, number> = { beginner: 1, intermediate: 2, pro: 3 };
     const diff = Math.abs(complexityMap[tags.complexity] - expMap[ctx.experience]);
-    score += (3 - diff) * 3.33;
+    score += (3 - diff) * 1.8;
 
     // 7. VIBE BONUS (up to +5)
     if (ctx.vibe) {
@@ -282,7 +304,7 @@ const scoreProduct = (p: Product, tags: ProductTags, ctx: ScoringContext): numbe
             minimalist: ['rode', 'focusrite', 'scarlett', 'lewitt', 'audio-technica']
         };
         const vibeMatch = vibeKeywords[ctx.vibe]?.some(k => matches(p, [k]));
-        if (vibeMatch) score += 15; // Increased from 5 to 15 for real impact
+        if (vibeMatch) score += 5;
     }
 
     // 8. COMPUTER COMPATIBILITY BONUS (up to +10)
@@ -375,6 +397,7 @@ export const generateRecommendation = (products: Product[], ctx: UserContext): R
     const result: RecommendationResult = {
         mic: null,
         audioInterface: null,
+        monitors: null,
         camera: null,
         headphones: null,
         acousticTreatment: null,
@@ -394,39 +417,45 @@ export const generateRecommendation = (products: Product[], ctx: UserContext): R
     console.log(`[Scoring] Generating recommendation for ${products.length} products`, ctx);
 
     // === BUDGET ALLOCATION ===
-    const needsTreatment = ctx.room === 'untreated_bedroom' && ctx.usage !== 'video_calls'; // Smart Step 2: Skip treatment for video calls
-    const needsCamera = ctx.usage === 'streaming' || ctx.usage === 'video_calls' || ctx.usage === 'podcast';
-    const needsLighting = ctx.usage === 'streaming' || ctx.usage === 'video_calls';
+    const needsTreatment = ctx.room === 'untreated_bedroom' && ctx.usage !== 'video_calls';
+    // Podcast camera is handled by the AI prompt only (rule 7: only if user mentions video)
+    const needsCamera = ctx.usage === 'streaming' || ctx.usage === 'video_calls';
+    // No fixed lighting for nomads — portable setup, incompatible with fixed panels
+    const needsLighting = (ctx.usage === 'streaming' || ctx.usage === 'video_calls') && ctx.room !== 'travel';
     const isMusic = ctx.usage === 'music_vocals' || ctx.usage === 'music_instruments';
+    // Monitors for music profiles with sufficient budget (studio quality requires speakers)
+    const needsMonitors = isMusic && ctx.budget >= 700 && !ctx.hasMonitors;
 
     // Allocations based on usage
     let alloc = {
-        mic: isMusic ? 0.28 : (ctx.usage === 'video_calls' ? 0.15 : 0.20), // Less for video calls, more for podcast
-        interface: isMusic ? 0.25 : 0.12,
-        camera: ctx.usage === 'video_calls' ? 0.35 : (ctx.usage === 'podcast' ? 0.15 : (needsCamera ? 0.25 : 0)), // Boost Visio, moderate Podcast
-        headphones: isMusic ? 0.18 : 0.08,
+        mic: isMusic ? 0.24 : (ctx.usage === 'video_calls' ? 0.15 : 0.20),
+        interface: isMusic ? 0.20 : 0.12,
+        monitors: needsMonitors ? 0.20 : 0,
+        camera: ctx.usage === 'video_calls' ? 0.35 : (needsCamera ? 0.25 : 0),
+        headphones: isMusic ? 0.16 : 0.08,
         lighting: needsLighting ? 0.15 : 0,
         treatment: needsTreatment ? 0.10 : 0,
-        accessories: 0.08 // Slightly bumped for cables/stands
+        accessories: 0.08
     };
 
     // === SMART REALLOCATION ===
-    // Zero out allocations for equipment the user already owns
     if (ctx.hasMic)       alloc.mic       = 0;
     if (ctx.hasInterface) alloc.interface = 0;
     if (ctx.hasCamera)    alloc.camera    = 0;
     if (ctx.hasLights)    alloc.lighting  = 0;
+    if (ctx.hasMonitors)  alloc.monitors  = 0;
 
     // Normalise so remaining allocations sum to 1 → full budget used
     const allocTotal = Object.values(alloc).reduce((a, b) => a + b, 0);
     if (allocTotal > 0 && allocTotal < 0.98) {
         const factor = 1 / allocTotal;
-        alloc.mic        *= factor;
-        alloc.interface  *= factor;
-        alloc.camera     *= factor;
-        alloc.headphones *= factor;
-        alloc.lighting   *= factor;
-        alloc.treatment  *= factor;
+        alloc.mic         *= factor;
+        alloc.interface   *= factor;
+        alloc.monitors    *= factor;
+        alloc.camera      *= factor;
+        alloc.headphones  *= factor;
+        alloc.lighting    *= factor;
+        alloc.treatment   *= factor;
         alloc.accessories *= factor;
     }
 
@@ -435,17 +464,31 @@ export const generateRecommendation = (products: Product[], ctx: UserContext): R
 
     // === MICROPHONE ===
     if (!ctx.hasMic) {
-        const micExclusions = (needsTreatment || ctx.room === 'travel') ? ['condenser'] : [];
-        const micPriorities = needsTreatment ? ['dynamic', 'broadcast'] :
+        // Untreated room → dynamic (reject condenser); travel → only USB (compact)
+        // Music + budget ≥ 600€ → force XLR (reject USB — quality matters)
+        const micExclusions: string[] =
+            ctx.room === 'travel'                          ? ['condenser', 'xlr'] :
+            needsTreatment                                 ? ['condenser'] :
+            (isMusic && ctx.budget >= 600)                 ? ['usb'] :
+            [];
+
+        // Podcast always prefers broadcast/dynamic (even in treated studio)
+        // Treated studio condenser priority is only for music profiles
+        const micPriorities =
+            needsTreatment           ? ['dynamic', 'broadcast'] :
+            ctx.usage === 'podcast'  ? ['broadcast', 'dynamic'] :
             ctx.room === 'treated_studio' ? ['condenser', 'studio'] :
-                ctx.usage === 'podcast' ? ['broadcast'] : [];
+            [];
+
+        // For music/high-budget profiles, don't allow very cheap mics (< 150€ if budget ≥ 800€)
+        const micMinPrice = (isMusic && ctx.budget >= 800) ? 150 : 50;
 
         const micCtx: ScoringContext = {
             targetPrice: effectiveBudget * alloc.mic,
             usage: ctx.usage,
             room: ctx.room,
             experience: ctx.experience,
-            minPrice: 50,
+            minPrice: micMinPrice,
             maxPrice: ctx.budget * 0.55,
             requiredSubcategories: [],
             excludedSubcategories: micExclusions,
@@ -550,8 +593,34 @@ export const generateRecommendation = (products: Product[], ctx: UserContext): R
         }
     }
 
+    // === STUDIO MONITORS (music profiles with sufficient budget) ===
+    if (needsMonitors) {
+        const monitorCtx: ScoringContext = {
+            targetPrice: ctx.budget * alloc.monitors,
+            usage: ctx.usage,
+            room: ctx.room,
+            experience: ctx.experience,
+            minPrice: 80,
+            maxPrice: ctx.budget * 0.40,
+            requiredSubcategories: [],
+            excludedSubcategories: [],
+            priorityFeatures: [],
+            vibe: ctx.vibe,
+            computer: ctx.computer,
+        };
+
+        result.monitors = findBest(products, 'monitors', monitorCtx);
+
+        if (result.monitors) {
+            result.explanations[result.monitors.selected.id] =
+                "Enceintes de monitoring pour écoute critique et mixage.";
+        }
+    }
+
     // === CAMERA (Streaming/Video/Podcast) ===
     if (!ctx.hasCamera && needsCamera) {
+        // Travel/nomad: never recommend a webcam — vloggers need mirrorless, compact, or action cam
+        const isTravel = ctx.room === 'travel';
         const camCtx: ScoringContext = {
             targetPrice: ctx.budget * alloc.camera,
             usage: ctx.usage,
@@ -560,8 +629,8 @@ export const generateRecommendation = (products: Product[], ctx: UserContext): R
             minPrice: 50,
             maxPrice: ctx.budget * 0.35,
             requiredSubcategories: [],
-            excludedSubcategories: [],
-            priorityFeatures: ctx.budget > 1500 ? ['mirrorless'] : ['webcam'],
+            excludedSubcategories: isTravel ? ['webcam'] : [],
+            priorityFeatures: (isTravel || ctx.budget > 1500) ? ['mirrorless'] : ['webcam'],
             vibe: ctx.vibe,
             computer: ctx.computer
         };
@@ -670,6 +739,7 @@ export const generateRecommendation = (products: Product[], ctx: UserContext): R
     result.totalCost =
         (result.mic?.selected.price || 0) +
         (result.audioInterface?.selected.price || 0) +
+        (result.monitors?.selected.price || 0) +
         (result.camera?.selected.price || 0) +
         (result.headphones?.selected.price || 0) +
         (result.acousticTreatment?.selected.price || 0) +
@@ -683,6 +753,7 @@ export const generateRecommendation = (products: Product[], ctx: UserContext): R
     const recalcTotal = () =>
         (result.mic?.selected.price || 0) +
         (result.audioInterface?.selected.price || 0) +
+        (result.monitors?.selected.price || 0) +
         (result.camera?.selected.price || 0) +
         (result.headphones?.selected.price || 0) +
         (result.acousticTreatment?.selected.price || 0) +
@@ -692,10 +763,30 @@ export const generateRecommendation = (products: Product[], ctx: UserContext): R
     result.totalCost = recalcTotal();
     result.budgetUtilization = Math.round((result.totalCost / ctx.budget) * 100);
 
-    // Upgrade priority order: mic → interface → camera
+    // === BUDGET CAP — trim extras if over budget ===
+    // Remove items from least-essential to most-essential until within budget
+    if (result.totalCost > ctx.budget * 1.02) {
+        const trimSteps: Array<() => void> = [
+            () => { if (result.lights.length > 0)      result.lights = []; },
+            () => { if (result.accessories.length > 0) result.accessories = []; },
+            () => { if (result.acousticTreatment)      result.acousticTreatment = null; },
+            () => { if (result.camera)                 result.camera = null; },
+            () => { if (result.monitors)               result.monitors = null; },
+            () => { if (result.headphones)             result.headphones = null; },
+        ];
+        for (const trim of trimSteps) {
+            if (result.totalCost <= ctx.budget * 1.02) break;
+            trim();
+            result.totalCost = recalcTotal();
+        }
+        result.budgetUtilization = Math.round((result.totalCost / ctx.budget) * 100);
+    }
+
+    // Upgrade priority order: mic → interface → monitors → camera → headphones
     const upgradeCandidates: Array<{ key: keyof RecommendationResult; cat: ProductCategory }> = [
         { key: 'mic', cat: 'microphone' },
         { key: 'audioInterface', cat: 'interface' },
+        { key: 'monitors', cat: 'monitors' },
         { key: 'camera', cat: 'camera' },
         { key: 'headphones', cat: 'headphones' },
     ];
@@ -712,16 +803,24 @@ export const generateRecommendation = (products: Product[], ctx: UserContext): R
         const originalPrice = current.selected.price;
         const maxUpgrade = originalPrice + remaining * 0.85; // use up to 85% of remaining on upgrade
 
+        // Target = 40% of the way from originalPrice to maxUpgrade
+        // e.g. mic at 88€, maxUpgrade 3413€ → target ≈ 1418€ (proper quality jump)
+        const upgradeTarget = originalPrice + (maxUpgrade - originalPrice) * 0.4;
+
         const upgradeCtx: ScoringContext = {
-            targetPrice: originalPrice * 1.6,
+            targetPrice: upgradeTarget,
             usage: ctx.usage,
             room: ctx.room,
             experience: ctx.experience,
             minPrice: originalPrice + 25,
             maxPrice: maxUpgrade,
             requiredSubcategories: [],
-            excludedSubcategories: (cat === 'microphone' && (needsTreatment || ctx.room === 'travel')) ? ['condenser'] : [],
-            priorityFeatures: [],
+            excludedSubcategories: [
+                ...((cat === 'microphone' && (needsTreatment || ctx.room === 'travel')) ? ['condenser'] : []),
+                ...((cat === 'microphone' && isMusic && ctx.budget >= 600) ? ['usb'] : []),
+            ],
+            priorityFeatures: cat === 'microphone' && ctx.usage === 'podcast' ? ['broadcast', 'dynamic'] :
+                              cat === 'microphone' && ctx.room === 'treated_studio' ? ['condenser', 'studio'] : [],
             vibe: ctx.vibe,
             computer: ctx.computer,
         };
@@ -742,6 +841,7 @@ export const generateRecommendation = (products: Product[], ctx: UserContext): R
     const confidences = [
         result.mic?.confidence,
         result.audioInterface?.confidence,
+        result.monitors?.confidence,
         result.camera?.confidence,
         result.headphones?.confidence,
         result.acousticTreatment?.confidence,
