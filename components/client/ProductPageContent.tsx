@@ -96,13 +96,20 @@ function getMerchantLogo(offer: ProductOffer): string | null {
 }
 
 /* ─── OFFER ROW ──────────────────────────────────────────── */
-function OfferRow({ offer, isPrimary }: { offer: ProductOffer; isPrimary: boolean }) {
+function OfferRow({ offer, isPrimary, productName }: { offer: ProductOffer; isPrimary: boolean; productName: string }) {
   const logoUrl = getMerchantLogo(offer);
   return (
     <a
       href={offer.affiliate_link}
       target="_blank"
       rel="nofollow sponsored noopener"
+      onClick={() => {
+        (window as any).gtag?.('event', 'affiliate_click', {
+          merchant: offer.merchant_name,
+          product_name: productName,
+          price: offer.price,
+        });
+      }}
       className={cn(
         'group flex items-center justify-between p-3 rounded-xl border transition-colors',
         isPrimary
@@ -256,6 +263,13 @@ export default function ProductPageContent({ product, category, relatedProducts 
                   target="_blank"
                   rel="nofollow sponsored noopener"
                   className="ml-auto inline-flex items-center gap-1.5 text-[11px] font-mono text-primary uppercase tracking-wider hover:underline"
+                  onClick={() => {
+                    (window as any).gtag?.('event', 'affiliate_click', {
+                      merchant: bestOffer.merchant_name,
+                      product_name: product.name,
+                      price: bestOffer.price,
+                    });
+                  }}
                 >
                   Voir l&apos;offre
                   <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
@@ -326,7 +340,7 @@ export default function ProductPageContent({ product, category, relatedProducts 
                 {/* Toutes les offres en rows uniformes */}
                 <div className="space-y-2">
                   {sortedOffers.map((offer, idx) => (
-                    <OfferRow key={idx} offer={offer} isPrimary={idx === 0} />
+                    <OfferRow key={idx} offer={offer} isPrimary={idx === 0} productName={product.name} />
                   ))}
                 </div>
               </div>
