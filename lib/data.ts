@@ -6739,6 +6739,114 @@ export const ARTICLES: Article[] = [
       <p class="mt-10">Pour aller plus loin, consultez notre <a href="/guide/interface-audio-moins-de-200-euros" class="text-primary hover:underline">comparatif des interfaces audio sous 200€</a> ou notre <a href="/guide/alternatives-focusrite-scarlett-2026" class="text-primary hover:underline">guide des meilleures alternatives à la Scarlett</a>.</p>
     `
   },
+
+  // ═══ ARTICLE 28 — Comment fonctionne le configurateur Fluxlab ═══
+  {
+    id: "28",
+    slug: "comment-fonctionne-configurateur-fluxlab",
+    title: "Comment fonctionne le Configurateur Fluxlab ? (Guide Rapide)",
+    category: "Streaming",
+    readTime: "2 min",
+    date: "19 Jun 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/interface_audio_wide.webp",
+    intro: "Vous ne savez pas par où commencer pour monter votre setup ? Le configurateur Fluxlab pose trois questions et génère une liste de matériel adaptée à votre budget, votre usage et votre niveau. Voici comment ça marche.",
+    relatedProducts: ["focusrite-scarlett-solo-4th-gen", "rode-podmic-usb", "shure-mv7x", "logitech-c920"],
+    relatedCategorySlug: "streaming",
+    content: `
+      <!--ENCART Résumé-->
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8">
+        <h2 class="text-xl font-bold text-foreground mb-4 mt-0 !border-0 flex items-center gap-2">
+          <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+          En résumé
+        </h2>
+        <ul class="space-y-3 mb-0">
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[120px]">C'est quoi :</span>
+            <span class="font-medium text-foreground">Un outil qui recommande votre setup idéal en 60 secondes</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[120px]">Comment :</span>
+            <span class="font-medium text-foreground">3 questions sur votre usage, budget et niveau</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[120px]">Résultat :</span>
+            <span class="font-medium text-foreground">Une liste de matériel compatible, priorisé et expliqué</span>
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">C'est quoi exactement ?</h2>
+      <p>Le configurateur Fluxlab est un outil de recommandation matériel pensé pour les créateurs de contenu francophones. Il ne vend rien, ne pousse aucune marque : il analyse votre profil et construit une liste cohérente de composants qui fonctionnent bien ensemble.</p>
+      <p>La différence avec un simple article "meilleur micro 2026" : le configurateur tient compte de <strong>votre interface audio existante</strong>, de <strong>votre budget total</strong> et de <strong>l'usage principal</strong> (podcast, stream Twitch, voix off, enregistrement musique). Un micro recommandé à un streamer sans carte son ne sera pas le même que celui recommandé à un podcasteur qui possède déjà une Scarlett Solo.</p>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Les 3 étapes en détail</h2>
+
+      <div class="space-y-4 my-8">
+        <div class="bg-card border border-border rounded-2xl p-5 flex gap-4 items-start">
+          <span class="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm shrink-0">1</span>
+          <div>
+            <h3 class="font-bold text-foreground mt-0 mb-1">Votre usage principal</h3>
+            <p class="text-muted-foreground text-sm mb-0">Podcast seul ou en duo, streaming jeux vidéo, voix off vidéo YouTube, enregistrement musical. Chaque contexte a des exigences techniques différentes — le configurateur adapte ses priorités en conséquence.</p>
+          </div>
+        </div>
+        <div class="bg-card border border-border rounded-2xl p-5 flex gap-4 items-start">
+          <span class="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm shrink-0">2</span>
+          <div>
+            <h3 class="font-bold text-foreground mt-0 mb-1">Votre budget total</h3>
+            <p class="text-muted-foreground text-sm mb-0">De 100€ à 1000€+. Le configurateur répartit intelligemment le budget : il ne vous recommandera jamais un micro à 400€ avec une interface bas de gamme qui l'étranglerait.</p>
+          </div>
+        </div>
+        <div class="bg-card border border-border rounded-2xl p-5 flex gap-4 items-start">
+          <span class="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm shrink-0">3</span>
+          <div>
+            <h3 class="font-bold text-foreground mt-0 mb-1">Votre matériel existant</h3>
+            <p class="text-muted-foreground text-sm mb-0">Si vous avez déjà une interface, un bras ou un casque, indiquez-le. Le configurateur construira autour de ce que vous avez déjà pour maximiser votre budget restant.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Ce que vous recevez</h2>
+      <p>La sortie du configurateur est une <strong>liste de 3 à 6 produits</strong> avec pour chacun : la raison précise de la recommandation, le prix indicatif, et un lien vers la fiche produit Fluxlab. Les produits sont ordonnés par priorité d'achat — ce qu'il faut acheter en premier si vous devez répartir l'investissement dans le temps.</p>
+
+      <!--CTA Configurateur-->
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center">
+        <h2 class="text-2xl font-bold text-foreground mt-0 mb-3 !border-0">Prêt à construire votre setup ?</h2>
+        <p class="text-muted-foreground mb-6">Le configurateur prend 60 secondes. Aucune inscription, aucun email.</p>
+        <a href="/configurateur" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm text-lg">
+          Lancer le configurateur
+        </a>
+      </div>
+
+      <!--FAQ Section-->
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Questions fréquentes</h2>
+      <div class="faq-accordion space-y-4">
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span>Le configurateur est-il gratuit ?</span>
+            <span class="transition group-open:rotate-180"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">Oui, totalement gratuit. Aucun compte à créer, aucun email à fournir. Vous repartez avec votre liste en moins d'une minute.</p>
+        </details>
+
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span>Les recommandations sont-elles sponsorisées ?</span>
+            <span class="transition group-open:rotate-180"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">Non. Le moteur de scoring Fluxlab est basé sur les caractéristiques techniques des produits (gain, impédance, type de connectique, format) et votre profil, pas sur des accords commerciaux avec les marques. Les liens marchands (Thomann, Amazon) sont des liens affiliés standards — ils ne modifient pas le classement des produits.</p>
+        </details>
+
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span>Puis-je utiliser le configurateur plusieurs fois avec des paramètres différents ?</span>
+            <span class="transition group-open:rotate-180"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">Oui, autant de fois que vous voulez. Beaucoup d'utilisateurs le lancent deux ou trois fois pour comparer un budget serré vs un budget confortable, ou pour tester ce qui change si on déclare un usage podcast vs streaming.</p>
+        </details>
+      </div>
+    `
+  },
 ];
 
 export const PATHWAYS: Pathway[] = [

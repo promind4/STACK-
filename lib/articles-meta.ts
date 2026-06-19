@@ -394,6 +394,21 @@ export const ARTICLES: ArticleMeta[] = [
     relatedCategorySlug: "cartes-son",
     content: "",
   },
+  // ═══ ARTICLE 28 — Comment fonctionne le configurateur Fluxlab ═══
+  {
+    id: "28",
+    slug: "comment-fonctionne-configurateur-fluxlab",
+    title: "Comment fonctionne le Configurateur Fluxlab ? (Guide Rapide)",
+    category: "Streaming",
+    readTime: "2 min",
+    date: "19 Jun 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/interface_audio_wide.webp",
+    intro: "Vous ne savez pas par où commencer pour monter votre setup ? Le configurateur Fluxlab pose trois questions et génère une liste de matériel adaptée à votre budget, votre usage et votre niveau. Voici comment ça marche.",
+    relatedProducts: ["focusrite-scarlett-solo-4th-gen", "rode-podmic-usb", "shure-mv7x", "logitech-c920"],
+    relatedCategorySlug: "streaming",
+    content: "",
+  },
 ];
 
 export const getArticleMetaBySlug = (slug: string) =>
