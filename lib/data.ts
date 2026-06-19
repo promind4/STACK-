@@ -6302,6 +6302,225 @@ export const ARTICLES: Article[] = [
       <p class="mt-10">Pour aller plus loin, consultez notre <a href="/guide/interface-audio-moins-de-200-euros" class="text-primary hover:underline">comparatif des interfaces audio sous 200€</a> ou notre <a href="/guide/meilleur-casque-studio-home-studio-2026" class="text-primary hover:underline">guide des meilleurs casques studio 2026</a>. Le <a href="/configurateur" class="text-primary hover:underline">configurateur Fluxlab</a> peut aussi vous aider à personnaliser ce setup selon votre budget exact.</p>
     `
   },
+
+  // ═══ ARTICLE 26 — Focusrite Scarlett 2i2 vs Audient iD4 MKII ═══
+  {
+    id: "26",
+    slug: "focusrite-scarlett-2i2-vs-audient-id4-mkii",
+    title: "Focusrite Scarlett 2i2 vs Audient iD4 MKII — Laquelle choisir en 2026 ?",
+    category: "Audio",
+    readTime: "3 min",
+    date: "19 Jun 2026",
+    author: "Alexandre Dupont",
+    image: "/images/articles/interface_audio_wide.webp",
+    intro: "Même prix (~170€), deux philosophies opposées. La Scarlett 2i2 est le couteau suisse : 2 entrées mic, bundle logiciel imbattable, plug-and-play. L'Audient iD4 MKII est le spécialiste : un seul préampli Class-A issu des vraies consoles studio, avec 10 dB de dynamique de plus. On vous dit laquelle acheter selon votre usage.",
+    relatedProducts: ["focusrite-scarlett-2i2-4th-gen", "audient-id4-mkii", "focusrite-scarlett-solo-4th-gen"],
+    relatedCategorySlug: "cartes-son",
+    content: `
+      <!-- ENCART VERDICT -->
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8">
+        <h2 class="text-xl font-bold text-foreground mb-4 mt-0 !border-0 flex items-center gap-2">
+          <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+          Le Verdict en un coup d'œil
+        </h2>
+        <ul class="space-y-3 mb-0">
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[160px]">Le Couteau Suisse :</span>
+            <a href="#scarlett-2i2" class="product-link hover:underline font-medium text-foreground">Focusrite Scarlett 2i2 4th Gen — 2 entrées mic, bundle logiciel complet, plug-and-play</a>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="font-bold text-primary min-w-[160px]">Le Spécialiste :</span>
+            <a href="#audient-id4" class="product-link hover:underline font-medium text-foreground">Audient iD4 MKII — 1 préampli Class-A studio, 129 dB de dynamique, son plus transparent</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- TABLEAU COMPARATIF -->
+      <div class="overflow-x-auto mt-8 mb-12 rounded-xl border border-border shadow-sm">
+        <table class="w-full text-sm text-left border-collapse min-w-[560px]">
+          <thead class="bg-secondary text-foreground uppercase border-b border-border font-serif">
+            <tr>
+              <th class="px-5 py-4 font-bold border-r border-border w-1/4">Critère</th>
+              <th class="px-5 py-4 font-bold border-r border-border">Scarlett 2i2 4th Gen</th>
+              <th class="px-5 py-4 font-bold border-r border-border">Audient iD4 MKII</th>
+              <th class="px-5 py-4 font-bold text-center w-24">Avantage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-muted/50 border-b border-border transition-colors">
+              <td class="px-5 py-4 font-bold border-r border-border">Entrées mic XLR</td>
+              <td class="px-5 py-4 border-r border-border font-bold text-emerald-600">2 entrées combo</td>
+              <td class="px-5 py-4 border-r border-border">1 entrée XLR</td>
+              <td class="px-5 py-4 text-center font-bold text-primary">Scarlett</td>
+            </tr>
+            <tr class="hover:bg-muted/50 border-b border-border transition-colors">
+              <td class="px-5 py-4 font-bold border-r border-border">Dynamique (DNR)</td>
+              <td class="px-5 py-4 border-r border-border">119 dB</td>
+              <td class="px-5 py-4 border-r border-border font-bold text-emerald-600">129 dB</td>
+              <td class="px-5 py-4 text-center font-bold text-primary">Audient</td>
+            </tr>
+            <tr class="hover:bg-muted/50 border-b border-border transition-colors">
+              <td class="px-5 py-4 font-bold border-r border-border">Qualité préampli</td>
+              <td class="px-5 py-4 border-r border-border">Très bon (mode Air)</td>
+              <td class="px-5 py-4 border-r border-border font-bold text-emerald-600">Classe A studio</td>
+              <td class="px-5 py-4 text-center font-bold text-primary">Audient</td>
+            </tr>
+            <tr class="hover:bg-muted/50 border-b border-border transition-colors">
+              <td class="px-5 py-4 font-bold border-r border-border">Bundle logiciel</td>
+              <td class="px-5 py-4 border-r border-border font-bold text-emerald-600">Pro Tools + Ableton + Auto-Tune</td>
+              <td class="px-5 py-4 border-r border-border">Studio One Prime</td>
+              <td class="px-5 py-4 text-center font-bold text-primary">Scarlett</td>
+            </tr>
+            <tr class="hover:bg-muted/50 border-b border-border transition-colors">
+              <td class="px-5 py-4 font-bold border-r border-border">Prix indicatif</td>
+              <td class="px-5 py-4 border-r border-border">~169€</td>
+              <td class="px-5 py-4 border-r border-border">~179€</td>
+              <td class="px-5 py-4 text-center font-bold text-primary">Égalité</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">La question qui tranche tout : avez-vous besoin de 2 micros simultanés ?</h2>
+
+      <p>Ces deux interfaces se vendent au même prix (~170€). La <strong>Focusrite Scarlett 2i2</strong> a <strong>deux entrées XLR</strong> — vous pouvez brancher deux micros en même temps, parfait pour un podcast en duo ou voix + guitare. L'<strong>Audient iD4 MKII</strong> n'en a qu'une seule, mais son préampli Class-A est issu des vraies consoles de mixage Audient utilisées en studio professionnel. 10 dB de dynamique supplémentaire, ça se traduit par une voix plus propre, plus aérée, avec un bruit de fond quasi inexistant.</p>
+
+      <p>En résumé : si vous enregistrez seul(e) et voulez le meilleur son possible sur un seul micro, l'Audient gagne. Si vous enregistrez à deux ou que vous débutez et voulez de la flexibilité, prenez la Scarlett.</p>
+
+      <!-- PRODUCT CARD : Focusrite Scarlett 2i2 -->
+      <div id="scarlett-2i2" class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="bg-white p-6 sm:p-8 rounded-2xl w-full aspect-square shadow-sm border border-border flex items-center justify-center">
+            <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/focusrite-scarlett-2i2-4th-gen-main-1769876888992.png" alt="Focusrite Scarlett 2i2 4th Gen" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/focusrite-scarlett-2i2-4th-gen" class="product-link text-foreground hover:text-primary transition-colors">Focusrite Scarlett 2i2 4th Gen</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le Couteau Suisse du Home Studio</p>
+            <p>L'interface la plus vendue au monde, et pour de bonnes raisons. La 4ème génération ajoute le mode "Air" (émulation d'une console ISA Neve), une alimentation phantom 48V impeccable et un monitoring direct sans latence. Plug-and-play sous Mac, iOS et Linux — aucun driver requis.</p>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="h-full bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+            <ul class="space-y-2 list-disc pl-5 text-sm text-foreground/80">
+              <li>2 entrées combo XLR/Jack : idéal podcast duo ou voix + instrument</li>
+              <li>Bundle logiciel exceptionnel : Pro Tools Intro, Ableton Live Lite, Auto-Tune Lite</li>
+              <li>Mode "Air" : préamplis qui sonnent comme une console ISA Neve</li>
+              <li>Loopback intégré : parfait pour les streamers OBS</li>
+              <li>Communauté massive, tutoriels FR disponibles partout</li>
+            </ul>
+          </div>
+          <div class="h-full bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+            <ul class="space-y-2 list-disc pl-5 text-sm text-foreground/80">
+              <li>Préamplis légèrement en retrait face à l'Audient sur les voix solo</li>
+              <li>Dynamique de 119 dB vs 129 dB (différence audible sur voix très dynamiques)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm">
+          <strong class="text-foreground">Notre conseil d'usage :</strong> Le choix évident pour les podcasters duo, streamers et débutants. Le bundle logiciel seul justifie presque l'achat. Si vous avez besoin d'enregistrer deux micros simultanément, la question ne se pose même pas.
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/focusrite-scarlett-2i2-4th-gen" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+        </div>
+      </div>
+
+      <!-- PRODUCT CARD : Audient iD4 MKII -->
+      <div id="audient-id4" class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="bg-white p-6 sm:p-8 rounded-2xl w-full aspect-square shadow-sm border border-border flex items-center justify-center">
+            <img src="https://www.thomann.de/thumb/opengraph/pics/prod/505671.jpg" alt="Audient iD4 MKII" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/audient-id4-mkii" class="product-link text-foreground hover:text-primary transition-colors">Audient iD4 MKII</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le Spécialiste de la Voix Solo</p>
+            <p>Le secret des ingénieurs son qui savent vraiment. Son préampli unique est une copie directe des circuits Class-A qu'Audient installe dans ses consoles professionnelles à 20 000€. Résultat : 129 dB de dynamique (record de sa catégorie), un fond de bruit quasi inexistant et une transparence que la Scarlett ne peut pas égaler sur une seule source.</p>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="h-full bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Points Forts</h4>
+            <ul class="space-y-2 list-disc pl-5 text-sm text-foreground/80">
+              <li>Préampli Class-A issu des vraies consoles de studio Audient</li>
+              <li>129 dB de dynamique : le meilleur de sa catégorie à ce prix</li>
+              <li>JFET Drive : compresseur optique hardware natif (effet vintage sans plugin)</li>
+              <li>Footprint ultra-compact : tient dans une trousse, parfait pour le nomade</li>
+              <li>Monitoring casque avec contrôle de volume dédié</li>
+            </ul>
+          </div>
+          <div class="h-full bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> Limites réelles</h4>
+            <ul class="space-y-2 list-disc pl-5 text-sm text-foreground/80">
+              <li>1 seule entrée mic XLR : impossible d'enregistrer deux micros simultanément</li>
+              <li>Bundle logiciel moins complet que Focusrite</li>
+              <li>Moins de tutoriels FR disponibles que la Scarlett</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm">
+          <strong class="text-foreground">Notre conseil d'usage :</strong> Le choix des musiciens et créateurs solo qui enregistrent une source à la fois et veulent le meilleur son possible. En home studio solo bien traité, il surpasse objectivement la Scarlett sur la qualité de préampli.
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/audient-id4-mkii" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+        </div>
+      </div>
+
+      <!-- MOT DE LA FIN -->
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center sm:text-left flex flex-col sm:flex-row items-center gap-8">
+        <div class="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+          <span class="text-4xl">🏆</span>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-foreground mt-0 mb-3 !border-0">Le Mot de la Fin</h2>
+          <p class="mb-0">Pour un podcast solo ou l'enregistrement d'un seul instrument, l'<strong>Audient iD4 MKII</strong> est objectivement supérieur grâce à ses préamplis de niveau studio et ses 129 dB de dynamique. Mais si vous enregistrez à deux, si vous débutez, ou si vous avez besoin du bundle logiciel pour produire dès demain, la <strong>Focusrite Scarlett 2i2</strong> reste l'incontournable. Au même prix, le choix dépend entièrement de votre usage — pas d'une marque meilleure que l'autre.</p>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">FAQ : Bien choisir entre Scarlett 2i2 et Audient iD4</h2>
+
+      <div class="faq-accordion space-y-4">
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span>La Scarlett 2i2 peut-elle brancher deux micros XLR en même temps ?</span>
+            <span class="transition group-open:rotate-180"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">Oui. Les deux entrées de la Scarlett 2i2 sont des combo XLR/Jack — vous pouvez brancher deux micros XLR simultanément avec alimentation phantom 48V sur les deux canaux. C'est exactement ce qui la rend incontournable pour les podcasts en duo. L'Audient iD4 MKII ne le permet pas : il n'a qu'une seule entrée XLR (le second canal est réservé aux instruments Jack).</p>
+        </details>
+
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span>L'Audient iD4 MKII fonctionne-t-il nativement sous macOS Apple Silicon (M1/M2/M3) ?</span>
+            <span class="transition group-open:rotate-180"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">Oui, parfaitement. L'Audient iD4 MKII est class-compliant : aucun driver à installer sur Mac (dont Apple Silicon M1/M2/M3), Windows 10/11 et iOS. Il s'allume et fonctionne instantanément. Sur Windows, le driver Audient améliore les performances en conditions studio — téléchargement gratuit sur le site officiel.</p>
+        </details>
+
+        <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
+            <span>Peut-on réellement entendre la différence entre les préamplis Scarlett et Audient ?</span>
+            <span class="transition group-open:rotate-180"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
+          </summary>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">Oui, clairement — surtout sur les voix calmes ou les instruments acoustiques. Les 10 dB de dynamique supplémentaires de l'Audient se traduisent par un fond de bruit quasi inexistant et une transparence accrue sur les détails fins. Sur une voix forte enregistrée dans un home studio correctement traité, la différence devient immédiatement évidente à l'écoute.</p>
+        </details>
+      </div>
+
+      <p class="mt-10">Pour aller plus loin, consultez notre <a href="/guide/interface-audio-moins-de-200-euros" class="text-primary hover:underline">comparatif des interfaces audio sous 200€</a> ou notre <a href="/guide/alternatives-focusrite-scarlett-2026" class="text-primary hover:underline">guide des meilleures alternatives à la Scarlett</a>.</p>
+    `
+  },
 ];
 
 export const PATHWAYS: Pathway[] = [
