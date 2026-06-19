@@ -187,7 +187,6 @@ export default async function GuideArticlePage({ params }: Props) {
                     const merchantName = offer.merchant_name || 'Marchand';
                     let logoUrl = offer.merchant_logo_url;
 
-                    // Fallback to static mapping if the DB doesn't have the logo URL yet
                     if (!logoUrl) {
                         const m = merchantName.toLowerCase();
                         if (m === 'amazon') logoUrl = 'https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png';
@@ -197,9 +196,9 @@ export default async function GuideArticlePage({ params }: Props) {
 
                     offersHtml += `
                         <a href="${offer.affiliate_link}" target="_blank" rel="nofollow sponsored" class="group flex flex-col items-center gap-2 hover:-translate-y-1 transition-transform">
-                            <div class="h-8 sm:h-9 flex items-center justify-center bg-transparent mix-blend-multiply">
+                            <div style="height:26px;display:flex;align-items:center;justify-content:center;">
                                 ${logoUrl
-                            ? `<img src="${logoUrl}" alt="Logo ${merchantName}" class="h-full w-auto object-contain" loading="lazy" />`
+                            ? `<img src="${logoUrl}" alt="${merchantName}" style="height:26px;width:auto;max-height:26px;display:block" class="object-contain" loading="lazy" />`
                             : `<span class="font-bold text-sm text-foreground">${merchantName}</span>`
                         }
                             </div>
@@ -229,6 +228,12 @@ export default async function GuideArticlePage({ params }: Props) {
         }
     );
 
+
+    // Remove placeholder merchant buttons (href="#") left by static HTML when replacement didn't run
+    dynamicContent = dynamicContent.replace(
+        /<a\s+href="#"\s+target="_blank"\s+rel="nofollow sponsored"[^>]*>[\s\S]*?<\/a>/gi,
+        ''
+    );
 
     // Rendre les tableaux scrollables horizontalement sur mobile, sans scrollbar visible
     dynamicContent = dynamicContent

@@ -178,6 +178,8 @@ body {
 
 /* Images et iframes dans les articles : jamais de débordement */
 .prose-fluxlab img:not(.not-prose *) { max-width:100%; height:auto; }
+/* Logos marchands dans les cartes produit : taille max garantie */
+.prose-fluxlab a[rel~="sponsored"] img { max-height:26px; width:auto; display:block; }
 .prose-fluxlab pre:not(.not-prose *) { overflow-x:auto; -webkit-overflow-scrolling:touch; }
 .prose-fluxlab iframe:not(.not-prose *) { max-width:100%; }
 
