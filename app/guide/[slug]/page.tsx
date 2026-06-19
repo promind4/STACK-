@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { getArticleBySlug } from '@/lib/data';
+import { getArticleBySlug, ARTICLES } from '@/lib/data';
 import { createClient } from '@/lib/supabase';
 import { transformProduct } from '@/lib/transformers';
 import { JsonLd } from '@/components/server/JsonLd';
@@ -480,7 +480,6 @@ export default async function GuideArticlePage({ params }: Props) {
 }
 
 /* ─── RELATED GUIDES ─────────────────────────────────────── */
-import { ARTICLES } from '@/lib/data';
 function RelatedGuides({ currentSlug, category }: { currentSlug: string; category: string }) {
     const related = ARTICLES
         .filter(a => a.slug !== currentSlug && a.category === category)

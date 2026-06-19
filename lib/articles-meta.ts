@@ -379,18 +379,18 @@ export const ARTICLES: ArticleMeta[] = [
     relatedCategorySlug: "micros-dynamiques",
     content: "",
   },
-  // ═══ ARTICLE 26 — VS Scarlett 2i2 vs Audient iD4 MKII ═══
+  // ═══ ARTICLE 26 — VS Scarlett 2i2 vs Universal Audio Volt 2 ═══
   {
     id: "26",
     slug: "focusrite-scarlett-2i2-vs-audient-id4-mkii",
-    title: "Focusrite Scarlett 2i2 vs Audient iD4 MKII — Laquelle choisir en 2026 ?",
+    title: "Focusrite Scarlett 2i2 vs Universal Audio Volt 2 — Laquelle choisir en 2026 ?",
     category: "Audio",
     readTime: "3 min",
     date: "19 Jun 2026",
     author: "Alexandre Dupont",
     image: "/images/articles/interface_audio_wide.webp",
-    intro: "Même prix (~170€), deux philosophies opposées. La Scarlett 2i2 est le couteau suisse : 2 entrées mic, bundle logiciel imbattable, plug-and-play. L'Audient iD4 MKII est le spécialiste : un seul préampli Class-A issu des vraies consoles studio, avec 10 dB de dynamique de plus. On vous dit laquelle acheter selon votre usage.",
-    relatedProducts: ["focusrite-scarlett-2i2-4th-gen", "audient-id4-mkii", "focusrite-scarlett-solo-4th-gen"],
+    intro: "La Scarlett 2i2 (~169€) est la référence plug-and-play : son neutre et transparent, bundle logiciel imbattable, plug-and-play. La UA Volt 2 (~229€) apporte l'ADN analogique : préampli 76 Vintage Mode inspiré du légendaire UA 1176, compresseur hardware intégré. Deux philosophies, 60€ d'écart — on vous dit laquelle correspond à votre usage.",
+    relatedProducts: ["focusrite-scarlett-2i2-4th-gen", "universal-audio-volt-2", "focusrite-scarlett-solo-4th-gen"],
     relatedCategorySlug: "cartes-son",
     content: "",
   },
