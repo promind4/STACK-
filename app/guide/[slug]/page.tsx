@@ -230,9 +230,10 @@ export default async function GuideArticlePage({ params }: Props) {
     );
 
 
-    // Rendre les tableaux scrollables horizontalement sur mobile (évite le débordement)
+    // Rendre les tableaux scrollables horizontalement sur mobile, sans scrollbar visible
     dynamicContent = dynamicContent
-        .replace(/<table/g, '<div class="overflow-x-auto -mx-1"><table')
+        .replace(/class="overflow-x-auto/g, 'class="overflow-x-auto no-scrollbar')
+        .replace(/<table/g, '<div class="overflow-x-auto no-scrollbar"><table')
         .replace(/<\/table>/g, '</table></div>');
 
     // Remove circular emoji icon divs from editorial encarts (keep only text)
@@ -355,9 +356,7 @@ export default async function GuideArticlePage({ params }: Props) {
                         <div className="max-w-[900px]">
                             <div className="flex items-center gap-4 mb-8 flex-wrap">
                                 <span className="frame-label text-primary bg-primary/15 backdrop-blur px-3 py-1.5 rounded-full">Guide complet</span>
-                                <span className="frame-label text-white/55">{article.readTime} de lecture</span>
-                                <span className="text-white/25">·</span>
-                                <span className="frame-label text-white/45">{article.date}</span>
+                                <span className="frame-label text-white/45">{article.updatedAt || article.date}</span>
                             </div>
 
                             <h1 className="font-serif text-white text-[34px] sm:text-[48px] md:text-[64px] lg:text-[80px] leading-[1.05] sm:leading-[1] tracking-tight mb-8">

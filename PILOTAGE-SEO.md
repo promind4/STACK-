@@ -88,6 +88,17 @@ Affiliation Amazon active, campagnes, partenariats créateurs FR.
 | P1-7 | Article author byline → `article.author` + `updatedAt` | `app/guide/[slug]/page.tsx` | ✅ Fait (session 2) |
 | P1-8 | Retirer claims non étayés ("tests acoustiques réels", "ingénieurs son") | `app/a-propos/page.tsx`, `app/page.tsx` | ✅ Fait (session 2) |
 
+### 🟠 SESSION 2 — Correctifs UX/SEO (19/06/2026)
+
+| # | Tâche | Fichier | Statut |
+|---|---|---|---|
+| U1 | Retirer `sameAs` Instagram (pas de compte social) | `app/layout.tsx` | ✅ Fait |
+| U2 | Retirer l'affichage `readTime` des cards guides et page article | `GuidesClient.tsx`, `guide/[slug]/page.tsx` | ✅ Fait |
+| U3 | Cacher la scrollbar horizontale sur les tableaux articles | `globals.css`, `guide/[slug]/page.tsx` | ✅ Fait |
+| U4 | Vérifier et remplacer les images Unsplash par des images AI Supabase | `lib/articles-meta.ts`, `lib/data.ts` | ⬜ À faire — URLs Supabase à récupérer |
+
+> **U4 — Images Unsplash** : 6 articles utilisent des URLs Unsplash pour leur image de couverture au lieu des images IA générées. Ces URLs doivent être remplacées par les vraies URLs Supabase. Articles concernés : `xlr-vs-usb`, `eclairage-cinematique`, `setup-streaming-debutant-2026`, `interface-audio-moins-de-200-euros`, `supprimer-bruit-de-fond-micro`, `setup-youtube-debutant-2026`, `sony-zve10-surchauffe-stream-solutions`. Fournir les URLs Supabase pour les corriger.
+
 ### 🟢 PROCHAIN TRIMESTRE
 
 | # | Tâche | Priorité |

@@ -3,7 +3,7 @@
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { Clock, ArrowRight, Search, X } from 'lucide-react';
+import { ArrowRight, Search, X } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import Image from 'next/image';
 
@@ -109,9 +109,6 @@ export default function GuidesClient({ articles, categories }: GuidesClientProps
                                     </div>
 
                                     <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3 font-medium">
-                                        <Clock className="w-3 h-3" />
-                                        {article.readTime} de lecture
-                                        <span className="w-1 h-1 rounded-full bg-border md:mx-1" />
                                         {article.date}
                                     </div>
 
