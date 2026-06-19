@@ -17,11 +17,21 @@ const CATEGORY_SLUGS = [
     "grand-angle", "zoom-polyvalent",
     // Streaming sub-categories
     "fonds-verts", "teleprompteurs", "cable-management",
-    // "logiciels-apps", "design-overlays", 
+    // "logiciels-apps", "design-overlays",
     "stream-deck",
     // Problématiques (problem-based routes)
     "espace-bruyant", "plug-and-play", "petit-budget", "createur-nomade",
 ];
+
+// Categories were last structurally updated with the June 2026 redesign
+const CATEGORIES_LAST_MODIFIED = new Date("2026-06-08");
+
+// Parse article date strings like "22 Feb 2026", "07 Jun 2026"
+function parseArticleDate(dateStr: string): Date {
+    const d = new Date(dateStr);
+    // Fall back to a safe past date if parsing fails
+    return isNaN(d.getTime()) ? new Date("2026-01-01") : d;
+}
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const supabase = createClient();
@@ -34,11 +44,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     // --- Static pages ---
     const staticPages: MetadataRoute.Sitemap = [
-        { url: BASE, changeFrequency: "weekly", priority: 1.0 },
-        { url: `${BASE}/configurateur`, changeFrequency: "monthly", priority: 0.7 },
-        { url: `${BASE}/guides`, changeFrequency: "weekly", priority: 0.8 },
-        { url: `${BASE}/a-propos`, changeFrequency: "monthly", priority: 0.5 },
-        { url: `${BASE}/methodologie`, changeFrequency: "monthly", priority: 0.5 },
+        { url: BASE, changeFrequency: "weekly", priority: 1.0, lastModified: new Date("2026-06-17") },
+        // Configurateur is the core differentiator — same priority as homepage
+        { url: `${BASE}/configurateur`, changeFrequency: "monthly", priority: 0.9, lastModified: new Date("2026-06-08") },
+        { url: `${BASE}/guides`, changeFrequency: "weekly", priority: 0.8, lastModified: new Date("2026-06-17") },
+        { url: `${BASE}/a-propos`, changeFrequency: "monthly", priority: 0.5, lastModified: new Date("2026-06-08") },
+        { url: `${BASE}/methodologie`, changeFrequency: "monthly", priority: 0.5, lastModified: new Date("2026-06-08") },
         { url: `${BASE}/mentions-legales`, changeFrequency: "yearly", priority: 0.3 },
         { url: `${BASE}/confidentialite`, changeFrequency: "yearly", priority: 0.3 },
         { url: `${BASE}/cgu`, changeFrequency: "yearly", priority: 0.3 },
@@ -49,16 +60,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         const isVertical = ["audio", "video", "streaming"].includes(slug);
         return {
             url: `${BASE}/categorie/${slug}`,
-            lastModified: new Date(),
+            lastModified: CATEGORIES_LAST_MODIFIED,
             changeFrequency: "weekly" as const,
             priority: isVertical ? 0.8 : 0.7,
         };
     });
 
-    // --- Guide articles ---
+    // --- Guide articles — use real publication/update date ---
     const guidePages: MetadataRoute.Sitemap = ARTICLES.map((article) => ({
         url: `${BASE}/guide/${article.slug}`,
-        lastModified: new Date(),
+        lastModified: parseArticleDate(article.updatedAt || article.date),
         changeFrequency: "monthly" as const,
         priority: 0.7,
     }));
@@ -68,13 +79,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         url: `${BASE}/guide-path/${pathway.slug}`,
         changeFrequency: "monthly" as const,
         priority: 0.6,
+        lastModified: new Date("2026-06-08"),
     }));
 
     // --- Product pages (from Supabase) ---
     const productPages: MetadataRoute.Sitemap = (products || []).map((p) => ({
         url: `${BASE}/produit/${p.slug}`,
-        lastModified: p.updated_at ? new Date(p.updated_at) : new Date(),
-        changeFrequency: "daily" as const,
+        lastModified: p.updated_at ? new Date(p.updated_at) : new Date("2026-06-01"),
+        changeFrequency: "weekly" as const,
         priority: 0.9,
     }));
 

@@ -10,6 +10,7 @@ export interface ArticleMeta {
   category: string;
   readTime: string;
   date: string;
+  updatedAt?: string;
   author: string;
   image: string;
   intro: string;
@@ -39,12 +40,12 @@ export const ARTICLES: ArticleMeta[] = [
     title: "XLR vs USB : L'Analyse Technique Complète (2026)",
     category: "Audio",
     readTime: "3 min",
-    date: "12 Oct 2026",
+    date: "12 Oct 2025",
     author: "Équipe Fluxlab",
     image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=1200",
     intro: "Au-delà du débat simpliste 'Débutant vs Pro', il s'agit de comprendre la chaîne du signal. Tension, Préamplification, Conversion A/N : plongeons dans la physique pour faire le bon choix en 2026.",
     relatedProducts: ["shure-mv7x", "rode-podmic-usb", "shure-sm7b", "electro-voice-re20"],
-    relatedCategorySlug: "microphones",
+    relatedCategorySlug: "micros-usb",
     content: "",
   },
   {
@@ -58,7 +59,7 @@ export const ARTICLES: ArticleMeta[] = [
     image: "https://images.unsplash.com/photo-1527011046414-4781f1f94f8c?auto=format&fit=crop&q=80&w=1200",
     intro: "La caméra n'est qu'un capteur. C'est la lumière qui crée l'image. Maîtrisez le CRI, la Température Kelvin et la Diffusion pour un rendu Netflix.",
     relatedProducts: ["elgato-ring-light", "elgato-key-light-air", "aputure-300d-ii"],
-    relatedCategorySlug: "lighting",
+    relatedCategorySlug: "keylight",
     content: "",
   },
 
@@ -73,7 +74,7 @@ export const ARTICLES: ArticleMeta[] = [
     image: "/images/articles/interface_audio_wide.webp",
     intro: "Au-delà des fiches techniques marketing, analysons les préamplis, les convertisseurs et les drivers en 2026. Focusrite, Audient, SSL, Universal Audio : qui domine vraiment ?",
     relatedProducts: ["focusrite-scarlett-2i2-4th-gen", "focusrite-scarlett-solo-4th-gen", "audient-id14-mkii", "universal-audio-volt-276", "ssl-2-plus"],
-    relatedCategorySlug: "interfaces-audio",
+    relatedCategorySlug: "cartes-son",
     content: "",
 
   },
@@ -231,7 +232,7 @@ export const ARTICLES: ArticleMeta[] = [
     image: "/images/articles/casque_studio.webp",
     intro: "Indispensable pour entendre les moindres détails de votre son, le casque studio se décline en deux familles : ouvert ou fermé. On vous aide à choisir le modèle idéal pour votre home studio en 2026.",
     relatedProducts: ["beyerdynamic-dt-770-pro-80-ohm", "audio-technica-ath-m50-x", "sony-mdr-7506", "sennheiser-hd-600", "beyerdynamic-dt-990-pro"],
-    relatedCategorySlug: "casques",
+    relatedCategorySlug: "casques-studio",
     content: "",
   },
 
@@ -261,7 +262,7 @@ export const ARTICLES: ArticleMeta[] = [
     image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=1200",
     intro: "La Focusrite Scarlett est l'interface la plus vendue au monde. Pourtant, pour le même budget, certains modèles offrent des préamplis plus musicaux, une latence plus faible ou des convertisseurs plus précis. Voici notre sélection des 3 meilleures alternatives en 2026.",
     relatedProducts: ["audient-id14-mkii", "motu-m2", "universal-audio-volt-2"],
-    relatedCategorySlug: "interfaces-audio",
+    relatedCategorySlug: "cartes-son",
     content: "",
   },
   {
@@ -345,7 +346,7 @@ export const ARTICLES: ArticleMeta[] = [
     image: "/images/articles/setup_podcast_300.png",
     intro: "300€, c'est le seuil où un setup podcast passe du \"on entend que c'est un débutant\" au \"c'est propre et professionnel\". Voici le setup optimisé que l'on recommande en 2026, composant par composant.",
     relatedProducts: ["rode-podmic-usb", "focusrite-scarlett-solo-4th-gen", "shure-mv7x"],
-    relatedCategorySlug: "microphones",
+    relatedCategorySlug: "micros-dynamiques",
     content: "",
   },
   {

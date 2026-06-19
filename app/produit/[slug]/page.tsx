@@ -7,7 +7,7 @@ import { stripHtml } from "@/lib/utils";
 import { JsonLd } from "@/components/server/JsonLd";
 import ProductPageContent from "@/components/client/ProductPageContent";
 
-export const revalidate = 0; // Bypass cache for testing new DB contents
+export const revalidate = 3600; // Revalidate every hour — price/offer data changes but not constantly
 
 // ---- Data Fetching ----
 async function getProduct(slug: string): Promise<Product | null> {
