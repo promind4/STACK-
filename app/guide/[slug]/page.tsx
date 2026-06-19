@@ -6,6 +6,7 @@ import { transformProduct } from '@/lib/transformers';
 import { JsonLd } from '@/components/server/JsonLd';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
+import TocScrollspy from '@/components/client/TocScrollspy';
 
 interface Props {
     params: Promise<{ slug: string }>;
@@ -393,15 +394,7 @@ export default async function GuideArticlePage({ params }: Props) {
                         <aside className="hidden lg:block col-span-3">
                             <div className="lg:sticky lg:top-24">
                                 <p className="frame-label text-primary mb-6">Sommaire</p>
-                                <nav className="space-y-1" aria-label="Table des matières">
-                                    {toc.length > 0 ? toc.map((item, i) => (
-                                        <a key={item.id} href={`#${item.id}`} className={`toc-link ${i === 0 ? 'active' : ''}`}>
-                                            {item.label}
-                                        </a>
-                                    )) : (
-                                        <a href="#content" className="toc-link active">Introduction</a>
-                                    )}
-                                </nav>
+                                <TocScrollspy items={toc} />
 
                                 {/* Produits cités */}
                                 {relatedItems.length > 0 && (
