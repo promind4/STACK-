@@ -364,6 +364,21 @@ export const ARTICLES: ArticleMeta[] = [
     relatedCategorySlug: "cartes-son",
     content: "",
   },
+  // ═══ ARTICLE 27 — VS Shure MV7 vs MV7X ═══
+  {
+    id: "27",
+    slug: "shure-mv7-vs-mv7x",
+    title: "Shure MV7 vs MV7X — Lequel choisir en 2026 ?",
+    category: "Audio",
+    readTime: "3 min",
+    date: "19 Jun 2026",
+    author: "Alexandre Dupont",
+    image: "/images/articles/meilleur_micro_podcast.webp",
+    intro: "Le MV7X coûte 80€ de moins que le MV7 et possède la même capsule. Alors pourquoi le MV7 existe-t-il ? Une seule raison : la sortie USB. Si vous avez déjà une interface audio, le MV7X est un achat évident. Sinon, le MV7 vous évite d'en acheter une. On clarifie ça en 3 minutes.",
+    relatedProducts: ["shure-mv7", "shure-mv7x", "focusrite-scarlett-2i2-4th-gen"],
+    relatedCategorySlug: "micros-dynamiques",
+    content: "",
+  },
   // ═══ ARTICLE 26 — VS Scarlett 2i2 vs Audient iD4 MKII ═══
   {
     id: "26",
