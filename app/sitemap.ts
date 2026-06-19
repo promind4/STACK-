@@ -49,6 +49,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         { url: `${BASE}/configurateur`, changeFrequency: "monthly", priority: 0.9, lastModified: new Date("2026-06-08") },
         { url: `${BASE}/guides`, changeFrequency: "weekly", priority: 0.8, lastModified: new Date("2026-06-17") },
         { url: `${BASE}/a-propos`, changeFrequency: "monthly", priority: 0.5, lastModified: new Date("2026-06-08") },
+        { url: `${BASE}/auteur/alexandre-dupont`, changeFrequency: "monthly", priority: 0.6, lastModified: new Date("2026-06-19") },
         { url: `${BASE}/methodologie`, changeFrequency: "monthly", priority: 0.5, lastModified: new Date("2026-06-08") },
         { url: `${BASE}/mentions-legales`, changeFrequency: "yearly", priority: 0.3 },
         { url: `${BASE}/confidentialite`, changeFrequency: "yearly", priority: 0.3 },

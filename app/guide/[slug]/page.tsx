@@ -86,7 +86,9 @@ export default async function GuideArticlePage({ params }: Props) {
         author: {
             "@type": "Person",
             name: article.author,
-            url: "https://fluxlab.fr/a-propos",
+            url: article.author === "Alexandre Dupont"
+                ? "https://fluxlab.fr/auteur/alexandre-dupont"
+                : "https://fluxlab.fr/a-propos",
         },
         publisher: {
             "@type": "Organization",
