@@ -82,7 +82,7 @@ export default async function HomePage() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Sélections expertes Fluxlab",
-    description: "Les indispensables testés par nos ingénieurs",
+    description: "Les indispensables sélectionnés par la rédaction Fluxlab",
     numberOfItems: featuredProducts.length,
     itemListElement: featuredProducts.map((p, i) => ({
       "@type": "ListItem",
@@ -111,17 +111,13 @@ export default async function HomePage() {
               </p>
               <h2 className="font-serif text-foreground text-[30px] sm:text-[44px] md:text-[56px] leading-[1.1] sm:leading-[1.05] tracking-tight max-w-2xl">
                 Les indispensables<br />
-                <span className="italic text-primary">testés par nos ingénieurs.</span>
+                <span className="italic text-primary">sélectionnés par la rédaction.</span>
               </h2>
             </div>
-            <div className="hidden md:flex items-center gap-3">
-              <button type="button" className="w-11 h-11 rounded-full border border-border flex items-center justify-center text-foreground/70 hover:text-primary hover:border-primary/60 transition-colors">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="m15 18-6-6 6-6"/></svg>
-              </button>
-              <button type="button" className="w-11 h-11 rounded-full border border-border flex items-center justify-center text-foreground/70 hover:text-primary hover:border-primary/60 transition-colors">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="m9 18 6-6-6-6"/></svg>
-              </button>
-            </div>
+            <Link href="/categorie/audio" className="hidden md:inline-flex items-center gap-2 text-[12px] font-mono text-foreground/50 hover:text-primary transition-colors uppercase tracking-wider">
+              <span>Voir tout l&apos;audio</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -132,7 +128,7 @@ export default async function HomePage() {
 
           <div className="mt-12 flex items-center justify-center">
             <Link href="/categorie/audio" className="group inline-flex items-center gap-3 h-12 px-6 rounded-full border border-foreground/15 text-foreground text-[12px] font-mono uppercase tracking-wider hover:border-primary hover:text-primary transition-colors">
-              <span>Explorer tous les produits</span>
+              <span>Explorer la sélection audio</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="group-hover:translate-x-1 transition-transform" aria-hidden><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </Link>
           </div>
@@ -202,7 +198,7 @@ export default async function HomePage() {
               {[
                 { num: "I.", title: "Indépendance totale", desc: "Nous mixons Shure, Sony, Elgato pour le meilleur résultat. Aucune marque ne nous dicte rien." },
                 { num: "II.", title: "La logique de stack", desc: "Pas juste un produit — votre stack : le bon micro, la bonne interface, le bon logiciel." },
-                { num: "III.", title: "Gain de temps", desc: "Fini les soirées à comparer 40 reviews YouTube. Nos configurations sont testées en studio." },
+                { num: "III.", title: "Gain de temps", desc: "Fini les soirées à comparer 40 reviews. Nos configurations sont vérifiées composant par composant." },
               ].map((item) => (
                 <li key={item.num} className="flex gap-5">
                   <span className="frame-label text-primary mt-1.5 shrink-0">{item.num}</span>

@@ -5692,32 +5692,32 @@ export const ARTICLES: Article[] = [
   },
   {
     id: "23",
-    slug: "setup-podcast-300-euros-2026",
-    title: "Setup podcast complet à 300€ en 2026 — Micro, Interface et Accessoires",
+    slug: "setup-podcast-350-euros-2026",
+    title: "Setup podcast complet à 350€ en 2026 — Micro, Interface et Accessoires",
     category: "Audio",
     readTime: "5 min",
     date: "07 Jun 2026",
     author: "Équipe Fluxlab",
     image: "/images/articles/setup_podcast_300.png",
-    intro: "300€, c'est le seuil où un setup podcast passe du \"on entend que c'est un débutant\" au \"c'est propre et professionnel\". Voici le setup optimisé que l'on recommande en 2026, composant par composant.",
+    intro: "350€, c'est le seuil où un setup podcast passe du \"on entend que c'est un débutant\" au \"c'est propre et professionnel\". Voici le setup optimisé que l'on recommande en 2026, composant par composant.",
     relatedProducts: ["rode-podmic-usb", "focusrite-scarlett-solo-4th-gen", "shure-mv7x"],
     relatedCategorySlug: "microphones",
     content: `
       <div class="not-prose mb-8 p-5 rounded-xl bg-secondary border-l-4 border-primary">
         <p class="text-[10px] font-mono uppercase tracking-widest text-primary mb-2">Réponse directe</p>
-        <p class="text-[15px] leading-relaxed text-foreground/85">Pour 300€ en 2026 : Rode PodMic USB (~100€) + Focusrite Scarlett Solo 4th Gen (~120€) + bras articulé + câble XLR (~65€). Ce combo XLR est évolutif, robuste et sonne broadcast dès le déballage. Alternative USB pure : Shure MV7X (~150€) + bras (~50€) = 200€ tout compris si vous ne voulez pas d'interface.</p>
+        <p class="text-[15px] leading-relaxed text-foreground/85">Pour 350-380€ en 2026 : Rode PodMic USB (~179€) + Focusrite Scarlett Solo 4th Gen (~120€) + bras articulé + câble XLR (~65€). Ce combo XLR est évolutif, robuste et sonne broadcast dès le déballage. Alternative USB pure : Shure MV7X (~150€) + bras (~50€) = 200€ tout compris si vous ne voulez pas d'interface.</p>
       </div>
 
       <!-- ENCART TL;DR -->
       <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8">
         <h2 class="text-xl font-bold text-foreground mb-4 mt-0 !border-0 flex items-center gap-2">
           <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-          Le Setup Recommandé à 300€
+          Le Setup Recommandé à 350€
         </h2>
         <ul class="space-y-3 mb-0">
           <li class="flex items-start gap-3">
             <span class="font-bold text-primary min-w-[150px]">Micro :</span>
-            <span class="text-foreground"><a href="/produit/rode-podmic-usb" class="product-link text-primary hover:underline">Rode PodMic USB</a> — double connectique XLR/USB-C, son broadcast, ~100€</span>
+            <span class="text-foreground"><a href="/produit/rode-podmic-usb" class="product-link text-primary hover:underline">Rode PodMic USB</a> — double connectique XLR/USB-C, son broadcast, ~179€</span>
           </li>
           <li class="flex items-start gap-3">
             <span class="font-bold text-primary min-w-[150px]">Interface :</span>
@@ -5729,7 +5729,7 @@ export const ARTICLES: Article[] = [
           </li>
           <li class="flex items-start gap-3">
             <span class="font-bold text-primary min-w-[150px]">Total :</span>
-            <span class="font-bold text-foreground">~285€ pour un son broadcast immédiat</span>
+            <span class="font-bold text-foreground">~365€ pour un son broadcast immédiat</span>
           </li>
         </ul>
       </div>
@@ -5749,7 +5749,7 @@ export const ARTICLES: Article[] = [
             <tr class="hover:bg-muted/50 border-b border-border transition-colors">
               <td class="px-5 py-4 font-bold border-r border-border text-primary">Micro</td>
               <td class="px-5 py-4 border-r border-border"><a href="/produit/rode-podmic-usb" class="product-link text-primary hover:underline">Rode PodMic USB</a></td>
-              <td class="px-5 py-4 border-r border-border font-medium">~100€</td>
+              <td class="px-5 py-4 border-r border-border font-medium">~179€</td>
               <td class="px-5 py-4">Hybride XLR/USB-C, son broadcast, évolutif</td>
             </tr>
             <tr class="hover:bg-muted/50 border-b border-border transition-colors">
@@ -5780,9 +5780,9 @@ export const ARTICLES: Article[] = [
         </table>
       </div>
 
-      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Le micro : Rode PodMic USB (~100€)</h2>
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Le micro : Rode PodMic USB (~179€)</h2>
 
-      <p>Le PodMic USB est une anomalie de marché. Pour 100€, Rode vous donne un micro en métal massif avec une double connectique USB-C <em>et</em> XLR — ce qui rend ce setup non-obsolète. Aujourd'hui, vous le branchez en USB-C directement dans votre ordinateur. Dans 6 mois, vous le basculez en XLR sur votre Scarlett Solo et vous ne perdez rien. C'est le seul micro de cette gamme de prix qui offre cette flexibilité d'évolution sans changer de matériel.</p>
+      <p>Le PodMic USB justifie son positionnement prix par une proposition unique : double connectique USB-C <em>et</em> XLR en métal massif, ce qui rend ce setup non-obsolète. Aujourd'hui, vous le branchez en USB-C directement dans votre ordinateur. Dans 6 mois, vous le basculez en XLR sur votre Scarlett Solo sans rien racheter. C'est le seul micro de cette gamme qui offre cette flexibilité d'évolution sans changer de matériel — et ça, ça vaut chaque euro.</p>
 
       <!-- PRODUCT CARD: Rode PodMic USB -->
       <div id="rode-podmic-usb-setup" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
@@ -5792,8 +5792,8 @@ export const ARTICLES: Article[] = [
           </div>
           <div>
             <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/rode-podmic-usb" class="product-link text-foreground hover:text-primary transition-colors">Rode PodMic USB</a></h3>
-            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le micro broadcast évolutif XLR/USB-C (~100€)</p>
-            <p>Corps en métal lourd, capsule dynamique cardioïde taillée pour les voix spoken word et le podcast. Son pop filter interne gère les plosives sans filtre externe supplémentaire. La double connectique XLR + USB-C est une sécurité rare à ce prix : vous évoluez sans racheter de micro.</p>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le micro broadcast évolutif XLR/USB-C (~179€)</p>
+            <p>Corps en métal lourd, capsule dynamique cardioïde taillée pour les voix spoken word et le podcast. Son pop filter interne gère les plosives sans filtre externe supplémentaire. La double connectique XLR + USB-C est une sécurité rare dans cette gamme : vous évoluez sans racheter de micro.</p>
           </div>
         </div>
 
@@ -5910,7 +5910,7 @@ export const ARTICLES: Article[] = [
           <tbody>
             <tr class="hover:bg-muted/50 border-b border-border">
               <td class="px-5 py-3 font-medium border-r border-border">Rode PodMic USB</td>
-              <td class="px-5 py-3 font-bold border-r border-border text-primary">~100€</td>
+              <td class="px-5 py-3 font-bold border-r border-border text-primary">~179€</td>
               <td class="px-5 py-3">Micro principal</td>
             </tr>
             <tr class="hover:bg-muted/50 border-b border-border">
@@ -5925,14 +5925,14 @@ export const ARTICLES: Article[] = [
             </tr>
             <tr class="hover:bg-muted/50 bg-primary/5">
               <td class="px-5 py-3 font-bold border-r border-border">Total</td>
-              <td class="px-5 py-3 font-bold border-r border-border text-foreground">~285€</td>
-              <td class="px-5 py-3 text-foreground/60">Reste ~15€ pour un câble USB-C de rechange</td>
+              <td class="px-5 py-3 font-bold border-r border-border text-foreground">~365€</td>
+              <td class="px-5 py-3 text-foreground/60">Son broadcast, setup évolutif XLR/USB-C</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <p>Si votre budget est de 150-200€ et que vous ne voulez pas d'interface audio, le <a href="/produit/shure-mv7x" class="product-link text-primary hover:underline">Shure MV7X</a> (~150€, XLR pure) avec un bras est une excellente alternative. Mais à 300€, le setup XLR complet offre clairement la meilleure valeur à long terme : le son est meilleur, vous pouvez brancher n'importe quel micro XLR futur, et la Scarlett Solo dure une décennie.</p>
+      <p>Si votre budget est de 150-200€ et que vous ne voulez pas d'interface audio, le <a href="/produit/shure-mv7x" class="product-link text-primary hover:underline">Shure MV7X</a> (~150€, XLR pure) avec un bras est une excellente alternative. Mais à 350€, le setup XLR complet offre clairement la meilleure valeur à long terme : le son est meilleur, vous pouvez brancher n'importe quel micro XLR futur, et la Scarlett Solo dure une décennie.</p>
 
       <!-- MOT DE LA FIN -->
       <div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 flex flex-col sm:flex-row items-center gap-8">
@@ -5941,7 +5941,7 @@ export const ARTICLES: Article[] = [
         </div>
         <div>
           <h2 class="text-2xl font-bold text-foreground mt-0 mb-3 !border-0">Le Mot de la Fin</h2>
-          <p class="mb-2">300€, c'est le seuil où un podcast passe du son "enregistré dans une chambre" au son "ça sonne pro". Le setup Rode PodMic USB + Scarlett Solo est notre recommandation la plus récurrente en 2026 : il est évolutif, robuste, et sonne bien dès le déballage.</p>
+          <p class="mb-2">350€, c'est le seuil où un podcast passe du son "enregistré dans une chambre" au son "ça sonne pro". Le setup Rode PodMic USB + Scarlett Solo est notre recommandation la plus récurrente en 2026 : il est évolutif, robuste, et sonne bien dès le déballage.</p>
           <p class="mb-0">L'investissement le plus important n'est pas le matériel — c'est la régularité. Avec ce setup, votre son ne sera jamais un obstacle à votre croissance.</p>
         </div>
       </div>
@@ -5954,7 +5954,7 @@ export const ARTICLES: Article[] = [
             <span class="text-foreground font-medium">Ai-je vraiment besoin d'une interface audio si mon micro a déjà un port USB ?</span>
             <span class="transition group-open:rotate-180"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
           </summary>
-          <p class="text-muted-foreground px-5 pb-4 mt-2">Non, pas immédiatement. Le Rode PodMic USB peut fonctionner seul en USB-C directement dans votre ordinateur. L'interface audio devient utile pour améliorer la qualité de conversion analogique/numérique, utiliser des plugins de traitement audio en temps réel, ou connecter d'autres sources. À 300€, vous pouvez commencer sans interface et l'ajouter 6 mois plus tard.</p>
+          <p class="text-muted-foreground px-5 pb-4 mt-2">Non, pas immédiatement. Le Rode PodMic USB peut fonctionner seul en USB-C directement dans votre ordinateur. L'interface audio devient utile pour améliorer la qualité de conversion analogique/numérique, utiliser des plugins de traitement audio en temps réel, ou connecter d'autres sources. Si votre budget est serré, commencez avec le PodMic USB seul (~179€) et ajoutez la Scarlett Solo 6 mois plus tard.</p>
         </details>
 
         <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
@@ -5967,7 +5967,7 @@ export const ARTICLES: Article[] = [
 
         <details class="group border border-border rounded-xl bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden">
           <summary class="flex justify-between items-center font-medium cursor-pointer list-none px-5 py-4 hover:bg-muted/50 transition-colors">
-            <span class="text-foreground font-medium">Ce setup 300€ est-il suffisant pour publier sur Spotify ou Apple Podcasts ?</span>
+            <span class="text-foreground font-medium">Ce setup 350€ est-il suffisant pour publier sur Spotify ou Apple Podcasts ?</span>
             <span class="transition group-open:rotate-180"><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span>
           </summary>
           <p class="text-muted-foreground px-5 pb-4 mt-2">Absolument. Les plateformes de podcast n'ont aucune exigence de matériel minimum — seule la qualité du fichier audio compte. Avec ce setup et une bonne technique (voix à 20 cm du micro, pièce peu réverbérante), votre podcast sera indiscernable de productions professionnelles sur toutes les plateformes.</p>

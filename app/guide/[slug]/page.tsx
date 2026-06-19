@@ -82,10 +82,10 @@ export default async function GuideArticlePage({ params }: Props) {
             height: 630,
         },
         datePublished: article.date,
-        dateModified: article.date, // Utilise la date de publi comme fallback jusqu'à tracking de modification
+        dateModified: article.updatedAt || article.date,
         author: {
-            "@type": "Organization",
-            name: "Équipe Fluxlab",
+            "@type": "Person",
+            name: article.author,
             url: "https://fluxlab.fr/a-propos",
         },
         publisher: {
@@ -371,9 +371,9 @@ export default async function GuideArticlePage({ params }: Props) {
 
                             {/* Méta — byline éditorial */}
                             <div className="flex items-center gap-3 text-[12px] font-mono text-white/40">
-                                <span>Par la rédaction Fluxlab</span>
+                                <span>Par {article.author}</span>
                                 <span className="text-white/20">·</span>
-                                <span>Mis à jour en {article.date}</span>
+                                <span>Mis à jour le {article.updatedAt || article.date}</span>
                             </div>
                         </div>
                     </div>

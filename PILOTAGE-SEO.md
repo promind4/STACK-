@@ -81,12 +81,12 @@ Affiliation Amazon active, campagnes, partenariats créateurs FR.
 |---|---|---|---|
 | P1-1 | Réactiver newsletter Footer | `components/server/Footer.tsx` | ⬜ À faire |
 | P1-2 | Ajouter `updatedAt` distinct de `date` dans les articles | `lib/articles-meta.ts` | ✅ Fait (session 2) — champ ajouté à l'interface |
-| P1-3 | Schema Article → passer author en `Person` (pas Organization) | `app/guide/[slug]/page.tsx` | ⬜ À faire |
-| P1-4 | Ajouter `sameAs` dans l'Organization JSON-LD | `app/layout.tsx` | ⬜ À faire |
-| P1-5 | Supprimer/implémenter les boutons carousel (homepage) | `app/page.tsx` | ⬜ À faire |
-| P1-6 | Fixer CTA "Explorer tous les produits" → lien plus pertinent | `app/page.tsx` | ⬜ À faire |
-| P1-7 | Article author byline dans les guides (E-E-A-T) | `app/guide/[slug]/page.tsx` | ⬜ À faire |
-| P1-8 | Retirer claims non étayés sur /a-propos | `app/a-propos/page.tsx` | ⬜ À faire |
+| P1-3 | Schema Article → passer author en `Person` (pas Organization) + dateModified réel | `app/guide/[slug]/page.tsx` | ✅ Fait (session 2) |
+| P1-4 | Ajouter `sameAs` dans l'Organization JSON-LD (Instagram) | `app/layout.tsx` | ✅ Fait (session 2) |
+| P1-5 | Remplacer boutons carousel sans onClick par lien "Voir tout l'audio" | `app/page.tsx` | ✅ Fait (session 2) |
+| P1-6 | Fixer CTA "Explorer tous les produits" → "Explorer la sélection audio" | `app/page.tsx` | ✅ Fait (session 2) |
+| P1-7 | Article author byline → `article.author` + `updatedAt` | `app/guide/[slug]/page.tsx` | ✅ Fait (session 2) |
+| P1-8 | Retirer claims non étayés ("tests acoustiques réels", "ingénieurs son") | `app/a-propos/page.tsx`, `app/page.tsx` | ✅ Fait (session 2) |
 
 ### 🟢 PROCHAIN TRIMESTRE
 
@@ -155,7 +155,16 @@ Affiliation Amazon active, campagnes, partenariats créateurs FR.
 - P0-6 : `revalidate = 0` → `86400` sur `app/guide/[slug]/page.tsx`
 - P0-7 : `revalidate = 0` → `3600` sur `app/produit/[slug]/page.tsx`
 - P1-2 : Champ `updatedAt?: string` ajouté à l'interface `ArticleMeta`
-**En suspens** : P0-8 (prix PodMic USB — décision éditoriale requise, voir détail ci-dessus)
+**En suspens** : P0-8 (prix PodMic USB — décision prise : réécriture en "Setup 350€" — implémentée session 2)
+- P0-8 : Article `setup-podcast-300-euros-2026` → renommé `setup-podcast-350-euros-2026`, prix PodMic corrigé ~100€→~179€, total ~285€→~365€, titre et intro mis à jour
+
+**Phase 1 — Corrections importantes :**
+- P1-3 : Schema Article author → `Person` (article.author), dateModified → `updatedAt || date`
+- P1-4 : `sameAs: ["https://www.instagram.com/the_fluxlab"]` dans Organization JSON-LD
+- P1-5 : Boutons carousel sans onClick remplacés par lien "Voir tout l'audio"
+- P1-6 : CTA "Explorer tous les produits" → "Explorer la sélection audio" (honnête)
+- P1-7 : Byline guide → `article.author` + `updatedAt || date`
+- P1-8 : Claims non étayés retirés ("Tests acoustiques réels"→"Critères stricts et documentés", "Support ingénieurs son"→"Transparence sur nos sources")
 
 ---
 

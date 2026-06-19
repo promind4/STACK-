@@ -53,7 +53,9 @@ export default function RootLayout({
           url: "https://fluxlab.fr",
           logo: "https://fluxlab.fr/branding/logo.svg",
           description: "Comparateur intelligent de matériel audio, vidéo et streaming. Trouvez le meilleur prix parmi Amazon, Thomann, Woodbrass et plus.",
-          sameAs: [],
+          sameAs: [
+            "https://www.instagram.com/the_fluxlab",
+          ],
         }} />
         <JsonLd data={{
           "@context": "https://schema.org",

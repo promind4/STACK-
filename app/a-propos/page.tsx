@@ -139,11 +139,11 @@ export default function AboutPage() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
                             {[
                                 "Pas de placement produit caché",
-                                "Tests acoustiques réels",
+                                "Critères de sélection stricts et documentés",
                                 "Mise à jour des prix en temps réel",
-                                "Algorithme de compatibilité",
-                                "Pas de 'Hype', que des faits",
-                                "Support par des ingénieurs son"
+                                "Configurateur de compatibilité matériel",
+                                "Pas de hype, que des faits vérifiables",
+                                "Transparence totale sur nos sources"
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
                                     <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
