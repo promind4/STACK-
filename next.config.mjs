@@ -70,6 +70,13 @@ const nextConfig = {
 
   async redirects() {
     return [
+      // www → non-www (301 permanent) — élimine les 22 pages dupliquées dans GSC
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.fluxlab.fr' }],
+        destination: 'https://fluxlab.fr/:path*',
+        permanent: true,
+      },
       {
         source: '/guide/stream-deck-guide',
         destination: '/guide/elgato-stream-deck-guide-complet',
