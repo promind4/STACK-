@@ -21,7 +21,7 @@ const GUIDE_MAP: Record<string, string> = {
   'preamplis':                'scarlett-2i2-4th-gen-shure-sm7b-cloudlifter',
   // Casques & enceintes
   'casques-studio':           'meilleur-casque-studio-home-studio-2026',
-  'enceintes':                'choisir-casque-studio',
+  'enceintes':                'meilleur-casque-studio-home-studio-2026',
   // Accessoires audio
   'bras-articules':           'enregistrer-podcast-deux-personnes-setup',
   'cable-xlr':                'xlr-vs-usb',
@@ -224,7 +224,7 @@ export default function CategoryContent({ products, slug, title, subtitle }: Pro
   };
 
   return (
-    <div className="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-16 py-16 grid grid-cols-12 gap-10">
+    <div className="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-16 py-16 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
 
       {/* ── BOUTON FILTRE MOBILE ─────────────────────────── */}
       <div className="col-span-12 lg:hidden">
@@ -348,7 +348,7 @@ export default function CategoryContent({ products, slug, title, subtitle }: Pro
 
         {filtered.length > 0 ? (
           <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
               {filtered.map((product, idx) => (
                 <React.Fragment key={product.id}>
                   <ProductCard

@@ -198,7 +198,7 @@ export default function ProductPageContent({ product, category, relatedProducts 
 
       {/* Hero : galerie + infos */}
       <main className="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-16 pt-10 pb-24">
-        <div className="grid grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
 
           {/* Galerie — 7 cols sticky */}
           <div className="col-span-12 lg:col-span-7 lg:sticky lg:top-24">
@@ -390,7 +390,7 @@ export default function ProductPageContent({ product, category, relatedProducts 
 
           {/* Tab: Description */}
           {activeTab === 'desc' && (
-            <div className="grid grid-cols-12 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
               <div className="col-span-12 lg:col-span-7">
                 {product.description ? (
                   <div

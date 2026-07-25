@@ -1,5 +1,5 @@
 import { Product, ProductOffer, ReviewsSummary } from "@/types/database";
-import { cleanImageUrl } from "./utils";
+import { cleanImageUrl, buildAffiliateLink } from "./utils";
 
 /**
  * Transform raw Supabase row into frontend Product type.
@@ -40,7 +40,7 @@ export const transformProduct = (raw: any): Product => {
             merchant_logo_url: logoUrl,
             price: o.price,
             currency: o.currency || "EUR",
-            affiliate_link: o.affiliate_link,
+            affiliate_link: buildAffiliateLink(o.affiliate_link, o.merchant_name),
             in_stock: o.in_stock ?? true,
         };
     });

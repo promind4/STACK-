@@ -15,12 +15,13 @@ const UNIVERSE_LINKS = [
 ]
 
 const RESOURCES_LINKS = [
-  { label: 'Tous les guides',     href: '/guides' },
-  { label: 'XLR vs USB',         href: '/guide/xlr-vs-usb' },
-  { label: 'Choisir son casque',  href: '/guide/choisir-casque-studio' },
-  { label: 'Top interfaces',      href: '/guide/top-5-interfaces' },
-  { label: 'Notre méthodologie',  href: '/methodologie' },
-  { label: "L'Atelier Fluxlab",   href: '/a-propos' },
+  { label: 'Tous les guides',       href: '/guides' },
+  { label: 'Micro podcast & YouTube', href: '/guide/meilleur-micro-podcast-2026' },
+  { label: 'XLR vs USB',            href: '/guide/xlr-vs-usb' },
+  { label: 'Choisir son casque',    href: '/guide/meilleur-casque-studio-home-studio-2026' },
+  { label: 'Top interfaces',        href: '/guide/top-5-interfaces' },
+  { label: 'Notre méthodologie',    href: '/methodologie' },
+  { label: "L'Atelier Fluxlab",     href: '/a-propos' },
 ]
 
 const LEGAL_LINKS = [
@@ -64,6 +65,9 @@ function NewsletterForm() {
         body: JSON.stringify({ email }),
       })
       setStatus(res.ok ? 'success' : 'error')
+      if (res.ok) {
+        (window as any).gtag?.('event', 'newsletter_signup', { location: 'footer' })
+      }
     } catch {
       setStatus('error')
     }
@@ -89,7 +93,7 @@ function NewsletterForm() {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="vous@studio.fr"
           required
-          className="flex-1 bg-transparent text-[18px] text-white placeholder:text-white/30 font-light outline-none"
+          className="flex-1 min-w-0 bg-transparent text-[18px] text-white placeholder:text-white/30 font-light outline-none"
         />
         <button
           type="submit"
@@ -131,7 +135,7 @@ export function Footer() {
 
         {/* ── Newsletter ─────────────────────────────────────── */}
         <div className="border-b border-white/10 py-14">
-          <div className="grid grid-cols-12 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             <div className="col-span-12 lg:col-span-4">
               <p className="frame-label text-primary mb-3">La Gazette du Labo</p>
               <p className="text-[22px] font-serif italic text-white/90 leading-snug mb-2">
@@ -148,7 +152,7 @@ export function Footer() {
         </div>
 
         {/* ── Main grid ──────────────────────────────────────── */}
-        <div className="grid grid-cols-12 gap-10 pt-16 pb-14">
+        <div className="grid grid-cols-2 md:grid-cols-12 gap-x-6 gap-y-10 md:gap-10 pt-16 pb-14">
 
           {/* Brand */}
           <div className="col-span-12 lg:col-span-4">
@@ -217,7 +221,7 @@ export function Footer() {
 
         {/* ── Transparence ───────────────────────────────────── */}
         <div className="py-10 border-t border-white/10">
-          <div className="grid grid-cols-12 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10">
             <div className="col-span-12 lg:col-span-3">
               <p className="frame-label text-primary">Transparence</p>
             </div>

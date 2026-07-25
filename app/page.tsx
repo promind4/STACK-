@@ -11,7 +11,7 @@ import { ARTICLES } from "@/lib/articles-meta";
 import { JsonLd } from "@/components/server/JsonLd";
 
 export const metadata: Metadata = {
-  title: { absolute: "Fluxlab | L'Expert Matériel Audio, Vidéo et Streaming" },
+  title: { absolute: "Fluxlab | Comparateur Matériel Audio, Vidéo, Streaming" },
   description:
     "Comparateur indépendant multi-boutiques et guides d'achat spécialisés pour créateurs. Trouvez le meilleur prix parmi Amazon, Thomann, Woodbrass et plus.",
   alternates: { canonical: "https://fluxlab.fr" },
@@ -120,7 +120,7 @@ export default async function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {featuredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -178,7 +178,7 @@ export default async function HomePage() {
       <section className="relative bg-secondary py-28 overflow-hidden border-b border-border/40">
         <div className="absolute -top-20 -left-20 w-[400px] h-[400px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(211,178,123,.2) 0%, transparent 65%)', filter: 'blur(60px)' }} aria-hidden />
 
-        <div className="relative max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-16 grid grid-cols-12 gap-16 items-center">
+        <div className="relative max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
 
           {/* Left — copy */}
           <div className="col-span-12 lg:col-span-6">

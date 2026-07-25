@@ -175,6 +175,12 @@ body {
 .prose-fluxlab table:not(.not-prose *) { display:block; overflow-x:auto; -webkit-overflow-scrolling:touch; width:100%; min-width:480px; border-collapse:collapse; }
 .prose-fluxlab th:not(.not-prose *) { padding:.75rem 1rem; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.18em; text-transform:uppercase; background:#E8DCC4; white-space:nowrap; }
 .prose-fluxlab td:not(.not-prose *) { padding:.75rem 1rem; border-top:1px solid #EBDCC4; font-size:14px; }
+/* Mobile : le tableau tient dans l'écran (padding/police réduits, retour à la ligne autorisé) — plus de contenu coupé */
+@media (max-width: 640px) {
+  .prose-fluxlab table:not(.not-prose *) { min-width:0; }
+  .prose-fluxlab th:not(.not-prose *) { padding:.5rem .5rem; font-size:9px; letter-spacing:.06em; white-space:normal; }
+  .prose-fluxlab td:not(.not-prose *) { padding:.5rem .5rem; font-size:12.5px; line-height:1.45; }
+}
 
 /* Images et iframes dans les articles : jamais de débordement */
 .prose-fluxlab img:not(.not-prose *) { max-width:100%; height:auto; }

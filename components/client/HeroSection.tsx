@@ -102,10 +102,10 @@ export function HeroSection() {
         </div>
 
         {/* 12-col grid */}
-        <div className="grid grid-cols-12 gap-10 items-center flex-1">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center flex-1">
 
           {/* Copy — pleine largeur maintenant que l'image est en fond */}
-          <div className="col-span-12 lg:col-span-8 max-w-[820px]">
+          <div className="lg:col-span-8 max-w-[820px]">
 
             <h1 className="font-serif text-white tracking-tight leading-[1.02] sm:leading-[0.98] text-[38px] sm:text-[56px] md:text-[72px] lg:text-[88px] mb-8">
               Trouvez enfin<br />
@@ -177,19 +177,19 @@ export function HeroSection() {
             ))}
           </div>
 
-          {/* Mobile bubbles — labels courts, alignement uniforme */}
-          <div className="flex sm:hidden flex-wrap gap-1.5">
+          {/* Mobile bubbles — grille 2×2 alignée */}
+          <div className="grid grid-cols-2 gap-2 sm:hidden">
             {CHALLENGES.map((c) => (
               <Link
                 key={c.href}
                 href={c.href}
-                className="inline-flex items-center gap-1.5 pl-1.5 pr-2.5 py-1 rounded-full border border-white/15 transition-all hover:border-primary/50"
+                className="flex items-center gap-2 pl-2 pr-3 py-2 rounded-full border border-white/15 transition-all hover:border-primary/50"
                 style={{ background: 'rgba(255,255,255,0.04)' }}
               >
-                <span className="frame-label text-primary px-1.5 py-0.5 rounded-full text-[8px]" style={{ background: 'rgba(211,178,123,0.15)' }}>
+                <span className="frame-label text-primary px-1.5 py-0.5 rounded-full text-[8px] shrink-0" style={{ background: 'rgba(211,178,123,0.15)' }}>
                   {c.num}
                 </span>
-                <span className="text-[10px] text-white/85">{c.labelMobile}</span>
+                <span className="text-[11px] text-white/85 truncate">{c.labelMobile}</span>
               </Link>
             ))}
           </div>

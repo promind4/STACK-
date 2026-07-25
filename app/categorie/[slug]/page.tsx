@@ -503,7 +503,7 @@ export default async function CategoryPage({ params }: Props) {
 
                 {/* ── BLOC ÉDITORIAL SEO ───────────────────── */}
                 <section className="bg-secondary border-b border-border/40">
-                    <div className="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-16 py-24 grid grid-cols-12 gap-10">
+                    <div className="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-16 py-24 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
                         <div className="col-span-12 lg:col-span-5">
                             <p className="frame-label text-primary mb-5 flex items-center gap-3">
                                 <span className="block w-8 h-px bg-primary" aria-hidden />

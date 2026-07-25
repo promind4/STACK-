@@ -116,7 +116,7 @@ export function ProductCard({ product: dbProduct, className, editorialBadge }: P
           aria-label={wished ? 'Retirer des favoris' : 'Ajouter aux favoris'}
           onClick={handleWishlist}
           className={cn(
-            'absolute top-3 right-3 z-10 w-8 h-8 rounded-full',
+            'absolute top-2 right-2 sm:top-3 sm:right-3 z-10 w-7 h-7 sm:w-8 sm:h-8 rounded-full',
             'bg-white/95 backdrop-blur border border-border/70',
             'flex items-center justify-center transition-colors',
             wished ? 'text-primary' : 'text-foreground/60 hover:text-primary'
@@ -144,35 +144,35 @@ export function ProductCard({ product: dbProduct, className, editorialBadge }: P
       </div>
 
       {/* Info zone */}
-      <div className="p-5 flex flex-col flex-1 bg-secondary">
-        <div className="flex items-center justify-between text-[10px] font-mono tracking-[0.18em] uppercase text-foreground/55 mb-2">
-          <span>{product.brand}</span>
+      <div className="p-3 sm:p-5 flex flex-col flex-1 bg-secondary">
+        <div className="flex items-center justify-between text-[9px] sm:text-[10px] font-mono tracking-[0.14em] sm:tracking-[0.18em] uppercase text-foreground/55 mb-1.5 sm:mb-2">
+          <span className="truncate">{product.brand}</span>
         </div>
 
-        <h3 className="font-serif text-[18px] leading-[1.2] text-foreground mb-3">
+        <h3 className="font-serif text-[14px] sm:text-[18px] leading-[1.2] text-foreground mb-2 sm:mb-3 line-clamp-2">
           <span className="bg-[linear-gradient(90deg,#D3B27B,#D3B27B)] bg-[length:0_1px] bg-no-repeat bg-bottom group-hover:bg-[length:100%_1px] transition-all duration-300">
             {product.name}
           </span>
         </h3>
 
         {product.reviewCount > 0 && (
-          <div className="mb-5">
+          <div className="mb-3 sm:mb-5">
             <StarRating rating={product.rating} count={product.reviewCount} />
           </div>
         )}
 
-        <div className="mt-auto flex items-end justify-between pt-4 border-t border-foreground/10">
-          <div>
-            <span className="block text-[10px] font-mono uppercase tracking-[0.16em] text-foreground/55 mb-0.5">
+        <div className="mt-auto flex items-end justify-between gap-2 pt-3 sm:pt-4 border-t border-foreground/10">
+          <div className="min-w-0">
+            <span className="block text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.12em] sm:tracking-[0.16em] text-foreground/55 mb-0.5">
               à partir de
             </span>
-            <span className={cn('font-serif text-[28px] leading-none', isUnavailable && 'text-foreground/55')}>
+            <span className={cn('font-serif text-[19px] sm:text-[28px] leading-none', isUnavailable && 'text-foreground/55')}>
               {product.price.toLocaleString('fr-FR')}
-              <span className="text-[16px] align-top">€</span>
+              <span className="text-[12px] sm:text-[16px] align-top">€</span>
             </span>
           </div>
 
-          <span className="w-9 h-9 rounded-full bg-foreground text-white flex items-center justify-center group-hover:bg-primary transition-colors">
+          <span className="shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-foreground text-white flex items-center justify-center group-hover:bg-primary transition-colors">
             <ArrowRight size={14} />
           </span>
         </div>

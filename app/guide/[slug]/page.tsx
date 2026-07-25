@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getArticleBySlug, ARTICLES } from '@/lib/data';
 import { createClient } from '@/lib/supabase';
 import { transformProduct } from '@/lib/transformers';
+import { shortenTitle } from '@/lib/utils';
 import { JsonLd } from '@/components/server/JsonLd';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
@@ -30,14 +31,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         ? rawDesc.substring(0, rawDesc.lastIndexOf(' ', 157)) + '…'
         : rawDesc;
 
+    // maxLen leaves room for the " | Fluxlab" suffix appended by the layout's title template.
+    const seoTitle = shortenTitle(article.title, 50);
+
     return {
-        title: `${article.title} — Guide`,
+        title: seoTitle,
         description: desc,
         alternates: {
             canonical: `https://fluxlab.fr/guide/${slug}`,
         },
         openGraph: {
-            title: `${article.title} — Guide`,
+            title: seoTitle,
             description: desc,
             images: article.image ? [article.image] : [],
         },
@@ -175,6 +179,10 @@ export default async function GuideArticlePage({ params }: Props) {
 
             const productSlug = slugMatch[1];
             const product = relatedItems.find((p: any) => p.slug === productSlug);
+            const escJsAttr = (s: string) => String(s)
+                .replace(/\\/g, '\\\\')
+                .replace(/'/g, "\\'")
+                .replace(/"/g, '&quot;');
 
             if (!product) {
                 return `<div class="flex flex-wrap items-center gap-3 mt-8">
@@ -198,7 +206,7 @@ export default async function GuideArticlePage({ params }: Props) {
                     }
 
                     offersHtml += `
-                        <a href="${offer.affiliate_link}" target="_blank" rel="nofollow sponsored" class="group flex flex-col items-center gap-2 hover:-translate-y-1 transition-transform">
+                        <a href="${offer.affiliate_link}" target="_blank" rel="nofollow sponsored" onclick="window.gtag && window.gtag('event','affiliate_click',{merchant:'${escJsAttr(merchantName)}',product_name:'${escJsAttr(product.name)}',price:${offer.price}})" class="group flex flex-col items-center gap-2 hover:-translate-y-1 transition-transform">
                             <div style="height:26px;display:flex;align-items:center;justify-content:center;">
                                 ${logoUrl
                             ? `<img src="${logoUrl}" alt="${merchantName}" style="height:26px;width:auto;max-height:26px;display:block" class="object-contain" loading="lazy" />`
@@ -388,7 +396,7 @@ export default async function GuideArticlePage({ params }: Props) {
 
                 {/* ── ARTICLE BODY ─────────────────────────────────── */}
                 <main className="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-16 py-20">
-                    <div className="grid grid-cols-12 gap-16">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
 
                         {/* TOC SIDEBAR */}
                         <aside className="hidden lg:block col-span-3">

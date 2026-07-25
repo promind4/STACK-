@@ -173,6 +173,13 @@ function ResultProductCard({ title, item, explanation }: {
               href={bestOffer.affiliate_link}
               target="_blank"
               rel="nofollow sponsored noopener"
+              onClick={() => {
+                (window as any).gtag?.('event', 'affiliate_click', {
+                  merchant: bestOffer.merchant_name,
+                  product_name: item.selected.name,
+                  price: bestOffer.price,
+                });
+              }}
               className="inline-flex items-center gap-1.5 h-9 px-4 rounded-full bg-primary text-foreground text-[11px] font-medium uppercase tracking-[.08em] hover:bg-[#E0C28D] transition-colors"
             >
               Voir →
@@ -203,7 +210,19 @@ function ResultProductCard({ title, item, explanation }: {
                       <p className="text-[11px] font-mono text-white/40">{formatPrice(alt.price)} ≈</p>
                     </div>
                     {altOffer && (
-                      <a href={altOffer.affiliate_link} target="_blank" rel="nofollow sponsored noopener" className="text-[11px] font-mono text-primary hover:text-primary-hover uppercase tracking-wider">Voir →</a>
+                      <a
+                        href={altOffer.affiliate_link}
+                        target="_blank"
+                        rel="nofollow sponsored noopener"
+                        onClick={() => {
+                          (window as any).gtag?.('event', 'affiliate_click', {
+                            merchant: altOffer.merchant_name,
+                            product_name: alt.name,
+                            price: altOffer.price,
+                          });
+                        }}
+                        className="text-[11px] font-mono text-primary hover:text-primary-hover uppercase tracking-wider"
+                      >Voir →</a>
                     )}
                   </div>
                 );
@@ -303,6 +322,9 @@ export default function ConfiguratorPage() {
     setBudgetNote(makeBudgetNote(fallbackResult.budgetUtilization, fallbackResult.totalCost));
     setResult(fallbackResult);
     setStep(5);
+    (window as any).gtag?.('event', 'configurator_completed', {
+      usage: ctx.usage, budget: ctx.budget, source: 'fallback',
+    });
   };
 
   /* ── Generate result: AI first, scoring engine on failure ── */
@@ -367,6 +389,9 @@ export default function ConfiguratorPage() {
       setBudgetNote(recommendation.budgetNote ?? makeBudgetNote(aiResult.budgetUtilization, aiResult.totalCost));
       setResult(aiResult);
       setStep(5);
+      (window as any).gtag?.('event', 'configurator_completed', {
+        usage: ctx.usage, budget: ctx.budget, source: 'ai',
+      });
     } catch {
       runFallback();
     } finally {
@@ -675,7 +700,7 @@ export default function ConfiguratorPage() {
                   )}
                 </div>
 
-                <div className="grid grid-cols-12 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
                   <div className="col-span-12 lg:col-span-8 flex flex-col gap-4">
                     {result.mic && <ResultProductCard title="Microphone" item={result.mic} explanation={result.explanations[result.mic.selected.id]} />}
                     {result.audioInterface && <ResultProductCard title="Interface Audio" item={result.audioInterface} explanation={result.explanations[result.audioInterface.selected.id]} />}

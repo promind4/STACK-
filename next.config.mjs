@@ -82,6 +82,13 @@ const nextConfig = {
         destination: '/guide/elgato-stream-deck-guide-complet',
         permanent: true,
       },
+      // Cannibalisation "casque studio" — contenu fusionné dans le guide 2026
+      // plus récent et mieux positionné (cf. audit SEO juillet 2026).
+      {
+        source: '/guide/choisir-casque-studio',
+        destination: '/guide/meilleur-casque-studio-home-studio-2026',
+        permanent: true,
+      },
     ];
   },
 };

@@ -43,6 +43,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-0BSNJVZ7DY";
   return (
     <html lang="fr" className={`${inter.variable} ${jetbrains.variable}`}>
       <body className="font-sans antialiased bg-background text-foreground min-h-screen flex flex-col">
@@ -73,14 +74,14 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <Analytics />
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-0BSNJVZ7DY" strategy="afterInteractive" />
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'G-0BSNJVZ7DY');
+            gtag('config', '${gaId}');
           `}
         </Script>
       </body>

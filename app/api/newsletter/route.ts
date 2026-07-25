@@ -11,9 +11,9 @@ export async function POST(req: NextRequest) {
     }
 
     if (!BREVO_API_KEY) {
-        // Graceful degradation: log and return success so the UI doesn't block
-        console.warn('[newsletter] BREVO_API_KEY not set — email not forwarded:', email);
-        return NextResponse.json({ ok: true });
+        // Fail loudly: a silent success here would hide a broken integration in prod.
+        console.error('[newsletter] BREVO_API_KEY not set — email not forwarded:', email);
+        return NextResponse.json({ error: 'Service newsletter non configuré' }, { status: 503 });
     }
 
     const res = await fetch('https://api.brevo.com/v3/contacts', {
@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
         }),
     });
 
-    if (!res.ok && res.status !== 204) {
+    if (!res.ok) {
         const body = await res.text();
         console.error('[newsletter] Brevo error:', res.status, body);
         return NextResponse.json({ error: 'Erreur Brevo' }, { status: 500 });

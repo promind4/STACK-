@@ -19,6 +19,7 @@ export function EmailCaptureForm() {
             });
             if (res.ok) {
                 setStatus('success');
+                (window as any).gtag?.('event', 'newsletter_signup', { location: 'email_capture_form' });
             } else {
                 setStatus('error');
             }

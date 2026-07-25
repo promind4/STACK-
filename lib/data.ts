@@ -39,7 +39,7 @@ export const ARTICLES: Article[] = [
     slug: "choisir-casque-studio",
     title: "Comment choisir son Casque Studio ? (Ouvert vs Fermé)",
     category: "Audio",
-    readTime: "1 min",
+    readTime: "4 min",
     date: "18 Jan 2025",
     author: "Équipe Fluxlab",
     image: "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&q=80&w=1200",
@@ -188,7 +188,7 @@ export const ARTICLES: Article[] = [
         <div class="flex flex-wrap items-center gap-3 mt-8">
           <a href="/produit/beyerdynamic-dt-770-pro-80-ohm" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
           <a href="https://www.thomann.fr/beyerdynamic_dt770_pro80_ohm.htm?partner_id=58130" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
-          <a href="https://www.amazon.fr/s?k=Beyerdynamic+DT-770+Pro+80&tag=TON_TAG_AMAZON" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="https://www.amazon.fr/s?k=Beyerdynamic+DT-770+Pro+80" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
           <a href="https://www.woodbrass.com/casques-studio-fermes-beyerdynamic-dt-770-pro-80-ohms-p165831.html?queryID=402185d8484d6aa3dc9ed3739b22ac45" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
         </div>
       </div>
@@ -231,7 +231,7 @@ export const ARTICLES: Article[] = [
         <div class="flex flex-wrap items-center gap-3 mt-8">
           <a href="/produit/beyerdynamic-dt-990-pro" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
           <a href="https://www.thomann.fr/beyerdynamic_dt990pro.htm?partner_id=58130" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
-          <a href="https://www.amazon.fr/s?k=Beyerdynamic+DT-990+Pro&tag=TON_TAG_AMAZON" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="https://www.amazon.fr/s?k=Beyerdynamic+DT-990+Pro" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
           <a href="https://www.woodbrass.com/casques-studio-ouverts-beyerdynamic-dt-990-pro-p165832.html" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
         </div>
       </div>
@@ -274,7 +274,7 @@ export const ARTICLES: Article[] = [
         <div class="flex flex-wrap items-center gap-3 mt-8">
           <a href="/produit/sennheiser-hd-600" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
           <a href="https://www.thomann.fr/sennheiser_hd_600_new_version_2019.htm?partner_id=58130" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
-          <a href="https://www.amazon.fr/s?k=Sennheiser+HD+600&tag=TON_TAG_AMAZON" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="https://www.amazon.fr/s?k=Sennheiser+HD+600" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
           <a href="https://www.woodbrass.com/casques-studio-ouverts-sennheiser-hd-600-p82421.html" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
         </div>
       </div>
@@ -363,7 +363,7 @@ export const ARTICLES: Article[] = [
     slug: "xlr-vs-usb",
     title: "XLR vs USB : L'Analyse Technique Complète (2026)",
     category: "Audio",
-    readTime: "3 min",
+    readTime: "4 min",
     date: "12 Oct 2026",
     author: "Équipe Fluxlab",
     image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=1200",
@@ -863,7 +863,7 @@ export const ARTICLES: Article[] = [
     slug: "eclairage-cinematique",
     title: "Théorie de la Lumière : Le Guide Technique Complet",
     category: "Vidéo",
-    readTime: "3 min",
+    readTime: "4 min",
     date: "28 Sep 2024",
     author: "Équipe Fluxlab",
     image: "https://images.unsplash.com/photo-1527011046414-4781f1f94f8c?auto=format&fit=crop&q=80&w=1200",
@@ -1057,7 +1057,7 @@ export const ARTICLES: Article[] = [
     slug: "top-5-interfaces",
     title: "Guide Expert : Choisir son Interface Audio en 2026",
     category: "Matériel",
-    readTime: "2 min",
+    readTime: "4 min",
     date: "02 Jan 2026",
     author: "Alexandre Dupont",
     image: "/images/articles/interface_audio_wide.webp",
@@ -1182,7 +1182,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                                 Voir la fiche produit
                                                                                                                                                   </a>
                                                                                                                                                   <a href = "https://www.thomann.fr/focusrite_scarlett_2i2_4th_gen.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
-                                                                                                                                                    <a href = "https://www.amazon.fr/s?k=Focusrite+Scarlett+2i2+4th+Gen&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                    <a href = "https://www.amazon.fr/s?k=Focusrite+Scarlett+2i2+4th+Gen" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                       <a href = "https://www.woodbrass.com/interfaces-audio-usb-focusrite-scarlett-2i2-g4-p380550.html?queryID=4d4f6e428b6a76023a63f234a7e8c373" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                         </div>
                                                                                                                                                         </div>
@@ -1226,7 +1226,7 @@ export const ARTICLES: Article[] = [
       Voir la fiche produit
         </a>
         <a href = "https://www.thomann.fr/audient_id14_mkii.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
-          <a href = "https://www.amazon.fr/s?k=Audient+iD14+MKII&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href = "https://www.amazon.fr/s?k=Audient+iD14+MKII" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
             <a href = "https://www.woodbrass.com/interfaces-audio-usb-audient-id14-mkii-p342576.html?queryID=d3c45609093067ed2946618b46999816" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
               </div>
               </div>
@@ -1270,7 +1270,7 @@ export const ARTICLES: Article[] = [
                             Voir la fiche produit
                             </a>
                             <a href = "https://www.thomann.fr/universal_audio_volt_276.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
-                            <a href = "https://www.amazon.fr/s?k=Universal+Audio+Volt+276&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                            <a href = "https://www.amazon.fr/s?k=Universal+Audio+Volt+276" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                             <a href = "https://www.woodbrass.com/interfaces-audio-usb-universal-audio-volt-276-p353329.html?queryID=2e382170c40d0d2839f9ef45d6e85a06" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                             </div>
                             </div>
@@ -1313,7 +1313,7 @@ export const ARTICLES: Article[] = [
                             Voir la fiche produit
                             </a>
                             <a href = "https://www.thomann.fr/ssl_2_mkii_601306.htm" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
-                            <a href = "https://www.amazon.fr/s?k=SSL+2%2B+Interface&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                            <a href = "https://www.amazon.fr/s?k=SSL+2%2B+Interface" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                             <a href = "https://www.woodbrass.com/interfaces-audio-usb-solid-state-logic-ssl-2+-mkii-p400110.html?queryID=01a620fb0dbef983b092bf1cf937e031" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                             </div>
                             </div>
@@ -1421,7 +1421,7 @@ export const ARTICLES: Article[] = [
     slug: "insonorisation",
     title: "Acoustique : La Science du Traitement de Pièce",
     category: "Acoustique",
-    readTime: "2 min",
+    readTime: "4 min",
     date: "10 Dec 2024",
     author: "Équipe Fluxlab",
     image: "/images/articles/acoustic_treatment_hero.webp",
@@ -1655,13 +1655,13 @@ export const ARTICLES: Article[] = [
   {
     id: "8",
     slug: "meilleur-micro-podcast-2026",
-    title: "Meilleur Micro pour Podcast en 2026 — Comparatif & Guide d'Achat",
+    title: "Meilleur Micro pour Podcast & YouTube en 2026 — Comparatif & Guide d'Achat",
     category: "Audio",
-    readTime: "2 min",
+    readTime: "4 min",
     date: "22 Feb 2026",
     author: "Équipe Fluxlab",
     image: "/images/articles/meilleur_micro_podcast.webp",
-    intro: "Quel micro choisir pour lancer ou améliorer votre podcast en 2026 ? Nous avons analysé et comparé 7 micros — du budget serré au setup broadcast — pour vous donner un verdict clair basé sur la qualité sonore, le rapport qualité/prix et votre profil d'utilisation.",
+    intro: "Quel micro choisir pour lancer ou améliorer votre podcast — audio ou filmé pour YouTube — en 2026 ? Nous avons analysé et comparé 7 micros, du budget serré au setup broadcast, pour vous donner un verdict clair basé sur la qualité sonore, le rapport qualité/prix et votre profil d'utilisation.",
     relatedProducts: ["rode-podmic-usb", "shure-mv7", "shure-sm7b", "electro-voice-re20", "focusrite-scarlett-2i2-4th-gen"],
     relatedCategorySlug: "micros-dynamiques",
     content: `
@@ -1915,6 +1915,26 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                   </div>
                                                                                                                                                                                                   </div> <!-- closes #id bg-card -->
 
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4"> Quel Micro pour un Podcast Filmé sur YouTube ? </h2>
+      <p > De plus en plus de podcasts ne sont plus seulement écoutés : ils sont <strong>filmés et publiés sur YouTube</strong>. Le micro devient alors un élément visuel de votre plateau, en plus d'être la source de votre son. La bonne nouvelle ? Les règles ne changent pas : un bon micro pour YouTube reste un <strong>micro dynamique</strong>, exactement pour les mêmes raisons qu'en audio pur. Il ignore le bruit de votre pièce non traitée et donne cette voix chaude et professionnelle dès la première prise, là où un micro statique trahirait l'écho de la salle à l'image.</p>
+      <p > La seule vraie question devient : filmez-vous <strong>seul face caméra</strong>, ou un <strong>plateau à plusieurs invités</strong> ? C'est ce qui oriente le choix.</p>
+
+      <div class="grid sm:grid-cols-2 gap-4 mt-8 mb-4">
+        <div class="bg-muted/40 border-l-4 border-l-primary/60 rounded-r-xl p-5">
+          <h4 class="text-foreground font-bold mt-0 mb-3">YouTube en solo (face caméra)</h4>
+          <p class="mb-0 text-sm text-foreground/80">Le <a href="#shure-mv7" class="product-link hover:underline font-medium text-primary">Shure MV7+</a> est le roi de cet usage : superbe à l'image, il se règle en USB sans interface, et son mode Auto-Level rattrape vos écarts de distance quand vous bougez face à l'objectif. C'est le micro des chaînes YouTube modernes.</p>
+        </div>
+        <div class="bg-muted/40 border-l-4 border-l-orange-500/60 rounded-r-xl p-5">
+          <h4 class="text-foreground font-bold mt-0 mb-3">Podcast filmé à plusieurs</h4>
+          <p class="mb-0 text-sm text-foreground/80">Pour un format canapé ou table ronde face caméra, le <a href="#shure-sm7b" class="product-link hover:underline font-medium text-primary">Shure SM7B</a> impose le look "grand plateau" ; mais chaque invité a besoin du sien, branché sur une interface XLR multi-entrées. Le pack SM58 reste l'alternative fiable et bien moins chère.</p>
+        </div>
+      </div>
+
+      <div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm">
+        <strong class="text-foreground" > Le piège à éviter en vidéo :</strong> ne cédez pas au micro-cravate ou au micro statique "parce que c'est pour YouTube". En intérieur non traité, ils captent l'écho de la pièce et trahissent l'amateurisme à l'image. Le micro dynamique posé sur un bras articulé reste le choix professionnel, à la fois pour le son ET pour le cadre. Et souvenez-vous : sur YouTube, l'image compte autant que le son — un éclairage dédié comme l'<a href="/produit/elgato-key-light-mini" class="product-link hover:underline font-medium text-primary">Elgato Key Light Mini</a> transforme instantanément votre rendu face caméra.
+      </div>
+
+
                                                                                                                                                                                                   <div class= "bg-primary/5 border border-primary/20 rounded-2xl p-8 my-10 text-center sm:text-left flex flex-col sm:flex-row items-center gap-8">
                                                                                                                                                                                                     <div class="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center shrink-0" >
                                                                                                                                                                                                       <span class="text-4xl" >🏆</span>
@@ -2001,7 +2021,7 @@ export const ARTICLES: Article[] = [
     slug: "shure-sm7b-vs-rode-podmic",
     title: "Shure SM7B vs Rode PodMic — Le Duel des Micros Podcast",
     category: "Audio",
-    readTime: "3 min",
+    readTime: "4 min",
     date: "23 Feb 2026",
     author: "Équipe Fluxlab",
     image: "/images/articles/sm7b_vs_podmic.webp",
@@ -2229,7 +2249,7 @@ export const ARTICLES: Article[] = [
     slug: "setup-streaming-debutant-2026",
     title: "Setup Streaming Débutant — Le Guide Complet (Budget 200€, 500€, 1000€)",
     category: "Streaming",
-    readTime: "3 min",
+    readTime: "4 min",
     date: "24 Feb 2026",
     author: "Équipe Fluxlab",
     image: "https://images.unsplash.com/photo-1547394765-185e1e68f34e?auto=format&fit=crop&q=80&w=1200",
@@ -2485,7 +2505,7 @@ export const ARTICLES: Article[] = [
     slug: "interface-audio-moins-de-200-euros",
     title: "Interface Audio Moins de 200€ — Top 5 des Meilleures Cartes Son Budget",
     category: "Audio",
-    readTime: "2 min",
+    readTime: "4 min",
     date: "25 Feb 2026",
     author: "Équipe Fluxlab",
     image: "https://images.unsplash.com/photo-1598653222000-6b7b7a552625?auto=format&fit=crop&q=80&w=1200",
@@ -2587,7 +2607,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                                                                       <div class="inline-block bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold tracking-widest uppercase mb-6 shadow-sm" >#3 : L'Intelligence Française</div>
                                                                                                                                                                                                                                                       <img src = "https://thumbs.static-thomann.de/thumb/bdbmagic//pics//bdb//_52//529011//17247208_800.jpg" alt = "Arturia MiniFuse 2" class="w-full h-48 sm:h-64 object-contain bg-white p-4 rounded-2xl mb-8 shadow-sm border border-border" loading = "lazy">
 
-                                                                                                                                                                                                                                                      <div class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" > <div class="flex flex-col md:flex-row gap-8 items-start" > <div class="flex-1 w-full" > <h3 class="mt-0 mb-2 text-2xl font-bold" > 3. Arturia MiniFuse 2 </h3><p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Deux entrées et un Hub USB intégré salvateur</p > <p class="text-foreground leading-relaxed" > La pépite des constructeurs français dans sa forme la plus aboutie.La MiniFuse 2 brille par sa proposition rassurante avec une exceptionnelle garantie de 5 ans en standard.Mais son atout secret est d'intégrer un Hub USB complet à l'arrière : branchez l'interface à votre PC, et connectez votre petit clavier maître MIDI directement dessus ! Elle dispose de deux entrées confortables pour enregistrer une guitare et une voix simultanément.</p></div></div><div class="grid sm:grid-cols-2 gap-4 mt-8"><div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Points Forts</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Garantie 5 ans totale rassurante</li><li>Deux entrées pour micros ou instruments séparés</li><li>Le port de hub "USB pass-through" au dos pour brancher un contrôleur MIDI</li><li>Vu-mètres LED lumineux très précis</li></ul></div><div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Limites réelles</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Préampli très droit et transparent, qui manquera peut-être de caractère pour certains</li><li>Format rectangulaire un peu plastique bien que robuste</li></ul></div></div><div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm"><strong class="text-foreground">Notre conseil d'usage : </strong> Parfaite pour les possesseurs d'ordinateurs portables avec peu de ports USB, et besoin de 2 entrées.</div > <div class="flex flex-wrap items-center gap-3 mt-8" > <a href="/produit/arturia-minifuse-2-white" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" > Voir la fiche produit </a><a href="https:/// www.thomann.fr/arturia_minifuse_2_white.htm?partner_id=58130" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - cyan - 500 / 10 text - cyan - 600 dark: text - cyan - 400 hover: bg - cyan - 500 / 20 border border - cyan - 500 / 20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a><a href="https://www.amazon.fr/s?k=Arturia+MiniFuse+2+White&tag=TON_TAG_AMAZON" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a><a href="https://www.woodbrass.com/interfaces-audio-usb-arturia-minifuse-2-wh-p354167.html?queryID=f243a44d29a8dc0a7133a2fb3a445f5b" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a></div></div></div>
+                                                                                                                                                                                                                                                      <div class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" > <div class="flex flex-col md:flex-row gap-8 items-start" > <div class="flex-1 w-full" > <h3 class="mt-0 mb-2 text-2xl font-bold" > 3. Arturia MiniFuse 2 </h3><p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Deux entrées et un Hub USB intégré salvateur</p > <p class="text-foreground leading-relaxed" > La pépite des constructeurs français dans sa forme la plus aboutie.La MiniFuse 2 brille par sa proposition rassurante avec une exceptionnelle garantie de 5 ans en standard.Mais son atout secret est d'intégrer un Hub USB complet à l'arrière : branchez l'interface à votre PC, et connectez votre petit clavier maître MIDI directement dessus ! Elle dispose de deux entrées confortables pour enregistrer une guitare et une voix simultanément.</p></div></div><div class="grid sm:grid-cols-2 gap-4 mt-8"><div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Points Forts</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Garantie 5 ans totale rassurante</li><li>Deux entrées pour micros ou instruments séparés</li><li>Le port de hub "USB pass-through" au dos pour brancher un contrôleur MIDI</li><li>Vu-mètres LED lumineux très précis</li></ul></div><div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Limites réelles</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Préampli très droit et transparent, qui manquera peut-être de caractère pour certains</li><li>Format rectangulaire un peu plastique bien que robuste</li></ul></div></div><div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm"><strong class="text-foreground">Notre conseil d'usage : </strong> Parfaite pour les possesseurs d'ordinateurs portables avec peu de ports USB, et besoin de 2 entrées.</div > <div class="flex flex-wrap items-center gap-3 mt-8" > <a href="/produit/arturia-minifuse-2-white" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" > Voir la fiche produit </a><a href="https:/// www.thomann.fr/arturia_minifuse_2_white.htm?partner_id=58130" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - cyan - 500 / 10 text - cyan - 600 dark: text - cyan - 400 hover: bg - cyan - 500 / 20 border border - cyan - 500 / 20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a><a href="https://www.amazon.fr/s?k=Arturia+MiniFuse+2+White" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a><a href="https://www.woodbrass.com/interfaces-audio-usb-arturia-minifuse-2-wh-p354167.html?queryID=f243a44d29a8dc0a7133a2fb3a445f5b" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a></div></div></div>
 
                                                                                                                                                                                                                                                         <!--CARTE 4 -->
                                                                                                                                                                                                                                                       <div class="mb-16 mt-8" >
@@ -2672,7 +2692,7 @@ export const ARTICLES: Article[] = [
     slug: "meilleur-micro-usb-pas-cher-2026",
     title: "Meilleur Micro USB Pas Cher 2026 : Le Comparatif",
     category: "Audio",
-    readTime: "1 min",
+    readTime: "4 min",
     date: "26 Feb 2026",
     author: "Équipe Fluxlab",
     image: "/images/articles/micro_usb.webp",
@@ -3040,7 +3060,7 @@ export const ARTICLES: Article[] = [
     slug: "supprimer-bruit-de-fond-micro",
     title: "Comment Supprimer le Bruit de Fond de son Micro ? (Guide 2026)",
     category: "Audio",
-    readTime: "2 min",
+    readTime: "4 min",
     date: "27 Feb 2026",
     author: "Équipe Fluxlab",
     image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=1200",
@@ -3290,7 +3310,7 @@ export const ARTICLES: Article[] = [
     slug: "setup-youtube-debutant-2026",
     title: "Vlogueur, Studio ou Pro : Quel Setup YouTube choisir en 2026 ?",
     category: "Vidéo",
-    readTime: "2 min",
+    readTime: "4 min",
     date: "28 Feb 2026",
     author: "Équipe Fluxlab",
     image: "/images/articles/setup_youtube.webp",
@@ -3600,7 +3620,7 @@ export const ARTICLES: Article[] = [
     slug: "micro-pour-voix-grave-recommandations",
     title: "Quel Micro pour une Voix Grave ? Nos Cinq Recommandations",
     category: "Audio",
-    readTime: "1 min",
+    readTime: "4 min",
     date: "01 Mar 2026",
     author: "Équipe Fluxlab",
     image: "/images/articles/micro_voix_grave.webp",
@@ -4005,7 +4025,7 @@ export const ARTICLES: Article[] = [
     slug: "meilleur-casque-studio-home-studio-2026",
     title: "Meilleur Casque Studio 2026 — Le Guide pour le Mixage et l'Enregistrement",
     category: "Audio",
-    readTime: "2 min",
+    readTime: "4 min",
     date: "02 Mar 2026",
     author: "Équipe Fluxlab",
     image: "/images/articles/casque_studio.webp",
@@ -4129,7 +4149,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                               Voir la fiche produit
                                                                                                                                                 </a>
                                                                                                                                                 <a href = "https://www.thomann.fr/beyerdynamic_dt770_pro80_ohm.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
-                                                                                                                                                  <a href = "https://www.amazon.fr/s?k=Beyerdynamic+DT-770+Pro+80&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                  <a href = "https://www.amazon.fr/s?k=Beyerdynamic+DT-770+Pro+80" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                     <a href = "https://www.woodbrass.com/casques-studio-fermes-beyerdynamic-dt-770-pro-80-ohms-p165831.html?queryID=402185d8484d6aa3dc9ed3739b22ac45" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                       </div>
                                                                                                                                                       </div>
@@ -4174,7 +4194,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                     Voir la fiche produit
                                                                                                                                                                                                       </a>
                                                                                                                                                                                                       <a href = "https://www.thomann.fr/audio_technica_ath_m50_x.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
-                                                                                                                                                                                                        <a href = "https://www.amazon.fr/s?k=Audio-Technica+ATH-M50x&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                        <a href = "https://www.amazon.fr/s?k=Audio-Technica+ATH-M50x" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                                                                           <a href = "https://www.woodbrass.com/casques-studio-fermes-audio-technica-ath-m50-x-p167952.html?queryID=2407b9279978baef378224e4583e9024" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                                                                             </div>
                                                                                                                                                                                                             </div>
@@ -4219,7 +4239,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                                                                           Voir la fiche produit
                                                                                                                                                                                                                                                             </a>
                                                                                                                                                                                                                                                             <a href = "https://www.thomann.fr/sony_mdr7506_kopfhoerer.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
-                                                                                                                                                                                                                                                              <a href = "https://www.amazon.fr/s?k=Sony+MDR-7506&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                                                                              <a href = "https://www.amazon.fr/s?k=Sony+MDR-7506" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                                                                                                                                 <a href = "https://www.woodbrass.com/casques-studio-fermes-sony-audio-pro-mdr-7506-p10233.html?queryID=a86e78884d6e3113dffaaec47eefa47f" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                                                                                                                                   </div>
                                                                                                                                                                                                                                                                   </div>
@@ -4264,7 +4284,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                                                                                                                                 Voir la fiche produit
                                                                                                                                                                                                                                                                                                                   </a>
                                                                                                                                                                                                                                                                                                                   <a href = "https://www.thomann.fr/sennheiser_hd_600_new_version_2019.htm" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
-                                                                                                                                                                                                                                                                                                                    <a href = "https://www.amazon.fr/s?k=Sennheiser+HD+600&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                                                                                                                                    <a href = "https://www.amazon.fr/s?k=Sennheiser+HD+600" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                                                                                                                                                                                       <a href = "https://www.woodbrass.com/casques-studio-ouverts-sennheiser-hd-600-p82421.html?queryID=076e0d101061f29b6ed2b7ddb3bf4f01" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                                                                                                                                                                                         </div>
                                                                                                                                                                                                                                                                                                                         </div>
@@ -4308,7 +4328,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                                                                                                                                                                           Voir la fiche produit
                                                                                                                                                                                                                                                                                                                                                             </a>
                                                                                                                                                                                                                                                                                                                                                             <a href = "https://www.thomann.fr/beyerdynamic_dt990pro.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
-                                                                                                                                                                                                                                                                                                                                                              <a href = "https://www.amazon.fr/s?k=Beyerdynamic+DT-990+Pro&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                                                                                                                                                                                                                                                                                                                                                              <a href = "https://www.amazon.fr/s?k=Beyerdynamic+DT-990+Pro" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                                                                                                                                                                                                                                 <a href = "https://www.woodbrass.com/casques-studio-ouverts-beyerdynamic-dt-990-pro-p165832.html?queryID=d8cbdb073788e1e424ae1330afbb9643" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                                                                                                                                                                                                                                                                                                                                                                   </div>
                                                                                                                                                                                                                                                                                                                                                                   </div>
@@ -4434,7 +4454,7 @@ export const ARTICLES: Article[] = [
     slug: "elgato-stream-deck-guide-complet",
     title: "Elgato Stream Deck — Le Guide Complet pour Booster votre Productivité",
     category: "Streaming",
-    readTime: "3 min",
+    readTime: "4 min",
     date: "03 Mar 2026",
     author: "Équipe Fluxlab",
     image: "/images/articles/elgato_stream_deck.webp",
@@ -4553,7 +4573,7 @@ export const ARTICLES: Article[] = [
                         Voir la fiche produit
                         </a>
                         <a href = "https://www.thomann.fr/elgato_stream_deck_mk.2.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
-                        <a href = "https://www.amazon.fr/s?k=Elgato+Stream+Deck+MK.2&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                        <a href = "https://www.amazon.fr/s?k=Elgato+Stream+Deck+MK.2" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                         <a href = "https://www.woodbrass.com/interfaces-multimedia-elgato-stream-deck-mk.2-p352373.html?queryID=c8e1a1e4d3c6753147ba0d452097d6fe" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                         </div>
                         </div>
@@ -4598,7 +4618,7 @@ export const ARTICLES: Article[] = [
                         Voir la fiche produit
                         </a>
                         <a href = "https://www.thomann.fr/elgato_stream_deck.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
-                        <a href = "https://www.amazon.fr/s?k=Elgato+Stream+Deck+Plus&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                        <a href = "https://www.amazon.fr/s?k=Elgato+Stream+Deck+Plus" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                         </div>
                         </div>
 
@@ -4642,7 +4662,7 @@ export const ARTICLES: Article[] = [
                         Voir la fiche produit
                         </a>
                         <a href = "https://www.thomann.fr/elgato_stream_deck_xl.htm?partner_id=58130" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold px-5 py-3 rounded-xl hover:bg-cyan-500/20 transition-colors border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
-                        <a href = "https://www.amazon.fr/s?k=Elgato+Stream+Deck+XL&tag=TON_TAG_AMAZON" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+                        <a href = "https://www.amazon.fr/s?k=Elgato+Stream+Deck+XL" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-[#FF9900]/10 text-[#FF9900] font-bold px-5 py-3 rounded-xl hover:bg-[#FF9900]/20 transition-colors border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                         <a href = "https://www.woodbrass.com/interfaces-multimedia-elgato-stream-deck-xl-p308967.html?queryID=bbdd9c37227c7cf9f33bfbbd1552a4cf" target = "_blank" rel = "nofollow sponsored" class="inline-flex items-center justify-center bg-muted text-foreground font-bold px-5 py-3 rounded-xl hover:bg-muted/80 transition-colors border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
                         </div>
                         </div>
@@ -4726,7 +4746,7 @@ export const ARTICLES: Article[] = [
     slug: "alternatives-focusrite-scarlett-2026",
     title: "Les 3 meilleures alternatives à la Focusrite Scarlett en 2026",
     category: "Audio",
-    readTime: "2 min",
+    readTime: "4 min",
     date: "23 Mar 2026",
     author: "Équipe Fluxlab",
     image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=1200",
@@ -4993,7 +5013,7 @@ export const ARTICLES: Article[] = [
     slug: "fond-flou-stream-petite-chambre",
     title: "Comment avoir un fond flou en stream dans une petite chambre ?",
     category: "Streaming",
-    readTime: "1 min",
+    readTime: "3 min",
     date: "23 Mar 2026",
     author: "Équipe Fluxlab",
     image: "/images/articles/streaming_setup_bokeh.webp",
@@ -5115,7 +5135,7 @@ export const ARTICLES: Article[] = [
     slug: "supprimer-bruit-clavier-stream",
     title: "Comment ne pas entendre son clavier mécanique sur Discord ou Twitch ?",
     category: "Streaming",
-    readTime: "1 min",
+    readTime: "3 min",
     date: "23 Mar 2026",
     author: "Équipe Fluxlab",
     image: "/images/articles/gaming_keyboard_setup.webp",
@@ -5219,7 +5239,7 @@ export const ARTICLES: Article[] = [
     slug: "sony-zve10-surchauffe-stream-solutions",
     title: "Le Sony ZV-E10 surchauffe-t-il en stream de 4 heures ? (Test et solutions)",
     category: "Vidéo",
-    readTime: "1 min",
+    readTime: "3 min",
     date: "23 Mar 2026",
     author: "Équipe Fluxlab",
     image: "/images/articles/zv-e10-surchauffe-hero.webp",
@@ -5353,7 +5373,7 @@ export const ARTICLES: Article[] = [
     slug: "scarlett-2i2-4th-gen-shure-sm7b-cloudlifter",
     title: "Faut-il un Cloudlifter avec la Scarlett 2i2 (4th Gen) et le Shure SM7B ?",
     category: "Audio",
-    readTime: "1 min",
+    readTime: "3 min",
     date: "23 Mar 2026",
     author: "Équipe Fluxlab",
     image: "/images/articles/scarlett-cloudlifter-hero.webp",
@@ -5535,7 +5555,7 @@ export const ARTICLES: Article[] = [
     slug: "enregistrer-podcast-deux-personnes-setup",
     title: "Enregistrer un podcast à deux personnes sur le même Mac/PC : le setup facile",
     category: "Streaming",
-    readTime: "2 min",
+    readTime: "3 min",
     date: "23 Mar 2026",
     author: "Équipe Fluxlab",
     image: "/images/articles/podcast-duo-hero.webp",
@@ -5696,7 +5716,7 @@ export const ARTICLES: Article[] = [
     slug: "setup-podcast-350-euros-2026",
     title: "Setup podcast complet à 350€ en 2026 — Micro, Interface et Accessoires",
     category: "Audio",
-    readTime: "5 min",
+    readTime: "4 min",
     date: "07 Jun 2026",
     author: "Équipe Fluxlab",
     image: "/images/articles/setup_podcast_300.png",
@@ -5991,7 +6011,7 @@ export const ARTICLES: Article[] = [
     slug: "home-studio-500-euros-guide-complet",
     title: "Home studio à 500€ : le guide complet pour débuter en 2026",
     category: "Audio",
-    readTime: "6 min",
+    readTime: "4 min",
     date: "07 Jun 2026",
     author: "Équipe Fluxlab",
     image: "/images/articles/home_studio_500.png",
@@ -6310,7 +6330,7 @@ export const ARTICLES: Article[] = [
     slug: "shure-mv7-vs-mv7x",
     title: "Shure MV7 vs MV7X — Lequel choisir en 2026 ?",
     category: "Audio",
-    readTime: "3 min",
+    readTime: "4 min",
     date: "19 Jun 2026",
     author: "Alexandre Dupont",
     image: "/images/articles/meilleur_micro_podcast.webp",
@@ -6528,7 +6548,7 @@ export const ARTICLES: Article[] = [
     slug: "focusrite-scarlett-2i2-vs-audient-id4-mkii",
     title: "Focusrite Scarlett 2i2 vs Universal Audio Volt 2 — Laquelle choisir en 2026 ?",
     category: "Audio",
-    readTime: "3 min",
+    readTime: "4 min",
     date: "19 Jun 2026",
     author: "Alexandre Dupont",
     image: "/images/articles/interface_audio_wide.webp",
@@ -6747,7 +6767,7 @@ export const ARTICLES: Article[] = [
     slug: "comment-fonctionne-configurateur-fluxlab",
     title: "Comment fonctionne le Configurateur Fluxlab ? (Guide Rapide)",
     category: "Streaming",
-    readTime: "2 min",
+    readTime: "3 min",
     date: "19 Jun 2026",
     author: "Équipe Fluxlab",
     image: "/images/articles/interface_audio_wide.webp",
