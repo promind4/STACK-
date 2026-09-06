@@ -20,7 +20,7 @@ export function HomeProductShowcase({ products }: { products: Product[] }) {
     <section className="relative bg-[var(--home-ink)] px-5 pb-20 text-white sm:px-8 lg:px-16">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(ellipse_at_center,rgba(211,168,95,.09),transparent_68%)]" aria-hidden />
       <div className="relative mx-auto grid max-w-[1600px] border border-[var(--home-rule)] bg-[#0c0b09] lg:grid-cols-12">
-        <div className="p-5 sm:p-7 lg:col-span-7 lg:p-8 xl:p-10">
+        <div className="p-5 sm:p-7 lg:col-span-8 lg:p-8 xl:p-10">
           <div className="mb-7 flex items-end justify-between gap-6 border-b border-white/10 pb-6">
             <div>
               <p className="frame-label text-primary">Sélectionné pour vous</p>
@@ -37,7 +37,7 @@ export function HomeProductShowcase({ products }: { products: Product[] }) {
           </div>
         </div>
 
-        <div className="border-t border-[var(--home-rule)] lg:col-span-5 lg:border-l lg:border-t-0">
+        <div className="border-t border-[var(--home-rule)] lg:col-span-4 lg:border-l lg:border-t-0">
           <CompatibilityPreview products={products} />
         </div>
       </div>
