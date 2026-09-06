@@ -102,7 +102,7 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
         'group bg-card rounded-2xl border overflow-hidden',
         variant === 'home-showcase' ? 'home-showcase-card' : '',
         variant === 'home-showcase'
-          ? 'flex flex-col xl:aspect-[4/5] xl:grid xl:grid-rows-[56%_44%]'
+          ? 'flex flex-col xl:aspect-[4/5] xl:grid xl:grid-rows-[55%_45%]'
           : 'flex flex-col',
         'transition-all duration-300',
         isUnavailable
@@ -163,7 +163,7 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
 
       {/* Info zone */}
       {variant === 'home-showcase' ? (
-        <div className="min-h-[128px] flex flex-col flex-1 bg-white p-3 sm:p-3.5 xl:min-h-0 xl:p-2.5">
+        <div className="min-h-[128px] flex flex-col flex-1 bg-white p-3 sm:p-3.5 xl:min-h-0 xl:p-2">
           <div className="mb-1 flex items-center text-[9px] font-mono uppercase tracking-[0.14em] text-foreground/55 xl:mb-0.5">
             <span className="truncate">{product.brand}</span>
           </div>
