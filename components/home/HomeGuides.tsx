@@ -37,8 +37,8 @@ export function HomeGuides() {
 
         <div className="grid grid-cols-12 gap-6">
           <Link href={`/guide/${featuredGuide.slug}`} className="group relative col-span-12 overflow-hidden border border-border/70 lg:col-span-7">
-            <div className="relative aspect-[16/10] bg-[#0a0a0a]">
-              {featuredGuide.image && <Image src={featuredGuide.image} alt="" fill className="object-cover opacity-55 transition-opacity group-hover:opacity-65" />}
+            <div className="relative min-h-[420px] bg-[#0a0a0a] sm:aspect-[16/10] sm:min-h-0">
+              {featuredGuide.image && <Image src={featuredGuide.image} alt="" fill priority sizes="(min-width: 1024px) 58vw, 100vw" className="object-cover opacity-55 transition-opacity group-hover:opacity-65" />}
               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent" />
               <div className="absolute left-6 top-6 z-10 flex items-center gap-3">
                 <span className="frame-label border border-primary/30 bg-black/45 px-3 py-2 text-primary backdrop-blur">Guide complet</span>
@@ -46,7 +46,7 @@ export function HomeGuides() {
               </div>
               <div className="absolute inset-x-0 bottom-0 z-10 p-7 sm:p-9">
                 <p className="frame-label mb-3 text-white/45">{featuredGuide.category}</p>
-                <h3 className="max-w-2xl font-serif text-[30px] leading-[1.06] text-white sm:text-[40px]">{featuredGuide.title}</h3>
+                <h3 className="max-w-2xl font-serif text-[27px] leading-[1.08] text-white sm:text-[34px] lg:text-[40px]">{featuredGuide.title}</h3>
                 <div className="mt-5 flex items-center gap-4 text-[11px] font-mono text-white/55">
                   <span>Par l'équipe Fluxlab</span><span>·</span><span>{featuredGuide.date}</span><span className="ml-auto text-primary">Lire →</span>
                 </div>

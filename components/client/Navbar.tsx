@@ -260,16 +260,16 @@ function LaboButton({ className }: { className?: string }) {
 }
 
 /* ─── LOGO ───────────────────────────────────────────────── */
-function FluxlabLogo({ variant }: { variant: 'light' | 'dark' }) {
+function FluxlabLogo({ variant }: { variant: 'light' | 'dark' | 'premium' }) {
   // Bipartite — Flux (Georgia italic) | (gold line) lab (JetBrains Mono)
   const fluxColor = variant === 'dark' ? '#FAFAFA' : '#0F0F0F'
   const labColor  = variant === 'dark' ? 'rgba(250,250,250,.75)' : 'rgba(15,15,15,.65)'
   return (
     <Link href="/" className="flex items-center shrink-0" aria-label="Fluxlab — Accueil">
       <svg viewBox="0 0 188 36" width="141" height="27" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-        <text x="0" y="29" fontFamily="Georgia,serif" fontStyle="italic" fontSize="32" fill={fluxColor} letterSpacing="-0.5">Flux</text>
+        <text x="0" y="29" fontFamily="Georgia,serif" fontStyle="italic" fontSize="32" fill={variant === 'premium' ? undefined : fluxColor} className={variant === 'premium' ? 'fill-white lg:fill-[#0F0F0F]' : undefined} letterSpacing="-0.5">Flux</text>
         <line x1="84" y1="5" x2="84" y2="32" stroke="#D3B27B" strokeWidth="1.5"/>
-        <text x="91" y="28" fontFamily="'JetBrains Mono',monospace" fontSize="15" fill={labColor} letterSpacing="2">lab</text>
+        <text x="91" y="28" fontFamily="'JetBrains Mono',monospace" fontSize="15" fill={variant === 'premium' ? undefined : labColor} className={variant === 'premium' ? 'fill-white/75 lg:fill-[#0F0F0F]/65' : undefined} letterSpacing="2">lab</text>
       </svg>
     </Link>
   )
@@ -420,7 +420,7 @@ export function Navbar() {
         )}>
 
           {/* Logo */}
-          <FluxlabLogo variant={isPremiumHome ? 'light' : isTransparent ? 'dark' : 'light'} />
+          <FluxlabLogo variant={isPremiumHome ? 'premium' : isTransparent ? 'dark' : 'light'} />
 
           {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-8">
