@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { cleanImageUrl } from "@/lib/utils";
+import { isDirectSupabaseStorageUrl } from "@/lib/imagePolicy.mjs";
 
 interface ProductGalleryProps {
     name: string;
@@ -48,6 +49,7 @@ export function ProductGallery({
                     sizes="(max-width: 768px) 100vw, 58vw"
                     className="object-contain transition-all duration-300 ease-out group-hover:scale-105"
                     priority
+                    unoptimized={isDirectSupabaseStorageUrl(activeImage)}
                 />
             </div>
 
@@ -71,6 +73,7 @@ export function ProductGallery({
                                 className={`object-contain transition-opacity ${activeImage === img ? "opacity-100" : "opacity-70 hover:opacity-100"
                                     }`}
                                 loading="lazy"
+                                unoptimized={isDirectSupabaseStorageUrl(img)}
                             />
                         </button>
                     ))}

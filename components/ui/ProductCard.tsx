@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
 import { cleanImageUrl } from '@/lib/utils'
+import { isDirectSupabaseStorageUrl } from '@/lib/imagePolicy.mjs'
 import { ProductBadge } from '@/components/ui/Badge'
 import { Star, ArrowRight, Heart } from '@/components/FluxlabIcons'
 import type { Product as DBProduct } from '@/types/database'
@@ -78,6 +79,7 @@ interface ProductCardProps {
 export function ProductCard({ product: dbProduct, className, editorialBadge }: ProductCardProps) {
   const product = mapProduct(dbProduct)
   const [wished, setWished] = useState(false)
+  const [imageFailed, setImageFailed] = useState(false)
   const isUnavailable = !product.inStock || product.badge === 'out_of_stock'
 
   const handleWishlist = (e: React.MouseEvent) => {
@@ -125,7 +127,7 @@ export function ProductCard({ product: dbProduct, className, editorialBadge }: P
           <Heart size={14} fill={wished ? 'currentColor' : 'none'} />
         </button>
 
-        {product.imageUrl ? (
+        {product.imageUrl && !imageFailed ? (
           <div className="absolute inset-0 flex items-center justify-center p-4 group-hover:scale-105 transition-transform duration-500">
             <Image
               src={product.imageUrl}
@@ -134,11 +136,13 @@ export function ProductCard({ product: dbProduct, className, editorialBadge }: P
               sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
               className="object-contain mix-blend-multiply p-4"
               loading="lazy"
+              unoptimized={isDirectSupabaseStorageUrl(product.imageUrl)}
+              onError={() => setImageFailed(true)}
             />
           </div>
         ) : (
           <div className="absolute inset-0 flex items-center justify-center text-foreground/15 font-mono text-xs">
-            No image
+            Image indisponible
           </div>
         )}
       </div>

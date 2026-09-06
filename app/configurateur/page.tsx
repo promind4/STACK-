@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { useProducts } from '@/hooks/useProducts';
 import { generateRecommendation, RecommendationResult, ProductResult, UserContext } from '@/lib/scoringEngine';
 import { cn } from '@/lib/utils';
+import { isDirectSupabaseStorageUrl } from '@/lib/imagePolicy.mjs';
 
 /* ─── TYPES ──────────────────────────────────────────────── */
 interface AiAnswer { question: string; answer: string; }
@@ -143,7 +144,7 @@ function ResultProductCard({ title, item, explanation }: {
       <div className="p-5 flex items-center gap-5" style={{ background: 'rgba(255,255,255,.02)' }}>
         <Link href={`/produit/${item.selected.slug}`} className="w-[72px] h-[72px] rounded-xl bg-white border flex items-center justify-center shrink-0 relative overflow-hidden hover:scale-105 transition-transform" style={{ borderColor: 'rgba(235,220,196,.3)' }}>
           {item.selected.image_url && (
-            <Image src={item.selected.image_url} alt={item.selected.name} fill sizes="72px" className="object-contain p-2 mix-blend-multiply" priority unoptimized={false} />
+            <Image src={item.selected.image_url} alt={item.selected.name} fill sizes="72px" className="object-contain p-2 mix-blend-multiply" priority unoptimized={isDirectSupabaseStorageUrl(item.selected.image_url)} />
           )}
         </Link>
 
@@ -203,7 +204,7 @@ function ResultProductCard({ title, item, explanation }: {
                 return (
                   <div key={alt.id} className="flex items-center gap-4 p-3 rounded-xl" style={{ background: 'rgba(255,255,255,.03)', border: '1px solid rgba(255,255,255,.06)' }}>
                     <div className="w-10 h-10 rounded-lg bg-white shrink-0 relative overflow-hidden" style={{ border: '1px solid rgba(235,220,196,.2)' }}>
-                      {alt.image_url && <Image src={alt.image_url} alt={alt.name} fill sizes="40px" className="object-contain p-1 mix-blend-multiply" priority />}
+                      {alt.image_url && <Image src={alt.image_url} alt={alt.name} fill sizes="40px" className="object-contain p-1 mix-blend-multiply" priority unoptimized={isDirectSupabaseStorageUrl(alt.image_url)} />}
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-[13px] text-white truncate">{alt.name}</p>

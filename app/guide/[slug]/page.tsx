@@ -7,6 +7,7 @@ import { shortenTitle } from '@/lib/utils';
 import { JsonLd } from '@/components/server/JsonLd';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
+import { isDirectSupabaseStorageUrl } from '@/lib/imagePolicy.mjs';
 import TocScrollspy from '@/components/client/TocScrollspy';
 
 interface Props {
@@ -417,7 +418,7 @@ export default async function GuideArticlePage({ params }: Props) {
                                                 >
                                                     <div className="w-14 h-14 rounded-lg bg-secondary shrink-0 flex items-center justify-center relative overflow-hidden">
                                                         {product.image_url && (
-                                                            <Image src={product.image_url} alt={product.name} fill sizes="56px" className="object-contain p-1.5 mix-blend-multiply" loading="lazy" />
+                                                            <Image src={product.image_url} alt={product.name} fill sizes="56px" className="object-contain p-1.5 mix-blend-multiply" loading="lazy" unoptimized={isDirectSupabaseStorageUrl(product.image_url)} />
                                                         )}
                                                     </div>
                                                     <div className="flex-1 min-w-0">

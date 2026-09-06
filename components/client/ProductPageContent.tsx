@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { cleanImageUrl } from '@/lib/utils';
 import { stripHtml } from '@/lib/utils';
+import { isDirectSupabaseStorageUrl } from '@/lib/imagePolicy.mjs';
 import { Product, ProductOffer } from '@/types/database';
 
 /* ─── STAR ROW ───────────────────────────────────────────── */
@@ -52,6 +53,7 @@ function Gallery({ name, brand, mainImage, galleryImages }: {
             className="object-contain p-8 group-hover:scale-105 transition-transform duration-500"
             priority
             onError={() => setImgError(true)}
+            unoptimized={isDirectSupabaseStorageUrl(imgError ? FALLBACK_IMG : active)}
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center text-foreground/15 font-mono text-sm">Image non disponible</div>
@@ -64,7 +66,7 @@ function Gallery({ name, brand, mainImage, galleryImages }: {
           {all.map((img, idx) => (
             <button
               key={idx}
-              onClick={() => setActive(img)}
+              onClick={() => { setActive(img); setImgError(false); }}
               type="button"
               aria-label={`Vue ${idx + 1}`}
               className={cn(
@@ -74,7 +76,7 @@ function Gallery({ name, brand, mainImage, galleryImages }: {
                   : 'border-border/60 opacity-60 hover:opacity-100 hover:border-primary/50'
               )}
             >
-              <Image src={img} alt={`Miniature ${idx + 1}`} fill sizes="80px" className="object-contain p-1.5" loading="lazy" />
+              <Image src={img} alt={`Miniature ${idx + 1}`} fill sizes="80px" className="object-contain p-1.5" loading="lazy" unoptimized={isDirectSupabaseStorageUrl(img)} />
             </button>
           ))}
         </div>
@@ -120,7 +122,7 @@ function OfferRow({ offer, isPrimary, productName }: { offer: ProductOffer; isPr
       <div className="flex items-center gap-3">
         <div className="w-10 h-10 rounded-lg bg-white border border-border/50 flex items-center justify-center shrink-0 overflow-hidden p-1.5">
           {logoUrl
-            ? <Image src={logoUrl} alt={`Logo ${offer.merchant_name}`} width={36} height={36} className="object-contain w-full h-full" />
+            ? <Image src={logoUrl} alt={`Logo ${offer.merchant_name}`} width={36} height={36} className="object-contain w-full h-full" unoptimized={isDirectSupabaseStorageUrl(logoUrl)} />
             : <span className="text-[10px] font-mono text-foreground/70 font-semibold">{offer.merchant_name.substring(0, 2).toUpperCase()}</span>
           }
         </div>
@@ -254,6 +256,7 @@ export default function ProductPageContent({ product, category, relatedProducts 
                     width={70}
                     height={22}
                     className="object-contain h-5 w-auto"
+                    unoptimized={isDirectSupabaseStorageUrl(getMerchantLogo(bestOffer)!)}
                   />
                 ) : (
                   <span className="text-[14px] font-medium text-foreground/80">{bestOffer.merchant_name}</span>
@@ -568,7 +571,7 @@ export default function ProductPageContent({ product, category, relatedProducts 
                 >
                   <div className="w-24 h-24 rounded-xl bg-white shrink-0 relative overflow-hidden border border-border/50">
                     {related.image_url && (
-                      <Image src={cleanImageUrl(related.image_url)} alt={related.name} fill sizes="96px" className="object-contain p-2" loading="lazy" />
+                      <Image src={cleanImageUrl(related.image_url)} alt={related.name} fill sizes="96px" className="object-contain p-2" loading="lazy" unoptimized={isDirectSupabaseStorageUrl(cleanImageUrl(related.image_url))} />
                     )}
                   </div>
                   <div className="flex flex-col justify-between flex-1 min-w-0">
