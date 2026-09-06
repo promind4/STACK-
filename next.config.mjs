@@ -13,7 +13,10 @@ const nextConfig = {
 
   // ─── IMAGES ───────────────────────────────────────────────
   images: {
-    // Optimisation activée — sert AVIF/WebP automatiquement selon le navigateur
+    // Les requêtes /_next/image retournent 402 sur le déploiement Vercel.
+    // Les navigateurs chargent donc les fichiers directement depuis leur source.
+    unoptimized: true,
+    // Conservé pour un éventuel retour à l'optimisation par Next.js.
     formats: ['image/avif', 'image/webp'],
     // Tailles standard pour <Image fill> et sizes prop
     deviceSizes: [640, 750, 828, 1080, 1200, 1600, 1920],
