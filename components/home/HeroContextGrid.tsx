@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 function NoiseIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+    <svg className="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
       <path d="M4 8c1.5-1.5 3.5-1.5 5 0s3.5 1.5 5 0 3.5-1.5 5 0" />
       <path d="M4 12c1.5-1.5 3.5-1.5 5 0s3.5 1.5 5 0 3.5-1.5 5 0" />
       <path d="M4 16c1.5-1.5 3.5-1.5 5 0s3.5 1.5 5 0 3.5-1.5 5 0" />
@@ -12,7 +12,7 @@ function NoiseIcon() {
 
 function PlugIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" aria-hidden="true">
+    <svg className="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" aria-hidden="true">
       <path d="M8 4v6m8-6v6M6 10h12v2a6 6 0 0 1-6 6v2" />
       <path d="M9 20h6" />
     </svg>
@@ -21,7 +21,7 @@ function PlugIcon() {
 
 function BudgetIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+    <svg className="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
       <path d="M4 7.5h16v10H4z" />
       <path d="M4 10.5h16M15 14h2" />
       <path d="M7 4.5h10" />
@@ -31,7 +31,7 @@ function BudgetIcon() {
 
 function TravelIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" aria-hidden="true">
+    <svg className="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" aria-hidden="true">
       <rect x="7" y="4" width="10" height="16" rx="1" />
       <path d="M10 4V2h4v2M7 9h10M10 17h.01M14 17h.01" />
     </svg>
