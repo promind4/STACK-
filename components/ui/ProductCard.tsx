@@ -80,9 +80,10 @@ interface ProductCardProps {
   product: DBProduct
   className?: string
   editorialBadge?: 'choix' | 'coup-de-coeur'
+  variant?: 'default' | 'home-showcase'
 }
 
-export function ProductCard({ product: dbProduct, className, editorialBadge }: ProductCardProps) {
+export function ProductCard({ product: dbProduct, className, editorialBadge, variant = 'default' }: ProductCardProps) {
   const product = mapProduct(dbProduct)
   const [wished, setWished] = useState(false)
   const [imageFailed, setImageFailed] = useState(false)
@@ -98,16 +99,23 @@ export function ProductCard({ product: dbProduct, className, editorialBadge }: P
     <Link
       href={product.href}
       className={cn(
-        'group flex flex-col bg-card rounded-2xl border overflow-hidden',
+        'group bg-card rounded-2xl border overflow-hidden',
+        variant === 'home-showcase' ? 'home-showcase-card' : '',
+        variant === 'home-showcase'
+          ? 'flex flex-col aspect-[4/5] max-sm:aspect-auto sm:grid sm:grid-rows-[58%_42%]'
+          : 'flex flex-col',
         'transition-all duration-300',
         isUnavailable
           ? 'border-border/70 opacity-80'
           : 'border-border/70 hover:border-primary/60 hover:shadow-card',
         className
       )}
-    >
+      >
       {/* Image zone */}
-      <div className="aspect-square bg-white relative overflow-hidden">
+      <div className={cn(
+        'bg-white relative overflow-hidden',
+        variant === 'home-showcase' ? 'aspect-square sm:aspect-auto sm:h-full' : 'aspect-square'
+      )}>
         {product.badge && (
           <span className="absolute top-3 left-3 z-10">
             <ProductBadge variant={product.badge} promoLabel={product.promoLabel} />
@@ -154,24 +162,38 @@ export function ProductCard({ product: dbProduct, className, editorialBadge }: P
       </div>
 
       {/* Info zone */}
-      <div className="p-3 sm:p-5 flex flex-col flex-1 bg-[linear-gradient(145deg,hsl(var(--secondary))_0%,hsl(var(--card))_100%)]">
-        <div className="flex items-center justify-between text-[9px] sm:text-[10px] font-mono tracking-[0.14em] sm:tracking-[0.18em] uppercase text-foreground/55 mb-1.5 sm:mb-2">
+      <div className={cn(
+        'flex flex-col flex-1',
+        variant === 'home-showcase'
+          ? 'min-h-[128px] bg-white p-3 sm:min-h-0 sm:p-3.5'
+          : 'p-3 sm:p-5 bg-[linear-gradient(145deg,hsl(var(--secondary))_0%,hsl(var(--card))_100%)]'
+      )}>
+        <div className={cn(
+          'flex items-center justify-between text-[9px] sm:text-[10px] font-mono tracking-[0.14em] sm:tracking-[0.18em] uppercase text-foreground/55',
+          variant === 'home-showcase' ? 'mb-1 sm:mb-1.5' : 'mb-1.5 sm:mb-2'
+        )}>
           <span className="truncate">{product.brand}</span>
         </div>
 
-        <h3 className="font-serif text-[14px] sm:text-[18px] leading-[1.2] text-foreground mb-2 sm:mb-3 line-clamp-2">
+        <h3 className={cn(
+          'font-serif text-[14px] leading-[1.2] text-foreground line-clamp-2',
+          variant === 'home-showcase' ? 'mb-1.5 sm:mb-2 sm:text-[16px]' : 'mb-2 sm:mb-3 sm:text-[18px]'
+        )}>
           <span className="bg-[linear-gradient(90deg,#D3B27B,#D3B27B)] bg-[length:0_1px] bg-no-repeat bg-bottom group-hover:bg-[length:100%_1px] transition-all duration-300">
             {product.name}
           </span>
         </h3>
 
         {product.reviewCount > 0 && (
-          <div className="mb-3 sm:mb-5">
+          <div className={variant === 'home-showcase' ? 'mb-1.5 sm:mb-2' : 'mb-3 sm:mb-5'}>
             <StarRating rating={product.rating} count={product.reviewCount} />
           </div>
         )}
 
-        <div className="flex items-center gap-2 mb-3 sm:mb-4 text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.1em] text-foreground/55">
+        <div className={cn(
+          'flex items-center gap-2 text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.1em] text-foreground/55',
+          variant === 'home-showcase' ? 'mb-2 sm:mb-2.5' : 'mb-3 sm:mb-4'
+        )}>
           <span className={cn('w-1.5 h-1.5 rounded-full', isUnavailable ? 'bg-foreground/30' : 'bg-emerald-500')} aria-hidden />
           <span>
             {isUnavailable
@@ -185,7 +207,10 @@ export function ProductCard({ product: dbProduct, className, editorialBadge }: P
           )}
         </div>
 
-        <div className="mt-auto flex items-end justify-between gap-2 pt-3 sm:pt-4 border-t border-foreground/10">
+        <div className={cn(
+          'mt-auto flex items-end justify-between gap-2 border-t border-foreground/10',
+          variant === 'home-showcase' ? 'pt-2 sm:pt-2.5' : 'pt-3 sm:pt-4'
+        )}>
           <div className="min-w-0">
             <span className="block text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.12em] sm:tracking-[0.16em] text-foreground/55 mb-0.5">
               à partir de

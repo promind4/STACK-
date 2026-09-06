@@ -32,7 +32,7 @@ export function HomeProductShowcase({ products }: { products: Product[] }) {
           </div>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:gap-4">
             {products.slice(0, 3).map((product, index) => (
-              <ProductCard key={product.id} product={product} editorialBadge={index === 1 ? 'choix' : undefined} />
+              <ProductCard key={product.id} product={product} editorialBadge={index === 1 ? 'choix' : undefined} variant="home-showcase" />
             ))}
           </div>
         </div>
