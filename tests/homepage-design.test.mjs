@@ -21,6 +21,7 @@ assert.equal(hero.includes('Testé en studio'), false, 'unverified trust claims 
 assert.equal(hero.includes('Prix temps réel'), false, 'unverified freshness claims must not be rendered')
 assert.match(card, /interface ProductCardProps\s*{[^}]*\bvariant\?:\s*(?:'default'\s*\|\s*'home-showcase'|'home-showcase'\s*\|\s*'default')/, 'the product card props must declare the homepage showcase variant')
 assert.match(card, /variant\s*===\s*'home-showcase'[\s\S]{0,160}?['"]home-showcase-card['"]/, 'the product card must apply the dedicated home-showcase-card layout marker')
+assert.match(card, /variant\s*===\s*'home-showcase'[\s\S]{0,160}?aspect-\[4\/5\]/, 'the product card must apply the near-square home-showcase geometry')
 assert.match(showcase, /variant="home-showcase"/, 'the homepage showcase must use the home-showcase product card variant')
 assert.match(compatibility, /Votre setup/, 'the compatibility graph must be centered on the visitor setup')
 assert.match(compatibility, /roleLabels/, 'the compatibility graph must expose semantic role labels')
@@ -28,7 +29,7 @@ assert.doesNotMatch(compatibility, /0\{index \+ 1\}/, 'the compatibility graph m
 assert.doesNotMatch(contextGrid, /num:/, 'the hero context grid must not retain repeated numeric labels')
 assert.equal(trustStripSvgs.length, 4, 'the illustrated trust strip must contain exactly four SVG illustrations')
 trustStripSvgs.forEach((svg, index) => {
-  assert.match(svg, /\baria-hidden(?:=\{?true\}?|(?:="true")?)?/, `trust strip SVG ${index + 1} must be hidden from assistive technology`)
+  assert.match(svg, /\baria-hidden="true"/, `trust strip SVG ${index + 1} must be hidden from assistive technology`)
 })
 assert.doesNotMatch(trustStrip, /livraison offerte/i, 'the trust strip must not claim free delivery')
 
