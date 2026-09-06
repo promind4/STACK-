@@ -9,6 +9,7 @@ import dynamic from "next/dynamic";
 const ProductCard = dynamic(() => import("@/components/ui/ProductCard").then(mod => mod.ProductCard));
 import { ARTICLES } from "@/lib/articles-meta";
 import { JsonLd } from "@/components/server/JsonLd";
+import { HomeProductShowcase } from "@/components/home/HomeProductShowcase";
 
 export const metadata: Metadata = {
   title: { absolute: "Fluxlab | Comparateur Matériel Audio, Vidéo, Streaming" },
@@ -100,8 +101,10 @@ export default async function HomePage() {
       {/* ═══ HERO ═══ */}
       <HeroSection />
 
+      <HomeProductShowcase products={featuredProducts} />
+
       {/* ═══ SÉLECTIONS EXPERTES ═══ */}
-      <section className="bg-background py-24 border-b border-border/40">
+      <section className="hidden bg-background py-24 border-b border-border/40">
         <div className="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-16">
           <div className="flex items-end justify-between mb-12">
             <div>
@@ -125,18 +128,11 @@ export default async function HomePage() {
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
-
-          <div className="mt-12 flex items-center justify-center">
-            <Link href="/categorie/audio" className="group inline-flex items-center gap-3 h-12 px-6 rounded-full border border-foreground/15 text-foreground text-[12px] font-mono uppercase tracking-wider hover:border-primary hover:text-primary transition-colors">
-              <span>Explorer la sélection audio</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="group-hover:translate-x-1 transition-transform" aria-hidden><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* ═══ CTA LE LABO IA ═══ */}
-      <section className="relative overflow-hidden py-32 grain" style={{
+      {/* ═══ COMPOSER UN SETUP ═══ */}
+      <section className="hidden relative overflow-hidden py-32 grain" style={{
         background: `
           radial-gradient(ellipse 70% 60% at 75% 30%, rgba(211,178,123,.3) 0%, transparent 65%),
           radial-gradient(ellipse 50% 80% at 0% 100%, rgba(211,178,123,.1) 0%, transparent 50%),
@@ -151,31 +147,31 @@ export default async function HomePage() {
         <div className="relative z-10 max-w-[1100px] mx-auto px-5 sm:px-8 lg:px-16 text-center">
           <p className="frame-label text-primary mb-6 inline-flex items-center gap-3">
             <span className="block w-8 h-px bg-primary" aria-hidden />
-            Le Labo IA — N° 02
+            Composer un setup — N° 02
             <span className="block w-8 h-px bg-primary" aria-hidden />
           </p>
           <h2 className="font-serif text-white text-[44px] md:text-[68px] leading-[1.05] tracking-tight mb-8">
-            Pas le temps de comparer&nbsp;?<br />
-            <span className="animate-gradient-text italic">L&apos;IA compose pour vous.</span>
+            Ne choisissez plus<br />
+            <span className="animate-gradient-text italic">un produit isolé.</span>
           </h2>
           <p className="text-[18px] text-white/65 leading-[1.65] font-light max-w-[640px] mx-auto mb-12">
-            Indiquez votre métier, votre budget, votre acoustique — le Labo retourne un stack complet, testé, et déjà compatible.
+            Partez de votre usage, de votre budget et de votre environnement. Fluxlab vous propose un ensemble cohérent, avec les alternatives qui font sens.
           </p>
           <Link
             href="/configurateur"
             className="group inline-flex items-center justify-center gap-3 h-14 px-10 rounded-full bg-primary text-foreground font-medium text-[14px] tracking-wide uppercase transition-all hover:shadow-btn hover:bg-primary-hover"
           >
-            <span>Lancer le configurateur</span>
+            <span>Composer mon setup</span>
             <svg className="group-hover:translate-x-1 transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
               <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
             </svg>
           </Link>
-          <p className="text-[11px] font-mono text-white/35 mt-6 tracking-wider uppercase">3 minutes · gratuit · sans inscription</p>
+          <p className="text-[11px] font-mono text-white/35 mt-6 tracking-wider uppercase">Compatibilité · budget · prix comparés</p>
         </div>
       </section>
 
       {/* ═══ L'AVANTAGE FLUXLAB — STACK ENGINE ═══ */}
-      <section className="relative bg-secondary py-28 overflow-hidden border-b border-border/40">
+      <section className="hidden relative bg-secondary py-28 overflow-hidden border-b border-border/40">
         <div className="absolute -top-20 -left-20 w-[400px] h-[400px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(211,178,123,.2) 0%, transparent 65%)', filter: 'blur(60px)' }} aria-hidden />
 
         <div className="relative max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
@@ -184,21 +180,21 @@ export default async function HomePage() {
           <div className="col-span-12 lg:col-span-6">
             <p className="frame-label text-primary mb-5 flex items-center gap-3">
               <span className="block w-8 h-px bg-primary" aria-hidden />
-              L'Avantage Fluxlab — N° 03
+              Pourquoi Fluxlab — N° 03
             </p>
             <h2 className="font-serif text-foreground text-[30px] sm:text-[44px] md:text-[56px] leading-[1.1] sm:leading-[1.05] tracking-tight mb-8">
-              Nous ne vendons pas<br />
-              un produit.<br />
-              <span className="italic text-primary">Un résultat.</span>
+              Le bon choix n&apos;est<br />
+              jamais un produit<br />
+              <span className="italic text-primary">pris tout seul.</span>
             </h2>
             <p className="text-[18px] text-foreground/70 leading-[1.65] font-light max-w-[520px] mb-12">
-              Notre moteur analyse la compatibilité électrique, audio et logicielle entre des milliers de références — pour que vous n'ayez plus à le faire.
+              Un bon setup est une chaîne : chaque élément doit répondre à votre besoin et fonctionner avec les autres, sans dépenses inutiles.
             </p>
             <ul className="space-y-7 max-w-[520px]">
               {[
-                { num: "I.", title: "Indépendance totale", desc: "Nous mixons Shure, Sony, Elgato pour le meilleur résultat. Aucune marque ne nous dicte rien." },
-                { num: "II.", title: "La logique de stack", desc: "Pas juste un produit — votre stack : le bon micro, la bonne interface, le bon logiciel." },
-                { num: "III.", title: "Gain de temps", desc: "Fini les soirées à comparer 40 reviews. Nos configurations sont vérifiées composant par composant." },
+                { num: "I.", title: "Des choix justifiés", desc: "Usage, budget, environnement : chaque recommandation part de votre situation, pas d'une liste générique." },
+                { num: "II.", title: "La logique de setup", desc: "Le bon micro, la bonne interface et le bon logiciel doivent former un ensemble cohérent." },
+                { num: "III.", title: "Moins d'erreurs coûteuses", desc: "Repérez les incompatibilités et les achats superflus avant de passer commande." },
               ].map((item) => (
                 <li key={item.num} className="flex gap-5">
                   <span className="frame-label text-primary mt-1.5 shrink-0">{item.num}</span>

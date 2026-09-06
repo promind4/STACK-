@@ -191,7 +191,7 @@ export function ProductCard({ product: dbProduct, className, editorialBadge }: P
               à partir de
             </span>
             {product.hasPrice ? (
-              <span className={cn('font-serif text-[19px] sm:text-[28px] leading-none', isUnavailable && 'text-foreground/55')}>
+              <span className={cn('font-serif text-[19px] sm:text-[28px] leading-none text-foreground', isUnavailable && 'text-foreground/55')}>
                 {product.price.toLocaleString('fr-FR')}
                 <span className="text-[12px] sm:text-[16px] align-top">€</span>
               </span>
