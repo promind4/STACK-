@@ -102,7 +102,7 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
         'group bg-card rounded-2xl border overflow-hidden',
         variant === 'home-showcase' ? 'home-showcase-card' : '',
         variant === 'home-showcase'
-          ? 'flex flex-col aspect-[4/5] max-sm:aspect-auto sm:grid sm:grid-rows-[58%_42%]'
+          ? 'flex flex-col xl:aspect-[4/5] xl:grid xl:grid-rows-[48%_52%]'
           : 'flex flex-col',
         'transition-all duration-300',
         isUnavailable
@@ -114,7 +114,7 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
       {/* Image zone */}
       <div className={cn(
         'bg-white relative overflow-hidden',
-        variant === 'home-showcase' ? 'aspect-square sm:aspect-auto sm:h-full' : 'aspect-square'
+        variant === 'home-showcase' ? 'aspect-square xl:aspect-auto xl:h-full' : 'aspect-square'
       )}>
         {product.badge && (
           <span className="absolute top-3 left-3 z-10">
@@ -165,19 +165,19 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
       <div className={cn(
         'flex flex-col flex-1',
         variant === 'home-showcase'
-          ? 'min-h-[128px] bg-white p-3 sm:min-h-0 sm:p-3.5'
+          ? 'min-h-[128px] bg-white p-3 sm:p-3.5 xl:min-h-0 xl:p-3'
           : 'p-3 sm:p-5 bg-[linear-gradient(145deg,hsl(var(--secondary))_0%,hsl(var(--card))_100%)]'
       )}>
         <div className={cn(
           'flex items-center justify-between text-[9px] sm:text-[10px] font-mono tracking-[0.14em] sm:tracking-[0.18em] uppercase text-foreground/55',
-          variant === 'home-showcase' ? 'mb-1 sm:mb-1.5' : 'mb-1.5 sm:mb-2'
+          variant === 'home-showcase' ? 'mb-1 sm:mb-1.5 xl:mb-0.5' : 'mb-1.5 sm:mb-2'
         )}>
           <span className="truncate">{product.brand}</span>
         </div>
 
         <h3 className={cn(
           'font-serif text-[14px] leading-[1.2] text-foreground line-clamp-2',
-          variant === 'home-showcase' ? 'mb-1.5 sm:mb-2 sm:text-[16px]' : 'mb-2 sm:mb-3 sm:text-[18px]'
+          variant === 'home-showcase' ? 'mb-1.5 sm:mb-2 xl:mb-1 sm:text-[16px] xl:text-[15px]' : 'mb-2 sm:mb-3 sm:text-[18px]'
         )}>
           <span className="bg-[linear-gradient(90deg,#D3B27B,#D3B27B)] bg-[length:0_1px] bg-no-repeat bg-bottom group-hover:bg-[length:100%_1px] transition-all duration-300">
             {product.name}
@@ -185,14 +185,14 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
         </h3>
 
         {product.reviewCount > 0 && (
-          <div className={variant === 'home-showcase' ? 'mb-1.5 sm:mb-2' : 'mb-3 sm:mb-5'}>
+          <div className={variant === 'home-showcase' ? 'mb-1.5 sm:mb-2 xl:mb-1' : 'mb-3 sm:mb-5'}>
             <StarRating rating={product.rating} count={product.reviewCount} />
           </div>
         )}
 
         <div className={cn(
           'flex items-center gap-2 text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.1em] text-foreground/55',
-          variant === 'home-showcase' ? 'mb-2 sm:mb-2.5' : 'mb-3 sm:mb-4'
+          variant === 'home-showcase' ? 'mb-2 sm:mb-2.5 xl:mb-1.5 xl:leading-tight' : 'mb-3 sm:mb-4'
         )}>
           <span className={cn('w-1.5 h-1.5 rounded-full', isUnavailable ? 'bg-foreground/30' : 'bg-emerald-500')} aria-hidden />
           <span>
@@ -209,14 +209,18 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
 
         <div className={cn(
           'mt-auto flex items-end justify-between gap-2 border-t border-foreground/10',
-          variant === 'home-showcase' ? 'pt-2 sm:pt-2.5' : 'pt-3 sm:pt-4'
+          variant === 'home-showcase' ? 'pt-2 sm:pt-2.5 xl:pt-1.5' : 'pt-3 sm:pt-4'
         )}>
           <div className="min-w-0">
             <span className="block text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.12em] sm:tracking-[0.16em] text-foreground/55 mb-0.5">
               à partir de
             </span>
             {product.hasPrice ? (
-              <span className={cn('font-serif text-[19px] sm:text-[28px] leading-none text-foreground', isUnavailable && 'text-foreground/55')}>
+              <span className={cn(
+                'font-serif text-[19px] sm:text-[28px] leading-none text-foreground',
+                variant === 'home-showcase' && 'xl:text-[24px]',
+                isUnavailable && 'text-foreground/55'
+              )}>
                 {product.price.toLocaleString('fr-FR')}
                 <span className="text-[12px] sm:text-[16px] align-top">€</span>
               </span>
