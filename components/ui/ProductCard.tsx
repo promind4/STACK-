@@ -102,7 +102,7 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
         'group bg-card rounded-2xl border overflow-hidden',
         variant === 'home-showcase' ? 'home-showcase-card' : '',
         variant === 'home-showcase'
-          ? 'flex flex-col xl:aspect-[4/5] xl:grid xl:grid-rows-[48%_52%]'
+          ? 'flex flex-col xl:aspect-[4/5] xl:grid xl:grid-rows-[56%_44%]'
           : 'flex flex-col',
         'transition-all duration-300',
         isUnavailable
@@ -162,78 +162,112 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
       </div>
 
       {/* Info zone */}
-      <div className={cn(
-        'flex flex-col flex-1',
-        variant === 'home-showcase'
-          ? 'min-h-[128px] bg-white p-3 sm:p-3.5 xl:min-h-0 xl:p-3'
-          : 'p-3 sm:p-5 bg-[linear-gradient(145deg,hsl(var(--secondary))_0%,hsl(var(--card))_100%)]'
-      )}>
-        <div className={cn(
-          'flex items-center justify-between text-[9px] sm:text-[10px] font-mono tracking-[0.14em] sm:tracking-[0.18em] uppercase text-foreground/55',
-          variant === 'home-showcase' ? 'mb-1 sm:mb-1.5 xl:mb-0.5' : 'mb-1.5 sm:mb-2'
-        )}>
-          <span className="truncate">{product.brand}</span>
-        </div>
-
-        <h3 className={cn(
-          'font-serif text-[14px] leading-[1.2] text-foreground line-clamp-2',
-          variant === 'home-showcase' ? 'mb-1.5 sm:mb-2 xl:mb-1 sm:text-[16px] xl:text-[15px]' : 'mb-2 sm:mb-3 sm:text-[18px]'
-        )}>
-          <span className="bg-[linear-gradient(90deg,#D3B27B,#D3B27B)] bg-[length:0_1px] bg-no-repeat bg-bottom group-hover:bg-[length:100%_1px] transition-all duration-300">
-            {product.name}
-          </span>
-        </h3>
-
-        {product.reviewCount > 0 && (
-          <div className={variant === 'home-showcase' ? 'mb-1.5 sm:mb-2 xl:mb-1' : 'mb-3 sm:mb-5'}>
-            <StarRating rating={product.rating} count={product.reviewCount} />
+      {variant === 'home-showcase' ? (
+        <div className="min-h-[128px] flex flex-col flex-1 bg-white p-3 sm:p-3.5 xl:min-h-0 xl:p-2.5">
+          <div className="mb-1 flex items-center text-[9px] font-mono uppercase tracking-[0.14em] text-foreground/55 xl:mb-0.5">
+            <span className="truncate">{product.brand}</span>
           </div>
-        )}
 
-        <div className={cn(
-          'flex items-center gap-2 text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.1em] text-foreground/55',
-          variant === 'home-showcase' ? 'mb-2 sm:mb-2.5 xl:mb-1.5 xl:leading-tight' : 'mb-3 sm:mb-4'
-        )}>
-          <span className={cn('w-1.5 h-1.5 rounded-full', isUnavailable ? 'bg-foreground/30' : 'bg-emerald-500')} aria-hidden />
-          <span>
-            {isUnavailable
-              ? 'Indisponible'
-              : product.availableOfferCount > 1
-                ? `${product.availableOfferCount} offres en stock`
-                : 'En stock'}
-          </span>
-          {product.offerCount > 1 && (
-            <span className="text-foreground/35">· {product.offerCount} marchands</span>
-          )}
-        </div>
-
-        <div className={cn(
-          'mt-auto flex items-end justify-between gap-2 border-t border-foreground/10',
-          variant === 'home-showcase' ? 'pt-2 sm:pt-2.5 xl:pt-1.5' : 'pt-3 sm:pt-4'
-        )}>
-          <div className="min-w-0">
-            <span className="block text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.12em] sm:tracking-[0.16em] text-foreground/55 mb-0.5">
-              à partir de
+          <h3 className="mb-1 font-serif text-[14px] leading-[1.2] text-foreground line-clamp-2 xl:mb-0.5">
+            <span className="bg-[linear-gradient(90deg,#D3B27B,#D3B27B)] bg-[length:0_1px] bg-no-repeat bg-bottom transition-all duration-300 group-hover:bg-[length:100%_1px]">
+              {product.name}
             </span>
-            {product.hasPrice ? (
-              <span className={cn(
-                'font-serif text-[19px] sm:text-[28px] leading-none text-foreground',
-                variant === 'home-showcase' && 'xl:text-[24px]',
-                isUnavailable && 'text-foreground/55'
-              )}>
-                {product.price.toLocaleString('fr-FR')}
-                <span className="text-[12px] sm:text-[16px] align-top">€</span>
+          </h3>
+
+          <div className="mb-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-[9px] font-mono leading-tight text-foreground/55 xl:mb-1">
+            {product.reviewCount > 0 && (
+              <span className="flex items-center gap-1 whitespace-nowrap">
+                <Star size={10} fill="currentColor" className="text-primary" />
+                <span className="font-medium text-foreground/75">{product.rating.toFixed(1)}</span>
+                <span>{product.reviewCount.toLocaleString('fr-FR')} avis</span>
               </span>
-            ) : (
-              <span className="text-[12px] sm:text-sm font-medium text-foreground/55">Prix indisponible</span>
+            )}
+            <span className="flex min-w-0 items-center gap-1">
+              <span className={cn('h-1.5 w-1.5 shrink-0 rounded-full', isUnavailable ? 'bg-foreground/30' : 'bg-emerald-500')} aria-hidden />
+              <span>
+                {isUnavailable
+                  ? 'Indisponible'
+                  : product.availableOfferCount > 1
+                    ? `${product.availableOfferCount} offres en stock`
+                    : 'En stock'}
+              </span>
+            </span>
+            {product.offerCount > 1 && (
+              <span className="whitespace-nowrap text-foreground/45">· {product.offerCount} marchands</span>
             )}
           </div>
 
-          <span className="shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-foreground text-white flex items-center justify-center group-hover:bg-primary transition-colors">
-            <ArrowRight size={14} />
-          </span>
+          <div className="mt-auto flex items-end justify-between gap-2 border-t border-foreground/10 pt-1.5">
+            <div className="min-w-0">
+              <span className="mb-0.5 block text-[9px] font-mono uppercase tracking-[0.12em] text-foreground/55">à partir de</span>
+              {product.hasPrice ? (
+                <span className={cn('whitespace-nowrap font-serif text-[19px] leading-none text-foreground xl:text-[23px]', isUnavailable && 'text-foreground/55')}>
+                  {product.price.toLocaleString('fr-FR')}
+                  <span className="align-top text-[12px] xl:text-[14px]">€</span>
+                </span>
+              ) : (
+                <span className="whitespace-nowrap text-[12px] font-medium text-foreground/55">Prix indisponible</span>
+              )}
+            </div>
+
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-foreground text-white transition-colors group-hover:bg-primary">
+              <ArrowRight size={14} />
+            </span>
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className="p-3 sm:p-5 flex flex-col flex-1 bg-[linear-gradient(145deg,hsl(var(--secondary))_0%,hsl(var(--card))_100%)]">
+          <div className="flex items-center justify-between text-[9px] sm:text-[10px] font-mono tracking-[0.14em] sm:tracking-[0.18em] uppercase text-foreground/55 mb-1.5 sm:mb-2">
+            <span className="truncate">{product.brand}</span>
+          </div>
+
+          <h3 className="font-serif text-[14px] sm:text-[18px] leading-[1.2] text-foreground mb-2 sm:mb-3 line-clamp-2">
+            <span className="bg-[linear-gradient(90deg,#D3B27B,#D3B27B)] bg-[length:0_1px] bg-no-repeat bg-bottom group-hover:bg-[length:100%_1px] transition-all duration-300">
+              {product.name}
+            </span>
+          </h3>
+
+          {product.reviewCount > 0 && (
+            <div className="mb-3 sm:mb-5">
+              <StarRating rating={product.rating} count={product.reviewCount} />
+            </div>
+          )}
+
+          <div className="flex items-center gap-2 mb-3 sm:mb-4 text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.1em] text-foreground/55">
+            <span className={cn('w-1.5 h-1.5 rounded-full', isUnavailable ? 'bg-foreground/30' : 'bg-emerald-500')} aria-hidden />
+            <span>
+              {isUnavailable
+                ? 'Indisponible'
+                : product.availableOfferCount > 1
+                  ? `${product.availableOfferCount} offres en stock`
+                  : 'En stock'}
+            </span>
+            {product.offerCount > 1 && (
+              <span className="text-foreground/35">· {product.offerCount} marchands</span>
+            )}
+          </div>
+
+          <div className="mt-auto flex items-end justify-between gap-2 pt-3 sm:pt-4 border-t border-foreground/10">
+            <div className="min-w-0">
+              <span className="block text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.12em] sm:tracking-[0.16em] text-foreground/55 mb-0.5">
+                à partir de
+              </span>
+              {product.hasPrice ? (
+                <span className={cn('font-serif text-[19px] sm:text-[28px] leading-none text-foreground', isUnavailable && 'text-foreground/55')}>
+                  {product.price.toLocaleString('fr-FR')}
+                  <span className="text-[12px] sm:text-[16px] align-top">€</span>
+                </span>
+              ) : (
+                <span className="text-[12px] sm:text-sm font-medium text-foreground/55">Prix indisponible</span>
+              )}
+            </div>
+
+            <span className="shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-foreground text-white flex items-center justify-center group-hover:bg-primary transition-colors">
+              <ArrowRight size={14} />
+            </span>
+          </div>
+        </div>
+      )}
     </Link>
   )
 }
