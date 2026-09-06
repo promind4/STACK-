@@ -1,201 +1,95 @@
-'use client';
+'use client'
 
-import Link from 'next/link';
-import Image from 'next/image';
-
-const CHALLENGES = [
-  { num: '01', label: 'Mon espace est bruyant',  labelMobile: 'Espace bruyant',  href: '/categorie/espace-bruyant' },
-  { num: '02', label: 'Je veux du plug & play',  labelMobile: 'Plug & play',     href: '/categorie/plug-and-play' },
-  { num: '03', label: 'Budget serré (< 200€)',   labelMobile: '< 200 €',         href: '/categorie/petit-budget' },
-  { num: '04', label: 'Je crée en déplacement',  labelMobile: 'Nomade',          href: '/categorie/createur-nomade' },
-];
+import Image from 'next/image'
+import Link from 'next/link'
+import { HeroContextGrid } from '@/components/home/HeroContextGrid'
 
 const TRUST = [
-  {
-    label: 'Sélection experte',
-    sub: 'Testé en studio',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D3B27B" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M20 7 9 18l-5-5"/>
-      </svg>
-    ),
-  },
-  {
-    label: 'Prix temps réel',
-    sub: 'Multi-boutiques',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D3B27B" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>
-      </svg>
-    ),
-  },
-  {
-    label: 'Compatibilité',
-    sub: 'Vérifiée à chaque ajout',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D3B27B" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 12h18"/><path d="M12 3v18"/><circle cx="12" cy="12" r="9"/>
-      </svg>
-    ),
-  },
-  {
-    label: 'Indépendance',
-    sub: 'Aucun sponsor',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D3B27B" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4Z"/>
-      </svg>
-    ),
-  },
-];
+  ['Offres comparées', 'Selon les marchands disponibles'],
+  ['Stock affiché', "D'après les données reçues"],
+  ['Choix contextualisé', 'Usage, budget, environnement'],
+  ['Liens directs', 'Vers les offres marchandes'],
+] as const
 
 export function HeroSection() {
   return (
-    <section
-      className="relative overflow-hidden"
-    >
-      {/* Image de fond HERO1 */}
+    <section className="relative isolate overflow-hidden bg-[var(--home-ink)] text-white">
       <Image
-        src="/images/hero1.webp"
-        alt="Studio créatif Fluxlab — setup audio vidéo streaming"
+        src="/images/home/hero-cinematic.webp"
+        alt=""
         fill
-        sizes="100vw"
-        className="object-cover object-center"
         priority
-        quality={90}
+        sizes="100vw"
+        className="-z-30 object-cover object-[72%_center] opacity-85 sm:object-[68%_center] lg:opacity-95"
       />
+      <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,#080705_0%,rgba(8,7,5,.97)_34%,rgba(8,7,5,.5)_62%,rgba(8,7,5,.32)_78%,rgba(8,7,5,.7)_100%)]" aria-hidden />
+      <div className="absolute inset-0 -z-20 bg-[linear-gradient(180deg,rgba(8,7,5,.18)_0%,transparent_52%,#080705_96%)]" aria-hidden />
+      <div className="home-glow absolute right-[14%] top-[6%] -z-10 h-[420px] w-[420px] rounded-full bg-primary/15 blur-3xl" aria-hidden />
 
-      {/* Overlay sombre pour lisibilité du texte */}
-      <div
-        className="absolute inset-0 z-[1] pointer-events-none"
-        style={{
-          background: `
-            linear-gradient(to right, rgba(10,10,10,.78) 0%, rgba(10,10,10,.45) 55%, rgba(10,10,10,.2) 100%),
-            linear-gradient(to bottom, rgba(10,10,10,.35) 0%, transparent 25%, transparent 70%, rgba(10,10,10,.55) 100%)
-          `
-        }}
-        aria-hidden
-      />
+      <svg className="pointer-events-none absolute inset-0 -z-10 hidden h-full w-full lg:block" viewBox="0 0 1600 980" preserveAspectRatio="none" fill="none" aria-hidden>
+        <path className="home-link-line" pathLength="1" d="M765 440 C900 415 930 260 1085 250 S1270 330 1450 240" stroke="rgba(211,168,95,.52)" strokeWidth="1" />
+        <path className="home-link-line" pathLength="1" d="M820 520 C980 590 1065 620 1190 560 S1370 470 1510 515" stroke="rgba(211,168,95,.38)" strokeWidth="1" />
+        <circle cx="935" cy="337" r="4" fill="#D3A85F" />
+        <circle cx="1190" cy="560" r="4" fill="#D3A85F" />
+        <circle cx="1450" cy="240" r="3" fill="#D3A85F" />
+      </svg>
 
-      {/* Halo or subtil */}
-      <div
-        className="absolute -top-32 right-[-8%] w-[600px] h-[600px] rounded-full pointer-events-none z-[1]"
-        style={{ background: 'radial-gradient(circle, rgba(211,178,123,.2) 0%, transparent 65%)', filter: 'blur(30px)' }}
-        aria-hidden
-      />
+      <div className="pointer-events-none absolute left-5 top-[35%] hidden -translate-y-1/2 items-center gap-5 xl:flex" aria-hidden>
+        <span className="h-28 w-px bg-primary/35" />
+        <span className="frame-label rotate-180 text-primary/55 [writing-mode:vertical-rl]">48° 51′ N · Paris</span>
+      </div>
+      <div className="pointer-events-none absolute right-[18%] top-[24%] z-10 hidden text-right lg:block" aria-hidden>
+        <span className="frame-label block text-primary">Capter avec clarté</span>
+        <span className="mt-1 block text-[9px] font-mono uppercase tracking-[.18em] text-white/45">voix · présence · détail</span>
+      </div>
+      <div className="pointer-events-none absolute right-[5%] top-[49%] z-10 hidden text-right xl:block" aria-hidden>
+        <span className="frame-label block text-primary">Créer sans compromis</span>
+        <span className="mt-1 block text-[9px] font-mono uppercase tracking-[.18em] text-white/45">image · lumière · rythme</span>
+      </div>
 
-      <div className="relative z-10 max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-16 pt-32 pb-20 min-h-[90vh] flex flex-col">
-
-        {/* Eyebrow row */}
-        <div className="flex items-center justify-between mb-16 pt-10">
-          <div className="flex items-center gap-3">
-            <span className="block w-8 h-px bg-primary" aria-hidden />
-            <span className="frame-label text-primary">Le Labo Fluxlab — N° 01</span>
-          </div>
-          <div className="hidden md:flex items-center gap-6 text-[11px] font-mono text-white/45">
-            <span>Audio</span>
-            <span className="text-white/20">/</span>
-            <span>Vidéo</span>
-            <span className="text-white/20">/</span>
-            <span>Streaming</span>
-          </div>
+      <div className="mx-auto flex min-h-[900px] max-w-[1600px] flex-col px-5 pb-10 pt-32 sm:px-8 lg:min-h-[960px] lg:px-16 lg:pt-44">
+        <div className="flex items-center justify-between gap-6">
+          <p className="frame-label flex items-center gap-3 text-primary">
+            <span className="h-px w-8 bg-primary" aria-hidden />
+            Matériel créatif · choisi pour former un tout
+          </p>
+          <p className="hidden text-[10px] font-mono uppercase tracking-[.18em] text-white/40 md:block">Audio · Vidéo · Streaming</p>
         </div>
 
-        {/* 12-col grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center flex-1">
-
-          {/* Copy — pleine largeur maintenant que l'image est en fond */}
-          <div className="lg:col-span-8 max-w-[820px]">
-
-            <h1 className="font-serif text-white tracking-tight leading-[1.02] sm:leading-[0.98] text-[38px] sm:text-[56px] md:text-[72px] lg:text-[88px] mb-8">
-              Trouvez enfin<br />
-              le setup parfait<br />
-              <span className="animate-gradient-text italic font-normal">pour votre création.</span>
+        <div className="flex flex-1 items-center py-16 lg:py-20">
+          <div className="max-w-[760px]">
+            <h1 className="font-serif text-[43px] leading-[.98] tracking-[-.035em] text-[var(--home-ivory)] sm:text-[62px] md:text-[72px] lg:text-[86px]">
+              Le matériel qui<br />
+              donne forme à<br />
+              <span className="animate-gradient-text italic font-normal">vos idées.</span>
             </h1>
-
-            <p className="text-[18px] md:text-[20px] text-white/65 leading-[1.55] font-light max-w-[560px] mb-12">
-              Comparez les prix des meilleures boutiques, vérifiez la compatibilité de votre matériel et laissez notre configurateur IA vous guider vers le setup idéal.
+            <div className="mt-7 h-px w-8 bg-primary" aria-hidden />
+            <p className="mt-7 max-w-[570px] text-[17px] font-light leading-[1.7] text-white/65 sm:text-lg">
+              Comparez les prix, vérifiez les compatibilités et composez un équipement adapté à votre usage comme à votre budget.
             </p>
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-16">
-              <Link
-                href="/configurateur"
-                className="group inline-flex items-center justify-center gap-3 h-14 px-8 rounded-full bg-primary text-foreground font-medium text-[14px] tracking-wide uppercase transition-all hover:shadow-btn hover:bg-primary-hover"
-              >
-                <span>Trouver mon setup idéal en 2 min</span>
-                <svg className="group-hover:translate-x-1 transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-                </svg>
+            <div className="mt-9 flex flex-col items-start gap-5 sm:flex-row sm:items-center">
+              <Link href="/configurateur" className="group inline-flex h-14 items-center justify-center gap-5 rounded-[2px] bg-primary px-8 text-[11px] font-medium uppercase tracking-[.16em] text-foreground transition-all hover:bg-primary-hover hover:shadow-btn">
+                Composer mon setup
+                <span className="text-base transition-transform duration-300 group-hover:translate-x-1" aria-hidden>→</span>
               </Link>
-
-              <Link
-                href="/categorie/audio"
-                className="group inline-flex items-center justify-center gap-3 h-14 px-8 rounded-full border border-white/20 text-white text-[14px] tracking-wide uppercase font-medium transition-all hover:bg-white/5 hover:border-white/40"
-              >
-                <span>Voir les produits</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="opacity-60 group-hover:opacity-100 transition-opacity" aria-hidden>
-                  <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
-                </svg>
+              <Link href="/categorie/audio" className="group inline-flex h-12 items-center gap-3 border-b border-white/25 px-1 text-[11px] font-medium uppercase tracking-[.16em] text-white/80 transition-colors hover:border-primary hover:text-primary">
+                Explorer par univers <span aria-hidden>↗</span>
               </Link>
             </div>
 
-            {/* Trust strip */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-6 max-w-[640px] pt-10 border-t border-white/10">
-              {TRUST.map((t) => (
-                <div key={t.label} className="flex flex-col gap-2">
-                  {t.icon}
-                  <span className="text-[12px] text-white font-medium tracking-wide">{t.label}</span>
-                  <span className="text-[11px] text-white/45 leading-snug">{t.sub}</span>
+            <div className="mt-12 grid max-w-[650px] grid-cols-2 gap-x-6 gap-y-5 border-t border-white/10 pt-7 sm:grid-cols-4">
+              {TRUST.map(([label, detail]) => (
+                <div key={label}>
+                  <span className="block text-[11px] font-medium text-white/90">{label}</span>
+                  <span className="mt-1 block text-[9px] leading-relaxed text-white/40">{detail}</span>
                 </div>
               ))}
             </div>
           </div>
-
         </div>
 
-        {/* Challenge bubbles */}
-        <div className="relative z-10 mt-12 pt-10 border-t border-white/10">
-          <div className="flex items-center justify-between mb-5">
-            <span className="frame-label text-white/55">Diagnostic rapide — par contrainte</span>
-            <span className="text-[11px] font-mono text-white/35">04 entrées</span>
-          </div>
-          {/* Desktop bubbles */}
-          <div className="hidden sm:flex flex-wrap items-center gap-3">
-            {CHALLENGES.map((c) => (
-              <Link
-                key={c.href}
-                href={c.href}
-                className="group inline-flex items-center gap-2 pl-2 pr-5 py-2 rounded-full border border-white/15 transition-all hover:bg-white/[0.08] hover:border-primary/50"
-                style={{ background: 'rgba(255,255,255,0.03)' }}
-              >
-                <span className="frame-label text-primary px-2 py-1 rounded-full" style={{ background: 'rgba(211,178,123,0.15)' }}>
-                  {c.num}
-                </span>
-                <span className="text-[13px] text-white/85 font-medium group-hover:text-white transition-colors">{c.label}</span>
-              </Link>
-            ))}
-          </div>
-
-          {/* Mobile bubbles — grille 2×2 alignée */}
-          <div className="grid grid-cols-2 gap-2 sm:hidden">
-            {CHALLENGES.map((c) => (
-              <Link
-                key={c.href}
-                href={c.href}
-                className="flex items-center gap-2 pl-2 pr-3 py-2 rounded-full border border-white/15 transition-all hover:border-primary/50"
-                style={{ background: 'rgba(255,255,255,0.04)' }}
-              >
-                <span className="frame-label text-primary px-1.5 py-0.5 rounded-full text-[8px] shrink-0" style={{ background: 'rgba(211,178,123,0.15)' }}>
-                  {c.num}
-                </span>
-                <span className="text-[11px] text-white/85 truncate">{c.labelMobile}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-
+        <HeroContextGrid />
       </div>
     </section>
-  );
+  )
 }

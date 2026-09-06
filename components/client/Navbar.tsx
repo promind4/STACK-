@@ -397,6 +397,7 @@ export function Navbar() {
   // Homepage and configurateur have dark hero — navbar starts transparent
   const isDarkHeroPage = pathname === '/' || pathname === '/configurateur'
   const isTransparent = isDarkHeroPage && !isScrolled && !activeMenu
+  const isPremiumHome = pathname === '/' && !isScrolled && !activeMenu
 
   const navBg = isScrolled || activeMenu
     ? 'bg-white/90 backdrop-blur-md border-b border-border/70 shadow-[0_4px_20px_rgba(15,15,15,.04)]'
@@ -407,16 +408,19 @@ export function Navbar() {
   return (
     <motion.nav
       onMouseLeave={handleMouseLeave}
-      className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-300', navBg)}
+      className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-300', isPremiumHome && 'lg:top-5', navBg)}
     >
-      <div className="max-w-[1600px] mx-auto px-5 sm:px-8">
+      <div className={cn(
+        'max-w-[1600px] mx-auto px-5 sm:px-8',
+        isPremiumHome && 'lg:px-7 lg:rounded-[10px] lg:border lg:border-white/45 lg:bg-[#f2ebdf]/95 lg:shadow-[0_16px_42px_rgba(0,0,0,.2)] lg:backdrop-blur-md'
+      )}>
         <div className={cn(
           'flex items-center justify-between transition-all duration-300',
           isScrolled || activeMenu ? 'py-4' : 'py-5'
         )}>
 
           {/* Logo */}
-          <FluxlabLogo variant={isTransparent ? 'dark' : 'light'} />
+          <FluxlabLogo variant={isPremiumHome ? 'light' : isTransparent ? 'dark' : 'light'} />
 
           {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-8">
@@ -434,7 +438,7 @@ export function Navbar() {
                       'hover-rule text-[13px] font-medium tracking-wide transition-colors',
                       activeMenu === menu.id || isActive
                         ? 'text-primary font-semibold active'
-                        : isTransparent
+                        : isTransparent && !isPremiumHome
                           ? 'text-white/85 hover:text-white'
                           : 'text-foreground/85 hover:text-foreground'
                     )}
@@ -446,7 +450,7 @@ export function Navbar() {
               )
             })}
 
-            <span className={cn('block w-px h-4', isTransparent ? 'bg-white/15' : 'bg-border')} aria-hidden />
+            <span className={cn('block w-px h-4', isTransparent && !isPremiumHome ? 'bg-white/15' : 'bg-border')} aria-hidden />
 
             <div className="relative py-2">
               <Link
@@ -455,7 +459,7 @@ export function Navbar() {
                   'hover-rule text-[13px] font-medium tracking-wide transition-colors',
                   pathname?.startsWith('/guides')
                     ? 'text-primary font-semibold active'
-                    : isTransparent
+                      : isTransparent && !isPremiumHome
                       ? 'text-white/85 hover:text-white'
                       : 'text-foreground/85 hover:text-foreground'
                 )}
@@ -471,7 +475,7 @@ export function Navbar() {
               {isSearchOpen ? (
                 <NavSearch
                   key="search-open"
-                  isTransparent={isTransparent}
+                  isTransparent={isTransparent && !isPremiumHome}
                   onClose={() => setIsSearchOpen(false)}
                 />
               ) : (
@@ -486,7 +490,7 @@ export function Navbar() {
                   onClick={() => setIsSearchOpen(true)}
                   className={cn(
                     'hidden lg:flex w-10 h-10 rounded-full border items-center justify-center transition-colors',
-                    isTransparent
+                    isTransparent && !isPremiumHome
                       ? 'border-white/15 text-white/70 hover:text-primary hover:border-primary/60'
                       : 'border-border text-foreground/70 hover:text-primary hover:border-primary/60'
                   )}
