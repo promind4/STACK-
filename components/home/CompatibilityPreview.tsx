@@ -5,11 +5,45 @@ import { cleanImageUrl } from '@/lib/utils'
 import type { Product } from '@/types/database'
 
 const roleLabels = ['Interface', 'Voix', 'Image'] as const
+type EquipmentRole = (typeof roleLabels)[number] | 'Équipement'
+
+function inferRole(product: Pick<Product, 'slug' | 'name'>): EquipmentRole {
+  const descriptor = `${product.slug} ${product.name}`
+    .toLocaleLowerCase('fr-FR')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+
+  if (/\b(interface|focusrite|scarlett|audient|universal[\s-]+audio)\b/.test(descriptor)) {
+    return roleLabels[0]
+  }
+
+  if (/\b(camera|sony|zv|canon|lumix|webcam)\b/.test(descriptor)) {
+    return roleLabels[2]
+  }
+
+  if (/\b(micro(?:phone)?|mic|shure|sm7b|audio[\s-]+technica|rode|røde)\b/.test(descriptor)) {
+    return roleLabels[1]
+  }
+
+  return 'Équipement'
+}
+
+function responsiveGridLayout(nodeCount: number) {
+  if (nodeCount <= 1) {
+    return 'mx-auto w-full max-w-md grid-cols-1 lg:max-w-none xl:max-w-none'
+  }
+
+  if (nodeCount === 2) {
+    return 'mx-auto w-full max-w-4xl grid-cols-1 sm:grid-cols-2 lg:max-w-none lg:grid-cols-1 xl:max-w-none'
+  }
+
+  return 'w-full grid-cols-1 sm:grid-cols-3 lg:grid-cols-1'
+}
 
 const nodeLayouts = [
-  'lg:left-[12%] lg:right-[12%] lg:top-[4%] lg:h-[22%]',
-  'lg:bottom-[4%] lg:left-0 lg:h-[22%] lg:w-[48%]',
-  'lg:bottom-[4%] lg:right-0 lg:h-[22%] lg:w-[48%]',
+  'xl:left-[12%] xl:right-[12%] xl:top-[4%] xl:h-[22%]',
+  'xl:bottom-[4%] xl:left-0 xl:h-[22%] xl:w-[48%]',
+  'xl:bottom-[4%] xl:right-0 xl:h-[22%] xl:w-[48%]',
 ] as const
 
 const connections = [
@@ -20,6 +54,7 @@ const connections = [
 
 export function CompatibilityPreview({ products }: { products: Product[] }) {
   const nodes = products.slice(0, roleLabels.length)
+  const gridLayout = responsiveGridLayout(nodes.length)
 
   return (
     <section aria-labelledby="compatibility-title" className="flex h-full flex-col overflow-hidden bg-[#0b0a08] p-6 lg:p-7 xl:p-9">
@@ -28,19 +63,19 @@ export function CompatibilityPreview({ products }: { products: Product[] }) {
         Un ensemble, <span className="italic text-primary">pas une liste.</span>
       </h3>
 
-      <div className="relative mt-7 grid flex-1 grid-cols-1 gap-3 sm:grid-cols-3 lg:block lg:min-h-[440px]">
+      <div className={`relative mt-7 grid gap-3 xl:block xl:min-h-[440px] xl:flex-1 ${gridLayout}`}>
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 hidden bg-[radial-gradient(circle_at_50%_47%,rgba(211,168,95,.16),transparent_27%),radial-gradient(circle_at_20%_78%,rgba(255,255,255,.035),transparent_32%),radial-gradient(circle_at_84%_18%,rgba(255,255,255,.025),transparent_28%)] lg:block"
+          className="pointer-events-none absolute inset-0 hidden bg-[radial-gradient(circle_at_50%_47%,rgba(211,168,95,.16),transparent_27%),radial-gradient(circle_at_20%_78%,rgba(255,255,255,.035),transparent_32%),radial-gradient(circle_at_84%_18%,rgba(255,255,255,.025),transparent_28%)] xl:block"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 hidden opacity-25 [background-image:linear-gradient(rgba(255,255,255,.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.018)_1px,transparent_1px)] [background-size:28px_28px] lg:block"
+          className="pointer-events-none absolute inset-0 hidden opacity-25 [background-image:linear-gradient(rgba(255,255,255,.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.018)_1px,transparent_1px)] [background-size:28px_28px] xl:block"
         />
 
         <svg
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 hidden h-full w-full lg:block"
+          className="pointer-events-none absolute inset-0 hidden h-full w-full xl:block"
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
         >
@@ -53,13 +88,13 @@ export function CompatibilityPreview({ products }: { products: Product[] }) {
           ))}
         </svg>
 
-        <div className="relative z-10 flex min-h-24 items-center justify-center border border-primary/35 bg-[#12100c]/95 px-5 py-4 text-center shadow-[0_0_40px_rgba(211,168,95,.08)] sm:col-span-3 lg:absolute lg:left-1/2 lg:top-[37%] lg:h-[20%] lg:min-h-0 lg:w-[42%] lg:-translate-x-1/2 lg:px-3 lg:py-3">
-          {nodes[0] && <span aria-hidden="true" className="absolute left-1/2 top-0 hidden h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#0b0a08] bg-primary shadow-[0_0_12px_rgba(211,168,95,.75)] lg:block" />}
-          {nodes[1] && <span aria-hidden="true" className="absolute bottom-0 left-[28.57%] hidden h-2 w-2 -translate-x-1/2 translate-y-1/2 rounded-full border border-[#0b0a08] bg-primary shadow-[0_0_12px_rgba(211,168,95,.75)] lg:block" />}
-          {nodes[2] && <span aria-hidden="true" className="absolute bottom-0 left-[71.43%] hidden h-2 w-2 -translate-x-1/2 translate-y-1/2 rounded-full border border-[#0b0a08] bg-primary shadow-[0_0_12px_rgba(211,168,95,.75)] lg:block" />}
+        <div className="relative z-10 flex min-h-24 items-center justify-center border border-primary/35 bg-[#12100c]/95 px-5 py-4 text-center shadow-[0_0_40px_rgba(211,168,95,.08)] sm:col-span-full xl:absolute xl:left-1/2 xl:top-[37%] xl:h-[20%] xl:min-h-0 xl:w-[42%] xl:-translate-x-1/2 xl:px-3 xl:py-3">
+          {nodes[0] && <span aria-hidden="true" className="absolute left-1/2 top-0 hidden h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#0b0a08] bg-primary shadow-[0_0_12px_rgba(211,168,95,.75)] xl:block" />}
+          {nodes[1] && <span aria-hidden="true" className="absolute bottom-0 left-[28.57%] hidden h-2 w-2 -translate-x-1/2 translate-y-1/2 rounded-full border border-[#0b0a08] bg-primary shadow-[0_0_12px_rgba(211,168,95,.75)] xl:block" />}
+          {nodes[2] && <span aria-hidden="true" className="absolute bottom-0 left-[71.43%] hidden h-2 w-2 -translate-x-1/2 translate-y-1/2 rounded-full border border-[#0b0a08] bg-primary shadow-[0_0_12px_rgba(211,168,95,.75)] xl:block" />}
           <div>
             <strong className="block font-serif text-lg font-normal text-white">Votre setup</strong>
-            <span className="mt-1 block text-[9px] font-mono uppercase tracking-[.13em] text-white/38">Un ensemble cohérent</span>
+            <span className="mt-1 block text-[10px] font-mono uppercase tracking-[.13em] text-white/65">Un ensemble cohérent</span>
           </div>
         </div>
 
@@ -69,31 +104,31 @@ export function CompatibilityPreview({ products }: { products: Product[] }) {
           return (
             <article
               key={product.id}
-              className={`relative z-10 flex min-w-0 items-center gap-3 border border-white/12 bg-[#11100d]/95 p-2.5 sm:flex-col sm:items-stretch sm:p-3 lg:absolute lg:flex-row lg:items-center lg:p-2.5 ${nodeLayouts[index]}`}
+              className={`relative z-10 flex min-w-0 items-center gap-3 border border-white/12 bg-[#11100d]/95 p-2.5 sm:flex-col sm:items-stretch sm:p-3 lg:flex-row lg:items-center lg:p-2.5 xl:absolute ${nodeLayouts[index]}`}
             >
               <span
                 aria-hidden="true"
-                className={`absolute left-1/2 hidden h-2 w-2 -translate-x-1/2 rounded-full border border-[#0b0a08] bg-primary shadow-[0_0_12px_rgba(211,168,95,.75)] lg:block ${index === 0 ? 'bottom-0 translate-y-1/2' : 'top-0 -translate-y-1/2'}`}
+                className={`absolute left-1/2 hidden h-2 w-2 -translate-x-1/2 rounded-full border border-[#0b0a08] bg-primary shadow-[0_0_12px_rgba(211,168,95,.75)] xl:block ${index === 0 ? 'bottom-0 translate-y-1/2' : 'top-0 -translate-y-1/2'}`}
               />
-              <div className="relative h-[76px] w-[76px] shrink-0 overflow-hidden bg-white sm:h-24 sm:w-full lg:h-[72px] lg:w-[72px]">
+              <div className="relative h-[76px] w-[76px] shrink-0 overflow-hidden bg-white sm:h-24 sm:w-full lg:h-[72px] lg:w-[72px] xl:h-16 xl:w-16">
                 {imageUrl ? (
                   <Image
                     src={imageUrl}
-                    alt={product.name}
+                    alt=""
                     fill
                     sizes="(min-width: 1024px) 72px, (min-width: 640px) 28vw, 76px"
                     className="object-contain p-2 mix-blend-multiply"
                     unoptimized={isDirectSupabaseStorageUrl(imageUrl)}
                   />
                 ) : (
-                  <span className="flex h-full items-center justify-center px-2 text-center text-[8px] font-mono uppercase tracking-[.12em] text-black/35">
+                  <span className="flex h-full items-center justify-center px-2 text-center text-[10px] font-mono uppercase tracking-[.1em] text-black/65">
                     Visuel indisponible
                   </span>
                 )}
               </div>
               <div className="min-w-0">
-                <span className="frame-label text-primary/75">{roleLabels[index]}</span>
-                <strong className="mt-1.5 line-clamp-2 block font-serif text-sm font-normal leading-snug text-white/90">
+                <span className="frame-label text-primary/75">{inferRole(product)}</span>
+                <strong className="mt-1.5 block break-words font-serif text-sm font-normal leading-snug text-white/90 xl:text-[12px]">
                   {product.name}
                 </strong>
               </div>
@@ -103,7 +138,7 @@ export function CompatibilityPreview({ products }: { products: Product[] }) {
       </div>
 
       <Link href="/configurateur" className="group mt-7 inline-flex border-t border-white/10 pt-5 text-[10px] font-mono uppercase tracking-[.13em] text-primary">
-        Tester la cohérence de mon setup <span className="ml-2 transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+        Tester la cohérence de mon setup <span className="ml-2 transition-transform group-hover:translate-x-1 motion-reduce:transform-none motion-reduce:transition-none" aria-hidden="true">→</span>
       </Link>
     </section>
   )
