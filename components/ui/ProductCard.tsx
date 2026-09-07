@@ -100,7 +100,7 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
       className={cn(
         'group relative bg-card rounded-2xl border overflow-hidden',
         variant === 'home-showcase' ? 'home-showcase-card' : '',
-        variant === 'home-showcase' ? 'aspect-[4/5]' : '',
+        variant === 'home-showcase' ? 'xl:aspect-[4/5]' : '',
         'transition-all duration-300',
         isUnavailable
           ? 'border-border/70 opacity-80'
@@ -111,13 +111,13 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
       <Link
         href={product.href}
         className={variant === 'home-showcase'
-          ? 'grid h-full grid-rows-[52%_48%] xl:grid-rows-[55%_45%]'
+          ? 'flex h-full flex-col xl:grid xl:grid-rows-[55%_45%]'
           : 'flex h-full flex-col'}
       >
       {/* Image zone */}
       <div className={cn(
         'bg-white relative overflow-hidden',
-        variant === 'home-showcase' ? 'h-full' : 'aspect-square'
+        variant === 'home-showcase' ? 'aspect-square xl:aspect-auto xl:h-full' : 'aspect-square'
       )}>
         {product.badge && (
           <span className="absolute top-3 left-3 z-10">
@@ -152,7 +152,7 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
 
       {/* Info zone */}
       {variant === 'home-showcase' ? (
-        <div className="flex min-h-0 flex-col bg-white p-2 sm:p-3.5 xl:p-2">
+        <div className="flex min-h-0 flex-col bg-white p-3 sm:p-3.5 xl:p-2">
           <div className="mb-0.5 flex items-center text-[10px] font-mono uppercase tracking-[0.12em] text-foreground/70 sm:mb-1 xl:mb-0.5">
             <span className="truncate">{product.brand}</span>
           </div>
