@@ -96,25 +96,28 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
   }
 
   return (
-    <Link
-      href={product.href}
+    <article
       className={cn(
-        'group bg-card rounded-2xl border overflow-hidden',
+        'group relative bg-card rounded-2xl border overflow-hidden',
         variant === 'home-showcase' ? 'home-showcase-card' : '',
-        variant === 'home-showcase'
-          ? 'flex flex-col xl:aspect-[4/5] xl:grid xl:grid-rows-[55%_45%]'
-          : 'flex flex-col',
+        variant === 'home-showcase' ? 'aspect-[4/5]' : '',
         'transition-all duration-300',
         isUnavailable
           ? 'border-border/70 opacity-80'
           : 'border-border/70 hover:border-primary/60 hover:shadow-card',
         className
       )}
+    >
+      <Link
+        href={product.href}
+        className={variant === 'home-showcase'
+          ? 'grid h-full grid-rows-[52%_48%] xl:grid-rows-[55%_45%]'
+          : 'flex h-full flex-col'}
       >
       {/* Image zone */}
       <div className={cn(
         'bg-white relative overflow-hidden',
-        variant === 'home-showcase' ? 'aspect-square xl:aspect-auto xl:h-full' : 'aspect-square'
+        variant === 'home-showcase' ? 'h-full' : 'aspect-square'
       )}>
         {product.badge && (
           <span className="absolute top-3 left-3 z-10">
@@ -126,20 +129,6 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
             <ProductBadge variant={editorialBadge} />
           </span>
         )}
-
-        <button
-          type="button"
-          aria-label={wished ? 'Retirer des favoris' : 'Ajouter aux favoris'}
-          onClick={handleWishlist}
-          className={cn(
-            'absolute top-2 right-2 sm:top-3 sm:right-3 z-10 w-7 h-7 sm:w-8 sm:h-8 rounded-full',
-            'bg-white/95 backdrop-blur border border-border/70',
-            'flex items-center justify-center transition-colors',
-            wished ? 'text-primary' : 'text-foreground/60 hover:text-primary'
-          )}
-        >
-          <Heart size={14} fill={wished ? 'currentColor' : 'none'} />
-        </button>
 
         {product.imageUrl && !imageFailed ? (
           <div className="absolute inset-0 flex items-center justify-center p-4 transition-transform duration-500 group-hover:scale-[1.035]">
@@ -163,28 +152,35 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
 
       {/* Info zone */}
       {variant === 'home-showcase' ? (
-        <div className="min-h-[128px] flex flex-col flex-1 bg-white p-3 sm:p-3.5 xl:min-h-0 xl:p-2">
-          <div className="mb-1 flex items-center text-[9px] font-mono uppercase tracking-[0.14em] text-foreground/55 xl:mb-0.5">
+        <div className="flex min-h-0 flex-col bg-white p-2 sm:p-3.5 xl:p-2">
+          <div className="mb-0.5 flex items-center text-[10px] font-mono uppercase tracking-[0.12em] text-foreground/70 sm:mb-1 xl:mb-0.5">
             <span className="truncate">{product.brand}</span>
           </div>
 
-          <h3 className="mb-1 font-serif text-[14px] leading-[1.2] text-foreground line-clamp-2 xl:mb-0.5">
+          <h3 className="mb-0.5 font-serif text-[14px] leading-[1.2] text-foreground line-clamp-1 sm:mb-1 sm:line-clamp-2 xl:mb-0.5">
             <span className="bg-[linear-gradient(90deg,#D3B27B,#D3B27B)] bg-[length:0_1px] bg-no-repeat bg-bottom transition-all duration-300 group-hover:bg-[length:100%_1px]">
               {product.name}
             </span>
           </h3>
 
-          <div className="mb-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-[9px] font-mono leading-tight text-foreground/55 xl:mb-1">
+          <div className="mb-1 flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[10px] font-mono leading-tight text-foreground/70 xl:mb-1">
             {product.reviewCount > 0 && (
               <span className="flex items-center gap-1 whitespace-nowrap">
                 <Star size={10} fill="currentColor" className="text-primary" />
-                <span className="font-medium text-foreground/75">{product.rating.toFixed(1)}</span>
+                <span className="font-medium text-foreground/80">{product.rating.toFixed(1)}</span>
                 <span>{product.reviewCount.toLocaleString('fr-FR')} avis</span>
               </span>
             )}
             <span className="flex min-w-0 items-center gap-1">
               <span className={cn('h-1.5 w-1.5 shrink-0 rounded-full', isUnavailable ? 'bg-foreground/30' : 'bg-emerald-500')} aria-hidden />
-              <span>
+              <span className="sm:hidden">
+                {isUnavailable
+                  ? 'Indisponible'
+                  : product.availableOfferCount > 1
+                    ? `${product.availableOfferCount} offres`
+                    : 'En stock'}
+              </span>
+              <span className="hidden sm:inline">
                 {isUnavailable
                   ? 'Indisponible'
                   : product.availableOfferCount > 1
@@ -193,20 +189,23 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
               </span>
             </span>
             {product.offerCount > 1 && (
-              <span className="whitespace-nowrap text-foreground/45">· {product.offerCount} marchands</span>
+              <span className="whitespace-nowrap text-foreground/70" aria-label={`${product.offerCount} marchands`}>
+                <span className="sm:hidden">· {product.offerCount} march.</span>
+                <span className="hidden sm:inline">· {product.offerCount} marchands</span>
+              </span>
             )}
           </div>
 
           <div className="mt-auto flex items-end justify-between gap-2 border-t border-foreground/10 pt-1.5">
             <div className="min-w-0">
-              <span className="mb-0.5 block text-[9px] font-mono uppercase tracking-[0.12em] text-foreground/55">à partir de</span>
+              <span className="sr-only sm:not-sr-only mb-0.5 block text-[10px] font-mono uppercase tracking-[0.12em] text-foreground/70">à partir de</span>
               {product.hasPrice ? (
-                <span className={cn('whitespace-nowrap font-serif text-[19px] leading-none text-foreground xl:text-[23px]', isUnavailable && 'text-foreground/55')}>
+                <span className={cn('whitespace-nowrap font-serif text-[19px] leading-none text-foreground xl:text-[23px]', isUnavailable && 'text-foreground/65')}>
                   {product.price.toLocaleString('fr-FR')}
                   <span className="align-top text-[12px] xl:text-[14px]">€</span>
                 </span>
               ) : (
-                <span className="whitespace-nowrap text-[12px] font-medium text-foreground/55">Prix indisponible</span>
+                <span className="whitespace-nowrap text-[12px] font-medium text-foreground/65">Prix indisponible</span>
               )}
             </div>
 
@@ -268,6 +267,21 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
           </div>
         </div>
       )}
-    </Link>
+      </Link>
+
+      <button
+        type="button"
+        aria-label={wished ? 'Retirer des favoris' : 'Ajouter aux favoris'}
+        onClick={handleWishlist}
+        className={cn(
+          'absolute top-2 right-2 sm:top-3 sm:right-3 z-20 w-7 h-7 sm:w-8 sm:h-8 rounded-full',
+          'bg-white/95 backdrop-blur border border-border/70',
+          'flex items-center justify-center transition-colors',
+          wished ? 'text-primary' : 'text-foreground/60 hover:text-primary'
+        )}
+      >
+        <Heart size={14} fill={wished ? 'currentColor' : 'none'} />
+      </button>
+    </article>
   )
 }
