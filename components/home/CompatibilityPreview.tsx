@@ -75,7 +75,7 @@ export function CompatibilityPreview({ products }: { products: Product[] }) {
                 aria-hidden="true"
                 className={`absolute left-1/2 hidden h-2 w-2 -translate-x-1/2 rounded-full border border-[#0b0a08] bg-primary shadow-[0_0_12px_rgba(211,168,95,.75)] lg:block ${index === 0 ? 'bottom-0 translate-y-1/2' : 'top-0 -translate-y-1/2'}`}
               />
-              <div className="relative h-[76px] w-[76px] shrink-0 overflow-hidden bg-[#f4f1eb] sm:h-24 sm:w-full lg:h-[72px] lg:w-[72px]">
+              <div className="relative h-[76px] w-[76px] shrink-0 overflow-hidden bg-white sm:h-24 sm:w-full lg:h-[72px] lg:w-[72px]">
                 {imageUrl ? (
                   <Image
                     src={imageUrl}
