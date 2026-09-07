@@ -2,6 +2,7 @@ import Link from 'next/link'
 import type { Product } from '@/types/database'
 import { ProductCard } from '@/components/ui/ProductCard'
 import { CompatibilityPreview } from '@/components/home/CompatibilityPreview'
+import { HomeTrustStrip } from '@/components/home/HomeTrustStrip'
 
 export function HomeProductShowcase({ products }: { products: Product[] }) {
   if (products.length === 0) {
@@ -42,20 +43,7 @@ export function HomeProductShowcase({ products }: { products: Product[] }) {
         </div>
       </div>
 
-      <div className="relative mx-auto grid max-w-[1600px] grid-cols-2 border-x border-b border-[var(--home-rule)] bg-[#0a0907] md:grid-cols-4">
-        {[
-          ['Offres comparées', 'Selon les marchands disponibles'],
-          ['Livraison', 'Conditions affichées par le marchand'],
-          ['Disponibilité', 'Stock visible avant le choix'],
-          ['Décision guidée', 'Besoin, budget, compatibilité'],
-        ].map(([title, detail], index) => (
-          <div key={title} className={`min-h-24 px-5 py-6 ${index > 0 ? 'border-l border-[var(--home-rule)]' : ''} ${index > 1 ? 'border-t border-[var(--home-rule)] md:border-t-0' : ''}`}>
-            <span className="frame-label text-primary">0{index + 1}</span>
-            <strong className="ml-3 text-xs font-medium text-white/80">{title}</strong>
-            <span className="mt-2 block text-[10px] leading-relaxed text-white/35">{detail}</span>
-          </div>
-        ))}
-      </div>
+      <HomeTrustStrip />
     </section>
   )
 }
