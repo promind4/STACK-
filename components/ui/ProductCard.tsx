@@ -75,6 +75,19 @@ function StarRating({ rating, count }: { rating: number; count: number }) {
   )
 }
 
+function getAvailabilityLabel(availableOfferCount: number, isUnavailable: boolean) {
+  if (isUnavailable) return 'Indisponible'
+  if (availableOfferCount > 1) return `${availableOfferCount} offres en stock`
+  if (availableOfferCount === 1) return '1 offre en stock'
+  return 'En stock'
+}
+
+function getMerchantLabel(offerCount: number) {
+  if (offerCount === 1) return '1 marchand'
+  if (offerCount > 1) return `${offerCount} marchands`
+  return null
+}
+
 /* ─── PRODUCT CARD ───────────────────────────────────────── */
 interface ProductCardProps {
   product: DBProduct
@@ -88,6 +101,8 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
   const [wished, setWished] = useState(false)
   const [imageFailed, setImageFailed] = useState(false)
   const isUnavailable = !product.inStock || product.badge === 'out_of_stock'
+  const availabilityLabel = getAvailabilityLabel(product.availableOfferCount, isUnavailable)
+  const merchantLabel = getMerchantLabel(product.offerCount)
 
   const handleWishlist = (e: React.MouseEvent) => {
     e.preventDefault()
@@ -178,20 +193,18 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
                   ? 'Indisponible'
                   : product.availableOfferCount > 1
                     ? `${product.availableOfferCount} offres`
-                    : 'En stock'}
+                    : product.availableOfferCount === 1
+                      ? '1 offre'
+                      : 'En stock'}
               </span>
               <span className="hidden sm:inline">
-                {isUnavailable
-                  ? 'Indisponible'
-                  : product.availableOfferCount > 1
-                    ? `${product.availableOfferCount} offres en stock`
-                    : 'En stock'}
+                {availabilityLabel}
               </span>
             </span>
-            {product.offerCount > 1 && (
-              <span className="whitespace-nowrap text-foreground/70" aria-label={`${product.offerCount} marchands`}>
+            {merchantLabel && (
+              <span className="whitespace-nowrap text-foreground/70" aria-label={merchantLabel}>
                 <span className="sm:hidden">· {product.offerCount} march.</span>
-                <span className="hidden sm:inline">· {product.offerCount} marchands</span>
+                <span className="hidden sm:inline">· {merchantLabel}</span>
               </span>
             )}
           </div>
@@ -235,14 +248,10 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
           <div className="flex items-center gap-2 mb-3 sm:mb-4 text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.1em] text-foreground/55">
             <span className={cn('w-1.5 h-1.5 rounded-full', isUnavailable ? 'bg-foreground/30' : 'bg-emerald-500')} aria-hidden />
             <span>
-              {isUnavailable
-                ? 'Indisponible'
-                : product.availableOfferCount > 1
-                  ? `${product.availableOfferCount} offres en stock`
-                  : 'En stock'}
+              {availabilityLabel}
             </span>
-            {product.offerCount > 1 && (
-              <span className="text-foreground/35">· {product.offerCount} marchands</span>
+            {merchantLabel && (
+              <span className="text-foreground/35">· {merchantLabel}</span>
             )}
           </div>
 

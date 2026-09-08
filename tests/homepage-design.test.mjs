@@ -22,6 +22,8 @@ assert.equal(hero.includes('Prix temps réel'), false, 'unverified freshness cla
 assert.match(card, /interface ProductCardProps\s*{[^}]*\bvariant\?:\s*(?:'default'\s*\|\s*'home-showcase'|'home-showcase'\s*\|\s*'default')/, 'the product card props must declare the homepage showcase variant')
 assert.match(card, /variant\s*===\s*'home-showcase'[\s\S]{0,160}?['"]home-showcase-card['"]/, 'the product card must apply the dedicated home-showcase-card layout marker')
 assert.match(card, /variant\s*===\s*'home-showcase'[\s\S]{0,160}?aspect-\[4\/5\]/, 'the product card must apply the near-square home-showcase geometry')
+assert.match(card, /availableOfferCount\s*===\s*1\)\s*return\s*'1 offre en stock'/, 'the product card must explicitly label one available offer')
+assert.match(card, /offerCount\s*===\s*1\)\s*return\s*'1 marchand'/, 'the product card must use the singular merchant label')
 assert.match(showcase, /variant="home-showcase"/, 'the homepage showcase must use the home-showcase product card variant')
 assert.match(compatibility, /Votre setup/, 'the compatibility graph must be centered on the visitor setup')
 assert.match(compatibility, /roleLabels/, 'the compatibility graph must expose semantic role labels')
