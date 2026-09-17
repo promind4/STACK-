@@ -118,6 +118,7 @@ const CATEGORY_QUESTIONS: Record<string, Question[]> = {
     { num: "02", title: "La surface",         desc: "Traitez en priorité les premières réflexions (côtés et plafond autour du point d'écoute) avant de couvrir toutes les surfaces." },
     { num: "03", title: "Les bass traps",     desc: "Les basses s'accumulent dans les coins de la pièce. Des bass traps en laine minérale dans les angles améliorent significativement le son." },
     { num: "04", title: "Le DIY",             desc: "Des panneaux maison en laine de roche 10cm + tissu acoustique offrent souvent de meilleurs résultats qu'une mousse bas de gamme." },
+  ],
 };
 
 // Fallback générique
