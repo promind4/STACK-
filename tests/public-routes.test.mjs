@@ -20,3 +20,12 @@ test('guides and search import the shared audio scope', () => {
   assert.match(search, /isPublicAudioCategory/)
 })
 
+test('sitemap derives categories and guides from the audio public scope', () => {
+  const sitemap = readFileSync('app/sitemap.ts', 'utf8')
+  assert.match(sitemap, /AUDIO_CATEGORY_SLUGS/)
+  assert.match(sitemap, /isPublicAudioGuide/)
+  assert.match(sitemap, /isPublicAudioCategory/)
+  assert.doesNotMatch(sitemap, /"video", "streaming"/)
+})
+
+

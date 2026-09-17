@@ -15,7 +15,7 @@ const GUIDE_MAP: Record<string, string> = {
   'micros-dynamiques':        'shure-sm7b-vs-rode-podmic',
   'micros-condensateurs':     'meilleur-micro-podcast-2026',
   'micros-usb':               'meilleur-micro-usb-pas-cher-2026',
-  'micros-shotgun':           'setup-youtube-debutant-2026',
+  'micros-shotgun':           'xlr-vs-usb',
   // Interfaces & préamplis
   'cartes-son':               'top-5-interfaces',
   'preamplis':                'scarlett-2i2-4th-gen-shure-sm7b-cloudlifter',
@@ -26,37 +26,13 @@ const GUIDE_MAP: Record<string, string> = {
   'bras-articules':           'enregistrer-podcast-deux-personnes-setup',
   'cable-xlr':                'xlr-vs-usb',
   'traitement-acoustique':    'insonorisation',
-  // Vidéo général
-  'video':                    'setup-youtube-debutant-2026',
-  // Caméras
-  'hybrides-mirrorless':      'setup-youtube-debutant-2026',
-  'webcams-pro':              'setup-streaming-debutant-2026',
-  'action-cams':              'sony-zve10-surchauffe-stream-solutions',
-  // Éclairage
-  'keylight':                 'eclairage-cinematique',
-  'softbox':                  'eclairage-cinematique',
-  'rgb-ambiance':             'eclairage-cinematique',
-  // Optiques
-  'grand-angle':              'setup-youtube-debutant-2026',
-  'zoom-polyvalent':          'setup-youtube-debutant-2026',
-  // Streaming général
-  'streaming':                'setup-streaming-debutant-2026',
-  // Accessoires streaming
-  'fonds-verts':              'fond-flou-stream-petite-chambre',
-  'teleprompteurs':           'setup-streaming-debutant-2026',
-  'cable-management':         'setup-streaming-debutant-2026',
-  'stream-deck':              'elgato-stream-deck-guide-complet',
 };
 const DEFAULT_GUIDE = 'meilleur-micro-podcast-2026';
 
 /* ─── IMAGE DE FOND PAR CATÉGORIE ───────────────────────────
    Images dans /public/images/editorial/
-   bg-general.webp     → universel (HERO1)
    bg-studio-son.webp  → tout ce qui est audio
-   bg-image-lumiere.webp → vidéo / photo
-   bg-streaming.webp   → streaming
    bg-micro.webp / bg-shure.webp / bg-carte-son.webp / bg-casque.webp
-   bg-eclairage.webp / bg-photo.webp
 ─────────────────────────────────────────────────────────── */
 const CATEGORY_BG: Record<string, string> = {
   // ── Audio
@@ -72,24 +48,8 @@ const CATEGORY_BG: Record<string, string> = {
   'bras-articules':        '/images/editorial/bg-studio-son.webp',
   'cable-xlr':             '/images/editorial/bg-studio-son.webp',
   'traitement-acoustique': '/images/editorial/bg-studio-son.webp',
-  // ── Vidéo / Photo
-  'video':                 '/images/editorial/bg-image-lumiere.webp',
-  'hybrides-mirrorless':   '/images/editorial/bg-photo.webp',
-  'webcams-pro':           '/images/editorial/bg-image-lumiere.webp',
-  'action-cams':           '/images/editorial/bg-photo.webp',
-  'keylight':              '/images/editorial/bg-eclairage.webp',
-  'softbox':               '/images/editorial/bg-eclairage.webp',
-  'rgb-ambiance':          '/images/editorial/bg-eclairage.webp',
-  'grand-angle':           '/images/editorial/bg-photo.webp',
-  'zoom-polyvalent':       '/images/editorial/bg-photo.webp',
-  // ── Streaming
-  'streaming':             '/images/editorial/bg-streaming.webp',
-  'fonds-verts':           '/images/editorial/bg-streaming.webp',
-  'teleprompteurs':        '/images/editorial/bg-streaming.webp',
-  'cable-management':      '/images/editorial/bg-streaming.webp',
-  'stream-deck':           '/images/editorial/bg-streaming.webp',
 };
-const DEFAULT_BG = '/images/editorial/bg-general.webp';
+const DEFAULT_BG = '/images/editorial/bg-studio-son.webp';
 
 /* ─── EDITORIAL BADGES ───────────────────────────────────── */
 function computeEditorialBadges(products: Product[], total: number) {

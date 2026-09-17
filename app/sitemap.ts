@@ -2,26 +2,7 @@ import { MetadataRoute } from "next";
 import { createClient } from "@/lib/supabase";
 import { ARTICLES } from "@/lib/articles-meta";
 import { PATHWAYS } from "@/lib/data";
-
-// Real category slugs — must match CATEGORY_METADATA in app/categorie/[slug]/page.tsx
-const CATEGORY_SLUGS = [
-    // Verticals
-    "audio", "video", "streaming",
-    // Audio sub-categories
-    "micros-dynamiques", "micros-condensateurs", "micros-usb", "micros-shotgun",
-    "cartes-son", "preamplis", "casques-studio", "enceintes",
-    "bras-articules", "cable-xlr", "traitement-acoustique",
-    // Video sub-categories
-    "hybrides-mirrorless", "webcams-pro", "action-cams",
-    "keylight", "softbox", "rgb-ambiance",
-    "grand-angle", "zoom-polyvalent",
-    // Streaming sub-categories
-    "fonds-verts", "teleprompteurs", "cable-management",
-    // "logiciels-apps", "design-overlays",
-    "stream-deck",
-    // Problématiques (problem-based routes)
-    "espace-bruyant", "plug-and-play", "petit-budget", "createur-nomade",
-];
+import { AUDIO_CATEGORY_SLUGS, isPublicAudioCategory, isPublicAudioGuide } from "@/lib/public-audio-scope";
 
 // Categories were last structurally updated with the June 2026 redesign
 const CATEGORIES_LAST_MODIFIED = new Date("2026-06-08");
@@ -37,7 +18,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const supabase = createClient();
     const { data: products } = await supabase
         .from("products")
-        .select("slug, updated_at")
+        .select("slug, updated_at, categories(slug)")
         .eq("is_active", true);
 
     const BASE = "https://fluxlab.fr";
@@ -57,8 +38,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ];
 
     // --- Category pages (verticals + sub-categories) ---
-    const categoryPages: MetadataRoute.Sitemap = CATEGORY_SLUGS.map((slug) => {
-        const isVertical = ["audio", "video", "streaming"].includes(slug);
+    const categoryPages: MetadataRoute.Sitemap = AUDIO_CATEGORY_SLUGS.map((slug) => {
+        const isVertical = slug === "audio";
         return {
             url: `${BASE}/categorie/${slug}`,
             lastModified: CATEGORIES_LAST_MODIFIED,
@@ -68,28 +49,38 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
 
     // --- Guide articles — use real publication/update date ---
-    const guidePages: MetadataRoute.Sitemap = ARTICLES.map((article) => ({
-        url: `${BASE}/guide/${article.slug}`,
-        lastModified: parseArticleDate(article.updatedAt || article.date),
-        changeFrequency: "monthly" as const,
-        priority: 0.7,
-    }));
+    const guidePages: MetadataRoute.Sitemap = ARTICLES
+        .filter(isPublicAudioGuide)
+        .map((article) => ({
+            url: `${BASE}/guide/${article.slug}`,
+            lastModified: parseArticleDate(article.updatedAt || article.date),
+            changeFrequency: "monthly" as const,
+            priority: 0.7,
+        }));
 
     // --- Guide pathways ---
-    const pathwayPages: MetadataRoute.Sitemap = PATHWAYS.map((pathway) => ({
-        url: `${BASE}/guide-path/${pathway.slug}`,
-        changeFrequency: "monthly" as const,
-        priority: 0.6,
-        lastModified: new Date("2026-06-08"),
-    }));
+    const pathwayPages: MetadataRoute.Sitemap = PATHWAYS
+        .filter((pathway) => isPublicAudioCategory(pathway.ctaCategory))
+        .map((pathway) => ({
+            url: `${BASE}/guide-path/${pathway.slug}`,
+            changeFrequency: "monthly" as const,
+            priority: 0.6,
+            lastModified: new Date("2026-06-08"),
+        }));
 
     // --- Product pages (from Supabase) ---
-    const productPages: MetadataRoute.Sitemap = (products || []).map((p) => ({
-        url: `${BASE}/produit/${p.slug}`,
-        lastModified: p.updated_at ? new Date(p.updated_at) : new Date("2026-06-01"),
-        changeFrequency: "weekly" as const,
-        priority: 0.9,
-    }));
+    const productPages: MetadataRoute.Sitemap = (products || [])
+        .filter((p: any) => {
+            const categoryRel = p?.categories;
+            const categorySlug = Array.isArray(categoryRel) ? categoryRel[0]?.slug : categoryRel?.slug;
+            return isPublicAudioCategory(categorySlug);
+        })
+        .map((p) => ({
+            url: `${BASE}/produit/${p.slug}`,
+            lastModified: p.updated_at ? new Date(p.updated_at) : new Date("2026-06-01"),
+            changeFrequency: "weekly" as const,
+            priority: 0.9,
+        }));
 
     return [
         ...staticPages,

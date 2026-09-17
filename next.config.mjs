@@ -73,11 +73,6 @@ const nextConfig = {
 
   async redirects() {
     return [
-      {
-        source: '/guide/stream-deck-guide',
-        destination: '/guide/elgato-stream-deck-guide-complet',
-        permanent: true,
-      },
       // Cannibalisation "casque studio" — contenu fusionné dans le guide 2026
       // plus récent et mieux positionné (cf. audit SEO juillet 2026).
       {
