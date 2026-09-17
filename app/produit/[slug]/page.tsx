@@ -6,6 +6,7 @@ import { Product } from "@/types/database";
 import { stripHtml } from "@/lib/utils";
 import { JsonLd } from "@/components/server/JsonLd";
 import ProductPageContent from "@/components/client/ProductPageContent";
+import { isPublicAudioCategory } from "@/lib/public-audio-scope";
 
 export const revalidate = 3600; // Revalidate every hour — price/offer data changes but not constantly
 
@@ -14,11 +15,16 @@ async function getProduct(slug: string): Promise<Product | null> {
     const supabase = createClient();
     const { data } = await supabase
         .from("products")
-        .select("*, product_offers(*)")
+        .select("*, categories(slug), product_offers(*)")
         .eq("slug", slug)
         .eq("is_active", true)
         .single();
     if (!data) return null;
+
+    const categoryRel = (data as any)?.categories;
+    const categorySlug = Array.isArray(categoryRel) ? categoryRel[0]?.slug : categoryRel?.slug;
+    if (!isPublicAudioCategory(categorySlug)) return null;
+
     return transformProduct(data);
 }
 
@@ -51,9 +57,15 @@ export async function generateStaticParams() {
     const supabase = createClient();
     const { data } = await supabase
         .from("products")
-        .select("slug")
+        .select("slug, categories(slug)")
         .eq("is_active", true);
-    return (data || []).map((p) => ({ slug: p.slug }));
+    return (data || [])
+        .filter((p: any) => {
+            const categoryRel = p?.categories;
+            const categorySlug = Array.isArray(categoryRel) ? categoryRel[0]?.slug : categoryRel?.slug;
+            return isPublicAudioCategory(categorySlug);
+        })
+        .map((p) => ({ slug: p.slug }));
 }
 
 // ---- Metadata ----
@@ -62,7 +74,7 @@ type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
     const product = await getProduct(slug);
-    if (!product) return { title: "Produit Introuvable" };
+    if (!product) notFound();
 
     const desc = product.description
         ? stripHtml(product.description).substring(0, 145)
