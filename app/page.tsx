@@ -8,8 +8,8 @@ import { HomeGuides } from '@/components/home/HomeGuides'
 import { JsonLd } from '@/components/server/JsonLd'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Fluxlab | Comparateur Matériel Audio, Vidéo, Streaming' },
-  description: "Comparateur indépendant multi-boutiques et guides d'achat spécialisés pour créateurs. Trouvez le meilleur prix parmi Amazon, Thomann, Woodbrass et plus.",
+  title: { absolute: 'Fluxlab | Studio & Son — Comparateur Matériel Audio' },
+  description: "Comparateur indépendant multi-boutiques et guides d'achat spécialisés pour l'audio et le studio. Trouvez le meilleur prix parmi Amazon, Thomann, Woodbrass et plus.",
   alternates: { canonical: 'https://fluxlab.fr' },
 }
 
@@ -20,8 +20,7 @@ async function getFeaturedProducts(): Promise<Product[]> {
   const slugs = [
     'focusrite-scarlett-2i2-4th-gen',
     'shure-sm7b',
-    'sony-zv-e10',
-    'elgato-stream-deck-mk2',
+    'beyerdynamic-dt-770-pro-80-ohm',
   ]
   const { data } = await supabase
     .from('products')
@@ -43,10 +42,10 @@ export default async function HomePage() {
     '@type': 'WebPage',
     '@id': 'https://fluxlab.fr/#webpage',
     url: 'https://fluxlab.fr',
-    name: 'Fluxlab — Comparateur matériel Audio, Vidéo & Streaming',
-    description: "Comparateur indépendant multi-boutiques et guides d'achat pour créateurs.",
+    name: 'Fluxlab — Studio & Son : comparateur matériel audio',
+    description: "Comparateur indépendant multi-boutiques et guides d'achat pour le studio et l'audio.",
     isPartOf: { '@id': 'https://fluxlab.fr/#website' },
-    about: { '@type': 'Thing', name: 'Matériel audio vidéo streaming pour créateurs de contenu' },
+    about: { '@type': 'Thing', name: 'Matériel audio et équipement studio' },
     breadcrumb: {
       '@type': 'BreadcrumbList',
       itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://fluxlab.fr' }],

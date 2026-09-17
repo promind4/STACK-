@@ -21,12 +21,12 @@ export function HeroSection() {
 
       <div className="mx-auto flex min-h-[620px] max-w-[1600px] flex-col px-5 pb-6 pt-28 sm:px-8 sm:pt-32 lg:min-h-[760px] lg:px-16 lg:pb-10 lg:pt-40">
         <div className="hero-arrival flex flex-1 flex-col justify-center pb-12 lg:max-w-[58%] lg:pb-20">
-          <p className="text-sm text-[var(--home-gold)]">Composer un équipement qui vous ressemble.</p>
+          <p className="text-sm text-[var(--home-gold)]">Construire une chaîne audio sans compromis.</p>
           <h1 id="hero-title" className="mt-5 max-w-[10ch] font-serif text-[clamp(3.05rem,7vw,6.35rem)] leading-[.91] tracking-[-.055em] text-[var(--home-ivory)]">
             Faites entendre ce qui compte.
           </h1>
           <p className="mt-7 max-w-[34rem] text-[15px] leading-7 text-white/70 sm:text-[17px] sm:leading-8">
-            Comparez les offres, assemblez un setup cohérent et avancez avec des choix adaptés à votre manière de créer.
+            Micro, interface, monitoring et traitement : comparez les offres et composez une chaîne sonore cohérente pour la voix, le podcast et le home studio.
           </p>
           <div className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <Link href="/configurateur" className="inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--home-gold)] px-6 text-sm font-medium text-[var(--home-ink)] transition-colors hover:bg-[#dfb870] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--home-ivory)]">

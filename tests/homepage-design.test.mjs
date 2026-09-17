@@ -101,4 +101,13 @@ assert.match(globalCss, /@media \(prefers-reduced-motion: reduce\)[\s\S]*html\s*
 assert.match(hero, /href="#selection"/, 'the hero secondary action must point to the mixed selection section')
 assert.match(hero, /Voir les essentiels/, 'the hero secondary action must describe the section it opens')
 
+assert.match(page, /focusrite-scarlett-2i2-4th-gen/, 'homepage selection must include scarlett 2i2')
+assert.match(page, /shure-sm7b/, 'homepage selection must include shure sm7b')
+assert.match(page, /beyerdynamic-dt-770-pro-80-ohm/, 'homepage selection must include dt 770 pro')
+assert.doesNotMatch(page, /sony-zv-e10/, 'homepage selection must not include sony camera')
+assert.doesNotMatch(page, /elgato-stream-deck-mk2/, 'homepage selection must not include stream deck')
+
+assert.doesNotMatch(homeGuides, /setup-youtube-debutant-2026/, 'home guides must not include youtube video guide')
+assert.match(homeGuides, /isPublicAudioGuide/, 'home guides must filter through isPublicAudioGuide')
+
 console.log('homepage design contract: ok')

@@ -1,18 +1,20 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { ARTICLES } from '@/lib/articles-meta'
+import { isPublicAudioGuide } from '@/lib/public-audio-scope'
 
 const guideSlugs = [
   'meilleur-micro-podcast-2026',
   'xlr-vs-usb',
   'top-5-interfaces',
-  'setup-youtube-debutant-2026',
+  'focusrite-scarlett-2i2-vs-audient-id4',
 ]
 
 export function HomeGuides() {
-  const guides = ARTICLES.filter(article => guideSlugs.includes(article.slug)).sort(
-    (a, b) => guideSlugs.indexOf(a.slug) - guideSlugs.indexOf(b.slug)
-  )
+  const guides = ARTICLES
+    .filter(isPublicAudioGuide)
+    .filter(article => guideSlugs.includes(article.slug))
+    .sort((a, b) => guideSlugs.indexOf(a.slug) - guideSlugs.indexOf(b.slug))
   const [featuredGuide, ...secondaryGuides] = guides
 
   if (!featuredGuide) return null

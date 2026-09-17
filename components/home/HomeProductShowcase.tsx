@@ -10,8 +10,8 @@ export function HomeProductShowcase({ products }: { products: Product[] }) {
       <section id="selection" className="bg-[var(--home-ink)] px-5 pb-20 text-white sm:px-8">
         <div className="mx-auto max-w-[1600px] border border-white/10 p-8">
           <h2 className="font-serif text-3xl">La sélection est momentanément indisponible.</h2>
-          <p className="mt-3 text-sm text-white/55">Explorez les univers Fluxlab pendant son actualisation.</p>
-          <Link href="/categorie/audio" className="mt-6 inline-flex text-xs font-mono uppercase tracking-[.14em] text-primary">Explorer les univers →</Link>
+          <p className="mt-3 text-sm text-white/55">Explorez le catalogue audio pendant son actualisation.</p>
+          <Link href="/categorie/audio" className="mt-6 inline-flex text-xs font-mono uppercase tracking-[.14em] text-primary">Explorer le catalogue audio →</Link>
         </div>
       </section>
     )
