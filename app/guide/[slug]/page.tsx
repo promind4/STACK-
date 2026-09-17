@@ -23,6 +23,7 @@ export async function generateStaticParams() {
 }
 
 export const revalidate = 86400; // Revalidate daily — guide content is static, product offers update overnight
+export const dynamicParams = false;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;

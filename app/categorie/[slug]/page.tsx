@@ -30,6 +30,7 @@ const BANNER_MAP: Record<string, string> = {
 };
 
 export const revalidate = 3600; // 1h ISR
+export const dynamicParams = false;
 
 /* ─── QUESTIONS PAR CATÉGORIE ────────────────────────────── */
 type Question = { num: string; title: string; desc: string };
