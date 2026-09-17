@@ -3,6 +3,7 @@ import { createClient } from '@/lib/supabase'
 import { transformProduct } from '@/lib/transformers'
 import type { Product } from '@/types/database'
 import { HeroSection } from '@/components/client/HeroSection'
+import { CategoryVisualBar } from '@/components/home/CategoryVisualBar'
 import { HomeProductShowcase } from '@/components/home/HomeProductShowcase'
 import { HomeGuides } from '@/components/home/HomeGuides'
 import { JsonLd } from '@/components/server/JsonLd'
@@ -70,6 +71,7 @@ export default async function HomePage() {
     <>
       <JsonLd data={homePageSchema} />
       {featuredProductsSchema && <JsonLd data={featuredProductsSchema} />}
+      <CategoryVisualBar />
       <HeroSection />
       <HomeProductShowcase products={featuredProducts} />
       <HomeGuides />

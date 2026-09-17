@@ -19,7 +19,7 @@ export function HeroSection() {
       <div className="absolute inset-0 -z-20 bg-[linear-gradient(180deg,rgba(9,8,6,.08)_0%,rgba(9,8,6,.08)_57%,#090806_100%)]" aria-hidden />
       <div className="hero-ambient absolute right-[-12rem] top-[8%] -z-10 h-[32rem] w-[32rem] rounded-full bg-[rgba(200,155,82,.10)] blur-3xl" aria-hidden />
 
-      <div className="mx-auto flex min-h-[620px] max-w-[1600px] flex-col px-5 pb-6 pt-28 sm:px-8 sm:pt-32 lg:min-h-[760px] lg:px-16 lg:pb-10 lg:pt-40">
+      <div className="mx-auto flex min-h-[560px] max-w-[1600px] flex-col px-5 pb-6 pt-14 sm:px-8 sm:pt-16 lg:min-h-[680px] lg:px-16 lg:pb-10 lg:pt-20">
         <div className="hero-arrival flex flex-1 flex-col justify-center pb-12 lg:max-w-[58%] lg:pb-20">
           <p className="text-sm text-[var(--home-gold)]">Construire une chaîne audio sans compromis.</p>
           <h1 id="hero-title" className="mt-5 max-w-[10ch] font-serif text-[clamp(3.05rem,7vw,6.35rem)] leading-[.91] tracking-[-.055em] text-[var(--home-ivory)]">

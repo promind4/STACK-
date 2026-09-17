@@ -508,31 +508,31 @@ export function Navbar() {
             {MENU_DATA.map((menu) => {
               if (menu.id !== activeMenu) return null
               return (
-                <div key={menu.id} className="max-w-[1600px] mx-auto px-8 pt-6 pb-12">
+                <div key={menu.id} className="max-w-4xl mx-auto px-6 pt-5 pb-7">
 
                   {/* Eyebrow */}
-                  <div className="flex items-baseline justify-between mb-10">
+                  <div className="flex items-center justify-between pb-3 mb-6 border-b border-[#e2d8c9]/70">
                     <div className="flex items-center gap-3">
-                      <span className="block w-8 h-px bg-primary" aria-hidden />
+                      <span className="block w-6 h-px bg-primary" aria-hidden />
                       <p className="frame-label text-primary">{menu.label}</p>
-                      <span className="text-[12px] text-muted-foreground">/ {menu.eyebrow}</span>
+                      <span className="text-[12px] text-muted-foreground font-mono">/ {menu.eyebrow}</span>
                     </div>
                     <Link
                       href={menu.targetPage}
                       onClick={() => setActiveMenu(null)}
-                      className="text-[12px] font-mono uppercase tracking-wider text-foreground/70 hover:text-primary inline-flex items-center gap-2 transition-colors"
+                      className="text-[11px] font-mono uppercase tracking-wider text-foreground/60 hover:text-primary inline-flex items-center gap-1.5 transition-colors"
                     >
-                      Voir la catégorie
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+                      Voir toute la sélection
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
                         <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
                       </svg>
                     </Link>
                   </div>
 
-                  <div className="grid grid-cols-12 gap-8">
-                    {/* Columns */}
+                  {/* Columns */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12">
                     {menu.columns.map((col) => (
-                      <div key={col.num} className={`${menu.columns.length === 2 ? 'col-span-4' : 'col-span-3'} space-y-5`}>
+                      <div key={col.num} className="space-y-4">
                         <p className="frame-label text-foreground/60 flex items-center gap-2">
                           <span className="font-mono text-primary">{col.num}</span>
                           <span>{col.title}</span>
@@ -543,12 +543,12 @@ export function Navbar() {
                               <Link
                                 href={`/categorie/${item.slug}`}
                                 onClick={() => setActiveMenu(null)}
-                                className="group block"
+                                className="group block p-2 -mx-2 rounded-xl hover:bg-white/60 transition-colors"
                               >
                                 <div className="font-serif text-[15px] text-foreground group-hover:text-primary transition-colors">
                                   {item.label}
                                 </div>
-                                <div className="text-[12px] text-muted-foreground mt-0.5">
+                                <div className="text-[12px] text-muted-foreground mt-0.5 leading-snug">
                                   {item.desc}
                                 </div>
                               </Link>
@@ -557,44 +557,6 @@ export function Navbar() {
                         </ul>
                       </div>
                     ))}
-
-                    {/* Promo card — dark studio style */}
-                    <div className={`${menu.columns.length === 2 ? 'col-span-4 col-start-9' : 'col-span-3 col-start-10'}`}>
-                      <Link
-                        href={menu.promo.target}
-                        onClick={() => setActiveMenu(null)}
-                        className="group block relative h-full min-h-[280px] rounded-2xl overflow-hidden border border-white/10 hover:border-primary/40 transition-colors"
-                        style={{
-                          background: `
-                            radial-gradient(ellipse 70% 60% at 75% 30%, rgba(211,178,123,.15) 0%, transparent 60%),
-                            #0A0A0A
-                          `
-                        }}
-                      >
-                        {/* Halo */}
-                        <div
-                          className="absolute -top-10 -right-10 w-[200px] h-[200px] rounded-full pointer-events-none"
-                          style={{ background: 'radial-gradient(circle, rgba(211,178,123,.4) 0%, transparent 60%)', filter: 'blur(20px)' }}
-                          aria-hidden
-                        />
-                        <div className="relative z-10 p-6 h-full flex flex-col">
-                          <p className="frame-label text-primary mb-4">L’Atelier Fluxlab</p>
-                          <h4 className="font-serif text-white text-[22px] leading-[1.15] mb-3">
-                            {menu.promo.title}<br />
-                            <span className="italic text-primary">{menu.promo.titleItalic}</span>
-                          </h4>
-                          <p className="text-[12px] text-white/55 leading-[1.55] font-light mb-auto">
-                            {menu.promo.desc}
-                          </p>
-                          <div className="mt-5 inline-flex items-center gap-2 text-[11px] font-mono text-primary uppercase tracking-wider">
-                            <span className="group-hover:translate-x-1 transition-transform">Lancer le configurateur</span>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-                              <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-                            </svg>
-                          </div>
-                        </div>
-                      </Link>
-                    </div>
                   </div>
                 </div>
               )
