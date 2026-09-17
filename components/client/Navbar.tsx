@@ -282,49 +282,103 @@ interface MenuItem {
   promo: { title: string; titleItalic: string; desc: string; target: string }
 }
 
-const AUDIO_NAV = [
-  { label: 'Microphones', href: '/categorie/micros-dynamiques' },
-  { label: 'Interfaces', href: '/categorie/cartes-son' },
-  { label: 'Monitoring', href: '/categorie/casques-studio' },
-  { label: 'Acoustique', href: '/categorie/traitement-acoustique' },
-  { label: 'Accessoires', href: '/categorie/bras-articules' },
+interface NavItem {
+  id: string
+  label: string
+  href: string
+}
+
+const AUDIO_NAV: NavItem[] = [
+  { id: 'microphones', label: 'Microphones', href: '/categorie/micros-dynamiques' },
+  { id: 'interfaces', label: 'Interfaces', href: '/categorie/cartes-son' },
+  { id: 'accessoires', label: 'Accessoires', href: '/categorie/bras-articules' },
 ]
+
+// Monitoring sub-domain items included in Interfaces: label: 'Monitoring'
 
 const MENU_DATA: MenuItem[] = [
   {
-    id: 'audio',
-    label: 'Studio & Son',
-    targetPage: '/categorie/audio',
-    eyebrow: 'Micros · Interfaces · Casques · Accessoires',
+    id: 'microphones',
+    label: 'Microphones',
+    targetPage: '/categorie/micros-dynamiques',
+    eyebrow: 'Dynamique · Condensateur · USB · Shotgun',
     columns: [
       {
-        num: '01', title: 'Microphones',
+        num: '01', title: 'Studio & Voix',
         items: [
-          { label: 'Dynamiques',     desc: 'Pour la voix radio & podcast',   slug: 'micros-dynamiques' },
-          { label: 'Condensateurs',  desc: 'Chant & détails sonores',        slug: 'micros-condensateurs' },
-          { label: 'USB',            desc: 'Plug & play sans interface',     slug: 'micros-usb' },
-          { label: 'Shotgun',        desc: 'Captation vidéo directionnelle', slug: 'micros-shotgun' },
+          { label: 'Dynamiques',     desc: 'Pour la voix radio, podcast & chant direct',   slug: 'micros-dynamiques' },
+          { label: 'Condensateurs',  desc: 'Haute sensibilité, clarté et détails studio',  slug: 'micros-condensateurs' },
         ],
       },
       {
-        num: '02', title: 'Interfaces & monitoring',
+        num: '02', title: 'Direct & Vidéo',
         items: [
-          { label: 'Cartes son USB',          desc: 'Scarlett, Audient, Motu',              slug: 'cartes-son' },
-          { label: 'Préamplis & Cloudlifter', desc: 'Gain propre pour micros dynamiques',   slug: 'preamplis' },
-          { label: 'Casques studio',          desc: 'Monitoring de précision',              slug: 'casques-studio' },
-          { label: 'Enceintes',               desc: 'Écoute de référence',                  slug: 'enceintes' },
-        ],
-      },
-      {
-        num: '03', title: 'Accessoires',
-        items: [
-          { label: 'Bras articulés',        desc: 'Rode PSA1+, Elgato Wave',          slug: 'bras-articules' },
-          { label: 'Câbles XLR',           desc: 'Haute qualité, blindés',            slug: 'cable-xlr' },
-          { label: 'Traitement acoustique', desc: 'Mousses, panneaux, bass traps',    slug: 'traitement-acoustique' },
+          { label: 'USB',            desc: 'Prise de son plug & play sans carte son',       slug: 'micros-usb' },
+          { label: 'Shotgun',        desc: 'Captation directionnelle ciblée pour vidéo',   slug: 'micros-shotgun' },
         ],
       },
     ],
-    promo: { title: 'Composez votre studio', titleItalic: 'sur-mesure.', desc: "Micro, interface, casque et traitement choisis selon votre voix, votre pièce et votre budget.", target: '/configurateur' },
+    promo: {
+      title: 'Trouver le micro',
+      titleItalic: 'adapté à votre voix.',
+      desc: 'Définissez votre usage, votre acoustique et votre budget dans l’Atelier Fluxlab.',
+      target: '/configurateur',
+    },
+  },
+  {
+    id: 'interfaces',
+    label: 'Interfaces & Monitoring',
+    targetPage: '/categorie/cartes-son',
+    eyebrow: 'Cartes son · Préamplis · Casques · Enceintes',
+    columns: [
+      {
+        num: '01', title: 'Cartes son & Préamplis',
+        items: [
+          { label: 'Cartes son USB',          desc: 'Scarlett, Audient, Motu, Volt — liaisons XLR',  slug: 'cartes-son' },
+          { label: 'Préamplis & Cloudlifter', desc: 'Gain propre pour micros dynamiques exigeants',   slug: 'preamplis' },
+        ],
+      },
+      {
+        num: '02', title: 'Monitoring & Écoute',
+        items: [
+          { label: 'Casques studio',          desc: 'Monitoring fermé et ouvert de référence',      slug: 'casques-studio' },
+          { label: 'Enceintes',               desc: 'Écoute de contrôle neutre et précise',         slug: 'enceintes' },
+        ],
+      },
+    ],
+    promo: {
+      title: 'Associer micro &',
+      titleItalic: 'interface.',
+      desc: 'Vérifiez la réserve de gain, l’impédance et la compatibilité de votre chaîne sonore.',
+      target: '/configurateur',
+    },
+  },
+  {
+    id: 'accessoires',
+    label: 'Accessoires & Acoustique',
+    targetPage: '/categorie/bras-articules',
+    eyebrow: 'Bras articulés · Câbles XLR · Traitement acoustique',
+    columns: [
+      {
+        num: '01', title: 'Support & Câblage',
+        items: [
+          { label: 'Bras articulés',        desc: 'Supports de bureau silencieux et pieds stables',  slug: 'bras-articules' },
+          { label: 'Câbles XLR',           desc: 'Liaisons blindées symétriques haute fidélité',    slug: 'cable-xlr' },
+        ],
+      },
+      {
+        num: '02', title: 'Traitement acoustique',
+        items: [
+          { label: 'Traitement acoustique', desc: 'Mousses absorbantes, diffuseurs et bass traps', slug: 'traitement-acoustique' },
+        ],
+      },
+    ],
+    promo: {
+      title: 'Optimiser votre',
+      titleItalic: 'pièce d’écoute.',
+      desc: 'Contrôlez les réflexions et la réverbération pour des prises de son nettes et précises.',
+      target: '/configurateur',
+    },
   },
 ]
 
@@ -347,16 +401,19 @@ export function Navbar() {
         <div className="flex items-center justify-between py-4">
 
           {/* Logo */}
-          <FluxlabLogo />
+          <div onMouseEnter={() => setActiveMenu(null)}>
+            <FluxlabLogo />
+          </div>
 
           {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-7">
             {AUDIO_NAV.map((item) => {
-              const isActive = pathname?.startsWith(item.href)
+              const isMenuOpen = activeMenu === item.id
+              const isActive = pathname?.startsWith(item.href) || isMenuOpen
               return (
                 <div
-                  key={item.href}
-                  onMouseEnter={() => handleMouseEnter('audio')}
+                  key={item.id}
+                  onMouseEnter={() => handleMouseEnter(item.id)}
                   className="relative py-2 cursor-pointer"
                 >
                   <Link
@@ -377,7 +434,7 @@ export function Navbar() {
 
             <span className="block w-px h-4 bg-[#0F0F0F]/15" aria-hidden />
 
-            <div className="relative py-2">
+            <div className="relative py-2" onMouseEnter={() => setActiveMenu(null)}>
               <Link
                 href="/guides"
                 className={cn(
@@ -441,10 +498,11 @@ export function Navbar() {
       <AnimatePresence>
         {activeMenu && (
           <motion.div
-            initial={{ opacity: 0, y: -8 }}
+            key={activeMenu}
+            initial={{ opacity: 0, y: -6 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -4 }}
-            transition={{ duration: 0.18 }}
+            transition={{ duration: 0.15 }}
             className="hidden lg:block absolute top-full left-0 w-full bg-[#f2ebdf] border-b border-[#e2d8c9] shadow-[0_24px_50px_rgba(15,15,15,.12)]"
           >
             {MENU_DATA.map((menu) => {
@@ -464,7 +522,7 @@ export function Navbar() {
                       onClick={() => setActiveMenu(null)}
                       className="text-[12px] font-mono uppercase tracking-wider text-foreground/70 hover:text-primary inline-flex items-center gap-2 transition-colors"
                     >
-                      Voir tout l&apos;univers
+                      Voir la catégorie
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
                         <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
                       </svg>
@@ -501,7 +559,7 @@ export function Navbar() {
                     ))}
 
                     {/* Promo card — dark studio style */}
-                    <div className={`col-span-3 ${menu.columns.length === 2 ? 'col-start-9' : 'col-start-10'}`}>
+                    <div className={`${menu.columns.length === 2 ? 'col-span-4 col-start-9' : 'col-span-3 col-start-10'}`}>
                       <Link
                         href={menu.promo.target}
                         onClick={() => setActiveMenu(null)}
@@ -520,7 +578,7 @@ export function Navbar() {
                           aria-hidden
                         />
                         <div className="relative z-10 p-6 h-full flex flex-col">
-                          <p className="frame-label text-primary mb-4">Le Labo Fluxlab</p>
+                          <p className="frame-label text-primary mb-4">L’Atelier Fluxlab</p>
                           <h4 className="font-serif text-white text-[22px] leading-[1.15] mb-3">
                             {menu.promo.title}<br />
                             <span className="italic text-primary">{menu.promo.titleItalic}</span>
@@ -574,30 +632,51 @@ export function Navbar() {
 
                 <p className="frame-label text-primary mb-4 flex items-center gap-2">
                   <span className="block w-5 h-px bg-primary" aria-hidden />
-                  Univers
+                  Catégories
                 </p>
 
-                {/* Category links */}
-                <ul className="space-y-0.5 mb-4">
-                  {[
-                    { label: 'Studio & Son', href: '/categorie/audio' },
-                    ...AUDIO_NAV,
-                    { label: 'Guides & Tutos', href: '/guides' },
-                  ].map((item) => (
-                    <li key={item.href}>
+                {/* Category links with grouped sub-items */}
+                <div className="space-y-4 mb-5">
+                  {MENU_DATA.map((menu) => (
+                    <div key={menu.id} className="pb-3 border-b border-white/10">
                       <Link
-                        href={item.href}
+                        href={menu.targetPage}
                         onClick={() => setIsMobileOpen(false)}
-                        className="flex items-center justify-between py-2.5 border-b border-white/10 group"
+                        className="flex items-center justify-between py-1 group"
                       >
                         <span className="font-serif text-white text-[19px] group-hover:text-primary transition-colors">
-                          {item.label}
+                          {menu.label}
                         </span>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/25 group-hover:text-primary transition-colors" aria-hidden><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                       </Link>
-                    </li>
+                      <div className="grid grid-cols-2 gap-x-2 gap-y-1.5 mt-2 pl-1">
+                        {menu.columns.flatMap(c => c.items).map((item) => (
+                          <Link
+                            key={item.slug}
+                            href={`/categorie/${item.slug}`}
+                            onClick={() => setIsMobileOpen(false)}
+                            className="text-[13px] text-white/55 hover:text-primary transition-colors py-0.5 truncate"
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
                   ))}
-                </ul>
+
+                  <div className="pt-1">
+                    <Link
+                      href="/guides"
+                      onClick={() => setIsMobileOpen(false)}
+                      className="flex items-center justify-between py-2 border-b border-white/10 group"
+                    >
+                      <span className="font-serif text-white text-[19px] group-hover:text-primary transition-colors">
+                        Guides &amp; Tutos
+                      </span>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/25 group-hover:text-primary transition-colors" aria-hidden><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </Link>
+                  </div>
+                </div>
 
                 {/* Labo promo card — dark */}
                 <Link
