@@ -9,3 +9,14 @@ test('category and product pages use the shared public scope', () => {
   assert.match(productPage, /categories\(slug\)/)
   assert.match(productPage, /isPublicAudioCategory\(categorySlug\)/)
 })
+
+test('guides and search import the shared audio scope', () => {
+  const guides = readFileSync('app/guides/page.tsx', 'utf8')
+  const guide = readFileSync('app/guide/[slug]/page.tsx', 'utf8')
+  const search = readFileSync('app/api/search/route.ts', 'utf8')
+  assert.match(guides, /isPublicAudioGuide/)
+  assert.match(guide, /isPublicAudioGuide\(article\)/)
+  assert.match(search, /categories\(slug\)/)
+  assert.match(search, /isPublicAudioCategory/)
+})
+

@@ -10,13 +10,14 @@ import Image from 'next/image';
 import { isDirectSupabaseStorageUrl } from '@/lib/imagePolicy.mjs';
 import TocScrollspy from '@/components/client/TocScrollspy';
 import { guideCoverImage } from '@/lib/guide-images';
+import { isPublicAudioGuide } from '@/lib/public-audio-scope';
 
 interface Props {
     params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-    return ARTICLES.map((article) => ({
+    return ARTICLES.filter(isPublicAudioGuide).map((article) => ({
         slug: article.slug,
     }));
 }
@@ -26,7 +27,7 @@ export const revalidate = 86400; // Revalidate daily — guide content is static
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
     const article = getArticleBySlug(slug);
-    if (!article) return { title: 'Guide introuvable' };
+    if (!article || !isPublicAudioGuide(article)) notFound();
 
     const rawDesc = article.intro || '';
     const desc = rawDesc.length > 160
@@ -114,7 +115,7 @@ export default async function GuideArticlePage({ params }: Props) {
     const { slug } = await params;
     const article = getArticleBySlug(slug);
 
-    if (!article) {
+    if (!article || !isPublicAudioGuide(article)) {
         notFound();
     }
 

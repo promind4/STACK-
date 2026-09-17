@@ -7,18 +7,20 @@ import GuidesClient from '@/components/client/GuidesClient';
 import Image from 'next/image';
 import { JsonLd } from '@/components/server/JsonLd';
 import { guideCoverImage } from '@/lib/guide-images';
+import { isPublicAudioGuide } from '@/lib/public-audio-scope';
 
 export const metadata: Metadata = {
-    title: 'Guides & Tutoriels pour Créateurs',
-    description: 'Des guides pratiques, des comparatifs honnêtes et des tutoriels techniques pour maîtriser votre matériel audio, vidéo et streaming.',
+    title: 'Guides & Tutoriels Audio et Studio',
+    description: 'Des guides pratiques, des comparatifs honnêtes et des tutoriels techniques pour maîtriser votre matériel audio et équipement studio.',
     alternates: { canonical: 'https://fluxlab.fr/guides' },
 };
 
 export default function GuidesPage() {
-    const sortedArticles = [...ARTICLES].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    const publicArticles = ARTICLES.filter(isPublicAudioGuide);
+    const sortedArticles = [...publicArticles].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
     const heroArticle = sortedArticles[0];
     const otherArticles = sortedArticles.slice(1);
-    const categories = ["Tous", ...Array.from(new Set(ARTICLES.map(a => a.category)))];
+    const categories = ['Tous', 'Audio'];
 
     /* ── Schema.org ───────────────────────────────────────────── */
     const collectionSchema = {
@@ -26,8 +28,8 @@ export default function GuidesPage() {
         "@type": "CollectionPage",
         "@id": "https://fluxlab.fr/guides/#webpage",
         url: "https://fluxlab.fr/guides",
-        name: "Guides & Tutoriels pour Créateurs | Fluxlab",
-        description: "Des guides pratiques, comparatifs et tutoriels techniques pour maîtriser votre matériel audio, vidéo et streaming.",
+        name: "Guides & Tutoriels Audio et Studio | Fluxlab",
+        description: "Des guides pratiques, comparatifs et tutoriels techniques pour maîtriser votre matériel audio et studio.",
         isPartOf: { "@id": "https://fluxlab.fr/#website" },
         breadcrumb: {
             "@type": "BreadcrumbList",
@@ -41,7 +43,7 @@ export default function GuidesPage() {
     const articlesListSchema = {
         "@context": "https://schema.org",
         "@type": "ItemList",
-        name: "Guides Fluxlab — Matériel audio vidéo streaming",
+        name: "Guides Fluxlab — Matériel audio et équipement studio",
         numberOfItems: sortedArticles.length,
         itemListElement: sortedArticles.map((a, i) => ({
             "@type": "ListItem",

@@ -1,5 +1,6 @@
 import { createClient } from '@/lib/supabase';
 import { NextRequest } from 'next/server';
+import { isPublicAudioCategory } from '@/lib/public-audio-scope';
 
 export const runtime = 'nodejs';
 
@@ -11,19 +12,24 @@ export async function GET(req: NextRequest) {
     const supabase = createClient();
     const { data, error } = await supabase
       .from('products')
-      .select('slug, name, brand, image_url, rating, product_offers(price)')
+      .select('slug, name, brand, image_url, rating, categories(slug), product_offers(price)')
       .ilike('name', `%${q}%`)
       .eq('is_active', true)
       .order('name')
-      .limit(8);
+      .limit(20);
 
     if (error) {
       console.error('[search] Supabase error:', error.message);
       return Response.json([]);
     }
 
+    const publicRows = (data ?? []).filter((product: any) => {
+      const category = Array.isArray(product.categories) ? product.categories[0] : product.categories;
+      return isPublicAudioCategory(category?.slug);
+    }).slice(0, 8);
+
     // Calcul du prix minimum depuis les offres
-    const results = (data ?? []).map((p: any) => ({
+    const results = publicRows.map((p: any) => ({
       slug:      p.slug,
       name:      p.name,
       brand:     p.brand,
