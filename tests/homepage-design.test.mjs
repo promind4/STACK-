@@ -13,6 +13,7 @@ const trustStrip = await readFile(new URL('../components/home/HomeTrustStrip.tsx
   throw error
 })
 const navbar = await readFile(new URL('../components/client/Navbar.tsx', import.meta.url), 'utf8')
+const footer = await readFile(new URL('../components/server/Footer.tsx', import.meta.url), 'utf8')
 
 assert.equal(hero.includes('hero1.webp'), false, 'the legacy homepage photograph must be removed')
 assert.match(hero, /HeroContextGrid/, 'the hero must use the context grid component')
@@ -80,6 +81,15 @@ assert.doesNotMatch(trustStrip, /livraison offerte/i, 'the trust strip must not 
 assert.doesNotMatch(navbar, /lg:top-5/, 'the homepage navbar must remain flush with the top of the viewport')
 assert.match(navbar, /#f2ebdf/, 'the navbar must use the unified cream palette')
 assert.match(navbar, /bg-\[#f2ebdf\]/, 'the mega menu must use the cream navigation palette')
+assert.doesNotMatch(navbar, /label:\s*'Image & Lumière'/)
+assert.doesNotMatch(navbar, /label:\s*'Streaming'/)
+assert.match(navbar, /label:\s*'Microphones'/)
+assert.match(navbar, /label:\s*'Interfaces'/)
+assert.match(navbar, /label:\s*'Monitoring'/)
+assert.doesNotMatch(footer, /href:\s*'\/categorie\/video'/)
+assert.doesNotMatch(footer, /href:\s*'\/categorie\/streaming'/)
+assert.match(footer, /href:\s*'\/categorie\/audio'/)
+assert.match(footer, /href:\s*'\/categorie\/cartes-son'/)
 
 const globalCss = await readFile(new URL('../app/globals.css', import.meta.url), 'utf8')
 assert.match(globalCss, /--home-ink:\s+#0[89]0[78]0[56]/, 'homepage ink must use the studio black token')

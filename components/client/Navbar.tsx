@@ -282,6 +282,14 @@ interface MenuItem {
   promo: { title: string; titleItalic: string; desc: string; target: string }
 }
 
+const AUDIO_NAV = [
+  { label: 'Microphones', href: '/categorie/micros-dynamiques' },
+  { label: 'Interfaces', href: '/categorie/cartes-son' },
+  { label: 'Monitoring', href: '/categorie/casques-studio' },
+  { label: 'Acoustique', href: '/categorie/traitement-acoustique' },
+  { label: 'Accessoires', href: '/categorie/bras-articules' },
+]
+
 const MENU_DATA: MenuItem[] = [
   {
     id: 'audio',
@@ -318,61 +326,6 @@ const MENU_DATA: MenuItem[] = [
     ],
     promo: { title: 'Composez votre studio', titleItalic: 'sur-mesure.', desc: "Micro, interface, casque et traitement choisis selon votre voix, votre pièce et votre budget.", target: '/configurateur' },
   },
-  {
-    id: 'video',
-    label: 'Image & Lumière',
-    targetPage: '/categorie/video',
-    eyebrow: 'Caméras · Éclairage · Objectifs',
-    columns: [
-      {
-        num: '01', title: 'Caméras',
-        items: [
-          { label: 'Hybrides (Mirrorless)', desc: 'Sony Alpha, Canon R',   slug: 'hybrides-mirrorless' },
-          { label: 'Webcams Pro',           desc: 'Elgato Facecam, Razer', slug: 'webcams-pro' },
-          { label: 'Action Cams',           desc: 'GoPro, DJI',            slug: 'action-cams' },
-        ],
-      },
-      {
-        num: '02', title: 'Éclairage',
-        items: [
-          { label: 'Key Lights',     desc: 'Lumière principale',  slug: 'keylight' },
-          { label: 'Softbox',        desc: 'Diffusion douce',     slug: 'softbox' },
-          { label: 'RGB & Ambiance', desc: 'Tubes LED, Rubans',   slug: 'rgb-ambiance' },
-        ],
-      },
-      {
-        num: '03', title: 'Objectifs',
-        items: [
-          { label: 'Grand Angle',       desc: 'Pour le Vlogging', slug: 'grand-angle' },
-          { label: 'Zooms Polyvalents', desc: 'Tout terrain',     slug: 'zoom-polyvalent' },
-        ],
-      },
-    ],
-    promo: { title: 'Configurez votre setup', titleItalic: 'vidéo.', desc: "Caméra, éclairage et son réunis selon votre manière de créer.", target: '/configurateur' },
-  },
-  {
-    id: 'streaming',
-    label: 'Streaming',
-    targetPage: '/categorie/streaming',
-    eyebrow: 'Setup live · Captation · Contrôle',
-    columns: [
-      {
-        num: '01', title: 'Setup live',
-        items: [
-          { label: 'Fonds verts',      desc: 'Incrustation propre',           slug: 'fonds-verts' },
-          { label: 'Téléprompteurs',   desc: 'Pour lire vos scripts',         slug: 'teleprompteurs' },
-          { label: 'Cable Management', desc: 'Organisation & câblage',        slug: 'cable-management' },
-        ],
-      },
-      {
-        num: '02', title: 'Captation & régie',
-        items: [
-          { label: 'Stream Deck', desc: 'Contrôle total de votre régie', slug: 'stream-deck' },
-        ],
-      },
-    ],
-    promo: { title: 'Montez votre régie', titleItalic: 'live.', desc: "Définissez votre format de stream et composez une régie cohérente pour Twitch ou YouTube.", target: '/configurateur' },
-  },
 ]
 
 /* ─── NAVBAR ─────────────────────────────────────────────── */
@@ -397,26 +350,26 @@ export function Navbar() {
           <FluxlabLogo />
 
           {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-8">
-            {MENU_DATA.map((menu) => {
-              const isActive = pathname?.startsWith(menu.targetPage)
+          <div className="hidden lg:flex items-center gap-7">
+            {AUDIO_NAV.map((item) => {
+              const isActive = pathname?.startsWith(item.href)
               return (
                 <div
-                  key={menu.id}
-                  onMouseEnter={() => handleMouseEnter(menu.id)}
+                  key={item.href}
+                  onMouseEnter={() => handleMouseEnter('audio')}
                   className="relative py-2 cursor-pointer"
                 >
                   <Link
-                    href={menu.targetPage}
+                    href={item.href}
                     className={cn(
                       'hover-rule text-[14px] font-bold tracking-wide transition-colors',
-                      activeMenu === menu.id || isActive
+                      isActive
                         ? 'text-primary font-bold active'
                         : 'text-[#0F0F0F] hover:text-primary'
                     )}
                     aria-current={isActive ? 'page' : undefined}
                   >
-                    {menu.label}
+                    {item.label}
                   </Link>
                 </div>
               )
@@ -627,10 +580,9 @@ export function Navbar() {
                 {/* Category links */}
                 <ul className="space-y-0.5 mb-4">
                   {[
-                    { label: 'Studio & Son',    href: '/categorie/audio' },
-                    { label: 'Image & Lumière', href: '/categorie/video' },
-                    { label: 'Streaming',       href: '/categorie/streaming' },
-                    { label: 'Guides & Tutos',  href: '/guides' },
+                    { label: 'Studio & Son', href: '/categorie/audio' },
+                    ...AUDIO_NAV,
+                    { label: 'Guides & Tutos', href: '/guides' },
                   ].map((item) => (
                     <li key={item.href}>
                       <Link

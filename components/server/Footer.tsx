@@ -6,12 +6,13 @@ import { cn } from '@/lib/utils'
 
 /* ─── DATA ───────────────────────────────────────────────── */
 const UNIVERSE_LINKS = [
-  { label: 'Studio & Son',      href: '/categorie/audio' },
-  { label: 'Image & Lumière',   href: '/categorie/video' },
-  { label: 'Streaming Live',    href: '/categorie/streaming' },
-  { label: 'Micros Dynamiques', href: '/categorie/micros-dynamiques' },
-  { label: 'Micros USB',        href: '/categorie/micros-usb' },
-  { label: 'Interfaces Audio',  href: '/categorie/cartes-son' },
+  { label: 'Studio & Son',          href: '/categorie/audio' },
+  { label: 'Micros Dynamiques',     href: '/categorie/micros-dynamiques' },
+  { label: 'Micros Condensateurs',  href: '/categorie/micros-condensateurs' },
+  { label: 'Micros USB',            href: '/categorie/micros-usb' },
+  { label: 'Interfaces Audio',      href: '/categorie/cartes-son' },
+  { label: 'Casques Studio',        href: '/categorie/casques-studio' },
+  { label: 'Traitement Acoustique', href: '/categorie/traitement-acoustique' },
 ]
 
 const RESOURCES_LINKS = [
@@ -21,7 +22,7 @@ const RESOURCES_LINKS = [
   { label: 'Choisir son casque',    href: '/guide/meilleur-casque-studio-home-studio-2026' },
   { label: 'Top interfaces',        href: '/guide/top-5-interfaces' },
   { label: 'Notre méthodologie',    href: '/methodologie' },
-  { label: "L'Atelier Fluxlab",     href: '/a-propos' },
+  { label: "L'Atelier Fluxlab",     href: '/configurateur' },
 ]
 
 const LEGAL_LINKS = [
@@ -164,7 +165,7 @@ export function Footer() {
               </svg>
             </Link>
             <p className="text-[15px] text-white/75 leading-[1.65] font-normal max-w-[340px] mb-8">
-              La plateforme de référence pour configurer votre studio créatif — audio, vidéo, streaming.
+              La plateforme de référence pour configurer votre studio audio &amp; son.
               Indépendante, exigeante, française.
             </p>
 
