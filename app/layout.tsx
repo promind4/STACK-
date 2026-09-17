@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import { Footer } from "@/components/server/Footer";
 import { Navbar } from "@/components/client/Navbar";
 import { JsonLd } from "@/components/server/JsonLd";
@@ -7,9 +8,15 @@ import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+const switzer = localFont({
+  src: [
+    { path: "../public/fonts/Switzer-Regular.woff2", weight: "400", style: "normal" },
+    { path: "../public/fonts/Switzer-Medium.woff2", weight: "500", style: "normal" },
+    { path: "../public/fonts/Switzer-Semibold.woff2", weight: "600", style: "normal" },
+    { path: "../public/fonts/Switzer-Bold.woff2", weight: "700", style: "normal" },
+    { path: "../public/fonts/Switzer-Extrabold.woff2", weight: "800", style: "normal" },
+  ],
+  variable: "--font-switzer",
   display: "swap",
 });
 
@@ -36,6 +43,9 @@ export const metadata: Metadata = {
     icon: "/branding/favicon.svg",
     apple: "/branding/favicon.svg",
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
 };
 
 export default function RootLayout({
@@ -45,7 +55,7 @@ export default function RootLayout({
 }) {
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-0BSNJVZ7DY";
   return (
-    <html lang="fr" className={`${inter.variable} ${jetbrains.variable}`}>
+    <html lang="fr" className={`${switzer.variable} ${jetbrains.variable}`}>
       <body className="font-sans antialiased bg-background text-foreground min-h-screen flex flex-col">
         <JsonLd data={{
           "@context": "https://schema.org",
@@ -84,6 +94,13 @@ export default function RootLayout({
             gtag('config', '${gaId}');
           `}
         </Script>
+        {process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
+          <Script
+            src={`${process.env.NEXT_PUBLIC_UMAMI_HOST_URL || "https://cloud.umami.is"}/script.js`}
+            data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+            strategy="afterInteractive"
+          />
+        )}
       </body>
     </html>
   );

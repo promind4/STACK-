@@ -1,26 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Fond blanc natif : élimine l'effet de double cercle sur Google Search et les onglets -->
+  <rect width="512" height="512" fill="#FFFFFF"/>
+
   <defs>
-    <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#E5C58C" />
-      <stop offset="100%" stop-color="#D3B27B" />
+    <linearGradient id="fluxlab-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5C58C"/>
+      <stop offset="50%" stop-color="#D3B27B"/>
+      <stop offset="100%" stop-color="#C29B5A"/>
     </linearGradient>
   </defs>
-  
-  <!-- Circular Background -->
-  <circle cx="256" cy="256" r="256" fill="url(#gold-gradient)"/>
-  
-  <!-- Icon: Stylized F (EQ/Sliders concept) -->
-  <g transform="translate(141, 115) scale(0.55)">
-    <!-- Vertical Bar (Main Stem) -->
-    <rect x="0" y="0" width="100" height="512" rx="50" fill="#0F0F0F"/>
-    
-    <!-- Top Horizontal Bar -->
-    <rect x="140" y="0" width="280" height="100" rx="50" fill="#0F0F0F"/>
-    
-    <!-- Middle Horizontal Bar -->
-    <rect x="140" y="190" width="180" height="100" rx="50" fill="#0F0F0F"/>
-    
-    <!-- Bottom Dot/Accent (Optional, for balance) -->
-    <circle cx="190" cy="462" r="50" fill="#0F0F0F" opacity="0.3"/>
+
+  <!-- Éléments Noir Studio (#0F0F0F) -->
+  <g fill="#0F0F0F">
+    <path d="M 340.4 291.5 L 317.7 328.1 L 382.2 423.5 L 385.2 425.9 L 403.8 411.3 L 414.8 399.7 Z"/>
+    <path d="M 183.9 167.6 L 183.9 203.1 L 239.1 203.1 L 276.9 256.6 L 238.5 310.7 L 175.1 310.7 L 175.1 375.3 L 235.1 375.3 L 315.3 255.4 L 254.3 168.2 Z"/>
+    <path d="M 107.1 137.3 L 96.6 154.2 L 83.8 182.7 L 76.2 208.9 L 71.6 243.8 L 72.2 278.1 L 78.6 313.6 L 90.2 345.6 L 107.1 374.7 Z"/>
+    <path d="M 385.2 85.5 L 316.5 186.8 L 340.4 221.7 L 415.4 111.7 L 399.1 96.0 Z"/>
+  </g>
+
+  <!-- Éléments Or Fluxlab (Dégradé #E5C58C -> #D3B27B -> #C29B5A) -->
+  <g fill="url(#fluxlab-gold)">
+    <path d="M 416.6 112.9 L 340.4 222.8 L 301.4 167.6 L 254.3 167.6 L 316.5 256.0 L 235.6 375.8 L 175.1 375.8 L 175.1 419.5 L 256.0 419.5 L 340.9 290.3 L 413.7 395.6 L 415.4 400.3 L 428.2 385.2 L 439.8 368.9 L 439.8 366.5 L 364.2 256.0 L 440.4 144.9 L 430.5 129.8 Z"/>
+    <path d="M 342.7 93.1 L 147.8 93.1 L 125.1 114.1 L 107.7 136.2 L 107.1 375.3 L 126.8 399.1 L 151.9 420.6 L 152.4 277.5 L 230.4 277.5 L 245.5 256.6 L 230.4 235.1 L 151.9 234.5 L 152.4 136.7 L 313.6 136.7 Z"/>
   </g>
 </svg>

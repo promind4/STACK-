@@ -53,7 +53,7 @@ export default function MethodologiePage() {
                     <h1 className="text-4xl md:text-5xl font-bold mb-6 font-serif">
                         Notre Méthodologie
                     </h1>
-                    <p className="text-lg text-muted-foreground font-light max-w-2xl mx-auto">
+                    <p className="text-lg text-foreground/80 font-normal max-w-2xl mx-auto">
                         Comment nous évaluons, testons et recommandons le matériel. Notre engagement : des avis honnêtes, des données vérifiables.
                     </p>
                 </div>
@@ -63,7 +63,7 @@ export default function MethodologiePage() {
             <section className="py-20">
                 <div className="container mx-auto px-6 max-w-[900px]">
                     <h2 className="text-2xl font-bold mb-8 font-serif">Comment nous évaluons les produits</h2>
-                    <div className="prose prose-lg max-w-none text-muted-foreground font-light leading-relaxed space-y-4">
+                    <div className="prose prose-lg max-w-none text-foreground/80 font-normal leading-relaxed space-y-4">
                         <p>
                             Chez Fluxlab, chaque recommandation repose sur une <strong className="text-foreground">analyse multi-critères</strong>.
                             Nous ne nous contentons pas de relayer les fiches techniques constructeur. Nous croisons trois sources :
@@ -103,7 +103,7 @@ export default function MethodologiePage() {
                                             Poids : {c.weight}
                                         </span>
                                     </div>
-                                    <p className="text-sm text-muted-foreground font-light leading-relaxed">{c.desc}</p>
+                                    <p className="text-sm text-foreground/75 font-normal leading-relaxed">{c.desc}</p>
                                 </div>
                             </div>
                         ))}
@@ -119,22 +119,22 @@ export default function MethodologiePage() {
                         <div className="p-6 rounded-2xl border border-border bg-card">
                             <div className="text-3xl font-bold text-primary mb-2">★ 4.5+</div>
                             <p className="font-bold mb-1">Excellent</p>
-                            <p className="text-sm text-muted-foreground font-light">Produit exceptionnel dans sa catégorie. Recommandation forte.</p>
+                            <p className="text-sm text-foreground/75 font-normal">Produit exceptionnel dans sa catégorie. Recommandation forte.</p>
                         </div>
                         <div className="p-6 rounded-2xl border border-border bg-card">
                             <div className="text-3xl font-bold text-blue-500 mb-2">★ 4.0</div>
                             <p className="font-bold mb-1">Très bon</p>
-                            <p className="text-sm text-muted-foreground font-light">Quelques compromis mineurs, mais excellent rapport qualité/prix.</p>
+                            <p className="text-sm text-foreground/75 font-normal">Quelques compromis mineurs, mais excellent rapport qualité/prix.</p>
                         </div>
                         <div className="p-6 rounded-2xl border border-border bg-card">
                             <div className="text-3xl font-bold text-amber-500 mb-2">★ 3.5</div>
                             <p className="font-bold mb-1">Correct</p>
-                            <p className="text-sm text-muted-foreground font-light">Fait le travail, mais des alternatives existent au même prix.</p>
+                            <p className="text-sm text-foreground/75 font-normal">Fait le travail, mais des alternatives existent au même prix.</p>
                         </div>
                         <div className="p-6 rounded-2xl border border-border bg-card">
                             <div className="text-3xl font-bold text-red-400 mb-2">★ &lt;3</div>
                             <p className="font-bold mb-1">Non recommandé</p>
-                            <p className="text-sm text-muted-foreground font-light">Rapport qualité/prix insuffisant ou défauts rédhibitoires.</p>
+                            <p className="text-sm text-foreground/75 font-normal">Rapport qualité/prix insuffisant ou défauts rédhibitoires.</p>
                         </div>
                     </div>
                 </div>
@@ -149,7 +149,7 @@ export default function MethodologiePage() {
                         </div>
                         <div>
                             <h2 className="text-2xl font-bold mb-4 font-serif">Transparence Affiliation</h2>
-                            <div className="space-y-4 text-muted-foreground font-light leading-relaxed">
+                            <div className="space-y-4 text-foreground/80 font-normal leading-relaxed">
                                 <p>
                                     Fluxlab participe à des programmes d&apos;affiliation avec <strong className="text-foreground">Amazon, Thomann, Woodbrass</strong> et d&apos;autres distributeurs.
                                     Concrètement, cela signifie que lorsque vous cliquez sur un lien marchand et effectuez un achat, nous percevons une commission.
@@ -171,7 +171,7 @@ export default function MethodologiePage() {
             <section className="py-20">
                 <div className="container mx-auto px-6 max-w-[900px] text-center">
                     <h2 className="text-2xl font-bold mb-4 font-serif">Des questions sur notre approche ?</h2>
-                    <p className="text-muted-foreground mb-8 font-light">
+                    <p className="text-foreground/75 mb-8 font-normal">
                         Nous sommes transparents sur nos processus. N&apos;hésitez pas à consulter nos guides ou à nous contacter.
                     </p>
                     <div className="flex flex-wrap gap-4 justify-center">

@@ -44,12 +44,12 @@ const config: Config = {
                 },
             },
             fontFamily: {
-                sans:  ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
-                serif: ['Georgia', '"Times New Roman"', 'serif'],
+                sans:  ['var(--font-switzer)', 'system-ui', '-apple-system', 'sans-serif'],
+                serif: ['var(--font-switzer)', 'system-ui', '-apple-system', 'sans-serif'],
                 mono:  ['var(--font-jetbrains)', '"JetBrains Mono"', 'monospace'],
             },
             fontSize: {
-                'frame-label': ['10px', { letterSpacing: '0.18em', lineHeight: '1' }],
+                'frame-label': ['12px', { letterSpacing: '0.12em', lineHeight: '1.2' }],
             },
             borderRadius: {
                 sm:    '4px',

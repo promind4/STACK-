@@ -5,11 +5,13 @@ import { createClient } from '@/lib/supabase';
 import { Loader2, ShieldCheck, Plus, CheckCircle, AlertTriangle, LogOut, Edit, Trash2, Save, X, Image as ImageIcon, ThumbsUp, ThumbsDown, ArrowLeft, Search, RefreshCw } from 'lucide-react';
 import { ImageUploader, GalleryUploader } from './ImageUploader';
 import { Category, Product, ProductOffer, Article } from '@/types/database';
+import { deriveRecommendationProfile } from '@/lib/atelier/profile';
 
 const supabase = createClient();
 
 type ProductWithOffers = Product & {
     product_offers: ProductOffer[];
+    recommendation_profile?: Record<string, any> | null;
 };
 
 export default function AdminPage() {
@@ -201,7 +203,16 @@ export default function AdminPage() {
         e.preventDefault(); setFormLoading(true); setFormMessage(null);
         try {
             let productId = currentId;
-            const productPayload = { name: formData.name, slug: formData.slug, brand: formData.brand, category_id: formData.category_id, description: formData.description, image_url: formData.image_url, is_active: formData.is_active, rating: formData.rating, review_count: formData.review_count, pros: formData.pros, cons: formData.cons, gallery_images: formData.gallery_images };
+            const currentProduct = isEditing && productId ? products.find(p => p.id === productId) : null;
+            const category = categories.find(category => category.id === formData.category_id);
+            const recommendation_profile = deriveRecommendationProfile({
+                categorySlug: category?.slug ?? null,
+                specs: (currentProduct?.specs && typeof currentProduct.specs === 'object' && !Array.isArray(currentProduct.specs)) ? currentProduct.specs as Record<string, unknown> : {},
+                description: formData.description,
+                pros: formData.pros,
+                override: (currentProduct?.recommendation_profile && typeof currentProduct.recommendation_profile === 'object' && !Array.isArray(currentProduct.recommendation_profile)) ? currentProduct.recommendation_profile as any : undefined,
+            });
+            const productPayload = { name: formData.name, slug: formData.slug, brand: formData.brand, category_id: formData.category_id, description: formData.description, image_url: formData.image_url, is_active: formData.is_active, rating: formData.rating, review_count: formData.review_count, pros: formData.pros, cons: formData.cons, gallery_images: formData.gallery_images, recommendation_profile };
             if (isEditing && productId) {
                 const { error: prodError } = await (supabase.from('products') as any).update(productPayload).eq('id', productId);
                 if (prodError) throw prodError;

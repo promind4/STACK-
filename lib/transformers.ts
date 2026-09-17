@@ -1,15 +1,14 @@
-import { Product, ProductOffer, ReviewsSummary } from "@/types/database";
-import { cleanImageUrl, buildAffiliateLink } from "./utils";
+import type { Product, ProductOffer, ReviewsSummary } from "../types/database.ts";
+import { cleanImageUrl, buildAffiliateLink } from "./utils.ts";
+import { selectAvailableOffers } from "./atelier/offers.ts";
+import type { AtelierOffer } from "./atelier/types.ts";
 
 /**
  * Transform raw Supabase row into frontend Product type.
  * Works in both Server and Client Components.
  */
 export const transformProduct = (raw: any): Product => {
-    // Logic to determine lowest price
-    const offers = raw.product_offers || [];
-    const lowestPrice =
-        offers.length > 0 ? Math.min(...offers.map((o: any) => o.price)) : 0;
+    const offers = Array.isArray(raw.product_offers) ? raw.product_offers : [];
 
     // Real data from DB
     const dbRating = raw.rating || 0;
@@ -22,7 +21,7 @@ export const transformProduct = (raw: any): Product => {
         woodbrass: "https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg",
     };
 
-    const frontendOffers: ProductOffer[] = offers.map((o: any) => {
+    const offerCandidates: Array<{ offer: AtelierOffer; frontendOffer: ProductOffer }> = offers.map((o: any) => {
         let logoUrl = o.merchant_logo_url || "";
         const mName = o.merchant_name?.toLowerCase().trim() || "";
 
@@ -35,15 +34,32 @@ export const transformProduct = (raw: any): Product => {
             logoUrl = MERCHANT_LOGOS.woodbrass;
         }
 
-        return {
-            merchant_name: o.merchant_name,
-            merchant_logo_url: logoUrl,
+        const offer: AtelierOffer = {
+            merchantName: o.merchant_name,
             price: o.price,
-            currency: o.currency || "EUR",
-            affiliate_link: buildAffiliateLink(o.affiliate_link, o.merchant_name),
-            in_stock: o.in_stock ?? true,
+            currency: o.currency,
+            affiliateLink: buildAffiliateLink(o.affiliate_link, o.merchant_name),
+            inStock: o.in_stock === true,
+            lastCheckedAt: o.last_checked_at,
+        };
+
+        return {
+            offer,
+            frontendOffer: {
+                merchant_name: o.merchant_name,
+                merchant_logo_url: logoUrl,
+                price: offer.price,
+                currency: offer.currency,
+                affiliate_link: offer.affiliateLink,
+                in_stock: offer.inStock,
+            },
         };
     });
+    const frontendOffersByOffer = new Map(offerCandidates.map(candidate => [candidate.offer, candidate.frontendOffer]));
+    const availableOffers = selectAvailableOffers(offerCandidates.map(candidate => candidate.offer));
+    const bestAvailableOffer = availableOffers[0] ?? null;
+    const frontendOffers: ProductOffer[] = availableOffers.map(offer => frontendOffersByOffer.get(offer)!);
+    const lowestPrice = bestAvailableOffer?.price ?? 0;
 
     // Pros / Cons extraction
     let pros: string[] = [];
@@ -98,7 +114,9 @@ export const transformProduct = (raw: any): Product => {
         description: raw.description || "Pas de description disponible.",
         short_description: raw.short_description,
         image_url:
-            cleanImageUrl(raw.image_url) ||
+            (raw.slug === "shure-sm7b"
+                ? "https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/shure-sm7b-studio.webp"
+                : cleanImageUrl(raw.image_url)) ||
             "https://placehold.co/400x400/e2e8f0/94a3b8?text=No+Image",
         specs: typeof raw.specs === "object" ? raw.specs : {},
         price: lowestPrice || raw.price || 0,
@@ -107,7 +125,7 @@ export const transformProduct = (raw: any): Product => {
         rating: dbRating,
         reviews: dbReviewCount,
         review_count: dbReviewCount,
-        inStock: (raw.product_offers || []).some((o: any) => o.in_stock),
+        inStock: bestAvailableOffer !== null,
         isPromo: false,
         badge: undefined,
         gallery_images: (raw.gallery_images || []).map((img: string) => cleanImageUrl(img)),

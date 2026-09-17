@@ -68,12 +68,12 @@ export default async function HomePage() {
   } : null
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <>
       <JsonLd data={homePageSchema} />
       {featuredProductsSchema && <JsonLd data={featuredProductsSchema} />}
       <HeroSection />
       <HomeProductShowcase products={featuredProducts} />
       <HomeGuides />
-    </main>
+    </>
   )
 }

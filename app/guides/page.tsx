@@ -6,6 +6,7 @@ import { PATHWAYS } from '@/lib/data';
 import GuidesClient from '@/components/client/GuidesClient';
 import Image from 'next/image';
 import { JsonLd } from '@/components/server/JsonLd';
+import { guideCoverImage } from '@/lib/guide-images';
 
 export const metadata: Metadata = {
     title: 'Guides & Tutoriels pour Créateurs',
@@ -62,8 +63,8 @@ export default function GuidesPage() {
                         <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-4">
                             Fluxlab Academy
                         </span>
-                        <h1 className="text-4xl md:text-6xl font-bold mb-6 font-serif">Guides &amp; Tutoriels pour Créateurs.</h1>
-                        <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light">
+                        <h1 className="text-4xl md:text-6xl font-bold mb-6 font-serif text-balance">Guides &amp; Tutoriels pour Créateurs.</h1>
+                        <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-normal text-balance">
                             Des guides pratiques, des comparatifs honnêtes et des tutoriels techniques pour maîtriser votre matériel.
                         </p>
                     </div>
@@ -72,7 +73,7 @@ export default function GuidesPage() {
                     <div className="relative rounded-3xl overflow-hidden aspect-[4/5] sm:aspect-[16/9] lg:aspect-[21/9] group cursor-pointer shadow-2xl shadow-black/5">
                         <Link href={`/guide/${heroArticle.slug}`} className="absolute inset-0 z-20" />
                         <Image
-                            src={heroArticle.image}
+                            src={guideCoverImage(heroArticle)}
                             alt={`${heroArticle.title} – Guide ${heroArticle.category} | Fluxlab`}
                             fill
                             priority
@@ -86,10 +87,10 @@ export default function GuidesPage() {
                                 <span className="bg-white/20 backdrop-blur px-2 py-0.5 rounded uppercase text-xs font-bold">{heroArticle.category}</span>
                                 <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> {heroArticle.readTime}</span>
                             </div>
-                            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4 leading-tight font-serif">
+                            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4 leading-tight font-serif text-balance">
                                 {heroArticle.title}
                             </h2>
-                            <p className="text-lg text-white/80 mb-8 line-clamp-2 md:line-clamp-none font-light">
+                            <p className="text-lg text-white/90 mb-8 line-clamp-2 md:line-clamp-none font-normal text-balance">
                                 {heroArticle.intro}
                             </p>
                             <span className="inline-flex items-center px-6 py-3 bg-white text-black hover:bg-white/90 border border-white/50 shadow-lg font-bold rounded-lg text-sm">

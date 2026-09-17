@@ -7,11 +7,11 @@ export const metadata: Metadata = {
 
 export default function MentionsLegales() {
     return (
-        <article className="container mx-auto px-6 max-w-[800px] py-20">
-            <h1 className="text-3xl font-bold text-foreground mb-8">
+        <article className="container mx-auto px-6 max-w-[800px] pt-32 pb-20">
+            <h1 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-8">
                 Mentions Légales
             </h1>
-            <div className="prose prose-stone max-w-none prose-headings:text-foreground prose-p:text-muted-foreground text-sm space-y-4">
+            <div className="prose prose-stone max-w-none prose-headings:text-foreground prose-headings:font-serif prose-p:text-foreground/80 text-[15px] leading-relaxed space-y-6">
                 <h2>1. Éditeur et Propriétaire du Site</h2>
                 <p>Le site Internet <strong>Fluxlab</strong> accessible à l'adresse <em>fluxlab.fr</em> est édité par l'Équipe Fluxlab.</p>
                 <p><strong>Contact :</strong> contact@fluxlab.fr</p>

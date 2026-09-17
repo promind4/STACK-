@@ -39,7 +39,7 @@ function FooterLinkList({ links }: { links: { label: string; href: string }[] })
         <li key={l.href}>
           <Link
             href={l.href}
-            className="text-[14px] text-white/65 font-light hover-rule hover:text-white/90 transition-colors"
+            className="text-[14px] text-white/75 font-normal hover-rule hover:text-white transition-colors"
           >
             {l.label}
           </Link>
@@ -111,9 +111,9 @@ function NewsletterForm() {
       {status === 'error' && (
         <p className="text-[11px] text-red-400">Une erreur s&apos;est produite, réessayez.</p>
       )}
-      <p className="text-[11px] text-white/35 font-light max-w-md">
+      <p className="text-[12px] text-white/60 font-normal max-w-md">
         En vous inscrivant, vous acceptez notre{' '}
-        <Link href="/confidentialite" className="hover-rule text-white/55">politique de confidentialité</Link>.
+        <Link href="/confidentialite" className="hover-rule text-white/80">politique de confidentialité</Link>.
         Désabonnement en un clic.
       </p>
     </form>
@@ -137,12 +137,12 @@ export function Footer() {
         <div className="border-b border-white/10 py-14">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             <div className="col-span-12 lg:col-span-4">
-              <p className="frame-label text-primary mb-3">La Gazette du Labo</p>
+              <p className="frame-label text-primary mb-3">Le carnet Fluxlab</p>
               <p className="text-[22px] font-serif italic text-white/90 leading-snug mb-2">
                 Le setup parfait, une fois par mois.
               </p>
-              <p className="text-[13px] text-white/45 font-light">
-                Guides exclusifs, bons plans matériel, nouvelles du labo.
+              <p className="text-[14px] text-white/70 font-normal">
+                Guides exclusifs, bons plans matériel, nouvelles de l&apos;Atelier.
               </p>
             </div>
             <div className="col-span-12 lg:col-span-7 lg:col-start-6">
@@ -158,20 +158,20 @@ export function Footer() {
           <div className="col-span-12 lg:col-span-4">
             <Link href="/" className="inline-flex items-center mb-6" aria-label="Fluxlab — Accueil">
               <svg viewBox="0 0 188 36" width="160" height="31" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                <text x="0" y="29" fontFamily="Georgia,serif" fontStyle="italic" fontSize="32" fill="#FAFAFA" letterSpacing="-0.5">Flux</text>
-                <line x1="84" y1="5" x2="84" y2="32" stroke="#D3B27B" strokeWidth="1.5"/>
-                <text x="91" y="28" fontFamily="'JetBrains Mono',monospace" fontSize="15" fill="rgba(250,250,250,.75)" letterSpacing="2">lab</text>
+                <text x="0" y="29" fontFamily="var(--font-switzer),system-ui,sans-serif" fontWeight="800" fontStyle="italic" fontSize="30" fill="#FAFAFA" letterSpacing="-0.5">Flux</text>
+                <line x1="82" y1="5" x2="82" y2="32" stroke="#D3B27B" strokeWidth="1.5"/>
+                <text x="89" y="28" fontFamily="'JetBrains Mono',monospace" fontWeight="600" fontSize="15" fill="rgba(250,250,250,.85)" letterSpacing="2">lab</text>
               </svg>
             </Link>
-            <p className="text-[15px] text-white/55 leading-[1.65] font-light max-w-[340px] mb-8">
+            <p className="text-[15px] text-white/75 leading-[1.65] font-normal max-w-[340px] mb-8">
               La plateforme de référence pour configurer votre studio créatif — audio, vidéo, streaming.
               Indépendante, exigeante, française.
             </p>
 
             {/* Trust signals */}
-            <ul className="space-y-3 text-[12px] font-mono text-white/50 mb-10" role="list">
+            <ul className="space-y-3 text-[12px] font-mono text-white/65 mb-10" role="list">
               <li className="flex items-center gap-3">
-                <span className="text-primary">·</span>
+                <span className="text-primary font-bold">·</span>
                 0 produit sponsorisé
               </li>
             </ul>
@@ -199,7 +199,7 @@ export function Footer() {
               href="/configurateur"
               className="mt-4 pt-4 border-t border-white/10 inline-flex items-center gap-2 text-primary font-medium text-[13px] tracking-wide hover-rule"
             >
-              Le Labo IA
+              L’Atelier Fluxlab
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
                 <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
               </svg>
@@ -226,11 +226,11 @@ export function Footer() {
               <p className="frame-label text-primary">Transparence</p>
             </div>
             <div className="col-span-12 lg:col-span-9">
-              <p className="text-[13px] text-white/50 leading-[1.75] font-light max-w-[800px]">
+              <p className="text-[13px] text-white/70 leading-[1.75] font-normal max-w-[800px]">
                 Fluxlab participe à des programmes d&apos;affiliation{' '}
-                <span className="font-mono text-white/70">(Amazon · Thomann · Woodbrass)</span>
+                <span className="font-mono text-white/85">(Amazon · Thomann · Woodbrass)</span>
                 . Un achat via nos liens peut nous faire percevoir une commission,{' '}
-                <em className="not-italic text-white/75">sans surcoût pour vous</em>.
+                <em className="not-italic text-white/90">sans surcoût pour vous</em>.
                 Cela finance nos tests indépendants et la mise à jour des prix.
               </p>
             </div>

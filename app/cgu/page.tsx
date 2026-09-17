@@ -7,11 +7,11 @@ export const metadata: Metadata = {
 
 export default function CGU() {
     return (
-        <article className="container mx-auto px-6 max-w-[800px] py-20">
-            <h1 className="text-3xl font-bold text-foreground mb-8">
+        <article className="container mx-auto px-6 max-w-[800px] pt-32 pb-20">
+            <h1 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-8">
                 Conditions Générales d&apos;Utilisation
             </h1>
-            <div className="prose prose-stone max-w-none prose-headings:text-foreground prose-p:text-muted-foreground text-sm">
+            <div className="prose prose-stone max-w-none prose-headings:text-foreground prose-headings:font-serif prose-p:text-foreground/80 text-[15px] leading-relaxed space-y-6">
                 <h2>Objet</h2>
                 <p>
                     Les présentes conditions régissent l&apos;utilisation du site

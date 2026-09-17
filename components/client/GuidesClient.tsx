@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { ArrowRight, Search, X } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import Image from 'next/image';
+import { guideCoverImage } from '@/lib/guide-images';
 
 interface Article {
     id: string;
@@ -94,7 +95,7 @@ export default function GuidesClient({ articles, categories }: GuidesClientProps
                                 <Link href={`/guide/${article.slug}`} className="flex flex-col h-full">
                                     <div className="aspect-[16/10] rounded-2xl overflow-hidden mb-6 relative shadow-sm border border-border/50">
                                         <Image
-                                            src={article.image}
+                                            src={guideCoverImage(article)}
                                             alt={article.title}
                                             fill
                                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -108,19 +109,19 @@ export default function GuidesClient({ articles, categories }: GuidesClientProps
                                         </div>
                                     </div>
 
-                                    <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3 font-medium">
+                                    <div className="flex items-center gap-2 text-[13px] text-[#4A4A4A] mb-3 font-medium">
                                         {article.date}
                                     </div>
 
-                                    <h4 className="text-xl font-bold text-foreground mb-3 leading-tight group-hover:text-primary transition-colors font-serif">
+                                    <h4 className="text-[22px] font-bold text-foreground mb-3 leading-snug group-hover:text-primary transition-colors font-serif text-balance">
                                         {article.title}
                                     </h4>
 
-                                    <p className="text-muted-foreground text-sm line-clamp-3 mb-4 flex-1 font-light">
+                                    <p className="text-[#333333] text-[15px] leading-relaxed line-clamp-3 mb-4 flex-1 font-normal">
                                         {article.intro}
                                     </p>
 
-                                    <div className="flex items-center text-sm font-bold text-foreground group-hover:text-primary transition-colors">
+                                    <div className="flex items-center text-[15px] font-bold text-foreground group-hover:text-primary transition-colors">
                                         Lire l&apos;article <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                                     </div>
                                 </Link>

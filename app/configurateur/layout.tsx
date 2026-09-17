@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Configurateur IA',
-    description: 'Créez votre setup studio sur mesure avec notre configurateur intelligent. Audio, Vidéo et Streaming.',
+    title: 'L’Atelier Fluxlab',
+    description: 'Composez un setup créatif cohérent selon votre usage, votre matériel actuel, votre environnement et votre budget.',
     alternates: {
         canonical: 'https://fluxlab.fr/configurateur',
     },

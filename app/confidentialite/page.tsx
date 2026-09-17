@@ -7,11 +7,11 @@ export const metadata: Metadata = {
 
 export default function Confidentialite() {
     return (
-        <article className="container mx-auto px-6 max-w-[800px] py-20">
-            <h1 className="text-3xl font-bold text-foreground mb-8">
+        <article className="container mx-auto px-6 max-w-[800px] pt-32 pb-20">
+            <h1 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-8">
                 Politique de Confidentialité
             </h1>
-            <div className="prose prose-stone max-w-none prose-headings:text-foreground prose-p:text-muted-foreground text-sm space-y-4">
+            <div className="prose prose-stone max-w-none prose-headings:text-foreground prose-headings:font-serif prose-p:text-foreground/80 text-[15px] leading-relaxed space-y-6">
                 <h2>1. Collecte des données personnelles</h2>
                 <p>
                     La consultation du site <strong>Fluxlab</strong> (fluxlab.fr) est possible sans que vous ayez à révéler votre identité ni toute autre information 

@@ -35,6 +35,229 @@ export interface Pathway {
 
 export const ARTICLES: Article[] = [
   {
+    id: "30",
+    slug: "focusrite-scarlett-2i2-vs-audient-id4",
+    title: "Focusrite Scarlett 2i2 vs Audient iD4 MKII : Quel Choix en 2026 ?",
+    category: "Audio",
+    readTime: "5 min",
+    date: "14 Sep 2026",
+    updatedAt: "14 Sep 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/plaque_audio_doodle.webp",
+    intro: "Match au sommet sous les 200 € : préampli console analogique et conversion ultra-précise pour l\u2019Audient iD4 MKII, ou polyvalence 2 entrées et gain massif de 69 dB pour la Scarlett 2i2 4th Gen ? Analyse technique et comparatif d\u2019usage sans complaisance.",
+    relatedProducts: ["focusrite-scarlett-2i2-4th-gen", "shure-sm7b", "beyerdynamic-dt-770-pro-80-ohm"],
+    relatedCategorySlug: "cartes-son",
+    content: `
+      <p class="lead text-lg text-muted-foreground font-medium mb-8">
+        Si vous disposez d\u2019un budget compris entre 140 € et 190 € pour équiper votre studio ou votre setup podcast, votre choix final se résume presque toujours à ce duel : la <strong>Focusrite Scarlett 2i2 (4th Gen)</strong> ou l\u2019<strong>Audient iD4 MKII</strong>. Deux bêtes de course aux philosophies radicalement différentes.
+      </p>
+
+      <div class="bg-primary/5 border border-primary/10 rounded-2xl p-6 my-8">
+        <h3 class="text-foreground font-bold mt-0 mb-3 text-lg flex items-center gap-2">
+          Le Verdict Express (En Résumé)
+        </h3>
+        <ul class="mb-0 space-y-2 text-foreground/85">
+          <li><strong>Choisissez l\u2019Audient iD4 MKII (~149 €)</strong> si vous enregistrez en solo (voix, guitare, basse). Son préampli micro issu des consoles de studio analogiques et son convertisseur 125,5 dB de dynamique offrent la meilleure fidélité sonore du segment.</li>
+          <li><strong>Choisissez la Focusrite Scarlett 2i2 4th Gen (~189 €)</strong> si vous avez besoin de 2 entrées micro (podcasts à deux, interviews), si vous utilisez un micro dynamique très gourmand comme le Shure SM7B (69 dB de gain sans Cloudlifter requis), ou si vous cherchez la sécurité de l\u2019Auto-Gain et du Clip Safe.</li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Tableau comparatif des spécifications mesurées</h2>
+
+      <div class="overflow-x-auto no-scrollbar my-8">
+        <table class="w-full text-left border-collapse text-sm bg-card border border-border rounded-2xl overflow-hidden shadow-sm">
+          <thead>
+            <tr class="border-b border-border bg-muted/50 text-foreground font-bold">
+              <th class="px-5 py-4">Critère technique</th>
+              <th class="px-5 py-4">Focusrite Scarlett 2i2 4th Gen</th>
+              <th class="px-5 py-4">Audient iD4 MKII</th>
+              <th class="px-5 py-4">Arbitrage pratique</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-border">
+            <tr class="hover:bg-muted/30 transition-colors">
+              <td class="px-5 py-4 font-bold bg-muted/20">Nombre d\u2019entrées micro</td>
+              <td class="px-5 py-4 font-medium">2 × XLR / Jack Combo</td>
+              <td class="px-5 py-4 font-medium">1 × XLR / Jack + 1 × Jack JFET (Instrument)</td>
+              <td class="px-5 py-4 text-primary font-bold">Focusrite pour 2 micros simultanés</td>
+            </tr>
+            <tr class="hover:bg-muted/30 transition-colors">
+              <td class="px-5 py-4 font-bold bg-muted/20">Réserve de gain micro</td>
+              <td class="px-5 py-4 font-bold text-emerald-600">69 dB</td>
+              <td class="px-5 py-4">58 dB</td>
+              <td class="px-5 py-4 text-emerald-600 font-medium">Focusrite idéale pour micros dynamiques</td>
+            </tr>
+            <tr class="hover:bg-muted/30 transition-colors">
+              <td class="px-5 py-4 font-bold bg-muted/20">Bruit équivalent en entrée (EIN)</td>
+              <td class="px-5 py-4 font-mono">-129 dBu (A-weighted)</td>
+              <td class="px-5 py-4 font-mono">-128 dBu (A-weighted)</td>
+              <td class="px-5 py-4 text-muted-foreground">Égalité (silence total)</td>
+            </tr>
+            <tr class="hover:bg-muted/30 transition-colors">
+              <td class="px-5 py-4 font-bold bg-muted/20">Plage dynamique (DAC / Sortie)</td>
+              <td class="px-5 py-4">120 dB</td>
+              <td class="px-5 py-4 font-bold text-emerald-600">125,5 dB</td>
+              <td class="px-5 py-4 text-emerald-600 font-medium">Audient plus analytique au mixage</td>
+            </tr>
+            <tr class="hover:bg-muted/30 transition-colors">
+              <td class="px-5 py-4 font-bold bg-muted/20">Latence aller-retour RTL (64 samples)</td>
+              <td class="px-5 py-4 font-mono">~5,1 ms (Mac) / ~6,1 ms (Windows)</td>
+              <td class="px-5 py-4 font-mono">~5,2 ms (Mac) / ~6,7 ms (Windows)</td>
+              <td class="px-5 py-4 text-muted-foreground">Pilotes ultra-stables des deux côtés</td>
+            </tr>
+            <tr class="hover:bg-muted/30 transition-colors">
+              <td class="px-5 py-4 font-bold bg-muted/20">Sorties casque</td>
+              <td class="px-5 py-4">1 × Jack 6.35 mm</td>
+              <td class="px-5 py-4 font-bold text-primary">2 (1 × 6.35 mm + 1 × 3.5 mm)</td>
+              <td class="px-5 py-4 text-primary font-medium">Audient permet la double écoute directe</td>
+            </tr>
+            <tr class="hover:bg-muted/30 transition-colors">
+              <td class="px-5 py-4 font-bold bg-muted/20">Fonctionnalités avancées</td>
+              <td class="px-5 py-4">Auto-Gain, Clip Safe, Mode Air</td>
+              <td class="px-5 py-4">ScrollControl (molette DAW)</td>
+              <td class="px-5 py-4 text-foreground/80">Focusrite protège contre la saturation</td>
+            </tr>
+            <tr class="hover:bg-muted/30 transition-colors">
+              <td class="px-5 py-4 font-bold bg-muted/20">Prix constaté (09/2026)</td>
+              <td class="px-5 py-4 font-bold text-foreground">~189 € (Thomann/Amazon)</td>
+              <td class="px-5 py-4 font-bold text-emerald-600">~149 € (Thomann/Amazon)</td>
+              <td class="px-5 py-4 text-emerald-600 font-bold">Audient 40 € plus économique</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">1. Préamplis et Qualité Audio : Console Vintage vs Précision Moderne</h2>
+      
+      <p>La grande force de l\u2019<strong>Audient iD4 MKII</strong> réside dans son architecture analogique. Elle intègre le même préamplificateur à composants discrets que la console de studio professionnelle Audient ASP8024-HE (qui coûte plus de 25 000 €). Le résultat à l\u2019écoute est remarquable : un son plein, très musical, avec des médiums définis sans dureté numérique.</p>
+
+      <p>L\u2019entrée instrument en façade (DI) utilise un transistor JFET conçu pour émuler l\u2019étage d\u2019entrée d\u2019un ampli à lampes classique. Si vous branchez une guitare électrique ou une basse directement dans vos simulations d\u2019amplis (Neural DSP, Amplitube), l\u2019iD4 offre une dynamique et une texture supérieures.</p>
+
+      <p>De son côté, la <strong>Scarlett 2i2 4th Gen</strong> a complètement revu ses préamplis. Avec une réserve colossale de <strong>69 dB de gain</strong> (contre 58 dB pour l\u2019Audient), elle est capable de piloter sans aucun souffle les microphones dynamiques à très faible niveau de sortie, comme le légendaire <a href="/guide/scarlett-2i2-4th-gen-shure-sm7b-cloudlifter" class="text-primary hover:underline font-semibold">Shure SM7B sans avoir besoin d\u2019acheter un Cloudlifter à 150 €</a>.</p>
+
+      <!-- PRODUCT CARD FOCUSRITE -->
+      <div id="focusrite-scarlett-2i2" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/focusrite-scarlett-2i2-4th-gen-main-1769876888992.png" alt="Focusrite Scarlett 2i2 4th Gen" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/focusrite-scarlett-2i2-4th-gen" class="product-link text-foreground hover:text-primary transition-colors">Focusrite Scarlett 2i2 (4th Gen)</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">La Reine de la Polyvalence (≈ 189 €)</p>
+            <p>La 4e génération apporte des convertisseurs 120 dB issus de la gamme pro RedNet, un gain énorme de 69 dB et des outils d\u2019assistance (Auto-Gain, Clip Safe) qui évitent toute prise ratée.</p>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li><strong>69 dB de Gain :</strong> Pilote tous les micros dynamiques sans booster externe.</li>
+              <li><strong>2 Vraies Entrées Micro :</strong> Idéal pour enregistrer deux personnes simultanément.</li>
+              <li><strong>Clip Safe &amp; Auto-Gain :</strong> Réglage automatique du niveau et protection anti-écrêtage.</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Prix plus élevé d\u2019environ 40 € par rapport à l\u2019Audient.</li>
+              <li>Une seule prise casque en façade.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/focusrite-scarlett-2i2-4th-gen" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="focusrite-scarlett-2i2-4th-gen" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <!-- PRODUCT CARD AUDIENT (Hors-catalogue avec marchands directs) -->
+      <div id="audient-id4-mkii" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/audient-id4-mkii-main-clean-1789426505.jpg" alt="Audient iD4 MKII" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <div class="flex items-center gap-3 mb-2 flex-wrap">
+              <h3 class="mt-0 mb-0 text-2xl font-bold text-foreground">Audient iD4 MKII</h3>
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">Hors-catalogue</span>
+            </div>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le Son Studio au Meilleur Prix (≈ 149 €)</p>
+            <p>Dotée d’un préampli classe A issu des consoles mythiques Audient et d’une sortie casque double capable de driver des casques à 300 Ohms, c’est l’interface des puristes du son.</p>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li><strong>Qualité de Préamplification :</strong> Son chaud et transparent hérité des consoles studio.</li>
+              <li><strong>Double Sortie Casque :</strong> Deux prises actives (3.5 mm et 6.35 mm) puissantes.</li>
+              <li><strong>Entrée DI JFET :</strong> Sublime pour la guitare électrique et la basse.</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>1 seule entrée micro (inadaptée pour interviewer un invité en direct).</li>
+              <li>58 dB de gain (un peu juste pour un SM7B sur voix feutrée).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="https://www.thomann.de/fr/audient_id4_mkii.htm" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Voir sur Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="https://www.amazon.fr/s?k=Audient+iD4+MKII" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-[#FF9900]/10 text-[#FF9900] hover:bg-[#FF9900]/20 border border-[#FF9900]/20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Voir sur Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+          <a href="https://woodbrass.com/products/audient-id4-mkii-342574" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-muted text-foreground hover:bg-muted/80 border border-border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Voir sur Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">2. Sortie Casque et Ergonomie : Deux approches du bureau</h2>
+
+      <p>L\u2019<strong>Audient iD4 MKII</strong> intègre un ampli casque à très forte puissance alimenté en USB-C 3.0. Il est capable de driver sans perte de dynamique des casques studio exigeants comme le <a href="/produit/beyerdynamic-dt-770-pro-80-ohm" class="text-primary hover:underline font-semibold">Beyerdynamic DT 770 PRO (80 ou 250 Ohms)</a>. De plus, sa double prise (Jack standard + mini-jack) permet de brancher deux casques sans adaptateur.</p>
+
+      <p>La <strong>Scarlett 2i2</strong> mise sur des fonctionnalités d\u2019automatisation salvatrices : le mode <strong>Auto-Gain</strong> écoute votre voix pendant 10 secondes et calibre le niveau parfait, tandis que le <strong>Clip Safe</strong> surveille le signal en temps réel et réduit automatiquement le gain si vous vous mettez à crier ou rire fort.</p>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">3. Notre Recommandation selon votre profil créateur</h2>
+
+      <div class="space-y-6 my-8">
+        <div class="bg-card border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous êtes musicien solo, chanteur ou podcaster solitaire</h3>
+          <p class="text-muted-foreground mb-0">Prenez l\u2019<strong>Audient iD4 MKII</strong>. Vous économisez 40 €, bénéficiez d\u2019une musicalité supérieure sur vos enregistrements et disposez de la meilleure sortie casque du marché à ce niveau de prix.</p>
+        </div>
+
+        <div class="bg-card border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous animez un podcast à deux, recevez des invités ou faites du stream</h3>
+          <p class="text-muted-foreground mb-0">La <strong>Focusrite Scarlett 2i2 (4th Gen)</strong> est incontournable. Ses deux entrées XLR indépendantes et ses sécurités anti-écrêtage vous éviteront de ruiner des heures d\u2019enregistrement.</p>
+        </div>
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-12 text-center">
+        <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous hésitez encore avec votre micro ou votre pièce ?</h3>
+        <p class="text-muted-foreground max-w-xl mx-auto mb-6">Testez notre algorithme intelligent pour obtenir une recommandation sur mesure intégrant votre micro, votre acoustique et votre budget.</p>
+        <a href="/configurateur" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-md">Lancer le Configurateur Studio IA</a>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">FAQ</h2>
+
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">L\u2019Audient iD4 MKII fonctionne-t-elle sur Mac et PC sans pilote ?</h3>
+          <p class="text-muted-foreground">Sur macOS, l\u2019Audient est 100% Class Compliant (aucun pilote requis). Sur Windows, il est recommandé d\u2019installer l\u2019Audient iD Driver pour bénéficier du panneau de contrôle virtuel et de la latence ASIO minimale.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Faut-il une alimentation externe sur secteur ?</h3>
+          <p class="text-muted-foreground">Non, les deux interfaces sont entièrement auto-alimentées par leur port USB-C. Un simple câble relié à votre ordinateur fournit l\u2019énergie nécessaire, y compris l\u2019alimentation fantôme 48V.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Peut-on brancher une guitare et un micro en même temps sur l\u2019Audient iD4 ?</h3>
+          <p class="text-muted-foreground">Oui, mais attention : l\u2019entrée instrument JFET en façade prend la priorité sur l\u2019entrée micro arrière pour le canal 1. Vous ne pouvez donc pas mixer deux signaux séparés simultanément sur l\u2019iD4 (contrairement à la Scarlett 2i2 qui dispose de deux canaux stéréo/mono entièrement indépendants).</p>
+        </div>
+      </div>
+`,
+  },
+  {
     id: "7",
     slug: "choisir-casque-studio",
     title: "Comment choisir son Casque Studio ? (Ouvert vs Fermé)",
@@ -155,7 +378,7 @@ export const ARTICLES: Article[] = [
       <div id="dt-770" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
           <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
-            <img src="https://www.thomann.de/thumb/opengraph/pics/prod/174334.jpg" alt="Beyerdynamic DT 770 PRO" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_17/174334/18443592_800.jpg" alt="Beyerdynamic DT 770 PRO" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
           </div>
           <div>
             <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/beyerdynamic-dt-770-pro-80-ohm" class="product-link text-foreground hover:text-primary transition-colors">2. Beyerdynamic DT 770 PRO</a></h3>
@@ -198,7 +421,7 @@ export const ARTICLES: Article[] = [
       <div id="dt-990" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
           <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
-            <img src="https://www.thomann.de/thumb/opengraph/pics/prod/106865.jpg" alt="Beyerdynamic DT 990 PRO" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_10/106865/18443258_800.jpg" alt="Beyerdynamic DT 990 PRO" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
           </div>
           <div>
             <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/beyerdynamic-dt-990-pro" class="product-link text-foreground hover:text-primary transition-colors">3. Beyerdynamic DT 990 PRO</a></h3>
@@ -241,7 +464,7 @@ export const ARTICLES: Article[] = [
       <div id="hd-600" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
           <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
-            <img src="https://www.thomann.de/thumb/opengraph/pics/prod/471751.jpg" alt="Sennheiser HD 600" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_47/471751/16917425_800.jpg" alt="Sennheiser HD 600" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
           </div>
           <div>
             <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/sennheiser-hd-600" class="product-link text-foreground hover:text-primary transition-colors">4. Sennheiser HD 600</a></h3>
@@ -406,7 +629,7 @@ export const ARTICLES: Article[] = [
   </thead>
   <tbody >
   <tr class="hover:bg-muted/50 border-b border-border transition-colors" >
-  <td class="px-5 py-4 font-bold border-r border-border" > <a href="#rode-podmic-usb" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://www.thomann.de/thumb/opengraph/pics/prod/567098.jpg" alt = "Rode" class= "w-8 h-8 rounded-full object-cover" > Rode PodMic USB </a></td >
+  <td class="px-5 py-4 font-bold border-r border-border" > <a href="#rode-podmic-usb" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_56/567098/18330268_800.jpg" alt = "Rode" class= "w-8 h-8 rounded-full object-cover" > Rode PodMic USB </a></td >
   <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > Double connectique(Évolutif) </td>
   <td class= "px-5 py-4 border-r border-border"> Streaming & Gaming </td>
   <td class= "px-5 py-4 text-center font-bold text-primary"> 4.7 / 5 </td>
@@ -418,13 +641,13 @@ export const ARTICLES: Article[] = [
   <td class= "px-5 py-4 text-center font-bold text-primary"> 4.8 / 5 </td>
   </tr>
   <tr class= "hover:bg-muted/50 border-b border-border transition-colors">
-  <td class="px-5 py-4 font-bold border-r border-border" > <a href="#shure-sm7b" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://www.thomann.de/thumb/opengraph/pics/prod/129929.jpg" alt = "Shure" class= "w-8 h-8 rounded-full object-cover" > Shure SM7B </a></td >
+  <td class="px-5 py-4 font-bold border-r border-border" > <a href="#shure-sm7b" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/shure-sm7b-studio.webp" alt = "Shure" class= "w-8 h-8 rounded-full object-cover" > Shure SM7B </a></td >
   <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > La texture "Smooth Radio" </td>
   <td class= "px-5 py-4 border-r border-border"> Studio Pro & Broadcast </td>
   <td class= "px-5 py-4 text-center font-bold text-primary"> 4.9 / 5 </td>
   </tr>
   <tr class= "hover:bg-muted/50 transition-colors">
-  <td class="px-5 py-4 font-bold border-r border-border" > <a href="#electro-voice-re20" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://www.thomann.de/thumb/opengraph/pics/prod/128926.jpg" alt = "Electro-Voice" class= "w-8 h-8 rounded-full object-cover" > Electro - Voice RE20 </a></td >
+  <td class="px-5 py-4 font-bold border-r border-border" > <a href="#electro-voice-re20" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_12/128926/10589653_800.jpg" alt = "Electro-Voice" class= "w-8 h-8 rounded-full object-cover" > Electro - Voice RE20 </a></td >
   <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > Technologie Variable - D(zéro étouffement) </td>
   <td class= "px-5 py-4 border-r border-border"> Voix très graves & animateur turbulent </td>
   <td class= "px-5 py-4 text-center font-bold text-primary"> 4.9 / 5 </td>
@@ -522,7 +745,7 @@ export const ARTICLES: Article[] = [
   <div id="rode-podmic-usb" class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
     <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
       <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
-        <img src="https://www.thomann.de/thumb/opengraph/pics/prod/567098.jpg" alt="Rode PodMic USB" class="w-full h-full object-contain" loading="lazy" />
+        <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_56/567098/18330268_800.jpg" alt="Rode PodMic USB" class="w-full h-full object-contain" loading="lazy" />
       </div>
       <div>
         <h3 class="mt-0 mb-2 text-2xl font-bold"> <a href="/produit/rode-podmic-usb" class="product-link text-foreground hover:text-primary transition-colors"> Rode PodMic USB </a></h3>
@@ -662,7 +885,7 @@ export const ARTICLES: Article[] = [
   <div id="shure-sm7b" class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
     <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
       <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
-        <img src="https://www.thomann.de/thumb/opengraph/pics/prod/129929.jpg" alt="Shure SM7B" class="w-full h-full object-contain" loading="lazy" />
+        <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/shure-sm7b-studio.webp" alt="Shure SM7B" class="w-full h-full object-contain" loading="lazy" />
       </div>
       <div>
         <h3 class="mt-0 mb-2 text-2xl font-bold"> <a href="/produit/shure-sm7b" class="product-link text-foreground hover:text-primary transition-colors"> Shure SM7B </a></h3>
@@ -728,7 +951,7 @@ export const ARTICLES: Article[] = [
   <div id="electro-voice-re20" class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
     <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
       <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
-        <img src="https://www.thomann.de/thumb/opengraph/pics/prod/128926.jpg" alt="Electro-Voice RE20" class="w-full h-full object-contain" loading="lazy" />
+        <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_12/128926/10589653_800.jpg" alt="Electro-Voice RE20" class="w-full h-full object-contain" loading="lazy" />
       </div>
       <div>
         <h3 class="mt-0 mb-2 text-2xl font-bold"> <a href="/produit/electro-voice-re20" class="product-link text-foreground hover:text-primary transition-colors"> Electro-Voice RE20 </a></h3>
@@ -866,7 +1089,7 @@ export const ARTICLES: Article[] = [
     readTime: "4 min",
     date: "28 Sep 2024",
     author: "Équipe Fluxlab",
-    image: "https://images.unsplash.com/photo-1527011046414-4781f1f94f8c?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/articles/plaque_video_doodle.webp",
     intro: "La caméra n'est qu'un capteur. C'est la lumière qui crée l'image. Maîtrisez le CRI, la Température Kelvin et la Diffusion pour un rendu Netflix.",
     relatedProducts: ["elgato-ring-light", "elgato-key-light-air", "aputure-300d-ii"],
     relatedCategorySlug: "lighting",
@@ -1191,7 +1414,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                                           <div id="audient-id4" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                                                                                                                                                             <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
                                                                                                                                                               <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
-                                                                                                                                                                <img src="https://www.thomann.de/thumb/opengraph/pics/prod/510533.jpg" alt = "Audient iD14 MKII" class="w-full h-full object-contain" loading = "lazy" />
+                                                                                                                                                                <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_51/510533/16058313_800.jpg" alt = "Audient iD14 MKII" class="w-full h-full object-contain" loading = "lazy" />
                                                                                                                                                                   </div>
                                                                                                                                                                   <div >
                                                                                                                                                                   <h3 class="mt-0 mb-2 text-2xl font-bold" > 2. Audient iD14(MKII) </h3>
@@ -1235,7 +1458,7 @@ export const ARTICLES: Article[] = [
                 <div id="ua-volt-176" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                   <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
                     <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
-                      <img src="https://www.thomann.de/thumb/opengraph/pics/prod/529077.jpg" alt = "Universal Audio Volt 276" class="w-full h-full object-contain" loading = "lazy" />
+                      <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/529077/16690634_800.jpg" alt = "Universal Audio Volt 276" class="w-full h-full object-contain" loading = "lazy" />
                         </div>
                         <div >
                         <h3 class="mt-0 mb-2 text-2xl font-bold" > 3. Universal Audio Volt 276 </h3>
@@ -1504,7 +1727,7 @@ export const ARTICLES: Article[] = [
                                                         <div id="hofa-absorber-eco" class="my-10 border border-border rounded-3xl overflow-hidden bg-card shadow-lg flex flex-col md:flex-row" >
                                                           <div class="md:w-2/5 md:border-r border-border bg-white flex items-center justify-center p-6 relative" >
                                                             <div class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider z-10" > Premium </div>
-                                                              <img src = "https://thumbs.static-thomann.de/thumb//bdbmagic/pics/prod/618025.jpg" alt = "Hofa Absorber Eco" class="w-full max-w-[250px] object-contain hover:scale-105 transition-transform duration-500" loading = "lazy" />
+                                                              <img src = "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_61/618025/20501456_800.jpg" alt = "Hofa Absorber Eco" class="w-full max-w-[250px] object-contain hover:scale-105 transition-transform duration-500" loading = "lazy" />
                                                                 </div>
                                                                 <div class="p-6 md:p-8 md:w-3/5 flex flex-col justify-center">
                                                                   <h3 class="text-2xl font-bold font-serif mb-2 mt-0 border-none" > Hofa Absorber Eco </h3>
@@ -1741,7 +1964,7 @@ export const ARTICLES: Article[] = [
                                                                                             <div id="rode-podmic-usb" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                                                                                               <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
                                                                                                 <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
-                                                                                                  <img src="https://www.thomann.de/thumb/opengraph/pics/prod/567098.jpg" alt = "Rode PodMic USB" class="w-full h-full object-contain" loading = "lazy" />
+                                                                                                  <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_56/567098/18330268_800.jpg" alt = "Rode PodMic USB" class="w-full h-full object-contain" loading = "lazy" />
                                                                                                     </div>
                                                                                                     <div >
                                                                                                     <h3 class="mt-0 mb-2 text-2xl font-bold" > 1. Rode PodMic USB </h3>
@@ -1873,7 +2096,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                   <div id="shure-sm7b" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                                                                                                                                                                                                   <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
                                                                                                                                                                                                   <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
-                                                                                                                                                                                                  <img src="https://www.thomann.de/thumb/opengraph/pics/prod/129929.jpg" alt = "Shure SM7B" class= "w-full h-full object-contain" loading = "lazy" />
+                                                                                                                                                                                                  <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/shure-sm7b-studio.webp" alt = "Shure SM7B" class= "w-full h-full object-contain" loading = "lazy" />
                                                                                                                                                                                                   </div>
                                                                                                                                                                                                   <div >
                                                                                                                                                                                                   <h3 class="mt-0 mb-2 text-2xl font-bold" > 4. Shure SM7B </h3>
@@ -2059,13 +2282,13 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                                             </thead>
                                                                                                                                                                                                                             <tbody >
                                                                                                                                                                                                                             <tr class="hover:bg-muted/50 border-b border-border transition-colors" >
-                                                                                                                                                                                                                            <td class="px-5 py-4 font-bold border-r border-border" > <a href="#rode-podmic" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://www.thomann.de/thumb/opengraph/pics/prod/567098.jpg" alt = "Rode" class= "w-8 h-8 rounded-full object-cover" > Rode PodMic </a></td >
+                                                                                                                                                                                                                            <td class="px-5 py-4 font-bold border-r border-border" > <a href="#rode-podmic" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_56/567098/18330268_800.jpg" alt = "Rode" class= "w-8 h-8 rounded-full object-cover" > Rode PodMic </a></td >
                                                                                                                                                                                                                             <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > Compacité & Indestructible </td>
                                                                                                                                                                                                                             <td class= "px-5 py-4 border-r border-border"> Streamers & setups encombrés </td>
                                                                                                                                                                                                                             <td class= "px-5 py-4 text-center font-bold text-primary"> 100€ - 200€</td>
                                                                                                                                                                                                                             </tr>
                                                                                                                                                                                                                             <tr class= "hover:bg-muted/50 border-b border-border transition-colors">
-                                                                                                                                                                                                                            <td class="px-5 py-4 font-bold border-r border-border" > <a href="#shure-sm7b" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://www.thomann.de/thumb/opengraph/pics/prod/129929.jpg" alt = "Shure" class= "w-8 h-8 rounded-full object-cover" > Shure SM7B </a></td >
+                                                                                                                                                                                                                            <td class="px-5 py-4 font-bold border-r border-border" > <a href="#shure-sm7b" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/shure-sm7b-studio.webp" alt = "Shure" class= "w-8 h-8 rounded-full object-cover" > Shure SM7B </a></td >
                                                                                                                                                                                                                             <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > Texture "Velours" & Isolation </td>
                                                                                                                                                                                                                             <td class= "px-5 py-4 border-r border-border"> Studios Pro & Podcasts </td>
                                                                                                                                                                                                                             <td class= "px-5 py-4 text-center font-bold text-primary"> 370€</td>
@@ -2098,7 +2321,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                                             <div id="shure-sm7b" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                                                                                                                                                                                                                             <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
                                                                                                                                                                                                                             <div class="bg-white p-6 sm:p-8 rounded-2xl w-full aspect-square shadow-sm border border-border flex items-center justify-center" >
-                                                                                                                                                                                                                            <img src="https://www.thomann.de/thumb/opengraph/pics/prod/129929.jpg" alt = "Shure SM7B" class= "w-full h-full object-contain" loading = "lazy" />
+                                                                                                                                                                                                                            <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/shure-sm7b-studio.webp" alt = "Shure SM7B" class= "w-full h-full object-contain" loading = "lazy" />
                                                                                                                                                                                                                             </div>
                                                                                                                                                                                                                             <div >
                                                                                                                                                                                                                             <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="/produit/shure-sm7b" class= "product-link text-foreground hover:text-primary transition-colors" > Shure SM7B </a></h3 >
@@ -2143,7 +2366,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                                             <div id="rode-podmic" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                                                                                                                                                                                                                             <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
                                                                                                                                                                                                                             <div class="bg-white p-6 sm:p-8 rounded-2xl w-full aspect-square shadow-sm border border-border flex items-center justify-center" >
-                                                                                                                                                                                                                            <img src="https://www.thomann.de/thumb/opengraph/pics/prod/567098.jpg" alt = "Rode PodMic" class= "w-full h-full object-contain" loading = "lazy" />
+                                                                                                                                                                                                                            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_56/567098/18330268_800.jpg" alt = "Rode PodMic" class= "w-full h-full object-contain" loading = "lazy" />
                                                                                                                                                                                                                             </div>
                                                                                                                                                                                                                             <div >
                                                                                                                                                                                                                             <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="/produit/rode-podmic-usb" class= "product-link text-foreground hover:text-primary transition-colors" > Rode PodMic </a></h3 >
@@ -2329,7 +2552,7 @@ export const ARTICLES: Article[] = [
                                                                                     </div>
                                                                                     <p class="text-xl font-medium text-foreground mb-8 border-l-4 border-primary pl-4"> Pour le Streamer occasionnel, le gaming avec des amis, ou les budgets étudiants.Ce setup mise tout sur l'efficacité brute sans fioritures.</p>
 
-                                                                                      <img src = "https://www.thomann.de/thumb/opengraph/pics/prod/567098.jpg" alt = "Rode PodMic" class="w-full h-48 sm:h-64 object-contain bg-white p-4 rounded-2xl mb-8 shadow-sm border border-border" loading = "lazy" />
+                                                                                      <img src = "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_56/567098/18330268_800.jpg" alt = "Rode PodMic" class="w-full h-48 sm:h-64 object-contain bg-white p-4 rounded-2xl mb-8 shadow-sm border border-border" loading = "lazy" />
 
                                                                                         <div class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                                                                                           <div class="grid sm:grid-cols-2 gap-4 mt-4" >
@@ -2408,7 +2631,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                               </div>
                                                                                                                                                                                               <p class="text-xl font-medium text-foreground mb-8 border-l-4 border-primary pl-4"> L'objectif est la professionnalisation. Vous devenez un média télévisuel miniature : multi-caméras, qualité visuelle supérieure, gestion fine de l'audio.On passe sur du matériel ultra - pérenne.</p>
 
-                                                                                                                                                                                                <img src = "https://www.thomann.de/thumb/opengraph/pics/prod/129929.jpg" alt = "Shure SM7B" class="w-full h-48 sm:h-64 object-contain bg-white p-4 rounded-2xl mb-8 shadow-sm border border-border" loading = "lazy" />
+                                                                                                                                                                                                <img src = "https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/shure-sm7b-studio.webp" alt = "Shure SM7B" class="w-full h-48 sm:h-64 object-contain bg-white p-4 rounded-2xl mb-8 shadow-sm border border-border" loading = "lazy" />
 
                                                                                                                                                                                                   <div class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                                                                                                                                                                                                     <div class="grid sm:grid-cols-2 gap-4 mt-4" >
@@ -2593,14 +2816,14 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                                                                       <div class="inline-block bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold tracking-widest uppercase mb-6 shadow-sm" >
           #1 : La Mètre - étalon Absolue
                                                                                                                                                                                                                                                       </div>
-                                                                                                                                                                                                                                                      <img src = "https://www.thomann.de/thumb/opengraph/pics/prod/566673.jpg" alt = "Focusrite Scarlett Solo" class="w-full h-48 sm:h-64 object-contain bg-white p-4 rounded-2xl mb-8 shadow-sm border border-border" loading = "lazy">
+                                                                                                                                                                                                                                                      <img src = "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_56/566673/18482062_800.jpg" alt = "Focusrite Scarlett Solo" class="w-full h-48 sm:h-64 object-contain bg-white p-4 rounded-2xl mb-8 shadow-sm border border-border" loading = "lazy">
 
                                                                                                                                                                                                                                                       <div class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" > <div class="flex flex-col md:flex-row gap-8 items-start" > <div class="flex-1 w-full" > <h3 class="mt-0 mb-2 text-2xl font-bold" > Focusrite Scarlett Solo(4th Gen) </h3><p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Interface audio simple et fiable pour débuter</p > <p class="text-foreground leading-relaxed" > La 4ème génération redéfinit les standards de l'entrée de gamme. Avec un impressionnant gain de 69 dB, elle est désormais capable d'alimenter des monstres d'exigence comme le Shure SM7B sans aucun Cloudlifter externe supplémentaire. Son mode "Air" apporte une brillance et une présence hyper flatteuses à la voix, parfaites pour la radio.</p></div></div><div class="grid sm:grid-cols-2 gap-4 mt-8"><div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Points Forts</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Gain massif de 69 dB : adieu le souffle électronique</li><li>Mode "Air" légendaire (émulation ISA) pour flatter les voix</li><li>Bundle logiciel gigantesque (Ableton Live Lite, etc.)</li><li>Outil de Loopback intégré très puissant pour le streaming</li></ul></div><div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Limites réelles</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Peut parfois frôler voire dépasser très légèrement les 100€ hors soldes</li><li>Pilotes Focusrite Control pouvant sembler complexes au grand débutant</li></ul></div></div><div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm"><strong class="text-foreground">Notre conseil d'usage : </strong> La valeur sûre et robuste par excellence, parfaite pour démarrer avec un micro exigeant.</div > <div class="flex flex-wrap items-center gap-3 mt-8" > <a href="/produit/focusrite-scarlett-solo-4th-gen" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" > Voir la fiche produit </a><a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text - cyan - 600 dark: text - cyan - 400 hover: bg - cyan - 500 / 20 border border - cyan - 500 / 20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - [#FF9900] / 10 text - [#FF9900] hover: bg - [#FF9900] / 20 border border - [#FF9900] / 20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - muted text - foreground hover: bg - muted / 80 border border - border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a></div></div></div><!--CARTE 2 -->
                                                                                                                                                                                                                                                       <div class= "mb-16 mt-8">
                                                                                                                                                                                                                                                       <div class="inline-block bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold tracking-widest uppercase mb-6 shadow-sm" >
           #2 : La Texture Américaine
                                                                                                                                                                                                                                                       </div>
-                                                                                                                                                                                                                                                      <img src = "https://www.thomann.de/thumb/opengraph/pics/prod/529054.jpg" alt = "Universal Audio Volt 1" class="w-full h-48 sm:h-64 object-contain bg-white p-4 rounded-2xl mb-8 shadow-sm border border-border" loading = "lazy">
+                                                                                                                                                                                                                                                      <img src = "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/529054/16687134_800.jpg" alt = "Universal Audio Volt 1" class="w-full h-48 sm:h-64 object-contain bg-white p-4 rounded-2xl mb-8 shadow-sm border border-border" loading = "lazy">
 
                                                                                                                                                                                                                                                       <div class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" > <div class="flex flex-col md:flex-row gap-8 items-start" > <div class="flex-1 w-full" > <h3 class="mt-0 mb-2 text-2xl font-bold" > Universal Audio Volt 1 </h3><p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">La coloration chaleureuse du légendaire préampli 610</p > <p class="text-foreground leading-relaxed" > Universal Audio, géant du studio haut de gamme, descend dans l'arène des cartes "budget" avec audace. La particularité de la Volt 1 est son bouton magique "Vintage" : il enclenche un circuit analogique recréant la chaleur épaisse du préampli lampe de console 610. Un pur bonheur sur les voix pour le podcast, accompagné d'un châssis métallique d'une classe absolue.</p></div></div><div class="grid sm:grid-cols-2 gap-4 mt-8"><div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Points Forts</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Le mode Vintage qui épaissit les cordes vocales et instruments</li><li>Design de "Tank" en métal brossé indestructible</li><li>Sortie ampli casque extraordinairement puissante pour driver de gros Ohm</li></ul></div><div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Limites réelles</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Gain correct (55dB) mais insuffisant seul pour un SM7B (nécessite l'achat d'un Cloudlifter)</li><li>Absence d'affichage visuel précis du volume d'entrée (juste une diode verte/rouge)</li></ul></div></div><div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm"><strong class="text-foreground">Notre conseil d'usage : </strong> Idéale pour apporter rapidement une coloration chaude et vintage à vos enregistrements vocaux.</div > <div class="flex flex-wrap items-center gap-3 mt-8" > <a href="/produit/universal-audio-volt-1" class= "inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm" > Voir la fiche produit </a><a href="#" target="_blank" rel="nofollow sponsored" class="inline-flex items-center justify-center font-bold px-5 py-3 rounded-xl transition-colors bg-cyan-500/10 text - cyan - 600 dark: text - cyan - 400 hover: bg - cyan - 500 / 20 border border - cyan - 500 / 20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - [#FF9900] / 10 text - [#FF9900] hover: bg - [#FF9900] / 20 border border - [#FF9900] / 20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - muted text - foreground hover: bg - muted / 80 border border - border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a></div></div></div><!--CARTE 3 -->
                                                                                                                                                                                                                                                       <div class= "mb-16 mt-8">
@@ -2614,7 +2837,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                                                                       <div class="inline-block bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold tracking-widest uppercase mb-6 shadow-sm" >
           #4 : La "Deux en Un" Allemande
                                                                                                                                                                                                                                                       </div>
-                                                                                                                                                                                                                                                      <img src = "https://www.thomann.de/thumb/opengraph/pics/prod/359080.jpg" alt = "Behringer UMC202HD" class="w-full h-48 sm:h-64 object-contain bg-white p-4 rounded-2xl mb-8 shadow-sm border border-border" loading = "lazy">
+                                                                                                                                                                                                                                                      <img src = "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_35/359080/12323247_800.jpg" alt = "Behringer UMC202HD" class="w-full h-48 sm:h-64 object-contain bg-white p-4 rounded-2xl mb-8 shadow-sm border border-border" loading = "lazy">
 
                                                                                                                                                                                                                                                       <div class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" > <div class="flex flex-col md:flex-row gap-8 items-start" > <div class="flex-1 w-full" > <h3 class="mt-0 mb-2 text-2xl font-bold" > Behringer U - Phoria UMC202HD </h3><p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le meilleur rapport qualité/prix à 2 entrées du marché </p><p class="text-foreground leading-relaxed">Behringer casse férocement les prix depuis des décennies. La UMC202HD est un ovni tarifaire : pour le prix d'interfaces à entrée unique chez la concurrence, elle offre *deux* authentiques entrées combo XLR/Jack Midas avec un échantillonnage ultra - haute - résolution de 192kHz.L'outil obligatoire pour enregistrer deux personnes séparément ou chanter en tapant une guitare acoustique.</p></div></div><div class="grid sm:grid-cols-2 gap-4 mt-8"><div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Points Forts</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Deux entrées réelles avec préamplis Midas (excellente renommée technique)</li><li>Résolution 192kHz professionnelle rare à ce prix cassé</li><li>Coque métallique lourde et esthétique</li></ul></div><div class="bg-muted/40 border-l-4 border-l-destructive/60 rounded-r-xl p-5"><h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2"><svg class="w-5 h-5 text-destructive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Limites réelles</h4><ul class="mb-0 space-y-2 text-sm text-foreground/80"><li>Stabilité réputée parfois inégale des drivers sous Windows face aux mastodontes Focusrite</li></ul></div></div><div class="bg-primary/5 border border-primary/10 rounded-xl p-4 mt-6 text-sm"><strong class="text-foreground">Notre conseil d'usage : </strong> Le meilleur rapport fonctionnalité/prix si vous avez impérativement besoin de deux entrées combo au budget minimum.</div><div class="flex flex-wrap items-center gap-3 mt-8"><a href="/produit / behringer - u - phoria - umc202hd" class="inline - flex items - center justify - center bg - primary text - primary - foreground font - bold px - 6 py - 3 rounded - xl hover: bg - primary / 90 transition - transform hover: scale - 105 active: scale - 95 shadow - sm">Voir la fiche produit</a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - cyan - 500 / 10 text - cyan - 600 dark: text - cyan - 400 hover: bg - cyan - 500 / 20 border border - cyan - 500 / 20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/THOMANN.png" alt="Thomann" class="h-5 w-auto object-contain mix-blend-multiply" /></a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - [#FF9900] / 10 text - [#FF9900] hover: bg - [#FF9900] / 20 border border - [#FF9900] / 20"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/amazon-logo.png" alt="Amazon" class="h-5 w-auto object-contain mix-blend-multiply" /></a><a href="#" target="_blank" rel="nofollow sponsored" class="inline - flex items - center justify - center font - bold px - 5 py - 3 rounded - xl transition - colors bg - muted text - foreground hover: bg - muted / 80 border border - border"><img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/logo/woodbrass.jpeg" alt="Woodbrass" class="h-5 w-auto object-contain mix-blend-multiply" /></a></div></div></div><!--CARTE 5 -->
 <!--CARTE 5 -->
@@ -2749,7 +2972,7 @@ export const ARTICLES: Article[] = [
         <td class= "px-5 py-4 text-center font-bold text-primary"> 4.4 / 5 </td>
         </tr>
         <tr class= "hover:bg-muted/50 border-b border-border transition-colors">
-        <td class="px-5 py-4 font-bold border-r border-border" > <a href="#sc-450-usb" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://www.thomann.de/thumb/opengraph/pics/prod/195302.jpg" alt = "SC 450" class= "w-8 h-8 rounded-full object-cover" > SC 450 USB </a></td >
+        <td class="px-5 py-4 font-bold border-r border-border" > <a href="#sc-450-usb" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_19/195302/7983606_800.jpg" alt = "SC 450" class= "w-8 h-8 rounded-full object-cover" > SC 450 USB </a></td >
         <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > Large membrane studio </td>
         <td class= "px-5 py-4 border-r border-border"> Son studio chaleureux </td>
         <td class= "px-5 py-4 text-center font-bold text-primary"> 4.6 / 5 </td>
@@ -2857,7 +3080,7 @@ export const ARTICLES: Article[] = [
         <div id="sc-450-usb" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
         <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
-        <img src="https://www.thomann.de/thumb/opengraph/pics/prod/195302.jpg" alt = "the t.bone SC 450 USB" class="w-full h-full object-contain" loading = "lazy" />
+        <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_19/195302/7983606_800.jpg" alt = "the t.bone SC 450 USB" class="w-full h-full object-contain" loading = "lazy" />
         </div>
         <div >
         <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="#sc-450-usb" class= "product-link text-foreground hover:text-primary transition-colors" > the t.bone SC 450 USB </a></h3 >
@@ -3185,7 +3408,7 @@ export const ARTICLES: Article[] = [
         <div id="choix-micro" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-8 shadow-sm">
         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
         <div class="relative w-full aspect-square rounded-2xl overflow-hidden flex items-center justify-center p-4">
-        <img src="https://www.thomann.de/thumb/opengraph/pics/prod/129929.jpg" alt="Shure SM7B" class="w-full h-full object-contain mix-blend-multiply" />
+        <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/shure-sm7b-studio.webp" alt="Shure SM7B" class="w-full h-full object-contain mix-blend-multiply" />
         </div>
         <div>
         <h3 class="mt-0 mb-2 text-2xl font-bold"> Passer à un Micro Dynamique </h3>
@@ -3397,7 +3620,7 @@ export const ARTICLES: Article[] = [
                                                                                               <div id="setup-300" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                                                                                                 <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
                                                                                                   <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
-                                                                                                    <img src="https://thumbs.static-thomann.de/thumb//bdbmagic/pics/prod/610096.jpg" alt = "Rode VideoMic GO II Helix" class="w-full h-full object-contain" loading = "lazy" />
+                                                                                                    <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_61/610096/20046944_800.jpg" alt = "Rode VideoMic GO II Helix" class="w-full h-full object-contain" loading = "lazy" />
                                                                                                       </div>
                                                                                                       <div >
                                                                                                       <h3 class="mt-0 mb-2 text-2xl font-bold" > Le Setup "Vlogger Mobile" </h3>
@@ -3676,7 +3899,7 @@ export const ARTICLES: Article[] = [
         <tr class="hover:bg-muted/50 border-b border-border transition-colors">
           <td class="px-5 py-4 font-bold border-r border-border">
             <a href="#electro-voice-re20" class="product-link text-primary hover:underline flex items-center gap-2">
-              <img src="https://www.thomann.de/thumb/opengraph/pics/prod/128926.jpg" alt="RE20" class="w-8 h-8 rounded-full object-cover"> RE20
+              <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_12/128926/10589653_800.jpg" alt="RE20" class="w-8 h-8 rounded-full object-cover"> RE20
             </a>
           </td>
           <td class="px-5 py-4 border-r border-border hidden sm:table-cell">Dynamique</td>
@@ -3686,7 +3909,7 @@ export const ARTICLES: Article[] = [
         <tr class="hover:bg-muted/50 border-b border-border transition-colors">
           <td class="px-5 py-4 font-bold border-r border-border">
             <a href="#shure-sm7b" class="product-link text-primary hover:underline flex items-center gap-2">
-              <img src="https://www.thomann.de/thumb/opengraph/pics/prod/129929.jpg" alt="SM7B" class="w-8 h-8 rounded-full object-cover"> SM7B
+              <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/shure-sm7b-studio.webp" alt="SM7B" class="w-8 h-8 rounded-full object-cover"> SM7B
             </a>
           </td>
           <td class="px-5 py-4 border-r border-border hidden sm:table-cell">Dynamique</td>
@@ -3696,7 +3919,7 @@ export const ARTICLES: Article[] = [
         <tr class="hover:bg-muted/50 border-b border-border transition-colors">
           <td class="px-5 py-4 font-bold border-r border-border">
             <a href="#rode-podmic" class="product-link text-primary hover:underline flex items-center gap-2">
-              <img src="https://www.thomann.de/thumb/opengraph/pics/prod/567098.jpg" alt="PodMic" class="w-8 h-8 rounded-full object-cover"> PodMic
+              <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_56/567098/18330268_800.jpg" alt="PodMic" class="w-8 h-8 rounded-full object-cover"> PodMic
             </a>
           </td>
           <td class="px-5 py-4 border-r border-border hidden sm:table-cell">Dynamique</td>
@@ -3706,7 +3929,7 @@ export const ARTICLES: Article[] = [
         <tr class="hover:bg-muted/50 border-b border-border transition-colors">
           <td class="px-5 py-4 font-bold border-r border-border">
             <a href="#akg-c214" class="product-link text-primary hover:underline flex items-center gap-2">
-              <img src="https://thumbs.static-thomann.de/thumb//bdbmagic/pics/prod/211318.jpg" alt="C214" class="w-8 h-8 rounded-full object-cover"> AKG C214
+              <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_21/211318/12110382_800.jpg" alt="C214" class="w-8 h-8 rounded-full object-cover"> AKG C214
             </a>
           </td>
           <td class="px-5 py-4 border-r border-border hidden sm:table-cell">Statique</td>
@@ -3716,7 +3939,7 @@ export const ARTICLES: Article[] = [
         <tr class="hover:bg-muted/50 transition-colors">
           <td class="px-5 py-4 font-bold border-r border-border">
             <a href="#shure-mv7x" class="product-link text-primary hover:underline flex items-center gap-2">
-              <img src="https://thumbs.static-thomann.de/thumb//bdbmagic/pics/prod/528028.jpg" alt="MV7X" class="w-8 h-8 rounded-full object-cover"> MV7X
+              <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/528028/16688189_800.jpg" alt="MV7X" class="w-8 h-8 rounded-full object-cover"> MV7X
             </a>
           </td>
           <td class="px-5 py-4 border-r border-border hidden sm:table-cell">Dynamique</td>
@@ -3733,7 +3956,7 @@ export const ARTICLES: Article[] = [
   <div id="electro-voice-re20" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
     <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
       <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
-        <img src="https://www.thomann.de/thumb/opengraph/pics/prod/128926.jpg" alt="Electro-Voice RE20" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
+        <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_12/128926/10589653_800.jpg" alt="Electro-Voice RE20" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
         <div class="absolute top-4 left-4 bg-primary text-primary-foreground text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">Le Choix des Pros</div>
       </div>
       <div>
@@ -3768,7 +3991,7 @@ export const ARTICLES: Article[] = [
   <div id="shure-sm7b" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
     <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
       <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
-        <img src="https://www.thomann.de/thumb/opengraph/pics/prod/129929.jpg" alt="Shure SM7B" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
+        <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/shure-sm7b-studio.webp" alt="Shure SM7B" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
         <div class="absolute top-4 left-4 bg-muted text-foreground border border-border text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">La Chaleur Mythique</div>
       </div>
       <div>
@@ -3803,7 +4026,7 @@ export const ARTICLES: Article[] = [
   <div id="rode-podmic" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
     <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
       <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
-        <img src="https://www.thomann.de/thumb/opengraph/pics/prod/567098.jpg" alt="Rode PodMic" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
+        <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_56/567098/18330268_800.jpg" alt="Rode PodMic" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
         <div class="absolute top-4 left-4 bg-muted text-foreground border border-border text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">Meilleur Budget</div>
       </div>
       <div>
@@ -3838,7 +4061,7 @@ export const ARTICLES: Article[] = [
   <div id="akg-c214" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
     <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
       <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
-        <img src="https://thumbs.static-thomann.de/thumb//bdbmagic/pics/prod/211318.jpg" alt="AKG C214" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
+        <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_21/211318/12110382_800.jpg" alt="AKG C214" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
         <div class="absolute top-4 left-4 bg-muted text-foreground border border-border text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">La Clarté du Condensateur</div>
       </div>
       <div>
@@ -3873,7 +4096,7 @@ export const ARTICLES: Article[] = [
   <div id="shure-mv7x" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
     <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
       <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
-        <img src="https://thumbs.static-thomann.de/thumb//bdbmagic/pics/prod/528028.jpg" alt="Shure MV7X" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
+        <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/528028/16688189_800.jpg" alt="Shure MV7X" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
         <div class="absolute top-4 left-4 bg-muted text-foreground border border-border text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">L'Isolation Parfaite</div>
       </div>
       <div>
@@ -4074,31 +4297,31 @@ export const ARTICLES: Article[] = [
                                             </thead>
                                             <tbody >
                                             <tr class="hover:bg-muted/50 border-b border-border transition-colors" >
-                                              <td class="px-5 py-4 font-bold border-r border-border" > <a href="#beyerdynamic-dt-770" class="product-link text-primary hover:underline flex items-center gap-2" > <img src="https://www.thomann.de/thumb/opengraph/pics/prod/174334.jpg" alt = "DT 770" class="w-8 h-8 rounded-full object-cover" > DT 770 Pro </a></td >
+                                              <td class="px-5 py-4 font-bold border-r border-border" > <a href="#beyerdynamic-dt-770" class="product-link text-primary hover:underline flex items-center gap-2" > <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_17/174334/18443592_800.jpg" alt = "DT 770" class="w-8 h-8 rounded-full object-cover" > DT 770 Pro </a></td >
                                                 <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > Fermé(Tracking) </td>
                                                   <td class="px-5 py-4 border-r border-border"> Enregistrement Voix </td>
                                                     <td class="px-5 py-4 text-center font-bold text-primary"> 4.8 / 5 </td>
                                                       </tr>
                                                       <tr class="hover:bg-muted/50 border-b border-border transition-colors">
-                                                        <td class="px-5 py-4 font-bold border-r border-border" > <a href="#audio-technica-m50x" class="product-link text-primary hover:underline flex items-center gap-2" > <img src="https://www.thomann.de/thumb/opengraph/pics/prod/331905.jpg" alt = "ATH-M50x" class="w-8 h-8 rounded-full object-cover" > ATH - M50x </a></td >
+                                                        <td class="px-5 py-4 font-bold border-r border-border" > <a href="#audio-technica-m50x" class="product-link text-primary hover:underline flex items-center gap-2" > <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_33/331905/9592876_800.jpg" alt = "ATH-M50x" class="w-8 h-8 rounded-full object-cover" > ATH - M50x </a></td >
                                                           <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > Fermé(Polyvalent) </td>
                                                             <td class="px-5 py-4 border-r border-border"> Production / Beatmaking </td>
                                                               <td class="px-5 py-4 text-center font-bold text-primary"> 4.7 / 5 </td>
                                                                 </tr>
                                                                 <tr class="hover:bg-muted/50 border-b border-border transition-colors">
-                                                                  <td class="px-5 py-4 font-bold border-r border-border" > <a href="#sony-mdr" class="product-link text-primary hover:underline flex items-center gap-2" > <img src="https://www.thomann.de/thumb/opengraph/pics/prod/135709.jpg" alt = "Sony MDR" class="w-8 h-8 rounded-full object-cover" > Sony MDR - 7506 </a></td >
+                                                                  <td class="px-5 py-4 font-bold border-r border-border" > <a href="#sony-mdr" class="product-link text-primary hover:underline flex items-center gap-2" > <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_13/135709/9535760_800.jpg" alt = "Sony MDR" class="w-8 h-8 rounded-full object-cover" > Sony MDR - 7506 </a></td >
                                                                     <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > Fermé(Analytique) </td>
                                                                       <td class="px-5 py-4 border-r border-border"> Diagnostic / Vidéo </td>
                                                                         <td class="px-5 py-4 text-center font-bold text-primary"> 4.5 / 5 </td>
                                                                           </tr>
                                                                           <tr class="hover:bg-muted/50 border-b border-border transition-colors">
-                                                                            <td class="px-5 py-4 font-bold border-r border-border" > <a href="#sennheiser-hd600" class="product-link text-primary hover:underline flex items-center gap-2" > <img src="https://www.thomann.de/thumb/opengraph/pics/prod/471751.jpg" alt = "HD 600" class="w-8 h-8 rounded-full object-cover" > HD 600 </a></td >
+                                                                            <td class="px-5 py-4 font-bold border-r border-border" > <a href="#sennheiser-hd600" class="product-link text-primary hover:underline flex items-center gap-2" > <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_47/471751/16917425_800.jpg" alt = "HD 600" class="w-8 h-8 rounded-full object-cover" > HD 600 </a></td >
                                                                               <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > Ouvert(Neutre) </td>
                                                                                 <td class="px-5 py-4 border-r border-border"> Mixage / Mastering </td>
                                                                                   <td class="px-5 py-4 text-center font-bold text-primary"> 4.9 / 5 </td>
                                                                                     </tr>
                                                                                     <tr class="hover:bg-muted/50 transition-colors">
-                                                                                      <td class="px-5 py-4 font-bold border-r border-border" > <a href="#beyerdynamic-dt-990" class="product-link text-primary hover:underline flex items-center gap-2" > <img src="https://www.thomann.de/thumb/opengraph/pics/prod/106865.jpg" alt = "DT 990" class="w-8 h-8 rounded-full object-cover" > DT 990 Pro </a></td >
+                                                                                      <td class="px-5 py-4 font-bold border-r border-border" > <a href="#beyerdynamic-dt-990" class="product-link text-primary hover:underline flex items-center gap-2" > <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_10/106865/18443258_800.jpg" alt = "DT 990" class="w-8 h-8 rounded-full object-cover" > DT 990 Pro </a></td >
                                                                                         <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > Ouvert(Aéré) </td>
                                                                                           <td class="px-5 py-4 border-r border-border"> Streaming / Gaming </td>
                                                                                             <td class="px-5 py-4 text-center font-bold text-primary"> 4.6 / 5 </td>
@@ -4113,7 +4336,7 @@ export const ARTICLES: Article[] = [
                                                                                                   <div id="beyerdynamic-dt-770" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                                                                                                     <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
                                                                                                       <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
-                                                                                                        <img src="https://www.thomann.de/thumb/opengraph/pics/prod/174334.jpg" alt = "Beyerdynamic DT 770" class="w-full h-full object-contain" loading = "lazy" />
+                                                                                                        <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_17/174334/18443592_800.jpg" alt = "Beyerdynamic DT 770" class="w-full h-full object-contain" loading = "lazy" />
                                                                                                       </div>
                                                                                                         <div>
                                                                                                         <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="/produit/beyerdynamic-dt-770-pro-80-ohm" class="product-link text-foreground hover:text-primary transition-colors" > Beyerdynamic DT 770 Pro </a></h3 >
@@ -4158,7 +4381,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                                         <div id="audio-technica-m50x" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                                                                                                                                                           <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
                                                                                                                                                             <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
-                                                                                                                                                              <img src="https://www.thomann.de/thumb/opengraph/pics/prod/331905.jpg" alt = "Audio-Technica ATH-M50x" class="w-full h-full object-contain" loading = "lazy" />
+                                                                                                                                                              <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_33/331905/9592876_800.jpg" alt = "Audio-Technica ATH-M50x" class="w-full h-full object-contain" loading = "lazy" />
                                                                                                                                                             </div>
                                                                                                                                                               <div>
                                                                                                                                                               <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="/produit/audio-technica-ath-m50-x" class="product-link text-foreground hover:text-primary transition-colors" > Audio - Technica ATH - M50x </a></h3 >
@@ -4203,7 +4426,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                               <div id="sony-mdr" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                                                                                                                                                                                                                 <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
                                                                                                                                                                                                                   <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
-                                                                                                                                                                                   <img src="https://www.thomann.de/thumb/opengraph/pics/prod/135709.jpg" alt = "Sony MDR-7506" class="w-full h-full object-contain" loading = "lazy" />
+                                                                                                                                                                                   <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_13/135709/9535760_800.jpg" alt = "Sony MDR-7506" class="w-full h-full object-contain" loading = "lazy" />
                                                                                                                                                                                    </div>
                                                                                                                                                                                                                     <div>
                                                                                                                                                                                                                     <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="/produit/sony-mdr-7506" class="product-link text-foreground hover:text-primary transition-colors" > Sony MDR - 7506 </a></h3 >
@@ -4248,7 +4471,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                                                                                     <div id="sennheiser-hd600" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                                                                                                                                                                                                                                                                       <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
-                                                                                                                                                                                                                                                                         <img src="https://www.thomann.de/thumb/opengraph/pics/prod/471751.jpg" alt = "Sennheiser HD 600" class="w-full h-full object-contain" loading = "lazy" />
+                                                                                                                                                                                                                                                                         <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_47/471751/16917425_800.jpg" alt = "Sennheiser HD 600" class="w-full h-full object-contain" loading = "lazy" />
                                                                                                                                                                                                                                                                          </div>
                                                                                                                                                                                                                                                                           <div>
                                                                                                                                                                                                                                                                           <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="/produit/sennheiser-hd-600" class="product-link text-foreground hover:text-primary transition-colors" > Sennheiser HD 600 </a></h3 >
@@ -4293,7 +4516,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                                                                                                                                                                           <div id="beyerdynamic-dt-990" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                                                                                                                                                                                                                                                                                                                             <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
                                                                                                                                                                                                                                                                                                                               <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
-                                                                                                                                                                                                                                                                                                                               <img src="https://www.thomann.de/thumb/opengraph/pics/prod/106865.jpg" alt = "Beyerdynamic DT 990 Pro" class="w-full h-full object-contain" loading = "lazy" />
+                                                                                                                                                                                                                                                                                                                               <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_10/106865/18443258_800.jpg" alt = "Beyerdynamic DT 990 Pro" class="w-full h-full object-contain" loading = "lazy" />
                                                                                                                                                                                                                                                                                                                                </div>
                                                                                                                                                                                                                                                                                                                                 <div>
                                                                                                                                                                                                                                                                                                                                 <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="/produit/beyerdynamic-dt-990-pro" class="product-link text-foreground hover:text-primary transition-colors" > Beyerdynamic DT 990 Pro </a></h3 >
@@ -4457,7 +4680,7 @@ export const ARTICLES: Article[] = [
     readTime: "4 min",
     date: "03 Mar 2026",
     author: "Équipe Fluxlab",
-    image: "/images/articles/elgato_stream_deck.webp",
+    image: "/images/articles/plaque_streaming_doodle.webp",
     intro: "Plus qu'un gadget pour streamers, le Stream Deck est devenu l'outil ultime de productivité pour les monteurs, graphistes et développeurs. Apprenez à maîtriser vos raccourcis et à automatiser vos tâches répétitives.",
     relatedProducts: ["elgato-stream-deck-mk2", "elgato-stream-deck-plus", "elgato-stream-deck-xl", "elgato-stream-deck-mobile"],
     relatedCategorySlug: "streaming",
@@ -4522,7 +4745,7 @@ export const ARTICLES: Article[] = [
                         <td class= "px-5 py-4 text-center font-bold text-primary"> 4.9 / 5 </td>
                         </tr>
                         <tr class= "hover:bg-muted/50 transition-colors">
-                        <td class="px-5 py-4 font-bold border-r border-border" > <a href="#elgato-xl" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://thumbs.static-thomann.de/thumb//bdbmagic/pics/prod/467200.jpg" alt = "XL" class= "w-8 h-8 rounded-full object-cover" > XL </a></td >
+                        <td class="px-5 py-4 font-bold border-r border-border" > <a href="#elgato-xl" class= "product-link text-primary hover:underline flex items-center gap-2" > <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_46/467200/14485384_800.jpg" alt = "XL" class= "w-8 h-8 rounded-full object-cover" > XL </a></td >
                         <td class="px-5 py-4 border-r border-border hidden sm:table-cell" > 32 Touches LCD </td>
                         <td class= "px-5 py-4 border-r border-border"> Simulateurs / Power-Users </td>
                         <td class= "px-5 py-4 text-center font-bold text-primary"> 4.8 / 5 </td>
@@ -4626,7 +4849,7 @@ export const ARTICLES: Article[] = [
                         <div id="elgato-xl" class= "bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24" >
                         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start" >
                         <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8" >
-                        <img src="https://thumbs.static-thomann.de/thumb//bdbmagic/pics/prod/467200.jpg" alt = "Elgato Stream Deck XL" class="w-full h-full object-contain" loading = "lazy" />
+                        <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_46/467200/14485384_800.jpg" alt = "Elgato Stream Deck XL" class="w-full h-full object-contain" loading = "lazy" />
                         </div>
                         <div>
                         <h3 class="mt-0 mb-2 text-2xl font-bold" > <a href="/produit/elgato-stream-deck-xl" class= "product-link text-foreground hover:text-primary transition-colors" > Elgato Stream Deck XL </a></h3 >
@@ -4819,7 +5042,7 @@ export const ARTICLES: Article[] = [
 <div id="audient-id14" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
   <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
     <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
-      <img src="https://www.thomann.de/thumb/opengraph/pics/prod/510533.jpg" alt="Audient iD14 MKII" class="w-full h-full object-contain" loading="lazy" />
+      <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_51/510533/16058313_800.jpg" alt="Audient iD14 MKII" class="w-full h-full object-contain" loading="lazy" />
     </div>
     <div>
       <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/audient-id14-mkii" class="product-link text-foreground hover:text-primary transition-colors">Audient iD14 MKII</a></h3>
@@ -4859,7 +5082,7 @@ export const ARTICLES: Article[] = [
 <div id="motu-m2" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
   <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
     <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
-      <img src="https://www.thomann.de/thumb/opengraph/pics/prod/478035.jpg" alt="Motu M2" class="w-full h-full object-contain" loading="lazy" />
+      <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_47/478035/20063320_800.jpg" alt="Motu M2" class="w-full h-full object-contain" loading="lazy" />
     </div>
     <div>
       <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/motu-m2" class="product-link text-foreground hover:text-primary transition-colors">Motu M2</a></h3>
@@ -5474,7 +5697,7 @@ export const ARTICLES: Article[] = [
       <div id="shure-sm7b-card" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
           <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
-            <img src="https://www.thomann.de/thumb/opengraph/pics/prod/129929.jpg" alt="Shure SM7B" class="w-full h-full object-contain" loading="lazy" />
+            <img src="https://oxzapjwfttrgsometnwq.supabase.co/storage/v1/object/public/images-produit/shure-sm7b-studio.webp" alt="Shure SM7B" class="w-full h-full object-contain" loading="lazy" />
           </div>
           <div>
             <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/shure-sm7b" class="product-link text-foreground hover:text-primary transition-colors">Shure SM7B</a></h3>
@@ -5631,7 +5854,7 @@ export const ARTICLES: Article[] = [
       <div id="shure-mv7x-card" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
           <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
-            <img src="https://thumbs.static-thomann.de/thumb//bdbmagic/pics/prod/528028.jpg" alt="Shure MV7X" class="w-full h-full object-contain" loading="lazy" />
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/528028/16688189_800.jpg" alt="Shure MV7X" class="w-full h-full object-contain" loading="lazy" />
           </div>
           <div>
             <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/shure-mv7x" class="product-link text-foreground hover:text-primary transition-colors">Shure MV7X</a></h3>
@@ -5809,7 +6032,7 @@ export const ARTICLES: Article[] = [
       <div id="rode-podmic-usb-setup" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
           <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
-            <img src="https://www.thomann.de/thumb/opengraph/pics/prod/567098.jpg" alt="Rode PodMic USB" class="w-full h-full object-contain" loading="lazy" />
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_56/567098/18330268_800.jpg" alt="Rode PodMic USB" class="w-full h-full object-contain" loading="lazy" />
           </div>
           <div>
             <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/rode-podmic-usb" class="product-link text-foreground hover:text-primary transition-colors">Rode PodMic USB</a></h3>
@@ -5856,7 +6079,7 @@ export const ARTICLES: Article[] = [
       <div id="scarlett-solo-setup" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
           <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
-            <img src="https://www.thomann.de/thumb/opengraph/pics/prod/566673.jpg" alt="Focusrite Scarlett Solo 4th Gen" class="w-full h-full object-contain" loading="lazy" />
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_56/566673/18482062_800.jpg" alt="Focusrite Scarlett Solo 4th Gen" class="w-full h-full object-contain" loading="lazy" />
           </div>
           <div>
             <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/focusrite-scarlett-solo-4th-gen" class="product-link text-foreground hover:text-primary transition-colors">Focusrite Scarlett Solo 4th Gen</a></h3>
@@ -6157,7 +6380,7 @@ export const ARTICLES: Article[] = [
       <div id="rode-podmic-home" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
           <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
-            <img src="https://www.thomann.de/thumb/opengraph/pics/prod/567098.jpg" alt="Rode PodMic USB" class="w-full h-full object-contain" loading="lazy" />
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_56/567098/18330268_800.jpg" alt="Rode PodMic USB" class="w-full h-full object-contain" loading="lazy" />
           </div>
           <div>
             <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/rode-podmic-usb" class="product-link text-foreground hover:text-primary transition-colors">Rode PodMic USB</a></h3>
@@ -6200,7 +6423,7 @@ export const ARTICLES: Article[] = [
       <div id="dt-770-home" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
           <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
-            <img src="https://www.thomann.de/thumb/opengraph/pics/prod/174334.jpg" alt="Beyerdynamic DT 770 Pro 80 Ohm" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_17/174334/18443592_800.jpg" alt="Beyerdynamic DT 770 Pro 80 Ohm" class="w-full h-full object-contain mix-blend-multiply" loading="lazy" />
           </div>
           <div>
             <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/beyerdynamic-dt-770-pro-80-ohm" class="product-link text-foreground hover:text-primary transition-colors">Beyerdynamic DT 770 Pro (80 Ohm)</a></h3>
@@ -6457,7 +6680,7 @@ export const ARTICLES: Article[] = [
       <div id="shure-mv7x" class="bg-card border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
         <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
           <div class="bg-white p-6 sm:p-8 rounded-2xl w-full aspect-square shadow-sm border border-border flex items-center justify-center">
-            <img src="https://thumbs.static-thomann.de/thumb//bdbmagic/pics/prod/528028.jpg" alt="Shure MV7X" class="w-full h-full object-contain" loading="lazy" />
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/528028/16688189_800.jpg" alt="Shure MV7X" class="w-full h-full object-contain" loading="lazy" />
           </div>
           <div>
             <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/shure-mv7x" class="product-link text-foreground hover:text-primary transition-colors">Shure MV7X</a></h3>

@@ -248,8 +248,8 @@ function LaboButton({ className }: { className?: string }) {
         className
       )}
     >
-      <span className="hidden sm:inline">Le Labo IA</span>
-      <span className="sm:hidden">Labo</span>
+      <span className="hidden sm:inline">L’Atelier Fluxlab</span>
+      <span className="sm:hidden">Atelier</span>
       <span className="w-6 h-6 rounded-full bg-foreground text-primary flex items-center justify-center shrink-0">
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
           <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
@@ -260,16 +260,13 @@ function LaboButton({ className }: { className?: string }) {
 }
 
 /* ─── LOGO ───────────────────────────────────────────────── */
-function FluxlabLogo({ variant }: { variant: 'light' | 'dark' | 'premium' }) {
-  // Bipartite — Flux (Georgia italic) | (gold line) lab (JetBrains Mono)
-  const fluxColor = variant === 'dark' ? '#FAFAFA' : '#0F0F0F'
-  const labColor  = variant === 'dark' ? 'rgba(250,250,250,.75)' : 'rgba(15,15,15,.65)'
+function FluxlabLogo({ variant }: { variant?: 'light' | 'dark' | 'premium' }) {
   return (
     <Link href="/" className="flex items-center shrink-0" aria-label="Fluxlab — Accueil">
       <svg viewBox="0 0 188 36" width="141" height="27" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-        <text x="0" y="29" fontFamily="Georgia,serif" fontStyle="italic" fontSize="32" fill={variant === 'premium' ? undefined : fluxColor} className={variant === 'premium' ? 'fill-white lg:fill-[#0F0F0F]' : undefined} letterSpacing="-0.5">Flux</text>
-        <line x1="84" y1="5" x2="84" y2="32" stroke="#D3B27B" strokeWidth="1.5"/>
-        <text x="91" y="28" fontFamily="'JetBrains Mono',monospace" fontSize="15" fill={variant === 'premium' ? undefined : labColor} className={variant === 'premium' ? 'fill-white/75 lg:fill-[#0F0F0F]/65' : undefined} letterSpacing="2">lab</text>
+        <text x="0" y="29" fontFamily="var(--font-switzer),system-ui,sans-serif" fontWeight="800" fontStyle="italic" fontSize="30" fill="#0F0F0F" letterSpacing="-0.5">Flux</text>
+        <line x1="82" y1="5" x2="82" y2="32" stroke="#D3B27B" strokeWidth="1.5"/>
+        <text x="89" y="28" fontFamily="'JetBrains Mono',monospace" fontWeight="600" fontSize="15" fill="rgba(15,15,15,.75)" letterSpacing="2">lab</text>
       </svg>
     </Link>
   )
@@ -319,7 +316,7 @@ const MENU_DATA: MenuItem[] = [
         ],
       },
     ],
-    promo: { title: 'Composez votre studio', titleItalic: 'sur-mesure.', desc: "Notre IA combine micro, interface, casque et traitement selon votre voix, votre pièce et votre budget.", target: '/configurateur' },
+    promo: { title: 'Composez votre studio', titleItalic: 'sur-mesure.', desc: "Micro, interface, casque et traitement choisis selon votre voix, votre pièce et votre budget.", target: '/configurateur' },
   },
   {
     id: 'video',
@@ -351,7 +348,7 @@ const MENU_DATA: MenuItem[] = [
         ],
       },
     ],
-    promo: { title: 'Configurez votre setup', titleItalic: 'vidéo.', desc: "Caméra, éclairage, objectif — notre IA choisit la meilleure combinaison pour votre style de contenu.", target: '/configurateur' },
+    promo: { title: 'Configurez votre setup', titleItalic: 'vidéo.', desc: "Caméra, éclairage et son réunis selon votre manière de créer.", target: '/configurateur' },
   },
   {
     id: 'streaming',
@@ -374,53 +371,30 @@ const MENU_DATA: MenuItem[] = [
         ],
       },
     ],
-    promo: { title: 'Montez votre régie', titleItalic: 'live.', desc: "Définissez votre format de stream et laissez l'IA assembler la régie parfaite pour Twitch ou YouTube.", target: '/configurateur' },
+    promo: { title: 'Montez votre régie', titleItalic: 'live.', desc: "Définissez votre format de stream et composez une régie cohérente pour Twitch ou YouTube.", target: '/configurateur' },
   },
 ]
 
 /* ─── NAVBAR ─────────────────────────────────────────────── */
 export function Navbar() {
   const pathname = usePathname()
-  const [isScrolled, setIsScrolled]   = useState(false)
   const [activeMenu, setActiveMenu]   = useState<string | null>(null)
   const [isMobileOpen, setIsMobileOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
-  const { scrollY } = useScroll()
-
-  useMotionValueEvent(scrollY, 'change', (latest) => {
-    setIsScrolled(latest > 20)
-  })
 
   const handleMouseEnter = (menuId: string) => setActiveMenu(menuId)
   const handleMouseLeave = () => setActiveMenu(null)
 
-  // Homepage and configurateur have dark hero — navbar starts transparent
-  const isDarkHeroPage = pathname === '/' || pathname === '/configurateur'
-  const isTransparent = isDarkHeroPage && !isScrolled && !activeMenu
-  const isPremiumHome = pathname === '/' && !isScrolled && !activeMenu
-
-  const navBg = isScrolled || activeMenu
-    ? 'bg-white/90 backdrop-blur-md border-b border-border/70 shadow-[0_4px_20px_rgba(15,15,15,.04)]'
-    : isTransparent
-      ? ''
-      : 'bg-background/95 backdrop-blur-sm border-b border-border/50'
-
   return (
     <motion.nav
       onMouseLeave={handleMouseLeave}
-      className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-300', isPremiumHome && 'lg:top-5', navBg)}
+      className="fixed top-0 left-0 right-0 w-full z-50 bg-[#f2ebdf]/95 backdrop-blur-md border-b border-[#e2d8c9] shadow-[0_4px_20px_rgba(15,15,15,.04)]"
     >
-      <div className={cn(
-        'max-w-[1600px] mx-auto px-5 sm:px-8',
-        isPremiumHome && 'lg:px-7 lg:rounded-[10px] lg:border lg:border-white/45 lg:bg-[#f2ebdf]/95 lg:shadow-[0_16px_42px_rgba(0,0,0,.2)] lg:backdrop-blur-md'
-      )}>
-        <div className={cn(
-          'flex items-center justify-between transition-all duration-300',
-          isScrolled || activeMenu ? 'py-4' : 'py-5'
-        )}>
+      <div className="max-w-[1600px] mx-auto px-5 sm:px-8">
+        <div className="flex items-center justify-between py-4">
 
           {/* Logo */}
-          <FluxlabLogo variant={isPremiumHome ? 'premium' : isTransparent ? 'dark' : 'light'} />
+          <FluxlabLogo />
 
           {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-8">
@@ -435,12 +409,10 @@ export function Navbar() {
                   <Link
                     href={menu.targetPage}
                     className={cn(
-                      'hover-rule text-[13px] font-medium tracking-wide transition-colors',
+                      'hover-rule text-[14px] font-bold tracking-wide transition-colors',
                       activeMenu === menu.id || isActive
-                        ? 'text-primary font-semibold active'
-                        : isTransparent && !isPremiumHome
-                          ? 'text-white/85 hover:text-white'
-                          : 'text-foreground/85 hover:text-foreground'
+                        ? 'text-primary font-bold active'
+                        : 'text-[#0F0F0F] hover:text-primary'
                     )}
                     aria-current={isActive ? 'page' : undefined}
                   >
@@ -450,18 +422,16 @@ export function Navbar() {
               )
             })}
 
-            <span className={cn('block w-px h-4', isTransparent && !isPremiumHome ? 'bg-white/15' : 'bg-border')} aria-hidden />
+            <span className="block w-px h-4 bg-[#0F0F0F]/15" aria-hidden />
 
             <div className="relative py-2">
               <Link
                 href="/guides"
                 className={cn(
-                  'hover-rule text-[13px] font-medium tracking-wide transition-colors',
+                  'hover-rule text-[14px] font-bold tracking-wide transition-colors',
                   pathname?.startsWith('/guides')
-                    ? 'text-primary font-semibold active'
-                      : isTransparent && !isPremiumHome
-                      ? 'text-white/85 hover:text-white'
-                      : 'text-foreground/85 hover:text-foreground'
+                    ? 'text-primary font-bold active'
+                    : 'text-[#0F0F0F] hover:text-primary'
                 )}
               >
                 Guides &amp; Tutos
@@ -475,7 +445,7 @@ export function Navbar() {
               {isSearchOpen ? (
                 <NavSearch
                   key="search-open"
-                  isTransparent={isTransparent && !isPremiumHome}
+                  isTransparent={false}
                   onClose={() => setIsSearchOpen(false)}
                 />
               ) : (
@@ -488,12 +458,7 @@ export function Navbar() {
                   type="button"
                   aria-label="Rechercher"
                   onClick={() => setIsSearchOpen(true)}
-                  className={cn(
-                    'hidden lg:flex w-10 h-10 rounded-full border items-center justify-center transition-colors',
-                    isTransparent && !isPremiumHome
-                      ? 'border-white/15 text-white/70 hover:text-primary hover:border-primary/60'
-                      : 'border-border text-foreground/70 hover:text-primary hover:border-primary/60'
-                  )}
+                  className="hidden lg:flex w-10 h-10 rounded-full border border-[#0F0F0F]/15 text-[#0F0F0F]/80 hover:text-primary hover:border-primary/60 items-center justify-center transition-colors"
                 >
                   <Search size={15} />
                 </motion.button>
@@ -509,9 +474,7 @@ export function Navbar() {
                 'lg:hidden w-9 h-9 rounded-full border flex items-center justify-center transition-colors',
                 isMobileOpen
                   ? 'bg-primary border-primary text-foreground'
-                  : isTransparent
-                    ? 'border-white/15 text-white/85'
-                    : 'border-border text-foreground/70'
+                  : 'border-[#0F0F0F]/15 text-[#0F0F0F]/80 hover:text-primary hover:border-primary/60'
               )}
               onClick={() => setIsMobileOpen((v) => !v)}
             >
@@ -529,7 +492,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -4 }}
             transition={{ duration: 0.18 }}
-            className="hidden lg:block absolute top-full left-0 w-full bg-white shadow-[0_30px_60px_-20px_rgba(15,15,15,.15)]"
+            className="hidden lg:block absolute top-full left-0 w-full bg-[#f2ebdf] border-b border-[#e2d8c9] shadow-[0_24px_50px_rgba(15,15,15,.12)]"
           >
             {MENU_DATA.map((menu) => {
               if (menu.id !== activeMenu) return null
@@ -632,79 +595,93 @@ export function Navbar() {
       {/* ── MOBILE DRAWER ─────────────────────────────── */}
       <AnimatePresence>
         {isMobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: '100dvh' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden fixed top-[64px] left-0 w-full z-40 overflow-y-auto grain"
-            style={{ background: '#0A0A0A' }}
-          >
-            <div className="px-6 pt-6 pb-20">
-              {/* Recherche */}
-              <MobileSearch onNavigate={() => setIsMobileOpen(false)} />
+          <>
+            {/* Backdrop assombrissant fermant au clic en dehors */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.18 }}
+              onClick={() => setIsMobileOpen(false)}
+              className="lg:hidden fixed inset-0 top-[64px] bg-black/60 backdrop-blur-[2px] z-30"
+              aria-hidden
+            />
 
-              <p className="frame-label text-primary mb-6 flex items-center gap-2">
-                <span className="block w-5 h-px bg-primary" aria-hidden />
-                Univers
-              </p>
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+              className="lg:hidden absolute top-full left-0 w-full z-40 max-h-[calc(100dvh-70px)] overflow-y-auto grain border-b border-white/15 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.85)]"
+              style={{ background: '#0A0A0A' }}
+            >
+              <div className="px-6 pt-5 pb-4">
+                {/* Recherche */}
+                <MobileSearch onNavigate={() => setIsMobileOpen(false)} />
 
-              {/* Category links */}
-              <ul className="space-y-1 mb-6">
-                {[
-                  { label: 'Studio & Son',    href: '/categorie/audio' },
-                  { label: 'Image & Lumière', href: '/categorie/video' },
-                  { label: 'Streaming',       href: '/categorie/streaming' },
-                  { label: 'Guides & Tutos',  href: '/guides' },
-                ].map((item) => (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      onClick={() => setIsMobileOpen(false)}
-                      className="flex items-center justify-between py-3 border-b border-white/10 group"
-                    >
-                      <span className="font-serif text-white text-[20px] group-hover:text-primary transition-colors">
-                        {item.label}
-                      </span>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/25 group-hover:text-primary transition-colors" aria-hidden><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-
-              {/* Labo promo card — dark */}
-              <Link
-                href="/configurateur"
-                onClick={() => setIsMobileOpen(false)}
-                className="block relative rounded-xl border border-primary/40 overflow-hidden p-5 mb-5"
-                style={{ background: '#0A0A0A' }}
-              >
-                <div
-                  className="absolute -top-8 -right-8 w-32 h-32 rounded-full pointer-events-none"
-                  style={{ background: 'radial-gradient(circle, rgba(211,178,123,.35) 0%, transparent 60%)', filter: 'blur(16px)' }}
-                  aria-hidden
-                />
-                <p className="frame-label text-primary mb-2 relative z-10">Le Labo Fluxlab</p>
-                <p className="font-serif text-white text-[18px] leading-[1.2] mb-3 relative z-10">
-                  Composez votre studio <span className="italic text-primary">sur-mesure.</span>
+                <p className="frame-label text-primary mb-4 flex items-center gap-2">
+                  <span className="block w-5 h-px bg-primary" aria-hidden />
+                  Univers
                 </p>
-                <span className="inline-flex items-center gap-2 text-[11px] font-mono text-primary uppercase tracking-wider relative z-10">
-                  Lancer
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-                    <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-                  </svg>
-                </span>
-              </Link>
 
-              {/* Legal */}
-              <div className="flex items-center justify-between text-[10px] font-mono text-white/40 uppercase tracking-wider">
-                <Link href="/mentions-legales" onClick={() => setIsMobileOpen(false)} className="hover:text-white/70 transition-colors">Mentions</Link>
-                <span>·</span>
-                <Link href="/confidentialite" onClick={() => setIsMobileOpen(false)} className="hover:text-white/70 transition-colors">Confidentialité</Link>
-                <span>·</span>
-                <Link href="/a-propos" onClick={() => setIsMobileOpen(false)} className="hover:text-white/70 transition-colors">Contact</Link>
+                {/* Category links */}
+                <ul className="space-y-0.5 mb-4">
+                  {[
+                    { label: 'Studio & Son',    href: '/categorie/audio' },
+                    { label: 'Image & Lumière', href: '/categorie/video' },
+                    { label: 'Streaming',       href: '/categorie/streaming' },
+                    { label: 'Guides & Tutos',  href: '/guides' },
+                  ].map((item) => (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        onClick={() => setIsMobileOpen(false)}
+                        className="flex items-center justify-between py-2.5 border-b border-white/10 group"
+                      >
+                        <span className="font-serif text-white text-[19px] group-hover:text-primary transition-colors">
+                          {item.label}
+                        </span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/25 group-hover:text-primary transition-colors" aria-hidden><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Labo promo card — dark */}
+                <Link
+                  href="/configurateur"
+                  onClick={() => setIsMobileOpen(false)}
+                  className="block relative rounded-xl border border-primary/40 overflow-hidden p-4 mb-4"
+                  style={{ background: '#0A0A0A' }}
+                >
+                  <div
+                    className="absolute -top-8 -right-8 w-32 h-32 rounded-full pointer-events-none"
+                    style={{ background: 'radial-gradient(circle, rgba(211,178,123,.35) 0%, transparent 60%)', filter: 'blur(16px)' }}
+                    aria-hidden
+                  />
+                  <p className="frame-label text-primary mb-1.5 relative z-10">L’Atelier Fluxlab</p>
+                  <p className="font-serif text-white text-[17px] leading-[1.2] mb-2.5 relative z-10">
+                    Composez votre studio <span className="italic text-primary">sur-mesure.</span>
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-[11px] font-mono text-primary uppercase tracking-wider relative z-10">
+                    Lancer
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+                      <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                    </svg>
+                  </span>
+                </Link>
+
+                {/* Legal */}
+                <div className="flex items-center justify-between text-[11px] font-mono text-white/45 uppercase tracking-wider pt-3 pb-1 border-t border-white/10">
+                  <Link href="/mentions-legales" onClick={() => setIsMobileOpen(false)} className="hover:text-white/80 transition-colors py-0.5">Mentions</Link>
+                  <span className="text-white/25">·</span>
+                  <Link href="/confidentialite" onClick={() => setIsMobileOpen(false)} className="hover:text-white/80 transition-colors py-0.5">Confidentialité</Link>
+                  <span className="text-white/25">·</span>
+                  <Link href="/a-propos" onClick={() => setIsMobileOpen(false)} className="hover:text-white/80 transition-colors py-0.5">Contact</Link>
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </motion.nav>

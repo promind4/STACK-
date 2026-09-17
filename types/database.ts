@@ -41,6 +41,7 @@ export interface Product {
   short_description?: string;
   image_url: string;
   specs?: Record<string, any>;
+  recommendation_profile?: Record<string, any>;
   price: number; // Facade pour l'affichage rapide (généralement le prix min)
 
   // Images

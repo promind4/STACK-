@@ -462,10 +462,10 @@ export default async function CategoryPage({ params }: Props) {
                     {/* Halo doré */}
                     <div className="absolute -top-10 right-[8%] w-[300px] h-[300px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(211,178,123,.18) 0%, transparent 65%)', filter: 'blur(35px)' }} aria-hidden />
 
-                    <div className="relative z-10 max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-16 h-full flex flex-col justify-center pt-16 pb-8">
+                    <div className="relative z-10 max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-16 h-full flex flex-col justify-center pt-24 sm:pt-28 pb-8">
 
                         {/* Breadcrumb */}
-                        <nav className="flex items-center gap-2 text-[11px] font-mono text-white/45 uppercase tracking-wider mb-4" aria-label="Fil d'ariane">
+                        <nav className="flex items-center gap-2 text-[12px] font-mono text-white/70 uppercase tracking-wider mb-4 font-medium" aria-label="Fil d'ariane">
                             <Link href="/" className="hover:text-primary transition-colors">Accueil</Link>
                             <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="m9 18 6-6-6-6"/></svg>
                             {parentMeta ? (
@@ -474,16 +474,16 @@ export default async function CategoryPage({ params }: Props) {
                                     <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="m9 18 6-6-6-6"/></svg>
                                 </>
                             ) : null}
-                            <span className="text-white/70">{title}</span>
+                            <span className="text-white/90">{title}</span>
                         </nav>
 
                         {/* Titre + compteur sur une ligne */}
                         <div className="flex items-end justify-between gap-6 flex-wrap">
                             <div>
-                                <h1 className="font-serif text-white text-[28px] sm:text-[36px] md:text-[48px] leading-[1.05] sm:leading-[1] tracking-tight">
+                                <h1 className="font-serif text-white text-[28px] sm:text-[36px] md:text-[48px] leading-[1.08] tracking-tight text-balance">
                                     {title} <span className="italic text-primary">·</span>
                                 </h1>
-                                <p className="text-[14px] text-white/55 font-light mt-2 max-w-[560px] leading-snug">
+                                <p className="text-[15px] text-white/80 font-normal mt-2 max-w-[560px] leading-snug">
                                     {subtitle}
                                 </p>
                             </div>
@@ -505,24 +505,24 @@ export default async function CategoryPage({ params }: Props) {
                 <section className="bg-secondary border-b border-border/40">
                     <div className="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-16 py-24 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
                         <div className="col-span-12 lg:col-span-5">
-                            <p className="frame-label text-primary mb-5 flex items-center gap-3">
+                            <p className="frame-label text-primary mb-5 flex items-center gap-3 font-bold">
                                 <span className="block w-8 h-px bg-primary" aria-hidden />
                                 Mode d&apos;emploi
                             </p>
-                            <h2 className="font-serif text-foreground text-[30px] sm:text-[40px] md:text-[52px] leading-[1.1] sm:leading-[1.05] tracking-tight mb-6">
+                            <h2 className="font-serif text-foreground text-[30px] sm:text-[40px] md:text-[50px] leading-[1.12] tracking-tight mb-6 text-balance">
                                 Bien choisir<br />
                                 votre matériel<br />
                                 <span className="italic text-primary">en 4 questions.</span>
                             </h2>
-                            <p className="text-[14px] text-foreground/65 leading-[1.7] font-light max-w-[420px]">
+                            <p className="text-[15px] text-foreground/80 leading-[1.7] font-normal max-w-[420px]">
                                 Ce qu&apos;il faut savoir avant d&apos;acheter — la chaîne audio et vidéo est un système complet, chaque composant en est un maillon.
                             </p>
                         </div>
                         <div className="col-span-12 lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8">
                             {(CATEGORY_QUESTIONS[slug] ?? DEFAULT_QUESTIONS).map(q => (
                                 <div key={q.num}>
-                                    <p className="frame-label text-primary mb-3">{q.num} · {q.title}</p>
-                                    <p className="text-[14px] text-foreground/75 leading-[1.7] font-light">{q.desc}</p>
+                                    <p className="frame-label text-primary mb-3 font-bold">{q.num} · {q.title}</p>
+                                    <p className="text-[14px] text-foreground/85 leading-[1.7] font-normal">{q.desc}</p>
                                 </div>
                             ))}
                         </div>

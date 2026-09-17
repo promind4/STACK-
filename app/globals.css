@@ -73,7 +73,8 @@ body {
   /* Eyebrow / mono label */
   .frame-label {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
+    font-size: 12px;
+    font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
   }
@@ -159,15 +160,25 @@ body {
   to { stroke-dashoffset: 0; opacity: 1; }
 }
 
+@keyframes hero-arrival {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .animate-fade-up { animation: fade-up 0.4s ease forwards; }
 .animate-nudge   { animation: nudge 0.7s ease-in-out infinite; }
 .home-glow { animation: home-glow-drift 12s ease-in-out infinite; }
 .home-link-line { stroke-dasharray: 1; animation: home-line-reveal 1.4s ease-out both; }
+.hero-arrival { animation: hero-arrival 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
   .home-glow,
   .home-link-line,
-  .animate-gradient-text {
+  .animate-gradient-text,
+  .hero-arrival {
     animation: none !important;
   }
 }
@@ -184,25 +195,25 @@ body {
 /* ─── PROSE FLUXLAB (guides) ─────────────────────────────────── */
 /* Toutes les règles excluent les blocs .not-prose pour ne pas
    écraser les couleurs des cartes CTA, méthodologie, etc.       */
-.prose-fluxlab h2:not(.not-prose *) { font-family: Georgia,serif; font-size:28px; line-height:1.15; letter-spacing:-.01em; color:#0F0F0F; margin:3rem 0 1rem; scroll-margin-top: 100px; }
-.prose-fluxlab h3:not(.not-prose *) { font-family: Georgia,serif; font-size:20px; line-height:1.3; color:#0F0F0F; margin:2rem 0 .75rem; scroll-margin-top: 100px; }
-.prose-fluxlab p:not(.not-prose *) { font-size:16px; line-height:1.8; color:rgba(15,15,15,.75); font-weight:300; margin-bottom:1.25rem; }
+.prose-fluxlab h2:not(.not-prose *) { font-family: var(--font-switzer), system-ui, sans-serif; font-size:30px; line-height:1.2; letter-spacing:-.01em; color:#0F0F0F; font-weight:700; margin:3rem 0 1rem; scroll-margin-top: 100px; }
+.prose-fluxlab h3:not(.not-prose *) { font-family: var(--font-switzer), system-ui, sans-serif; font-size:22px; line-height:1.3; color:#0F0F0F; font-weight:700; margin:2rem 0 .75rem; scroll-margin-top: 100px; }
+.prose-fluxlab p:not(.not-prose *) { font-size:17px; line-height:1.8; color:#1F1F1F; font-weight:400; margin-bottom:1.35rem; }
 .prose-fluxlab ul:not(.not-prose *) { list-style:none; padding:0; margin:1.5rem 0; }
-.prose-fluxlab ul:not(.not-prose *) li { position:relative; padding-left:1.5rem; margin-bottom:.75rem; font-size:15px; color:rgba(15,15,15,.75); font-weight:300; line-height:1.7; }
+.prose-fluxlab ul:not(.not-prose *) li { position:relative; padding-left:1.5rem; margin-bottom:.75rem; font-size:16px; color:#1F1F1F; font-weight:400; line-height:1.75; }
 .prose-fluxlab ul:not(.not-prose *) li::before { content:''; position:absolute; left:0; top:.65em; width:6px; height:6px; border-radius:1px; background:#D3B27B; }
 .prose-fluxlab blockquote:not(.not-prose *) { border-left:3px solid #D3B27B; padding:1rem 1.5rem; margin:2rem 0; background:#F4EFEA; border-radius:0 12px 12px 0; }
-.prose-fluxlab blockquote:not(.not-prose *) p { color:#0F0F0F; font-style:italic; margin:0; font-weight:400; font-family:Georgia,serif; }
-.prose-fluxlab strong:not(.not-prose *) { color:#0F0F0F; font-weight:500; }
-.prose-fluxlab a:not(.not-prose *) { color:#D3B27B; text-decoration:underline; text-underline-offset:3px; }
+.prose-fluxlab blockquote:not(.not-prose *) p { color:#0F0F0F; font-style:italic; margin:0; font-weight:400; font-family:var(--font-switzer), system-ui, sans-serif; }
+.prose-fluxlab strong:not(.not-prose *) { color:#0F0F0F; font-weight:600; }
+.prose-fluxlab a:not(.not-prose *) { color:#B88636; text-decoration:underline; text-underline-offset:3px; font-weight:500; }
 /* Boutons CTA dans le contenu : texte noir sur fond doré (lisibilité) */
 .prose-fluxlab a.bg-primary:not(.not-prose *),
-.prose-fluxlab a[class*="bg-primary"]:not(.not-prose *) { color:#0F0F0F !important; text-decoration:none !important; }
+.prose-fluxlab a[class*="bg-primary"]:not(.not-prose *) { color:#0F0F0F !important; text-decoration:none !important; font-weight:600 !important; }
 .prose-fluxlab .bg-primary:not(.not-prose *) .text-primary-foreground,
 .prose-fluxlab span.bg-primary:not(.not-prose *) { color:#0F0F0F !important; }
 /* Table responsive : scroll horizontal interne, jamais de débordement de page */
 .prose-fluxlab table:not(.not-prose *) { display:block; overflow-x:auto; -webkit-overflow-scrolling:touch; width:100%; min-width:480px; border-collapse:collapse; }
-.prose-fluxlab th:not(.not-prose *) { padding:.75rem 1rem; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.18em; text-transform:uppercase; background:#E8DCC4; white-space:nowrap; }
-.prose-fluxlab td:not(.not-prose *) { padding:.75rem 1rem; border-top:1px solid #EBDCC4; font-size:14px; }
+.prose-fluxlab th:not(.not-prose *) { padding:.75rem 1rem; font-family:var(--font-jetbrains), 'JetBrains Mono', monospace; font-size:12px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; background:#E8DCC4; color:#0F0F0F; white-space:nowrap; }
+.prose-fluxlab td:not(.not-prose *) { padding:.75rem 1rem; border-top:1px solid #EBDCC4; font-size:15px; color:#1F1F1F; }
 /* Mobile : le tableau tient dans l'écran (padding/police réduits, retour à la ligne autorisé) — plus de contenu coupé */
 @media (max-width: 640px) {
   .prose-fluxlab table:not(.not-prose *) { min-width:0; }

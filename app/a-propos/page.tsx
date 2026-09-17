@@ -43,7 +43,7 @@ export default function AboutPage() {
                             &quot;La créativité ne devrait jamais être bloquée par un câble manquant ou un driver incompatible.&quot;
                         </h1>
                         <div className="h-1 w-24 bg-primary mx-auto mb-10 rounded-full" />
-                        <p className="text-xl text-muted-foreground leading-relaxed font-light">
+                        <p className="text-xl text-foreground/80 leading-relaxed font-normal">
                             Fluxlab est né d&apos;un constat simple : le marché du matériel créatif est une jungle.
                             Trop de références, trop de marketing, pas assez de cohérence.
                             Nous avons construit l&apos;outil que nous aurions rêvé d&apos;avoir à nos débuts.
@@ -74,7 +74,7 @@ export default function AboutPage() {
                                     <Target className="w-8 h-8 text-primary" />
                                     <span className="font-bold text-lg font-serif">Notre But</span>
                                 </div>
-                                <p className="text-sm text-muted-foreground italic">
+                                <p className="text-sm text-foreground/75 italic">
                                     Simplifier la tech pour libérer l&apos;art.
                                 </p>
                             </div>
@@ -83,7 +83,7 @@ export default function AboutPage() {
                         {/* Texte Editorial */}
                         <div className="space-y-8">
                             <h2 className="text-3xl font-bold mb-6 font-serif">L&apos;Approche Fluxlab</h2>
-                            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed font-light">
+                            <div className="space-y-6 text-lg text-foreground/80 leading-relaxed font-normal">
                                 <p>
                                     Nous ne sommes pas un simple catalogue. Fluxlab est une <strong>intelligence de configuration</strong>.
                                 </p>
@@ -112,7 +112,7 @@ export default function AboutPage() {
                                     {val.icon}
                                 </div>
                                 <h3 className="text-xl font-bold mb-3 font-serif">{val.title}</h3>
-                                <p className="text-muted-foreground leading-relaxed">
+                                <p className="text-foreground/75 leading-relaxed font-normal">
                                     {val.desc}
                                 </p>
                             </div>
@@ -131,7 +131,7 @@ export default function AboutPage() {
 
                         <div className="relative z-10 text-center mb-12">
                             <h2 className="text-3xl font-bold font-serif mb-4">Pourquoi nous faire confiance ?</h2>
-                            <p className="text-zinc-400 max-w-lg mx-auto">
+                            <p className="text-white/70 font-normal max-w-lg mx-auto">
                                 Nous ne sommes pas un magazine. Nous sommes un outil.
                             </p>
                         </div>

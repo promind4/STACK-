@@ -9,6 +9,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { isDirectSupabaseStorageUrl } from '@/lib/imagePolicy.mjs';
 import TocScrollspy from '@/components/client/TocScrollspy';
+import { guideCoverImage } from '@/lib/guide-images';
 
 interface Props {
     params: Promise<{ slug: string }>;
@@ -44,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         openGraph: {
             title: seoTitle,
             description: desc,
-            images: article.image ? [article.image] : [],
+            images: article.image ? [guideCoverImage(article)] : [],
         },
     };
 }
@@ -60,6 +61,53 @@ async function getRelatedProducts(slugs: string[]) {
 
     if (!data) return [];
     return (data as any[]).map(p => transformProduct(p));
+}
+
+function renderEditorialTitle(rawTitle: string) {
+    // 1. Colon separator " : " or ":"
+    const colonMatch = rawTitle.match(/^(.*?)\s*:\s*(.*)$/);
+    if (colonMatch) {
+        const mainPart = colonMatch[1].trim();
+        const subtitle = colonMatch[2].trim();
+        return (
+            <>
+                <span>{mainPart}&nbsp;:</span>
+                <br />
+                <span className="italic text-primary">{subtitle}</span>
+            </>
+        );
+    }
+
+    // 2. Dash separator " — " or " - "
+    const dashMatch = rawTitle.match(/^(.*?)\s+[-—]\s+(.*)$/);
+    if (dashMatch) {
+        const mainPart = dashMatch[1].trim();
+        const subtitle = dashMatch[2].trim();
+        return (
+            <>
+                <span>{mainPart}</span>
+                <br />
+                <span className="italic text-primary">{subtitle}</span>
+            </>
+        );
+    }
+
+    // 3. Parentheses at the end "(...)"
+    const parenMatch = rawTitle.match(/^(.*?)\s*(\([^)]+\))$/);
+    if (parenMatch) {
+        const mainPart = parenMatch[1].trim();
+        const subPart = parenMatch[2].trim();
+        return (
+            <>
+                <span>{mainPart}</span>
+                <br />
+                <span className="italic text-primary">{subPart}</span>
+            </>
+        );
+    }
+
+    // 4. Default: No artificial break, let text-balance wrap naturally
+    return <span>{rawTitle}</span>;
 }
 
 export default async function GuideArticlePage({ params }: Props) {
@@ -83,7 +131,7 @@ export default async function GuideArticlePage({ params }: Props) {
         description: article.intro,
         image: {
             "@type": "ImageObject",
-            url: article.image,
+            url: guideCoverImage(article),
             width: 1200,
             height: 630,
         },
@@ -304,12 +352,12 @@ export default async function GuideArticlePage({ params }: Props) {
     const CTAmidArticle = `
       <div class="not-prose my-10 p-6 rounded-2xl border flex flex-col sm:flex-row items-start sm:items-center gap-5" style="background:rgba(211,178,123,0.06);border-color:rgba(211,178,123,0.2);">
         <div class="flex-1">
-          <p class="text-[10px] font-mono uppercase tracking-widest mb-1" style="color:#D3B27B;">Labo IA · Fluxlab</p>
+          <p class="text-[10px] font-mono uppercase tracking-widest mb-1" style="color:#D3B27B;">L’Atelier Fluxlab</p>
           <p class="font-serif text-[20px] leading-snug mb-1">Besoin d&apos;aide pour choisir votre matériel&nbsp;?</p>
-          <p class="text-[13px] leading-relaxed" style="color:rgba(15,15,15,0.6);">Budget, usage, contraintes — l&apos;IA compose votre setup complet en 2 minutes.</p>
+          <p class="text-[13px] leading-relaxed" style="color:rgba(15,15,15,0.6);">Budget, usage, contraintes — composez une sélection adaptée à votre situation.</p>
         </div>
         <a href="/configurateur" class="shrink-0 inline-flex items-center gap-2 h-10 px-6 rounded-full text-[12px] font-medium uppercase tracking-wider transition-colors" style="background:#D3B27B;color:#0F0F0F;text-decoration:none;">
-          Lancer le Labo IA →
+          Ouvrir l’Atelier →
         </a>
       </div>
     `;
@@ -341,7 +389,7 @@ export default async function GuideArticlePage({ params }: Props) {
                     {/* Image de fond */}
                     {article.image && (
                         <Image
-                            src={article.image}
+                            src={guideCoverImage(article)}
                             alt={article.title}
                             fill
                             priority
@@ -373,20 +421,19 @@ export default async function GuideArticlePage({ params }: Props) {
                         <div className="max-w-[900px]">
                             <div className="flex items-center gap-4 mb-8 flex-wrap">
                                 <span className="frame-label text-primary bg-primary/15 backdrop-blur px-3 py-1.5 rounded-full">Guide complet</span>
-                                <span className="frame-label text-white/45">{article.updatedAt || article.date}</span>
+                                <span className="frame-label text-white/70">{article.updatedAt || article.date}</span>
                             </div>
 
-                            <h1 className="font-serif text-white text-[34px] sm:text-[48px] md:text-[64px] lg:text-[80px] leading-[1.05] sm:leading-[1] tracking-tight mb-8">
-                                {article.title.split(' ').slice(0, Math.ceil(article.title.split(' ').length / 2)).join(' ')}<br />
-                                <span className="italic text-primary">{article.title.split(' ').slice(Math.ceil(article.title.split(' ').length / 2)).join(' ')}</span>
+                            <h1 className="font-serif text-white text-[34px] sm:text-[46px] md:text-[56px] lg:text-[68px] leading-[1.1] tracking-tight mb-8 text-balance">
+                                {renderEditorialTitle(article.title)}
                             </h1>
 
-                            <p className="text-[18px] text-white/60 leading-[1.65] font-light max-w-[680px] mb-12">
+                            <p className="text-[18px] text-white/85 leading-[1.65] font-normal max-w-[680px] mb-12">
                                 {article.intro}
                             </p>
 
                             {/* Méta — byline éditorial */}
-                            <div className="flex items-center gap-3 text-[12px] font-mono text-white/40">
+                            <div className="flex items-center gap-3 text-[13px] font-mono text-white/65 font-medium">
                                 <span>Par {article.author}</span>
                                 <span className="text-white/20">·</span>
                                 <span>Mis à jour le {article.updatedAt || article.date}</span>
@@ -509,7 +556,7 @@ function RelatedGuides({ currentSlug, category }: { currentSlug: string; categor
                             {guide.category}
                         </span>
                         {guide.image && (
-                            <Image src={guide.image} alt={`${guide.title} – Guide ${guide.category} | Fluxlab`} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                            <Image src={guideCoverImage(guide)} alt={`${guide.title} – Guide ${guide.category} | Fluxlab`} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                         )}
                     </div>
                     <div className="p-5 flex flex-col flex-1">

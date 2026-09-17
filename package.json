@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "test:images": "node tests/image-policy.test.mjs",
-    "test:homepage": "node tests/homepage-design.test.mjs"
+    "test:homepage": "node tests/homepage-design.test.mjs",
+    "test:atelier": "node --experimental-strip-types --test tests/atelier/*.test.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.0",

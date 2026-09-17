@@ -64,6 +64,15 @@ export function cleanImageUrl(url: string | undefined | null): string {
     
     let cleanUrl = url.replace(/\\\//g, '/');
 
+    // Remove artificial whitespace borders from Thomann padthumb CDN URLs:
+    // padthumb1000x1000 places small products inside huge white borders (shrinking them to 30-50% scale).
+    // 'orig' serves the original unpadded photograph at natural full scale.
+    if (cleanUrl.includes('thumbs.static-thomann.de/thumb/padthumb1000x1000/')) {
+        cleanUrl = cleanUrl.replace('/padthumb1000x1000/', '/orig/');
+    } else if (cleanUrl.includes('thumbs.static-thomann.de/thumb/padthumb800x800/')) {
+        cleanUrl = cleanUrl.replace('/padthumb800x800/', '/orig/');
+    }
+
     // Ensure absolute URL
     if (cleanUrl.startsWith('/')) {
         const baseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';

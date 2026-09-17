@@ -113,10 +113,11 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
   return (
     <article
       className={cn(
-        'group relative bg-card rounded-2xl border overflow-hidden',
+        'group relative overflow-hidden border transition-all duration-300 motion-reduce:transition-none',
         variant === 'home-showcase' ? 'home-showcase-card' : '',
-        variant === 'home-showcase' ? 'xl:aspect-[4/5]' : '',
-        'transition-all duration-300',
+        variant === 'home-showcase'
+          ? 'bg-white rounded-none xl:aspect-[1/1]'
+          : 'bg-card rounded-2xl',
         isUnavailable
           ? 'border-border/70 opacity-80'
           : 'border-border/70 hover:border-primary/60 hover:shadow-card',
@@ -126,13 +127,13 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
       <Link
         href={product.href}
         className={variant === 'home-showcase'
-          ? 'flex h-full flex-col xl:grid xl:grid-rows-[55%_45%]'
+          ? 'grid h-full grid-cols-[42%_minmax(0,1fr)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-primary sm:flex sm:flex-col xl:grid xl:grid-cols-1 xl:grid-rows-[52%_48%]'
           : 'flex h-full flex-col'}
       >
       {/* Image zone */}
       <div className={cn(
         'bg-white relative overflow-hidden',
-        variant === 'home-showcase' ? 'aspect-square xl:aspect-auto xl:h-full' : 'aspect-square'
+        variant === 'home-showcase' ? 'h-full sm:aspect-square sm:h-auto xl:aspect-auto xl:h-full' : 'aspect-square'
       )}>
         {product.badge && (
           <span className="absolute top-3 left-3 z-10">
@@ -146,13 +147,13 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
         )}
 
         {product.imageUrl && !imageFailed ? (
-          <div className="absolute inset-0 flex items-center justify-center p-4 transition-transform duration-500 group-hover:scale-[1.035]">
+          <div className="absolute inset-0 flex items-center justify-center p-4 transition-transform duration-500 group-hover:scale-[1.035] motion-reduce:transform-none motion-reduce:transition-none">
             <Image
               src={product.imageUrl}
               alt={`${product.name} ${product.brand} – avis et prix | Fluxlab`}
               fill
               sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-              className="object-contain mix-blend-multiply p-4"
+              className="object-contain mix-blend-multiply"
               loading="lazy"
               unoptimized={isDirectSupabaseStorageUrl(product.imageUrl)}
               onError={() => setImageFailed(true)}
@@ -167,55 +168,27 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
 
       {/* Info zone */}
       {variant === 'home-showcase' ? (
-        <div className="flex min-h-0 flex-col bg-white p-3 sm:p-3.5 xl:p-2">
-          <div className="mb-0.5 flex items-center text-[10px] font-mono uppercase tracking-[0.12em] text-foreground/70 sm:mb-1 xl:mb-0.5">
+        <div className="flex min-h-0 min-w-0 flex-col bg-white p-3 sm:p-3.5 xl:p-2.5">
+          <div className="mb-1 flex items-center text-[11px] font-mono font-medium uppercase tracking-[0.12em] text-foreground/75">
             <span className="truncate">{product.brand}</span>
           </div>
 
-          <h3 className="mb-0.5 font-serif text-[14px] leading-[1.2] text-foreground line-clamp-1 sm:mb-1 sm:line-clamp-2 xl:mb-0.5">
-            <span className="bg-[linear-gradient(90deg,#D3B27B,#D3B27B)] bg-[length:0_1px] bg-no-repeat bg-bottom transition-all duration-300 group-hover:bg-[length:100%_1px]">
-              {product.name}
-            </span>
+          <h3 className="line-clamp-2 font-serif text-[15px] leading-[1.22] text-foreground sm:text-[14px] xl:!line-clamp-1 xl:text-[15px] text-balance">
+            <span>{product.name}</span>
           </h3>
 
-          <div className="mb-1 flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[10px] font-mono leading-tight text-foreground/70 xl:mb-1">
-            {product.reviewCount > 0 && (
-              <span className="flex items-center gap-1 whitespace-nowrap">
-                <Star size={10} fill="currentColor" className="text-primary" />
-                <span className="font-medium text-foreground/80">{product.rating.toFixed(1)}</span>
-                <span>{product.reviewCount.toLocaleString('fr-FR')} avis</span>
-              </span>
-            )}
-            <span className="flex min-w-0 items-center gap-1">
-              <span className={cn('h-1.5 w-1.5 shrink-0 rounded-full', isUnavailable ? 'bg-foreground/30' : 'bg-emerald-500')} aria-hidden />
-              <span className="sm:hidden">
-                {isUnavailable
-                  ? 'Indisponible'
-                  : product.availableOfferCount > 1
-                    ? `${product.availableOfferCount} offres`
-                    : product.availableOfferCount === 1
-                      ? '1 offre'
-                      : 'En stock'}
-              </span>
-              <span className="hidden sm:inline">
-                {availabilityLabel}
-              </span>
-            </span>
-            {merchantLabel && (
-              <span className="whitespace-nowrap text-foreground/70" aria-label={merchantLabel}>
-                <span className="sm:hidden">· {product.offerCount} march.</span>
-                <span className="hidden sm:inline">· {merchantLabel}</span>
-              </span>
-            )}
+          <div className="mt-2 flex min-w-0 items-center gap-1.5 text-[12px] font-medium leading-tight text-foreground/80 xl:mt-1">
+            <span className={cn('h-1.5 w-1.5 shrink-0 rounded-full', isUnavailable ? 'bg-foreground/30' : 'bg-emerald-500')} aria-hidden />
+            <span className="truncate">{availabilityLabel}</span>
           </div>
 
-          <div className="mt-auto flex items-end justify-between gap-2 border-t border-foreground/10 pt-1.5">
+          <div className="mt-auto flex items-end justify-between gap-2 border-t border-foreground/10 pt-2">
             <div className="min-w-0">
-              <span className="sr-only sm:not-sr-only mb-0.5 block text-[10px] font-mono uppercase tracking-[0.12em] text-foreground/70">à partir de</span>
+              <span className="mb-0.5 block text-[11px] font-mono uppercase tracking-[0.1em] text-foreground/70">à partir de</span>
               {product.hasPrice ? (
-                <span className={cn('whitespace-nowrap font-serif text-[19px] leading-none text-foreground xl:text-[23px]', isUnavailable && 'text-foreground/65')}>
+                <span className={cn('whitespace-nowrap font-serif text-[21px] leading-none text-foreground sm:text-[19px] xl:text-[22px]', isUnavailable && 'text-foreground/65')}>
                   {product.price.toLocaleString('fr-FR')}
-                  <span className="align-top text-[12px] xl:text-[14px]">€</span>
+                  <span className="align-top text-[12px]">€</span>
                 </span>
               ) : (
                 <span className="whitespace-nowrap text-[12px] font-medium text-foreground/65">Prix indisponible</span>
@@ -229,11 +202,11 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
         </div>
       ) : (
         <div className="p-3 sm:p-5 flex flex-col flex-1 bg-[linear-gradient(145deg,hsl(var(--secondary))_0%,hsl(var(--card))_100%)]">
-          <div className="flex items-center justify-between text-[9px] sm:text-[10px] font-mono tracking-[0.14em] sm:tracking-[0.18em] uppercase text-foreground/55 mb-1.5 sm:mb-2">
+          <div className="flex items-center justify-between text-[11px] sm:text-[12px] font-mono font-medium tracking-[0.14em] uppercase text-foreground/75 mb-1.5 sm:mb-2">
             <span className="truncate">{product.brand}</span>
           </div>
 
-          <h3 className="font-serif text-[14px] sm:text-[18px] leading-[1.2] text-foreground mb-2 sm:mb-3 line-clamp-2">
+          <h3 className="font-serif text-[15px] sm:text-[18px] leading-[1.24] text-foreground mb-2 sm:mb-3 line-clamp-2 text-balance">
             <span className="bg-[linear-gradient(90deg,#D3B27B,#D3B27B)] bg-[length:0_1px] bg-no-repeat bg-bottom group-hover:bg-[length:100%_1px] transition-all duration-300">
               {product.name}
             </span>
@@ -245,28 +218,28 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
             </div>
           )}
 
-          <div className="flex items-center gap-2 mb-3 sm:mb-4 text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.1em] text-foreground/55">
+          <div className="flex items-center gap-2 mb-3 sm:mb-4 text-[11px] sm:text-[12px] font-mono text-foreground/75">
             <span className={cn('w-1.5 h-1.5 rounded-full', isUnavailable ? 'bg-foreground/30' : 'bg-emerald-500')} aria-hidden />
             <span>
               {availabilityLabel}
             </span>
             {merchantLabel && (
-              <span className="text-foreground/35">· {merchantLabel}</span>
+              <span className="text-foreground/45">· {merchantLabel}</span>
             )}
           </div>
 
           <div className="mt-auto flex items-end justify-between gap-2 pt-3 sm:pt-4 border-t border-foreground/10">
             <div className="min-w-0">
-              <span className="block text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.12em] sm:tracking-[0.16em] text-foreground/55 mb-0.5">
+              <span className="block text-[11px] sm:text-[12px] font-mono uppercase tracking-[0.12em] text-foreground/70 mb-0.5">
                 à partir de
               </span>
               {product.hasPrice ? (
-                <span className={cn('font-serif text-[19px] sm:text-[28px] leading-none text-foreground', isUnavailable && 'text-foreground/55')}>
+                <span className={cn('font-serif text-[20px] sm:text-[28px] leading-none text-foreground', isUnavailable && 'text-foreground/55')}>
                   {product.price.toLocaleString('fr-FR')}
-                  <span className="text-[12px] sm:text-[16px] align-top">€</span>
+                  <span className="text-[13px] sm:text-[16px] align-top">€</span>
                 </span>
               ) : (
-                <span className="text-[12px] sm:text-sm font-medium text-foreground/55">Prix indisponible</span>
+                <span className="text-[13px] sm:text-sm font-medium text-foreground/70">Prix indisponible</span>
               )}
             </div>
 

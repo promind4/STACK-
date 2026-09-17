@@ -39,36 +39,25 @@ function TravelIcon() {
 }
 
 const entries = [
-  { label: 'Pièce bruyante', description: 'Réduire le bruit, clarifier la voix.', href: '/categorie/espace-bruyant', Icon: NoiseIcon },
-  { label: 'Plug & play', description: "Aller à l'essentiel, sans friction.", href: '/categorie/plug-and-play', Icon: PlugIcon },
-  { label: 'Budget serré', description: 'Prioriser ce qui change vraiment tout.', href: '/categorie/petit-budget', Icon: BudgetIcon },
-  { label: 'Créateur nomade', description: 'Rester léger, compact et prêt.', href: '/categorie/createur-nomade', Icon: TravelIcon },
+  { label: 'Pièce bruyante', href: '/categorie/espace-bruyant', Icon: NoiseIcon },
+  { label: 'Plug & play', href: '/categorie/plug-and-play', Icon: PlugIcon },
+  { label: 'Budget serré', href: '/categorie/petit-budget', Icon: BudgetIcon },
+  { label: 'Créateur nomade', href: '/categorie/createur-nomade', Icon: TravelIcon },
 ] as const
 
 export function HeroContextGrid() {
   return (
-    <div>
-      <div className="mb-4 flex items-center justify-between gap-4">
-        <p className="frame-label text-primary">Choisissez votre point de départ</p>
-        <p className="hidden text-[10px] font-mono uppercase tracking-[.16em] text-white/35 sm:block">
-          Un besoin concret, une sélection adaptée
-        </p>
-      </div>
-      <div className="grid grid-cols-1 gap-px border border-[var(--home-rule)] bg-[var(--home-rule)] sm:grid-cols-2 lg:grid-cols-4">
-        {entries.map(({ label, description, href, Icon }) => (
-          <Link key={href} href={href} className="group relative min-h-28 overflow-hidden bg-[var(--home-panel)] p-5 transition-colors duration-300 hover:bg-[#18150f]">
-            <span className="absolute inset-x-0 top-0 h-px origin-left scale-x-0 bg-primary transition-transform duration-500 group-hover:scale-x-100" aria-hidden />
-            <div className="flex items-start">
-              <span className="flex size-[38px] items-center justify-center border border-primary/55 text-primary/80 transition-colors duration-300 group-hover:text-primary">
-                <Icon />
-              </span>
-            </div>
-            <strong className="mt-4 block font-serif text-lg font-normal text-white">{label}</strong>
-            <span className="mt-1.5 block text-xs leading-relaxed text-white/50">{description}</span>
-            <span className="absolute bottom-5 right-5 text-primary/60 transition-transform duration-300 group-hover:translate-x-1" aria-hidden>→</span>
-          </Link>
+    <nav aria-label="Choisir selon votre besoin" className="border-t border-white/15">
+      <ul className="grid sm:grid-cols-2 lg:grid-cols-4">
+        {entries.map(({ label, href, Icon }) => (
+          <li key={href} className="border-b border-white/15 lg:border-b-0 lg:border-r lg:border-white/15 last:lg:border-r-0">
+            <Link href={href} className="group flex h-full items-center gap-3 px-4 py-4 text-sm text-white/80 transition-colors hover:bg-white/[.06] hover:text-[var(--home-ivory)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-[var(--home-gold)]">
+              <span className="text-[var(--home-gold)] transition-transform duration-300 motion-reduce:transform-none motion-reduce:transition-none group-hover:-translate-y-0.5"><Icon /></span>
+              <span>{label}</span>
+            </Link>
+          </li>
         ))}
-      </div>
-    </div>
+      </ul>
+    </nav>
   )
 }

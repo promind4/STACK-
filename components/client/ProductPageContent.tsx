@@ -175,7 +175,7 @@ export default function ProductPageContent({ product, category, relatedProducts 
     <div className="min-h-screen bg-background text-foreground">
 
       {/* Breadcrumb + bouton retour */}
-      <div className="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-16 pt-8">
+      <div className="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-16 pt-24 sm:pt-28">
         <div className="flex items-center justify-between mb-0">
           <nav className="flex items-center gap-2 text-[12px] font-mono text-foreground/55 uppercase tracking-wider" aria-label="Fil d'ariane">
             <Link href="/" className="hover:text-primary transition-colors">Accueil</Link>
@@ -222,7 +222,7 @@ export default function ProductPageContent({ product, category, relatedProducts 
             </p>
 
             {/* H1 */}
-            <h1 className="font-serif text-foreground text-[40px] md:text-[52px] leading-[1.05] tracking-tight mb-5">
+            <h1 className="font-serif text-foreground text-[34px] sm:text-[44px] md:text-[50px] leading-[1.08] tracking-tight mb-5 text-balance">
               {product.name}
             </h1>
 
@@ -230,10 +230,10 @@ export default function ProductPageContent({ product, category, relatedProducts 
             {(product.rating || 0) > 0 && (
               <div className="flex items-center gap-3 mb-8">
                 <Stars rating={product.rating || 0} />
-                <span className="text-[13px] font-mono text-foreground/55">{product.rating} · {(product.review_count || 0).toLocaleString('fr-FR')} avis</span>
+                <span className="text-[13px] font-mono text-foreground/75 font-medium">{product.rating} · {(product.review_count || 0).toLocaleString('fr-FR')} avis</span>
                 <span className="text-foreground/30">·</span>
-                <span className={cn('flex items-center gap-1.5 text-[12px] font-mono', anyInStock ? 'text-green-600' : 'text-foreground/50')}>
-                  <span className={cn('block w-1.5 h-1.5 rounded-full', anyInStock ? 'bg-green-500' : 'bg-foreground/30')} style={anyInStock ? { boxShadow: '0 0 6px rgba(34,197,94,.5)' } : undefined} />
+                <span className={cn('flex items-center gap-1.5 text-[12px] font-mono font-medium', anyInStock ? 'text-green-600' : 'text-foreground/60')}>
+                  <span className={cn('block w-1.5 h-1.5 rounded-full', anyInStock ? 'bg-green-500' : 'bg-foreground/40')} style={anyInStock ? { boxShadow: '0 0 6px rgba(34,197,94,.5)' } : undefined} />
                   {anyInStock ? 'En stock' : 'Indisponible'}
                 </span>
               </div>
@@ -243,12 +243,12 @@ export default function ProductPageContent({ product, category, relatedProducts 
             {bestOffer && (
               <div className="flex items-center gap-3 mb-6 py-3 px-4 rounded-xl bg-secondary border border-border/70">
                 <div className="flex flex-col">
-                  <span className="text-[9px] font-mono uppercase tracking-widest text-primary mb-0.5">Prix le plus bas</span>
+                  <span className="text-[11px] font-mono font-medium uppercase tracking-widest text-primary mb-0.5">Prix le plus bas</span>
                   <span className="font-serif text-[26px] leading-none text-foreground">
                     {bestOffer.price}<span className="text-[14px] align-top ml-0.5">€</span>
                   </span>
                 </div>
-                <span className="text-[13px] text-foreground/50">chez</span>
+                <span className="text-[13px] text-foreground/60">chez</span>
                 {getMerchantLogo(bestOffer) ? (
                   <Image
                     src={getMerchantLogo(bestOffer)!}
@@ -265,7 +265,7 @@ export default function ProductPageContent({ product, category, relatedProducts 
                   href={bestOffer.affiliate_link}
                   target="_blank"
                   rel="nofollow sponsored noopener"
-                  className="ml-auto inline-flex items-center gap-1.5 text-[11px] font-mono text-primary uppercase tracking-wider hover:underline"
+                  className="ml-auto inline-flex items-center gap-1.5 text-[12px] font-mono font-medium text-primary uppercase tracking-wider hover:underline"
                   onClick={() => {
                     (window as any).gtag?.('event', 'affiliate_click', {
                       merchant: bestOffer.merchant_name,
@@ -283,8 +283,8 @@ export default function ProductPageContent({ product, category, relatedProducts 
             {/* Verdict */}
             {product.description && (
               <div className="bg-secondary rounded-xl p-5 mb-6 border border-border/70">
-                <p className="frame-label text-primary mb-2">Le verdict Fluxlab</p>
-                <p className="text-[14px] text-foreground/80 leading-[1.65] font-light line-clamp-4">
+                <p className="frame-label text-primary mb-2 font-bold">Le verdict Fluxlab</p>
+                <p className="text-[15px] text-foreground/90 leading-[1.65] font-normal line-clamp-4">
                   {stripHtml(product.description)}
                 </p>
               </div>
@@ -295,12 +295,12 @@ export default function ProductPageContent({ product, category, relatedProducts 
               <div className="bg-secondary rounded-2xl border border-border/70 p-5 space-y-4 mb-6">
                 {(product.pros?.length ?? 0) > 0 && (
                   <>
-                    <p className="frame-label text-primary">Points forts</p>
+                    <p className="frame-label text-primary font-bold">Points forts</p>
                     <ul className="space-y-2.5">
                       {product.pros!.map((pro, i) => (
                         <li key={i} className="flex items-start gap-3">
                           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#D3B27B" strokeWidth="2" className="mt-0.5 shrink-0" aria-hidden><path d="M20 6 9 17l-5-5"/></svg>
-                          <span className="text-[13px] text-foreground/80 leading-snug">{pro}</span>
+                          <span className="text-[14px] text-foreground/90 leading-snug">{pro}</span>
                         </li>
                       ))}
                     </ul>
@@ -308,12 +308,12 @@ export default function ProductPageContent({ product, category, relatedProducts 
                 )}
                 {(product.cons?.length ?? 0) > 0 && (
                   <div className="pt-4 border-t border-border/60">
-                    <p className="frame-label text-foreground/45 mb-3">Points d&apos;attention</p>
+                    <p className="frame-label text-foreground/60 mb-3 font-bold">Points d&apos;attention</p>
                     <ul className="space-y-2.5">
                       {product.cons!.map((con, i) => (
                         <li key={i} className="flex items-start gap-3">
                           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#6F6F6F" strokeWidth="2" className="mt-0.5 shrink-0" aria-hidden><path d="M12 9v4"/><circle cx="12" cy="17" r="1"/></svg>
-                          <span className="text-[13px] text-foreground/65 leading-snug">{con}</span>
+                          <span className="text-[14px] text-foreground/80 leading-snug">{con}</span>
                         </li>
                       ))}
                     </ul>
@@ -327,14 +327,14 @@ export default function ProductPageContent({ product, category, relatedProducts 
               <div className="bg-secondary rounded-2xl p-6 mb-6 border border-border/70">
                 <div className="flex items-end justify-between mb-5">
                   <div>
-                    <span className="block text-[10px] font-mono uppercase tracking-[0.16em] text-foreground/55 mb-1">Meilleur prix constaté</span>
+                    <span className="block text-[11px] font-mono uppercase tracking-[0.16em] text-foreground/70 mb-1">Meilleur prix constaté</span>
                     <span className="font-serif text-[44px] leading-none text-foreground">
                       {bestOffer.price}<span className="text-[22px] align-top ml-1">€</span>
                     </span>
                   </div>
                   <div className="text-right">
-                    <span className="block frame-label text-foreground/45 mb-1">mis à jour</span>
-                    <span className="text-[12px] font-mono text-foreground/55 flex items-center gap-1.5 justify-end">
+                    <span className="block frame-label text-foreground/60 mb-1">mis à jour</span>
+                    <span className="text-[12px] font-mono text-foreground/75 flex items-center gap-1.5 justify-end">
                       <span className="block w-1.5 h-1.5 rounded-full bg-green-500" />
                       récemment
                     </span>

@@ -36,16 +36,16 @@ export default async function RechercherPage({ searchParams }: Props) {
     <div className="min-h-screen bg-background">
       {/* Header compact */}
       <div className="border-b border-border/50 bg-secondary">
-        <div className="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-16 py-8 pt-24">
-          <nav className="flex items-center gap-2 text-[11px] font-mono text-foreground/45 uppercase tracking-wider mb-4">
+        <div className="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-16 py-8 pt-28">
+          <nav className="flex items-center gap-2 text-[12px] font-mono text-foreground/60 uppercase tracking-wider mb-4">
             <Link href="/" className="hover:text-primary transition-colors">Accueil</Link>
             <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="m9 18 6-6-6-6"/></svg>
-            <span className="text-foreground/70">Recherche</span>
+            <span className="text-foreground/80 font-medium">Recherche</span>
           </nav>
           {query ? (
             <h1 className="font-serif text-foreground text-[32px] md:text-[42px] leading-tight tracking-tight">
               Résultats pour <span className="italic text-primary">« {query} »</span>
-              <span className="text-[16px] text-foreground/40 font-sans font-light ml-4 not-italic">
+              <span className="text-[15px] text-foreground/60 font-sans font-normal ml-4 not-italic">
                 {products.length} produit{products.length !== 1 ? 's' : ''}
               </span>
             </h1>
@@ -58,11 +58,11 @@ export default async function RechercherPage({ searchParams }: Props) {
       {/* Grille résultats */}
       <div className="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-16 py-12">
         {!query ? (
-          <p className="text-[15px] text-foreground/55 font-light">Tapez un mot-clé dans la barre de recherche.</p>
+          <p className="text-[15px] text-foreground/75 font-normal">Tapez un mot-clé dans la barre de recherche.</p>
         ) : products.length === 0 ? (
           <div className="text-center py-24">
             <p className="font-serif text-[24px] text-foreground mb-3">Aucun résultat pour « {query} »</p>
-            <p className="text-[14px] text-foreground/50 font-light mb-8">Essayez un terme différent ou parcourez nos catégories.</p>
+            <p className="text-[15px] text-foreground/70 font-normal mb-8">Essayez un terme différent ou parcourez nos catégories.</p>
             <div className="flex items-center justify-center gap-4 flex-wrap">
               {[
                 { label: 'Studio & Son', href: '/categorie/audio' },
@@ -70,7 +70,7 @@ export default async function RechercherPage({ searchParams }: Props) {
                 { label: 'Streaming', href: '/categorie/streaming' },
               ].map(cat => (
                 <Link key={cat.href} href={cat.href}
-                  className="h-10 px-6 rounded-full border border-border text-[12px] font-mono uppercase tracking-wider hover:border-primary hover:text-primary transition-colors flex items-center">
+                  className="h-10 px-6 rounded-full border border-border text-[12px] font-mono uppercase tracking-wider hover:border-primary hover:text-primary transition-colors flex items-center font-medium">
                   {cat.label}
                 </Link>
               ))}
