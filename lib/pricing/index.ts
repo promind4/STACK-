@@ -78,8 +78,26 @@ export async function updatePrices(opts: RunOptions = {}): Promise<UpdateRunSumm
     .select('id, product_id, merchant_name, price, currency, affiliate_link, in_stock, price_locked, last_checked_at');
   if (productId) query = query.eq('product_id', productId);
 
-  const { data, error } = await query;
-  if (error) throw new Error(`Lecture offres impossible : ${error.message}`);
+  let { data, error } = await query;
+  // Tolérance si la migration SQL (20260607_price_tracking.sql) n'a pas encore été exécutée dans Supabase :
+  if (error && (error.message.includes('price_locked') || error.message.includes('last_checked_at'))) {
+    let fallbackQuery = supabase
+      .from('product_offers')
+      .select('id, product_id, merchant_name, price, currency, affiliate_link, in_stock');
+    if (productId) fallbackQuery = fallbackQuery.eq('product_id', productId);
+    const fallbackRes = await fallbackQuery;
+    if (fallbackRes.error) {
+      throw new Error(`Lecture offres impossible : ${fallbackRes.error.message}`);
+    }
+    data = (fallbackRes.data ?? []).map((o: any) => ({
+      ...o,
+      price_locked: false,
+      last_checked_at: null,
+    }));
+    error = null;
+  } else if (error) {
+    throw new Error(`Lecture offres impossible : ${error.message}`);
+  }
 
   const offers = (data ?? []) as OfferRow[];
 
@@ -174,41 +192,65 @@ async function processOffer(offer: OfferRow): Promise<PriceQuote> {
 }
 
 async function markChecked(supabase: any, offerId: string, source: string) {
-  await supabase.from('product_offers')
-    .update({ last_checked_at: new Date().toISOString(), last_price_source: source })
-    .eq('id', offerId);
+  try {
+    await supabase.from('product_offers')
+      .update({ last_checked_at: new Date().toISOString(), last_price_source: source })
+      .eq('id', offerId);
+  } catch {
+    // Colonnes optionnelles de tracking non migrées
+  }
 }
 
 async function applyQuote(supabase: any, offer: OfferRow, quote: PriceQuote) {
-  await supabase.from('product_offers').update({
+  // 1. Mise à jour du prix et du stock (colonnes toujours présentes)
+  const baseUpdate: any = {
     price: quote.price,
     in_stock: quote.inStock,
+  };
+  // Tentative avec les colonnes de tracking si elles existent
+  const { error } = await supabase.from('product_offers').update({
+    ...baseUpdate,
     last_checked_at: new Date().toISOString(),
     last_price_source: quote.source,
   }).eq('id', offer.id);
 
-  await supabase.from('price_history').insert({
-    offer_id: offer.id,
-    product_id: offer.product_id,
-    merchant_name: offer.merchant_name,
-    price: quote.price,
-    currency: quote.currency,
-    source: quote.source,
-  });
+  if (error && (error.message.includes('last_checked_at') || error.message.includes('last_price_source'))) {
+    // Fallback sans colonnes de tracking
+    await supabase.from('product_offers').update(baseUpdate).eq('id', offer.id);
+  }
+
+  // 2. Historique des prix (optionnel)
+  try {
+    await supabase.from('price_history').insert({
+      offer_id: offer.id,
+      product_id: offer.product_id,
+      merchant_name: offer.merchant_name,
+      price: quote.price,
+      currency: quote.currency,
+      source: quote.source,
+    });
+  } catch {
+    // Table price_history non encore créée
+  }
 }
 
-/** Le prix affiché du produit = le plus bas de ses offres en stock. */
+/** Le prix affiché du produit = calculé dynamiquement depuis les offres. */
 async function refreshProductFacadePrice(supabase: any, productId: string) {
-  const { data } = await supabase
-    .from('product_offers')
-    .select('price, in_stock')
-    .eq('product_id', productId);
+  try {
+    const { data } = await supabase
+      .from('product_offers')
+      .select('price, in_stock')
+      .eq('product_id', productId);
 
-  const prices = (data ?? [])
-    .filter((o: any) => o.in_stock && o.price > 0)
-    .map((o: any) => o.price);
+    const prices = (data ?? [])
+      .filter((o: any) => o.in_stock && o.price > 0)
+      .map((o: any) => o.price);
 
-  if (prices.length > 0) {
-    await supabase.from('products').update({ price: Math.min(...prices) }).eq('id', productId);
+    if (prices.length > 0) {
+      // Si la colonne products.price existe dans le schéma, on la met à jour
+      await supabase.from('products').update({ price: Math.min(...prices) }).eq('id', productId);
+    }
+  } catch {
+    // Ignorer si products.price n'est pas une colonne (calculé à la volée par le frontend)
   }
 }

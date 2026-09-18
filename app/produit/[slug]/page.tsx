@@ -9,7 +9,7 @@ import ProductPageContent from "@/components/client/ProductPageContent";
 import { isPublicAudioCategory } from "@/lib/public-audio-scope";
 
 export const revalidate = 3600; // Revalidate every hour — price/offer data changes but not constantly
-export const dynamicParams = false;
+export const dynamicParams = true;
 
 // ---- Data Fetching ----
 async function getProduct(slug: string): Promise<Product | null> {

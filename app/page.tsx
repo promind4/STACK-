@@ -71,8 +71,8 @@ export default async function HomePage() {
     <>
       <JsonLd data={homePageSchema} />
       {featuredProductsSchema && <JsonLd data={featuredProductsSchema} />}
-      <CategoryVisualBar />
       <HeroSection />
+      <CategoryVisualBar />
       <HomeProductShowcase products={featuredProducts} />
       <HomeGuides />
     </>

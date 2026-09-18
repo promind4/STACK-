@@ -407,30 +407,87 @@ export function Navbar() {
 
           {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-7">
-            {AUDIO_NAV.map((item) => {
-              const isMenuOpen = activeMenu === item.id
-              const isActive = pathname?.startsWith(item.href) || isMenuOpen
-              return (
-                <div
-                  key={item.id}
-                  onMouseEnter={() => handleMouseEnter(item.id)}
-                  className="relative py-2 cursor-pointer"
-                >
-                  <Link
-                    href={item.href}
-                    className={cn(
-                      'hover-rule text-[14px] font-bold tracking-wide transition-colors',
-                      isActive
-                        ? 'text-primary font-bold active'
-                        : 'text-[#0F0F0F] hover:text-primary'
-                    )}
-                    aria-current={isActive ? 'page' : undefined}
+            <div className="flex items-center gap-7 relative">
+              {AUDIO_NAV.map((item) => {
+                const isMenuOpen = activeMenu === item.id
+                const isActive = pathname?.startsWith(item.href) || isMenuOpen
+                return (
+                  <div
+                    key={item.id}
+                    onMouseEnter={() => handleMouseEnter(item.id)}
+                    className="relative py-2 cursor-pointer"
                   >
-                    {item.label}
-                  </Link>
-                </div>
-              )
-            })}
+                    <Link
+                      href={item.href}
+                      className={cn(
+                        'hover-rule text-[14px] font-bold tracking-wide transition-colors',
+                        isActive
+                          ? 'text-primary font-bold active'
+                          : 'text-[#0F0F0F] hover:text-primary'
+                      )}
+                      aria-current={isActive ? 'page' : undefined}
+                    >
+                      {item.label}
+                    </Link>
+                  </div>
+                )
+              })}
+
+              {/* ── MEGA MENU ──────────────────────────────────── */}
+              <AnimatePresence>
+                {activeMenu && (
+                  <motion.div
+                    key="desktop-megamenu"
+                    initial={{ opacity: 0, y: 10, scale: 0.98, x: '-50%' }}
+                    animate={{ opacity: 1, y: 0, scale: 1, x: '-50%' }}
+                    exit={{ opacity: 0, y: 5, scale: 0.98, x: '-50%' }}
+                    transition={{ duration: 0.2, ease: 'easeOut' }}
+                    style={{ left: '50%' }}
+                    className="absolute top-[calc(100%+14px)] w-[620px] rounded-2xl bg-[#f2ebdf] border border-[#e2d8c9] shadow-[0_24px_50px_rgba(15,15,15,.15)] overflow-hidden origin-top cursor-default z-50"
+                  >
+                    <div className="relative">
+                      <AnimatePresence mode="wait">
+                        {MENU_DATA.map((menu) => {
+                          if (menu.id !== activeMenu) return null
+                          const allItems = menu.columns.flatMap((col) => col.items)
+                          return (
+                            <motion.div 
+                              key={menu.id}
+                              initial={{ opacity: 0, x: -10 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              exit={{ opacity: 0, x: 10 }}
+                              transition={{ duration: 0.15 }}
+                              className="p-4 sm:p-5"
+                            >
+                              <div className="grid grid-cols-2 gap-3">
+                                {allItems.map((item) => (
+                                  <Link
+                                    key={item.slug}
+                                    href={`/categorie/${item.slug}`}
+                                    onClick={() => setActiveMenu(null)}
+                                    className="group block p-3 rounded-xl hover:bg-white/70 transition-all border border-transparent hover:border-[#e2d8c9]/60 hover:shadow-sm"
+                                  >
+                                    <div className="font-serif text-[15px] font-medium text-foreground group-hover:text-primary transition-colors flex items-center justify-between">
+                                      <span>{item.label}</span>
+                                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary shrink-0" aria-hidden>
+                                        <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                                      </svg>
+                                    </div>
+                                    <div className="text-[12px] text-muted-foreground mt-0.5 leading-snug">
+                                      {item.desc}
+                                    </div>
+                                  </Link>
+                                ))}
+                              </div>
+                            </motion.div>
+                          )
+                        })}
+                      </AnimatePresence>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
 
             <span className="block w-px h-4 bg-[#0F0F0F]/15" aria-hidden />
 
@@ -493,77 +550,6 @@ export function Navbar() {
           </div>
         </div>
       </div>
-
-      {/* ── MEGA MENU ──────────────────────────────────── */}
-      <AnimatePresence>
-        {activeMenu && (
-          <motion.div
-            key={activeMenu}
-            initial={{ opacity: 0, y: -6 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -4 }}
-            transition={{ duration: 0.15 }}
-            className="hidden lg:block absolute top-full left-0 w-full bg-[#f2ebdf] border-b border-[#e2d8c9] shadow-[0_24px_50px_rgba(15,15,15,.12)]"
-          >
-            {MENU_DATA.map((menu) => {
-              if (menu.id !== activeMenu) return null
-              return (
-                <div key={menu.id} className="max-w-4xl mx-auto px-6 pt-5 pb-7">
-
-                  {/* Eyebrow */}
-                  <div className="flex items-center justify-between pb-3 mb-6 border-b border-[#e2d8c9]/70">
-                    <div className="flex items-center gap-3">
-                      <span className="block w-6 h-px bg-primary" aria-hidden />
-                      <p className="frame-label text-primary">{menu.label}</p>
-                      <span className="text-[12px] text-muted-foreground font-mono">/ {menu.eyebrow}</span>
-                    </div>
-                    <Link
-                      href={menu.targetPage}
-                      onClick={() => setActiveMenu(null)}
-                      className="text-[11px] font-mono uppercase tracking-wider text-foreground/60 hover:text-primary inline-flex items-center gap-1.5 transition-colors"
-                    >
-                      Voir toute la sélection
-                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-                        <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-                      </svg>
-                    </Link>
-                  </div>
-
-                  {/* Columns */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12">
-                    {menu.columns.map((col) => (
-                      <div key={col.num} className="space-y-4">
-                        <p className="frame-label text-foreground/60 flex items-center gap-2">
-                          <span className="font-mono text-primary">{col.num}</span>
-                          <span>{col.title}</span>
-                        </p>
-                        <ul className="space-y-3">
-                          {col.items.map((item) => (
-                            <li key={item.slug}>
-                              <Link
-                                href={`/categorie/${item.slug}`}
-                                onClick={() => setActiveMenu(null)}
-                                className="group block p-2 -mx-2 rounded-xl hover:bg-white/60 transition-colors"
-                              >
-                                <div className="font-serif text-[15px] text-foreground group-hover:text-primary transition-colors">
-                                  {item.label}
-                                </div>
-                                <div className="text-[12px] text-muted-foreground mt-0.5 leading-snug">
-                                  {item.desc}
-                                </div>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )
-            })}
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       {/* ── MOBILE DRAWER ─────────────────────────────── */}
       <AnimatePresence>

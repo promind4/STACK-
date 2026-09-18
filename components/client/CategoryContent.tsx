@@ -37,10 +37,10 @@ const DEFAULT_GUIDE = 'meilleur-micro-podcast-2026';
 const CATEGORY_BG: Record<string, string> = {
   // ── Audio
   'audio':                 '/images/editorial/bg-studio-son.webp',
-  'micros-dynamiques':     '/images/editorial/bg-shure.webp',
-  'micros-condensateurs':  '/images/editorial/bg-micro.webp',
-  'micros-usb':            '/images/editorial/bg-micro.webp',
-  'micros-shotgun':        '/images/editorial/bg-micro.webp',
+  'micros-dynamiques':     '/images/editorial/bg-micro-editorial.png',
+  'micros-condensateurs':  '/images/editorial/bg-micro-editorial.png',
+  'micros-usb':            '/images/editorial/bg-micro-editorial.png',
+  'micros-shotgun':        '/images/editorial/bg-micro-editorial.png',
   'cartes-son':            '/images/editorial/bg-carte-son.webp',
   'preamplis':             '/images/editorial/bg-carte-son.webp',
   'casques-studio':        '/images/editorial/bg-casque.webp',

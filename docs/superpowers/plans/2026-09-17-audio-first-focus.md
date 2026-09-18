@@ -53,7 +53,7 @@ export const AUDIO_CATEGORY_SLUGS = [
 
 ### Guide scope
 
-Only articles whose `category === 'Audio'` remain publicly listed and addressable. Articles labelled `Vidéo`, `Streaming`, `Matériel` and `Acoustique` are retained in source/Supabase history but are hidden for this focused launch. This is intentionally strict: it avoids presenting a mixed catalogue while the new positioning is tested.
+Articles labelled `Audio` and `Acoustique` remain publicly listed and addressable: acoustic treatment is a core Studio & Son topic. Articles labelled `Vidéo`, `Streaming` and `Matériel` are retained in source/Supabase history but are hidden for this focused launch. The Guides page is a single Studio & Son feed, without category pills; its search remains available.
 
 ### Homepage selection
 
@@ -81,7 +81,7 @@ If an offer is unavailable, do not silently show a Video/Streaming fallback. Ret
 | `components/client/HeroSection.tsx` | Modify | Make the homepage promise audio expertise only. |
 | `components/home/HomeGuides.tsx` | Modify | Use only public Audio articles; remove YouTube/Video selection. |
 | `app/guides/page.tsx` | Modify | List only Audio articles and remove retired category filters. |
-| `components/client/GuidesClient.tsx` | Modify | Render only passed public categories; no change to filtering mechanics. |
+| `components/client/GuidesClient.tsx` | Modify | Remove category pills; retain guide search over passed public articles. |
 | `app/guide/[slug]/page.tsx` | Modify | Return `notFound()` for retired guide URLs, including metadata. |
 | `app/categorie/[slug]/page.tsx` | Modify | Return `notFound()` for non-audio category URLs before product queries. |
 | `app/produit/[slug]/page.tsx` | Modify | Hide non-audio products from direct public URLs and static params. |
@@ -117,6 +117,7 @@ test('keeps Studio & Son categories and rejects retired verticals', () => {
 
 test('keeps only Audio articles in the public guide scope', () => {
   assert.equal(isPublicAudioGuide({ category: 'Audio' }), true)
+  assert.equal(isPublicAudioGuide({ category: 'Acoustique' }), true)
   assert.equal(isPublicAudioGuide({ category: 'Vidéo' }), false)
   assert.equal(isPublicAudioGuide({ category: 'Streaming' }), false)
 })
@@ -144,7 +145,7 @@ export function isPublicAudioCategory(slug: string | null | undefined): boolean 
 }
 
 export function isPublicAudioGuide(article: { category: string }): boolean {
-  return article.category === 'Audio'
+  return article.category === 'Audio' || article.category === 'Acoustique'
 }
 ```
 
@@ -387,10 +388,9 @@ In `app/guides/page.tsx`, create `publicArticles` before sorting:
 ```ts
 const publicArticles = ARTICLES.filter(isPublicAudioGuide)
 const sortedArticles = [...publicArticles].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-const categories = ['Tous', 'Audio']
 ```
 
-Pass only `otherArticles` to `GuidesClient`. Do not keep empty Video or Streaming filter buttons.
+Pass only `otherArticles` to `GuidesClient`. Remove its `categories` prop, `selectedCategory` state and category-pill block entirely; keep the text search.
 
 In `app/guide/[slug]/page.tsx`, return the existing `notFound()` result whenever `article` is absent **or** `!isPublicAudioGuide(article)`. Repeat the condition in `generateMetadata` so hidden guides do not keep issuing metadata.
 

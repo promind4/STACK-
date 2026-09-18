@@ -11,5 +11,5 @@ export function isPublicAudioCategory(slug: string | null | undefined): boolean 
 }
 
 export function isPublicAudioGuide(article: { category: string }): boolean {
-  return article.category === 'Audio'
+  return article.category === 'Audio' || article.category === 'Acoustique'
 }

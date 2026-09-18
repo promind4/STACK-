@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
-  <!-- Fond blanc natif : élimine l'effet de double cercle sur Google Search et les onglets -->
-  <rect width="512" height="512" fill="#FFFFFF"/>
+  <!-- Fond circulaire : les coins restent transparents dans les onglets. -->
+  <circle cx="256" cy="256" r="248" fill="#FAFAFA"/>
 
   <defs>
     <linearGradient id="fluxlab-gold" x1="0%" y1="0%" x2="100%" y2="100%">

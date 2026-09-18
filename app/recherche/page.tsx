@@ -21,13 +21,18 @@ export default async function RechercherPage({ searchParams }: Props) {
 
   if (query.length >= 2) {
     const supabase = createClient();
-    const { data } = await supabase
+    const tokens = query.split(/\s+/).filter(Boolean);
+
+    let qb = supabase
       .from('products')
       .select('*, product_offers(*)')
-      .ilike('name', `%${query}%`)
-      .eq('is_active', true)
-      .order('name')
-      .limit(40);
+      .eq('is_active', true);
+
+    for (const token of tokens) {
+      qb = qb.or(`name.ilike.%${token}%,brand.ilike.%${token}%,slug.ilike.%${token}%`);
+    }
+
+    const { data } = await qb.order('name').limit(40);
 
     products = (data ?? []).map((p: any) => transformProduct(p));
   }

@@ -40,8 +40,8 @@ export const metadata: Metadata = {
     locale: "fr_FR",
   },
   icons: {
-    icon: "/branding/favicon.svg",
-    apple: "/branding/favicon.svg",
+    icon: "/branding/favicon.svg?v=2",
+    apple: "/branding/favicon.svg?v=2",
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,

@@ -6,17 +6,23 @@ export const runtime = 'nodejs';
 
 export async function GET(req: NextRequest) {
   const q = req.nextUrl.searchParams.get('q') ?? '';
-  if (q.trim().length < 2) return Response.json([]);
+  const trimmed = q.trim();
+  if (trimmed.length < 2) return Response.json([]);
 
   try {
     const supabase = createClient();
-    const { data, error } = await supabase
+    const tokens = trimmed.split(/\s+/).filter(Boolean);
+
+    let query = supabase
       .from('products')
       .select('slug, name, brand, image_url, rating, categories(slug), product_offers(price)')
-      .ilike('name', `%${q}%`)
-      .eq('is_active', true)
-      .order('name')
-      .limit(20);
+      .eq('is_active', true);
+
+    for (const token of tokens) {
+      query = query.or(`name.ilike.%${token}%,brand.ilike.%${token}%,slug.ilike.%${token}%`);
+    }
+
+    const { data, error } = await query.order('name').limit(20);
 
     if (error) {
       console.error('[search] Supabase error:', error.message);
