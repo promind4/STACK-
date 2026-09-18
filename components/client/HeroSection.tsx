@@ -1,20 +1,13 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { HeroContextGrid } from '@/components/home/HeroContextGrid'
+import ShaderDemo_ATC from '@/components/ui/atc-shader'
 
 export function HeroSection() {
   return (
     <section aria-labelledby="hero-title" className="relative isolate overflow-hidden bg-[var(--home-ink)] text-white">
-      <Image
-        src="/images/home/hero-cinematic.webp"
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="-z-30 object-cover object-[68%_center] opacity-70 sm:object-[64%_center] lg:opacity-90"
-      />
+      <ShaderDemo_ATC className="absolute inset-0 -z-30 opacity-[0.2]" />
       <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,#090806_0%,rgba(9,8,6,.96)_39%,rgba(9,8,6,.62)_64%,rgba(9,8,6,.22)_100%)]" aria-hidden />
       <div className="absolute inset-0 -z-20 bg-[linear-gradient(180deg,rgba(9,8,6,.08)_0%,rgba(9,8,6,.08)_57%,#090806_100%)]" aria-hidden />
       <div className="hero-ambient absolute right-[-12rem] top-[8%] -z-10 h-[32rem] w-[32rem] rounded-full bg-[rgba(200,155,82,.10)] blur-3xl" aria-hidden />

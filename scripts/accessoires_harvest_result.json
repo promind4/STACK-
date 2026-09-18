@@ -1,0 +1,871 @@
+[
+  {
+    "item": {
+      "category": "bras-articules",
+      "slug": "rode-psa1",
+      "name": "PSA1",
+      "brand": "Rode",
+      "description": "Le Rode PSA1 est le bras articulé de table de référence pour le podcast, la radio et le streaming studio. Rotation 360°, portée horizontale 820 mm, ressorts internes silencieux.",
+      "short_description": "Bras articulé de bureau professionnel pour micro broadcast",
+      "thUrl": "https://www.thomann.fr/rode_psa1.htm",
+      "wbUrl": "https://woodbrass.com/products/rode-psa1-bras-articule-28269"
+    },
+    "categoryId": "60d48356-1a67-415e-8e47-cda221d4a8d5",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_11/114512/14580043_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_11/114512/14580033_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_11/114512/14580038_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_11/114512/14580048_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_11/114512/14580068_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_11/114512/14580083_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_11/114512/14580063_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_11/114512/14580103_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_11/114512/14580058_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_11/114512/14580053_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_11/114512/14580113_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 75,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/rode_psa1.htm",
+        "in_stock": true,
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "bras-articules",
+      "slug": "rode-psa1-plus",
+      "name": "PSA1+",
+      "brand": "Rode",
+      "description": "Version premium du célèbre bras Rode, le PSA1+ intègre des amortisseurs néoprène isolants, des ressorts totalement inaudibles et un système de gestion de câbles intégré.",
+      "short_description": "Bras articulé de studio haut de gamme avec amortisseurs intégrés",
+      "thUrl": "https://www.thomann.fr/rode_psa1_529272.htm",
+      "wbUrl": "https://woodbrass.com/products/rode-psa1-plus-bras-de-table-professionnel-articule-370123"
+    },
+    "categoryId": "60d48356-1a67-415e-8e47-cda221d4a8d5",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/529272/16790194_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/529272/16790184_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/529272/16790199_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/529272/16790189_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/529272/16790204_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/529272/16790219_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/529272/16790239_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/529272/16790234_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/529272/16790209_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/529272/16790229_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/529272/16790244_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/529272/16790214_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/529272/16790224_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/529272/16790249_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/529272/16803209_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 99,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/rode_psa1_529272.htm",
+        "in_stock": true,
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "bras-articules",
+      "slug": "rode-ds2",
+      "name": "DS2",
+      "brand": "Rode",
+      "description": "Le Rode DS2 est un support articulé de table compact et lourd, conçu pour positionner précisément microphones, caméras ou éclairages sans fixation par pince.",
+      "short_description": "Support de table articulé compact et polyvalent avec base lestée",
+      "thUrl": "https://www.thomann.fr/rode_ds2.htm",
+      "wbUrl": null
+    },
+    "categoryId": "60d48356-1a67-415e-8e47-cda221d4a8d5",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_57/579237/19163148_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_57/579237/19163188_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_57/579237/19163153_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_57/579237/19163198_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_57/579237/19163163_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_57/579237/19163178_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_57/579237/19163168_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_57/579237/19163173_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_57/579237/19163158_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_57/579237/19163193_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_57/579237/19163183_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 77,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/rode_ds2.htm",
+        "in_stock": true,
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "bras-articules",
+      "slug": "km-23860",
+      "name": "23860",
+      "brand": "K&M",
+      "description": "Bras de microphone professionnel König & Meyer fabriqué en Allemagne. Câble XLR interne intégré de 6m, articulation fluide et construction en acier extrêmement solide.",
+      "short_description": "Bras de microphone broadcast avec câble XLR intégré de 6m",
+      "thUrl": "https://www.thomann.fr/km_23860.htm",
+      "wbUrl": null
+    },
+    "categoryId": "60d48356-1a67-415e-8e47-cda221d4a8d5",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_22/228455/16390989_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_22/228455/16391024_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_22/228455/16391029_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_22/228455/16391034_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_22/228455/16391039_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_22/228455/16390994_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_22/228455/16390999_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_22/228455/16391019_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_22/228455/16391004_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_22/228455/16391014_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_22/228455/16391009_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 177,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/km_23860.htm",
+        "in_stock": true,
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "bras-articules",
+      "slug": "km-23850",
+      "name": "23850",
+      "brand": "K&M",
+      "description": "Bras de studio robuste et classique par K&M, supportant jusqu'à 0,8 kg avec pince étau en aluminium et serrage ultra stable.",
+      "short_description": "Bras articulé de studio robuste pour table avec pince de serrage",
+      "thUrl": "https://www.thomann.fr/km_23850.htm",
+      "wbUrl": "https://woodbrass.com/products/k-m-23850-stand-23032"
+    },
+    "categoryId": "60d48356-1a67-415e-8e47-cda221d4a8d5",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_14/149074/8095062_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_14/149074/8095067_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_14/149074/8095072_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_14/149074/8095082_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_14/149074/8095087_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_14/149074/8095097_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_14/149074/8095107_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_14/149074/8095112_800.jpg",
+      "https://cdn.shopify.com/s/files/1/0984/0872/6803/files/f3e81040c96c11892f724b26aac6896b79800156_TKM_23850.png?v=1789518720",
+      "https://cdn.shopify.com/s/files/1/0984/0872/6803/files/8157266a0b67047be3ae8bceb351eec2d5c6d91e_TKM_23850_2.png?v=1789518720",
+      "https://cdn.shopify.com/s/files/1/0984/0872/6803/files/deeb07837f9f3dfca396cb80200a238c72b6c7ea_TKM_23850_3.png?v=1789518720"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 89,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/km_23850.htm",
+        "in_stock": true,
+        "priority": 1
+      },
+      {
+        "merchant_name": "woodbrass",
+        "price": 89,
+        "currency": "EUR",
+        "affiliate_link": "https://woodbrass.com/products/k-m-23850-stand-23032",
+        "in_stock": true,
+        "priority": 2
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "bras-articules",
+      "slug": "millenium-ma-2050",
+      "name": "MA-2050",
+      "brand": "Millenium",
+      "description": "Bras articulé économique très populaire pour débuter le streaming ou le home-studio. Livré avec pince de table et câble XLR intégré.",
+      "short_description": "Bras de micro de table abordable avec câble intégré",
+      "thUrl": "https://www.thomann.fr/millenium_ma2050_tischmikrofonarm.htm",
+      "wbUrl": null
+    },
+    "categoryId": "60d48356-1a67-415e-8e47-cda221d4a8d5",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/165296/19008913_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/165296/19008953_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/165296/19008908_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/165296/19008958_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/165296/19008918_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/165296/19008923_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/165296/19008928_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/165296/19008943_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/165296/19008938_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/165296/19008933_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/165296/19008948_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 36,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/millenium_ma2050_tischmikrofonarm.htm",
+        "in_stock": true,
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "bras-articules",
+      "slug": "roadworx-microphone-arm",
+      "name": "Microphone Arm",
+      "brand": "Roadworx",
+      "description": "Bras articulé design en aluminium avec câble XLR de 2,5m intégré et passe-câbles magnétique discret. Supporte jusqu'à 1,5 kg.",
+      "short_description": "Bras articulé studio moderne en aluminium avec câble XLR intégré",
+      "thUrl": "https://www.thomann.fr/roadworx_microphone_arm.htm",
+      "wbUrl": null
+    },
+    "categoryId": "60d48356-1a67-415e-8e47-cda221d4a8d5",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_50/501399/16063588_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_50/501399/16063603_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_50/501399/16063598_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_50/501399/16063593_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_50/501399/16063583_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_50/501399/16063643_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_50/501399/16063608_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_50/501399/16063613_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_50/501399/16063618_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_50/501399/16063623_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_50/501399/16063628_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_50/501399/16063633_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_50/501399/16063638_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_50/501399/16063653_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_50/501399/16063648_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 68,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/roadworx_microphone_arm.htm",
+        "in_stock": true,
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "bras-articules",
+      "slug": "gravity-ms-b-22",
+      "name": "MS B 22",
+      "brand": "Gravity",
+      "description": "Bras de micro articulé sobre et robuste signé Gravity. Structure tubulaire solide en acier et finition thermolaquée noire.",
+      "short_description": "Bras articulé de bureau pour microphone et accessoires broadcast",
+      "thUrl": "https://www.thomann.fr/gravity_ms_b_22.htm",
+      "wbUrl": null
+    },
+    "categoryId": "60d48356-1a67-415e-8e47-cda221d4a8d5",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_54/545137/17885442_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_54/545137/17885443_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_54/545137/17885452_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_54/545137/17885453_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_54/545137/17885462_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_54/545137/17885472_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_54/545137/17885467_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_54/545137/17885473_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_54/545137/17885482_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_54/545137/17885487_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 19.6,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/gravity_ms_b_22.htm",
+        "in_stock": true,
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "bras-articules",
+      "slug": "yellowtec-mika-m-black",
+      "name": "m!ka Mic Arm M Black",
+      "brand": "Yellowtec",
+      "description": "Le standard absolu des studios de radio professionnels mondiaux. Fabriqué en Allemagne avec système d'articulation breveté intérieur et finition noire matte anodisée.",
+      "short_description": "Bras broadcast haut de gamme de référence studio radio",
+      "thUrl": "https://www.thomann.fr/yellowtec_mika_microphone_arm_yt3601.htm",
+      "wbUrl": null
+    },
+    "categoryId": "60d48356-1a67-415e-8e47-cda221d4a8d5",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_39/399542/14565393_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_39/399542/14565438_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_39/399542/14565388_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_39/399542/14565443_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_39/399542/14565403_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_39/399542/14565398_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_39/399542/14565408_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_39/399542/14565413_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_39/399542/14565418_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_39/399542/14565428_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_39/399542/14565433_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 339,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/yellowtec_mika_microphone_arm_yt3601.htm",
+        "in_stock": true,
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "cable-xlr",
+      "slug": "cordial-ccm-5-fm",
+      "name": "CCM 5 FM (5m)",
+      "brand": "Cordial",
+      "description": "Câble micro symétrique de 5 mètres avec connecteurs REAN (sous licence Neutrik). Très bonne flexibilité et blindage efficace pour le live et le home-studio.",
+      "short_description": "Câble micro XLR symétrique 5m connecteurs Rean Neutrik",
+      "thUrl": "https://www.thomann.fr/cordial_ccm_5_fm.htm",
+      "wbUrl": "https://woodbrass.com/products/cordial-cable-micro-xlr-5-m-62994"
+    },
+    "categoryId": "b99cc6bc-39c6-4236-be26-708456b06f97",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_18/182686/9279335_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_18/182686/9279345_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_18/182686/9279340_800.jpg",
+      "https://cdn.shopify.com/s/files/1/0984/0872/6803/files/1821f9f253d82a9017b8912e50a1875b3f1125ae_ECL_CPM5FM.png?v=1789741950",
+      "https://cdn.shopify.com/s/files/1/0984/0872/6803/files/160fd260daa606b7e6e4fe6fc5130387e6a50e4e_ECL_CPM5FM_2_b3110610-3ad3-4e1f-abe9-1e6e2080e1f1.png?v=1789741950",
+      "https://cdn.shopify.com/s/files/1/0984/0872/6803/files/ea93f22bbb5b743c232904a73ef6648ddf10e6e4_ECL_CPM_FM_famille.jpg?v=1789741950",
+      "https://cdn.shopify.com/s/files/1/0984/0872/6803/files/d549f88bdbcfde18cca4a5e94e975dc8ff9a4f3d_ECL_CPM_FM_famille_2.jpg?v=1789741950",
+      "https://cdn.shopify.com/s/files/1/0984/0872/6803/files/0097a9e623c2dbb383d5c03cc323dfa565b90cf4_ECL_CPM_FM_famille_3.jpg?v=1789741950"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 11.9,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/cordial_ccm_5_fm.htm",
+        "in_stock": true,
+        "priority": 1
+      },
+      {
+        "merchant_name": "woodbrass",
+        "price": 26,
+        "currency": "EUR",
+        "affiliate_link": "https://woodbrass.com/products/cordial-cable-micro-xlr-5-m-62994",
+        "in_stock": true,
+        "priority": 2
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "cable-xlr",
+      "slug": "cordial-ccm-10-fm",
+      "name": "CCM 10 FM (10m)",
+      "brand": "Cordial",
+      "description": "Câble micro professionnel de 10 mètres avec connecteurs Rean XLR mâle et femelle. Longueur idéale pour les installations studio et scènes moyennes.",
+      "short_description": "Câble micro XLR symétrique 10m connecteurs Rean Neutrik",
+      "thUrl": "https://www.thomann.fr/cordial_ccm_10_fm.htm",
+      "wbUrl": null
+    },
+    "categoryId": "b99cc6bc-39c6-4236-be26-708456b06f97",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_18/182688/12079331_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_18/182688/12079336_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_18/182688/12079341_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/161864/10294473_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/161864/10294478_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/161864/10294468_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 15.3,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/cordial_ccm_10_fm.htm",
+        "in_stock": true,
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "cable-xlr",
+      "slug": "cordial-cpm-2-5-fm",
+      "name": "CPM 2,5 FM (2.5m)",
+      "brand": "Cordial",
+      "description": "Câble studio haut de gamme Cordial Select équipé des véritables connecteurs Neutrik NC3XX noirs avec contacts argentés. Conducteur en cuivre pur sans oxygène.",
+      "short_description": "Câble micro studio 2,5m connecteurs Neutrik noirs contacts argent",
+      "thUrl": "https://www.thomann.fr/cordial_cpm_25_fm_flex.htm",
+      "wbUrl": null
+    },
+    "categoryId": "b99cc6bc-39c6-4236-be26-708456b06f97",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_26/265137/10294483_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_26/265137/10294468_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_26/265137/10294473_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_26/265137/10294478_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_26/265137/10294463_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/161864/10294473_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 20.4,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/cordial_cpm_25_fm_flex.htm",
+        "in_stock": true,
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "cable-xlr",
+      "slug": "cordial-cpm-5-fm",
+      "name": "CPM 5 FM (5m)",
+      "brand": "Cordial",
+      "description": "La référence studio Cordial pour micros de voix et instruments. 5 mètres de câble CMK 222 robuste avec connecteurs Neutrik pro.",
+      "short_description": "Câble micro studio haut de gamme 5m avec connecteurs Neutrik",
+      "thUrl": null,
+      "wbUrl": "https://woodbrass.com/products/cordial-cable-micro-xlr-5-m-62994"
+    },
+    "categoryId": "b99cc6bc-39c6-4236-be26-708456b06f97",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0984/0872/6803/files/1821f9f253d82a9017b8912e50a1875b3f1125ae_ECL_CPM5FM.png?v=1789741950",
+      "https://cdn.shopify.com/s/files/1/0984/0872/6803/files/160fd260daa606b7e6e4fe6fc5130387e6a50e4e_ECL_CPM5FM_2_b3110610-3ad3-4e1f-abe9-1e6e2080e1f1.png?v=1789741950",
+      "https://cdn.shopify.com/s/files/1/0984/0872/6803/files/ea93f22bbb5b743c232904a73ef6648ddf10e6e4_ECL_CPM_FM_famille.jpg?v=1789741950",
+      "https://cdn.shopify.com/s/files/1/0984/0872/6803/files/d549f88bdbcfde18cca4a5e94e975dc8ff9a4f3d_ECL_CPM_FM_famille_2.jpg?v=1789741950",
+      "https://cdn.shopify.com/s/files/1/0984/0872/6803/files/0097a9e623c2dbb383d5c03cc323dfa565b90cf4_ECL_CPM_FM_famille_3.jpg?v=1789741950",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/161864/10294473_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "woodbrass",
+        "price": 26,
+        "currency": "EUR",
+        "affiliate_link": "https://woodbrass.com/products/cordial-cable-micro-xlr-5-m-62994",
+        "in_stock": true,
+        "priority": 2
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "cable-xlr",
+      "slug": "the-sssnake-sm6bk",
+      "name": "SM6BK (6m)",
+      "brand": "the sssnake",
+      "description": "Câble XLR économique de 6 mètres avec connecteurs métalliques robustes. Idéal pour brancher un premier micro dynamique ou condensateur avec un petit budget.",
+      "short_description": "Câble microphone XLR mâle/femelle 6m abordable et fiable",
+      "thUrl": "https://www.thomann.fr/the_sssnake_sk233-6_mikrokabel.htm",
+      "wbUrl": null
+    },
+    "categoryId": "b99cc6bc-39c6-4236-be26-708456b06f97",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_12/128512/8584486_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_12/128512/12309347_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_12/128512/12309352_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/161864/10294473_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/161864/10294478_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/161864/10294468_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 5.8,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/the_sssnake_sk233-6_mikrokabel.htm",
+        "in_stock": true,
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "cable-xlr",
+      "slug": "sommer-cable-stage-22-sg0q-5m",
+      "name": "Stage 22 Highflex SG0Q (5m)",
+      "brand": "Sommer Cable",
+      "description": "Câble microphone professionnel allemand Sommer Cable Stage 22 Highflex avec connecteurs Hicon XLR. Grande flexibilité, enroulage facile et blindage cuivre spiralé 99%.",
+      "short_description": "Câble micro professionnel 5m haute flexibilité et blindage 99%",
+      "thUrl": "https://www.thomann.fr/sommer_cable_stage_22_sg0q_5m.htm",
+      "wbUrl": null
+    },
+    "categoryId": "b99cc6bc-39c6-4236-be26-708456b06f97",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_37/375699/10607886_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_37/375699/12309497_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_37/375699/12309502_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/161864/10294473_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/161864/10294478_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/161864/10294468_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 24.6,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/sommer_cable_stage_22_sg0q_5m.htm",
+        "in_stock": true,
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "cable-xlr",
+      "slug": "pro-snake-tpm-6",
+      "name": "TPM 6 (6m)",
+      "brand": "pro snake",
+      "description": "Câble microphone symétrique professionnel de 6m équipé de connecteurs Rean XLR avec bague d'identification et attache-câble velcro.",
+      "short_description": "Câble micro symétrique 6m connecteurs Rean et attache velcro",
+      "thUrl": "https://www.thomann.fr/pro_snake_tpm_6.htm",
+      "wbUrl": null
+    },
+    "categoryId": "b99cc6bc-39c6-4236-be26-708456b06f97",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_21/213368/19117918_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_21/213368/19117928_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_21/213368/19117923_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/161864/10294473_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/161864/10294478_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/161864/10294468_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 7.9,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/pro_snake_tpm_6.htm",
+        "in_stock": true,
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "cable-xlr",
+      "slug": "pro-snake-tpm-10",
+      "name": "TPM 10 (10m)",
+      "brand": "pro snake",
+      "description": "Câble micro symétrique 10 mètres avec connecteurs Rean XLR noirs, haute résistance aux torsions et attache-câble inclus.",
+      "short_description": "Câble micro symétrique 10m haute résistance pour studio et live",
+      "thUrl": "https://www.thomann.fr/pro_snake_tpm_10.htm",
+      "wbUrl": null
+    },
+    "categoryId": "b99cc6bc-39c6-4236-be26-708456b06f97",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_21/213367/19117933_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_21/213367/19117939_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_21/213367/19117938_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/161864/10294473_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/161864/10294478_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/161864/10294468_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 10.9,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/pro_snake_tpm_10.htm",
+        "in_stock": true,
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "traitement-acoustique",
+      "slug": "se-electronics-reflexion-filter-pro",
+      "name": "Reflexion Filter PRO",
+      "brand": "sE Electronics",
+      "description": "Le filtre de réflexion pour voix en studio breveté par sE Electronics. Technologie multicouche acoustique brevetée permettant d'enregistrer des voix nettes sans coloration de pièce.",
+      "short_description": "Écran acoustique studio multicouche breveté pour prise de voix",
+      "thUrl": "https://www.thomann.fr/se_electronics_reflexion_filter.htm",
+      "wbUrl": null
+    },
+    "categoryId": "40b8f65e-df8b-4c85-a6e0-5e4b986d7235",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_19/191776/5100731_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_19/191776/5100716_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_19/191776/5100726_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_19/191776/5100736_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_19/191776/5100741_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_19/191776/5100756_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_19/191776/5100766_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_19/191776/5100771_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_19/191776/5100776_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_19/191776/5100781_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_19/191776/5100791_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 185,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/se_electronics_reflexion_filter.htm",
+        "in_stock": true,
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "traitement-acoustique",
+      "slug": "se-electronics-rf-x",
+      "name": "RF-X Reflexion Filter",
+      "brand": "sE Electronics",
+      "description": "Filtre de réflexion pour microphone léger et efficace conçu par sE Electronics pour le home-studio. Pince de fixation robuste pour tout pied de micro.",
+      "short_description": "Filtre de réflexion voix compact et léger pour home-studio",
+      "thUrl": "https://www.thomann.fr/se_electronics_reflexion_filter_x.htm",
+      "wbUrl": null
+    },
+    "categoryId": "40b8f65e-df8b-4c85-a6e0-5e4b986d7235",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_30/301015/14799556_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_30/301015/14799591_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_30/301015/14799561_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_30/301015/14799596_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_30/301015/14799571_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_30/301015/14799566_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_30/301015/14799576_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_30/301015/14799581_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_30/301015/14799586_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 92,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/se_electronics_reflexion_filter_x.htm",
+        "in_stock": true,
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "traitement-acoustique",
+      "slug": "the-t-bone-micscreen-xl",
+      "name": "Micscreen XL",
+      "brand": "the t.bone",
+      "description": "Écran acoustique studio grand format pour microphone de chant ou voix off. Panneaux latéraux ajustables en mousse acoustique alvéolaire dense.",
+      "short_description": "Écran acoustique studio grand format avec panneaux orientables",
+      "thUrl": "https://www.thomann.fr/the_t.bone_micscreen_xl.htm",
+      "wbUrl": null
+    },
+    "categoryId": "40b8f65e-df8b-4c85-a6e0-5e4b986d7235",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_41/414828/12536932_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_41/414828/12536967_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_41/414828/12536937_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_41/414828/12536972_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_41/414828/12536942_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_41/414828/12536957_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_41/414828/12536952_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_41/414828/12536947_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_41/414828/12536962_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 79,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/the_t.bone_micscreen_xl.htm",
+        "in_stock": true,
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "traitement-acoustique",
+      "slug": "takustik-micscreen-flex",
+      "name": "Micscreen Flex",
+      "brand": "t.akustik",
+      "description": "Écran acoustique portable ultra léger en mousse de polyester haute densité. Fixation simple sur tige de pied de micro.",
+      "short_description": "Écran acoustique portable léger en mousse haute densité",
+      "thUrl": "https://www.thomann.fr/t.akustik_micscreen_flex.htm",
+      "wbUrl": null
+    },
+    "categoryId": "40b8f65e-df8b-4c85-a6e0-5e4b986d7235",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_34/340392/8833423_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_34/340392/8860051_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_34/340392/8833428_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_34/340392/8860068_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_34/340392/8833433_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_34/340392/8833473_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_34/340392/8833478_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_34/340392/8833483_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 38,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/t.akustik_micscreen_flex.htm",
+        "in_stock": true,
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "traitement-acoustique",
+      "slug": "hofa-absorber-eco",
+      "name": "Absorber Eco",
+      "brand": "Hofa",
+      "description": "Panneau acoustique absorbant professionnel conçu pour contrôler les réflexions moyennes et hautes fréquences dans les pièces d'écoute et de mixage.",
+      "short_description": "Panneau acoustique absorbant professionnel pour studio et mixage",
+      "thUrl": "https://www.thomann.fr/hofa_absorber_natural_grey.htm",
+      "wbUrl": "https://woodbrass.com/products/hofa-absorber-eco-grey-396504"
+    },
+    "categoryId": "40b8f65e-df8b-4c85-a6e0-5e4b986d7235",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_61/618030/20659157_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_61/618030/20659200_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_61/618030/20659162_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_61/618030/20659222_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_61/618030/20659163_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_61/618030/20659183_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_61/618030/20659199_800.jpg",
+      "https://cdn.shopify.com/s/files/1/0984/0872/6803/files/a603c3fc60decd884ccdc586524b9b47afea747b_1HOFA_12775.jpg?v=1789336196"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 68,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/hofa_absorber_natural_grey.htm",
+        "in_stock": true,
+        "priority": 1
+      },
+      {
+        "merchant_name": "woodbrass",
+        "price": 68,
+        "currency": "EUR",
+        "affiliate_link": "https://woodbrass.com/products/hofa-absorber-eco-grey-396504",
+        "in_stock": true,
+        "priority": 2
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "traitement-acoustique",
+      "slug": "takustik-diffusor-manhattan-eps",
+      "name": "Diffusor Manhattan GR eps Set",
+      "brand": "t.akustik",
+      "description": "Ensemble de diffuseurs acoustiques 2D à deux dimensions pour créer un champ sonore homogène et vivant dans la régie studio sans assourdir la pièce.",
+      "short_description": "Set de diffuseurs acoustiques 2D pour spatialisation studio",
+      "thUrl": "https://www.thomann.fr/the_takustik_diffusor_manhattan_gr_eps_set.htm",
+      "wbUrl": null
+    },
+    "categoryId": "40b8f65e-df8b-4c85-a6e0-5e4b986d7235",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_49/493134/15145258_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_49/493134/15145263_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_49/493134/15145253_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_49/493134/15145268_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_49/493134/15145273_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_49/493134/15145278_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_49/493134/15145283_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 88,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/the_takustik_diffusor_manhattan_gr_eps_set.htm",
+        "in_stock": true,
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "traitement-acoustique",
+      "slug": "takustik-cbt-37-bass-trap",
+      "name": "CBT-37 Bass Trap Set",
+      "brand": "t.akustik",
+      "description": "Absorbeur de basses triangulaire (Bass Trap) à placer dans les coins de la pièce pour contrôler l'accumulation de basses fréquences et la clarté du grave.",
+      "short_description": "Paire de Bass Traps d'angle pour le contrôle des basses fréquences",
+      "thUrl": "https://www.thomann.fr/the_takustik_cbt_37.htm",
+      "wbUrl": null
+    },
+    "categoryId": "40b8f65e-df8b-4c85-a6e0-5e4b986d7235",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_23/233185/1702508_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_23/233185/1702483_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_23/233185/1702488_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_23/233185/1702493_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_23/233185/1702498_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_23/233185/1702503_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 58,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/the_takustik_cbt_37.htm",
+        "in_stock": true,
+        "priority": 1
+      }
+    ]
+  },
+  {
+    "item": {
+      "category": "traitement-acoustique",
+      "slug": "takustik-iso-pad",
+      "name": "ISO-Pad 5",
+      "brand": "t.akustik",
+      "description": "Paire de coussins acoustiques en mousse haute densité pour découpler les enceintes de monitoring du bureau et éliminer les résonances parasites.",
+      "short_description": "Paire de mousses de découplage acoustique pour enceintes de monitoring",
+      "thUrl": "https://www.thomann.fr/the_takustik_isopad.htm",
+      "wbUrl": null
+    },
+    "categoryId": "40b8f65e-df8b-4c85-a6e0-5e4b986d7235",
+    "images": [
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_21/213094/15087820_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_21/213094/15087835_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_21/213094/15087825_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_21/213094/15087840_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_21/213094/15087830_800.jpg",
+      "https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_21/213094/15087845_800.jpg"
+    ],
+    "offers": [
+      {
+        "merchant_name": "thomann",
+        "price": 14.7,
+        "currency": "EUR",
+        "affiliate_link": "https://www.thomann.fr/the_takustik_isopad.htm",
+        "in_stock": true,
+        "priority": 1
+      }
+    ]
+  }
+]

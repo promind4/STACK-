@@ -15,46 +15,13 @@ envContent.split(/\r?\n/).forEach(line => {
 const supabase = createClient(env.NEXT_PUBLIC_SUPABASE_URL, env.SUPABASE_SERVICE_ROLE_KEY);
 
 async function run() {
-  console.log('=== AUDIT CATÉGORIE CARTES-SON ===\n');
-  const { data: cat, error: catErr } = await supabase.from('categories').select('*').eq('slug', 'cartes-son').single();
-  if (catErr) return console.error('Catégorie introuvable:', catErr);
-  console.log(`Catégorie: ${cat.name} (ID: ${cat.id}, Slug: ${cat.slug})\n`);
+  console.log('=== INSPECTING CASQUES & ENCEINTES ===\n');
+  const { data: casques } = await supabase.from('products').select('slug, name, brand, short_description, description, specs, pros, cons').eq('category_id', 'e53b8f8a-ab68-4ede-9f53-d892bf785ff6').limit(2);
+  console.log('Casque 1:', JSON.stringify(casques[0], null, 2));
 
-  const { data: prods, error: pErr } = await supabase
-    .from('products')
-    .select('*, product_offers(*)')
-    .eq('category_id', cat.id)
-    .order('name');
-
-  if (pErr) return console.error('Erreur produits:', pErr);
-
-  console.log(`Nombre de produits actuels dans cartes-son: ${prods.length}`);
-  for (const p of prods) {
-    const offers = p.product_offers || [];
-    console.log(`\n[${p.slug}] ${p.brand} - ${p.name} (Actif: ${p.is_active})`);
-    console.log(`  Image: ${p.image_url}`);
-    if (offers.length) {
-      offers.forEach(o => {
-        console.log(`   - [${o.merchant_name}] ${o.price}€ -> ${o.affiliate_link}`);
-      });
-    } else {
-      console.log(`   - AUCUNE OFFRE`);
-    }
-  }
-
-  // Vérifier aussi si des cartes son sont égarées dans d'autres catégories
-  console.log('\n--- RECHERCHE DE CARTES SON DANS D\'AUTRES CATÉGORIES ---');
-  const keywords = ['scarlett', 'audient', 'motu', 'volt', 'ssl', 'apoll', 'zen go', 'ur22', 'audiobox', 'minifuse', 'komplete audio', 'clarett', 'id4', 'id14', 'id24', 'id44', '2i2', 'solo', '4i4'];
-  const { data: allProds } = await supabase.from('products').select('id, name, slug, brand, category_id, categories(name, slug)');
-  const misplaced = (allProds || []).filter(p => {
-    if (p.category_id === cat.id) return false;
-    const txt = `${p.name} ${p.slug} ${p.brand}`.toLowerCase();
-    return keywords.some(k => txt.includes(k));
-  });
-  console.log(`Cartes son potentielles trouvées ailleurs: ${misplaced.length}`);
-  misplaced.forEach(p => {
-    console.log(`  - [${p.slug}] ${p.brand} ${p.name} (dans: ${p.categories?.name || p.category_id})`);
-  });
+  const { data: enceintes } = await supabase.from('products').select('slug, name, brand, short_description, description, specs, pros, cons').eq('category_id', '35dcf61b-1b56-4635-a3e9-7bba7f165409').limit(2);
+  console.log('Enceinte 1:', JSON.stringify(enceintes[0], null, 2));
 }
 
 run().catch(console.error);
+

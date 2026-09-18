@@ -15,8 +15,10 @@ envContent.split(/\r?\n/).forEach(line => {
 const supabase = createClient(env.NEXT_PUBLIC_SUPABASE_URL, env.SUPABASE_SERVICE_ROLE_KEY);
 
 async function inspect() {
-  const { data: offers } = await supabase.from('product_offers').select('merchant_name').limit(100);
-  console.log('Distinct merchant names:', [...new Set(offers?.map(o => o.merchant_name))]);
+  const { data: prods } = await supabase.from('products').select('*').limit(1);
+  console.log('Product keys:', Object.keys(prods[0]));
+  const { data: offers } = await supabase.from('product_offers').select('*').limit(1);
+  console.log('Offer keys:', Object.keys(offers[0]));
 }
 
 inspect().catch(console.error);
