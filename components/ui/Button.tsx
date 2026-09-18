@@ -17,6 +17,10 @@ const variants = {
     'h-14 px-8 rounded-full border border-white/20 text-white ' +
     'hover:bg-white/5 hover:border-white/40',
 
+  secondary:
+    'h-12 px-6 rounded-full bg-secondary text-secondary-foreground ' +
+    'hover:bg-secondary/80 border border-border/70 active:scale-[.98]',
+
   outline:
     'h-12 px-6 rounded-full border border-border text-foreground ' +
     'hover:border-primary hover:text-primary',

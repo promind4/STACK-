@@ -8,6 +8,8 @@ import { cleanImageUrl } from '@/lib/utils'
 import { isDirectSupabaseStorageUrl } from '@/lib/imagePolicy.mjs'
 import { ProductBadge } from '@/components/ui/Badge'
 import { Star, ArrowRight, Heart } from '@/components/FluxlabIcons'
+import { Swords } from 'lucide-react'
+import { useComparison } from '@/context/ComparisonContext'
 import type { Product as DBProduct } from '@/types/database'
 
 /* ─── MAPPER DB → Card ───────────────────────────────────── */
@@ -94,12 +96,15 @@ interface ProductCardProps {
   className?: string
   editorialBadge?: 'choix' | 'coup-de-coeur'
   variant?: 'default' | 'home-showcase'
+  technicalTag?: string | null
 }
 
-export function ProductCard({ product: dbProduct, className, editorialBadge, variant = 'default' }: ProductCardProps) {
+export function ProductCard({ product: dbProduct, className, editorialBadge, variant = 'default', technicalTag }: ProductCardProps) {
   const product = mapProduct(dbProduct)
   const [wished, setWished] = useState(false)
   const [imageFailed, setImageFailed] = useState(false)
+  const { toggleProduct, isInComparison } = useComparison()
+  const inComparison = isInComparison(product.id) || isInComparison(product.slug)
   const isUnavailable = !product.inStock || product.badge === 'out_of_stock'
   const availabilityLabel = getAvailabilityLabel(product.availableOfferCount, isUnavailable)
   const merchantLabel = getMerchantLabel(product.offerCount)
@@ -110,17 +115,33 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
     setWished((v) => !v)
   }
 
+  const handleDuelToggle = (e: React.MouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    toggleProduct({
+      id: product.id,
+      slug: product.slug,
+      name: product.name,
+      brand: product.brand,
+      image_url: product.imageUrl,
+      price: product.price,
+    })
+  }
+
   return (
     <article
       className={cn(
         'group relative overflow-hidden border transition-all duration-300 motion-reduce:transition-none',
+        inComparison ? 'ring-2 ring-primary ring-offset-2 border-primary' : '',
         variant === 'home-showcase' ? 'home-showcase-card' : '',
         variant === 'home-showcase'
           ? 'bg-white rounded-none xl:aspect-[1/1]'
           : 'bg-card rounded-2xl',
         isUnavailable
           ? 'border-border/70 opacity-80'
-          : 'border-border/70 hover:border-primary/60 hover:shadow-card',
+          : inComparison
+            ? 'shadow-card'
+            : 'border-border/70 hover:border-primary/60 hover:shadow-card',
         className
       )}
     >
@@ -169,8 +190,13 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
       {/* Info zone */}
       {variant === 'home-showcase' ? (
         <div className="flex min-h-0 min-w-0 flex-col bg-white p-3 sm:p-3.5 xl:p-2.5">
-          <div className="mb-1 flex items-center text-[11px] font-mono font-medium uppercase tracking-[0.12em] text-foreground/75">
+          <div className="mb-1 flex items-center justify-between text-[11px] font-mono font-medium uppercase tracking-[0.12em] text-foreground/75">
             <span className="truncate">{product.brand}</span>
+            {technicalTag && (
+              <span className="text-[10px] font-mono text-primary tracking-normal uppercase shrink-0 ml-2">
+                {technicalTag}
+              </span>
+            )}
           </div>
 
           <h3 className="line-clamp-2 font-serif text-[15px] leading-[1.22] text-foreground sm:text-[14px] xl:!line-clamp-1 xl:text-[15px] text-balance">
@@ -204,6 +230,11 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
         <div className="p-3 sm:p-5 flex flex-col flex-1 bg-[linear-gradient(145deg,hsl(var(--secondary))_0%,hsl(var(--card))_100%)]">
           <div className="flex items-center justify-between text-[11px] sm:text-[12px] font-mono font-medium tracking-[0.14em] uppercase text-foreground/75 mb-1.5 sm:mb-2">
             <span className="truncate">{product.brand}</span>
+            {technicalTag && (
+              <span className="text-[10px] sm:text-[11px] font-mono text-primary tracking-normal uppercase shrink-0 ml-2">
+                {technicalTag}
+              </span>
+            )}
           </div>
 
           <h3 className="font-serif text-[15px] sm:text-[18px] leading-[1.24] text-foreground mb-2 sm:mb-3 line-clamp-2 text-balance">
@@ -251,19 +282,36 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
       )}
       </Link>
 
-      <button
-        type="button"
-        aria-label={wished ? 'Retirer des favoris' : 'Ajouter aux favoris'}
-        onClick={handleWishlist}
-        className={cn(
-          'absolute top-2 right-2 sm:top-3 sm:right-3 z-20 w-7 h-7 sm:w-8 sm:h-8 rounded-full',
-          'bg-white/95 backdrop-blur border border-border/70',
-          'flex items-center justify-center transition-colors',
-          wished ? 'text-primary' : 'text-foreground/60 hover:text-primary'
-        )}
-      >
-        <Heart size={14} fill={wished ? 'currentColor' : 'none'} />
-      </button>
+      <div className="absolute top-2 right-2 sm:top-3 sm:right-3 z-20 flex flex-col gap-1.5">
+        <button
+          type="button"
+          aria-label={inComparison ? 'Retirer du duel' : 'Ajouter au duel'}
+          title={inComparison ? 'Retirer du duel' : 'Comparer / Lancer un duel'}
+          onClick={handleDuelToggle}
+          className={cn(
+            'w-7 h-7 sm:w-8 sm:h-8 rounded-full transition-all duration-200 flex items-center justify-center shadow-sm',
+            inComparison
+              ? 'bg-primary text-primary-foreground border border-primary ring-2 ring-primary/40 scale-105'
+              : 'bg-white/95 backdrop-blur border border-border/70 text-foreground/65 hover:text-primary hover:border-primary/50'
+          )}
+        >
+          <Swords size={13} className="sm:w-3.5 sm:h-3.5" />
+        </button>
+
+        <button
+          type="button"
+          aria-label={wished ? 'Retirer des favoris' : 'Ajouter aux favoris'}
+          onClick={handleWishlist}
+          className={cn(
+            'w-7 h-7 sm:w-8 sm:h-8 rounded-full',
+            'bg-white/95 backdrop-blur border border-border/70',
+            'flex items-center justify-center transition-colors',
+            wished ? 'text-primary' : 'text-foreground/60 hover:text-primary'
+          )}
+        >
+          <Heart size={14} fill={wished ? 'currentColor' : 'none'} />
+        </button>
+      </div>
     </article>
   )
 }

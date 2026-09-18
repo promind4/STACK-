@@ -5,6 +5,9 @@ import { Footer } from "@/components/server/Footer";
 import { Navbar } from "@/components/client/Navbar";
 import { JsonLd } from "@/components/server/JsonLd";
 import { Analytics } from "@vercel/analytics/next";
+import { ComparisonProvider } from "@/context/ComparisonContext";
+import { ComparisonBar } from "@/components/client/ComparisonBar";
+import { ProductDuelModal } from "@/components/client/ProductDuelModal";
 import Script from "next/script";
 import "./globals.css";
 
@@ -57,32 +60,36 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${switzer.variable} ${jetbrains.variable}`}>
       <body className="font-sans antialiased bg-background text-foreground min-h-screen flex flex-col">
-        <JsonLd data={{
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Fluxlab",
-          url: "https://fluxlab.fr",
-          logo: "https://fluxlab.fr/branding/logo.svg",
-          description: "Comparateur intelligent de matériel audio, vidéo et streaming. Trouvez le meilleur prix parmi Amazon, Thomann, Woodbrass et plus.",
-          sameAs: [],
-        }} />
-        <JsonLd data={{
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "Fluxlab",
-          url: "https://fluxlab.fr",
-          potentialAction: {
-            "@type": "SearchAction",
-            target: {
-              "@type": "EntryPoint",
-              urlTemplate: "https://fluxlab.fr/recherche?q={search_term_string}",
+        <ComparisonProvider>
+          <JsonLd data={{
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Fluxlab",
+            url: "https://fluxlab.fr",
+            logo: "https://fluxlab.fr/branding/logo.svg",
+            description: "Comparateur intelligent de matériel audio, vidéo et streaming. Trouvez le meilleur prix parmi Amazon, Thomann, Woodbrass et plus.",
+            sameAs: [],
+          }} />
+          <JsonLd data={{
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Fluxlab",
+            url: "https://fluxlab.fr",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: {
+                "@type": "EntryPoint",
+                urlTemplate: "https://fluxlab.fr/recherche?q={search_term_string}",
+              },
+              "query-input": "required name=search_term_string",
             },
-            "query-input": "required name=search_term_string",
-          },
-        }} />
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+          }} />
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <ComparisonBar />
+          <ProductDuelModal />
+        </ComparisonProvider>
         <Analytics />
         <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">

@@ -6,6 +6,12 @@ import Link from 'next/link';
 import { Product } from '@/types/database';
 import { ProductCard } from '@/components/ui/ProductCard';
 import { cn } from '@/lib/utils';
+import { 
+  CATEGORY_SUBFAMILIES, 
+  getProductTechnicalTag, 
+  matchesSubfamily, 
+  getCuratedSortWeight 
+} from '@/lib/subfamilies';
 
 /* ─── GUIDE MAPPING : slug catégorie → slug article ─────── */
 const GUIDE_MAP: Record<string, string> = {
@@ -144,9 +150,12 @@ interface Props {
 }
 
 export default function CategoryContent({ products, slug, title, subtitle }: Props) {
+  const [selectedSubfamily, setSelectedSubfamily] = useState<string>('all');
   const [sortBy, setSortBy] = useState<'default' | 'price_asc' | 'price_desc' | 'rating' | 'name'>('default');
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
   const [filterOpen, setFilterOpen] = useState(false);
+
+  const subfamilies = CATEGORY_SUBFAMILIES[slug] || [];
 
   const brands = useMemo(() => {
     const s = new Set(products.map(p => p.brand).filter(Boolean));
@@ -161,17 +170,37 @@ export default function CategoryContent({ products, slug, title, subtitle }: Pro
 
   const filtered = useMemo(() => {
     let result = [...products];
-    if (selectedBrands.length > 0) result = result.filter(p => selectedBrands.includes(p.brand || ''));
+
+    // 1. Filtrage par sous-famille technique
+    if (selectedSubfamily !== 'all') {
+      result = result.filter(p => matchesSubfamily(p, slug, selectedSubfamily));
+    }
+
+    // 2. Filtrage par marque
+    if (selectedBrands.length > 0) {
+      result = result.filter(p => selectedBrands.includes(p.brand || ''));
+    }
+
+    // 3. Tri (pertinence éditoriale par défaut pour placer les références indispensables en tête)
     switch (sortBy) {
-      case 'price_asc': result.sort((a, b) => a.price - b.price); break;
-      case 'price_desc': result.sort((a, b) => b.price - a.price); break;
+      case 'price_asc': result.sort((a, b) => (a.price || 0) - (b.price || 0)); break;
+      case 'price_desc': result.sort((a, b) => (b.price || 0) - (a.price || 0)); break;
       case 'rating': result.sort((a, b) => (b.rating || 0) - (a.rating || 0)); break;
       case 'name': result.sort((a, b) => a.name.localeCompare(b.name)); break;
+      case 'default':
+      default:
+        result.sort((a, b) => {
+          const wA = getCuratedSortWeight(a);
+          const wB = getCuratedSortWeight(b);
+          if (wB !== wA) return wB - wA;
+          return a.name.localeCompare(b.name);
+        });
+        break;
     }
     return result;
-  }, [products, sortBy, selectedBrands]);
+  }, [products, slug, selectedSubfamily, sortBy, selectedBrands]);
 
-  const hasFilters = selectedBrands.length > 0 || sortBy !== 'default';
+  const hasFilters = selectedBrands.length > 0 || sortBy !== 'default' || selectedSubfamily !== 'all';
 
   const { choixId, coupDeCoeurId } = useMemo(
     () => computeEditorialBadges(products, products.length),
@@ -181,6 +210,7 @@ export default function CategoryContent({ products, slug, title, subtitle }: Pro
   const reset = () => {
     setSortBy('default');
     setSelectedBrands([]);
+    setSelectedSubfamily('all');
   };
 
   return (
@@ -285,6 +315,34 @@ export default function CategoryContent({ products, slug, title, subtitle }: Pro
       {/* ── GRILLE PRODUITS ──────────────────────────────── */}
       <section className="col-span-12 lg:col-span-9">
 
+        {/* ── BARRE DE SÉLECTION TECHNIQUE PAR SOUS-FAMILLE ────────── */}
+        {subfamilies.length > 1 && (
+          <div className="mb-6 pb-5 border-b border-border/60">
+            <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+              <span className="text-[11px] font-mono text-foreground/50 uppercase tracking-wider shrink-0 mr-1">
+                Famille :
+              </span>
+              {subfamilies.map(sf => {
+                const active = selectedSubfamily === sf.id;
+                return (
+                  <button
+                    key={sf.id}
+                    onClick={() => setSelectedSubfamily(sf.id)}
+                    className={cn(
+                      "whitespace-nowrap px-3.5 py-1.5 rounded-full text-[12px] font-mono transition-all duration-200 shrink-0 cursor-pointer",
+                      active
+                        ? "bg-foreground text-white font-medium shadow-sm border border-foreground"
+                        : "bg-background border border-border/70 text-foreground/75 hover:border-primary/60 hover:text-foreground"
+                    )}
+                  >
+                    {sf.label}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
         {/* Toolbar */}
         <div className="flex items-baseline justify-between mb-8 pb-5 border-b border-border/60">
           <div className="flex items-baseline gap-4">
@@ -313,6 +371,7 @@ export default function CategoryContent({ products, slug, title, subtitle }: Pro
                 <React.Fragment key={product.id}>
                   <ProductCard
                     product={product}
+                    technicalTag={getProductTechnicalTag(product, slug)}
                     editorialBadge={
                       product.id === choixId ? 'choix' :
                       product.id === coupDeCoeurId ? 'coup-de-coeur' :
