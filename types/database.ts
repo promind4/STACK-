@@ -34,6 +34,8 @@ export interface ProductOffer {
 export interface Product {
   id: string;
   category_id?: string;
+  category_slug?: string;
+  category_name?: string;
   name: string;
   slug: string;
   brand: string;

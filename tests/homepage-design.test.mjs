@@ -7,7 +7,6 @@ const card = await readFile(new URL('../components/ui/ProductCard.tsx', import.m
 const showcase = await readFile(new URL('../components/home/HomeProductShowcase.tsx', import.meta.url), 'utf8')
 const compatibility = await readFile(new URL('../components/home/CompatibilityPreview.tsx', import.meta.url), 'utf8')
 const homeGuides = await readFile(new URL('../components/home/HomeGuides.tsx', import.meta.url), 'utf8')
-const contextGrid = await readFile(new URL('../components/home/HeroContextGrid.tsx', import.meta.url), 'utf8')
 const trustStrip = await readFile(new URL('../components/home/HomeTrustStrip.tsx', import.meta.url), 'utf8').catch((error) => {
   if (error && typeof error === 'object' && 'code' in error && error.code === 'ENOENT') return ''
   throw error
@@ -16,17 +15,13 @@ const navbar = await readFile(new URL('../components/client/Navbar.tsx', import.
 const footer = await readFile(new URL('../components/server/Footer.tsx', import.meta.url), 'utf8')
 
 assert.equal(hero.includes('hero1.webp'), false, 'the legacy homepage photograph must be removed')
-assert.match(hero, /HeroContextGrid/, 'the hero must use the context grid component')
+assert.doesNotMatch(hero, /HeroContextGrid/, 'the hero must not retain links to removed category shortcuts')
 assert.equal(hero.includes('animate-gradient-text'), false, 'the hero headline must not use a decorative word gradient')
 assert.equal(hero.includes('const TRUST'), false, 'hero reassurance must live in the dedicated trust section, not the hero')
 assert.equal(hero.includes('48°'), false, 'the hero must not render decorative coordinates')
 assert.equal(hero.includes('home-link-line'), false, 'the hero must not render arbitrary decorative connection lines')
 assert.match(hero, /hero-arrival/, 'the hero must use one orchestrated arrival sequence')
 assert.match(hero, /aria-labelledby="hero-title"/, 'the hero must retain a labelled landmark')
-assert.match(contextGrid, /<nav\s+aria-label="Choisir selon votre besoin"/, 'needs must be presented as compact navigation')
-assert.equal(contextGrid.includes('frame-label'), false, 'needs navigation must avoid decorative mono labels')
-assert.match(contextGrid, /px-4 py-4/, 'needs navigation must stay compact')
-assert.match(contextGrid, /<Link[\s\S]*?h-full/, 'each context link must fill its grid cell regardless of label wrapping')
 assert.match(page, /HomeProductShowcase/, 'the homepage must expose the product and compatibility composition')
 assert.match(card, /bg-white/, 'product imagery must remain on a neutral white surface')
 assert.equal(hero.includes('Testé en studio'), false, 'unverified trust claims must not be rendered')
@@ -63,7 +58,6 @@ assert.doesNotMatch(compatibility, /<Image/, 'the compatibility preview must not
 assert.doesNotMatch(compatibility, /\bh-full\b|xl:min-h-\[/, 'the setup panel must not force the shared composition height')
 assert.match(compatibility, /xl:p-5/, 'the setup panel must use a materially tighter xl rhythm beside the product selection')
 assert.doesNotMatch(compatibility, /0\{index \+ 1\}/, 'the compatibility graph must not use dynamic numeric labels')
-assert.doesNotMatch(contextGrid, /num:/, 'the hero context grid must not retain repeated numeric labels')
 assert.doesNotMatch(card, /xl:aspect-\[4\/5\]/, 'homepage product cards must no longer use the tall 4/5 geometry')
 assert.match(card, /xl:aspect-\[1\/1\]/, 'homepage product cards must use a less stretched near-square geometry')
 assert.match(card, /home-showcase-card[\s\S]{0,160}?bg-white/, 'homepage product cards must keep one continuous neutral surface')

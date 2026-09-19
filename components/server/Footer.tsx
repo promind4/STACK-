@@ -170,10 +170,18 @@ export function Footer() {
             </p>
 
             {/* Trust signals */}
-            <ul className="space-y-3 text-[12px] font-mono text-white/65 mb-10" role="list">
-              <li className="flex items-center gap-3">
-                <span className="text-primary font-bold">·</span>
-                0 produit sponsorisé
+            <ul className="space-y-2.5 text-[12px] font-mono text-white/70 mb-10" role="list">
+              <li className="flex items-center gap-2.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
+                Avis vérifiés multi-marchands (Thomann, Amazon...)
+              </li>
+              <li className="flex items-center gap-2.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                Données techniques constructeurs contrôlées
+              </li>
+              <li className="flex items-center gap-2.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-white/40 shrink-0" />
+                0 produit sponsorisé · 100% impartial
               </li>
             </ul>
 
@@ -228,11 +236,11 @@ export function Footer() {
             </div>
             <div className="col-span-12 lg:col-span-9">
               <p className="text-[13px] text-white/70 leading-[1.75] font-normal max-w-[800px]">
-                Fluxlab participe à des programmes d&apos;affiliation{' '}
-                <span className="font-mono text-white/85">(Amazon · Thomann · Woodbrass)</span>
-                . Un achat via nos liens peut nous faire percevoir une commission,{' '}
-                <em className="not-italic text-white/90">sans surcoût pour vous</em>.
-                Cela finance nos tests indépendants et la mise à jour des prix.
+                Fluxlab est un comparateur audio indépendant. Les avis sont directement agrégés auprès d&apos;acheteurs vérifiés des plateformes partenaires{' '}
+                <span className="font-mono text-white/85">(Amazon · Thomann · Woodbrass)</span>.
+                Nous participons à leurs programmes d&apos;affiliation : un achat via nos liens peut nous faire percevoir une commission,{' '}
+                <em className="not-italic text-white/90">sans aucun surcoût pour vous</em>.
+                Cette indépendance garantit des comparaisons objectives et un configurateur sans parti pris ni produit sponsorisé.
               </p>
             </div>
           </div>

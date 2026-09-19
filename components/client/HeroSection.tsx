@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { HeroContextGrid } from '@/components/home/HeroContextGrid'
 
 export function HeroSection() {
   return (
@@ -29,17 +28,33 @@ export function HeroSection() {
             Micro, interface, monitoring et traitement : comparez les offres et composez une chaîne sonore cohérente pour la voix, le podcast et le home studio.
           </p>
           <div className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-            <Link href="/configurateur" className="inline-flex min-h-12 items-center justify-center rounded-sm bg-[var(--home-gold)] px-6 text-sm font-medium text-[var(--home-ink)] transition-colors hover:bg-[#dfb870] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--home-ivory)]">
-              Composer mon setup
+            <Link href="/configurateur" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-sm bg-[var(--home-gold)] px-6 text-sm font-medium text-[var(--home-ink)] transition-colors hover:bg-[#dfb870] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--home-ivory)]">
+              <span>Composer mon setup</span>
+              <span className="inline-block rounded bg-[var(--home-ink)]/15 px-1.5 py-0.5 text-[11px] font-mono font-normal text-[var(--home-ink)]">30s</span>
             </Link>
             <Link href="#selection" className="inline-flex min-h-12 items-center border-b border-white/35 text-sm text-white/85 transition-colors hover:border-[var(--home-gold)] hover:text-[var(--home-ivory)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--home-ivory)]">
               Voir les essentiels
             </Link>
           </div>
+
+          {/* Marqueurs d'autorité et réassurance subtils */}
+          <div className="mt-10 pt-6 border-t border-white/10 flex flex-wrap items-center gap-y-2.5 gap-x-6 text-[12px] font-mono text-white/65">
+            <div className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
+              <span>Avis vérifiés multi-marchands</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--home-gold)] shrink-0" />
+              <span>Données constructeurs vérifiées</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-white/40 shrink-0" />
+              <span>Comparateur 100% indépendant</span>
+            </div>
+          </div>
         </div>
 
         <div className="lg:ml-[42%]">
-          <HeroContextGrid />
         </div>
       </div>
     </section>

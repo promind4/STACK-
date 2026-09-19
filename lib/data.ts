@@ -1279,7 +1279,7 @@ export const ARTICLES: Article[] = [
     id: "4",
     slug: "top-5-interfaces",
     title: "Guide Expert : Choisir son Interface Audio en 2026",
-    category: "Matériel",
+    category: "Audio",
     readTime: "4 min",
     date: "02 Jan 2026",
     author: "Alexandre Dupont",
@@ -5357,14 +5357,14 @@ export const ARTICLES: Article[] = [
     id: "16",
     slug: "supprimer-bruit-clavier-stream",
     title: "Comment ne pas entendre son clavier mécanique sur Discord ou Twitch ?",
-    category: "Streaming",
+    category: "Audio",
     readTime: "3 min",
     date: "23 Mar 2026",
     author: "Équipe Fluxlab",
     image: "/images/articles/gaming_keyboard_setup.webp",
     intro: "Rien n'est plus frustrant pour une audience que d'entendre le clic-clac incessant d'un clavier mécanique pendant une partie de gaming. Heureusement, avec le bon matériel et les bons réglages, vous pouvez rendre votre clavier totalement inaudible sans altérer votre voix.",
     relatedProducts: ["shure-mv7"],
-    relatedCategorySlug: "audio",
+    relatedCategorySlug: "micros-dynamiques",
     content: `
 <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Le problème : Micro statique vs Clavier bruyant</h2>
 <p>La majorité des streamers débutent avec un micro "statique" (condensateur) comme le Blue Yeti. Ces micros sont ultra-sensibles : ils captent la mouche qui vole à 3 mètres... et donc chaque pression sur vos switchs Cherry MX Blue. Pour supprimer ce bruit, il y a deux écoles : le logiciel (gratuit mais imparfait) et le matériel (payant mais radical).</p>
@@ -5777,14 +5777,14 @@ export const ARTICLES: Article[] = [
     id: "22",
     slug: "enregistrer-podcast-deux-personnes-setup",
     title: "Enregistrer un podcast à deux personnes sur le même Mac/PC : le setup facile",
-    category: "Streaming",
+    category: "Audio",
     readTime: "3 min",
     date: "23 Mar 2026",
     author: "Équipe Fluxlab",
     image: "/images/articles/podcast-duo-hero.webp",
     intro: "Vouloir lancer un podcast en duo est une excellente idée. Mais attention : la technique peut vite devenir un enfer si vous faites le mauvais choix de matériel. Voici comment brancher deux micros sans aucun bug de son.",
     relatedProducts: ["focusrite-scarlett-2i2-4th-gen", "shure-mv7x"],
-    relatedCategorySlug: "video",
+    relatedCategorySlug: "cartes-son",
     content: `
       <!-- ENCART TL;DR -->
       <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8">
@@ -6989,14 +6989,14 @@ export const ARTICLES: Article[] = [
     id: "28",
     slug: "comment-fonctionne-configurateur-fluxlab",
     title: "Comment fonctionne le Configurateur Fluxlab ? (Guide Rapide)",
-    category: "Streaming",
+    category: "Audio",
     readTime: "3 min",
     date: "19 Jun 2026",
     author: "Équipe Fluxlab",
     image: "/images/articles/interface_audio_wide.webp",
     intro: "Vous ne savez pas par où commencer pour monter votre setup ? Le configurateur Fluxlab pose trois questions et génère une liste de matériel adaptée à votre budget, votre usage et votre niveau. Voici comment ça marche.",
-    relatedProducts: ["focusrite-scarlett-solo-4th-gen", "rode-podmic-usb", "shure-mv7x", "logitech-c920"],
-    relatedCategorySlug: "streaming",
+    relatedProducts: ["focusrite-scarlett-solo-4th-gen", "rode-podmic-usb", "shure-mv7x"],
+    relatedCategorySlug: "cartes-son",
     content: `
       <!--ENCART Résumé-->
       <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8">

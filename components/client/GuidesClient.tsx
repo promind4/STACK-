@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight, Search, X } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
@@ -21,21 +20,17 @@ interface Article {
 
 interface GuidesClientProps {
     articles: Article[];
-    categories: string[];
 }
 
-export default function GuidesClient({ articles, categories }: GuidesClientProps) {
+export default function GuidesClient({ articles }: GuidesClientProps) {
     const [searchQuery, setSearchQuery] = useState("");
-    const [selectedCategory, setSelectedCategory] = useState("Tous");
 
     const filteredArticles = useMemo(() => {
         return articles.filter(article => {
-            const matchSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            return article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 article.intro.toLowerCase().includes(searchQuery.toLowerCase());
-            const matchCategory = selectedCategory === "Tous" || article.category === selectedCategory;
-            return matchSearch && matchCategory;
         });
-    }, [articles, searchQuery, selectedCategory]);
+    }, [articles, searchQuery]);
 
     return (
         <>
@@ -63,35 +58,11 @@ export default function GuidesClient({ articles, categories }: GuidesClientProps
                 </div>
             </div>
 
-            {/* FILTER PILLS */}
-            <div className="flex flex-wrap gap-2 mb-12">
-                {categories.map(cat => (
-                    <button
-                        key={cat}
-                        onClick={() => setSelectedCategory(cat)}
-                        className={`px-4 py-1.5 rounded-full text-sm font-bold transition-all border ${selectedCategory === cat
-                            ? 'bg-primary text-white border-primary shadow-sm'
-                            : 'bg-white text-muted-foreground border-border hover:border-primary/30 hover:text-foreground'
-                            }`}
-                    >
-                        {cat}
-                    </button>
-                ))}
-            </div>
-
             {/* ARTICLES GRID */}
             {filteredArticles.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-                    <AnimatePresence mode="popLayout">
-                        {filteredArticles.map((article) => (
-                            <motion.article
-                                key={article.id}
-                                initial={{ opacity: 0, y: 8 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -8 }}
-                                transition={{ duration: 0.18 }}
-                                className="group cursor-pointer flex flex-col h-full"
-                            >
+                    {filteredArticles.map((article) => (
+                            <article key={article.id} className="group cursor-pointer flex flex-col h-full">
                                 <Link href={`/guide/${article.slug}`} className="flex flex-col h-full">
                                     <div className="aspect-[16/10] rounded-2xl overflow-hidden mb-6 relative shadow-sm border border-border/50">
                                         <Image
@@ -102,15 +73,10 @@ export default function GuidesClient({ articles, categories }: GuidesClientProps
                                             className="object-cover transition-transform duration-500 group-hover:scale-110"
                                             loading="lazy"
                                         />
-                                        <div className="absolute top-4 left-4">
-                                            <span className="px-2 py-1 bg-white/95 backdrop-blur text-xs font-bold uppercase tracking-wider rounded border border-black/5 shadow-sm">
-                                                {article.category}
-                                            </span>
-                                        </div>
                                     </div>
 
                                     <div className="flex items-center gap-2 text-[13px] text-[#4A4A4A] mb-3 font-medium">
-                                        {article.date}
+                                        <span>{article.date}</span><span aria-hidden>·</span><span>{article.readTime}</span>
                                     </div>
 
                                     <h4 className="text-[22px] font-bold text-foreground mb-3 leading-snug group-hover:text-primary transition-colors font-serif text-balance">
@@ -125,14 +91,13 @@ export default function GuidesClient({ articles, categories }: GuidesClientProps
                                         Lire l&apos;article <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                                     </div>
                                 </Link>
-                            </motion.article>
-                        ))}
-                    </AnimatePresence>
+                            </article>
+                    ))}
                 </div>
             ) : (
                 <div className="py-20 text-center">
                     <p className="text-muted-foreground text-lg">Aucun article ne correspond à votre recherche.</p>
-                    <Button variant="ghost" className="mt-4" onClick={() => { setSearchQuery(""); setSelectedCategory("Tous"); }}>
+                    <Button variant="ghost" className="mt-4" onClick={() => setSearchQuery("")}>
                         Réinitialiser les filtres
                     </Button>
                 </div>

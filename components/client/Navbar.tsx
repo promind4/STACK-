@@ -247,9 +247,13 @@ function LaboButton({ className }: { className?: string }) {
         'hover:bg-[#E0C28D] transition-colors',
         className
       )}
+      title="Composer votre chaîne sonore en ~30 secondes"
     >
       <span className="hidden sm:inline">L’Atelier Fluxlab</span>
       <span className="sm:hidden">Atelier</span>
+      <span className="hidden md:inline-block px-1.5 py-0.5 rounded text-[10px] font-mono tracking-normal font-semibold bg-foreground/10 text-foreground/80">
+        30s
+      </span>
       <span className="w-6 h-6 rounded-full bg-foreground text-primary flex items-center justify-center shrink-0">
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
           <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>

@@ -70,11 +70,14 @@ function mapProduct(p: DBProduct): CardProduct {
 /* ─── STAR RATING ────────────────────────────────────────── */
 function StarRating({ rating, count }: { rating: number; count: number }) {
   return (
-    <div className="flex items-center gap-1.5 text-[11px] text-foreground/60">
-      <Star size={11} fill="currentColor" className="text-primary" />
+    <div
+      className="flex items-center gap-1.5 text-[11px] text-foreground/60"
+      title="Avis collectés auprès d’acheteurs vérifiés sur les plateformes marchandes (Thomann, Amazon...)"
+    >
+      <Star size={11} fill="currentColor" className="text-primary shrink-0" />
       <span className="font-mono text-foreground/75 font-medium">{rating.toFixed(1)}</span>
       <span className="text-foreground/35">·</span>
-      <span className="font-mono">{count.toLocaleString('fr-FR')} avis</span>
+      <span className="font-mono">{count.toLocaleString('fr-FR')} avis vérifiés</span>
     </div>
   )
 }

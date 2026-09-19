@@ -13,7 +13,7 @@ export function CompatibilityPreview() {
         Composer une chaîne qui tient ensemble.
       </h3>
       <p className="mt-3 max-w-md text-sm leading-relaxed text-white/65 xl:mt-2 xl:text-[13px] xl:leading-5">
-        Le configurateur relie chaque rôle selon votre usage et votre budget, puis vous aide à repérer ce qui manque.
+        Le configurateur relie chaque rôle selon votre usage et votre budget en moins d’une minute, puis vous aide à repérer ce qui manque.
       </p>
 
       <ol className="mt-6 xl:mt-4">
@@ -43,9 +43,10 @@ export function CompatibilityPreview() {
       </p>
       <Link
         href="/configurateur"
-        className="mt-5 inline-flex border-b border-primary/45 pb-1 text-sm font-medium text-primary transition-colors hover:border-primary hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary motion-reduce:transition-none xl:mt-3"
+        className="mt-5 inline-flex items-center gap-2 border-b border-primary/45 pb-1 text-sm font-medium text-primary transition-colors hover:border-primary hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary motion-reduce:transition-none xl:mt-3"
       >
-        Ouvrir l’Atelier
+        <span>Ouvrir l’Atelier · 30 secondes</span>
+        <span aria-hidden>→</span>
       </Link>
     </section>
   )

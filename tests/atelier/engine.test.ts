@@ -55,7 +55,7 @@ const atelierProfile = (overrides: Partial<AtelierProfile> = {}): AtelierProfile
   ...overrides,
 })
 
-test('builds the cheapest complete solo podcast setup within 350 EUR from available offers', () => {
+test('spends up to the budget on an equally suitable, self-contained microphone instead of stopping at the cheapest complete chain', () => {
   const result = recommendAtelier([
     product('microphone', 'microphone', 90, { subtype: 'dynamic', connections: ['XLR'], qualities: ['noise rejection'] }),
     product('interface', 'interface', 100, { sourceCapacity: 1, connections: ['XLR', 'USB'] }),
@@ -63,8 +63,11 @@ test('builds the cheapest complete solo podcast setup within 350 EUR from availa
     product('expensive-microphone', 'microphone', 300, { subtype: 'dynamic', qualities: ['noise rejection'] }),
   ], { profile: atelierProfile() })
 
-  assert.deepEqual(result.setup.map(line => line.productId), ['microphone', 'headphones', 'interface'])
-  assert.equal(result.setup.reduce((total, line) => total + line.subtotal, 0), 240)
+  // The 300 EUR USB microphone ties the 90 EUR XLR microphone on suitability (same subtype and
+  // noise-rejection quality) but needs no interface, so the engine now closes the gap to the
+  // 350 EUR budget instead of settling for the cheapest 240 EUR chain.
+  assert.deepEqual(result.setup.map(line => line.productId), ['expensive-microphone', 'headphones'])
+  assert.equal(result.setup.reduce((total, line) => total + line.subtotal, 0), 350)
   assert.deepEqual(result.proof, {
     budgetRespected: true,
     chainComplete: true,
@@ -72,7 +75,7 @@ test('builds the cheapest complete solo podcast setup within 350 EUR from availa
     offersAvailable: true,
   })
   assert.deepEqual(result.conflicts, [])
-  assert.deepEqual(result.candidates.map(item => item.product.productId), ['expensive-microphone'])
+  assert.deepEqual(result.candidates.map(item => item.product.productId), ['microphone'])
 })
 
 test('does not charge for a separate interface with a self-contained solo USB microphone', () => {

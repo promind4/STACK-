@@ -378,13 +378,15 @@ export default async function VersusPage({ params }: VersusPageProps) {
             </div>
 
             {/* RECOMMENDATION BOXES */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-4">
-              <div className="p-6 rounded-2xl bg-background border border-border space-y-3 shadow-sm">
-                <h4 className="font-sans text-xs uppercase tracking-wider font-bold text-foreground flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-primary" />
-                  Optez pour le {productA.name} si :
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-4 items-stretch">
+              <div className="p-6 rounded-2xl bg-background border border-border space-y-3 shadow-sm flex flex-col">
+                <h4 className="font-sans text-xs uppercase tracking-wider font-bold text-foreground flex items-center gap-2 min-h-[1.5rem]">
+                  <span className="w-2.5 h-2.5 rounded-full bg-primary shrink-0" />
+                  <span className="truncate" title={`Choisir le ${productA.name}`}>
+                    Choisir le {productA.name}&nbsp;:
+                  </span>
                 </h4>
-                <ul className="space-y-2.5 text-xs sm:text-sm text-foreground/80">
+                <ul className="space-y-2.5 text-xs sm:text-sm text-foreground/80 flex-1">
                   {analysis.chooseAIf.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <Check size={15} className="text-primary shrink-0 mt-0.5" />
@@ -394,12 +396,14 @@ export default async function VersusPage({ params }: VersusPageProps) {
                 </ul>
               </div>
 
-              <div className="p-6 rounded-2xl bg-background border border-border space-y-3 shadow-sm">
-                <h4 className="font-sans text-xs uppercase tracking-wider font-bold text-foreground flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-primary" />
-                  Optez pour le {productB.name} si :
+              <div className="p-6 rounded-2xl bg-background border border-border space-y-3 shadow-sm flex flex-col">
+                <h4 className="font-sans text-xs uppercase tracking-wider font-bold text-foreground flex items-center gap-2 min-h-[1.5rem]">
+                  <span className="w-2.5 h-2.5 rounded-full bg-primary shrink-0" />
+                  <span className="truncate" title={`Choisir le ${productB.name}`}>
+                    Choisir le {productB.name}&nbsp;:
+                  </span>
                 </h4>
-                <ul className="space-y-2.5 text-xs sm:text-sm text-foreground/80">
+                <ul className="space-y-2.5 text-xs sm:text-sm text-foreground/80 flex-1">
                   {analysis.chooseBIf.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <Check size={15} className="text-primary shrink-0 mt-0.5" />

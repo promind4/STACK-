@@ -15,8 +15,12 @@ import {
 
 /* ─── GUIDE MAPPING : slug catégorie → slug article ─────── */
 const GUIDE_MAP: Record<string, string> = {
-  // Audio général
+  // Audio général & grandes catégories
   'audio':                    'meilleur-micro-podcast-2026',
+  'microphones':              'meilleur-micro-podcast-2026',
+  'interfaces-monitoring':    'top-5-interfaces',
+  'interfaces':               'top-5-interfaces',
+  'accessoires':              'enregistrer-podcast-deux-personnes-setup',
   // Micros
   'micros-dynamiques':        'shure-sm7b-vs-rode-podmic',
   'micros-condensateurs':     'meilleur-micro-podcast-2026',
@@ -41,8 +45,12 @@ const DEFAULT_GUIDE = 'meilleur-micro-podcast-2026';
    bg-micro.webp / bg-shure.webp / bg-carte-son.webp / bg-casque.webp
 ─────────────────────────────────────────────────────────── */
 const CATEGORY_BG: Record<string, string> = {
-  // ── Audio
+  // ── Audio & Grandes catégories
   'audio':                 '/images/editorial/bg-studio-son.webp',
+  'microphones':           '/images/editorial/bg-micro-editorial.png',
+  'interfaces-monitoring': '/images/editorial/bg-interface-editorial.png',
+  'interfaces':            '/images/editorial/bg-interface-editorial.png',
+  'accessoires':           '/images/editorial/bg-studio-son.webp',
   'micros-dynamiques':     '/images/editorial/bg-micro-editorial.png',
   'micros-condensateurs':  '/images/editorial/bg-micro-editorial.png',
   'micros-usb':            '/images/editorial/bg-micro-editorial.png',
@@ -124,8 +132,8 @@ function EditorialCard({ slug }: { slug: string }) {
             <span className="block w-6 h-px bg-primary" aria-hidden />
             Guide complet
           </p>
-          <h3 className="font-serif text-[28px] md:text-[36px] leading-[1.1] tracking-tight mb-3 max-w-md">
-            Vous hésitez encore&nbsp;?<br />
+          <h3 className="font-serif text-[28px] md:text-[36px] leading-[1.1] tracking-tight mb-3 max-w-md text-balance">
+            Vous hésitez encore&nbsp;?{" "}
             <span className="italic text-primary">Lisez notre guide expert.</span>
           </h3>
           <p className="text-[13px] text-white/55 max-w-md leading-relaxed font-light">
@@ -310,17 +318,20 @@ export default function CategoryContent({ products, slug, title, subtitle }: Pro
             </div>
           )}
 
-          {/* CTA LABO */}
+          {/* CTA ATELIER CONFIGURATEUR */}
           <Link
             href="/configurateur"
             className="group block relative overflow-hidden rounded-2xl border border-border bg-foreground text-white p-5 hover:border-primary/40 transition-colors"
           >
             <div className="absolute -top-10 -right-10 w-32 h-32 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(211,178,123,.35) 0%, transparent 60%)', filter: 'blur(20px)' }} aria-hidden />
-            <p className="frame-label text-primary mb-3 relative z-10">Hésitant&nbsp;?</p>
-            <p className="font-serif text-[18px] leading-tight mb-2 relative z-10">L&apos;IA peut choisir <span className="italic text-primary">pour vous.</span></p>
-            <p className="text-[11px] text-white/55 font-light leading-relaxed mb-4 relative z-10">3 minutes, 5 questions, un setup complet.</p>
+            <div className="flex items-center justify-between mb-3 relative z-10">
+              <p className="frame-label text-primary">Configurateur</p>
+              <span className="text-[10px] font-mono bg-white/10 px-2 py-0.5 rounded text-white/80">30s</span>
+            </div>
+            <p className="font-serif text-[18px] leading-tight mb-2 relative z-10">Composer votre chaîne <span className="italic text-primary">idéale.</span></p>
+            <p className="text-[11px] text-white/65 font-light leading-relaxed mb-4 relative z-10">Moins d&apos;une minute, 4 questions simples, 100% impartial.</p>
             <span className="inline-flex items-center gap-2 text-[11px] font-mono text-primary uppercase tracking-wider group-hover:translate-x-1 transition-transform relative z-10">
-              Lancer le Labo IA
+              Ouvrir l’Atelier
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </span>
           </Link>
@@ -360,10 +371,14 @@ export default function CategoryContent({ products, slug, title, subtitle }: Pro
         )}
 
         {/* Toolbar */}
-        <div className="flex items-baseline justify-between mb-8 pb-5 border-b border-border/60">
-          <div className="flex items-baseline gap-4">
+        <div className="flex items-center justify-between mb-8 pb-5 border-b border-border/60 flex-wrap gap-3">
+          <div className="flex items-center gap-4">
+            <span className="text-[12px] font-mono text-foreground/60 flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+              Avis vérifiés marchands &amp; fiches constructeurs
+            </span>
             {hasFilters && (
-              <span className="frame-label text-foreground/45">Filtres actifs</span>
+              <span className="frame-label text-foreground/45">· Filtres actifs</span>
             )}
           </div>
           {selectedBrands.length > 0 && (

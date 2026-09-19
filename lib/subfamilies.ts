@@ -77,9 +77,51 @@ export const CATEGORY_SUBFAMILIES: Record<string, SubfamilyFilter[]> = {
     { id: 'panneaux', label: 'Panneaux & Diffuseurs' },
     { id: 'bass-traps', label: 'Bass Traps & Découpleurs' },
   ],
+  'microphones': [
+    { id: 'all', label: 'Tous les micros' },
+    { id: 'dynamiques', label: 'Micros Dynamiques' },
+    { id: 'condensateurs', label: 'Micros Condensateurs' },
+    { id: 'usb', label: 'Micros USB' },
+    { id: 'shotgun', label: 'Micros Shotgun' },
+  ],
+  'interfaces-monitoring': [
+    { id: 'all', label: 'Tous les équipements' },
+    { id: 'cartes-son', label: 'Cartes son & Interfaces' },
+    { id: 'preamplis', label: 'Préamplis & Boosters' },
+    { id: 'casques', label: 'Casques studio' },
+    { id: 'enceintes', label: 'Enceintes de monitoring' },
+  ],
+  'interfaces': [
+    { id: 'all', label: 'Tous les équipements' },
+    { id: 'cartes-son', label: 'Cartes son & Interfaces' },
+    { id: 'preamplis', label: 'Préamplis & Boosters' },
+    { id: 'casques', label: 'Casques studio' },
+    { id: 'enceintes', label: 'Enceintes de monitoring' },
+  ],
+  'accessoires': [
+    { id: 'all', label: 'Tous les accessoires' },
+    { id: 'bras', label: 'Bras articulés' },
+    { id: 'cables', label: 'Câbles XLR' },
+    { id: 'acoustique', label: 'Traitement acoustique' },
+  ],
+  'audio': [
+    { id: 'all', label: 'Tout le studio' },
+    { id: 'micros', label: 'Microphones' },
+    { id: 'interfaces', label: 'Cartes son & Préamplis' },
+    { id: 'monitoring', label: 'Casques & Enceintes' },
+    { id: 'accessoires', label: 'Accessoires studio' },
+  ],
 };
 
 export function getProductTechnicalTag(product: Product, categorySlug: string): string | null {
+  // If viewing a major parent vertical, delegate to product's specific subcategory
+  if (['audio', 'microphones', 'interfaces-monitoring', 'interfaces', 'accessoires'].includes(categorySlug)) {
+    const actualSubcategory = product.category_slug || '';
+    if (actualSubcategory && actualSubcategory !== categorySlug) {
+      return getProductTechnicalTag(product, actualSubcategory);
+    }
+  }
+
   const name = (product.name || '').toLowerCase();
   const desc = (product.description || '').toLowerCase();
   const brand = (product.brand || '').toLowerCase();
@@ -260,6 +302,68 @@ export function matchesSubfamily(product: Product, categorySlug: string, subfami
   const desc = (product.description || '').toLowerCase();
   const slug = (product.slug || '').toLowerCase();
   const text = `${name} ${desc} ${slug}`;
+  const catSlug = product.category_slug || '';
+
+  // ── Filtres pour la grande catégorie Microphones
+  if (categorySlug === 'microphones') {
+    if (subfamilyId === 'dynamiques') {
+      return catSlug === 'micros-dynamiques' || slug.includes('sm7') || slug.includes('podmic') || slug.includes('sm58') || slug.includes('re20') || text.includes('dynamique');
+    }
+    if (subfamilyId === 'condensateurs') {
+      return catSlug === 'micros-condensateurs' || slug.includes('nt1') || slug.includes('c414') || slug.includes('tlm') || slug.includes('at2020') || text.includes('condensateur');
+    }
+    if (subfamilyId === 'usb') {
+      return catSlug === 'micros-usb' || slug.includes('usb') || text.includes('usb');
+    }
+    if (subfamilyId === 'shotgun') {
+      return catSlug === 'micros-shotgun' || slug.includes('shotgun') || slug.includes('videomic') || slug.includes('mke') || slug.includes('ntg');
+    }
+  }
+
+  // ── Filtres pour la grande catégorie Interfaces & Monitoring
+  if (categorySlug === 'interfaces-monitoring' || categorySlug === 'interfaces') {
+    if (subfamilyId === 'cartes-son') {
+      return catSlug === 'cartes-son' || slug.includes('scarlett') || slug.includes('volt') || slug.includes('evo') || slug.includes('motu') || slug.includes('apollo') || text.includes('carte son') || text.includes('interface');
+    }
+    if (subfamilyId === 'preamplis') {
+      return catSlug === 'preamplis' || slug.includes('cloudlifter') || slug.includes('fethead') || slug.includes('dbx') || slug.includes('pre-73') || text.includes('preampli');
+    }
+    if (subfamilyId === 'casques') {
+      return catSlug === 'casques-studio' || slug.includes('dt-') || slug.includes('dt770') || slug.includes('dt990') || slug.includes('ath-m') || slug.includes('hd-') || text.includes('casque');
+    }
+    if (subfamilyId === 'enceintes') {
+      return catSlug === 'enceintes' || slug.includes('hs') || slug.includes('lp-') || slug.includes('in-') || slug.includes('alpha') || slug.includes('t5v') || slug.includes('t7v') || text.includes('enceinte') || text.includes('moniteur');
+    }
+  }
+
+  // ── Filtres pour la grande catégorie Accessoires
+  if (categorySlug === 'accessoires') {
+    if (subfamilyId === 'bras') {
+      return catSlug === 'bras-articules' || slug.includes('arm') || slug.includes('psa1') || slug.includes('wave-mic-arm') || slug.includes('ds2') || text.includes('bras');
+    }
+    if (subfamilyId === 'cables') {
+      return catSlug === 'cable-xlr' || slug.includes('cable') || slug.includes('xlr') || slug.includes('cordial') || text.includes('cable');
+    }
+    if (subfamilyId === 'acoustique') {
+      return catSlug === 'traitement-acoustique' || slug.includes('mousse') || slug.includes('panneau') || slug.includes('screen') || slug.includes('trap') || text.includes('acoustique');
+    }
+  }
+
+  // ── Filtres pour la catégorie globale Audio
+  if (categorySlug === 'audio') {
+    if (subfamilyId === 'micros') {
+      return ['micros-dynamiques', 'micros-condensateurs', 'micros-usb', 'micros-shotgun', 'microphones'].includes(catSlug) || text.includes('micro');
+    }
+    if (subfamilyId === 'interfaces') {
+      return ['cartes-son', 'preamplis', 'interfaces-monitoring', 'interfaces'].includes(catSlug) || text.includes('interface') || text.includes('carte son') || text.includes('preampli');
+    }
+    if (subfamilyId === 'monitoring') {
+      return ['casques-studio', 'enceintes'].includes(catSlug) || text.includes('casque') || text.includes('enceinte');
+    }
+    if (subfamilyId === 'accessoires') {
+      return ['bras-articules', 'cable-xlr', 'traitement-acoustique', 'accessoires'].includes(catSlug) || text.includes('bras') || text.includes('cable');
+    }
+  }
 
   // ── Premier équipement / budget
   if (subfamilyId === 'premier-prix') {

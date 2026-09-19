@@ -37,9 +37,16 @@ async function getRelatedProducts(product: Product): Promise<Product[]> {
         .eq("category_id", product.category_id)
         .neq("id", product.id)
         .eq("is_active", true)
-        .limit(3);
+        .limit(12);
     if (!data) return [];
-    return (data as any[]).map((p) => transformProduct(p));
+    return (data as any[])
+        .map((p) => transformProduct(p))
+        .sort((a, b) => {
+            const distanceA = Math.abs((a.price || 0) - (product.price || 0));
+            const distanceB = Math.abs((b.price || 0) - (product.price || 0));
+            return distanceA - distanceB;
+        })
+        .slice(0, 3);
 }
 
 async function getCategory(categoryId: string | undefined): Promise<{ name: string; slug: string } | null> {

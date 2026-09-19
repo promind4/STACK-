@@ -513,24 +513,44 @@ export function recommendAtelier(
       ...requirements.map(requirement => requirement.role),
       ...expanded.selections.keys(),
     ])
-    for (const role of upgradeRoles) {
-      const current = primary.get(role) ?? expanded.selections.get(role)
-      if (!current || current.locked) continue
-      const upgrades = pool
-        .filter(item => item.role === role && suitability(item, profile) > suitability(current.candidate, profile))
-        .sort((a, b) => suitability(b, profile) - suitability(a, profile) || a.product.price - b.product.price)
-      for (const upgrade of upgrades) {
-        const trialPrimary = new Map(primary).set(role, { candidate: upgrade, quantity: current.quantity })
-        const trial = expand(trialPrimary, pool, profile, locked.extras)
-        if (connectionsVerified(trial.selections, profile, false, locked.extras)
-          && total(trial.selections, locked.extras) <= profile.budget) {
-          primary = trialPrimary
-          expanded = trial
-          for (const dependencyRole of expanded.selections.keys()) upgradeRoles.add(dependencyRole)
-          break
+
+    // Repeatedly sweep every role for a strictly better or strictly pricier (never worse)
+    // fit until nothing changes, instead of stopping at the first improvement per role.
+    const sweep = (pickCandidates: (role: AtelierRole, current: Selection) => Candidate[]) => {
+      let changed = true
+      while (changed) {
+        changed = false
+        for (const role of upgradeRoles) {
+          const current = primary.get(role) ?? expanded.selections.get(role)
+          if (!current || current.locked) continue
+          for (const candidate of pickCandidates(role, current)) {
+            const trialPrimary = new Map(primary).set(role, { candidate, quantity: current.quantity })
+            const trial = expand(trialPrimary, pool, profile, locked.extras)
+            if (connectionsVerified(trial.selections, profile, false, locked.extras)
+              && total(trial.selections, locked.extras) <= profile.budget) {
+              primary = trialPrimary
+              expanded = trial
+              for (const dependencyRole of expanded.selections.keys()) upgradeRoles.add(dependencyRole)
+              changed = true
+              break
+            }
+          }
         }
       }
     }
+
+    // Pass 1: apply every quality upgrade available (strictly better suitability), not just one.
+    sweep((role, current) => pool
+      .filter(item => item.role === role && suitability(item, profile) > suitability(current.candidate, profile))
+      .sort((a, b) => suitability(b, profile) - suitability(a, profile) || a.product.price - b.product.price))
+
+    // Pass 2: once quality is maxed out, spend remaining budget on pricier options of at
+    // least equal suitability (never a downgrade), closing the gap to the budget ceiling.
+    sweep((role, current) => pool
+      .filter(item => item.role === role
+        && item.product.price > current.candidate.product.price
+        && suitability(item, profile) >= suitability(current.candidate, profile))
+      .sort((a, b) => b.product.price - a.product.price))
   }
 
   const connectionFailure = !connectionsVerified(expanded.selections, profile, true, locked.extras)

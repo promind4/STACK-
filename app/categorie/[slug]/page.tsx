@@ -16,6 +16,10 @@ import { isPublicAudioCategory, AUDIO_CATEGORY_SLUGS } from "@/lib/public-audio-
 const BANNER_MAP: Record<string, string> = {
   // Studio & Son
   audio:                  '/images/editorial/banner-studio-son.webp',
+  microphones:            '/images/editorial/banner-studio-son.webp',
+  'interfaces-monitoring':'/images/editorial/banner-studio-son.webp',
+  interfaces:             '/images/editorial/banner-studio-son.webp',
+  accessoires:            '/images/editorial/banner-studio-son.webp',
   'micros-dynamiques':    '/images/editorial/banner-studio-son.webp',
   'micros-condensateurs': '/images/editorial/banner-studio-son.webp',
   'micros-usb':           '/images/editorial/banner-studio-son.webp',
@@ -36,12 +40,36 @@ export const dynamicParams = true;
 type Question = { num: string; title: string; desc: string };
 
 const CATEGORY_QUESTIONS: Record<string, Question[]> = {
-  // ── AUDIO GÉNÉRAL
+  // ── AUDIO GÉNÉRAL & GRANDES CATÉGORIES
   audio: [
     { num: "01", title: "L'environnement",   desc: "Pièce traitée ou bruyante ? Votre acoustique détermine le type de micro — dynamique pour les espaces bruyants, condensateur pour les studios silencieux." },
     { num: "02", title: "La connectique",     desc: "USB pour la simplicité plug-and-play, XLR pour la qualité et l'évolutivité. L'interface audio fait le pont entre votre voix et l'ordinateur." },
     { num: "03", title: "L'usage",            desc: "Podcast, stream, chant ou voice-over ? Chaque cas impose un micro, une interface et un monitoring adaptés." },
     { num: "04", title: "La compatibilité",   desc: "Chaque élément est un maillon. Vérifiez que votre micro, interface et logiciel fonctionnent ensemble avant d'acheter." },
+  ],
+  microphones: [
+    { num: "01", title: "Dynamique ou condensateur ?", desc: "Dynamique pour la voix parlée en environnement non traité ; condensateur pour les détails subtils et la sensibilité en studio calme." },
+    { num: "02", title: "Connectique XLR ou USB ?", desc: "L'USB offre une simplicité immédiate sans interface audio. Le XLR offre une chaîne modulaire évolutive et une qualité studio professionnelle." },
+    { num: "03", title: "L'acoustique de votre pièce", desc: "Plus un micro est sensible (condensateur), plus il capture les réflexions et réverbérations de la pièce. Adaptez votre choix à votre environnement." },
+    { num: "04", title: "La préamplification", desc: "Certains micros dynamiques mythiques (comme le Shure SM7B) exigent au moins 60 dB de gain propre ou un booster de type Cloudlifter." },
+  ],
+  "interfaces-monitoring": [
+    { num: "01", title: "Nombre d'entrées / sorties", desc: "1 entrée pour une voix isolée, 2 entrées pour micro + instrument ou duo, 4+ entrées pour l'enregistrement d'ensemble." },
+    { num: "02", title: "Qualité des préamplis & gain", desc: "Privilégiez des préamplis transparents avec au moins 58 à 65 dB de gain propre et un faible bruit de fond plancher." },
+    { num: "03", title: "Casque ouvert ou fermé ?", desc: "Casque fermé indispensable pour l'enregistrement (évite les repisses) ; casque ouvert idéal pour le mixage de précision." },
+    { num: "04", title: "Écoute neutre de référence", desc: "Des enceintes de monitoring actives associées à un bon découplage acoustique vous permettent d'entendre la véritable dynamique du son." },
+  ],
+  interfaces: [
+    { num: "01", title: "Nombre d'entrées / sorties", desc: "1 entrée pour une voix isolée, 2 entrées pour micro + instrument ou duo, 4+ entrées pour l'enregistrement d'ensemble." },
+    { num: "02", title: "Qualité des préamplis & gain", desc: "Privilégiez des préamplis transparents avec au moins 58 à 65 dB de gain propre et un faible bruit de fond plancher." },
+    { num: "03", title: "Casque ouvert ou fermé ?", desc: "Casque fermé indispensable pour l'enregistrement (évite les repisses) ; casque ouvert idéal pour le mixage de précision." },
+    { num: "04", title: "Écoute neutre de référence", desc: "Des enceintes de monitoring actives associées à un bon découplage acoustique vous permettent d'entendre la véritable dynamique du son." },
+  ],
+  accessoires: [
+    { num: "01", title: "Stabilité & découplage mécanique", desc: "Un bras articulé solide et une suspension antichoc éliminent les vibrations transmises par le bureau et les bruits de frappe." },
+    { num: "02", title: "Qualité des câbles XLR", desc: "Un câble symétrique doublement blindé (cuivre désoxygéné, fiches Neutrik) protège des parasites radio et électromagnétiques." },
+    { num: "03", title: "Traitement des premières réflexions", desc: "Traiter les murs latéraux et le plafond au niveau du point d'enregistrement assainit immédiatement la clarté vocale." },
+    { num: "04", title: "Accessoires indispensables", desc: "Filtre anti-pop, bonnette anti-vent et adaptateurs de filetage sont les garants d'une captation vocale propre sans plosives." },
   ],
   // ── MICROS DYNAMIQUES
   "micros-dynamiques": [
@@ -133,6 +161,10 @@ const DEFAULT_QUESTIONS: Question[] = [
 // Category metadata dictionary
 const CATEGORY_METADATA: Record<string, { title: string; subtitle: string }> = {
     audio: { title: "Studio & Son", subtitle: "Tout le matériel audio pour votre studio créatif." },
+    microphones: { title: "Microphones Studio", subtitle: "Tous les micros dynamiques, condensateurs, USB et shotgun pour vos enregistrements." },
+    "interfaces-monitoring": { title: "Interfaces & Monitoring", subtitle: "Cartes son, préamplis, casques et enceintes de studio." },
+    interfaces: { title: "Interfaces Audio & Monitoring", subtitle: "Cartes son, préamplis, casques et enceintes de studio." },
+    accessoires: { title: "Accessoires Studio & Son", subtitle: "Bras articulés, câbles XLR et traitement acoustique indispensables." },
     "micros-dynamiques": { title: "Micros Dynamiques", subtitle: "Robustesse et fiabilité pour la scène et le studio." },
     "micros-condensateurs": { title: "Micros Condensateurs", subtitle: "Précision et détails pour le studio (XLR)." },
     "micros-usb": { title: "Micros USB", subtitle: "La simplicité plug-and-play sans compromis." },
@@ -152,6 +184,19 @@ const VERTICALS: Record<string, string[]> = {
         "micros-dynamiques", "micros-condensateurs", "micros-usb", "micros-shotgun",
         "cartes-son", "preamplis", "casques-studio", "enceintes",
         "bras-articules", "cable-xlr", "traitement-acoustique",
+        "microphones", "interfaces-monitoring", "interfaces", "interface-et-son", "accessoires",
+    ],
+    microphones: [
+        "micros-dynamiques", "micros-condensateurs", "micros-usb", "micros-shotgun", "microphones",
+    ],
+    "interfaces-monitoring": [
+        "cartes-son", "preamplis", "casques-studio", "enceintes", "interface-et-son", "interfaces-monitoring", "interfaces",
+    ],
+    interfaces: [
+        "cartes-son", "preamplis", "casques-studio", "enceintes", "interface-et-son", "interfaces-monitoring", "interfaces",
+    ],
+    accessoires: [
+        "bras-articules", "cable-xlr", "traitement-acoustique", "accessoires",
     ],
 };
 
@@ -173,7 +218,7 @@ async function getProducts(slug: string): Promise<Product[]> {
         const categoryIds = categories.map((c) => c.id);
         const { data } = await supabase
             .from("products")
-            .select("*, product_offers(*)")
+            .select("*, product_offers(*), categories(id, name, slug)")
             .in("category_id", categoryIds)
             .eq("is_active", true)
             .order("name");
@@ -192,7 +237,7 @@ async function getProducts(slug: string): Promise<Product[]> {
 
     const { data } = await supabase
         .from("products")
-        .select("*, product_offers(*)")
+        .select("*, product_offers(*), categories(id, name, slug)")
         .eq("category_id", cat.id)
         .eq("is_active", true)
         .order("name");
@@ -339,8 +384,7 @@ export default async function CategoryPage({ params }: Props) {
                                 Mode d&apos;emploi
                             </p>
                             <h2 className="font-serif text-foreground text-[30px] sm:text-[40px] md:text-[50px] leading-[1.12] tracking-tight mb-6 text-balance">
-                                Bien choisir<br />
-                                votre matériel<br />
+                                Bien choisir votre matériel{" "}
                                 <span className="italic text-primary">en 4 questions.</span>
                             </h2>
                             <p className="text-[15px] text-foreground/80 leading-[1.7] font-normal max-w-[420px]">

@@ -60,7 +60,7 @@ export const ProductDuelModal: React.FC = () => {
       try {
         const { data, error } = await supabase
           .from('products')
-          .select('*, product_offers(*)')
+          .select('*, product_offers(*), categories(id, name, slug)')
           .in('slug', [itemA.slug, itemB.slug]);
 
         if (error) throw error;
@@ -117,11 +117,11 @@ export const ProductDuelModal: React.FC = () => {
               <Swords size={16} />
             </span>
             <div>
-              <span className="text-[11px] font-mono uppercase tracking-[0.14em] text-primary font-bold block">
+              <span className="text-[11px] font-sans uppercase tracking-[0.14em] text-primary font-bold block">
                 Le Duel • Atelier Fluxlab
               </span>
-              <h2 className="text-base sm:text-lg font-serif font-bold text-foreground leading-tight">
-                {productA?.name} <span className="text-primary font-sans text-sm">vs</span> {productB?.name}
+              <h2 className="text-base sm:text-lg font-sans font-bold text-foreground leading-tight">
+                {productA?.name} <span className="text-primary font-sans text-sm font-normal">vs</span> {productB?.name}
               </h2>
             </div>
           </div>
@@ -131,7 +131,7 @@ export const ProductDuelModal: React.FC = () => {
               href={`/versus/${productA.slug}-vs-${productB.slug}`}
               onClick={closeModal}
               title="Ouvrir la page complète / Partager"
-              className="hidden sm:inline-flex items-center gap-1.5 text-xs font-mono text-foreground/70 hover:text-primary px-3 py-1.5 rounded-full bg-secondary/70 hover:bg-secondary transition-colors"
+              className="hidden sm:inline-flex items-center gap-1.5 text-xs font-sans font-medium text-foreground/70 hover:text-primary px-3 py-1.5 rounded-full bg-secondary/70 hover:bg-secondary transition-colors"
             >
               <span>Page dédiée</span>
               <ExternalLink size={12} />
@@ -154,7 +154,7 @@ export const ProductDuelModal: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 relative pt-2">
             {/* VS Badge in Middle (Desktop) */}
             <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 items-center justify-center pointer-events-none">
-              <div className="w-12 h-12 rounded-full bg-foreground text-background border-4 border-background flex items-center justify-center shadow-lg font-mono font-bold text-xs tracking-wider">
+              <div className="w-12 h-12 rounded-full bg-foreground text-background border-4 border-background flex items-center justify-center shadow-lg font-sans font-bold text-xs tracking-wider">
                 VS
               </div>
             </div>
@@ -164,14 +164,14 @@ export const ProductDuelModal: React.FC = () => {
               analysis?.bestValueSlug === productA.slug ? 'border-primary/60 shadow-md ring-1 ring-primary/30' : 'border-border'
             }`}>
               {analysis?.bestValueSlug === productA.slug && (
-                <span className="absolute -top-3 left-4 bg-primary text-primary-foreground text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                <span className="absolute -top-3 left-4 bg-primary text-primary-foreground text-[10px] font-sans font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
                   <Sparkles size={11} /> Meilleur Rapport Qualité/Prix
                 </span>
               )}
-              <div className="text-[11px] font-mono uppercase tracking-[0.14em] text-foreground/60 mb-1">
+              <div className="text-[11px] font-sans uppercase tracking-[0.14em] text-foreground/60 mb-1">
                 {productA.brand}
               </div>
-              <h3 className="font-serif text-xl sm:text-2xl font-bold text-foreground mb-3">
+              <h3 className="font-sans text-xl sm:text-2xl font-bold text-foreground mb-3">
                 {productA.name}
               </h3>
 
@@ -194,10 +194,10 @@ export const ProductDuelModal: React.FC = () => {
 
               <div className="mt-auto pt-3 border-t border-border/60 flex items-center justify-between gap-3">
                 <div>
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-foreground/60 block">
+                  <span className="text-[10px] font-sans uppercase tracking-wider text-foreground/60 block">
                     Meilleur prix
                   </span>
-                  <span className="font-serif text-2xl font-bold text-foreground">
+                  <span className="font-sans text-2xl font-bold text-foreground">
                     {productA.price ? `${productA.price.toLocaleString('fr-FR')} €` : 'N.C.'}
                   </span>
                 </div>
@@ -232,14 +232,14 @@ export const ProductDuelModal: React.FC = () => {
               analysis?.bestValueSlug === productB.slug ? 'border-primary/60 shadow-md ring-1 ring-primary/30' : 'border-border'
             }`}>
               {analysis?.bestValueSlug === productB.slug && (
-                <span className="absolute -top-3 left-4 bg-primary text-primary-foreground text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                <span className="absolute -top-3 left-4 bg-primary text-primary-foreground text-[10px] font-sans font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
                   <Sparkles size={11} /> Meilleur Rapport Qualité/Prix
                 </span>
               )}
-              <div className="text-[11px] font-mono uppercase tracking-[0.14em] text-foreground/60 mb-1">
+              <div className="text-[11px] font-sans uppercase tracking-[0.14em] text-foreground/60 mb-1">
                 {productB.brand}
               </div>
-              <h3 className="font-serif text-xl sm:text-2xl font-bold text-foreground mb-3">
+              <h3 className="font-sans text-xl sm:text-2xl font-bold text-foreground mb-3">
                 {productB.name}
               </h3>
 
@@ -262,10 +262,10 @@ export const ProductDuelModal: React.FC = () => {
 
               <div className="mt-auto pt-3 border-t border-border/60 flex items-center justify-between gap-3">
                 <div>
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-foreground/60 block">
+                  <span className="text-[10px] font-sans uppercase tracking-wider text-foreground/60 block">
                     Meilleur prix
                   </span>
-                  <span className="font-serif text-2xl font-bold text-foreground">
+                  <span className="font-sans text-2xl font-bold text-foreground">
                     {productB.price ? `${productB.price.toLocaleString('fr-FR')} €` : 'N.C.'}
                   </span>
                 </div>
@@ -299,10 +299,10 @@ export const ProductDuelModal: React.FC = () => {
           {/* 2. TECHNICAL SPECS MATRIX */}
           <section className="pt-8 space-y-4">
             <div className="flex items-center justify-between">
-              <h4 className="font-serif text-lg font-bold text-foreground flex items-center gap-2">
+              <h4 className="font-sans text-lg font-bold text-foreground flex items-center gap-2">
                 <span>Comparaison Technique & Acoustique</span>
               </h4>
-              <span className="text-[11px] font-mono text-foreground/50 hidden sm:inline">
+              <span className="text-[11px] font-sans text-foreground/50 hidden sm:inline">
                 Données certifiées Atelier Fluxlab
               </span>
             </div>
@@ -310,16 +310,16 @@ export const ProductDuelModal: React.FC = () => {
             <div className="overflow-hidden rounded-2xl border border-border bg-card">
               <table className="w-full text-left text-xs sm:text-sm border-collapse">
                 <thead>
-                  <tr className="bg-secondary/40 border-b border-border text-[11px] font-mono uppercase tracking-wider text-foreground/70">
+                  <tr className="bg-secondary/40 border-b border-border text-[11px] font-sans uppercase tracking-wider text-foreground/70">
                     <th className="p-3 sm:p-4 w-1/3">Caractéristique</th>
                     <th className="p-3 sm:p-4 w-1/3 text-foreground font-bold">{productA.name}</th>
                     <th className="p-3 sm:p-4 w-1/3 text-foreground font-bold">{productB.name}</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-border/60">
+                <tbody className="divide-y divide-border/60 font-sans">
                   {analysis?.specs.map((spec, i) => (
                     <tr key={i} className="hover:bg-secondary/20 transition-colors">
-                      <td className="p-3 sm:p-4 font-medium text-foreground/80 font-mono text-xs">
+                      <td className="p-3 sm:p-4 font-medium text-foreground/80 text-xs">
                         {spec.label}
                       </td>
                       <td className={`p-3 sm:p-4 ${spec.winner === 'A' ? 'font-semibold text-primary' : 'text-foreground/90'}`}>
@@ -354,36 +354,75 @@ export const ProductDuelModal: React.FC = () => {
                     <ShieldCheck size={22} />
                   </span>
                   <div>
-                    <span className="text-[11px] font-mono uppercase tracking-[0.14em] text-primary font-bold block">
-                      Analyse Comparative Sur-Mesure
+                    <span className="text-[11px] font-sans uppercase tracking-[0.14em] text-primary font-bold block">
+                      {analysis.isComparable === false ? 'Analyse de Synergie' : 'Analyse Comparative Sur-Mesure'}
                     </span>
-                    <h3 className="font-serif text-xl sm:text-2xl font-bold text-foreground">
+                    <h3 className="font-sans text-xl sm:text-2xl font-bold text-foreground">
                       Le Verdict de l'Atelier Fluxlab
                     </h3>
                   </div>
                 </div>
 
-                <div className="space-y-4 text-sm sm:text-[15px] leading-relaxed text-foreground/85">
-                  <p className="font-medium text-foreground text-base">
-                    {analysis.title} — {analysis.subtitle}
-                  </p>
-                  <p dangerouslySetInnerHTML={{ __html: analysis.verdictLead }} />
-                  <p>{analysis.acousticAnalysis}</p>
-                  <div className="p-4 rounded-xl bg-background/80 border border-border text-xs sm:text-sm font-mono text-foreground/80 flex items-start gap-2.5">
-                    <Zap size={16} className="text-primary shrink-0 mt-0.5" />
-                    <span>{analysis.hardwareRequirements}</span>
+                {analysis.isComparable === false && (
+                  <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-400/30 text-xs sm:text-sm text-foreground space-y-1">
+                    <strong className="text-amber-600 dark:text-amber-400 font-bold block">
+                      Produits de catégories différentes
+                    </strong>
+                    <p className="text-foreground/80 mb-0 font-light leading-relaxed">
+                      {analysis.incompatibleReason || 'Ces deux équipements appartiennent à des catégories différentes et sont complémentaires plutôt que concurrents.'}
+                    </p>
+                  </div>
+                )}
+
+                <div className="space-y-5 text-sm sm:text-[15px] leading-relaxed text-foreground/85">
+                  <div className="space-y-1">
+                    <h4 className="font-sans text-lg sm:text-xl font-bold text-foreground">
+                      {analysis.title}
+                    </h4>
+                    <p className="text-xs sm:text-sm font-sans text-primary font-medium">
+                      {analysis.subtitle}
+                    </p>
+                  </div>
+
+                  <div 
+                    className="leading-relaxed text-foreground/85 font-sans" 
+                    dangerouslySetInnerHTML={{ __html: analysis.verdictLead }} 
+                  />
+
+                  {/* Carte 1 : Signature Acoustique ou Performance */}
+                  <div className="p-4 sm:p-5 rounded-2xl bg-background/80 border border-border/80 space-y-2">
+                    <h5 className="font-sans text-xs uppercase tracking-wider font-bold text-foreground flex items-center gap-2">
+                      <Sparkles size={14} className="text-primary" />
+                      {analysis.card1Title || 'Signature Sonore & Rendu Acoustique'}
+                    </h5>
+                    <p className="text-sm leading-relaxed text-foreground/85 font-light font-sans">
+                      {analysis.acousticAnalysis}
+                    </p>
+                  </div>
+
+                  {/* Carte 2 : Chaîne Matérielle & Prérequis */}
+                  <div className="p-4 sm:p-5 rounded-2xl bg-background/80 border border-border/80 space-y-2">
+                    <h5 className="font-sans text-xs uppercase tracking-wider font-bold text-foreground flex items-center gap-2">
+                      <Zap size={14} className="text-primary" />
+                      {analysis.card2Title || 'Chaîne Matérielle & Alimentation'}
+                    </h5>
+                    <p className="text-sm leading-relaxed text-foreground/85 font-light font-sans">
+                      {analysis.hardwareRequirements}
+                    </p>
                   </div>
                 </div>
 
                 {/* DECISION GUIDANCE: CHOOSE A IF / CHOOSE B IF */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2 items-stretch">
                   {/* Choose A */}
-                  <div className="p-5 rounded-2xl bg-background border border-border/80 space-y-3">
-                    <h5 className="font-mono text-xs uppercase tracking-wider font-bold text-foreground flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-primary" />
-                      Optez pour le {productA.name} si :
+                  <div className="p-5 rounded-2xl bg-background border border-border/80 space-y-3 flex flex-col">
+                    <h5 className="font-sans text-xs uppercase tracking-wider font-bold text-foreground flex items-center gap-2 min-h-[1.5rem]">
+                      <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                      <span className="truncate" title={`Choisir le ${productA.name}`}>
+                        Choisir le {productA.name}&nbsp;:
+                      </span>
                     </h5>
-                    <ul className="space-y-2 text-xs sm:text-sm text-foreground/80">
+                    <ul className="space-y-2 text-xs sm:text-sm text-foreground/80 font-sans flex-1">
                       {analysis.chooseAIf.map((item, idx) => (
                         <li key={idx} className="flex items-start gap-2">
                           <Check size={14} className="text-primary shrink-0 mt-0.5" />
@@ -394,12 +433,14 @@ export const ProductDuelModal: React.FC = () => {
                   </div>
 
                   {/* Choose B */}
-                  <div className="p-5 rounded-2xl bg-background border border-border/80 space-y-3">
-                    <h5 className="font-mono text-xs uppercase tracking-wider font-bold text-foreground flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-primary" />
-                      Optez pour le {productB.name} si :
+                  <div className="p-5 rounded-2xl bg-background border border-border/80 space-y-3 flex flex-col">
+                    <h5 className="font-sans text-xs uppercase tracking-wider font-bold text-foreground flex items-center gap-2 min-h-[1.5rem]">
+                      <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                      <span className="truncate" title={`Choisir le ${productB.name}`}>
+                        Choisir le {productB.name}&nbsp;:
+                      </span>
                     </h5>
-                    <ul className="space-y-2 text-xs sm:text-sm text-foreground/80">
+                    <ul className="space-y-2 text-xs sm:text-sm text-foreground/80 font-sans flex-1">
                       {analysis.chooseBIf.map((item, idx) => (
                         <li key={idx} className="flex items-start gap-2">
                           <Check size={14} className="text-primary shrink-0 mt-0.5" />
@@ -411,7 +452,7 @@ export const ProductDuelModal: React.FC = () => {
                 </div>
 
                 {/* CONCLUSION */}
-                <div className="p-4 rounded-2xl bg-primary/10 border border-primary/20 text-xs sm:text-sm font-medium text-foreground">
+                <div className="p-4 rounded-2xl bg-primary/10 border border-primary/20 text-xs sm:text-sm font-sans font-medium text-foreground">
                   <span className="font-bold text-primary mr-1">Notre synthèse :</span>
                   {analysis.conclusion}
                 </div>
@@ -434,7 +475,7 @@ export const ProductDuelModal: React.FC = () => {
             <Link
               href={`/produit/${productA.slug}`}
               target="_blank"
-              className="text-xs font-mono text-foreground/70 hover:text-primary transition-colors hidden sm:inline"
+              className="text-xs font-sans font-medium text-foreground/70 hover:text-primary transition-colors hidden sm:inline"
             >
               Fiche {productA.name}
             </Link>
@@ -442,7 +483,7 @@ export const ProductDuelModal: React.FC = () => {
             <Link
               href={`/produit/${productB.slug}`}
               target="_blank"
-              className="text-xs font-mono text-foreground/70 hover:text-primary transition-colors hidden sm:inline"
+              className="text-xs font-sans font-medium text-foreground/70 hover:text-primary transition-colors hidden sm:inline"
             >
               Fiche {productB.name}
             </Link>

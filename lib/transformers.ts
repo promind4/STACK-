@@ -108,6 +108,8 @@ export const transformProduct = (raw: any): Product => {
     const product: Product = {
         id: raw.id,
         category_id: raw.category_id,
+        category_slug: raw.category_slug || raw.categories?.slug || undefined,
+        category_name: raw.categories?.name || undefined,
         name: raw.name,
         slug: raw.slug,
         brand: raw.brand || "Marque Inconnue",

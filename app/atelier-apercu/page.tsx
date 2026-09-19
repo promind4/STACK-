@@ -195,11 +195,32 @@ export default function AtelierApercuPage() {
   return (
     <main className="min-h-screen bg-[#0b0b0b] px-5 pb-24 pt-32 text-[#f4efea] sm:px-8">
       <div className="mx-auto max-w-5xl">
-        <p className="mb-5 text-sm tracking-wide text-[#d3b27b]">L’Atelier Fluxlab</p>
+        <div className="mb-4 flex items-center gap-3">
+          <p className="text-sm tracking-wide text-[#d3b27b]">L’Atelier Fluxlab</p>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-[#d3b27b]/30 bg-[#d3b27b]/10 px-2.5 py-0.5 text-xs font-mono text-[#d3b27b]">
+            ⚡ Moins d&apos;une minute (30s)
+          </span>
+        </div>
         <h1 className="max-w-3xl font-serif text-4xl leading-tight sm:text-6xl">Composez votre setup</h1>
         <p className="mt-5 max-w-2xl text-base leading-relaxed text-[#f4efea]/65">
-          Une question à la fois. Vos réponses orientent la sélection ; les produits viennent du vrai catalogue Fluxlab.
+          Une question à la fois, sans friction. Vos réponses orientent la sélection parmi les fiches et avis vérifiés du catalogue audio.
         </p>
+
+        {/* Marqueurs de réassurance et d'autorité */}
+        <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2.5 text-xs font-mono text-[#f4efea]/60">
+          <div className="flex items-center gap-2">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0" />
+            <span>Diagnostic en ~30 secondes</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#d3b27b] shrink-0" />
+            <span>Avis &amp; prix marchands certifiés</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="h-1.5 w-1.5 rounded-full bg-white/40 shrink-0" />
+            <span>Recommandation 100% indépendante</span>
+          </div>
+        </div>
 
         {proposal && <section aria-label="Progression du budget" className="sticky top-20 z-10 mt-8 rounded-xl border border-[#d3b27b]/35 bg-[#171613]/95 px-5 py-4 backdrop-blur-sm">
           <div className="flex flex-wrap items-baseline justify-between gap-2">
@@ -209,7 +230,7 @@ export default function AtelierApercuPage() {
           <div role="progressbar" aria-valuemin={0} aria-valuemax={Math.max(1, budget)} aria-valuenow={Math.min(total, Math.max(1, budget))} aria-valuetext={`${money(total)} sur ${money(budget)}`} className="mt-3 h-1 overflow-hidden rounded-full bg-[#f4efea]/15">
             <div className="h-full bg-[#d3b27b] transition-[width] duration-500 motion-reduce:transition-none" style={{ width: `${budgetUsed}%` }} />
           </div>
-          <p className="mt-2 text-xs text-[#f4efea]/55">{proposal ? 'Montant provisoire : dépenser le reste n’est pas un objectif.' : 'Une piste chiffrée apparaîtra quand votre situation sera connue.'}</p>
+          <p className="mt-2 text-xs text-[#f4efea]/55">{proposal ? `Ce total vise à se rapprocher de votre budget sans le dépasser · ${Math.round(budgetUsed)} % utilisé.` : 'Une piste chiffrée apparaîtra quand votre situation sera connue.'}</p>
         </section>}
 
         <div className="mt-10 grid gap-8 md:grid-cols-[180px_1fr]">
@@ -259,8 +280,7 @@ export default function AtelierApercuPage() {
                       return <button key={`${item.role}-${item.connection ?? 'standard'}`} type="button" aria-pressed={selected} onClick={() => toggleOwned(item.role, item.connection)} className={`min-h-32 rounded-lg border p-5 text-left transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#d3b27b] ${selected ? 'border-[#d3b27b] bg-[#d3b27b]/10' : 'border-[#d3b27b]/25 bg-[#0b0b0b] hover:border-[#d3b27b]'}`}><span className="block font-serif text-xl">{item.name}</span><span className="mt-2 block text-sm text-[#f4efea]/60">{item.detail}</span></button>
                     })}
                   </div>
-                  <button type="button" onClick={() => setStep(4)} disabled={startingPoint !== 'starter' && ownedEquipment.length === 0} className="mt-6 h-12 rounded-md bg-[#d3b27b] px-6 font-medium text-[#0b0b0b] hover:bg-[#e3c897] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d3b27b] disabled:cursor-not-allowed disabled:opacity-40">Continuer</button>
-                  {startingPoint !== 'starter' && ownedEquipment.length === 0 && <p className="mt-3 text-sm text-[#f4efea]/55">Sélectionnez au moins l’élément que vous possédez déjà.</p>}
+                  <button type="button" onClick={() => setStep(4)} className="mt-6 h-12 rounded-md bg-[#d3b27b] px-6 font-medium text-[#0b0b0b] hover:bg-[#e3c897] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d3b27b]">Continuer</button>
                 </>}
 
                 {step === 4 && <>
@@ -283,7 +303,7 @@ export default function AtelierApercuPage() {
                   </div>
                 </>}
 
-                {step > 0 && <button type="button" onClick={() => back(step === 4 && startingPoint === 'starter' ? 2 : step - 1)} disabled={state === 'loading'} className="mt-8 text-sm text-[#f4efea]/65 underline underline-offset-4 hover:text-[#d3b27b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#d3b27b] disabled:opacity-40">Retour au choix précédent</button>}
+                {step > 0 && <button type="button" onClick={() => back(step === 4 && startingPoint === 'starter' ? 2 : step - 1)} disabled={state === 'loading'} className="mt-8 text-sm text-[#f4efea]/65 underline underline-offset-4 hover:text-[#d3b27b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#d3b27b] disabled:opacity-40">Retour</button>}
               </motion.section>
             </AnimatePresence>
           <div aria-live="polite" className="mt-8">

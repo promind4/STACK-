@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { ARTICLES } from '@/lib/articles-meta'
+import { guideCoverImage } from '@/lib/guide-images'
 import { isPublicAudioGuide } from '@/lib/public-audio-scope'
 
 const guideSlugs = [
@@ -37,7 +38,7 @@ export function HomeGuides() {
         <div className="grid gap-6 lg:grid-cols-12">
           <Link href={`/guide/${featuredGuide.slug}`} className="group relative overflow-hidden bg-[#171510] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary lg:col-span-7">
             <div className="relative min-h-[22rem] sm:aspect-[16/10] sm:min-h-0 lg:h-full lg:aspect-auto">
-              {featuredGuide.image ? <Image src={featuredGuide.image} alt="" fill sizes="(min-width: 1024px) 58vw, 100vw" className="object-cover h-full w-full opacity-60 transition-opacity duration-300 group-hover:opacity-75" /> : <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(200,155,82,.3),transparent_45%)]" aria-hidden />}
+              {featuredGuide.image ? <Image src={guideCoverImage(featuredGuide)} alt="" fill sizes="(min-width: 1024px) 58vw, 100vw" className="object-cover h-full w-full opacity-60 transition-opacity duration-300 group-hover:opacity-75" /> : <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(200,155,82,.3),transparent_45%)]" aria-hidden />}
               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 z-10 p-7 sm:p-9">
                 <p className="text-sm text-white/65">{featuredGuide.category} · {featuredGuide.readTime}</p>
@@ -51,7 +52,7 @@ export function HomeGuides() {
             {secondaryGuides.slice(0, 3).map(guide => (
               <Link key={guide.id} href={`/guide/${guide.slug}`} className="group flex gap-5 border border-border/70 bg-card p-5 transition-colors hover:border-primary/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
                 <div className="relative aspect-square w-24 shrink-0 overflow-hidden bg-secondary sm:w-28">
-                  {guide.image ? <Image src={guide.image} alt="" fill sizes="(min-width: 640px) 112px, 96px" className="object-cover h-full w-full" /> : <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(200,155,82,.24),transparent_55%)]" aria-hidden />}
+                  {guide.image ? <Image src={guideCoverImage(guide)} alt="" fill sizes="(min-width: 640px) 112px, 96px" className="object-cover h-full w-full" /> : <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(200,155,82,.24),transparent_55%)]" aria-hidden />}
                 </div>
                 <div className="flex min-w-0 flex-1 flex-col justify-between">
                   <div><p className="mb-2 text-sm text-foreground/60">{guide.category}</p><h3 className="font-serif text-lg leading-tight text-foreground transition-colors group-hover:text-primary">{guide.title}</h3></div>

@@ -1,5 +1,6 @@
-﻿export const AUDIO_CATEGORY_SLUGS = [
-  'audio', 'micros-dynamiques', 'micros-condensateurs', 'micros-usb',
+export const AUDIO_CATEGORY_SLUGS = [
+  'audio', 'microphones', 'interfaces-monitoring', 'interfaces', 'accessoires',
+  'micros-dynamiques', 'micros-condensateurs', 'micros-usb',
   'micros-shotgun', 'cartes-son', 'preamplis', 'casques-studio',
   'enceintes', 'bras-articules', 'cable-xlr', 'traitement-acoustique',
 ] as const

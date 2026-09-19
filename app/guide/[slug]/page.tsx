@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 }
 
 export const revalidate = 86400; // Revalidate daily — guide content is static, product offers update overnight
-export const dynamicParams = false;
+export const dynamicParams = true;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
@@ -73,8 +73,7 @@ function renderEditorialTitle(rawTitle: string) {
         const subtitle = colonMatch[2].trim();
         return (
             <>
-                <span>{mainPart}&nbsp;:</span>
-                <br />
+                <span>{mainPart}&nbsp;: </span>
                 <span className="italic text-primary">{subtitle}</span>
             </>
         );
@@ -87,8 +86,7 @@ function renderEditorialTitle(rawTitle: string) {
         const subtitle = dashMatch[2].trim();
         return (
             <>
-                <span>{mainPart}</span>
-                <br />
+                <span>{mainPart} — </span>
                 <span className="italic text-primary">{subtitle}</span>
             </>
         );
@@ -101,8 +99,7 @@ function renderEditorialTitle(rawTitle: string) {
         const subPart = parenMatch[2].trim();
         return (
             <>
-                <span>{mainPart}</span>
-                <br />
+                <span>{mainPart} </span>
                 <span className="italic text-primary">{subPart}</span>
             </>
         );
@@ -435,7 +432,7 @@ export default async function GuideArticlePage({ params }: Props) {
                             </p>
 
                             {/* Méta — byline éditorial */}
-                            <div className="flex items-center gap-3 text-[13px] font-mono text-white/65 font-medium">
+                            <div className="flex items-center gap-3 text-[13px] font-sans text-white/70 font-medium">
                                 <span>Par {article.author}</span>
                                 <span className="text-white/20">·</span>
                                 <span>Mis à jour le {article.updatedAt || article.date}</span>

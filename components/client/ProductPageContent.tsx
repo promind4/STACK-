@@ -228,9 +228,11 @@ export default function ProductPageContent({ product, category, relatedProducts 
 
             {/* Rating + stock */}
             {(product.rating || 0) > 0 && (
-              <div className="flex items-center gap-3 mb-8">
+              <div className="flex items-center gap-3 mb-8 flex-wrap">
                 <Stars rating={product.rating || 0} />
-                <span className="text-[13px] font-mono text-foreground/75 font-medium">{product.rating} · {(product.review_count || 0).toLocaleString('fr-FR')} avis</span>
+                <span className="text-[13px] font-mono text-foreground/75 font-medium" title="Avis collectés auprès d'acheteurs vérifiés (Thomann, Amazon...)">
+                  {product.rating} · {(product.review_count || 0).toLocaleString('fr-FR')} avis vérifiés marchands
+                </span>
                 <span className="text-foreground/30">·</span>
                 <span className={cn('flex items-center gap-1.5 text-[12px] font-mono font-medium', anyInStock ? 'text-green-600' : 'text-foreground/60')}>
                   <span className={cn('block w-1.5 h-1.5 rounded-full', anyInStock ? 'bg-green-500' : 'bg-foreground/40')} style={anyInStock ? { boxShadow: '0 0 6px rgba(34,197,94,.5)' } : undefined} />
@@ -349,16 +351,29 @@ export default function ProductPageContent({ product, category, relatedProducts 
               </div>
             )}
 
-            {/* Trust — masqué temporairement */}
-            <div className="hidden grid-cols-3 gap-3">
+            {/* Trust & Transparence */}
+            <div className="grid grid-cols-3 gap-2.5 pt-2 mb-6">
               {[
-                { label: 'Indépendant', icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D3B27B" strokeWidth="1.4" aria-hidden><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4Z"/></svg> },
-                { label: 'Testé studio', icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D3B27B" strokeWidth="1.4" aria-hidden><path d="M20 7 9 18l-5-5"/></svg> },
-                { label: 'Prix live', icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D3B27B" strokeWidth="1.4" aria-hidden><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> },
+                { 
+                  label: 'Avis certifiés', 
+                  desc: 'Acheteurs vérifiés (Thomann, Amazon...)', 
+                  icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D3B27B" strokeWidth="1.6" aria-hidden><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> 
+                },
+                { 
+                  label: 'Données vérifiées', 
+                  desc: 'Fiches et impédances constructeurs', 
+                  icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D3B27B" strokeWidth="1.6" aria-hidden><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> 
+                },
+                { 
+                  label: '100% Indépendant', 
+                  desc: 'Comparatif neutre sans sponsoring', 
+                  icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D3B27B" strokeWidth="1.6" aria-hidden><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> 
+                },
               ].map(item => (
-                <div key={item.label} className="text-center p-3">
-                  <div className="flex justify-center mb-2">{item.icon}</div>
-                  <p className="text-[10px] font-mono text-foreground/55 uppercase tracking-wider">{item.label}</p>
+                <div key={item.label} className="p-3 rounded-xl bg-secondary/70 border border-border/70 text-center flex flex-col items-center">
+                  <div className="mb-1.5 text-primary">{item.icon}</div>
+                  <p className="text-[11px] font-sans font-bold text-foreground mb-0.5">{item.label}</p>
+                  <p className="text-[10px] text-foreground/60 leading-tight hidden sm:block">{item.desc}</p>
                 </div>
               ))}
             </div>
