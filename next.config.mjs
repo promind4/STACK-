@@ -80,7 +80,6 @@ const nextConfig = {
       },
     ];
   },
-
   async redirects() {
     return [
       // Cannibalisation "casque studio" — contenu fusionné dans le guide 2026
@@ -91,6 +90,21 @@ const nextConfig = {
         permanent: true,
       },
     ];
+  },
+
+  webpack: (config, { dev }) => {
+    if (dev) {
+      config.watchOptions = {
+        ...config.watchOptions,
+        ignored: [
+          '**/node_modules/**',
+          '**/.git/**',
+          '**/System Volume Information/**',
+          '**/$RECYCLE.BIN/**',
+        ],
+      };
+    }
+    return config;
   },
 };
 
