@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-export const dynamic = 'force-dynamic';
 import { createClient } from '@supabase/supabase-js';
 import { transformProduct } from '@/lib/transformers';
 import { generateDuelAnalysis } from '@/lib/duelEngine';
@@ -20,6 +19,8 @@ import {
   SearchX
 } from 'lucide-react';
 import type { Product } from '@/types/database';
+
+export const dynamic = 'force-dynamic';
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -41,7 +42,7 @@ async function getDuelProducts(slug: string): Promise<[Product | null, Product |
 
   const { data, error } = await supabase
     .from('products')
-    .select('*, product_offers(*)')
+    .select('*, product_offers(*), categories(id, name, slug)')
     .in('slug', [slugA, slugB]);
 
   if (error || !data || data.length < 2) return [null, null];
@@ -90,22 +91,22 @@ export default async function VersusPage({ params }: VersusPageProps) {
       <section className="pt-28 pb-14 bg-gradient-to-b from-secondary/40 via-background to-background border-b border-border">
         <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
           <Link
-            href="/categorie/micros-dynamiques"
+            href={productA.category_slug ? `/categorie/${productA.category_slug}` : '/categorie/micros-dynamiques'}
             className="inline-flex items-center gap-1.5 text-xs font-mono text-foreground/60 hover:text-primary transition-colors mb-8"
           >
             <ChevronLeft size={14} />
-            <span>Retour aux micros dynamiques</span>
+            <span>Retour aux {productA.category_name ? productA.category_name.toLowerCase() : 'produits'}</span>
           </Link>
 
           <div className="text-center max-w-2xl mx-auto mb-10 space-y-3">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest font-sans">
               <Swords size={13} />
               Le Duel • Atelier Fluxlab
             </span>
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight text-foreground">
-              {productA.name} <span className="text-primary/70 font-sans italic font-normal text-2xl sm:text-4xl">vs</span> {productB.name}
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-sans font-bold tracking-tight text-foreground">
+              {productA.name} <span className="text-primary font-sans text-2xl sm:text-4xl font-normal">vs</span> {productB.name}
             </h1>
-            <p className="text-sm sm:text-base text-foreground/75 font-light">
+            <p className="text-sm sm:text-base text-foreground/75 font-light font-sans">
               {analysis.subtitle}
             </p>
           </div>
@@ -124,14 +125,14 @@ export default async function VersusPage({ params }: VersusPageProps) {
               analysis.bestValueSlug === productA.slug ? 'border-primary/60 shadow-lg ring-1 ring-primary/30' : 'border-border'
             }`}>
               {analysis.bestValueSlug === productA.slug && (
-                <span className="absolute -top-3 left-6 bg-primary text-primary-foreground text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                <span className="absolute -top-3 left-6 bg-primary text-primary-foreground text-[10px] font-sans font-bold uppercase tracking-wider px-3 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
                   <Sparkles size={11} /> Meilleur Rapport Qualité/Prix
                 </span>
               )}
-              <div className="text-xs font-mono uppercase tracking-widest text-foreground/60 mb-1">
+              <div className="text-xs font-sans uppercase tracking-widest text-foreground/60 mb-1">
                 {productA.brand}
               </div>
-              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-foreground mb-4">
+              <h2 className="font-sans text-2xl sm:text-3xl font-bold text-foreground mb-4">
                 {productA.name}
               </h2>
 
@@ -147,7 +148,7 @@ export default async function VersusPage({ params }: VersusPageProps) {
                     priority
                   />
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center text-foreground/30 text-xs">
+                  <div className="w-full h-full flex items-center justify-center text-foreground/30 text-xs font-sans">
                     Image indisponible
                   </div>
                 )}
@@ -155,10 +156,10 @@ export default async function VersusPage({ params }: VersusPageProps) {
 
               <div className="mt-auto pt-4 border-t border-border/60 flex items-center justify-between gap-4">
                 <div>
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-foreground/60 block">
+                  <span className="text-[10px] font-sans uppercase tracking-wider text-foreground/60 block">
                     Meilleur prix direct
                   </span>
-                  <span className="font-serif text-3xl font-bold text-foreground">
+                  <span className="font-sans text-3xl font-bold text-foreground">
                     {productA.price ? `${productA.price.toLocaleString('fr-FR')} €` : 'N.C.'}
                   </span>
                 </div>
@@ -192,14 +193,14 @@ export default async function VersusPage({ params }: VersusPageProps) {
               analysis.bestValueSlug === productB.slug ? 'border-primary/60 shadow-lg ring-1 ring-primary/30' : 'border-border'
             }`}>
               {analysis.bestValueSlug === productB.slug && (
-                <span className="absolute -top-3 left-6 bg-primary text-primary-foreground text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                <span className="absolute -top-3 left-6 bg-primary text-primary-foreground text-[10px] font-sans font-bold uppercase tracking-wider px-3 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
                   <Sparkles size={11} /> Meilleur Rapport Qualité/Prix
                 </span>
               )}
-              <div className="text-xs font-mono uppercase tracking-widest text-foreground/60 mb-1">
+              <div className="text-xs font-sans uppercase tracking-widest text-foreground/60 mb-1">
                 {productB.brand}
               </div>
-              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-foreground mb-4">
+              <h2 className="font-sans text-2xl sm:text-3xl font-bold text-foreground mb-4">
                 {productB.name}
               </h2>
 
@@ -215,7 +216,7 @@ export default async function VersusPage({ params }: VersusPageProps) {
                     priority
                   />
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center text-foreground/30 text-xs">
+                  <div className="w-full h-full flex items-center justify-center text-foreground/30 text-xs font-sans">
                     Image indisponible
                   </div>
                 )}
@@ -223,10 +224,10 @@ export default async function VersusPage({ params }: VersusPageProps) {
 
               <div className="mt-auto pt-4 border-t border-border/60 flex items-center justify-between gap-4">
                 <div>
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-foreground/60 block">
+                  <span className="text-[10px] font-sans uppercase tracking-wider text-foreground/60 block">
                     Meilleur prix direct
                   </span>
-                  <span className="font-serif text-3xl font-bold text-foreground">
+                  <span className="font-sans text-3xl font-bold text-foreground">
                     {productB.price ? `${productB.price.toLocaleString('fr-FR')} €` : 'N.C.'}
                   </span>
                 </div>
@@ -262,18 +263,18 @@ export default async function VersusPage({ params }: VersusPageProps) {
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl space-y-6">
           <div className="text-center space-y-2">
-            <h3 className="text-2xl sm:text-3xl font-serif font-bold text-foreground">
+            <h3 className="text-2xl sm:text-3xl font-sans font-bold text-foreground">
               Comparaison Technique & Acoustique
             </h3>
-            <p className="text-xs sm:text-sm font-mono text-foreground/60">
+            <p className="text-xs sm:text-sm font-sans text-foreground/60">
               Mesures relevées par l'Atelier Fluxlab
             </p>
           </div>
 
           <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-sm">
-            <table className="w-full text-left text-sm border-collapse">
+            <table className="w-full text-left text-sm border-collapse font-sans">
               <thead>
-                <tr className="bg-secondary/40 border-b border-border text-xs font-mono uppercase tracking-wider text-foreground/70">
+                <tr className="bg-secondary/40 border-b border-border text-xs font-sans uppercase tracking-wider text-foreground/70">
                   <th className="p-4 sm:p-5 w-1/3">Critère Technique</th>
                   <th className="p-4 sm:p-5 w-1/3 font-bold text-foreground">{productA.name}</th>
                   <th className="p-4 sm:p-5 w-1/3 font-bold text-foreground">{productB.name}</th>
@@ -282,7 +283,7 @@ export default async function VersusPage({ params }: VersusPageProps) {
               <tbody className="divide-y divide-border/60">
                 {analysis.specs.map((spec, i) => (
                   <tr key={i} className="hover:bg-secondary/15 transition-colors">
-                    <td className="p-4 sm:p-5 font-mono text-xs sm:text-sm font-medium text-foreground/80">
+                    <td className="p-4 sm:p-5 text-xs sm:text-sm font-medium text-foreground/80">
                       {spec.label}
                     </td>
                     <td className={`p-4 sm:p-5 ${spec.winner === 'A' ? 'font-semibold text-primary' : 'text-foreground/90'}`}>
@@ -318,31 +319,68 @@ export default async function VersusPage({ params }: VersusPageProps) {
                 <ShieldCheck size={26} />
               </span>
               <div>
-                <span className="text-xs font-mono uppercase tracking-[0.14em] text-primary font-bold block">
-                  Expertise Studio Fluxlab
+                <span className="text-xs font-sans uppercase tracking-[0.14em] text-primary font-bold block">
+                  {analysis.isComparable === false ? 'Synergie Matérielle' : 'Expertise Studio Fluxlab'}
                 </span>
-                <h3 className="font-serif text-2xl sm:text-3xl font-bold text-foreground">
+                <h3 className="font-sans text-2xl sm:text-3xl font-bold text-foreground">
                   Le Verdict de l'Atelier
                 </h3>
               </div>
             </div>
 
-            <div className="space-y-5 text-sm sm:text-base leading-relaxed text-foreground/85 font-light">
-              <p className="font-medium text-foreground text-lg font-serif">
-                {analysis.title}
-              </p>
-              <p dangerouslySetInnerHTML={{ __html: analysis.verdictLead }} />
-              <p>{analysis.acousticAnalysis}</p>
-              <div className="p-4 sm:p-5 rounded-2xl bg-background border border-border text-xs sm:text-sm font-mono text-foreground/85 flex items-start gap-3 shadow-sm">
-                <Zap size={18} className="text-primary shrink-0 mt-0.5" />
-                <span>{analysis.hardwareRequirements}</span>
+            {analysis.isComparable === false && (
+              <div className="p-5 rounded-2xl bg-amber-500/10 border border-amber-400/30 text-sm text-foreground space-y-2">
+                <strong className="text-amber-600 dark:text-amber-400 font-bold block">
+                  Équipements de catégories distinctes
+                </strong>
+                <p className="text-foreground/80 mb-0 font-light leading-relaxed">
+                  {analysis.incompatibleReason || 'Ces deux équipements remplissent des rôles différents dans votre studio.'}
+                </p>
+              </div>
+            )}
+
+            <div className="space-y-6 text-sm sm:text-base leading-relaxed text-foreground/85">
+              <div className="space-y-1">
+                <h4 className="font-sans text-xl sm:text-2xl font-bold text-foreground">
+                  {analysis.title}
+                </h4>
+                <p className="text-xs sm:text-sm font-sans text-primary font-medium">
+                  {analysis.subtitle}
+                </p>
+              </div>
+
+              <div 
+                className="leading-relaxed text-foreground/85 font-sans" 
+                dangerouslySetInnerHTML={{ __html: analysis.verdictLead }} 
+              />
+
+              {/* Carte 1 : Signature Acoustique ou Performance */}
+              <div className="p-5 rounded-2xl bg-background/80 border border-border/80 space-y-2">
+                <h5 className="font-sans text-xs uppercase tracking-wider font-bold text-foreground flex items-center gap-2">
+                  <Sparkles size={16} className="text-primary" />
+                  {analysis.card1Title || 'Signature Sonore & Rendu Acoustique'}
+                </h5>
+                <p className="text-sm leading-relaxed text-foreground/85 font-light font-sans">
+                  {analysis.acousticAnalysis}
+                </p>
+              </div>
+
+              {/* Carte 2 : Chaîne Matérielle & Prérequis */}
+              <div className="p-5 rounded-2xl bg-background/80 border border-border/80 space-y-2">
+                <h5 className="font-sans text-xs uppercase tracking-wider font-bold text-foreground flex items-center gap-2">
+                  <Zap size={16} className="text-primary" />
+                  {analysis.card2Title || 'Chaîne Matérielle & Alimentation'}
+                </h5>
+                <p className="text-sm leading-relaxed text-foreground/85 font-light font-sans">
+                  {analysis.hardwareRequirements}
+                </p>
               </div>
             </div>
 
             {/* RECOMMENDATION BOXES */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-4">
               <div className="p-6 rounded-2xl bg-background border border-border space-y-3 shadow-sm">
-                <h4 className="font-mono text-xs uppercase tracking-wider font-bold text-foreground flex items-center gap-2">
+                <h4 className="font-sans text-xs uppercase tracking-wider font-bold text-foreground flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-primary" />
                   Optez pour le {productA.name} si :
                 </h4>
@@ -357,7 +395,7 @@ export default async function VersusPage({ params }: VersusPageProps) {
               </div>
 
               <div className="p-6 rounded-2xl bg-background border border-border space-y-3 shadow-sm">
-                <h4 className="font-mono text-xs uppercase tracking-wider font-bold text-foreground flex items-center gap-2">
+                <h4 className="font-sans text-xs uppercase tracking-wider font-bold text-foreground flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-primary" />
                   Optez pour le {productB.name} si :
                 </h4>

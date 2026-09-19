@@ -29,7 +29,7 @@ const BANNER_MAP: Record<string, string> = {
   'traitement-acoustique':'/images/editorial/banner-studio-son.webp',
 };
 
-export const revalidate = 0;
+export const revalidate = 3600;
 export const dynamicParams = true;
 
 /* ─── QUESTIONS PAR CATÉGORIE ────────────────────────────── */

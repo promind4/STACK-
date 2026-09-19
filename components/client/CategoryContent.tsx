@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Product } from '@/types/database';
@@ -202,6 +202,21 @@ export default function CategoryContent({ products, slug, title, subtitle }: Pro
 
   const hasFilters = selectedBrands.length > 0 || sortBy !== 'default' || selectedSubfamily !== 'all';
 
+  const INITIAL_BATCH = 24;
+  const [visibleCount, setVisibleCount] = useState<number>(INITIAL_BATCH);
+
+  // Reset pagination when category, subfamily, brand or sorting changes
+  useEffect(() => {
+    setVisibleCount(INITIAL_BATCH);
+  }, [slug, selectedSubfamily, selectedBrands, sortBy]);
+
+  const visibleProducts = useMemo(() => {
+    return filtered.slice(0, visibleCount);
+  }, [filtered, visibleCount]);
+
+  const hasMore = visibleCount < filtered.length;
+  const remainingCount = filtered.length - visibleCount;
+
   const { choixId, coupDeCoeurId } = useMemo(
     () => computeEditorialBadges(products, products.length),
     [products]
@@ -211,6 +226,7 @@ export default function CategoryContent({ products, slug, title, subtitle }: Pro
     setSortBy('default');
     setSelectedBrands([]);
     setSelectedSubfamily('all');
+    setVisibleCount(INITIAL_BATCH);
   };
 
   return (
@@ -367,11 +383,12 @@ export default function CategoryContent({ products, slug, title, subtitle }: Pro
         {filtered.length > 0 ? (
           <>
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
-              {filtered.map((product, idx) => (
+              {visibleProducts.map((product, idx) => (
                 <React.Fragment key={product.id}>
                   <ProductCard
                     product={product}
                     technicalTag={getProductTechnicalTag(product, slug)}
+                    priority={idx < 6}
                     editorialBadge={
                       product.id === choixId ? 'choix' :
                       product.id === coupDeCoeurId ? 'coup-de-coeur' :
@@ -385,6 +402,24 @@ export default function CategoryContent({ products, slug, title, subtitle }: Pro
                 </React.Fragment>
               ))}
             </div>
+
+            {hasMore && (
+              <div className="mt-12 flex flex-col items-center justify-center gap-3">
+                <button
+                  onClick={() => setVisibleCount(v => v + 24)}
+                  className="group inline-flex items-center gap-2.5 px-7 py-3 rounded-full border border-foreground/20 hover:border-primary text-foreground hover:text-primary bg-card/60 hover:bg-card text-[12px] font-mono uppercase tracking-wider transition-all duration-200 shadow-sm cursor-pointer"
+                >
+                  <span>Afficher 24 références supplémentaires</span>
+                  <span className="text-[11px] text-foreground/45 group-hover:text-primary font-normal">
+                    ({remainingCount} restante{remainingCount > 1 ? 's' : ''})
+                  </span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden className="group-hover:translate-y-0.5 transition-transform"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+                <p className="text-[11px] font-mono text-foreground/40">
+                  Affichage de {Math.min(visibleCount, filtered.length)} sur {filtered.length} produits
+                </p>
+              </div>
+            )}
           </>
         ) : (
           <div className="flex flex-col items-center justify-center py-24 text-center bg-secondary/20 rounded-3xl border border-dashed border-border px-6">

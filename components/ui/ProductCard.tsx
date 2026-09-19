@@ -13,7 +13,7 @@ import { useComparison } from '@/context/ComparisonContext'
 import type { Product as DBProduct } from '@/types/database'
 
 /* ─── MAPPER DB → Card ───────────────────────────────────── */
-type BadgeVariant = 'new' | 'bestseller' | 'promo' | 'out_of_stock'
+import type { BadgeVariant } from '@/types/fluxlab'
 
 interface CardProduct {
   id: string
@@ -33,6 +33,7 @@ interface CardProduct {
   availableOfferCount: number
   imageUrl: string
   href: string
+  categorySlug?: string
 }
 
 function mapProduct(p: DBProduct): CardProduct {
@@ -62,6 +63,7 @@ function mapProduct(p: DBProduct): CardProduct {
     availableOfferCount: p.offers?.filter((offer) => offer.in_stock).length ?? 0,
     imageUrl: cleanImageUrl(p.image_url) || '',
     href: `/produit/${p.slug}`,
+    categorySlug: p.category_slug || (p as any).categories?.slug || '',
   }
 }
 
@@ -85,25 +87,26 @@ function getAvailabilityLabel(availableOfferCount: number, isUnavailable: boolea
 }
 
 function getMerchantLabel(offerCount: number) {
-  if (offerCount === 1) return '1 marchand'
   if (offerCount > 1) return `${offerCount} marchands`
-  return null
+  if (offerCount === 1) return '1 marchand'
+  return 'Prix direct'
 }
 
 /* ─── PRODUCT CARD ───────────────────────────────────────── */
 interface ProductCardProps {
   product: DBProduct
   className?: string
-  editorialBadge?: 'choix' | 'coup-de-coeur'
+  editorialBadge?: BadgeVariant
   variant?: 'default' | 'home-showcase'
   technicalTag?: string | null
+  priority?: boolean
 }
 
-export function ProductCard({ product: dbProduct, className, editorialBadge, variant = 'default', technicalTag }: ProductCardProps) {
+export function ProductCard({ product: dbProduct, className, editorialBadge, variant = 'default', technicalTag, priority = false }: ProductCardProps) {
   const product = mapProduct(dbProduct)
   const [wished, setWished] = useState(false)
   const [imageFailed, setImageFailed] = useState(false)
-  const { toggleProduct, isInComparison } = useComparison()
+  const { toggleProduct, isInComparison, selectedProducts } = useComparison()
   const inComparison = isInComparison(product.id) || isInComparison(product.slug)
   const isUnavailable = !product.inStock || product.badge === 'out_of_stock'
   const availabilityLabel = getAvailabilityLabel(product.availableOfferCount, isUnavailable)
@@ -125,6 +128,7 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
       brand: product.brand,
       image_url: product.imageUrl,
       price: product.price,
+      category_slug: product.categorySlug,
     })
   }
 
@@ -175,7 +179,8 @@ export function ProductCard({ product: dbProduct, className, editorialBadge, var
               fill
               sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
               className="object-contain mix-blend-multiply"
-              loading="lazy"
+              loading={priority ? undefined : "lazy"}
+              priority={priority}
               unoptimized={isDirectSupabaseStorageUrl(product.imageUrl)}
               onError={() => setImageFailed(true)}
             />

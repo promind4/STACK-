@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://fluxlab.fr' },
 }
 
-export const revalidate = 0
+export const revalidate = 3600
 
 async function getFeaturedProducts(): Promise<Product[]> {
   const supabase = createClient()
