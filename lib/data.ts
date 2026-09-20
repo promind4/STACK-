@@ -1888,7 +1888,7 @@ export const ARTICLES: Article[] = [
     relatedProducts: ["rode-podmic-usb", "shure-mv7", "shure-sm7b", "electro-voice-re20", "focusrite-scarlett-2i2-4th-gen"],
     relatedCategorySlug: "micros-dynamiques",
     content: `
-      <div class="not-prose mb-8 p-5 rounded-xl bg-secondary border-l-4 border-primary"><p class="text-[10px] font-mono uppercase tracking-widest text-primary mb-2">Réponse directe</p><p class="text-[15px] leading-relaxed text-foreground/85">Pour un podcast en 2026, le meilleur micro dépend de votre connexion : USB pour la simplicité (Rode NT-USB Mini, Blue Yeti), XLR pour la qualité broadcast (Rode PodMic, Shure SM7B). Budget 80-150€ : Rode PodMic USB. Budget 300-400€ : Shure SM7B + Focusrite Scarlett 2i2. La différence audible entre XLR et USB est faible en dessous de 200€.</p></div>
+      <div class="not-prose mb-8 p-5 rounded-xl bg-secondary border-l-4 border-primary"><p class="text-[10px] font-mono uppercase tracking-widest text-primary mb-2">Réponse directe</p><p class="text-[15px] leading-relaxed text-foreground/85">Pour un podcast en 2026, le meilleur micro dépend de votre connexion : USB pour la simplicité (Rode NT-USB Mini, Blue Yeti), XLR pour la qualité broadcast (Rode PodMic, Shure SM7B). Budget 150-200€ : Rode PodMic USB. Budget 300-400€ : Shure SM7B + Focusrite Scarlett 2i2. La différence audible entre XLR et USB est faible en dessous de 200€.</p></div>
                                                                                                                                                                           <!--ENCART TL; DR-->
                                                                                                                                                                             <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-8" >
                                                                                                                                                                               <h2 class="text-xl font-bold text-foreground mb-4 mt-0 !border-0 flex items-center gap-2" >
@@ -1898,7 +1898,7 @@ export const ARTICLES: Article[] = [
   <ul class="space-y-3 mb-0">
     <li class="flex items-start gap-3" >
       <span class="font-bold text-primary min-w-[200px]" > Le Vainqueur Qualité / Prix : </span>
-        <a href = "#rode-podmic-usb" class="product-link hover:underline font-medium text-foreground"> Rode PodMic USB(≈90€) </a>
+        <a href = "#rode-podmic-usb" class="product-link hover:underline font-medium text-foreground"> Rode PodMic USB(≈179€) </a>
           </li>
           <li class="flex items-start gap-3">
             <span class="font-bold text-primary min-w-[200px]" > Le Couteau Suisse Hybride: </span>
@@ -1968,7 +1968,7 @@ export const ARTICLES: Article[] = [
                                                                                                     </div>
                                                                                                     <div >
                                                                                                     <h3 class="mt-0 mb-2 text-2xl font-bold" > 1. Rode PodMic USB </h3>
-                                                                                                      <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> Le Vainqueur Qualité / Prix(≈ 90€) </p>
+                                                                                                      <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm"> Le Vainqueur Qualité / Prix(≈ 179€) </p>
                                                                                                         <p > Le PodMic original(XLR) était déjà une bête.La version USB est une anomalie sur le marché.C'est un tank en métal lourd, doté d'une double connectique USB - C et XLR qui lui assure de ne jamais devenir obsolète avec l'évolution de votre studio.</p>
 
                                                                                                           </div>
