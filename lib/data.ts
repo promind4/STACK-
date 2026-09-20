@@ -1871,6 +1871,7 @@ export const ARTICLES: Article[] = [
                                                                                                                                                                           ]
                                                                                                                                                                         }
                                                                                                                                                                           </script>
+                                                                                                                                                                            <p class="mt-8">Si vous équipez aussi votre pièce d'un micro à condensateur, sachez qu'il est bien plus sensible à ce traitement qu'un micro dynamique — voir notre <a href="/guide/meilleur-micro-condensateur-home-studio-moins-250-euros" class="text-primary hover:underline font-semibold">comparatif des micros à condensateur sous 250 €</a> pour comprendre pourquoi.</p>
                                                                                                                                                                             `
   },
 
@@ -7088,6 +7089,267 @@ export const ARTICLES: Article[] = [
           </summary>
           <p class="text-muted-foreground px-5 pb-4 mt-2">Oui, autant de fois que vous voulez. Beaucoup d'utilisateurs le lancent deux ou trois fois pour comparer un budget serré vs un budget confortable, ou pour tester ce qui change si on déclare un usage podcast vs streaming.</p>
         </details>
+      </div>
+    `
+  },
+  {
+    id: "31",
+    slug: "meilleur-micro-condensateur-home-studio-moins-250-euros",
+    title: "Meilleur Micro à Condensateur Home Studio à Moins de 250 € en 2026",
+    category: "Audio",
+    readTime: "5 min",
+    date: "20 Sep 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/plaque_audio_doodle.webp",
+    intro: "4 micros à condensateur sous 250 €, classés par bruit de fond réel — le critère qui compte le plus dans une pièce non traitée, et que les fiches produit noient dans les autres specs.",
+    relatedProducts: ["nt1-5th-generation-black", "audio-technica-at2035", "se-electronics-se2200", "ck-6-classic"],
+    relatedCategorySlug: "micros-condensateurs",
+    content: `
+      <p class="lead text-lg text-muted-foreground font-medium mb-8">
+        Un micro à condensateur est beaucoup plus sensible qu'un micro dynamique : il capte davantage de détails, mais aussi davantage de bruit — le sien (le "bruit de fond" ou "self-noise", exprimé en dBA) et celui de votre pièce. Avant de comparer les timbres ou les looks, un chiffre mérite votre attention en priorité si votre pièce n'est pas traitée acoustiquement : plus le bruit de fond est bas, plus le micro est exigeant envers votre environnement.
+      </p>
+
+      <div class="bg-primary/5 border border-primary/10 rounded-2xl p-6 my-8">
+        <h3 class="text-foreground font-bold mt-0 mb-3 text-lg flex items-center gap-2">
+          Le Verdict Express (En Résumé)
+        </h3>
+        <ul class="mb-0 space-y-2 text-foreground/85">
+          <li><strong>Le plus silencieux (~185 €)</strong> : le Rode NT1 5th Generation descend à 4 dBA de bruit de fond — un record à ce prix, mais qui révèlera d'autant plus les défauts d'une pièce non traitée.</li>
+          <li><strong>Le plus polyvalent pour débuter (~166 €)</strong> : l'Audio-Technica AT2035, avec filtre coupe-bas et pad intégrés, encaisse les erreurs de placement d'un débutant.</li>
+          <li><strong>Le budget le plus serré (~129 €)</strong> : l'Avantone CK-6 Classic, pour une première capsule large membrane sans se ruiner.</li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Tableau comparatif : prix, bruit de fond et profil</h2>
+
+      <div class="overflow-x-auto no-scrollbar my-8">
+        <table class="w-full text-left border-collapse text-sm bg-card border border-border rounded-2xl overflow-hidden shadow-sm">
+          <thead>
+            <tr class="border-b border-border bg-muted/50 text-foreground font-bold">
+              <th class="px-5 py-4">Modèle</th>
+              <th class="px-5 py-4">Prix constaté (09/2026)</th>
+              <th class="px-5 py-4">Bruit de fond</th>
+              <th class="px-5 py-4">Profil idéal</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-border">
+            <tr class="hover:bg-muted/30 transition-colors">
+              <td class="px-5 py-4 font-bold bg-muted/20"><a href="/produit/ck-6-classic" class="product-link text-primary hover:underline">Avantone CK-6 Classic</a></td>
+              <td class="px-5 py-4 font-mono">≈ 129 €</td>
+              <td class="px-5 py-4">Non communiqué par le fabricant</td>
+              <td class="px-5 py-4 text-emerald-600 font-medium">Premier micro large membrane</td>
+            </tr>
+            <tr class="hover:bg-muted/30 transition-colors">
+              <td class="px-5 py-4 font-bold bg-muted/20"><a href="/produit/audio-technica-at2035" class="product-link text-primary hover:underline">Audio-Technica AT2035</a></td>
+              <td class="px-5 py-4 font-mono">≈ 166-174 €</td>
+              <td class="px-5 py-4">Non communiqué par le fabricant</td>
+              <td class="px-5 py-4 text-emerald-600 font-medium">Polyvalent, débutant</td>
+            </tr>
+            <tr class="hover:bg-muted/30 transition-colors">
+              <td class="px-5 py-4 font-bold bg-muted/20"><a href="/produit/nt1-5th-generation-black" class="product-link text-primary hover:underline">Rode NT1 5th Generation</a></td>
+              <td class="px-5 py-4 font-mono">≈ 185 €</td>
+              <td class="px-5 py-4 text-emerald-600 font-bold">4 dBA (record du segment)</td>
+              <td class="px-5 py-4 text-primary font-bold">Voix off, chant exigeant</td>
+            </tr>
+            <tr class="hover:bg-muted/30 transition-colors">
+              <td class="px-5 py-4 font-bold bg-muted/20"><a href="/produit/se-electronics-se2200" class="product-link text-primary hover:underline">sE Electronics sE2200</a></td>
+              <td class="px-5 py-4 font-mono">≈ 249 €</td>
+              <td class="px-5 py-4">Non communiqué par le fabricant</td>
+              <td class="px-5 py-4">Capsule artisanale, filtres intégrés</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-muted-foreground">Prix relevés chez Thomann, Amazon et Woodbrass en septembre 2026, sujets à variation. Le bruit de fond n'est communiqué par le fabricant que pour le NT1 — un chiffre absent ne signifie pas un mauvais résultat, seulement que la donnée n'est pas publiée.</p>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">1. Pourquoi le bruit de fond compte plus que la fiche technique complète</h2>
+
+      <p>Un micro à condensateur amplifie électroniquement un signal plus faible qu'un micro dynamique — c'est ce qui lui donne ce piqué et cette précision dans l'aigu. Le revers de la médaille : il amplifie aussi son propre bruit électronique interne, mesuré en dBA (plus le chiffre est bas, plus c'est silencieux), et tout ce qui traîne dans la pièce — climatisation, ordinateur, réverbération sur les murs nus.</p>
+
+      <p>C'est pourquoi un micro comme le <strong>Rode NT1 5th Generation</strong>, malgré son bruit de fond record de 4 dBA, ne donnera pas forcément le meilleur résultat dans une pièce non traitée : il révèle sans complaisance les bruits ambiants que d'autres micros masquent partiellement dans leur propre souffle électronique. Avant d'investir dans le micro le plus silencieux du marché, il vaut souvent mieux investir d'abord dans <a href="/guide/insonorisation" class="text-primary hover:underline font-semibold">un traitement acoustique basique de la pièce</a> — sans quoi vous entendrez surtout votre pièce, pas le silence du micro.</p>
+
+      <!-- PRODUCT CARD RODE NT1 -->
+      <div id="nt1-5th-generation-black" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_56/561426/18111440_800.jpg" alt="Rode NT1 5th Generation" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/nt1-5th-generation-black" class="product-link text-foreground hover:text-primary transition-colors">Rode NT1 5th Generation</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le Plus Silencieux (≈ 185 €)</p>
+            <p>Double connectique XLR et USB-C, enregistrement 32-bit float impossible à saturer, et surtout un bruit de fond de seulement 4 dBA — le plus bas de sa catégorie de prix.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Bruit de fond record (4 dBA)</li>
+              <li>Double sortie XLR et USB-C</li>
+              <li>32-bit float : impossible à saturer en USB</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Le mode 32-bit float ne fonctionne qu'en USB</li>
+              <li>Nécessite un ordinateur récent pour en profiter pleinement</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/nt1-5th-generation-black" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="nt1-5th-generation-black" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <!-- PRODUCT CARD AT2035 -->
+      <div id="audio-technica-at2035" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://media.sweetwater.com/m/products/image/1fb4ca0ff6Xkigh6oP3nj3WcU9KtRtM1t8f9kf1l.jpg" alt="Audio-Technica AT2035" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/audio-technica-at2035" class="product-link text-foreground hover:text-primary transition-colors">Audio-Technica AT2035</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le Polyvalent Débutant (≈ 166 €)</p>
+            <p>Grande membrane 1 pouce, filtre coupe-bas et pad -10 dB intégrés, suspension fournie. Un des rapports qualité/prix les plus constants du marché depuis des années.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Filtre coupe-bas et pad -10 dB déjà intégrés</li>
+              <li>Suspension anti-choc fournie (économie réelle)</li>
+              <li>Réputation de fiabilité éprouvée</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Design assez austère</li>
+              <li>Pas de connectique USB (XLR uniquement, carte son requise)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/audio-technica-at2035" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="audio-technica-at2035" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">2. Et si votre budget est encore plus serré, ou un peu plus large ?</h2>
+
+      <p>Deux profils complémentaires à la sélection principale : un point d'entrée minimal, et une option plus premium pour qui veut une capsule un peu plus travaillée sans sortir de l'enveloppe "sous 250 €".</p>
+
+      <!-- PRODUCT CARD AVANTONE CK-6 -->
+      <div id="ck-6-classic" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_50/503098/15546555_800.jpg" alt="Avantone CK-6 Classic" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/ck-6-classic" class="product-link text-foreground hover:text-primary transition-colors">Avantone CK-6 Classic</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le Budget le Plus Serré (≈ 129 €)</p>
+            <p>Composants soignés pour ce prix (condensateurs Wima, polystyrène), esthétique rétro et suspension incluse. Une bonne porte d'entrée si le budget est la priorité absolue.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Prix le plus accessible de la sélection</li>
+              <li>Suspension rétro incluse</li>
+              <li>Composants de meilleure qualité qu'attendu à ce prix</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Finition légèrement brillante</li>
+              <li>Aucun chiffre de bruit de fond communiqué</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/ck-6-classic" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="ck-6-classic" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <!-- PRODUCT CARD SE2200 -->
+      <div id="se-electronics-se2200" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://media.sweetwater.com/m/products/image/62ce326a30hxCQ94oyDFBz5oLrtEpPbnwKxnYvN9.jpg" alt="sE Electronics sE2200" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/se-electronics-se2200" class="product-link text-foreground hover:text-primary transition-colors">sE Electronics sE2200</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le Plus Premium de la Sélection (≈ 249 €)</p>
+            <p>Capsule artisanale d'1 pouce en laiton, électronique classe A discrète, filtres coupe-bas et atténuateurs -10/-20 dB. Le pas au-dessus pour qui veut une capsule plus travaillée sans changer de gamme de prix.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Capsule artisanale 1 pouce en laiton</li>
+              <li>Deux niveaux d'atténuation (-10/-20 dB)</li>
+              <li>Électronique classe A discrète</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Aigus légèrement en avant sur des voix déjà brillantes</li>
+              <li>Le plus cher de la sélection</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/se-electronics-se2200" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="se-electronics-se2200" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">3. Notre recommandation selon votre profil</h2>
+
+      <div class="space-y-6 my-8">
+        <div class="bg-card border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Votre pièce n'est pas traitée acoustiquement</h3>
+          <p class="text-muted-foreground mb-0">Privilégiez l'<strong>Audio-Technica AT2035</strong> ou l'<strong>Avantone CK-6</strong> plutôt que le NT1 : un micro un peu moins "révélateur" masquera mieux les défauts de la pièce. Ou mieux, <a href="/guide/insonorisation" class="text-primary hover:underline font-semibold">traitez d'abord la pièce</a> avant d'investir dans le micro le plus silencieux.</p>
+        </div>
+        <div class="bg-card border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Votre pièce est déjà traitée, ou vous enregistrez en cabine</h3>
+          <p class="text-muted-foreground mb-0">Le <strong>Rode NT1 5th Generation</strong> exploite pleinement son bruit de fond record — c'est là qu'il fait vraiment la différence par rapport au reste de la sélection.</p>
+        </div>
+        <div class="bg-card border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous voulez la capsule la plus travaillée sous 250 €</h3>
+          <p class="text-muted-foreground mb-0">Le <strong>sE Electronics sE2200</strong> avec sa capsule artisanale en laiton reste la référence de la tranche haute de cette sélection.</p>
+        </div>
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-12 text-center">
+        <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous hésitez encore sur votre chaîne complète (micro + carte son + traitement) ?</h3>
+        <p class="text-muted-foreground max-w-xl mx-auto mb-6">Notre configurateur prend en compte votre budget global pour vous proposer un setup cohérent, pas juste un micro isolé.</p>
+        <a href="/configurateur" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-md">Lancer le Configurateur Studio IA</a>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">FAQ</h2>
+
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Faut-il une carte son ou une interface audio dédiée pour ces micros ?</h3>
+          <p class="text-muted-foreground">Oui pour trois des quatre (AT2035, CK-6, sE2200) : ce sont des micros XLR classiques qui nécessitent une interface audio avec alimentation fantôme 48V. Seul le Rode NT1 5th Gen propose une sortie USB-C directe, en plus de sa sortie XLR.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Un micro à condensateur fonctionne-t-il pour du streaming ou du gaming ?</h3>
+          <p class="text-muted-foreground">C'est possible mais rarement optimal : sa sensibilité capte aussi le bruit du clavier, du ventilateur de PC et de la pièce. Un micro dynamique reste souvent un choix plus sûr dans un environnement non maîtrisé.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Le bruit de fond en dBA, c'est quoi concrètement ?</h3>
+          <p class="text-muted-foreground">C'est le niveau de souffle électronique généré par le micro lui-même, mesuré en dB(A). Plus il est bas, plus le micro est silencieux au repos — un critère surtout perceptible sur des enregistrements avec beaucoup de silence (voix off, narration, ASMR).</p>
+        </div>
       </div>
     `
   },
