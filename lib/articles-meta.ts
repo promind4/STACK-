@@ -424,6 +424,20 @@ export const ARTICLES: ArticleMeta[] = [
     relatedCategorySlug: "cartes-son",
     content: "",
   },
+  {
+    id: "31",
+    slug: "meilleur-micro-condensateur-home-studio-moins-250-euros",
+    title: "Meilleur Micro à Condensateur Home Studio à Moins de 250 € en 2026",
+    category: "Audio",
+    readTime: "5 min",
+    date: "20 Sep 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/plaque_audio_doodle.webp",
+    intro: "4 micros à condensateur sous 250 €, classés par bruit de fond réel — le critère qui compte le plus dans une pièce non traitée, et que les fiches produit noient dans les autres specs.",
+    relatedProducts: ["nt1-5th-generation-black", "audio-technica-at2035", "se-electronics-se2200", "ck-6-classic"],
+    relatedCategorySlug: "micros-condensateurs",
+    content: "",
+  },
 ];
 
 export const getArticleMetaBySlug = (slug: string) =>
