@@ -1,5 +1,16 @@
 # seo-autopilot — site profile for FLUXLAB (promind4/STACK-)
 # Filled 2026-09-21. Fields verified directly against the repo code unless noted.
+#
+# SANDBOX LIMITATION (2026-09-21): scripts/post-publish-verify.mjs's image-check step uses
+# Node's raw https module, which does not go through this Claude Code on the web sandbox's
+# egress proxy the way curl does. Confirmed: Node gets a synthetic 403 "host_not_allowed"
+# from the LOCAL proxy on *any* external image URL (tested both a Thomann CDN URL and a
+# Supabase storage URL, including images already live in production before any edit),
+# while the identical request via curl succeeds and returns the real CDN response. This
+# means the image-check portion of the smoke test cannot pass in this sandbox regardless
+# of whether the images are actually broken — verify external images manually with curl
+# instead, and treat that as the real signal. Internal links and the localhost HTTP check
+# are unaffected (no proxy involved for localhost).
 
 site:
   name: Fluxlab
