@@ -49,16 +49,15 @@ data_sources_for_differentiation:
 
 analytics:
   gsc_property: https://www.fluxlab.fr
-  ga4_property_id: <FILL_ME>              # not confirmed this session — GA4/GSC fetch scripts already work via GOOGLE_SERVICE_ACCOUNT_JSON per prior session, but the property id itself wasn't re-verified here
+  ga4_property_id: "530141900"            # confirmed: default in seo-autopilot/scripts/ga4-fetch.py --property-id
   mcp:
-    gsc: <FILL_ME>
-    ga4: <FILL_ME>
+    gsc: null                             # no GSC MCP configured — access is via scripts/gsc-fetch.py (service account), not an MCP server
+    ga4: null                             # no GA4 MCP configured — access is via scripts/ga4-fetch.py (service account), not an MCP server
 
 data_hygiene:
   target_countries:
     - "France"
-  exclude_internal_cities:
-    - <FILL_ME>                           # AZURA to fill: dev/founder city to exclude from analytics as self-visits
+  exclude_internal_cities: []             # AZURA to fill: dev/founder city to exclude from analytics as self-visits (left empty, not a placeholder — degraded mode until filled)
   min_engagement_duration_sec: 5
 
 market_watch:
