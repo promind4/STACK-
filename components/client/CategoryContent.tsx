@@ -35,7 +35,7 @@ const GUIDE_MAP: Record<string, string> = {
   // Accessoires audio
   'bras-articules':           'enregistrer-podcast-deux-personnes-setup',
   'cable-xlr':                'xlr-vs-usb',
-  'traitement-acoustique':    'insonorisation',
+  'traitement-acoustique':    'traitement-acoustique',
 };
 const DEFAULT_GUIDE = 'meilleur-micro-podcast-2026';
 

@@ -95,7 +95,7 @@ export const ARTICLES: ArticleMeta[] = [
   },
   {
     id: "5",
-    slug: "insonorisation",
+    slug: "traitement-acoustique",
     title: "Traitement Acoustique : Le Guide Complet pour Insonoriser sa Pièce (2026)",
     category: "Acoustique",
     readTime: "6 min",

@@ -1641,7 +1641,7 @@ export const ARTICLES: Article[] = [
   },
   {
     id: "5",
-    slug: "insonorisation",
+    slug: "traitement-acoustique",
     title: "Traitement Acoustique : Le Guide Complet pour Insonoriser sa Pièce (2026)",
     category: "Acoustique",
     readTime: "6 min",
@@ -7299,7 +7299,7 @@ export const ARTICLES: Article[] = [
 
       <p>Un micro à condensateur amplifie électroniquement un signal plus faible qu'un micro dynamique — c'est ce qui lui donne ce piqué et cette précision dans l'aigu. Le revers de la médaille : il amplifie aussi son propre bruit électronique interne, mesuré en dBA (plus le chiffre est bas, plus c'est silencieux), et tout ce qui traîne dans la pièce — climatisation, ordinateur, réverbération sur les murs nus.</p>
 
-      <p>C'est pourquoi un micro comme le <strong>Rode NT1 5th Generation</strong>, malgré son bruit de fond record de 4 dBA, ne donnera pas forcément le meilleur résultat dans une pièce non traitée : il révèle sans complaisance les bruits ambiants que d'autres micros masquent partiellement dans leur propre souffle électronique. Avant d'investir dans le micro le plus silencieux du marché, il vaut souvent mieux investir d'abord dans <a href="/guide/insonorisation" class="text-primary hover:underline font-semibold">un traitement acoustique basique de la pièce</a> — sans quoi vous entendrez surtout votre pièce, pas le silence du micro.</p>
+      <p>C'est pourquoi un micro comme le <strong>Rode NT1 5th Generation</strong>, malgré son bruit de fond record de 4 dBA, ne donnera pas forcément le meilleur résultat dans une pièce non traitée : il révèle sans complaisance les bruits ambiants que d'autres micros masquent partiellement dans leur propre souffle électronique. Avant d'investir dans le micro le plus silencieux du marché, il vaut souvent mieux investir d'abord dans <a href="/guide/traitement-acoustique" class="text-primary hover:underline font-semibold">un traitement acoustique basique de la pièce</a> — sans quoi vous entendrez surtout votre pièce, pas le silence du micro.</p>
 
       <!-- PRODUCT CARD RODE NT1 -->
       <div id="nt1-5th-generation-black" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
@@ -7450,7 +7450,7 @@ export const ARTICLES: Article[] = [
       <div class="space-y-6 my-8">
         <div class="bg-card border border-border rounded-2xl p-6">
           <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Votre pièce n'est pas traitée acoustiquement</h3>
-          <p class="text-muted-foreground mb-0">Privilégiez l'<strong>Audio-Technica AT2035</strong> ou l'<strong>Avantone CK-6</strong> plutôt que le NT1 : un micro un peu moins "révélateur" masquera mieux les défauts de la pièce. Ou mieux, <a href="/guide/insonorisation" class="text-primary hover:underline font-semibold">traitez d'abord la pièce</a> avant d'investir dans le micro le plus silencieux.</p>
+          <p class="text-muted-foreground mb-0">Privilégiez l'<strong>Audio-Technica AT2035</strong> ou l'<strong>Avantone CK-6</strong> plutôt que le NT1 : un micro un peu moins "révélateur" masquera mieux les défauts de la pièce. Ou mieux, <a href="/guide/traitement-acoustique" class="text-primary hover:underline font-semibold">traitez d'abord la pièce</a> avant d'investir dans le micro le plus silencieux.</p>
         </div>
         <div class="bg-card border border-border rounded-2xl p-6">
           <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Votre pièce est déjà traitée, ou vous enregistrez en cabine</h3>
@@ -7507,7 +7507,7 @@ export const PATHWAYS: Pathway[] = [
         order: 2,
         title: "Traiter son environnement",
         desc: "Pourquoi votre chambre sonne comme une salle de bain (et comment régler ça).",
-        articleSlug: "insonorisation"
+        articleSlug: "traitement-acoustique"
       },
       {
         order: 3,

@@ -17,7 +17,7 @@ const ARTICLE_COVERS: Record<string, string> = {
   'enregistrer-podcast-deux-personnes-setup': '/images/articles/guides/podcast-conversation-editorial.png',
   'home-studio-500-euros-guide-complet': '/images/articles/guides/audio-workspace-editorial.png',
   'supprimer-bruit-de-fond-micro': '/images/articles/guides/acoustic-workspace-editorial.png',
-  insonorisation: '/images/articles/guides/acoustic-workspace-editorial.png',
+  'traitement-acoustique': '/images/articles/guides/acoustic-workspace-editorial.png',
   'focusrite-scarlett-2i2-vs-universal-audio-volt-2': '/images/articles/editorial-interface-comparison.png',
   'shure-mv7-vs-mv7x': '/images/articles/editorial-micro-comparison.png',
   'alternatives-focusrite-scarlett-2026': '/images/articles/editorial-interface-alternatives.png',
