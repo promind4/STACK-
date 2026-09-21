@@ -94,15 +94,27 @@ market_watch:
     - "streaming-cameras"
 
 goal:
-  mode: consolidate-existing
+  # Changed 2026-09-21 per AZURA: net-new content is now this agent's PRIMARY job,
+  # not corrections. He explicitly wants us to avoid "s'éparpiller" (spreading thin) —
+  # price/catalog monitoring is meant to live in a separate, dedicated tool/agent
+  # eventually (not built yet); until then, treat factual-drift/slug/cannibalization
+  # fixes as secondary work done opportunistically alongside content, never as a
+  # reason to skip a scheduled article. close-content-gaps (= writing new articles)
+  # is promoted above consolidate-striking-distance accordingly. fix-factual-drift
+  # stays first per the skill's own invariant (an inaccurate article is a liability
+  # regardless of strategy) but these are meant to be quick, not cycle-blocking.
+  mode: keyword-targeted
   priority_order:
     - fix-factual-drift
-    - consolidate-striking-distance
     - close-content-gaps
+    - consolidate-striking-distance
     - build-authority-clusters
 
 cadence:
-  new_articles_per_week: [1, 2]
+  # AZURA wants a firm floor, not a range: a new article published on each of
+  # 2 fixed days per week (he suggested Monday + Friday), set 2026-09-21.
+  new_articles_per_week: [2, 2]
+  publish_days: ["Monday", "Friday"]
   cooldown_days_per_target: 7
 
 guardrails:
