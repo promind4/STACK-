@@ -48,7 +48,7 @@ data_sources_for_differentiation:
   fallback_methods: ["multi-merchant price comparison via product_offers at time of writing", "documented expert criteria"]
 
 analytics:
-  gsc_property: https://www.fluxlab.fr
+  gsc_property: "sc-domain:fluxlab.fr"    # confirmed live via scripts/gsc-fetch.py --site — the https:// URL-prefix form returned 0 rows, the site is verified in GSC as a domain property
   ga4_property_id: "530141900"            # confirmed: default in seo-autopilot/scripts/ga4-fetch.py --property-id
   mcp:
     gsc: null                             # no GSC MCP configured — access is via scripts/gsc-fetch.py (service account), not an MCP server
