@@ -112,9 +112,12 @@ goal:
 
 cadence:
   # AZURA wants a firm floor, not a range: a new article published on each of
-  # 2 fixed days per week (he suggested Monday + Friday), set 2026-09-21.
+  # 2 fixed days per week, set 2026-09-21. He left the exact days to Claude's
+  # judgment; Monday + Thursday matches the automation trigger's actual
+  # schedule (trig_01YJZeLoFguHusaqjJc2uDC5, "seo flux (master)", cron
+  # 0 8 * * 1,4 UTC) so profile and automation stay in sync.
   new_articles_per_week: [2, 2]
-  publish_days: ["Monday", "Friday"]
+  publish_days: ["Monday", "Thursday"]
   cooldown_days_per_target: 7
 
 guardrails:
