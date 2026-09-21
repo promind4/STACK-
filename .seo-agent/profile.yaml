@@ -32,16 +32,21 @@ quality:
 
 catalog:
   adapter: supabase-products
-  tables_or_endpoints: ["products", "categories", "product_offers", "price_history"]
-  # confirmed via grep across lib/, app/api/, hooks/:
-  #   products        - hooks/useProducts.ts, app/api/search, app/api/ai-setup, lib/atelier/repository.ts, lib/pricing/index.ts
-  #   categories      - hooks/useProducts.ts
-  #   product_offers  - lib/pricing/index.ts (per-merchant offers, updated by the price cron)
-  #   price_history   - lib/pricing/index.ts (insert-only log written by updatePrices())
-  price_history_reliable: false           # conservative default — table exists and is written to by app/api/cron/update-prices, but this session could not verify the cron actually runs on schedule or that the log is complete
+  tables_or_endpoints: ["products", "categories", "product_offers"]
+  # LIVE-VERIFIED 2026-09-21 via REST (previously blocked, network policy fixed by AZURA mid-session):
+  #   products        - no `price` column (contrary to what lib/pricing/index.ts's .update({price:...}) call implies —
+  #                      either PostgREST's schema cache is stale or the app has a real schema-drift bug; worth AZURA
+  #                      checking directly in Supabase). Has `is_active` — 9 products currently is_active=false.
+  #   categories      - confirmed live (id, name, slug, parent_id, vertical, is_active, display_order, ...)
+  #   product_offers  - THIS is where price actually lives: price, original_price, currency, in_stock, merchant_name, priority
+  #   price_history   - DOES NOT EXIST (PGRST205 "table not found in schema cache"). lib/pricing/index.ts inserts into
+  #                      it, so either the insert silently no-ops/errors in prod, or the table was dropped/never
+  #                      migrated. Removed from tables_or_endpoints above since it isn't real — do not diff against it.
+  price_history_reliable: false           # now confirmed false, not just a conservative default: the table doesn't exist
   known_issues:
     - "Supabase credentials available in this environment are SUPABASE_URL / SUPABASE_ANON_KEY, which do NOT match the names the app code reads (NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY — see lib/supabase.ts, lib/pricing/index.ts, app/api/cron/update-prices/route.ts). Fine for the agent querying the REST API directly with URL+anon key, but do not assume these env vars work if a script imports the app's own lib/supabase.ts helpers."
-    - "Direct outbound connection to Supabase (oxzapjwfttrgsometnwq.supabase.co) was blocked by this sandbox's egress proxy policy on 2026-09-21, so live connectivity/read access could not be verified from this session. Table names above come from static code analysis, not a live query."
+    - "price_history table referenced in lib/pricing/index.ts does not exist in Supabase (confirmed live 2026-09-21, PGRST205). Price-trend claims in articles cannot be backed by real history data until this is fixed app-side — AZURA to investigate whether updatePrices() is failing silently on this insert."
+    - "products.price column referenced in lib/pricing/index.ts's updatePrices() does not exist on the live products table (confirmed live 2026-09-21) — real per-merchant prices live on product_offers.price instead. Same silent-failure question as price_history."
 
 data_sources_for_differentiation:
   proprietary_available: false
