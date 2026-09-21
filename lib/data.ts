@@ -6769,7 +6769,7 @@ export const ARTICLES: Article[] = [
   // ═══ ARTICLE 26 — Focusrite Scarlett 2i2 vs Universal Audio Volt 2 ═══
   {
     id: "26",
-    slug: "focusrite-scarlett-2i2-vs-audient-id4-mkii",
+    slug: "focusrite-scarlett-2i2-vs-universal-audio-volt-2",
     title: "Focusrite Scarlett 2i2 vs Universal Audio Volt 2 — Laquelle choisir en 2026 ?",
     category: "Audio",
     readTime: "4 min",

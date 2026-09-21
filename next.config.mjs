@@ -89,6 +89,14 @@ const nextConfig = {
         destination: '/guide/meilleur-casque-studio-home-studio-2026',
         permanent: true,
       },
+      // Slug/title mismatch — l'article était sluggé "audient-id4-mkii" mais son
+      // contenu réel compare Scarlett 2i2 vs Universal Audio Volt 2, pas Audient
+      // (détecté par scripts/slug-coherence.mjs, cf. cycle SEO du 2026-09-21).
+      {
+        source: '/guide/focusrite-scarlett-2i2-vs-audient-id4-mkii',
+        destination: '/guide/focusrite-scarlett-2i2-vs-universal-audio-volt-2',
+        permanent: true,
+      },
     ];
   },
 
