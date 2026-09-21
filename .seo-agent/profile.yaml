@@ -1,0 +1,102 @@
+# seo-autopilot — site profile for FLUXLAB (promind4/STACK-)
+# Filled 2026-09-21. Fields verified directly against the repo code unless noted.
+
+site:
+  name: Fluxlab
+  url: https://www.fluxlab.fr
+  locale: fr-FR
+  vertical: "Home studio / podcast / streaming creator audio gear — buying guides plus a product catalog (mics, interfaces, headphones, cameras)"
+
+repo:
+  path: /home/user/STACK-
+  remote: https://github.com/promind4/STACK-
+  branches:
+    work: master                          # confirmed: PR #1, #2, #3 all merged into master; it is also the repo's default (HEAD) branch
+    prod: master                          # no separate deploy branch found — `main` exists but is a stale/divergent branch (53 commits behind master, 8 ahead on its own history) and is NOT where merges have landed
+    protected: [master]
+    history: seo-agent/history            # confirmed: already exists on origin, holds changes.jsonl / design-snapshots.jsonl / gsc-snapshots.jsonl
+
+content:
+  adapter: nextjs-inline-array
+  source_file: lib/data.ts
+  array_name: ARTICLES                    # confirmed: `export const ARTICLES: Article[] = [...]` at lib/data.ts:36
+  route_pattern: app/guide/[slug]/page.tsx
+  known_duplicate_systems: []
+  niche_keyword_bias: true
+
+design:
+  watch_paths: ["app/globals.css", "tailwind.config.ts", "components/ui/**"]
+
+quality:
+  max_revision_rounds: 2
+
+catalog:
+  adapter: supabase-products
+  tables_or_endpoints: ["products", "categories", "product_offers", "price_history"]
+  # confirmed via grep across lib/, app/api/, hooks/:
+  #   products        - hooks/useProducts.ts, app/api/search, app/api/ai-setup, lib/atelier/repository.ts, lib/pricing/index.ts
+  #   categories      - hooks/useProducts.ts
+  #   product_offers  - lib/pricing/index.ts (per-merchant offers, updated by the price cron)
+  #   price_history   - lib/pricing/index.ts (insert-only log written by updatePrices())
+  price_history_reliable: false           # conservative default — table exists and is written to by app/api/cron/update-prices, but this session could not verify the cron actually runs on schedule or that the log is complete
+  known_issues:
+    - "Supabase credentials available in this environment are SUPABASE_URL / SUPABASE_ANON_KEY, which do NOT match the names the app code reads (NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY — see lib/supabase.ts, lib/pricing/index.ts, app/api/cron/update-prices/route.ts). Fine for the agent querying the REST API directly with URL+anon key, but do not assume these env vars work if a script imports the app's own lib/supabase.ts helpers."
+    - "Direct outbound connection to Supabase (oxzapjwfttrgsometnwq.supabase.co) was blocked by this sandbox's egress proxy policy on 2026-09-21, so live connectivity/read access could not be verified from this session. Table names above come from static code analysis, not a live query."
+
+data_sources_for_differentiation:
+  proprietary_available: false
+  fallback_methods: ["multi-merchant price comparison via product_offers at time of writing", "documented expert criteria"]
+
+analytics:
+  gsc_property: https://www.fluxlab.fr
+  ga4_property_id: <FILL_ME>              # not confirmed this session — GA4/GSC fetch scripts already work via GOOGLE_SERVICE_ACCOUNT_JSON per prior session, but the property id itself wasn't re-verified here
+  mcp:
+    gsc: <FILL_ME>
+    ga4: <FILL_ME>
+
+data_hygiene:
+  target_countries:
+    - "France"
+  exclude_internal_cities:
+    - <FILL_ME>                           # AZURA to fill: dev/founder city to exclude from analytics as self-visits
+  min_engagement_duration_sec: 5
+
+market_watch:
+  enabled: true
+  brands:
+    - "Shure"
+    - "Focusrite"
+    - "Rode"
+    - "Elgato"
+    - "Audient"
+    - "Universal Audio"
+    - "Sony"
+    - "Beyerdynamic"
+  verticals:
+    - "microphones"
+    - "audio-interfaces"
+    - "headphones"
+    - "streaming-cameras"
+
+goal:
+  mode: consolidate-existing
+  priority_order:
+    - fix-factual-drift
+    - consolidate-striking-distance
+    - close-content-gaps
+    - build-authority-clusters
+
+cadence:
+  new_articles_per_week: [1, 2]
+  cooldown_days_per_target: 7
+
+guardrails:
+  never_noindex_automatically: true
+  never_major_restructure_automatically: true
+  never_scrape_serps: true
+  never_expose_secrets: true
+  publish_mode: pr-only
+  target_branch: master
+  history_branch: seo-agent/history
+
+context_files: []
