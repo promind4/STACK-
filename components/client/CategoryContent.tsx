@@ -31,11 +31,11 @@ const GUIDE_MAP: Record<string, string> = {
   'preamplis':                'scarlett-2i2-4th-gen-shure-sm7b-cloudlifter',
   // Casques & enceintes
   'casques-studio':           'meilleur-casque-studio-home-studio-2026',
-  'enceintes':                'meilleur-casque-studio-home-studio-2026',
+  'enceintes':                'meilleures-enceintes-monitoring-home-studio-2026',
   // Accessoires audio
   'bras-articules':           'enregistrer-podcast-deux-personnes-setup',
   'cable-xlr':                'xlr-vs-usb',
-  'traitement-acoustique':    'insonorisation',
+  'traitement-acoustique':    'traitement-acoustique',
 };
 const DEFAULT_GUIDE = 'meilleur-micro-podcast-2026';
 

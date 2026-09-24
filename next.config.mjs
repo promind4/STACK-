@@ -97,6 +97,14 @@ const nextConfig = {
         destination: '/guide/focusrite-scarlett-2i2-vs-universal-audio-volt-2',
         permanent: true,
       },
+      // Slug aligné sur la catégorie "traitement-acoustique" après la réécriture
+      // SEO du 2026-09-21 (cf. PR #6) — l'ancien slug "insonorisation" restait
+      // trop vague par rapport à la requête ciblée.
+      {
+        source: '/guide/insonorisation',
+        destination: '/guide/traitement-acoustique',
+        permanent: true,
+      },
     ];
   },
 
