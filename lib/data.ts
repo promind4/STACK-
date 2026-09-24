@@ -7486,6 +7486,278 @@ export const ARTICLES: Article[] = [
       </div>
     `
   },
+  {
+    id: "32",
+    slug: "meilleures-enceintes-monitoring-home-studio-2026",
+    title: "Meilleures Enceintes de Monitoring pour Home Studio en 2026",
+    category: "Audio",
+    readTime: "6 min",
+    date: "24 Sep 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/plaque_audio_doodle.webp",
+    intro: "4 enceintes de monitoring actives classées par vraie réponse en basses (spec fabricant) et par profil de pièce — du bureau ultra-compact à la pièce déjà traitée acoustiquement, prix relevés au catalogue à la date de publication.",
+    relatedProducts: ["presonus-eris-3-5-2nd-gen", "yamaha-hs-5", "ik-multimedia-iloud-micro-monitor", "genelec-8030-cp"],
+    relatedCategorySlug: "enceintes",
+    content: `
+      <p class="lead text-lg text-muted-foreground font-medium mb-8">
+        Passer d'un casque à des enceintes de monitoring change la façon dont vous entendez vos basses, votre stéréo et vos défauts de mix — mais un mauvais choix (trop grosses pour la pièce, mal positionnées, ou sans traitement acoustique minimal) peut faire pire que mieux. Voici, prix réels et specs fabricant à l'appui, quelle paire choisir parmi les 24 références actuellement au catalogue.
+      </p>
+
+      <div class="bg-primary/5 border border-primary/10 rounded-2xl p-6 my-8">
+        <h3 class="text-foreground font-bold mt-0 mb-3 text-lg">
+          Le Verdict Express (En Résumé)
+        </h3>
+        <ul class="mb-0 space-y-2 text-foreground/85">
+          <li><strong>Le meilleur rapport qualité-prix (~318 € la paire)</strong> : la Yamaha HS5, un standard très répandu en home studio — médiums précis, mais basses en retrait sous 54 Hz (spec fabricant) sans caisson complémentaire.</li>
+          <li><strong>Le petit budget sérieux (~98 € la paire)</strong> : la PreSonus Eris 3.5 (2nd Gen), pour un premier retour stéréo fiable sur un bureau compact.</li>
+          <li><strong>La compacte à correction DSP (~239 € la paire)</strong> : l'IK Multimedia iLoud Micro Monitor, quasi sans encombrement, avec DSP intégré pour corriger le placement contre un mur ou dans un coin.</li>
+          <li><strong>Le haut de gamme (~1 158 € la paire)</strong> : la Genelec 8030 CP, une référence broadcast/near-field, pertinente seulement dans une pièce déjà traitée acoustiquement.</li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Comparatif : prix, réponse en basses et profil</h2>
+
+      <div class="overflow-x-auto no-scrollbar my-8">
+        <table class="w-full text-left border-collapse text-sm bg-card border border-border rounded-2xl overflow-hidden shadow-sm">
+          <thead>
+            <tr class="border-b border-border bg-muted/50 text-foreground font-bold">
+              <th class="px-5 py-4">Modèle</th>
+              <th class="px-5 py-4">Prix la paire (09/2026)</th>
+              <th class="px-5 py-4">Woofer</th>
+              <th class="px-5 py-4">Réponse en basses (spec fabricant)</th>
+              <th class="px-5 py-4">Profil idéal</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-border">
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">PreSonus Eris 3.5 (2nd Gen)</td>
+              <td class="px-5 py-4">~98 €<span class="text-muted-foreground"> (vendue par paire)</span></td>
+              <td class="px-5 py-4">3,5"</td>
+              <td class="px-5 py-4">80 Hz – 20 kHz</td>
+              <td class="px-5 py-4">Premier setup, bureau très compact</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">Yamaha HS5</td>
+              <td class="px-5 py-4">~318 €<span class="text-muted-foreground"> (159 €/unité, vendue à l'unité)</span></td>
+              <td class="px-5 py-4">5"</td>
+              <td class="px-5 py-4">54 Hz – 30 kHz</td>
+              <td class="px-5 py-4">Mixage généraliste, petite/moyenne pièce</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">IK Multimedia iLoud Micro Monitor</td>
+              <td class="px-5 py-4">~239 €<span class="text-muted-foreground"> (vendue par paire)</span></td>
+              <td class="px-5 py-4">3"</td>
+              <td class="px-5 py-4">65 Hz – 20 kHz</td>
+              <td class="px-5 py-4">Bureau ultra-serré, placement contre un mur</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">Genelec 8030 CP</td>
+              <td class="px-5 py-4">~1 158 €<span class="text-muted-foreground"> (579 €/unité, vendue à l'unité)</span></td>
+              <td class="px-5 py-4">5"</td>
+              <td class="px-5 py-4">58 Hz – 20 kHz</td>
+              <td class="px-5 py-4">Pièce traitée, mixage exigeant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-muted-foreground -mt-4 mb-10">Prix Thomann relevés au moment de la rédaction sur la fiche produit du catalogue, susceptibles de varier — voir la fiche produit pour le prix actualisé. Réponses en basses telles que publiées par chaque constructeur ; les méthodes de mesure diffèrent d'un fabricant à l'autre et les chiffres ne sont donc pas strictement comparables entre eux.</p>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">1. Pourquoi la réponse en basses compte plus que la marque</h2>
+
+      <p class="mb-6">
+        Sur une enceinte de monitoring active, le diamètre du woofer conditionne la fréquence à partir de laquelle le haut-parleur ne reproduit plus efficacement les basses : en dessous de ce seuil, le son chute progressivement (roll-off), et une partie de l'énergie basse fréquence que vous entendez sur une grande enceinte de salon ou un casque fermé n'existe simplement plus. Une 3" à 3,5" comme l'Eris 3.5 ou l'iLoud Micro chute dès 65-80 Hz (voir le tableau ci-dessus) : suffisant pour juger un mix vocal ou un montage podcast, mais insuffisant pour évaluer un kick ou une basse électronique sans caisson complémentaire. Une 5" comme la HS5 ou la Genelec 8030 CP descend plus bas (54-58 Hz) et reste le format le plus polyvalent pour une pièce de home studio de taille standard.
+      </p>
+      <p class="mb-6">
+        Le corollaire, moins souvent expliqué : dans une pièce non traitée acoustiquement, les murs et les angles créent des résonances (modes propres) qui amplifient ou annulent certaines fréquences basses selon l'endroit où vous vous tenez — une enceinte plus précise ne corrige pas ce problème, elle le révèle simplement de façon plus nette. C'est pourquoi une enceinte 5" haut de gamme comme la Genelec 8030 CP n'apporte un vrai bénéfice que si la pièce a déjà reçu un minimum de traitement acoustique ; sans cela, une 3" moins chère et bien positionnée ne vous fera pas perdre autant d'information utile qu'on pourrait le penser.
+      </p>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">2. Les 4 profils, en détail</h2>
+
+      <div id="presonus-eris-3-5-2nd-gen" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://cdn.shopify.com/s/files/1/0984/0872/6803/files/c82e0eb6c6e5bffd55f021da7f627d7737d975fb_2777506121.jpg?v=1788184300" alt="PreSonus Eris 3.5 (2nd Gen)" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/presonus-eris-3-5-2nd-gen" class="product-link text-foreground hover:text-primary transition-colors">PreSonus Eris 3.5 (2nd Gen)</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le premier retour stéréo sérieux (98 € la paire)</p>
+            <p>Pensée pour un bureau où l'espace est compté, la Eris 3.5 tient sur un support de moniteur standard sans dominer visuellement le poste de travail. Le port bass-reflex avant limite les effets de proximité avec un mur derrière l'enceinte, un avantage réel dans une chambre ou un coin de salon transformé en studio. Convient aussi bien au montage vidéo/podcast qu'à un premier mixage musical.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Format compact idéal pour un bureau restreint</li>
+              <li>Port avant tolérant vis-à-vis du mur arrière</li>
+              <li>Prix d'entrée pour une vraie paire stéréo active</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Basses en retrait sous 80 Hz, peu adaptée à un jugement de kick/basse</li>
+              <li>Volume max modeste, moins adaptée à une grande pièce</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/presonus-eris-3-5-2nd-gen" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="presonus-eris-3-5-2nd-gen" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <div id="yamaha-hs-5" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://cdn.shopify.com/s/files/1/0984/0872/6803/files/5b6ba4f78a9ccbf5120a79054a0eea7d9f0ea472_1YAMAHA_HS5_BK.jpg?v=1788187706" alt="Yamaha HS5" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/yamaha-hs-5" class="product-link text-foreground hover:text-primary transition-colors">Yamaha HS5</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Un standard très répandu en home studio (318 € la paire, 159 €/unité)</p>
+            <p>Largement utilisée en home studio, la HS5 doit sa réputation à des médiums précis, utiles pour repérer les défauts d'une voix ou d'un mix avant qu'ils ne posent problème ailleurs. Ses réglages arrière (Room Control, High Trim) permettent d'atténuer une bosse de basses si elle est posée près d'un mur. Elle est vendue à l'unité : comptez deux unités pour une paire stéréo.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Médiums très précis, référence pour le jugement vocal</li>
+              <li>Réglages arrière (Room Control, High Trim) pour adapter à la pièce</li>
+              <li>Communauté immense, tutoriels et retours d'expérience abondants</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Basses en retrait sous 54 Hz sans caisson complémentaire</li>
+              <li>Vendue à l'unité, donc deux fois le prix affiché pour une paire</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/yamaha-hs-5" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="yamaha-hs-5" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <div id="ik-multimedia-iloud-micro-monitor" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://cdn.shopify.com/s/files/1/0984/0872/6803/files/b26f7547fbe1302003ed2318919d703ad215c065_1IK_ILOUD_MICRO_MONITOR.jpg?v=1788184739" alt="IK Multimedia iLoud Micro Monitor" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/ik-multimedia-iloud-micro-monitor" class="product-link text-foreground hover:text-primary transition-colors">IK Multimedia iLoud Micro Monitor</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">La compacte à correction de placement (239 € la paire)</p>
+            <p>Vendue par paire et à peine plus grande qu'un poing, l'iLoud Micro embarque un DSP interne avec des réglages de correction selon le placement (contre un mur, dans un coin, sur un bureau) — un vrai plus quand la position sur le bureau ne peut pas être optimisée davantage. Alimentation secteur classique, réglages via les commandes à l'arrière du caisson.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>DSP de correction de placement intégré (mur, coin, bureau)</li>
+              <li>Encombrement minimal, idéale en setup nomade</li>
+              <li>Vendue en paire, prête à brancher</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Basses très limitées sous 65 Hz malgré le DSP</li>
+              <li>Volume max insuffisant pour juger un mix à niveau réaliste dans une grande pièce</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/ik-multimedia-iloud-micro-monitor" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="ik-multimedia-iloud-micro-monitor" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <div id="genelec-8030-cp" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://cdn.shopify.com/s/files/1/0984/0872/6803/files/3e2cd3142cf7812eed5531107c0cd8e92410d117_GENELEC_8030CP.jpg?v=1788187342" alt="Genelec 8030 CP" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/genelec-8030-cp" class="product-link text-foreground hover:text-primary transition-colors">Genelec 8030 CP</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Une référence broadcast/near-field (1 158 € la paire, 579 €/unité)</p>
+            <p>Le design incurvé caractéristique de Genelec n'est pas qu'esthétique : il réduit la diffraction sonore autour du boîtier, un facteur qui compte réellement au-delà d'un certain niveau d'exigence. C'est un choix pertinent seulement si la pièce a déjà un minimum de traitement acoustique (voir notre <a href="/guide/traitement-acoustique" class="text-primary hover:underline">guide sur le traitement acoustique</a>) : sans cela, la précision de l'enceinte ne fait que révéler les défauts de la pièce sans les corriger.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Précision et neutralité reconnues en broadcast/near-field</li>
+              <li>Design réduisant la diffraction sonore autour du boîtier</li>
+              <li>Fiabilité et longévité reconnues dans le milieu professionnel</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Investissement conséquent, surtout à l'unité pour une paire (~1 158 €)</li>
+              <li>Son intérêt dépend d'une pièce déjà traitée acoustiquement</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/genelec-8030-cp" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="genelec-8030-cp" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">3. Notre recommandation selon votre profil</h2>
+
+      <div class="grid sm:grid-cols-2 gap-6 my-10">
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous démarrez sur un bureau compact</h3>
+          <p class="text-muted-foreground mb-0">La <strong>PreSonus Eris 3.5</strong> ou l'<strong>IK Multimedia iLoud Micro Monitor</strong> couvrent l'essentiel sans envahir l'espace, avec un vrai gain de précision par rapport à un casque seul. L'iLoud coûte plus cher mais ajoute un DSP de correction de placement utile si le bureau est vraiment exigu.</p>
+        </div>
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous montez du podcast ou de la vidéo</h3>
+          <p class="text-muted-foreground mb-0">Les médiums précis de la <strong>Yamaha HS5</strong> ou la simplicité de la <strong>PreSonus Eris 3.5</strong> suffisent largement pour juger une voix, sans avoir besoin des basses les plus étendues du comparatif.</p>
+        </div>
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Votre pièce est déjà traitée acoustiquement</h3>
+          <p class="text-muted-foreground mb-0">La <strong>Genelec 8030 CP</strong> valorise pleinement un environnement d'écoute maîtrisé — inutile en revanche dans une pièce non traitée.</p>
+        </div>
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Votre pièce est grande ou vous mixez des basses electro</h3>
+          <p class="text-muted-foreground mb-0">Aucune enceinte de ce comparatif ne descend sous 54 Hz : dans ce cas, complétez avec un caisson de basses dédié plutôt que de chercher une enceinte encore plus grosse.</p>
+        </div>
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-12 text-center">
+        <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous hésitez encore sur votre chaîne complète (enceintes + interface + traitement) ?</h3>
+        <p class="text-muted-foreground max-w-xl mx-auto mb-6">Notre configurateur prend en compte votre budget global pour vous proposer un setup cohérent, pas juste une paire d'enceintes isolée.</p>
+        <a href="/configurateur" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-md">Lancer le Configurateur Studio IA</a>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">FAQ</h2>
+
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Enceintes de monitoring ou casque studio, lequel choisir en premier ?</h3>
+          <p class="text-muted-foreground">Les deux sont complémentaires plutôt qu'exclusifs : le <a href="/guide/meilleur-casque-studio-home-studio-2026" class="text-primary hover:underline">casque studio</a> isole des voisins et fonctionne dans une pièce non traitée, les enceintes révèlent mieux la stéréo et la restitution des basses réelles. Beaucoup de home studios équipent d'abord un casque, puis ajoutent des enceintes une fois la pièce au moins partiellement traitée.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Faut-il traiter sa pièce avant d'investir dans des enceintes ?</h3>
+          <p class="text-muted-foreground">Idéalement oui, au moins un traitement minimal (voir notre <a href="/guide/traitement-acoustique" class="text-primary hover:underline">guide sur le traitement acoustique</a>) : des enceintes précises dans une pièce non traitée révèlent surtout les réflexions et résonances de la pièce, pas la qualité réelle de votre mix.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Quelle interface audio pour brancher des enceintes actives ?</h3>
+          <p class="text-muted-foreground">Une interface avec des sorties ligne symétriques (TRS ou XLR) convient — voir notre <a href="/guide/top-5-interfaces" class="text-primary hover:underline">comparatif d'interfaces audio</a>. Les 4 références de ce comparatif acceptent une entrée XLR ou TRS directement d'après leur fiche produit ; vérifiez toujours les entrées disponibles sur votre propre interface avant l'achat.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Une seule enceinte à l'unité, c'est normal ?</h3>
+          <p class="text-muted-foreground">Oui pour la plupart des références actives haut de gamme (Yamaha HS5, Genelec 8030 CP) : chaque enceinte embarque son propre amplificateur, donc chacune est vendue séparément. Les modèles les plus compacts (PreSonus Eris, iLoud Micro) sont généralement vendus directement par paire.</p>
+        </div>
+      </div>
+    `
+  },
 ];
 
 export const PATHWAYS: Pathway[] = [
