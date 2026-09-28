@@ -25,7 +25,7 @@ const GUIDE_MAP: Record<string, string> = {
   'micros-dynamiques':        'shure-sm7b-vs-rode-podmic',
   'micros-condensateurs':     'meilleur-micro-podcast-2026',
   'micros-usb':               'meilleur-micro-usb-pas-cher-2026',
-  'micros-shotgun':           'xlr-vs-usb',
+  'micros-shotgun':           'meilleur-micro-shotgun-camera-perche-2026',
   // Interfaces & préamplis
   'cartes-son':               'top-5-interfaces',
   'preamplis':                'scarlett-2i2-4th-gen-shure-sm7b-cloudlifter',
