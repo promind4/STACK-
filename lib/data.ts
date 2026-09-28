@@ -7758,6 +7758,276 @@ export const ARTICLES: Article[] = [
       </div>
     `
   },
+  {
+    id: "33",
+    slug: "meilleur-micro-shotgun-camera-perche-2026",
+    title: "Meilleur Micro Shotgun (Canon) pour Caméra ou Perche en 2026",
+    category: "Audio",
+    readTime: "6 min",
+    date: "28 Sep 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/plaque_audio_doodle.webp",
+    intro: "4 micros shotgun classés par mode d'alimentation et de connexion — le vrai critère qui sépare un micro caméra prêt à l'emploi d'un micro perche professionnel, avant même de comparer le son.",
+    relatedProducts: ["sennheiser-mke-200", "rode-videomic-ntg", "audio-technica-at875r", "sennheiser-mkh-416"],
+    relatedCategorySlug: "micros-shotgun",
+    content: `
+      <p class="lead text-lg text-muted-foreground font-medium mb-8">
+        Un micro shotgun (ou "canon") n'est pas qu'une question de directivité : son mode d'alimentation et son type de connexion déterminent s'il fonctionne directement sur votre caméra, s'il a besoin d'une alimentation fantôme et d'une interface audio, ou les deux. C'est ce critère, souvent ignoré au profit du seul prix, qui structure ce comparatif entre 4 profils très différents parmi les 14 références du catalogue.
+      </p>
+
+      <div class="bg-primary/5 border border-primary/10 rounded-2xl p-6 my-8">
+        <h3 class="text-foreground font-bold mt-0 mb-3 text-lg">
+          Le Verdict Express (En Résumé)
+        </h3>
+        <ul class="mb-0 space-y-2 text-foreground/85">
+          <li><strong>Le plus simple, sans pile (~69 €)</strong> : le Sennheiser MKE 200, alimenté directement par la caméra en jack 3,5 mm — aucune pile, aucune interface.</li>
+          <li><strong>Le plus polyvalent (~209 €)</strong> : le Røde VideoMic NTG, utilisable sur caméra, sur perche ou en USB-C direct sur ordinateur, avec sortie casque de monitoring.</li>
+          <li><strong>Le meilleur choix perche/interview (~174 €)</strong> : l'Audio-Technica AT875R, alimentation fantôme XLR classique, compact et très directif.</li>
+          <li><strong>La référence cinéma (~879 €)</strong> : le Sennheiser MKH 416 — si vous avez regardé un film hollywoodien ces 40 dernières années, vous l'avez entendu.</li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Comparatif : prix, alimentation et connexion</h2>
+
+      <div class="overflow-x-auto no-scrollbar my-8">
+        <table class="w-full text-left border-collapse text-sm bg-card border border-border rounded-2xl overflow-hidden shadow-sm">
+          <thead>
+            <tr class="border-b border-border bg-muted/50 text-foreground font-bold">
+              <th class="px-5 py-4">Modèle</th>
+              <th class="px-5 py-4">Prix constaté (09/2026)</th>
+              <th class="px-5 py-4">Alimentation / connexion</th>
+              <th class="px-5 py-4">Usage idéal</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-border">
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">Sennheiser MKE 200</td>
+              <td class="px-5 py-4">~69 €</td>
+              <td class="px-5 py-4">Aucune pile — alimenté par le jack 3,5 mm de la caméra/smartphone</td>
+              <td class="px-5 py-4">Vlog, interview mobile, premier micro caméra</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">Røde VideoMic NTG</td>
+              <td class="px-5 py-4">~209 €</td>
+              <td class="px-5 py-4">TRS/TRRS auto-détecté sur caméra, ou USB-C sur PC/Mac ; batterie interne non amovible</td>
+              <td class="px-5 py-4">Créateur qui alterne caméra, perche et enregistrement direct PC</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">Audio-Technica AT875R</td>
+              <td class="px-5 py-4">~174 €</td>
+              <td class="px-5 py-4">XLR, alimentation fantôme</td>
+              <td class="px-5 py-4">Perche ou caméra XLR, intérieur/plafond bas</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">Sennheiser MKH 416</td>
+              <td class="px-5 py-4">~879 €</td>
+              <td class="px-5 py-4">XLR, alimentation fantôme (d'après les caractéristiques usuelles du modèle)</td>
+              <td class="px-5 py-4">Plateau cinéma, voix-off de bande-annonce professionnelle</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-muted-foreground -mt-4 mb-10">Prix Thomann relevés au moment de la rédaction sur la fiche produit du catalogue, susceptibles de varier — voir la fiche produit pour le prix actualisé.</p>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">1. Le vrai critère de choix : alimentation et connexion, pas seulement la directivité</h2>
+
+      <p class="mb-6">
+        Deux familles de shotguns cohabitent sur ce marché. La première, comme le Sennheiser MKE 200, se branche directement en jack 3,5 mm et se contente de l'alimentation fournie par la caméra ou le smartphone : aucune pile, aucune interface audio, installation immédiate, mais généralement sans réglage de gain ni sortie casque de monitoring. La seconde, comme l'Audio-Technica AT875R, exige une alimentation fantôme délivrée par une interface audio ou un mélangeur, en échange d'un son généralement plus précis et d'une directivité plus travaillée.
+      </p>
+      <p class="mb-6">
+        Le Røde VideoMic NTG occupe une position hybride : il détecte automatiquement s'il est branché sur une entrée caméra classique (TRS) ou casque/micro combinée (TRRS d'un smartphone), et propose en plus une sortie USB-C pour un enregistrement direct sur ordinateur avec retour casque intégré — au prix d'une batterie interne non remplaçable par l'utilisateur. Avant d'acheter, vérifiez donc moins la fiche technique "directivité" que ceci :</p>
+      <ul class="mb-6 space-y-2 text-foreground/85 list-disc pl-6">
+        <li>Jack 3,5 mm, alimenté par le boîtier, sans pile → MKE 200</li>
+        <li>Jack 3,5 mm ou USB-C, avec batterie interne → VideoMic NTG</li>
+        <li>XLR avec alimentation fantôme (via interface audio) → AT875R (confirmé) ou MKH 416 (attendu pour ce type de micro, à confirmer sur sa fiche produit)</li>
+      </ul>
+      <p class="mb-6">
+      Un micro XLR branché sur une caméra qui n'a qu'une entrée jack 3,5 mm nécessite un adaptateur XLR ou un enregistreur externe — voir notre <a href="/guide/top-5-interfaces" class="text-primary hover:underline">comparatif d'interfaces audio</a> pour un setup complet.
+      </p>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">2. Les 4 profils, en détail</h2>
+
+      <div id="sennheiser-mke-200" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://cdn.shopify.com/s/files/1/0984/0872/6803/files/c5c3d526968b9a6d435d24503115f15bc701fbae_SENNHEISER_MKE_200.jpg?v=1788180396" alt="Sennheiser MKE 200" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/sennheiser-mke-200" class="product-link text-foreground hover:text-primary transition-colors">Sennheiser MKE 200</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le plus simple, sans pile (69 €)</p>
+            <p>Ultra-léger (48 g) et sans aucune pile à gérer, le MKE 200 se monte sur la griffe porte-flash et se branche directement en jack 3,5 mm sur un appareil photo ou un smartphone. C'est le choix le plus direct pour un créateur qui veut un son correct sans complexité technique, au prix d'un réglage de gain absent et d'une portée limitée.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Aucune pile requise, alimenté par le boîtier</li>
+              <li>Ultra-léger (48 g) avec bonnette anti-vent fournie</li>
+              <li>Prix très accessible pour un premier micro caméra</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Pas de réglage de gain ni de sortie casque directe</li>
+              <li>Portée limitée, peu adapté à une source éloignée</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/sennheiser-mke-200" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="sennheiser-mke-200" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <div id="rode-videomic-ntg" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://cdn.shopify.com/s/files/1/0984/0872/6803/files/626438432fbaac08a143174e6310b36dfb9d6bbb_4RODE_NTG.jpg?v=1788184742" alt="Røde VideoMic NTG" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/rode-videomic-ntg" class="product-link text-foreground hover:text-primary transition-colors">Røde VideoMic NTG</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le plus polyvalent (209 €)</p>
+            <p>Le NTG détecte automatiquement s'il est branché en TRS (caméra classique) ou TRRS (smartphone), et propose en plus une sortie USB-C pour enregistrer directement sur ordinateur avec un retour casque intégré. Son potentiomètre de gain continu et ses 94 g en font un choix flexible pour qui alterne entre plusieurs setups — au prix d'une batterie interne non remplaçable.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Fonctionne sur caméra, smartphone et en USB-C direct sur PC/Mac</li>
+              <li>Potentiomètre de gain continu et sortie casque de monitoring</li>
+              <li>Poids plume de 94 g</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Batterie interne non amovible</li>
+              <li>Plusieurs modes de connexion à apprendre au premier usage</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/rode-videomic-ntg" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="rode-videomic-ntg" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <div id="audio-technica-at875r" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://www.audio-technica.com/media/catalog/product/cache/4c54125f062bf26160bb6e241a5e0899/a/t/at875r_01.png" alt="Audio-Technica AT875R" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/audio-technica-at875r" class="product-link text-foreground hover:text-primary transition-colors">Audio-Technica AT875R</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le meilleur choix perche/interview (174 €)</p>
+            <p>Avec seulement 17,5 cm et 80 g, l'AT875R offre une atténuation latérale et arrière remarquable pour un prix contenu côté micros broadcast. Il nécessite une alimentation fantôme (interface audio ou mélangeur), ce qui en fait un choix pour un setup déjà équipé plutôt qu'un premier achat isolé.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Format ultra-court (17,5 cm) et poids plume de 80 g</li>
+              <li>Atténuation latérale et arrière exceptionnelle</li>
+              <li>Prix très abordable pour un micro broadcast</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Nécessite une alimentation fantôme (interface audio ou mélangeur)</li>
+              <li>Coupure naturelle des basses sous 90 Hz</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/audio-technica-at875r" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="audio-technica-at875r" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <div id="sennheiser-mkh-416" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_14/140591/9779723_800.jpg" alt="Sennheiser MKH 416" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/sennheiser-mkh-416" class="product-link text-foreground hover:text-primary transition-colors">Sennheiser MKH 416</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">La référence cinéma (879 €)</p>
+            <p>Si vous avez regardé un film hollywoodien ces 40 dernières années, vous l'avez entendu : le MKH 416 est le standard mondial du cinéma et de la voix-off de bande-annonce. Sa directivité "laser" va chercher le son très loin, et sa bosse de présence caractéristique dans les aigus rend les dialogues intelligibles même dans un mix chargé. Comme la plupart des micros de ce type, il se branche en XLR avec alimentation fantôme (à vérifier sur sa fiche produit) — c'est un investissement pour un usage professionnel régulier, pas un premier micro.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Directivité extrêmement étroite, va chercher le son de loin</li>
+              <li>Bosse de présence caractéristique qui améliore l'intelligibilité des dialogues</li>
+              <li>Standard reconnu du cinéma et de la voix-off professionnelle</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Investissement conséquent pour un usage occasionnel</li>
+              <li>Alimentation fantôme requise selon toute vraisemblance (interface audio ou mélangeur) — à vérifier sur la fiche produit</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/sennheiser-mkh-416" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="sennheiser-mkh-416" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">3. Notre recommandation selon votre profil</h2>
+
+      <div class="grid sm:grid-cols-2 gap-6 my-10">
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous débutez en vlog ou interview mobile</h3>
+          <p class="text-muted-foreground mb-0">Le <strong>Sennheiser MKE 200</strong> se branche et fonctionne sans réglage ni pile — l'option la plus simple pour un premier micro caméra.</p>
+        </div>
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous alternez caméra, perche et enregistrement PC</h3>
+          <p class="text-muted-foreground mb-0">Le <strong>Røde VideoMic NTG</strong> couvre les trois usages sans changer de micro, au prix d'une batterie interne non remplaçable.</p>
+        </div>
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous avez déjà une interface audio avec alimentation fantôme</h3>
+          <p class="text-muted-foreground mb-0">L'<strong>Audio-Technica AT875R</strong> offre un excellent rapport clarté/prix en XLR, pour de l'interview ou de la perche en intérieur.</p>
+        </div>
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous produisez du contenu professionnel régulier</h3>
+          <p class="text-muted-foreground mb-0">Le <strong>Sennheiser MKH 416</strong> reste la référence si l'intelligibilité des dialogues est votre priorité absolue et que le budget le permet.</p>
+        </div>
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-12 text-center">
+        <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous hésitez encore sur votre chaîne complète (micro + caméra ou interface) ?</h3>
+        <p class="text-muted-foreground max-w-xl mx-auto mb-6">Notre configurateur prend en compte votre budget global pour vous proposer un setup cohérent, pas juste un micro isolé.</p>
+        <a href="/configurateur" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-md">Lancer le Configurateur Studio IA</a>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">FAQ</h2>
+
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Micro shotgun ou micro-cravate, lequel choisir pour une interview ?</h3>
+          <p class="text-muted-foreground">Le shotgun reste hors champ et capte à distance grâce à sa forte directivité, pratique pour filmer sans micro visible ; le micro-cravate colle au sujet et isole mieux du bruit ambiant, mais se voit à l'image sauf dissimulation. Beaucoup de productions combinent les deux selon les plans.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Qu'est-ce que l'alimentation fantôme et pourquoi certains shotguns en ont besoin ?</h3>
+          <p class="text-muted-foreground">C'est une tension (généralement 48V) envoyée par une interface audio ou un mélangeur via le câble XLR pour alimenter les micros à condensateur, dont fait partie l'AT875R de ce comparatif. Sans elle, ces micros ne produisent aucun son. Voir notre <a href="/guide/top-5-interfaces" class="text-primary hover:underline">comparatif d'interfaces audio</a> pour choisir une interface qui la fournit.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Un shotgun caméra fonctionne-t-il aussi en intérieur, en studio ?</h3>
+          <p class="text-muted-foreground">La plupart des shotguns sont surtout pensés pour l'extérieur ou les grandes pièces, où leur forte directivité capte moins les réflexions. En intérieur sous plafond bas, un format court comme l'AT875R fait exception et reste pertinent ; dans une petite pièce non traitée, un micro-cravate ou un micro à condensateur large membrane est souvent plus adapté qu'un shotgun classique.</p>
+        </div>
+      </div>
+    `
+  },
 ];
 
 export const PATHWAYS: Pathway[] = [

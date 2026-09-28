@@ -453,6 +453,20 @@ export const ARTICLES: ArticleMeta[] = [
     relatedCategorySlug: "enceintes",
     content: "",
   },
+  {
+    id: "33",
+    slug: "meilleur-micro-shotgun-camera-perche-2026",
+    title: "Meilleur Micro Shotgun (Canon) pour Caméra ou Perche en 2026",
+    category: "Audio",
+    readTime: "6 min",
+    date: "28 Sep 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/plaque_audio_doodle.webp",
+    intro: "4 micros shotgun classés par mode d'alimentation et de connexion — le vrai critère qui sépare un micro caméra prêt à l'emploi d'un micro perche professionnel, avant même de comparer le son.",
+    relatedProducts: ["sennheiser-mke-200", "rode-videomic-ntg", "audio-technica-at875r", "sennheiser-mkh-416"],
+    relatedCategorySlug: "micros-shotgun",
+    content: "",
+  },
 ];
 
 export const getArticleMetaBySlug = (slug: string) =>
