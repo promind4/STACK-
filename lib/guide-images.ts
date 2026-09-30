@@ -24,6 +24,7 @@ const ARTICLE_COVERS: Record<string, string> = {
   'scarlett-2i2-4th-gen-shure-sm7b-cloudlifter': '/images/articles/editorial-sm7b-cloudlifter.png',
   'supprimer-bruit-clavier-stream': '/images/articles/editorial-keyboard-noise.png',
   'meilleures-enceintes-monitoring-home-studio-2026': '/images/articles/guides/audio-workspace-editorial.png',
+  'meilleur-micro-shotgun-camera-perche-2026': '/images/articles/guides/voice-booth-editorial.png',
 }
 
 export function guideCoverImage(article: { slug?: string; category: string; image: string }): string {
