@@ -467,6 +467,20 @@ export const ARTICLES: ArticleMeta[] = [
     relatedCategorySlug: "micros-shotgun",
     content: "",
   },
+  {
+    id: "34",
+    slug: "meilleur-bras-articule-micro-podcast-streaming-2026",
+    title: "Meilleur Bras Articulé pour Micro Podcast ou Streaming en 2026",
+    category: "Audio",
+    readTime: "6 min",
+    date: "01 Oct 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/plaque_audio_doodle.webp",
+    intro: "4 bras articulés classés selon un critère que la plupart des fiches produit ne mettent pas en avant : le bruit qu'ils font pendant l'enregistrement — un ressort qui grince peut ruiner une prise, bien avant la charge maximale supportée.",
+    relatedProducts: ["millenium-ma-2050", "rode-psa1", "rode-psa1-plus", "km-23860"],
+    relatedCategorySlug: "bras-articules",
+    content: "",
+  },
 ];
 
 export const getArticleMetaBySlug = (slug: string) =>
