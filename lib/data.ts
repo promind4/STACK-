@@ -8028,6 +8028,278 @@ export const ARTICLES: Article[] = [
       </div>
     `
   },
+  {
+    id: "34",
+    slug: "meilleur-bras-articule-micro-podcast-streaming-2026",
+    title: "Meilleur Bras Articulé pour Micro Podcast ou Streaming en 2026",
+    category: "Audio",
+    readTime: "6 min",
+    date: "01 Oct 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/plaque_audio_doodle.webp",
+    intro: "4 bras articulés classés selon un critère que la plupart des fiches produit ne mettent pas en avant : le bruit qu'ils font pendant l'enregistrement — un ressort qui grince peut ruiner une prise, bien avant la charge maximale supportée.",
+    relatedProducts: ["millenium-ma-2050", "rode-psa1", "rode-psa1-plus", "km-23860"],
+    relatedCategorySlug: "bras-articules",
+    content: `
+      <p class="lead text-lg text-muted-foreground font-medium mb-8">
+        Un bras articulé sert à positionner le micro sans contact avec la table, pour éviter de transmettre vibrations et bruits de frappe au micro. Mais toutes les fiches produit de ce catalogue ne se valent pas sur un point précis, souvent découvert après l'achat : le bruit des ressorts internes en mouvement, qui peut s'entendre à l'enregistrement si le bras n'est pas conçu pour l'éviter. C'est ce critère, documenté inégalement selon les marques, qui structure ce comparatif entre 4 profils parmi les 9 références du catalogue.
+      </p>
+
+      <div class="bg-primary/5 border border-primary/10 rounded-2xl p-6 my-8">
+        <h3 class="text-foreground font-bold mt-0 mb-3 text-lg">
+          Le Verdict Express (En Résumé)
+        </h3>
+        <ul class="mb-0 space-y-2 text-foreground/85">
+          <li><strong>Pour débuter sans se ruiner (~36 €)</strong> : le Millenium MA-2050, bon rapport qualité/prix mais des ressorts parfois bruyants selon sa propre fiche.</li>
+          <li><strong>La référence historique podcast/radio (~75 €)</strong> : le Røde PSA1, robuste et silencieux, sans gestion de câble intégrée.</li>
+          <li><strong>Ressorts annoncés inaudibles, câble intégré (~99 €)</strong> : le Røde PSA1+, avec amortisseurs néoprène et gestion de câble interne.</li>
+          <li><strong>Construction acier, câble XLR 6 m intégré (~177 €)</strong> : le König & Meyer 23860, fabriqué en Allemagne.</li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Comparatif : prix, bruit et gestion du câble</h2>
+
+      <div class="overflow-x-auto no-scrollbar my-8">
+        <table class="w-full text-left border-collapse text-sm bg-card border border-border rounded-2xl overflow-hidden shadow-sm">
+          <thead>
+            <tr class="border-b border-border bg-muted/50 text-foreground font-bold">
+              <th class="px-5 py-4">Modèle</th>
+              <th class="px-5 py-4">Prix constaté (10/2026)</th>
+              <th class="px-5 py-4">Bruit / câble (d'après la fiche produit)</th>
+              <th class="px-5 py-4">Usage idéal</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-border">
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">Millenium MA-2050</td>
+              <td class="px-5 py-4">~36 €</td>
+              <td class="px-5 py-4">Ressorts parfois un peu bruyants ; câble intégré non remplaçable</td>
+              <td class="px-5 py-4">Débuter le streaming ou le home studio, petit budget</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">Røde PSA1</td>
+              <td class="px-5 py-4">~75 €</td>
+              <td class="px-5 py-4">Ressorts internes silencieux ; pas de gestion de câble intégrée (velcro)</td>
+              <td class="px-5 py-4">Référence podcast/radio, micros jusqu'à 1,1 kg</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">Røde PSA1+</td>
+              <td class="px-5 py-4">~99 €</td>
+              <td class="px-5 py-4">Ressorts annoncés inaudibles, amortisseurs néoprène ; gestion de câble et rotation interne intégrées</td>
+              <td class="px-5 py-4">Setup soigné, câblage interne propre</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">König & Meyer 23860</td>
+              <td class="px-5 py-4">~177 €</td>
+              <td class="px-5 py-4">Non précisé sur le bruit ; câble XLR 6 m intégré mais fixe (non amovible)</td>
+              <td class="px-5 py-4">Studio exigeant une construction acier indestructible</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-muted-foreground -mt-4 mb-10">Prix Thomann relevés au moment de la rédaction sur la fiche produit du catalogue, susceptibles de varier — voir la fiche produit pour le prix actualisé.</p>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">1. Le vrai critère de choix : le bruit en fonctionnement, pas seulement la charge supportée</h2>
+
+      <p class="mb-6">
+        La fiche technique d'un bras articulé met presque toujours en avant sa charge maximale (souvent autour de 1 kg) et sa portée horizontale. Mais un ressort qui grince en bougeant le bras pendant l'enregistrement peut obliger à refaire une prise entière — un défaut que seules certaines fiches produit de ce catalogue mentionnent explicitement. Le Millenium MA-2050, le plus économique de la sélection, reconnaît lui-même des "ressorts parfois un peu bruyants" dans sa fiche. À l'autre extrémité, le Røde PSA1+ met en avant des ressorts "totalement inaudibles" grâce à des amortisseurs néoprène dédiés.
+      </p>
+      <p class="mb-6">
+        La gestion du câble est un second point de différenciation réel : un câble XLR qui pend librement peut se prendre dans le bras ou tirer sur la capsule du micro à chaque mouvement. Le PSA1+ et le K&M 23860 intègrent une gestion de câble interne — mais pour le K&M comme pour le câble intégré du Millenium MA-2050, ce câble n'est pas amovible en cas de besoin de remplacement, un compromis à connaître avant l'achat.
+      </p>
+      <ul class="mb-6 space-y-2 text-foreground/85 list-disc pl-6">
+        <li>Budget serré, bruit occasionnel accepté → Millenium MA-2050</li>
+        <li>Silence prioritaire, câble géré en externe → Røde PSA1</li>
+        <li>Silence et câblage interne propre → Røde PSA1+</li>
+        <li>Construction acier, câble XLR 6 m intégré → König & Meyer 23860</li>
+      </ul>
+      <p class="mb-6">
+        Un bras silencieux ne compense pas un micro mal choisi : voir notre <a href="/guide/meilleur-micro-podcast-2026" class="text-primary hover:underline">comparatif de micros podcast</a> pour la suite de la chaîne.
+      </p>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">2. Les 4 profils, en détail</h2>
+
+      <div id="millenium-ma-2050" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_16/165296/19008913_800.jpg" alt="Millenium MA-2050" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/millenium-ma-2050" class="product-link text-foreground hover:text-primary transition-colors">Millenium MA-2050</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Pour débuter sans se ruiner (36 €)</p>
+            <p>Très populaire pour démarrer le streaming ou le home studio, le MA-2050 est livré avec pince de table et câble XLR intégré, pour une installation simple. Sa fiche produit reconnaît elle-même des ressorts "parfois un peu bruyants" et une charge un peu juste au-delà d'un kilo — des compromis cohérents avec son positionnement prix.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Rapport qualité/prix imbattable pour débuter</li>
+              <li>Construction aluminium correcte</li>
+              <li>Installation facile, pince de table fournie</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Un peu juste pour les micros très lourds (plus d'1 kg)</li>
+              <li>Ressorts parfois un peu bruyants selon sa fiche produit</li>
+              <li>Câble intégré non remplaçable</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/millenium-ma-2050" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="millenium-ma-2050" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <div id="rode-psa1" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_11/114512/14580043_800.jpg" alt="Røde PSA1" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/rode-psa1" class="product-link text-foreground hover:text-primary transition-colors">Røde PSA1</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">La référence historique podcast/radio (75 €)</p>
+            <p>Le PSA1 est le bras articulé de table de référence pour le podcast et la radio, avec une rotation à 360° et une portée horizontale de 820 mm. Ses ressorts internes sont silencieux, mais il ne propose pas de gestion de câble intégrée : le câble XLR se fixe par velcro.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Robustesse légendaire, mouvement fluide et silencieux</li>
+              <li>Supporte jusqu'à 1,1 kg</li>
+              <li>Rotation 360°, portée horizontale 820 mm</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Pas de gestion de câble intégrée (velcro)</li>
+              <li>Design un peu daté, ressorts visibles</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/rode-psa1" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="rode-psa1" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <div id="rode-psa1-plus" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/529272/16790194_800.jpg" alt="Røde PSA1+" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/rode-psa1-plus" class="product-link text-foreground hover:text-primary transition-colors">Røde PSA1+</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Ressorts inaudibles annoncés, câble intégré (99 €)</p>
+            <p>Version premium du PSA1, le PSA1+ ajoute des amortisseurs néoprène pour des ressorts annoncés totalement inaudibles, une tension réglable et un système de gestion de câble intégré avec rotation interne — qui évite au câble XLR de pendre à l'extérieur du bras.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Rotation câble interne, câble géré dans le bras</li>
+              <li>Tension réglable selon le poids du micro</li>
+              <li>Ressorts annoncés ultra-silencieux</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Prix plus élevé que le PSA1 standard</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/rode-psa1-plus" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="rode-psa1-plus" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <div id="km-23860" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_22/228455/16390989_800.jpg" alt="König & Meyer 23860" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/km-23860" class="product-link text-foreground hover:text-primary transition-colors">König & Meyer 23860</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Construction acier, câble XLR intégré (177 €)</p>
+            <p>Fabriqué en Allemagne, le K&M 23860 mise sur une construction en acier jugée extrêmement solide et un câble XLR interne de 6 mètres déjà intégré — au prix d'un câble fixe qu'il n'est pas possible de remplacer soi-même en cas de défaillance. Sa fiche produit ne précise pas le niveau sonore des ressorts.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Stabilité et fluidité exceptionnelles (fabriqué en Allemagne)</li>
+              <li>Câble XLR 6 m haute qualité intégré</li>
+              <li>Construction acier jugée indestructible</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Câble XLR fixe, non amovible</li>
+              <li>Design très industriel</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/km-23860" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="km-23860" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">3. Notre recommandation selon votre profil</h2>
+
+      <div class="grid sm:grid-cols-2 gap-6 my-10">
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous débutez avec un petit budget</h3>
+          <p class="text-muted-foreground mb-0">Le <strong>Millenium MA-2050</strong> reste le choix le plus accessible, au prix d'un bruit de ressort occasionnel selon sa propre fiche.</p>
+        </div>
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous voulez la référence éprouvée du podcast</h3>
+          <p class="text-muted-foreground mb-0">Le <strong>Røde PSA1</strong> reste silencieux et robuste, pour qui gère son câble séparément.</p>
+        </div>
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous voulez un setup propre et silencieux</h3>
+          <p class="text-muted-foreground mb-0">Le <strong>Røde PSA1+</strong> gère le câble en interne et annonce des ressorts totalement inaudibles.</p>
+        </div>
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous voulez une construction acier et un câble déjà intégré</h3>
+          <p class="text-muted-foreground mb-0">Le <strong>König & Meyer 23860</strong> mise sur une structure acier pensée pour durer, câble XLR 6 m déjà intégré.</p>
+        </div>
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-12 text-center">
+        <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous hésitez encore sur votre chaîne complète (micro + bras + interface) ?</h3>
+        <p class="text-muted-foreground max-w-xl mx-auto mb-6">Notre configurateur prend en compte votre budget global pour vous proposer un setup cohérent, pas juste un accessoire isolé.</p>
+        <a href="/configurateur" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-md">Lancer le Configurateur Studio IA</a>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">FAQ</h2>
+
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Un bras articulé est-il vraiment nécessaire, ou un pied de table suffit ?</h3>
+          <p class="text-muted-foreground">Un pied de table transmet les vibrations de la surface (frappe au clavier, mouvements) directement au micro, surtout avec un micro à condensateur sensible. Un bras articulé isole le micro de la table et libère de l'espace devant l'écran — utile dès qu'on enregistre régulièrement.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Comment savoir si un bras supportera mon micro ?</h3>
+          <p class="text-muted-foreground">Vérifiez le poids de votre micro contre la charge maximale annoncée sur la fiche du bras, en gardant une marge : un bras tout juste à la limite peut descendre avec le temps ou vibrer davantage.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Le bruit des ressorts s'entend-il vraiment sur l'enregistrement ?</h3>
+          <p class="text-muted-foreground">Oui, surtout avec un micro à condensateur sensible placé près du bras : un grincement ou un claquement de ressort pendant un ajustement peut se retrouver sur la piste si le bras n'est pas conçu pour l'atténuer. C'est pour cela que certains fabricants, comme Røde sur le PSA1+, mettent en avant des amortisseurs dédiés plutôt que la seule charge supportée.</p>
+        </div>
+      </div>
+    `
+  },
 ];
 
 export const PATHWAYS: Pathway[] = [
