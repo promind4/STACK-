@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# Claude Code agent isolation worktrees (ephemeral, auto-created/removed per agent run)
+.claude/worktrees/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
