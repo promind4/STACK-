@@ -28,7 +28,7 @@ const GUIDE_MAP: Record<string, string> = {
   'micros-shotgun':           'xlr-vs-usb',
   // Interfaces & préamplis
   'cartes-son':               'top-5-interfaces',
-  'preamplis':                'scarlett-2i2-4th-gen-shure-sm7b-cloudlifter',
+  'preamplis':                'quel-preampli-booster-gain-micro-dynamique-sm7b-podmic-2026',
   // Casques & enceintes
   'casques-studio':           'meilleur-casque-studio-home-studio-2026',
   'enceintes':                'meilleures-enceintes-monitoring-home-studio-2026',
