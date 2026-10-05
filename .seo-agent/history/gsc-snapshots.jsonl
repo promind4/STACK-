@@ -99,3 +99,4 @@
 {"date":"2026-09-21","query":"meilleure interface audio pour le podcasting","page":"/categorie/cartes-son","position":82,"clicks":0,"impressions":2,"source":"gsc"}
 {"date":"2026-09-21","query":"mic","page":"/produit/mic-plus","position":49.5,"clicks":0,"impressions":2,"source":"gsc"}
 {"date":"2026-09-21","query":"obs stream lab","page":"/produit/streamlabs-desktop","position":54.5,"clicks":0,"impressions":2,"source":"gsc"}
+{"date":"2026-10-05","period_start":"2026-09-04","period_end":"2026-10-02","total_clicks":11,"total_impressions":539,"avg_ctr":2.04,"note":"Site-wide, 28d GSC pull, pre-filter raw (not country/city-filtered at GSC level; cross-checked against GA4 clean_francophone_organic mode which reported 19 real users / 26 real sessions over the same window). Still build regime."}
