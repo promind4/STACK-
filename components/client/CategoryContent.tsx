@@ -34,7 +34,7 @@ const GUIDE_MAP: Record<string, string> = {
   'enceintes':                'meilleures-enceintes-monitoring-home-studio-2026',
   // Accessoires audio
   'bras-articules':           'enregistrer-podcast-deux-personnes-setup',
-  'cable-xlr':                'xlr-vs-usb',
+  'cable-xlr':                'quel-cable-xlr-choisir-home-studio-prix-metre-2026',
   'traitement-acoustique':    'traitement-acoustique',
 };
 const DEFAULT_GUIDE = 'meilleur-micro-podcast-2026';
