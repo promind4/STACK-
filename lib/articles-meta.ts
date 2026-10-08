@@ -467,6 +467,20 @@ export const ARTICLES: ArticleMeta[] = [
     relatedCategorySlug: "micros-shotgun",
     content: "",
   },
+  {
+    id: "36",
+    slug: "quel-cable-xlr-choisir-home-studio-prix-metre-2026",
+    title: "Quel Câble XLR Choisir pour un Home Studio ? Comparatif Prix au Mètre 2026",
+    category: "Audio",
+    readTime: "5 min",
+    date: "08 Oct 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/plaque_audio_doodle.webp",
+    intro: "8 câbles XLR du catalogue, de 5,80 € à 26 €, classés par prix au mètre plutôt que par prix affiché — le seul calcul qui permet de comparer un câble de 2,5 m à un câble de 10 m sur un pied d'égalité.",
+    relatedProducts: ["the-sssnake-sm6bk", "pro-snake-tpm-6", "pro-snake-tpm-10", "cordial-ccm-5-fm"],
+    relatedCategorySlug: "cable-xlr",
+    content: "",
+  },
 ];
 
 export const getArticleMetaBySlug = (slug: string) =>
