@@ -481,6 +481,20 @@ export const ARTICLES: ArticleMeta[] = [
     relatedCategorySlug: "cable-xlr",
     content: "",
   },
+  {
+    id: "38",
+    slug: "wa-47jr-wa-67-wa-87jr-wa-251-quel-clone-micro-vintage-choisir-2026",
+    title: "WA-47jr, WA-67, WA-87jr ou WA-251 : Quel Clone de Micro Vintage Choisir en 2026 ?",
+    category: "Audio",
+    readTime: "6 min",
+    date: "15 Oct 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/plaque_audio_doodle.webp",
+    intro: "4 micros Warm Audio, chacun pensé comme la recréation d'un micro de studio légendaire différent (U47, U67, U87, ELA M 251) — le vrai choix n'est pas \"lequel est le meilleur\", mais quel son vintage précis vous visez, et à quel budget.",
+    relatedProducts: ["wa-47jr", "wa-87jr", "wa-251", "wa-67"],
+    relatedCategorySlug: "micros-condensateurs",
+    content: "",
+  },
 ];
 
 export const getArticleMetaBySlug = (slug: string) =>
