@@ -8324,6 +8324,277 @@ export const ARTICLES: Article[] = [
       </div>
     `
   },
+  {
+    id: "35",
+    slug: "quel-preampli-booster-gain-micro-dynamique-sm7b-podmic-2026",
+    title: "Quel Préampli ou Booster de Gain pour Micro Dynamique (SM7B, PodMic) en 2026 ?",
+    category: "Audio",
+    readTime: "6 min",
+    date: "05 Oct 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/plaque_audio_doodle.webp",
+    intro: "4 produits du catalogue classés non pas par prix, mais par le vrai problème qu'ils résolvent : manque de gain propre, envie d'un grain vintage, ou besoin d'une chaîne de voix complète façon radio. Les confondre, c'est le moyen le plus sûr de dépenser 265 € pour résoudre un problème à 69 €.",
+    relatedProducts: ["cloud-microphones-cloudlifter-cl-1", "tritonaudio-fethead", "golden-age-project-pre-73-jr-mkii", "dbx-286-s"],
+    relatedCategorySlug: "preamplis",
+    content: `
+      <p class="lead text-lg text-muted-foreground font-medium mb-8">
+        Les micros dynamiques appréciés en podcast et streaming (Shure SM7B, Rode PodMic) ont un point commun : un niveau de sortie très faible, qui oblige à pousser le gain de l'interface à fond sans forcément atteindre un niveau confortable. Mais "ajouter un préampli" recouvre en réalité 3 types de produits qui ne résolvent pas le même problème, comme le montrent leurs propres fiches produit : un simple booster de gain transparent, un préampli qui colore volontairement le son, ou un processeur de voix complet. Ce comparatif classe les 4 références du catalogue selon le problème qu'elles résolvent, pas selon leur prix.
+      </p>
+
+      <div class="bg-primary/5 border border-primary/10 rounded-2xl p-6 my-8">
+        <h3 class="text-foreground font-bold mt-0 mb-3 text-lg">
+          Le Verdict Express (En Résumé)
+        </h3>
+        <ul class="mb-0 space-y-2 text-foreground/85">
+          <li><strong>Juste besoin de gain, rien d'autre (~69 €)</strong> : le TritonAudio FetHead, booster alimenté par le 48V de l'interface, simple et au gain annoncé "ultra-propre".</li>
+          <li><strong>Le même besoin, en version "historique" (~149 €)</strong> : le Cloud Microphones Cloudlifter CL-1, boîtier blindé fabriqué aux USA, plus cher pour le même type de gain annoncé transparent.</li>
+          <li><strong>Envie d'un grain vintage, pas juste du gain (~265 €)</strong> : le Golden Age Project Pre-73 Jr MKII, qui colore volontairement le son façon Neve 1073.</li>
+          <li><strong>Chaîne de voix complète façon radio (~174 €)</strong> : le DBX 286s, préampli + compresseur + de-esser + gate en un seul rack.</li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Comparatif : ce que chaque produit résout réellement</h2>
+
+      <div class="overflow-x-auto no-scrollbar my-8">
+        <table class="w-full text-left border-collapse text-sm bg-card border border-border rounded-2xl overflow-hidden shadow-sm">
+          <thead>
+            <tr class="border-b border-border bg-muted/50 text-foreground font-bold">
+              <th class="px-5 py-4">Modèle</th>
+              <th class="px-5 py-4">Prix constaté (10/2026)</th>
+              <th class="px-5 py-4">Problème résolu</th>
+              <th class="px-5 py-4">Colore le son ?</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-border">
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">TritonAudio FetHead</td>
+              <td class="px-5 py-4">~69 €</td>
+              <td class="px-5 py-4">Manque de gain pur (+27 dB annoncés)</td>
+              <td class="px-5 py-4">Non, gain annoncé "ultra-propre"</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">Cloud Microphones Cloudlifter CL-1</td>
+              <td class="px-5 py-4">~149 €</td>
+              <td class="px-5 py-4">Manque de gain pur (+25 dB annoncés)</td>
+              <td class="px-5 py-4">Non, transparence annoncée comme argument de vente</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">Golden Age Project Pre-73 Jr MKII</td>
+              <td class="px-5 py-4">~265 €</td>
+              <td class="px-5 py-4">Manque de gain + envie d'un caractère sonore marqué</td>
+              <td class="px-5 py-4">Oui, grain "Neve 1073" selon sa fiche</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">DBX 286s</td>
+              <td class="px-5 py-4">~174 €</td>
+              <td class="px-5 py-4">Gain + compression + de-essing + gate, voix prête à l'emploi</td>
+              <td class="px-5 py-4">Oui, par le traitement (pas juste le préampli)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-muted-foreground -mt-4 mb-10">Prix les plus bas relevés parmi les offres marchands du catalogue au moment de la rédaction, susceptibles de varier — voir la fiche produit pour le prix actualisé.</p>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">1. Le vrai critère : quel problème avez-vous, pas quel budget</h2>
+
+      <p class="mb-6">
+        Classer ces 4 produits dans une même catégorie "préampli pour micro dynamique" et les ranger par prix, du moins cher au plus cher, est trompeur : d'après leurs propres fiches produit, le FetHead et le Cloudlifter CL-1 sont conçus pour résoudre un seul problème, un gain insuffisant, sans viser à colorer le son — un gain "ultra-propre" pour le premier, "cristallin" pour le second. Le Golden Age Project Pre-73 Jr MKII résout le même manque de gain, mais en ajoutant délibérément une coloration "vintage" revendiquée par sa fiche produit : un choix esthétique, pas une meilleure solution technique au problème de gain.
+      </p>
+      <p class="mb-6">
+        Le DBX 286s répond à une question différente : pas "comment avoir assez de gain", mais "comment avoir une voix déjà traitée (compression, de-essing, suppression du bruit de fond) avant même d'entrer dans le logiciel d'enregistrement". Un podcasteur qui a juste besoin de gain avec un SM7B ou un PodMic n'a probablement pas besoin de ses fonctions de traitement ; à l'inverse, quelqu'un qui veut un son "radio FM" immédiat gagnera plus avec le 286s qu'avec un simple booster de gain.
+      </p>
+      <ul class="mb-6 space-y-2 text-foreground/85 list-disc pl-6">
+        <li>Votre interface n'a tout simplement pas assez de gain, vous voulez rester neutre → FetHead ou Cloudlifter CL-1</li>
+        <li>Même besoin, mais vous voulez en plus un grain vintage marqué → Golden Age Project Pre-73 Jr MKII</li>
+        <li>Vous voulez une voix déjà compressée et nettoyée en sortie, sans plugin → DBX 286s</li>
+      </ul>
+      <p class="mb-6">
+        Si vous hésitez encore à investir dans un de ces produits avec votre interface actuelle, notre <a href="/guide/scarlett-2i2-4th-gen-shure-sm7b-cloudlifter" class="text-primary hover:underline">comparatif Scarlett 2i2 4ème génération + SM7B</a> détaille un cas précis où un booster de gain externe n'est pas toujours nécessaire.
+      </p>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">2. Les 4 profils, en détail</h2>
+
+      <div id="tritonaudio-fethead" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_43/439143/20815781_800.jpg" alt="TritonAudio FetHead" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/tritonaudio-fethead" class="product-link text-foreground hover:text-primary transition-colors">TritonAudio FetHead</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Juste du gain, rien d'autre (69 €)</p>
+            <p>Un boîtier minuscule qui s'insère directement derrière le micro et se branche en XLR entre le micro et l'interface. Il utilise l'alimentation fantôme 48V de l'interface pour ajouter +27 dB de gain "ultra-propre" selon sa fiche, sans fonction de traitement additionnelle. Plug & play : aucun réglage à faire.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Plug & play, aucun réglage</li>
+              <li>Gain élevé annoncé (+27 dB)</li>
+              <li>Format invisible, se fixe au micro</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Ne transmet pas le 48V au micro (normal pour un dynamique, mais à vérifier si vous changez de micro ensuite)</li>
+              <li>Aucune fonction de traitement du son</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/tritonaudio-fethead" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="tritonaudio-fethead" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <div id="cloud-microphones-cloudlifter-cl-1" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_32/320773/16370363_800.jpg" alt="Cloud Microphones Cloudlifter CL-1" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/cloud-microphones-cloudlifter-cl-1" class="product-link text-foreground hover:text-primary transition-colors">Cloud Microphones Cloudlifter CL-1</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le même besoin, version historique (149 €)</p>
+            <p>Référence fabriquée aux USA dans un boîtier acier blindé, le Cloudlifter CL-1 résout le même problème que le FetHead : transformer l'alimentation fantôme en gain supplémentaire, annoncé "cristallin" par sa fiche (+25 dB). Il se branche entre le micro et l'interface via deux câbles XLR plutôt que de s'insérer directement sur le micro.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Robustesse du boîtier acier</li>
+              <li>Transparence du son annoncée par sa fiche ("gain cristallin")</li>
+              <li>Fabriqué aux USA</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Nécessite deux câbles XLR pour le brancher</li>
+              <li>Plus de deux fois le prix du FetHead pour un gain annoncé comparable</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/cloud-microphones-cloudlifter-cl-1" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="cloud-microphones-cloudlifter-cl-1" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <div id="golden-age-project-pre-73-jr-mkii" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_54/540293/17386896_800.jpg" alt="Golden Age Project Pre-73 Jr MKII" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/golden-age-project-pre-73-jr-mkii" class="product-link text-foreground hover:text-primary transition-colors">Golden Age Project Pre-73 Jr MKII</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le grain vintage, pas juste le gain (265 €)</p>
+            <p>Ce préampli ne cherche pas à être transparent : sa fiche revendique le grain du légendaire Neve 1073, un son coloré "de manière magnifique". Il ajoute un gain important, mais son intérêt principal est esthétique, pas correctif — à réserver à qui cherche un caractère sonore particulier, pas uniquement un complément de gain.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Caractère sonore "vintage" revendiqué par sa fiche produit</li>
+              <li>Qualité de fabrication saluée par sa fiche</li>
+              <li>Gain important</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Pas d'égaliseur intégré, uniquement le préampli</li>
+              <li>Le plus cher des 4, pour un usage de niche (coloration volontaire)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/golden-age-project-pre-73-jr-mkii" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="golden-age-project-pre-73-jr-mkii" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <div id="dbx-286-s" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_25/259111/10720002_800.jpg" alt="DBX 286s" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/dbx-286-s" class="product-link text-foreground hover:text-primary transition-colors">DBX 286s</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">La chaîne de voix complète façon radio (174 €)</p>
+            <p>Contrairement aux 3 autres produits de ce comparatif, le 286s n'est pas qu'un préampli : c'est une tranche de console complète au format rack 19 pouces, combinant préampli, compresseur, de-esser, enhancer et noise gate. L'idée est d'obtenir une voix déjà traitée façon radio avant même qu'elle n'entre dans le logiciel d'enregistrement.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Traitement complet de la voix en une seule machine</li>
+              <li>De-esser jugé très efficace par sa fiche</li>
+              <li>Le son "broadcast" recherché pour la radio/streaming</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Format rack 19 pouces : prend de la place sur un bureau</li>
+              <li>Réglages multiples à apprendre, moins simple qu'un booster plug & play</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/dbx-286-s" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="dbx-286-s" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">3. Notre recommandation selon votre profil</h2>
+
+      <div class="grid sm:grid-cols-2 gap-6 my-10">
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous voulez juste assez de gain, au meilleur prix</h3>
+          <p class="text-muted-foreground mb-0">Le <strong>TritonAudio FetHead</strong> fait le travail au prix le plus bas des 4, sans coloration ajoutée.</p>
+        </div>
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Même besoin, vous privilégiez un boîtier robuste reconnu</h3>
+          <p class="text-muted-foreground mb-0">Le <strong>Cloudlifter CL-1</strong> reste une référence établie, au prix d'un budget plus élevé pour un résultat annoncé comparable.</p>
+        </div>
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous cherchez un caractère sonore marqué</h3>
+          <p class="text-muted-foreground mb-0">Le <strong>Golden Age Project Pre-73 Jr MKII</strong> colore le son volontairement, pour qui cherche cet effet précis.</p>
+        </div>
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous voulez une voix déjà traitée, sans plugin</h3>
+          <p class="text-muted-foreground mb-0">Le <strong>DBX 286s</strong> combine gain, compression et de-essing dans un seul rack.</p>
+        </div>
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-12 text-center">
+        <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous hésitez encore sur votre chaîne complète (micro + préampli + interface) ?</h3>
+        <p class="text-muted-foreground max-w-xl mx-auto mb-6">Notre configurateur prend en compte votre budget global pour vous proposer un setup cohérent, pas juste un accessoire isolé.</p>
+        <a href="/configurateur" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-md">Lancer le Configurateur Studio IA</a>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">FAQ</h2>
+
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Ai-je vraiment besoin d'un préampli externe avec un SM7B ou un PodMic ?</h3>
+          <p class="text-muted-foreground">Cela dépend du gain disponible sur votre interface. Certaines interfaces récentes offrent assez de gain propre pour ces micros sans accessoire supplémentaire : voir notre <a href="/guide/scarlett-2i2-4th-gen-shure-sm7b-cloudlifter" class="text-primary hover:underline">cas précis Scarlett 2i2 4ème génération + SM7B</a> avant d'investir.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Quelle différence concrète entre le FetHead et le Cloudlifter CL-1 ?</h3>
+          <p class="text-muted-foreground">D'après leurs fiches produit respectives, les deux visent le même objectif avec des gains annoncés proches et non colorés ("ultra-propre" pour l'un, "cristallin" pour l'autre) : +27 dB contre +25 dB. Le FetHead s'insère directement derrière le micro, tandis que le Cloudlifter se branche via deux câbles XLR dans un boîtier séparé plus robuste — et coûte plus de deux fois le prix du FetHead.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Le DBX 286s remplace-t-il un plugin de compression/de-essing dans mon logiciel ?</h3>
+          <p class="text-muted-foreground">Il traite le signal avant l'enregistrement plutôt qu'après, ce qui évite d'avoir à régler ces effets en post-production — mais un réglage mal maîtrisé sur le 286s est plus difficile à corriger ensuite qu'un plugin, puisque le traitement est déjà gravé dans l'enregistrement.</p>
+        </div>
+      </div>
+    `
+  },
 ];
 
 export const PATHWAYS: Pathway[] = [

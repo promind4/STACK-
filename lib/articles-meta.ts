@@ -481,6 +481,20 @@ export const ARTICLES: ArticleMeta[] = [
     relatedCategorySlug: "cable-xlr",
     content: "",
   },
+  {
+    id: "35",
+    slug: "quel-preampli-booster-gain-micro-dynamique-sm7b-podmic-2026",
+    title: "Quel Préampli ou Booster de Gain pour Micro Dynamique (SM7B, PodMic) en 2026 ?",
+    category: "Audio",
+    readTime: "6 min",
+    date: "05 Oct 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/plaque_audio_doodle.webp",
+    intro: "4 produits du catalogue classés non pas par prix, mais par le vrai problème qu'ils résolvent : manque de gain propre, envie d'un grain vintage, ou besoin d'une chaîne de voix complète façon radio. Les confondre, c'est le moyen le plus sûr de dépenser 265 € pour résoudre un problème à 69 €.",
+    relatedProducts: ["cloud-microphones-cloudlifter-cl-1", "tritonaudio-fethead", "golden-age-project-pre-73-jr-mkii", "dbx-286-s"],
+    relatedCategorySlug: "preamplis",
+    content: "",
+  },
 ];
 
 export const getArticleMetaBySlug = (slug: string) =>
