@@ -481,6 +481,20 @@ export const ARTICLES: ArticleMeta[] = [
     relatedCategorySlug: "cable-xlr",
     content: "",
   },
+  {
+    id: "39",
+    slug: "ksm44a-lct-441-flex-oc818-lct-640-ts-quel-micro-directivite-variable-choisir-2026",
+    title: "KSM44A, LCT 441 FLEX, OC818 ou LCT 640 TS : Quel Micro à Directivité Variable Choisir en 2026 ?",
+    category: "Audio",
+    readTime: "6 min",
+    date: "19 Oct 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/plaque_audio_doodle.webp",
+    intro: "4 micros à directivités multiples, mais deux logiques radicalement différentes selon leur fiche catalogue : switcher la directivité au moment de la prise (KSM44A, LCT 441 FLEX), ou l'enregistrer en double sortie pour la décider après coup, en post-production (OC818, LCT 640 TS).",
+    relatedProducts: ["shure-ksm44a", "lct-441-flex", "austrian-audio-oc818", "lct-640-ts"],
+    relatedCategorySlug: "micros-condensateurs",
+    content: "",
+  },
 ];
 
 export const getArticleMetaBySlug = (slug: string) =>
