@@ -8324,6 +8324,287 @@ export const ARTICLES: Article[] = [
       </div>
     `
   },
+  {
+    id: "39",
+    slug: "ksm44a-lct-441-flex-oc818-lct-640-ts-quel-micro-directivite-variable-choisir-2026",
+    title: "KSM44A, LCT 441 FLEX, OC818 ou LCT 640 TS : Quel Micro à Directivité Variable Choisir en 2026 ?",
+    category: "Audio",
+    readTime: "6 min",
+    date: "19 Oct 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/plaque_audio_doodle.webp",
+    intro: "4 micros à directivités multiples, mais deux logiques radicalement différentes selon leur fiche catalogue : switcher la directivité au moment de la prise (KSM44A, LCT 441 FLEX), ou l'enregistrer en double sortie pour la décider après coup, en post-production (OC818, LCT 640 TS).",
+    relatedProducts: ["shure-ksm44a", "lct-441-flex", "austrian-audio-oc818", "lct-640-ts"],
+    relatedCategorySlug: "micros-condensateurs",
+    content: `
+      <p class="lead text-lg text-muted-foreground font-medium mb-8">
+        La plupart des comparatifs de micros multi-directivités s'arrêtent au nombre de polaires disponibles. Ça passe à côté d'une différence plus importante entre ces 4 références du catalogue : le Shure KSM44A et le Lewitt LCT 441 FLEX vous font choisir la directivité au moment de la prise, via un switch physique — une fois enregistré, c'est figé. L'Austrian Audio OC818 et le Lewitt LCT 640 TS, eux, enregistrent le signal des deux membranes séparément en double sortie, pour que vous puissiez changer la directivité après coup, en post-production, via un plugin dédié. Deux logiques différentes, pas juste un nombre de polaires différent.
+      </p>
+
+      <div class="bg-primary/5 border border-primary/10 rounded-2xl p-6 my-8">
+        <h3 class="text-foreground font-bold mt-0 mb-3 text-lg">
+          Le Verdict Express (En Résumé)
+        </h3>
+        <ul class="mb-0 space-y-2 text-foreground/85">
+          <li><strong>8 directivités au switch, le plus accessible (~348 €)</strong> : le Lewitt LCT 441 FLEX, pour expérimenter avec l'acoustique de sa pièce sans passer en post-production.</li>
+          <li><strong>3 directivités au switch, bruit propre record (~939 €)</strong> : le Shure KSM44A, pour qui sait déjà quelle directivité il veut à la prise et cherche un bruit de fond minimal (4 dB selon sa fiche).</li>
+          <li><strong>Directivité programmable après coup, double sortie XLR (~825 €)</strong> : le Lewitt LCT 640 TS, même logique de capture brute à deux sorties, pour le sound design et les prises stéréo MS avec un seul micro.</li>
+          <li><strong>Directivité programmable après coup, double capsule (~943 €)</strong> : l'Austrian Audio OC818, pour les ingés son indécis qui veulent décider au mix plutôt qu'à la prise.</li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Comparatif : switcher à la prise ou décider en post-production</h2>
+
+      <div class="overflow-x-auto no-scrollbar my-8">
+        <table class="w-full text-left border-collapse text-sm bg-card border border-border rounded-2xl overflow-hidden shadow-sm">
+          <thead>
+            <tr class="border-b border-border bg-muted/50 text-foreground font-bold">
+              <th class="px-5 py-4">Modèle</th>
+              <th class="px-5 py-4">Directivités</th>
+              <th class="px-5 py-4">Décision de directivité</th>
+              <th class="px-5 py-4">Prix constaté (10/2026)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-border">
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">Lewitt LCT 441 FLEX</td>
+              <td class="px-5 py-4">8 (3 classiques + 5 intermédiaires)</td>
+              <td class="px-5 py-4">Switch physique, à la prise</td>
+              <td class="px-5 py-4 font-semibold">~348 €</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">Lewitt LCT 640 TS</td>
+              <td class="px-5 py-4">Omni, Cardio, 8 (choisi en post-production)</td>
+              <td class="px-5 py-4">Double sortie XLR, plugin en post-production</td>
+              <td class="px-5 py-4 font-semibold">~825 €</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">Shure KSM44A</td>
+              <td class="px-5 py-4">3 (Cardioïde, Omni, Bidirectionnel)</td>
+              <td class="px-5 py-4">Switch physique, à la prise</td>
+              <td class="px-5 py-4 font-semibold">~939 €</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">Austrian Audio OC818</td>
+              <td class="px-5 py-4">Infinies (continu)</td>
+              <td class="px-5 py-4">Double capsule, plugin PolarDesigner en post-production</td>
+              <td class="px-5 py-4 font-semibold">~943 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-muted-foreground -mt-4 mb-10">Tableau classé par prix croissant. Prix constaté = prix le plus bas relevé parmi les offres marchands du catalogue au moment de la rédaction. Susceptible de varier — voir la fiche produit pour le prix actualisé.</p>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">1. Deux logiques, pas juste un nombre de directivités</h2>
+
+      <p class="mb-6">
+        Un micro à directivité fixe capture un seul diagramme polaire (cardioïde, omni...), figé par sa conception. Les 4 micros de cette sélection vont plus loin, mais pas de la même façon, d'après leurs fiches respectives.
+      </p>
+      <p class="mb-6">
+        Le Shure KSM44A propose 3 directivités commutables (cardioïde, omnidirectionnel, bidirectionnel), avec un bruit propre que sa fiche annonce à "seulement 4 dB" grâce à sa technologie de préamplification Prethos. Le choix se fait au switch, avant d'enregistrer : une fois le bouton tourné et la prise faite, la directivité est définitive.
+      </p>
+      <p class="mb-6">
+        Le Lewitt LCT 441 FLEX pousse cette même logique de switch beaucoup plus loin : sa fiche revendique 8 directivités différentes (les 3 classiques plus 5 intermédiaires) dans un boîtier compact, "le micro large membrane le plus polyvalent de sa catégorie de taille" selon sa propre description. Comme le KSM44A, c'est un choix qui se fait à la prise.
+      </p>
+      <p class="mb-6">
+        L'Austrian Audio OC818 change de logique : sa fiche décrit "deux sorties indépendantes (une pour chaque membrane)", qui permettent de "modifier la directivité après l'enregistrement" dans un DAW via le plugin PolarDesigner. Vous enregistrez le signal brut des deux capsules, et décidez la directivité au mix plutôt qu'à la prise.
+      </p>
+      <p class="mb-6">
+        Le Lewitt LCT 640 TS (Twin System) applique la même idée de double sortie, cette fois via deux sorties XLR : sa fiche le présente comme une "machine à remonter le temps" permettant d'"enregistrer le signal brut et CHANGER la directivité du micro... en post-production via un plugin", avec des usages créatifs cités comme le "Stéréo MS avec un seul micro" ou la "rotation de la phase".
+      </p>
+      <ul class="mb-6 space-y-2 text-foreground/85 list-disc pl-6">
+        <li>Vous savez déjà quelle directivité vous voulez, peu de budget → Lewitt LCT 441 FLEX</li>
+        <li>Vous savez déjà quelle directivité vous voulez, bruit de fond minimal prioritaire → Shure KSM44A</li>
+        <li>Vous voulez décider la directivité au mix plutôt qu'à la prise → Austrian Audio OC818 ou Lewitt LCT 640 TS</li>
+      </ul>
+      <p class="mb-6">
+        La double sortie (OC818, LCT 640 TS) a un coût réel au-delà du prix d'achat : elle demande deux entrées XLR disponibles sur votre interface pour le mode double capture, contre une seule pour les deux micros à switch.
+      </p>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">2. Les quatre micros en détail</h2>
+
+      <div id="lct-441-flex" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_43/435078/13119166_800.jpg" alt="Lewitt LCT 441 FLEX" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/lct-441-flex" class="product-link text-foreground hover:text-primary transition-colors">Lewitt LCT 441 FLEX</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">8 directivités au switch, le plus accessible (~348 €)</p>
+            <p>Micro large membrane présenté par sa fiche comme intégrant "8 directivités différentes (les 3 classiques + 5 intermédiaires)" dans le même boîtier compact que le LCT 440 PURE — "le micro large membrane le plus polyvalent de sa catégorie de taille", livré avec suspension et filtre anti-pop magnétique.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>8 directivités dans un format compact, selon sa fiche</li>
+              <li>Prix le plus accessible de cette sélection</li>
+              <li>Anti-pop magnétique inclus</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Boutons de sélection petits, selon sa fiche</li>
+              <li>Directivité figée à la prise, contrairement à l'OC818 et au LCT 640 TS</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/lct-441-flex" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="lct-441-flex" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <div id="shure-ksm44a" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://media.sweetwater.com/m/products/image/2e0034ab73pBtk7dLPPyV5Wj3Myld6Dw1IQzBUdC.jpg" alt="Shure KSM44A" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/shure-ksm44a" class="product-link text-foreground hover:text-primary transition-colors">Shure KSM44A</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">3 directivités au switch, bruit propre record (~939 €)</p>
+            <p>Micro statique haut de gamme dont la fiche met en avant la technologie de préamplification "Prethos Advanced Preamplifier", pour un bruit propre record annoncé à "seulement 4 dB" et 3 directivités commutables (cardioïde, omnidirectionnel, bidirectionnel).</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Bruit propre minimal de 4 dB selon sa fiche</li>
+              <li>3 directivités polaires commutables</li>
+              <li>Qualité de fabrication "militaire" selon sa fiche</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Nécessite une pièce traitée acoustiquement, selon sa fiche</li>
+              <li>Directivité figée à la prise, contrairement à l'OC818 et au LCT 640 TS</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/shure-ksm44a" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="shure-ksm44a" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <div id="lct-640-ts" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_40/400473/11554489_800.jpg" alt="Lewitt LCT 640 TS" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/lct-640-ts" class="product-link text-foreground hover:text-primary transition-colors">Lewitt LCT 640 TS</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Directivité programmable après coup, double sortie XLR (~825 €)</p>
+            <p>Micro "Twin System" que sa fiche présente comme permettant d'"enregistrer le signal brut et CHANGER la directivité du micro... en post-production via un plugin", avec des usages créatifs cités par sa fiche comme le Stéréo MS avec un seul micro ou la rotation de la phase.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Directivité modifiable après l'enregistrement, selon sa fiche</li>
+              <li>Usages créatifs cités par sa fiche (MS stéréo, rotation de phase)</li>
+              <li>Son "moderne et précis" selon sa fiche</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Nécessite deux entrées XLR pour le mode double, selon sa fiche</li>
+              <li>Concept complexe pour les débutants, selon sa fiche</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/lct-640-ts" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="lct-640-ts" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <div id="austrian-audio-oc818" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://media.sweetwater.com/m/products/image/66001fa919gxcZhyNo2uYqoozBTLBsP2dsCgsuk4.png" alt="Austrian Audio OC818" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/austrian-audio-oc818" class="product-link text-foreground hover:text-primary transition-colors">Austrian Audio OC818</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Directivité programmable après coup, double capsule (~943 €)</p>
+            <p>Micro haut de gamme fabriqué à la main à Vienne dont la fiche décrit "deux sorties indépendantes (une pour chaque membrane)", permettant de "modifier la directivité après l'enregistrement" dans le DAW via le plugin PolarDesigner ; sa fiche mentionne aussi une connexion Bluetooth avec le dongle OCR8 optionnel.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Directivités programmables en post-production, selon sa fiche</li>
+              <li>Double sortie capsule, son neutre et ultra-détaillé, selon sa fiche</li>
+              <li>Fabriqué à la main à Vienne selon sa fiche</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Tarif haut de gamme selon sa fiche</li>
+              <li>Mode double sortie nécessite deux entrées XLR sur l'interface</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/austrian-audio-oc818" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="austrian-audio-oc818" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">3. Notre recommandation selon votre profil</h2>
+
+      <div class="grid sm:grid-cols-2 gap-6 my-10">
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Budget limité, envie d'expérimenter les directivités</h3>
+          <p class="text-muted-foreground mb-0">Le <strong>Lewitt LCT 441 FLEX</strong> offre 8 directivités au switch, au prix d'entrée de cette sélection (~348 €).</p>
+        </div>
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Directivité déjà décidée, priorité au bruit de fond</h3>
+          <p class="text-muted-foreground mb-0">Le <strong>Shure KSM44A</strong> vise un bruit propre record de 4 dB, selon sa fiche.</p>
+        </div>
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Indécis sur la directivité : décider au mix</h3>
+          <p class="text-muted-foreground mb-0">L'<strong>Austrian Audio OC818</strong> ou le <strong>Lewitt LCT 640 TS</strong> enregistrent en double sortie pour choisir après coup, selon leurs fiches — à condition d'avoir deux entrées XLR disponibles.</p>
+        </div>
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Directivité fixe suffit, budget serré</h3>
+          <p class="text-muted-foreground mb-0">Voir plutôt notre <a href="/guide/meilleur-micro-condensateur-home-studio-moins-250-euros" class="text-primary hover:underline">comparatif de micros à condensateur sous 250 €</a>, centré sur le meilleur rapport qualité/prix plutôt que sur la directivité variable.</p>
+        </div>
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-12 text-center">
+        <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous hésitez encore sur votre chaîne complète (micro + préampli + interface) ?</h3>
+        <p class="text-muted-foreground max-w-xl mx-auto mb-6">Notre configurateur prend en compte votre budget global pour vous proposer un setup cohérent, pas juste un micro isolé.</p>
+        <a href="/configurateur" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-md">Lancer le Configurateur Studio IA</a>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">FAQ</h2>
+
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Pourquoi l'OC818 et le LCT 640 TS ont-ils besoin de deux entrées XLR ?</h3>
+          <p class="text-muted-foreground">La fiche du LCT 640 TS l'indique directement (deux entrées nécessaires pour le mode Dual) ; pour l'OC818, c'est une conséquence directe de sa conception à deux sorties indépendantes (une par membrane). Dans les deux cas, c'est ce signal à deux voies qu'un plugin dédié recompose ensuite en post-production pour choisir la directivité après coup — contrairement au KSM44A ou au LCT 441 FLEX, qui n'envoient qu'un seul signal déjà formé par le switch choisi à la prise.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">La directivité programmable en post-production a-t-elle un inconvénient sonore ?</h3>
+          <p class="text-muted-foreground">Les fiches de l'OC818 et du LCT 640 TS ne mentionnent aucune dégradation sonore liée à ce procédé : l'OC818 annonce un "son neutre et ultra-détaillé", le LCT 640 TS un son "moderne et précis". Le compromis est pratique, pas sonore selon leurs fiches : plus de matériel à gérer (deux voies, logiciel dédié) pour un gain de flexibilité au mix.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Faut-il une pièce traitée acoustiquement pour profiter de ces micros ?</h3>
+          <p class="text-muted-foreground">Le KSM44A le précise explicitement sur sa fiche. Les autres ne l'indiquent pas aussi directement, mais la règle vaut pour tout micro à condensateur sensible : plus la directivité capte les côtés ou l'arrière (omnidirectionnelle, bidirectionnelle), plus le micro capte la réverbération de la pièce. Voir notre <a href="/guide/traitement-acoustique" class="text-primary hover:underline">guide de traitement acoustique</a> si votre pièce n'est pas encore traitée.</p>
+        </div>
+      </div>
+    `
+  },
+
 ];
 
 export const PATHWAYS: Pathway[] = [
