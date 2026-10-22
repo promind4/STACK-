@@ -481,6 +481,20 @@ export const ARTICLES: ArticleMeta[] = [
     relatedCategorySlug: "cable-xlr",
     content: "",
   },
+  {
+    id: "40",
+    slug: "sm7db-stealth-broadcast-dcm8-dcm3-quel-micro-dynamique-preampli-integre-choisir-2026",
+    title: "SM7dB, Stealth Broadcast, DCM 8 ou DCM 3 : Quel Micro Dynamique à Préampli Intégré Choisir en 2026 ?",
+    category: "Audio",
+    readTime: "6 min",
+    date: "22 Oct 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/plaque_audio_doodle.webp",
+    intro: "4 micros dynamiques qui embarquent leur propre préampli actif pour régler le problème classique du micro broadcast passif (SM7B, PodMic...) qui a besoin d'un gros boost externe — sans passer par un Cloudlifter ou un FetHead séparé.",
+    relatedProducts: ["shure-sm7db", "stealth-broadcast", "dynacaster-dcm-8", "dynacaster-dcm-3"],
+    relatedCategorySlug: "micros-dynamiques",
+    content: "",
+  },
 ];
 
 export const getArticleMetaBySlug = (slug: string) =>
