@@ -8324,6 +8324,280 @@ export const ARTICLES: Article[] = [
       </div>
     `
   },
+  {
+    id: "40",
+    slug: "sm7db-stealth-broadcast-dcm8-dcm3-quel-micro-dynamique-preampli-integre-choisir-2026",
+    title: "SM7dB, Stealth Broadcast, DCM 8 ou DCM 3 : Quel Micro Dynamique à Préampli Intégré Choisir en 2026 ?",
+    category: "Audio",
+    readTime: "6 min",
+    date: "22 Oct 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/plaque_audio_doodle.webp",
+    intro: "4 micros dynamiques qui embarquent leur propre préampli actif pour régler le problème classique du micro broadcast passif (SM7B, PodMic...) qui a besoin d'un gros boost externe — sans passer par un Cloudlifter ou un FetHead séparé.",
+    relatedProducts: ["shure-sm7db", "stealth-broadcast", "dynacaster-dcm-8", "dynacaster-dcm-3"],
+    relatedCategorySlug: "micros-dynamiques",
+    content: `
+      <p class="lead text-lg text-muted-foreground font-medium mb-8">
+        Le problème est connu de quiconque a acheté un Shure SM7B ou un RØDE PodMic : ces micros dynamiques passifs sonnent très bien, mais leur niveau de sortie est si faible qu'il faut souvent ajouter un booster de gain externe (Cloudlifter, FetHead) pour obtenir un signal exploitable. Les 4 micros de cette sélection résolvent ce problème autrement : ils intègrent directement un préampli actif dans le micro, alimenté par le 48V de votre interface. Résultat annoncé par la plupart de leurs fiches : plus besoin d'acheter une pièce séparée — avec une nuance sur le modèle d'entrée de gamme (voir section 1).
+      </p>
+
+      <div class="bg-primary/5 border border-primary/10 rounded-2xl p-6 my-8">
+        <h3 class="text-foreground font-bold mt-0 mb-3 text-lg">
+          Le Verdict Express (En Résumé)
+        </h3>
+        <ul class="mb-0 space-y-2 text-foreground/85">
+          <li><strong>Entrée de gamme, boost modéré (~89 €)</strong> : le SE Electronics DynaCaster DCM 3, pour un premier pas vers le préampli intégré sans faire exploser le budget.</li>
+          <li><strong>Milieu de gamme, EQ intégré (~239 €)</strong> : le SE Electronics DynaCaster DCM 8, avec son préampli "Dynamite" +30 dB et des switchs de tone-shaping.</li>
+          <li><strong>Polyvalent, 4 voicings (~249 €)</strong> : l'Aston Stealth Broadcast, pour qui veut changer de signature sonore sans changer de micro.</li>
+          <li><strong>Le SM7B avec préampli d'origine (~525 €)</strong> : le Shure SM7dB, pour qui veut le son de référence du SM7B sans acheter de Cloudlifter séparé.</li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Comparatif : préampli intégré, du plus accessible au plus premium</h2>
+
+      <div class="overflow-x-auto no-scrollbar my-8">
+        <table class="w-full text-left border-collapse text-sm bg-card border border-border rounded-2xl overflow-hidden shadow-sm">
+          <thead>
+            <tr class="border-b border-border bg-muted/50 text-foreground font-bold">
+              <th class="px-5 py-4">Modèle</th>
+              <th class="px-5 py-4">Préampli intégré</th>
+              <th class="px-5 py-4">Particularité</th>
+              <th class="px-5 py-4">Prix constaté (10/2026)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-border">
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">DynaCaster DCM 3</td>
+              <td class="px-5 py-4">Actif, niveau de sortie moyen selon sa fiche</td>
+              <td class="px-5 py-4">Filtre anti-pop interne, design "Camera-Ready"</td>
+              <td class="px-5 py-4 font-semibold">~89 €</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">DynaCaster DCM 8</td>
+              <td class="px-5 py-4">"Dynamite" +30 dB</td>
+              <td class="px-5 py-4">Switchs d'égalisation (tone-shaping)</td>
+              <td class="px-5 py-4 font-semibold">~239 €</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">Aston Stealth Broadcast</td>
+              <td class="px-5 py-4">Class A, détecte le 48V (comme le Stealth standard)</td>
+              <td class="px-5 py-4">4 voicings (dont "Vocal 1" façon voix off)</td>
+              <td class="px-5 py-4 font-semibold">~249 €</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-foreground">Shure SM7dB</td>
+              <td class="px-5 py-4">+18 dB / +28 dB, licence Cloud Microphones</td>
+              <td class="px-5 py-4">Mode passif commutable (redevient un SM7B classique)</td>
+              <td class="px-5 py-4 font-semibold">~525 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-muted-foreground -mt-4 mb-10">Tableau classé par prix croissant. Prix constaté = prix le plus bas relevé parmi les offres marchands du catalogue au moment de la rédaction. Susceptible de varier — voir la fiche produit pour le prix actualisé.</p>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">1. Pourquoi un préampli intégré plutôt qu'un booster séparé ?</h2>
+
+      <p class="mb-6">
+        Un micro dynamique passif classique (SM7B, PodMic...) a un niveau de sortie volontairement bas, une caractéristique souvent associée à sa bonne réjection des bruits ambiants. Sur une interface d'entrée de gamme, ça se traduit souvent par un signal trop faible, qu'il faut remonter avec un gain élevé — au prix d'un souffle plus présent. La solution classique est d'ajouter un booster externe (Cloudlifter, FetHead) entre le micro et l'interface.
+      </p>
+      <p class="mb-6">
+        Les 4 micros de cette sélection intègrent directement ce boost dans le corps du micro, sous forme d'un préampli actif alimenté par l'alimentation fantôme 48V de l'interface. Le SE Electronics DynaCaster DCM 3 le présente ainsi sur sa fiche : "contrairement aux microphones dynamiques passifs traditionnels comme le SM7B, le DCM3 délivre un signal plus fort... cette caractéristique élimine le besoin d'un Cloudlifter dans la plupart des configurations". Le Shure SM7dB applique la même logique directement sur le micro le plus connu du marché : sa fiche promet "jusqu'à +28 dB de gain transparent sur simple activation de l'alimentation 48V", avec un mode passif commutable pour retrouver le SM7B d'origine si besoin.
+      </p>
+      <p class="mb-6">
+        Nuance utile avant d'acheter : le DynaCaster DCM 3 reste la version d'entrée de gamme de cette logique — sa propre fiche le classe en "niveau de sortie moyen (préampli correct requis)" dans sa liste de points faibles, malgré le boost intégré annoncé dans sa description. Le DCM 8, lui, revendique un préampli "Dynamite" +30 dB explicitement nommé dans ses points forts, sans réserve équivalente.
+      </p>
+      <ul class="mb-6 space-y-2 text-foreground/85 list-disc pl-6">
+        <li>Vous voulez l'option la moins chère pour tester le concept → DynaCaster DCM 3</li>
+        <li>Vous voulez un boost franc + un EQ intégré pour éviter un plugin → DynaCaster DCM 8</li>
+        <li>Vous voulez pouvoir changer de signature sonore selon la source → Aston Stealth Broadcast</li>
+        <li>Vous voulez le son de référence du SM7B sans acheter de Cloudlifter → Shure SM7dB</li>
+      </ul>
+      <p class="mb-6">
+        Les 4 nécessitent une alimentation fantôme 48V pour activer leur préampli — contrairement à un micro passif classique, qui capte le son sans alimentation.
+      </p>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">2. Les quatre micros en détail</h2>
+
+      <div id="dynacaster-dcm-3" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_55/557973/18144960_800.jpg" alt="SE Electronics DynaCaster DCM 3" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/dynacaster-dcm-3" class="product-link text-foreground hover:text-primary transition-colors">SE Electronics DynaCaster DCM 3</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Entrée de gamme, boost modéré (~89 €)</p>
+            <p>Entrée de gamme de la série DynaCaster, présentée par sa fiche comme intégrant un "préampli actif innovant" éliminant "le besoin d'un Cloudlifter dans la plupart des configurations" — nuancé par son propre point faible, qui le classe en "niveau de sortie moyen (préampli correct requis)".</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Design "Camera-Ready" propre, selon sa fiche</li>
+              <li>Filtre anti-pop interne, selon sa fiche</li>
+              <li>Prix le plus accessible de cette sélection</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Niveau de sortie moyen, préampli correct requis selon sa fiche</li>
+              <li>Nécessite une alimentation fantôme 48V pour activer le préampli</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/dynacaster-dcm-3" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="dynacaster-dcm-3" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <div id="dynacaster-dcm-8" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_53/534241/17159693_800.jpg" alt="SE Electronics DynaCaster DCM 8" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/dynacaster-dcm-8" class="product-link text-foreground hover:text-primary transition-colors">SE Electronics DynaCaster DCM 8</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Milieu de gamme, EQ intégré (~239 €)</p>
+            <p>Modèle intermédiaire de la série DynaCaster, dont la fiche met en avant un "préampli Dynamite intégré (+30dB)" et des "switchs d'égalisation (Tone Shaping)" permettant d'ajuster la voix sans égaliseur externe, plus un filtre coupe-bas multi-positions.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Préampli "Dynamite" +30 dB, selon sa fiche</li>
+              <li>Switchs d'égalisation (tone-shaping), selon sa fiche</li>
+              <li>Isolation contre les chocs, selon sa fiche</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Nécessite une alimentation fantôme pour le préampli, selon sa fiche</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/dynacaster-dcm-8" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="dynacaster-dcm-8" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <div id="stealth-broadcast" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_59/594388/19234123_800.jpg" alt="Aston Stealth Broadcast" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/stealth-broadcast" class="product-link text-foreground hover:text-primary transition-colors">Aston Stealth Broadcast</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Polyvalent, 4 voicings (~249 €)</p>
+            <p>Variante packagée pour le podcast et la radio du Stealth original, selon sa fiche "techniquement identique" mais avec un marketing recentré sur le broadcast. Conserve les "quatre voicings magiques" et le préampli actif intégré, avec un mode "Vocal 1" décrit comme offrant ce son "voix off de cinéma" sans effort.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Préampli boost intégré, selon sa fiche</li>
+              <li>4 voicings (Vocal, Guitar, Hybrid, Dark, selon la fiche du Stealth standard, auquel il est techniquement identique)</li>
+              <li>Polyvalence totale, selon sa fiche</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Techniquement identique au Stealth standard, selon sa fiche</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/stealth-broadcast" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="stealth-broadcast" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <div id="shure-sm7db" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+          <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+            <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_57/573672/18492388_800.jpg" alt="Shure SM7dB" class="w-full h-full object-contain" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/shure-sm7db" class="product-link text-foreground hover:text-primary transition-colors">Shure SM7dB</a></h3>
+            <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le SM7B avec préampli d'origine (~525 €)</p>
+            <p>Version du SM7B légendaire intégrant, selon sa fiche, "un préampli actif conçu en partenariat exclusif avec Cloud Microphones", délivrant "jusqu'à +28 dB de gain transparent sur simple activation de l'alimentation 48V", avec un mode bypass pour retrouver le fonctionnement passif du SM7B classique.</p>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Préampli actif +18/+28 dB sous licence Cloud Microphones, selon sa fiche</li>
+              <li>Son broadcast de référence du SM7B sans matériel additionnel, selon sa fiche</li>
+              <li>Mode passif commutable, selon sa fiche</li>
+            </ul>
+          </div>
+          <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+            <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+            <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+              <li>Nécessite une alimentation fantôme 48V pour activer le préampli, selon sa fiche</li>
+              <li>Tarif plus élevé que le modèle passif SM7B, selon sa fiche</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-8">
+          <a href="/produit/shure-sm7db" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+          <div data-product-slug="shure-sm7db" data-merchant-links-container></div>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">3. Notre recommandation selon votre profil</h2>
+
+      <div class="grid sm:grid-cols-2 gap-6 my-10">
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Budget serré, premier pas vers le broadcast</h3>
+          <p class="text-muted-foreground mb-0">Le <strong>DynaCaster DCM 3</strong> (~89 €) est l'option la moins chère, avec un niveau de sortie moyen selon sa propre fiche — pas un remplacement total d'un bon préampli.</p>
+        </div>
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Veut un boost franc et un EQ sans logiciel</h3>
+          <p class="text-muted-foreground mb-0">Le <strong>DynaCaster DCM 8</strong> (~239 €) cumule préampli +30 dB et switchs d'égalisation intégrés, selon sa fiche.</p>
+        </div>
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Enregistre plusieurs sources différentes</h3>
+          <p class="text-muted-foreground mb-0">L'<strong>Aston Stealth Broadcast</strong> (~249 €) change de signature sonore via ses 4 voicings, selon sa fiche — utile si vous passez de la voix à la guitare ou à d'autres sources.</p>
+        </div>
+        <div class="bg-muted/30 border border-border rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Veut le son SM7B sans acheter de Cloudlifter</h3>
+          <p class="text-muted-foreground mb-0">Le <strong>Shure SM7dB</strong> (~525 €) est le choix direct : même son que le SM7B classique, préampli déjà inclus.</p>
+        </div>
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-12 text-center">
+        <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous hésitez encore sur votre chaîne complète (micro + interface) ?</h3>
+        <p class="text-muted-foreground max-w-xl mx-auto mb-6">Notre configurateur prend en compte votre budget global pour vous proposer un setup cohérent, pas juste un micro isolé.</p>
+        <a href="/configurateur" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-md">Lancer le Configurateur Studio IA</a>
+      </div>
+
+      <h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">FAQ</h2>
+
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Un préampli intégré remplace-t-il totalement un Cloudlifter ou un FetHead ?</h3>
+          <p class="text-muted-foreground">Selon leurs fiches respectives, oui pour le SM7dB ("plus besoin d'investir dans un boîtier Cloudlifter externe") et pour le DynaCaster DCM 8 ("élimine la nécessité d'un Cloudlifter ou d'un préampli externe"). Nuance à connaître sur le DynaCaster DCM 3 : sa fiche annonce qu'il "élimine le besoin d'un Cloudlifter dans la plupart des configurations", mais ses propres points faibles le classent en "niveau de sortie moyen (préampli correct requis)" — le boost existe, mais il est présenté comme plus modeste sur ce modèle d'entrée de gamme (le gain de l'Aston Stealth Broadcast n'est pas quantifié par sa fiche).</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Pourquoi ces micros ont-ils besoin du 48V alors que ce sont des micros dynamiques ?</h3>
+          <p class="text-muted-foreground">Un micro dynamique classique capte le son sans alimentation. Ici, le 48V ne sert pas à faire fonctionner la capsule elle-même, mais à alimenter le circuit de préamplification actif intégré dans le micro — exactement comme un Cloudlifter externe a besoin du 48V de l'interface pour fonctionner.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Stealth et Stealth Broadcast, quelle différence ?</h3>
+          <p class="text-muted-foreground">Selon sa propre fiche, le Stealth Broadcast est "techniquement identique" au Stealth original : mêmes 4 voicings, même préampli actif intégré. Seuls changent le packaging et le marketing, recentrés sur le podcast et la radio plutôt que sur un usage studio généraliste.</p>
+        </div>
+      </div>
+    `
+  },
+
 ];
 
 export const PATHWAYS: Pathway[] = [
