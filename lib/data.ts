@@ -8324,6 +8324,273 @@ export const ARTICLES: Article[] = [
       </div>
     `
   },
+  {
+    id: "41",
+    slug: "compresseur-analogique-dsp-ou-insert-quelle-interface-audio-pour-sculpter-votre-son-2026",
+    title: "Compresseur analogique, DSP temps réel ou insert matériel : quelle interface audio pour sculpter votre son avant l'enregistrement ?",
+    category: "Audio",
+    readTime: "7 min",
+    date: "26 Oct 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/plaque_audio_doodle.webp",
+    intro: "4 interfaces audio qui ne se contentent pas d'amplifier un signal : chacune le traite différemment avant qu'il n'atteigne votre logiciel — un vrai compresseur analogique matériel, un DSP temps réel qui émule des consoles vintage, un point d'insertion pour vos propres machines, ou un circuit de coloration analogique. Comprendre cette différence évite d'acheter la mauvaise approche pour votre usage.",
+    relatedProducts: ["universal-audio-volt-276", "universal-audio-apollo-twin-x-usb", "audient-id24", "ssl-2-plus"],
+    relatedCategorySlug: "cartes-son",
+    content: `
+<p class="lead text-lg text-muted-foreground font-medium mb-8">
+  La plupart des interfaces audio se contentent d'amplifier et de convertir un signal, point final — tout traitement (compression, couleur, effets) se fait ensuite dans le logiciel. Les quatre interfaces de ce comparatif font exception : chacune ajoute un traitement avant ou pendant la conversion, mais pas de la même manière ni avec le même objectif. Confondre ces quatre approches, c'est risquer d'acheter un DSP temps réel quand on voulait juste un compresseur simple à l'entrée — ou l'inverse.
+</p>
+
+<div class="bg-primary/5 border border-primary/10 rounded-2xl p-6 my-8">
+  <h3 class="text-foreground font-bold mt-0 mb-3 text-lg">
+    Le Verdict Express (En Résumé)
+  </h3>
+  <ul class="mb-0 space-y-2 text-foreground/85">
+    <li><strong>Le compresseur matériel prêt à l'emploi (~299 €)</strong> : l'Universal Audio Volt 276, avec un vrai compresseur analogique inspiré de l'Urei 1176 intégré au circuit d'entrée, sans latence et sans réglage complexe.</li>
+    <li><strong>Le DSP temps réel haut de gamme (~899 €)</strong> : l'Universal Audio Apollo Twin X USB, qui fait tourner des émulations de consoles Neve, SSL et API directement sur sa puce dédiée, à latence quasi nulle.</li>
+    <li><strong>Le point d'insertion pour votre propre matériel (~315 €)</strong> : l'Audient iD24, qui ne traite rien elle-même mais vous laisse brancher un compresseur ou un égaliseur analogique externe avant la conversion.</li>
+    <li><strong>Le circuit de couleur à la demande (~319 €)</strong> : la SSL 2+ MKII, avec son bouton Legacy 4K, un circuit de coloration analogique que sa fiche qualifie de "magique" et qu'on active ou non selon la prise.</li>
+  </ul>
+</div>
+
+<h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Comparatif : mécanisme de traitement, particularité et prix</h2>
+
+<div class="overflow-x-auto no-scrollbar my-8">
+  <table class="w-full text-left border-collapse text-sm bg-card border border-border rounded-2xl overflow-hidden shadow-sm">
+    <thead>
+      <tr class="border-b border-border bg-muted/50 text-foreground font-bold">
+        <th class="px-5 py-4">Modèle</th>
+        <th class="px-5 py-4">Mécanisme de traitement</th>
+        <th class="px-5 py-4">Particularité</th>
+        <th class="px-5 py-4">Prix indicatif (10/2026)</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-border">
+      <tr>
+        <td class="px-5 py-4 font-semibold text-foreground">Volt 276</td>
+        <td class="px-5 py-4">Compresseur analogique matériel intégré</td>
+        <td class="px-5 py-4">Compresseur à presets, non réglable finement selon sa fiche</td>
+        <td class="px-5 py-4">~299 €</td>
+      </tr>
+      <tr>
+        <td class="px-5 py-4 font-semibold text-foreground">Apollo Twin X USB</td>
+        <td class="px-5 py-4">DSP UAD-2 DUO temps réel + préamplis Unison</td>
+        <td class="px-5 py-4">Latence quasi nulle, version USB pensée pour Windows selon sa fiche</td>
+        <td class="px-5 py-4">~899 €</td>
+      </tr>
+      <tr>
+        <td class="px-5 py-4 font-semibold text-foreground">iD24</td>
+        <td class="px-5 py-4">Inserts analogiques symétriques (pas de traitement interne)</td>
+        <td class="px-5 py-4">2 départs/retours pour hardware externe de votre choix</td>
+        <td class="px-5 py-4">~315 €</td>
+      </tr>
+      <tr>
+        <td class="px-5 py-4 font-semibold text-foreground">SSL 2+ MKII</td>
+        <td class="px-5 py-4">Circuit de coloration analogique (bouton Legacy 4K)</td>
+        <td class="px-5 py-4">Coloration activable ou non, pas un compresseur ni un insert</td>
+        <td class="px-5 py-4">~319 €</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p class="text-sm text-muted-foreground -mt-4 mb-10">Prix indicatifs (~) relevés en ligne auprès de revendeurs début octobre 2026, susceptibles de varier — voir la fiche produit pour le prix actualisé.</p>
+
+<h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">1. Quatre mécanismes, quatre philosophies — lequel correspond à votre usage ?</h2>
+
+<p class="mb-6">
+  Le point commun entre ces quatre interfaces, c'est qu'aucune ne se contente d'un simple préampli propre suivi d'une conversion neutre. Mais la façon dont chacune intervient sur le signal diffère fondamentalement, et le savoir évite de payer pour une fonctionnalité qu'on n'utilisera jamais — ou de se priver de celle dont on a réellement besoin.
+</p>
+<ul class="mb-6 space-y-2 text-foreground/85 list-disc pl-6">
+  <li><strong>Traitement analogique fixe, avant conversion</strong> → Volt 276. Le compresseur 1176 intégré agit directement sur le signal électrique, avant même qu'il soit numérisé, et sa couleur reste liée à ce compresseur (mode Vintage). Pas de latence possible puisqu'il n'y a pas de calcul numérique, mais pas de réglage fin non plus : selon sa fiche, c'est un compresseur à presets.</li>
+  <li><strong>Traitement hybride, calculé sur une puce dédiée dans l'interface</strong> → Apollo Twin X USB. Les préamplis Unison modifient physiquement l'impédance d'entrée et le comportement analogique du circuit pour émuler des consoles vintage, tandis que les plug-ins UAD tournent sur le DSP UAD-2 DUO intégré à l'interface, pas sur le processeur de l'ordinateur — ce qui permet, selon sa fiche, un monitoring avec effets à latence quasi nulle, contrairement à un plug-in logiciel classique qui ajoute toujours un peu de latence. Cette version USB est par ailleurs présentée par le constructeur comme pensée pour Windows.</li>
+  <li><strong>Aucun traitement interne, mais un point de passage pour le vôtre</strong> → iD24. Ses inserts analogiques symétriques ne font rien par eux-mêmes : ils envoient le signal, déjà préamplifié, vers un compresseur ou un égaliseur externe de votre choix, puis le récupèrent avant conversion. C'est l'option pour qui possède déjà du hardware outboard ou veut construire sa propre chaîne au fil du temps.</li>
+  <li><strong>Coloration analogique optionnelle, activable à la demande</strong> → SSL 2+ MKII. Le bouton Legacy 4K, que sa fiche qualifie de "magique", ajoute un circuit de coloration inspiré des consoles de la marque selon le constructeur — distinct d'un compresseur et d'un insert : rien à régler ni à brancher, juste un circuit qu'on active ou qu'on laisse de côté selon la prise. À la différence de la Volt 276, cette coloration est présentée comme indépendante de toute compression, selon le constructeur.</li>
+</ul>
+<p class="mb-6">
+  Pour un enregistrement qui doit sortir prêt à l'emploi sans repasser par un plug-in de compression, la Volt 276 ou l'Apollo Twin X conviennent mieux. Pour quelqu'un qui possède déjà — ou prévoit d'acheter — un compresseur ou un égaliseur matériel séparé, les inserts de l'iD24 évitent d'acheter une fonction de traitement en double. Voir aussi notre <a href="/guide/top-5-interfaces" class="text-primary hover:underline">guide expert pour choisir son interface audio</a> pour les critères plus généraux (nombre d'entrées, convertisseurs, connectivité).
+</p>
+
+<h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">2. Les quatre interfaces en détail</h2>
+
+<div id="universal-audio-volt-276" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+  <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+    <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+      <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_52/529077/16690634_800.jpg" alt="Universal Audio Volt 276" class="w-full h-full object-contain" loading="lazy" />
+    </div>
+    <div>
+      <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/universal-audio-volt-276" class="product-link text-foreground hover:text-primary transition-colors">Universal Audio Volt 276</a></h3>
+      <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le compresseur matériel prêt à l'emploi (~299 €)</p>
+      <p>La Volt 276 embarque un compresseur analogique inspiré des unités vintage Urei 1176, directement sur le trajet du signal avant conversion : aucune latence, aucun plug-in à charger, un mode Vintage pour une chaleur supplémentaire. Selon sa fiche, ce compresseur fonctionne par presets plutôt que par réglages fins — un choix de simplicité qui conviendra à qui veut un résultat rapide sans apprendre la compression, mais qui frustrera un utilisateur voulant régler précisément l'attaque et le relâchement.</p>
+    </div>
+  </div>
+  <div class="grid sm:grid-cols-2 gap-4 mt-8">
+    <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Compresseur analogique 1176 intégré, actif sans latence</li>
+        <li>Mode Vintage pour une chaleur analogique supplémentaire</li>
+        <li>Design bois et métal soigné</li>
+      </ul>
+    </div>
+    <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Compresseur à presets, non réglable finement selon sa fiche</li>
+      </ul>
+    </div>
+  </div>
+  <div class="flex flex-wrap items-center gap-3 mt-8">
+    <a href="/produit/universal-audio-volt-276" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+    <div data-product-slug="universal-audio-volt-276" data-merchant-links-container></div>
+  </div>
+</div>
+
+<div id="universal-audio-apollo-twin-x-usb" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+  <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+    <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+      <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_57/571436/18465912_800.jpg" alt="Universal Audio Apollo Twin X USB Heritage Edition" class="w-full h-full object-contain" loading="lazy" />
+    </div>
+    <div>
+      <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/universal-audio-apollo-twin-x-usb" class="product-link text-foreground hover:text-primary transition-colors">Universal Audio Apollo Twin X USB</a></h3>
+      <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le DSP temps réel haut de gamme (~899 €)</p>
+      <p>L'Apollo Twin X embarque un double processeur DSP UAD-2 DUO qui calcule les plug-ins d'effets directement dans l'interface, à latence quasi nulle selon sa fiche — contrairement à un traitement logiciel classique sur l'ordinateur. Ses deux préamplis Unison modifient physiquement l'impédance d'entrée pour émuler fidèlement des tranches Neve, SSL ou API, et le pack de plug-ins UAD Heritage Edition est inclus. Cette version USB est présentée par le constructeur comme nativement pensée pour Windows. Le tarif reste réservé à un budget professionnel, et une alimentation externe est nécessaire (elle est fournie).</p>
+    </div>
+  </div>
+  <div class="grid sm:grid-cols-2 gap-4 mt-8">
+    <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Conversion et préamplis Unison de classe mondiale</li>
+        <li>Traitement DSP temps réel à latence quasi nulle</li>
+        <li>Pack de plug-ins UAD Heritage Edition inclus</li>
+      </ul>
+    </div>
+    <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Tarif premium réservé aux budgets pro</li>
+        <li>Nécessite une alimentation externe (fournie)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="flex flex-wrap items-center gap-3 mt-8">
+    <a href="/produit/universal-audio-apollo-twin-x-usb" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+    <div data-product-slug="universal-audio-apollo-twin-x-usb" data-merchant-links-container></div>
+  </div>
+</div>
+
+<div id="audient-id24" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+  <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+    <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+      <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_56/560993/18551793_800.jpg" alt="Audient iD24" class="w-full h-full object-contain" loading="lazy" />
+    </div>
+    <div>
+      <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/audient-id24" class="product-link text-foreground hover:text-primary transition-colors">Audient iD24</a></h3>
+      <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le point d'insertion pour votre propre matériel (~315 €)</p>
+      <p>L'iD24 ne traite rien par elle-même : ses deux départs et retours symétriques permettent de brancher un compresseur ou un égaliseur analogique externe avant la conversion, un usage qu'aucune des trois autres interfaces de ce comparatif ne propose selon leurs fiches respectives. Associée à deux préamplis micro classe A et des convertisseurs 32-bit (126 dB de dynamique), c'est l'option pour qui possède déjà du hardware outboard ou veut construire sa chaîne de traitement pièce par pièce, plutôt que d'en recevoir une figée dès l'achat.</p>
+    </div>
+  </div>
+  <div class="grid sm:grid-cols-2 gap-4 mt-8">
+    <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Inserts analogiques pour intégrer du hardware externe</li>
+        <li>2 vraies sorties casques indépendantes</li>
+        <li>Qualité des préamplis micro console Audient</li>
+      </ul>
+    </div>
+    <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Nécessite de la place sur le bureau</li>
+        <li>N'ajoute aucun traitement par elle-même : il faut déjà posséder (ou acheter) le compresseur/égaliseur externe</li>
+      </ul>
+    </div>
+  </div>
+  <div class="flex flex-wrap items-center gap-3 mt-8">
+    <a href="/produit/audient-id24" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+    <div data-product-slug="audient-id24" data-merchant-links-container></div>
+  </div>
+</div>
+
+<div id="ssl-2-plus" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+  <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+    <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+      <img src="https://thumbs.static-thomann.de/thumb/padthumb1000x1000/pics/bdb/_60/601306/19524585_800.jpg" alt="SSL 2+ MKII" class="w-full h-full object-contain" loading="lazy" />
+    </div>
+    <div>
+      <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/ssl-2-plus" class="product-link text-foreground hover:text-primary transition-colors">SSL 2+ MKII</a></h3>
+      <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Le circuit de couleur à la demande (~319 €)</p>
+      <p>La SSL 2+ MKII propose une quatrième approche : son bouton Legacy 4K, que sa fiche qualifie de "magique", ajoute un circuit de coloration inspiré des consoles de la marque selon le constructeur — ni un compresseur, ni un point d'insertion : juste un circuit qu'on active ou qu'on laisse de côté selon la prise, sans réglage ni branchement externe. Ses préamplis très silencieux et sa double sortie casque complètent une interface pensée pour un usage simple au quotidien.</p>
+    </div>
+  </div>
+  <div class="grid sm:grid-cols-2 gap-4 mt-8">
+    <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Le bouton Legacy 4K, décrit comme "magique" sur sa fiche</li>
+        <li>Préamplis très silencieux</li>
+        <li>Double sortie casque</li>
+      </ul>
+    </div>
+    <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Connectiques à l'arrière, pas toujours pratique</li>
+      </ul>
+    </div>
+  </div>
+  <div class="flex flex-wrap items-center gap-3 mt-8">
+    <a href="/produit/ssl-2-plus" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+    <div data-product-slug="ssl-2-plus" data-merchant-links-container></div>
+  </div>
+</div>
+
+<h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">3. Notre recommandation selon votre profil</h2>
+
+<div class="grid sm:grid-cols-2 gap-6 my-10">
+  <div class="bg-muted/30 border border-border rounded-2xl p-6">
+    <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous voulez un son compressé prêt à l'emploi, sans plug-in</h3>
+    <p class="text-muted-foreground mb-0">La <strong>Volt 276</strong> compresse directement à l'entrée, sans latence — au prix d'un réglage limité aux presets.</p>
+  </div>
+  <div class="bg-muted/30 border border-border rounded-2xl p-6">
+    <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous cherchez des émulations de consoles vintage en temps réel</h3>
+    <p class="text-muted-foreground mb-0">L'<strong>Apollo Twin X USB</strong> fait tourner ses plug-ins UAD sur son propre DSP, sans latence perceptible — pour un budget professionnel.</p>
+  </div>
+  <div class="bg-muted/30 border border-border rounded-2xl p-6">
+    <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous possédez déjà du matériel outboard, ou prévoyez d'en acheter</h3>
+    <p class="text-muted-foreground mb-0">L'<strong>iD24</strong> et ses inserts analogiques évitent de payer pour un traitement intégré que vous n'utiliserez pas.</p>
+  </div>
+  <div class="bg-muted/30 border border-border rounded-2xl p-6">
+    <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous voulez une touche de caractère optionnelle, sans complexité</h3>
+    <p class="text-muted-foreground mb-0">La <strong>SSL 2+ MKII</strong> et son bouton Legacy 4K ajoutent de la couleur à la demande, sans jamais être obligatoires.</p>
+  </div>
+</div>
+
+<div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-12 text-center">
+  <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous hésitez encore entre ces quatre approches ?</h3>
+  <p class="text-muted-foreground max-w-xl mx-auto mb-6">Notre configurateur prend en compte votre budget et votre usage pour vous proposer une interface cohérente avec le reste de votre setup.</p>
+  <a href="/configurateur" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-md">Lancer le Configurateur Studio IA</a>
+</div>
+
+<h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">FAQ</h2>
+
+<div class="space-y-6">
+  <div>
+    <h3 class="text-xl font-bold text-foreground mb-2">Un compresseur intégré à l'interface remplace-t-il un plug-in de compression logiciel ?</h3>
+    <p class="text-muted-foreground">Pas totalement : un compresseur matériel comme celui de la Volt 276 agit avant la conversion et sans latence, ce qui est utile pour éviter le clipping à l'enregistrement, mais il offre généralement moins de réglages fins qu'un plug-in logiciel qu'on peut ajuster après coup, voire annuler. Beaucoup d'utilisateurs combinent les deux : une légère compression matérielle à l'entrée, puis un traitement plus précis en post-production.</p>
+  </div>
+  <div>
+    <h3 class="text-xl font-bold text-foreground mb-2">Pourquoi le DSP de l'Apollo Twin X évite-t-il la latence, alors qu'un plug-in logiciel classique en ajoute ?</h3>
+    <p class="text-muted-foreground">Un plug-in logiciel classique traite le signal sur le processeur de l'ordinateur, dans la chaîne audio du système, ce qui ajoute toujours un délai de quelques millisecondes. Le DSP UAD-2 DUO de l'Apollo Twin X est une puce dédiée intégrée à l'interface elle-même, qui traite le signal avant qu'il transite par le système d'exploitation — d'où une latence quasi nulle selon sa fiche.</p>
+  </div>
+  <div>
+    <h3 class="text-xl font-bold text-foreground mb-2">Faut-il déjà posséder du matériel analogique pour profiter des inserts de l'iD24 ?</h3>
+    <p class="text-muted-foreground">Oui : les inserts de l'iD24 ne traitent rien par eux-mêmes, ce sont de simples points de passage. Sans compresseur ou égaliseur externe branché dessus, ils n'apportent aucun traitement supplémentaire par rapport à une interface sans inserts — c'est un investissement dans la flexibilité future, pas un traitement immédiat comme sur les trois autres interfaces de ce comparatif.</p>
+  </div>
+</div>
+    `
+  },
 ];
 
 export const PATHWAYS: Pathway[] = [
