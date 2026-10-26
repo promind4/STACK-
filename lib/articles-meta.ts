@@ -481,6 +481,20 @@ export const ARTICLES: ArticleMeta[] = [
     relatedCategorySlug: "cable-xlr",
     content: "",
   },
+  {
+    id: "41",
+    slug: "compresseur-analogique-dsp-ou-insert-quelle-interface-audio-pour-sculpter-votre-son-2026",
+    title: "Compresseur analogique, DSP temps réel ou insert matériel : quelle interface audio pour sculpter votre son avant l'enregistrement ?",
+    category: "Audio",
+    readTime: "7 min",
+    date: "26 Oct 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/plaque_audio_doodle.webp",
+    intro: "4 interfaces audio qui ne se contentent pas d'amplifier un signal : chacune le traite différemment avant qu'il n'atteigne votre logiciel — un vrai compresseur analogique matériel, un DSP temps réel qui émule des consoles vintage, un point d'insertion pour vos propres machines, ou un circuit de coloration analogique. Comprendre cette différence évite d'acheter la mauvaise approche pour votre usage.",
+    relatedProducts: ["universal-audio-volt-276", "universal-audio-apollo-twin-x-usb", "audient-id24", "ssl-2-plus"],
+    relatedCategorySlug: "cartes-son",
+    content: "",
+  },
 ];
 
 export const getArticleMetaBySlug = (slug: string) =>
