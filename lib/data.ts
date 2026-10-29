@@ -8324,6 +8324,275 @@ export const ARTICLES: Article[] = [
       </div>
     `
   },
+  {
+    id: "42",
+    slug: "clipguard-digital-popper-stopper-dsp-quel-micro-usb-corrige-vos-problemes-2026",
+    title: "Clipguard, Digital Popper Stopper ou DSP intégré : quel micro USB corrige automatiquement vos problèmes d'enregistrement ?",
+    category: "Audio",
+    readTime: "7 min",
+    date: "29 Oct 2026",
+    author: "Équipe Fluxlab",
+    image: "/images/articles/plaque_audio_doodle.webp",
+    intro: "3 micros USB sur 4 corrigent en temps réel, dès la captation, un problème précis et différent — la saturation, les plosives et le gain instable, ou le son global — le quatrième laisse tout au réglage manuel. Savoir lequel corrige quoi évite d'acheter une fonctionnalité pour un problème qu'elle ne résout pas.",
+    relatedProducts: ["elgato-wave-3", "shure-mv6", "rode-nt-usb-plus", "blue-yeti"],
+    relatedCategorySlug: "micros-usb",
+    content: `
+<p class="lead text-lg text-muted-foreground font-medium mb-8">
+  Un micro USB mal réglé peut saturer sur un cri, transformer chaque "p" en plosive, ou sortir à un niveau instable d'une phrase à l'autre — des problèmes que l'on corrige normalement après coup, en post-production. Trois des quatre micros de ce comparatif embarquent chacun un traitement temps réel qui s'attaque à un problème précis et différent, dès la captation, avant toute post-production. Le quatrième n'en a aucun et sert de point de comparaison.
+</p>
+
+<div class="bg-primary/5 border border-primary/10 rounded-2xl p-6 my-8">
+  <h3 class="text-foreground font-bold mt-0 mb-3 text-lg">
+    Le Verdict Express (En Résumé)
+  </h3>
+  <ul class="mb-0 space-y-2 text-foreground/85">
+    <li><strong>Contre la saturation (~169 €)</strong> : l'Elgato Wave:3, avec sa technologie Clipguard qui lutte contre l'écrêtage selon sa fiche.</li>
+    <li><strong>Contre les plosives et les écarts de niveau (~149 €)</strong> : le Shure MV6, avec son Digital Popper Stopper et son mode Auto Level pour une voix stable.</li>
+    <li><strong>Pour un son globalement travaillé (~179 €)</strong> : le Røde NT-USB+, avec son DSP APHEX embarqué (Aural Exciter, Big Bottom, compresseur, noise gate).</li>
+    <li><strong>Sans traitement actif, tout au réglage manuel (~129 €)</strong> : le Blue Yeti, référence historique à 4 directivités, sans aucune des trois technologies ci-dessus.</li>
+  </ul>
+</div>
+
+<h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">Comparatif : problème corrigé, technologie et prix</h2>
+
+<div class="overflow-x-auto no-scrollbar my-8">
+  <table class="w-full text-left border-collapse text-sm bg-card border border-border rounded-2xl overflow-hidden shadow-sm">
+    <thead>
+      <tr class="border-b border-border bg-muted/50 text-foreground font-bold">
+        <th class="px-5 py-4">Modèle</th>
+        <th class="px-5 py-4">Problème corrigé</th>
+        <th class="px-5 py-4">Technologie embarquée</th>
+        <th class="px-5 py-4">Prix indicatif (10/2026)</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-border">
+      <tr>
+        <td class="px-5 py-4 font-semibold text-foreground">Elgato Wave:3</td>
+        <td class="px-5 py-4">Saturation / écrêtage sur les pics</td>
+        <td class="px-5 py-4">Clipguard</td>
+        <td class="px-5 py-4">~169 €</td>
+      </tr>
+      <tr>
+        <td class="px-5 py-4 font-semibold text-foreground">Shure MV6</td>
+        <td class="px-5 py-4">Les plosives + niveau de voix instable</td>
+        <td class="px-5 py-4">Digital Popper Stopper + Auto Level</td>
+        <td class="px-5 py-4">~149 €</td>
+      </tr>
+      <tr>
+        <td class="px-5 py-4 font-semibold text-foreground">Røde NT-USB+</td>
+        <td class="px-5 py-4">Son global à travailler (tonalité, compression, bruit de fond)</td>
+        <td class="px-5 py-4">DSP APHEX (Aural Exciter, Big Bottom, compresseur, noise gate)</td>
+        <td class="px-5 py-4">~179 €</td>
+      </tr>
+      <tr>
+        <td class="px-5 py-4 font-semibold text-foreground">Blue Yeti</td>
+        <td class="px-5 py-4">Aucun — réglage manuel uniquement</td>
+        <td class="px-5 py-4">Aucune (4 directivités commutables)</td>
+        <td class="px-5 py-4">~129 €</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p class="text-sm text-muted-foreground -mt-4 mb-10">Prix indicatifs (~), estimations approximatives constatées en ligne fin octobre 2026, susceptibles de varier — voir la fiche produit pour le prix actualisé.</p>
+
+<h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">1. Trois problèmes différents, trois technologies — et un micro qui n'en a aucune</h2>
+
+<p class="mb-6">
+  Le point commun entre l'Elgato Wave:3, le Shure MV6 et le Røde NT-USB+, c'est qu'aucun ne se contente de capter le signal et de le transmettre tel quel : chacun embarque un traitement actif, mais pour un problème différent. Confondre ces trois technologies, c'est risquer d'acheter un micro qui corrige un problème que vous n'avez pas, en laissant de côté celui qui vous concerne vraiment.
+</p>
+<ul class="mb-6 space-y-2 text-foreground/85 list-disc pl-6">
+  <li><strong>La saturation sur les pics</strong> → Elgato Wave:3. Sa technologie Clipguard est décrite par sa fiche comme une technologie anti-écrêtage redoutable — en principe, le problème qu'elle cible est le signal qui dépasse le seuil et "clippe" sur un passage fort, pas le bruit de fond ni les plosives.</li>
+  <li><strong>Les plosives et l'instabilité du niveau de voix</strong> → Shure MV6. Deux technologies distinctes cohabitent ici selon sa fiche : le Digital Popper Stopper filtre en temps réel les bruits d'air (les "p" et "b" qui frappent la capsule), tandis que le mode Auto Level ajuste automatiquement le gain pour une voix stable d'une phrase à l'autre — deux problèmes différents, deux corrections différentes, sur le même micro. Une technologie Voice Isolation distincte, également citée par sa fiche, isole en plus la voix du bruit de la pièce.</li>
+  <li><strong>Le son global à travailler</strong> → Røde NT-USB+. Un DSP APHEX embarqué, "d'une efficacité remarquable" selon sa fiche, combine plusieurs effets pilotés depuis l'application RØDE Central (Aural Exciter, Big Bottom, compresseur, noise gate) : une approche plus large que les deux précédentes, qui façonne la tonalité et la dynamique d'ensemble plutôt que de cibler un seul problème précis — le noise gate coupe le bruit de fond entre les phrases, là où le MV6 isole la voix.</li>
+  <li><strong>Aucun traitement actif</strong> → Blue Yeti. Référence historique à 4 directivités commutables, sa fiche ne mentionne ni anti-écrêtage, ni filtre de plosives, ni DSP : tout le réglage (gain, positionnement) reste manuel.</li>
+</ul>
+<p class="mb-6">
+  Pour un enregistrement de voix proche du micro avec des pics occasionnels (cris, rires forts), le Wave:3 cible exactement ce problème. Pour une voix dont le niveau varie d'une phrase à l'autre avec des plosives fréquentes, le MV6 corrige les deux à la fois. Pour qui veut repartir d'un son déjà "prêt à diffuser" selon sa fiche, le NT-USB+ va plus loin, via des effets pilotés depuis RØDE Central. Le Yeti reste pertinent pour qui préfère garder un contrôle total et régler lui-même chaque paramètre.
+</p>
+
+<h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">2. Les quatre micros en détail</h2>
+
+<div id="elgato-wave-3" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+  <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+    <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+      <img src="https://cdn.shopify.com/s/files/1/0984/0872/6803/files/6f6b8efbc27522b4b0b38ea27d83fb4cd8db7b2d_ELGATO_ELGATOWAVE3.jpg?v=1789390969" alt="Elgato Wave:3" class="w-full h-full object-contain" loading="lazy" />
+    </div>
+    <div>
+      <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/elgato-wave-3" class="product-link text-foreground hover:text-primary transition-colors">Elgato Wave:3</a></h3>
+      <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Contre la saturation (~169 €)</p>
+      <p>Le Wave:3 embarque une capsule condensateur 17 mm développée avec Lewitt et la technologie Clipguard, que sa fiche décrit comme une technologie anti-écrêtage redoutable : elle agit sur les pics du signal pour éviter la saturation, un problème fréquent quand on hausse la voix près du micro. Son logiciel Wave Link, qualifié d'ultra-complet, gère en plus le mixage de plusieurs sources audio. Revers de cette sensibilité élevée : la capsule capte aussi facilement les bruits de frappe au clavier sans perche de déport, et la directivité reste limitée au cardioïde.</p>
+    </div>
+  </div>
+  <div class="grid sm:grid-cols-2 gap-4 mt-8">
+    <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Technologie anti-écrêtage Clipguard redoutable</li>
+        <li>Logiciel de mixage virtuel Wave Link ultra-complet</li>
+        <li>Sortie casque monitoring zéro latence</li>
+      </ul>
+    </div>
+    <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Capsule très sensible aux bruits de frappe sans perche</li>
+        <li>Directivité cardioïde uniquement</li>
+      </ul>
+    </div>
+  </div>
+  <div class="flex flex-wrap items-center gap-3 mt-8">
+    <a href="/produit/elgato-wave-3" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+    <div data-product-slug="elgato-wave-3" data-merchant-links-container></div>
+  </div>
+</div>
+
+<div id="shure-mv6" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+  <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+    <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+      <img src="https://cdn.shopify.com/s/files/1/0984/0872/6803/files/ce4eab2c41665dd6d5a6a5108cb6596f0bdb3667_SSE_MV6.jpg?v=1789691615" alt="Shure MV6" class="w-full h-full object-contain" loading="lazy" />
+    </div>
+    <div>
+      <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/shure-mv6" class="product-link text-foreground hover:text-primary transition-colors">Shure MV6</a></h3>
+      <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Contre les plosives et les écarts de niveau (~149 €)</p>
+      <p>Micro dynamique plutôt que condensateur, le MV6 cible deux problèmes à la fois selon sa fiche : le Digital Popper Stopper élimine virtuellement les bruits d'air des "p" et des "b", tandis que le mode Auto Level assure une voix stable même quand son niveau varie d'une phrase à l'autre. Selon sa fiche, il offre aussi une isolation acoustique exceptionnelle dans les pièces non traitées grâce à une technologie Voice Isolation distincte. En contrepartie, il ne sort qu'en USB (pas de XLR) et sa bande passante est limitée à 15 kHz.</p>
+    </div>
+  </div>
+  <div class="grid sm:grid-cols-2 gap-4 mt-8">
+    <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Digital Popper Stopper éliminant virtuellement tous les bruits d'air</li>
+        <li>Mode Auto Level assurant une voix stable</li>
+        <li>Isolation acoustique exceptionnelle dans les pièces non traitées</li>
+      </ul>
+    </div>
+    <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Sortie USB uniquement (pas de XLR)</li>
+        <li>Bande passante limitée à 15 kHz</li>
+      </ul>
+    </div>
+  </div>
+  <div class="flex flex-wrap items-center gap-3 mt-8">
+    <a href="/produit/shure-mv6" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+    <div data-product-slug="shure-mv6" data-merchant-links-container></div>
+  </div>
+</div>
+
+<div id="rode-nt-usb-plus" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+  <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+    <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+      <img src="https://cdn.shopify.com/s/files/1/0984/0872/6803/files/a526aafd501f96bc33b98e2dd588f1e122c3a68e_RODE_NTUSBPLUS.jpg?v=1788184749" alt="Røde NT-USB+" class="w-full h-full object-contain" loading="lazy" />
+    </div>
+    <div>
+      <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/rode-nt-usb-plus" class="product-link text-foreground hover:text-primary transition-colors">Røde NT-USB+</a></h3>
+      <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Pour un son globalement travaillé (~179 €)</p>
+      <p>Le NT-USB+ va au-delà d'une correction ciblée : son DSP APHEX, piloté depuis l'application RØDE Central, combine plusieurs effets (Aural Exciter, Big Bottom, compresseur, noise gate) décrits par sa fiche comme d'une efficacité remarquable, pour un son que la fiche qualifie de chaud, riche et prêt à diffuser. Associé au préampli Revolution, silencieux selon sa fiche, et à un filtre anti-pop en métal inclus d'origine, c'est l'option pour qui veut repartir d'un son déjà travaillé plutôt que de corriger un seul problème précis — à condition de régler ses effets dans l'application. Son pied de table reste toutefois un peu léger, et il est limité au mode cardioïde.</p>
+    </div>
+  </div>
+  <div class="grid sm:grid-cols-2 gap-4 mt-8">
+    <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>DSP APHEX embarqué d'une efficacité remarquable</li>
+        <li>Préampli Revolution silencieux</li>
+        <li>Filtre anti-pop en métal de haute qualité inclus d'origine</li>
+      </ul>
+    </div>
+    <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Pied de table un peu léger</li>
+        <li>Limité au mode cardioïde</li>
+      </ul>
+    </div>
+  </div>
+  <div class="flex flex-wrap items-center gap-3 mt-8">
+    <a href="/produit/rode-nt-usb-plus" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+    <div data-product-slug="rode-nt-usb-plus" data-merchant-links-container></div>
+  </div>
+</div>
+
+<div id="blue-yeti" class="bg-card border border-border rounded-3xl p-6 sm:p-8 my-10 shadow-sm hover:shadow-md transition-shadow scroll-mt-24">
+  <div class="grid md:grid-cols-[1fr_2fr] gap-8 items-start">
+    <div class="relative w-full aspect-square rounded-2xl bg-white border border-border overflow-hidden flex items-center justify-center p-8">
+      <img src="https://resource.logitechg.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/streaming-gear/yeti-premium-usb-microphone/2025/gallery/yeti-front-angle-silver-gallery-1.png" alt="Blue Yeti" class="w-full h-full object-contain" loading="lazy" />
+    </div>
+    <div>
+      <h3 class="mt-0 mb-2 text-2xl font-bold"><a href="/produit/blue-yeti" class="product-link text-foreground hover:text-primary transition-colors">Blue Yeti</a></h3>
+      <p class="text-muted-foreground font-medium mb-4 uppercase tracking-wider text-sm">Sans traitement actif, tout au réglage manuel (~129 €)</p>
+      <p>Référence historique du micro USB de bureau, le Yeti mise sur sa technologie à trois capsules offrant 4 diagrammes polaires commutables (cardioïde, omni, bidirectionnel, stéréo) plutôt que sur un traitement actif du signal. Sa fiche ne mentionne ni anti-écrêtage, ni filtre de plosives, ni DSP : le réglage du gain et le choix de la directivité restent entièrement manuels. Sa construction tout en métal est robuste, mais sa capsule très ouverte capte aussi plus facilement la réverbération de la pièce, et l'ensemble reste lourd et encombrant sur un bureau.</p>
+    </div>
+  </div>
+  <div class="grid sm:grid-cols-2 gap-4 mt-8">
+    <div class="bg-muted/40 border-l-4 border-l-emerald-500/60 rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Points Forts</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Polyvalence des 4 directivités</li>
+        <li>Construction tout en métal extrêmement robuste</li>
+        <li>Sortie casque avec contrôle de volume et mute</li>
+      </ul>
+    </div>
+    <div class="bg-muted/40 border-l-4 border-l-secondary rounded-r-xl p-5">
+      <h4 class="text-foreground font-bold mt-0 mb-3 flex items-center gap-2">Limites</h4>
+      <ul class="mb-0 space-y-2 text-sm text-foreground/80">
+        <li>Lourd et encombrant</li>
+        <li>Capsule très ouverte captant la réverbération de pièce</li>
+      </ul>
+    </div>
+  </div>
+  <div class="flex flex-wrap items-center gap-3 mt-8">
+    <a href="/produit/blue-yeti" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-sm">Voir la fiche produit</a>
+    <div data-product-slug="blue-yeti" data-merchant-links-container></div>
+  </div>
+</div>
+
+<h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">3. Notre recommandation selon votre profil</h2>
+
+<div class="grid sm:grid-cols-2 gap-6 my-10">
+  <div class="bg-muted/30 border border-border rounded-2xl p-6">
+    <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous criez ou parlez fort par moments (gaming, réactions)</h3>
+    <p class="text-muted-foreground mb-0">L'<strong>Elgato Wave:3</strong> et son Clipguard ciblent précisément la saturation sur les pics.</p>
+  </div>
+  <div class="bg-muted/30 border border-border rounded-2xl p-6">
+    <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Votre niveau de voix varie et vous prononcez beaucoup de "p"/"b"</h3>
+    <p class="text-muted-foreground mb-0">Le <strong>Shure MV6</strong> corrige à la fois les plosives et l'instabilité de niveau.</p>
+  </div>
+  <div class="bg-muted/30 border border-border rounded-2xl p-6">
+    <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous voulez un son prêt à diffuser, effets pilotés depuis une appli</h3>
+    <p class="text-muted-foreground mb-0">Le <strong>Røde NT-USB+</strong> et son DSP APHEX travaillent la tonalité et la dynamique d'ensemble.</p>
+  </div>
+  <div class="bg-muted/30 border border-border rounded-2xl p-6">
+    <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous préférez tout régler vous-même</h3>
+    <p class="text-muted-foreground mb-0">Le <strong>Blue Yeti</strong> laisse le contrôle total, sans aucune correction automatique qui s'interpose.</p>
+  </div>
+</div>
+
+<div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 my-12 text-center">
+  <h3 class="text-xl font-bold text-foreground mt-0 mb-2">Vous hésitez encore entre ces quatre micros ?</h3>
+  <p class="text-muted-foreground max-w-xl mx-auto mb-6">Notre configurateur prend en compte votre usage (gaming, podcast, streaming) pour vous proposer un micro cohérent avec le reste de votre setup.</p>
+  <a href="/configurateur" class="inline-flex items-center justify-center bg-primary text-primary-foreground font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 shadow-md">Lancer le Configurateur Studio IA</a>
+</div>
+
+<h2 class="text-3xl font-extrabold mt-16 mb-8 text-foreground border-b border-border pb-4">FAQ</h2>
+
+<div class="space-y-6">
+  <div>
+    <h3 class="text-xl font-bold text-foreground mb-2">Le Clipguard de l'Elgato Wave:3 remplace-t-il un réglage de gain correct ?</h3>
+    <p class="text-muted-foreground">Non : le Clipguard agit, en principe, sur les pics ponctuels qui dépasseraient le seuil de saturation, mais un gain mal réglé en permanence (trop fort ou trop faible) reste à corriger manuellement. C'est un filet de sécurité contre l'écrêtage, pas un réglage automatique complet du niveau comme le mode Auto Level du Shure MV6.</p>
+  </div>
+  <div>
+    <h3 class="text-xl font-bold text-foreground mb-2">Le Digital Popper Stopper du MV6 remplace-t-il un filtre anti-pop physique ?</h3>
+    <p class="text-muted-foreground">Dans une large mesure oui, puisque sa fiche le décrit comme éliminant virtuellement tous les bruits d'air : contrairement à un filtre en tissu ou en métal placé devant la capsule, c'est un traitement numérique intégré au micro. Un filtre physique reste néanmoins une protection supplémentaire simple à ajouter si besoin.</p>
+  </div>
+  <div>
+    <h3 class="text-xl font-bold text-foreground mb-2">Pourquoi le Blue Yeti n'a-t-il aucune de ces trois technologies malgré son succès ?</h3>
+    <p class="text-muted-foreground">Sa fiche ne mentionne aucune de ces technologies et met en avant un autre atout : la polyvalence de ses 4 directivités commutables plutôt qu'une correction automatique. Il reste un choix pertinent pour qui enregistre dans des conditions stables et préfère garder la main sur chaque réglage.</p>
+  </div>
+</div>
+    `
+  },
 ];
 
 export const PATHWAYS: Pathway[] = [
