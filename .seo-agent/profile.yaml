@@ -11,6 +11,29 @@
 # of whether the images are actually broken — verify external images manually with curl
 # instead, and treat that as the real signal. Internal links and the localhost HTTP check
 # are unaffected (no proxy involved for localhost).
+#
+# CONTENT SCOPE LIMITATION (confirmed 2026-10-01): the public /guide/[slug] route only
+# serves articles whose `category` field is exactly "Audio" or "Acoustique" — enforced by
+# lib/public-audio-scope.ts's isPublicAudioGuide(), called from generateStaticParams and
+# generateMetadata (which calls notFound() for any other category). An article with
+# category "Vidéo" or "Streaming" renders a stuck loading skeleton locally / 404s in
+# production — confirmed by drafting a full mirrorless-camera article (category: "Vidéo")
+# that passed 2 Opus critic rounds, then discovering at the local smoke-test step that it
+# never resolves. The draft was abandoned (no commit/PR) and the cycle pivoted to an
+# in-scope Audio-category target instead. Any future content-gap candidate in a non-audio
+# category (video/camera gear, lighting, streaming hardware, etc.) is out of scope for new
+# articles until AZURA decides to open the guide route to those categories — do not widen
+# isPublicAudioGuide() to route around this without his explicit sign-off; flag it in the
+# cycle report instead.
+#
+# CATALOG DATA QUIRK (confirmed 2026-10-01): products.is_active=false does NOT reliably
+# mean a product is discontinued or out of stock. Checked two is_active=false products
+# referenced in older articles (akg-c214, the-t-bone-ps-100) directly against
+# product_offers — both have live, in-stock merchant offers at plausible real-world prices
+# (AKG C214 ~399€ Thomann/Woodbrass, t.bone PS 100 ~44€ Thomann). Do not treat
+# is_active=false as evidence of discontinuation/factual drift without checking
+# product_offers directly first — a prior assumption to the contrary would have produced a
+# false "fix a discontinued product" correction this cycle.
 
 site:
   name: Fluxlab
